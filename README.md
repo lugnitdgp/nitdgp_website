@@ -15,11 +15,17 @@ This is what we propose for the new website:
 * The entire website will be a multi-level hierarchy.
 
 ### Landing Page
-![](https://drive.google.com/file/d/1IaOwBsMKdhn9FgMMeqTE7BrK5mgGWjf2/view?usp=sharing)
+
 * Increasing the carousel image size to fit the width of the container.
-* Grouped tile structure (as shown in the image) for better accessibility.
+* Grouped tile structure (as shown in the [image](https://drive.google.com/file/d/1IaOwBsMKdhn9FgMMeqTE7BrK5mgGWjf2/view?usp=sharing)) for better accessibility.
 * Proper navigation and footer.
 * A notice board to show the recent notices.
 * 
 
-Academics
+### Hierarchy
+
+- Academics
+  - Departments
+  - Admission
+  - Examination
+  - Institute Information
