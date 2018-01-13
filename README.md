@@ -24,8 +24,48 @@ This is what we propose for the new website:
 
 ### Hierarchy
 
-- Academics
-  - Departments
-  - Admission
+- Academics (Level 0)
+  - Admission (Level 1)
+    - Schedule
+    - UG
+    - PG
+    - PHD
+    - DASA
+    - Language Courses
+  - Departments (Level 1)
+    - List of All Departments (Level 2)
+      - Department Page (Level 3)
   - Examination
-  - Institute Information
+  - Academic Documents
+  
+ - Administration (Level 0)
+   - Institute Information
+   - Board of Governors
+   - Director's Profile
+   - Registrar's I/C
+   - Deans
+   
+ - Facilities (Level 0)
+   - Central Library
+   - High Voltage Laboratory
+   - SAC
+   - Computer Centre
+   - Central Instruments Facility
+   - Centre of Excellence in Advanced Materials
+   
+ - Contact (Level 0)
+ 
+ - Alumni Cell (Level 0)
+ 
+ - TEQIP (Level 0)
+ 
+ - Students' Technical Activies (Level 0)
+   - Various Clubs and their activities 
+ 
+ - Information (Level 0)
+   - NIRF
+   - NBA Accreditation Data
+   - Annual Accounts and Reports
+   - Audit Reports
+   - Public Grievance Portal
+   - etc.
