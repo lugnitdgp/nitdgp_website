@@ -5,7 +5,10 @@
 Starting with the current website, we have identified the need of a new, modern website with better back-end functionality. The aforesaid issues are documented below
 
 ## Issues
-
+  * Insufficient availability of data
+  * New label being displayed against very old data
+  * Dead links which do not redirect to any page
+  * Lack of uniform font style and font size
 
 ## Proposal
 
