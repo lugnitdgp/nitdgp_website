@@ -36,43 +36,71 @@ This is what we propose for the new website:
     - List of All Departments (Level 1)
       - Department Page (Level 2)
   - Examination (Level 0)
+    - Examination notices
   - Academic Documents (Level 0)
+    - Academic Calendar
+    - Curricula
+    - Academic Regulations
+    - Fee Structure
 
- - Administration (Level 0)
-   - Institute Information (Level 1)
-   - Board of Governors (Level 1)
-   - Director's Profile (Level 1)
-   - Registrar's I/C (Level 1)
-   - Deans (Level 1)
+- Unnamed Group (Decide the name)
+  - Institute Information (Level 0)
+  - Administration (Level 0)
+    - Board of Governors (Level 1)
+      - BOG Members list
+    - Chairperson's Profile (Level 1)
+      - Meet our chairman
+    - Director's Profile (Level 1)
+      - Meet our director
+    - Registrar's I/C (Level 1)
+      - Meet our registrar I/C
+    - Deans (Level 1)
+      - Deans list
+    - Wardens
+      - List of wardens
 
- - Campus (Group)
-   - Campus Tour (Level 0)
-   - Campus Facilities (Level 0)
+- Campus (Group)
+  - Campus Tour (Level 0)
+    - About Us and campus tour carousel
+  - Facilities (Level 0)
+    - Academic facilities (Group)
       - Central Library
       - High Voltage Laboratory
       - SAC
       - Computer Centre
       - Central Instruments Facility
       - Centre of Excellence in Advanced Materials
+    - Campus Facilities (Group)
+      - Accomodation
+      - Hostels
+      - Health Centre
+      - Canteen facilities
+      - Medical Unit
 
- - 
-   - Seminars and Conferences
-   - Research
+- Unnamed group (Decide the name)
+  - Seminars and Conferences
+  - Research
 
- - Unnamed Group
-   - Alumni
-   - Careers
+- Unnamed Group (Not to be named)
+  - Students' Technical Activies (Level 0)
+    - Various Clubs and their activities (Level 1)
+      - List of all clubs (Level 2)
+  - Alumni
+  - Careers
 
 ### Navbar
 
- - TEQIP
- - NIRF
- - Login
+  - TEQIP
+  - NIRF
+  - Webmail
+  - Student Login
+  - Faculty Login
 
- - Students' Technical Activies (Level 0)
-   - Various Clubs and their activities
+### Footer
 
-### Quick Links
+The footer will follow the format of the NIT Rourkela website
+
+#### Quick Links
 
   - Contacts
   - Holidays
@@ -81,3 +109,4 @@ This is what we propose for the new website:
   - Annual Accounts and Reports
   - Audit Reports
   - Public Grievance Portal
+  - Placement
