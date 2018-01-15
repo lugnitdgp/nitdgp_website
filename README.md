@@ -1,28 +1,29 @@
 # Walkthrough for Institute Website
 
-[Developed by GLUG NITD](https://nitdgplug.org)
+[Being Developed by GLUG NITD](https://nitdgplug.org)
 
-Starting with the current website, we have identified the need of a new, modern website with better back-end functionality. The aforesaid issues are documented below
+Starting with the current website, we have identified the need of a new, modern website with better back-end functionality. The aforesaid issues are documented below:
 
 ## Issues
-  * Insufficient availability of data
-  * New label being displayed against very old data
-  * Dead links which do not redirect to any page
-  * Lack of uniform font style and font size
+  * Insufficient availability of data.
+  * New label being displayed against very old data.
+  * Dead links which do not redirect to any page.
+  * Lack of uniform font style and font size.
+  * No compliance with the rules and regulations prescribed by the Government of India.
 
 ## Proposal
 
 This is what we propose for the new website:
 
-* We choose the website of [NIT Rourkela](http://nitrkl.ac.in) as the reference.
-* The entire website will be a multi-level hierarchy.
+* We have chosen the website of [NIT Rourkela](http://nitrkl.ac.in) as the reference.
+* The entire website will be a multi-level hierarchy with the proposed tiles structure as instructed.
 
 ### Landing Page
 
 * Increasing the carousel image size to fit the width of the container.
 * Grouped tile structure (as shown in the [image](https://drive.google.com/file/d/1IaOwBsMKdhn9FgMMeqTE7BrK5mgGWjf2/view?usp=sharing)) for better accessibility.
-* Proper navigation and footer.
-* A notice board to show the recent notices.
+* Proper navigation and footer with quick links and national portals(such as Digital India, etc.).
+* A Student Notice Board to show the recent notices.
 
 ### Hierarchy
 
@@ -90,17 +91,17 @@ This is what we propose for the new website:
   - Alumni
   - Careers
 
-### Navbar
+### Navigation Bar
 
   - TEQIP
-  - Placement
+  - Training and Placement
   - Webmail
   - Student Login
   - Faculty Login
 
 ### Footer
 
-The footer will follow the format of the NIT Rourkela website
+The footer will follow the format of the NIT Rourkela website, with the following 'quick links':
 
 #### Quick Links
 
