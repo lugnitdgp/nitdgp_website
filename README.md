@@ -25,6 +25,30 @@ This is what we propose for the new website:
 * Proper navigation and footer with quick links and national portals(such as Digital India, etc.).
 * A Student Notice Board to show the recent notices.
 
+### Navigation Bar
+
+- TEQIP
+- Training and Placement
+- Webmail
+- Student Login
+- Faculty Login
+
+### Footer
+
+The footer will follow the format of the NIT Rourkela website, with the following 'quick links':
+
+#### Quick Links
+
+- Contacts
+- Holidays
+- Tenders
+- NBA Accreditation Data
+- Annual Accounts and Reports
+- Audit Reports
+- Public Grievance Portal
+- NIRF
+
+
 ### Hierarchy
 
 - Academics (Tile-Group)
@@ -60,7 +84,7 @@ This is what we propose for the new website:
     - About Us and campus tour carousel
   - Facilities (Level 0)
     - Academic facilities (Group)
-      - Central Library 
+      - Central Library
       - High Voltage Laboratory
       - SAC
       - Computer Centre
@@ -73,7 +97,7 @@ This is what we propose for the new website:
       - Canteen facilities
       - Medical Unit
 
-- Research Activities(Tile-Group)
+- Research Activities (Tile-Group)
   - Seminars and Conferences (Level 0)
   - Research (Level 0)
 
@@ -83,26 +107,3 @@ This is what we propose for the new website:
       - List of all clubs (Level 2)
   - Alumni
   - Careers
-
-### Navigation Bar
-
-  - TEQIP
-  - Training and Placement
-  - Webmail
-  - Student Login
-  - Faculty Login
-
-### Footer
-
-The footer will follow the format of the NIT Rourkela website, with the following 'quick links':
-
-#### Quick Links
-
-  - Contacts
-  - Holidays
-  - Tenders
-  - NBA Accreditation Data
-  - Annual Accounts and Reports
-  - Audit Reports
-  - Public Grievance Portal
-  - NIRF
