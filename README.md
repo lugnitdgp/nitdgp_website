@@ -47,13 +47,13 @@ This is what we propose for the new website:
     - Fee Structure
 
 -  Administration (Tile-Group)
-  - Institute Information (Level 0)
-  - Board of Governors (Level 0)
-  - Chairperson's Profile (Level 0)
-  - Director's Profile (Level 0)
-  - Registrar's I/C (Level 0)
-  - Deans (Level 0)
-  - Wardens (Level 0)
+   - Institute Information (Level 0)
+   - Board of Governors (Level 0)
+   - Chairperson's Profile (Level 0)
+   - Director's Profile (Level 0)
+   - Registrar's I/C (Level 0)
+   - Deans (Level 0)
+   - Wardens (Level 0)
 
 - Campus (Tile-Group)
   - Campus Tour (Level 0)
