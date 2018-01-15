@@ -14,7 +14,7 @@ Starting with the current website, we have identified the need of a new, modern 
 
 This is what we propose for the new website:
 
-* We reference the website of [NIT Rourkela](http://nitrkl.ac.in) as the starting point of the website.
+* We choose the website of [NIT Rourkela](http://nitrkl.ac.in) as the reference.
 * The entire website will be a multi-level hierarchy.
 
 ### Landing Page
@@ -23,11 +23,10 @@ This is what we propose for the new website:
 * Grouped tile structure (as shown in the [image](https://drive.google.com/file/d/1IaOwBsMKdhn9FgMMeqTE7BrK5mgGWjf2/view?usp=sharing)) for better accessibility.
 * Proper navigation and footer.
 * A notice board to show the recent notices.
-*
 
 ### Hierarchy
 
-- Academics (Group)
+- Academics (Tile-Group)
   - Admission (Level 0)
     - Schedule
     - UG
@@ -40,13 +39,13 @@ This is what we propose for the new website:
       - Department Page (Level 2)
   - Examination (Level 0)
     - Examination notices
-  - Academic Documents (Level 0)
+  - Academic Information (Level 0)
     - Academic Calendar
     - Curricula
     - Academic Regulations
     - Fee Structure
 
-- Unnamed Group (Decide the name)
+-  (Decide the name)
   - Institute Information (Level 0)
   - Administration (Level 0)
     - Board of Governors (Level 1)
@@ -59,15 +58,15 @@ This is what we propose for the new website:
       - Meet our registrar I/C
     - Deans (Level 1)
       - Deans list
-    - Wardens
+    - Wardens (Level 1)
       - List of wardens
 
-- Campus (Group)
+- Campus (Tile-Group)
   - Campus Tour (Level 0)
     - About Us and campus tour carousel
   - Facilities (Level 0)
     - Academic facilities (Group)
-      - Central Library
+      - Central Library 
       - High Voltage Laboratory
       - SAC
       - Computer Centre
@@ -80,9 +79,9 @@ This is what we propose for the new website:
       - Canteen facilities
       - Medical Unit
 
-- Unnamed group (Decide the name)
-  - Seminars and Conferences
-  - Research
+- Research Activities(Tile-Group)
+  - Seminars and Conferences (Level 0)
+  - Research (Level 0)
 
 - Unnamed Group (Not to be named)
   - Students' Technical Activies (Level 0)
@@ -94,7 +93,7 @@ This is what we propose for the new website:
 ### Navbar
 
   - TEQIP
-  - NIRF
+  - Placement
   - Webmail
   - Student Login
   - Faculty Login
@@ -107,9 +106,9 @@ The footer will follow the format of the NIT Rourkela website
 
   - Contacts
   - Holidays
-  - Tender
+  - Tenders
   - NBA Accreditation Data
   - Annual Accounts and Reports
   - Audit Reports
   - Public Grievance Portal
-  - Placement
+  - NIRF
