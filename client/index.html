@@ -50,6 +50,23 @@
             font-weight: 500;
             line-height: 20px;
         }
+
+        .tile-group .card-title {
+          margin-left: -40px;
+          width: 80%;
+          padding-left: 1rem;
+          font-size: 1.2rem;
+          color: #fff;
+        }
+
+        .tile-group p {
+          font-size: 0.9rem;
+          letter-spacing: -1px;
+        }
+
+        .tile-group .card-content div {
+          font-size: 0.9rem;
+        }
 </style>
 <body>
     <nav>
@@ -60,10 +77,9 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#">link1</a></li>
           <li><a href="#">link2</a></li>
-          <li><a href="#">link1</a></li>
-          <li><a href="#">link2</a></li>
-          <li><a href="#">link1</a></li>
-          <li><a href="#">link2</a></li>
+          <li><a href="#">link3</a></li>
+          <li><a href="#">link4</a></li>
+          <li><a href="#">link5</a></li>
         </ul>
       </div>
     </nav>
@@ -168,48 +184,53 @@
       </div>
       <div class="row">
         <div class="col s12 m4">
-          <div class="card z-depth-5" style="background-color: #0277bd;">
-            <p align="center" style="background-color: #004c8c;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">ACADEMICS</p>
+          <div class="card z-depth-5 tile-group academics">
             <div class="card-content" style="min-height: 38%" >
-                  <div class="row">
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #58a5f0">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Admission
-                              </div>
-                        </div>
+              <span class="card-title" style="background-color: #58a5f0">Academics</span>
+              <p align="justify" class="card-text" style="margin: 1.25em auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla velit, luctus eget aliquet condimentum, tempus nec magna. Cras a arcu nec massa facilisis consequat.</p>
+
+              <div class="row">
+                  <div class="col s12 m6">
+                      <div style="padding: 1em;background-color: #58a5f0">
+                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
+                          Admission
+                          </div>
+                    </div>
+                  </div>
+                  <div class="col s12 m6">
+                      <div style="padding: 1em;background-color: #58a5f0">
+                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
+                          Department
+                          </div>                        
                       </div>
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #58a5f0">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Department
-                              </div>                        
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col s12 m6">
+                      <div style="padding: 1em;background-color: #58a5f0">
+                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
+                          Examination
                           </div>
                       </div>
                   </div>
-                  <div class="row">
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #58a5f0">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Examination
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #58a5f0">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Academic Info
-                              </div>                        
-                          </div>
+                  <div class="col s12 m6">
+                      <div style="padding: 0.8em;background-color: #58a5f0">
+                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
+                          Academic Info
+                          </div>                        
                       </div>
                   </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
-          <div class="card z-depth-5" style="background-color: #d32f2f;">
-          <p align="center" style="background-color: #9a0007;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">CAMPUS</p>
+          <div class="card z-depth-5 tile-group campus">
             <div class="card-content" style="min-height: 38%" >
+
+              <span class="card-title" style="background-color: #ff6659">Campus</span>
+              <p align="justify" class="card-text" style="margin: 1.25em auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla velit, luctus eget aliquet condimentum, tempus nec magna. Cras a arcu nec massa facilisis consequat.</p>
+
                   <div class="row">
                       <div class="col s12 m12">
                           <div style="padding: 1em;background-color: #ff6659">
@@ -232,9 +253,12 @@
           </div>
         </div>
         <div class="col s12 m4">
-          <div class="card z-depth-5" style="background-color: #2e7d32;">
-          <p align="center" style="background-color: #005005;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">RESEARCH ACTIVITES</p>
+          <div class="card z-depth-5 tile-group research">
             <div class="card-content" style="min-height: 38%" >
+
+              <span class="card-title" style="background-color: #60ad5e">Research Activities</span>
+              <p align="justify" class="card-text" style="margin: 1.25em auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla velit.</p>
+
                   <div class="row">
                       <div class="col s12 m12">
                           <div style="padding: 1em;background-color: #60ad5e">
@@ -259,9 +283,10 @@
       </div>
       <div class="row">
         <div class="col s12 m8">
-          <div class="card z-depth-5" style="background-color: #00796b;">
-          <p align="center" style="background-color: #004c40;color:#ffffff;padding-top: 1.6%;height: 5%" class="tiletitle">ADMINISTRATION</p>
+          <div class="card z-depth-5 tile-group administration">
             <div class="card-content" style="min-height: 38%" >
+              <span class="card-title" style="background-color: #48a999">Administration</span>
+              <p align="justify" class="card-text" style="margin: 1.25em auto;"> </p>
                   <div class="row">
                       <div class="col s12 m4">
                           <div style="padding: 1em;background-color: #48a999">
@@ -321,9 +346,11 @@
           </div>
         </div>
         <div class="col s12 m4" style="padding-top: 0.6em">
-          <div class="card z-depth-5" style="background-color: #7e57c2;">
-          <p align="center" style="background-color: #4d2c91;color:#ffffff;padding: 3%;height: 5%"></p>
+          <div class="card z-depth-5 tile-group">
+
             <div class="card-content" style="min-height: 56%" >
+              <span class="card-title" style="background-color: #48a999"></span>
+              <p align="justify" class="card-text" style="margin: 1.25em auto;"> </p>
                   <div class="row" style="padding-top: 0.4em">
                       <div class="col s12 m12">
                           <div style="padding: 1em;background-color: #b085f5">
@@ -355,7 +382,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+<!--       <div class="row">
         <div class="col s12 m4">
           <div class="card z-depth-5" style="background-color: #d81b60;">
             <p align="center" style="background-color: #a00037;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">ACADEMICS</P>
@@ -444,7 +471,7 @@
                   </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 </body>
