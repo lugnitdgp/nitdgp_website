@@ -4,5 +4,36 @@
 }
 
 .navbar-brand {
-  height: 100px;
+  height: 85px;
 }
+
+#navbar-link {
+  font-size: 120%;
+}
+.navbar-header{
+	margin-top: 1.5em;
+}
+
+.navbar-text-small {
+   margin-top: -0.5em;
+ }
+ .top-nav{
+   height: 1em;
+ }
+ .top-nav-container{
+   width: 100%;
+ }
+ .top-nav-link{
+   color: #ffffff;
+ }
+ #search-btn-nav{
+   height: 0.95em;
+   padding-left: 5px;
+   border: 1px solid;
+   border-radius: 4px;
+   background-color: #ffffff;
+   width: 15%;
+ }
+ #navbarSupportedContent-4{
+ 	padding-top: 4em;
+ }
