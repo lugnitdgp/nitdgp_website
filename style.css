@@ -8,10 +8,10 @@
 }
 
 #navbar-link {
-  font-size: 120%;
+  font-size: 90%;
 }
 .navbar-header{
-	margin-top: 1.5em;
+   margin-top: 1.5em;
 }
 
 .navbar-text-small {
@@ -36,4 +36,8 @@
  }
  #navbarSupportedContent-4{
  	padding-top: 4em;
+ }
+ .navbar-img{
+ 	padding-left: 15px;
+ 	height: 70px;
  }
