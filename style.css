@@ -33,18 +33,27 @@ body {
 .top-nav-link{
   color: #000000;
 }
+.top-nav-link:not(:nth-child(4))::after {
+  padding: 0 0.2em;
+  content: '|';
+}
+
+.top-nav-link:nth-child(4) {
+  padding-right: 0.5em;
+}
 #nav-below{
   background-color: #111E6C;
 }
 #search-btn-nav{
   height: 0.95em;
-  padding-left: 5px;
+  padding-left: 2px;
+  padding-right: 2px;
   border: 1px solid;
   border-radius: 4px;
   background-color: #ffffff;
   width: 15%;
   max-width: 100px;
-  min-width: 90px;
+  min-width: 52px;
 }
 #navbarSupportedContent-4{
   padding-top: 4em;
