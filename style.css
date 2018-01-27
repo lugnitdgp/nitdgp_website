@@ -2,95 +2,78 @@
   padding-left: 1px;
   padding-right: 1px;
 }
-
 body {
 	background-color: #FAFAFA;
 }
-
 .navbar-brand {
   height: 85px;
 }
-
-.navbar-link {
-  font-size: 0.9rem;
+#navbar-link {
+  font-size: 90%;
 }
-
-.navbar-header {
-  font-size: 1.1rem;
+.navbar-header{
   margin-top: 1.5em;
-  height: 100%;
 }
-
 .navbar-text-small {
   margin-top: -0.5em;
 }
-
-#top-nav-wrap {
+#top-nav-wrap{
+  height: 2em;
   background-color: #E0F7FA;
 }
-
-.top-nav {
-  height: 1em;
+.top-nav{
+  height: 1.5em;
 }
-
-.top-nav-link {
+.top-nav-container-left{
+  width: 10%;
+}
+.top-nav-container-right{
+  width: 90%;
+}
+.top-nav-link{
   color: #000000;
 }
-
-.top-nav-link:not(:nth-child(4))::after {
-  padding: 0 0.2em;
-  content: '|';
-}
-
-.top-nav-link:nth-child(4) {
-  padding-right: 0.5em;
-}
-
 #nav-below{
   background-color: #111E6C;
 }
-
 #search-btn-nav{
   height: 0.95em;
   padding-left: 5px;
   border: 1px solid;
   border-radius: 4px;
   background-color: #ffffff;
-  width: 25%;
+  width: 15%;
+  max-width: 100px;
 }
-
 #navbarSupportedContent-4{
   padding-top: 4em;
 }
-
 .navbar-img{
   padding-left: 15px;
   height: 70px;
 }
-
 #footer-copyright{
   height: 2.5em;
   background-color: #111E6C;
 }
-
 #copyright-content{
   margin-top: -0.5em;
 }
-
 #footer-logos{
   max-height: 100%;
   max-width: 100%;
 }
-
 .logo-container{
   height: 80%;
   width: 12.5%;
 }
-
 .page-footer{
   background-color: #E0F7FA;
 }
-
 #footer-container{
   padding-bottom:10px;
+}
+#page-content-center{
+  padding-top: 24em;
+  padding-bottom: 15em;
 }
