@@ -44,6 +44,7 @@ body {
   background-color: #ffffff;
   width: 15%;
   max-width: 100px;
+  min-width: 90px;
 }
 #navbarSupportedContent-4{
   padding-top: 4em;
