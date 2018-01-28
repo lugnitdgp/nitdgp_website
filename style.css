@@ -120,6 +120,7 @@ body {
 }
 .page-footer{
   background-color: #E0F7FA;
+  border-top:2px solid #CFD8DC;
 }
 #footer-container{
   padding-bottom:10px;
