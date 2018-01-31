@@ -6,10 +6,10 @@ class Departments(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	name=models.CharField(max_length=255)
 	short_code=models.CharField(max_length=4)
-	about_us=model.TextField()
+	about_us=models.TextField()
 
 class Faculty(models.Model):
-	id=models.ForeignKey(FacultyRoles, on_delete=models.CASCADE)
+	id=models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	name=models.CharField(max_length=255)
 	research_interest=models.TextField()
 	email=models.CharField(max_length=255,default="")
@@ -35,7 +35,8 @@ class Electives(models.Model):
 class FacultyRoles(models.Model):
 	department=models.ForeignKey(Departments,on_delete=models.CASCADE)
 	faculty=models.ForeignKey(Faculty,on_delete=models.CASCADE)
-	role=models.ForeignKey(Roles,on_delete=models.CASCADE)
+    #role=models.ForeignKey(Roles,on_delete=models.CASCADE)
 
-class Roles(models.Model):
-# Create your models here.
+# class Roles(models.Model):
+# # Create your models here.
+#     pass
