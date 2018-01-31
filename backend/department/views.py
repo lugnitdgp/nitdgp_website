@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework.generics import ListAPIView
 
-# Create your views here.
+from department.models import Department
+from department.serializers import DepartmentListSerializer
+
+
+class DepartmentViewSet(ListAPIView):
+
+    queryset = Section.objects.all()
+    serializer_class = DepartmentListSerializer
