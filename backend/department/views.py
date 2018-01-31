@@ -1,10 +1,10 @@
 from rest_framework.generics import ListAPIView
 
-from department.models import Departments
+from department.models import Department
 from department.serializers import DepartmentListSerializer
 
 
 class DepartmentViewSet(ListAPIView):
 
-    queryset = Departments.objects.all()
+    queryset = Department.objects.all()
     serializer_class = DepartmentListSerializer
