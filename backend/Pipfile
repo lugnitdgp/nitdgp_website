@@ -1,14 +1,8 @@
 [[source]]
 
-<<<<<<< HEAD
-verify_ssl = true
-name = "pypi"
-url = "https://pypi.python.org/simple"
-=======
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
->>>>>>> fbb966b761fdbeac4ab1bf43cb03efa631dbb830
 
 
 [packages]
@@ -20,13 +14,3 @@ python-decouple = "==3.1"
 
 
 [dev-packages]
-
-
-
-[requires]
-
-<<<<<<< HEAD
-python_version = "3.5"
-=======
-python_version = "3.6"
->>>>>>> fbb966b761fdbeac4ab1bf43cb03efa631dbb830
