@@ -126,6 +126,7 @@ body {
   padding-bottom:10px;
 }
 #page-content-center{
+  min-height: 650px;
   padding-top: 4em;
   padding-bottom: 2em;
 }
@@ -135,37 +136,51 @@ body {
 
 }*/
 hr.style4 {
-border-top: medium double #3b5998;
-color: #3b5998;
-text-align: center;
+  border-top: medium double #3b5998;
+  color: #3b5998;
+  text-align: center;
 }
 hr.style4:after {
-content: "Quick Links";
-display: inline-block;
-position: relative;
-top: -0.7em;
-font-size: 1em;
-padding: 0 0.5em;
-background: #E0F7FA;
+  content: "Quick Links";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1em;
+  padding: 0 0.5em;
+  background: #E0F7FA;
 }
 /*all-cards*/
-.tile-content{
-  padding: 1em;
+.l1-department .tile-content{
+  padding: 1%;
   color: #ffffff;
 }
-.tile-small{
+.l1-department .tile-small{
   background-color: #004545;
   margin: 2px;
-  min-height: 100px;
+  height: 150px;
+  min-height: 50%;
+  max-height: 380px;
 }
-.tile-small i{
-  padding: 2px;
+.l1-department .tile-small:hover {
+  opacity: 0.5;
 }
-.tile-title{
+.l1-department .tile-small i{
+  font-size: 150%; 
+  padding-top: 4%;
+  padding-bottom: 1%;
+}
+.l1-department .tile-small span{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+  font-size: 120%;
+  padding-bottom: 60px;
+}
+.l1-department .tile-title{
   background-color: #3b5998;
   height: 1px;
 }
-.tile-title-text{
+.l1-department .tile-title-text{
   letter-spacing: 2px;
   font-weight: bold;
   text-align: center;
@@ -173,7 +188,70 @@ background: #E0F7FA;
   line-height: 5px;
   color: #ffffff;
 }
-/*/.all-tile*/
+.l0 .tile-content{
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100%;
+  padding-top: 8px;
+  margin-bottom: -12px;
+  min-height: 80%;
+  color: #ffffff;
+}
+
+.l0 .tile-small{
+  background-color: #004545;
+  margin: 1px;
+}
+.l0 .tile-small:hover {
+  opacity: 0.5;
+}
+.l0 .tile-small-text{
+  font-size: 80%;
+  font-weight: bold;
+}
+.l0 .fa-2x{
+  font-size: 180%;
+  padding-bottom: 2px;
+}
+.l0 .tile-title{
+  background-color: #3b5998;
+  height: 1px;
+}
+.l0 .tile-title-text{
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1px;
+  color: #ffffff;
+}
+/*/.all-cards*/
+/*all-cards*/
+.l00 .tile-content{
+  padding: 1em;
+  color: #ffffff;
+}
+.l00 .tile-small{
+  background-color: #004545;
+  margin: 2px;
+  min-height: 60px;
+}
+.l00 .tile-small i{
+  padding: 2px;
+}
+.l00 .tile-title{
+  background-color: #3b5998;
+  height: 1px;
+}
+.l00 .tile-title-text{
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 5px;
+  color: #ffffff;
+}
+/*/.all-cards*/
 .big-row{
   padding: 0.2em;
 }
@@ -290,7 +368,42 @@ background: #E0F7FA;
   color: #ffffff; 
 }
 /*/.card-5*/
- /*@media screen and (max-width: 1000px) {
-  .navbar-text h4.hidemee {display: none;}
-  .navbar-text p.showmee {display: block;}
-}*/
+ @media screen and (max-width: 500px) {
+  .l0 .big-col{
+    min-width: 100%;
+  }
+  .l0 .fa-2x{
+    font-size: 120%;
+  }
+  /*.navbar-text h4.hidemee{
+    display: none;
+  }
+  .navbar-text p.showmee{
+    display: block;
+  }*/
+}
+
+/*Level 1*/
+/* card bg-color*/
+.l1-department .card-level1 {
+  background-color: #D1C4E9;
+}
+/* card-title color*/
+.l1-department .card-level1 div.tile-title{
+  background-color: #311B92;
+} 
+/* title-text color*/
+.l1-department .card-level1 p.tile-title-text{
+  color: #ffffff;
+}
+/* small-tile bg-color*/
+.l1-department .card-level1 div.tile-small{
+  background-color: #7E57C2;
+}
+/* small-tile-text color*/
+.l1-department .card-level1 div.tile-content{
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}

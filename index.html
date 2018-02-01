@@ -1,486 +1,617 @@
-<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
- <script >
-        $(document).ready(function(){
-              $('.carousel').carousel();
-            });
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-          // Next slide
-        $('.carousel').carousel('next');
-        $('.carousel').carousel('next', 3); // Move next n times.
+<!-- <a type="button" class="btn-floating btn-small"><i class="fa fa-facebook"></i></a>
+<a type="button" class="btn-floating btn-small"><i class="fa fa-twitter"></i></a>
+<a type="button" class="btn-floating btn-small"><i class="fa fa-google-plus"></i></a>
+ -->
 
-        // Previous slide
-        $('.carousel').carousel('prev');
-        $('.carousel').carousel('prev', 4); // Move prev n times.
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        // Set to nth slide
-        $('.carousel').carousel('set', 4);
+        <title>NIT Durgapur</title>
 
-        // Destroy carousel
-        $('.carousel').carousel('destroy');
-  </script>
+        <meta name="description" content="The official website of NIT Durgapur">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-        body{
-           font-family: 'Comfortaa',cursive;
-           font-size: 1.1em;
-           font-weight: 400;
-           background-color: #F5F5F5
-        }
-        .noticetxt{
-            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-            font-size: 14px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 20px;
-          }
-        .tiletitle{
-            font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-            font-size: 1.5em;
-            letter-spacing: 1px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 20px;
-        }
+        <!-- Compiled and minified CSS for bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.4.0' type='text/css' media='all' />
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 
-        .tile-group .card-title {
-          margin-left: -40px;
-          width: 80%;
-          padding-left: 1rem;
-          font-size: 1.2rem;
-          color: #fff;
-        }
 
-        .tile-group p {
-          font-size: 0.9rem;
-          letter-spacing: -1px;
-        }
-
-        .tile-group .card-content div {
-          font-size: 0.9rem;
-        }
-</style>
-<body>
-    <nav>
-      <div class="nav-wrapper" style="height: 20px; background-color: #4d2c91">
-      </div>
-      <div class="nav-wrapper" style="background-color: #7e57c2">
-        <a href="#" class="brand-logo" style="padding-left: 1em">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#">link1</a></li>
-          <li><a href="#">link2</a></li>
-          <li><a href="#">link3</a></li>
-          <li><a href="#">link4</a></li>
-          <li><a href="#">link5</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2">button</a>
-      </div>
-      <div class="carousel-item red white-text" href="#one!">
-        <h2>First Panel</h2>
-        <p class="white-text">This is your first panel</p>
-      </div>
-      <div class="carousel-item amber white-text" href="#two!">
-        <h2>Second Panel</h2>
-        <p class="white-text">This is your second panel</p>
-      </div>
-      <div class="carousel-item green white-text" href="#three!">
-        <h2>Third Panel</h2>
-        <p class="white-text">This is your third panel</p>
-      </div>
-      <div class="carousel-item blue white-text" href="#four!">
-        <h2>Fourth Panel</h2>
-        <p class="white-text">This is your fourth panel</p>
-      </div>
-    </div>
-
-    <div class="container" style="padding-top: 0.5em;opacity: 1">
-      <div class="row z-depth-5" style="padding-top: 1em;background-color:#000a12;" >
-        <div class="col s12 m6" >
-          <div class="card" style="background-color: #4f5b62;">
-            <p style="background-color: #263238;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">Student Notice</p>
-            <div style="padding: 1%;padding-bottom: 2%">
-                <div class="card-content" style="min-height: 40%;background-color: #fafafa">
-                    <p class="noticetxt">Student notice board content here. this is the 2nd sentence <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">Student notice board content here <a href="#"> ..more> </a> </p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">Student notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">Student notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">Student notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">Student notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">Student notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <a href="#" ><p align="right">See More-> </p></a>
-                </div>
-            </div>
-          </div>9
-        </div>
-        <div class="col s12 m6">
-          <div class="card" style="background-color: #4f5b62;">
-            <p style="background-color: #263238;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">General Notice</p>
-            <div style="padding: 1%;padding-bottom: 2%">
-                <div class="card-content" style="min-height: 40%;background-color: #fafafa">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <p class="noticetxt">General notice board content here <a href="#"> ..more> </a></p>
-                    <hr style="border-top: 1px dashed #8c8b8b;">
-                    <a href="#" ><p align="right">See More-> </p></a>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="card z-depth-5 tile-group academics">
-            <div class="card-content" style="min-height: 38%" >
-              <span class="card-title" style="background-color: #58a5f0">Academics</span>
-              <p align="justify" class="card-text" style="margin: 1.25em auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla velit, luctus eget aliquet condimentum, tempus nec magna. Cras a arcu nec massa facilisis consequat.</p>
-
-              <div class="row">
-                  <div class="col s12 m6">
-                      <div style="padding: 1em;background-color: #58a5f0">
-                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                          Admission
-                          </div>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <!-- HEADER -->
+      <div class="container-fluid" >
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark darken-2" id="nav-below">
+          <div class="container-fluid" >
+                <div class="navbar-header">
+                    <img class="navbar-brand" src="img/nitdgp_logo_white.png">
+                    <div class="navbar-text white-text ">
+                      <div >
+                        <h4 class="hidemee"> National Institute of Technology Durgapur </h4>
+                        <p class="showmee navbar-text-small"> Mahatma Gandhi Avenue, Durgapur 713209, West Bengal, INDIA </p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col s12 m6">
-                      <div style="padding: 1em;background-color: #58a5f0">
-                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                          Department
-                          </div>                        
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col s12 m6">
-                      <div style="padding: 1em;background-color: #58a5f0">
-                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                          Examination
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col s12 m6">
-                      <div style="padding: 0.8em;background-color: #58a5f0">
-                          <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                          Academic Info
-                          </div>                        
-                      </div>
-                  </div>
-              </div>
-            </div>
+                    <img class="showmee navbar-img"  src="img/emblem.png">
+                    <!-- <h6 class="showmee" style="color: #3b5998">NIT Durgapur</h6> -->
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 7px;">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-tasks"></i> Chanakya </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-plane"></i> Alumni </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-address-book"></i> Contacts </a>
+                        </li>
+                    </ul>
+                </div>
           </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card z-depth-5 tile-group campus">
-            <div class="card-content" style="min-height: 38%" >
-
-              <span class="card-title" style="background-color: #ff6659">Campus</span>
-              <p align="justify" class="card-text" style="margin: 1.25em auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla velit, luctus eget aliquet condimentum, tempus nec magna. Cras a arcu nec massa facilisis consequat.</p>
-
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #ff6659">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Campus tour
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #ff6659">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Facilities
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card z-depth-5 tile-group research">
-            <div class="card-content" style="min-height: 38%" >
-
-              <span class="card-title" style="background-color: #60ad5e">Research Activities</span>
-              <p align="justify" class="card-text" style="margin: 1.25em auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla velit.</p>
-
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #60ad5e">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Seminars and Conferences
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #60ad5e">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Research
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div>
+        </nav>
+        <nav class="mb-1 navbar fixed-top navbar-expand-sm" id="top-nav-wrap">
+                  <span align="left" class="top-nav-container-left">
+                    <a href="#" class="black-text"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+                  </span>
+                  <span align="right" class="top-nav-container-right">
+                      <a href="#" class="top-nav-link">Old website</a>
+                      <a href="#" class="top-nav-link">A+/A-</a>
+                      <a href="#" class="top-nav-link">A|अ</a>
+                      <a href="#" class="top-nav-link">Mail</a>
+                      <input id="search-btn-nav" type="text" name="" placeholder=" Search">
+                  </span>
+        </nav>
       </div>
-      <div class="row">
-        <div class="col s12 m8">
-          <div class="card z-depth-5 tile-group administration">
-            <div class="card-content" style="min-height: 38%" >
-              <span class="card-title" style="background-color: #48a999">Administration</span>
-              <p align="justify" class="card-text" style="margin: 1.25em auto;"> </p>
-                  <div class="row">
-                      <div class="col s12 m4">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Institute Information
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col s12 m4">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Board of Governors
-                              </div>                        
-                          </div>
-                      </div>
-                      <div class="col s12 m4">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Chairperson's Profile
-                              </div>                        
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Director's Profile
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Registrar's I/C
-                              </div>                        
-                          </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Deans
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #48a999">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Wardens
-                              </div>                        
-                          </div>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4" style="padding-top: 0.6em">
-          <div class="card z-depth-5 tile-group">
+      <!-- HEADER -->
 
-            <div class="card-content" style="min-height: 56%" >
-              <span class="card-title" style="background-color: #48a999"></span>
-              <p align="justify" class="card-text" style="margin: 1.25em auto;"> </p>
-                  <div class="row" style="padding-top: 0.4em">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #b085f5">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Alumni
-                              </div>
-                          </div>
-                      </div>
+      <div class="container" id="page-content-center">
+          <!-- CONTENT -->
+          <!-- all-tiles -->
+          <div class="all-tiles l00">
+            <!-- big-row -->
+            <div class="row big-row">
+              <!-- big-col -->
+              <div class="col big-col">
+                <!-- tile  !-->
+                <div class="card card-cascade narrower card-1">
+                  <div class="view gradient-card-header tile-title" >
+                      <p class="tile-title-text">Academics</p>
                   </div>
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #b085f5">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Students' Technical Activies
-                              </div>
+                  <div class="card-body text-center">
+                    <div class="container">
+                        
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Admission
                           </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s6 m6">
-                          <div style="padding: 1em;background-color: #b085f5">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Careers
-                              </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                      Departments
                           </div>
-                      </div>
-                      <div class="col s6 m6">
-                          <div style="padding: 1em;background-color: #b085f5">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Tenders
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-      </div>
-<!--       <div class="row">
-        <div class="col s12 m4">
-          <div class="card z-depth-5" style="background-color: #d81b60;">
-            <p align="center" style="background-color: #a00037;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">ACADEMICS</P>
-            <div class="card-content" style="min-height: 38%" >
-                  <div class="row">
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #ff5c8d">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Admission
-                              </div>
+                          </a>
                         </div>
                       </div>
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #ff5c8d">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Department
-                              </div>                        
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-edit fa-3x"></i></br>
+                                      Notices
                           </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #ff5c8d">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Examination
-                              </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Regulations
                           </div>
-                      </div>
-                      <div class="col s12 m6">
-                          <div style="padding: 1em;background-color: #ff5c8d">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Academic Info
-                              </div>                        
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-calendar fa-3x"></i></br>
+                                      Calendar
                           </div>
+                          </a>
+                        </div>
                       </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card z-depth-5" style="background-color: #8d6e63;">
-          <p align="center" style="background-color: #5f4339;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">CAMPUS</p>
-            <div class="card-content" style="min-height: 38%" >
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #be9c91">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Campus tour
-                              </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                      Documents
                           </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #be9c91">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Facilities
-                              </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-edit fa-3x"></i></br>
+                                      Registration
                           </div>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card z-depth-5" style="background-color: #00838f;">
-          <p align="center" style="background-color: #005662;color:#ffffff;padding: 3%;height: 5%" class="tiletitle">RESEARCH ACTIVITIES</p>
-            <div class="card-content" style="min-height: 38%" >
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #4fb3bf">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Seminars and Conferences
-                              </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Convocation
                           </div>
+                          </a>
+                        </div>
                       </div>
-                  </div>
-                  <div class="row">
-                      <div class="col s12 m12">
-                          <div style="padding: 1em;background-color: #4fb3bf">
-                              <div align="center" style="color: #ffffff;" ><i class="large material-icons">school</i></br>
-                              Research
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-            </div>
-          </div>
-        </div> -->
-      </div>
-    </div>
-</body>
 
-    <footer class="page-footer" style="background-color: #7e57c2">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.tile  !-->
               </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
+              <!--/.big-col-->
+              <!--big-col-->
+              <div class="col big-col">
+                <!-- tile  !-->
+                <div class="card card-cascade narrower card-2">
+                  <div class="view gradient-card-header tile-title" >
+                      <p class="tile-title-text">Activities</p>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="container">
+                        
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                      Research
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Seminars
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-sitemap fa-3x"></i></br>
+                                      Students
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-gear fa-3x"></i></br>
+                                      Outreach
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                      Placement
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Tenders
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-newspaper-o fa-3x"></i></br>
+                                      Careers
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- /.tile  !-->
               </div>
+              <!-- big-col -->
             </div>
-          </div>
-          <div class="footer-copyright" style="background-color: #4d2c91">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <!-- big-row -->
+            <!-- big-row -->
+            <div class="row big-row">
+              <!-- big-col -->
+              <div class="col big-col">
+                <!-- tile  !-->
+                <div class="card card-cascade narrower card-3">
+                  <div class="view gradient-card-header tile-title" >
+                      <p class="tile-title-text">Administration</p>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="container">
+                        
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">      
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                    <span>  Director</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                    <span>  Chairperson</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-sitemap fa-3x"></i></br>
+                                    <span>  BOG</span>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                    <span>  Registrar</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                    <span>  Visitor</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                    <span>  MHRD</span>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                    <span>  Deans</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                    <span>  HODs</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                    <span>  Officers</span>
+                          </div>
+                          </a>
+                        </div>      
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                    <span>  Senate</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                    <span>  BWC</span>
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-mortar-board fa-3x"></i></br>
+                                    <span>  IFC</span>
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- /.tile  !-->
+              </div>
+              <!--/.big-col-->
+              <!--big-col-->
+              <div class="col big-col">
+                <!-- tile  !-->
+                <div class="card card-cascade narrower card-4">
+                  <div class="view gradient-card-header tile-title" >
+                      <p class="tile-title-text">Information</p>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="container">
+                        
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Annual Reports
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-edit fa-3x"></i></br>
+                                      Audit Reports
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                      NBA
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-sitemap fa-3x"></i></br>
+                                      NIRF
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      TEQIP
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-gear fa-3x"></i></br>
+                                      e-Prashasan
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-road fa-3x"></i></br>
+                                      Location
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      History
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.tile  !-->
+              </div>
+              <!-- big-col -->
             </div>
+            <!-- big-row -->
+            <!-- big-row -->
+            <div class="row big-row">
+              <!-- big-col -->
+              <div class="col big-col">
+                <!-- tile  !-->
+                <div class="card card-cascade narrower card-5">
+                  <div class="view gradient-card-header tile-title" >
+                      <p class="tile-title-text" >Facilities</p>
+                  </div>
+                  <div class="card-body text-center">
+                    <div class="container">
+                        
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      Library
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-laptop fa-3x"></i></br>
+                                      Computer Centre
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                      SAC
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                      HVL
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-bank fa-3x"></i></br>
+                                      CIF
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-gear fa-3x"></i></br>
+                                      CEAM
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-gear fa-3x"></i></br>
+                                      Post-Office
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                      Banks
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-cutlery fa-3x"></i></br>
+                                      Canteen
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-ambulance fa-3x"></i></br>
+                                      Medical Unit
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-hotel fa-3x"></i></br>
+                                      Hostels
+                          </div>
+                          </a>
+                        </div>
+                        <div class="col tile-small">
+                          <a href="#">
+                          <div align="center" class="tile-content"  ><i class="fa fa-group fa-3x"></i></br>
+                                      Guest House
+                          </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- /.tile  !-->
+              </div>
+              <!--/.big-col-->
+            </div>
+            <!-- big-row -->
+        </div>
+        <!--/.all-tiles-->
+        <!--/.CONTENT-->
+      </div>
+      <!-- FOOTER -->
+      <footer class="page-footer center-on-small-only">
+          <div class="container" id="footer-container" >
+              <div class="container-fluid" align="center" >
+                  <div class="row">
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo1.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo2.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo3.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo4.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo5.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" style="padding-top: 10%" src="img/govlogo6.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo7.png"></a>
+                    </div>
+                    <div class="container-fluid logo-container">
+                          <a href="#!"><img id="footer-logos" src="img/govlogo8.png"></a>
+                    </div>
+                  </div>
+                  <hr class="style4">
+                  <div class="row quick-links-row">
+                    <div class="container-fluid quick-links-container">
+                          <a class="waves-effect waves-light" href="#!"> <span>Holidays</span></a>
+                    </div>
+                    <div class="container-fluid quick-links-container">
+                          <a href="#!"> <span>NIRF</span></a>
+                    </div>
+                    <div class="container-fluid quick-links-container">
+                          <a href="#!"> <span>TEQIP</span></a>
+                    </div>
+                    <div class="container-fluid quick-links-container">
+                          <a href="#!"> <span>Archives</span></a>
+                    </div>
+                    <div class="container-fluid quick-links-container">
+                          <a href="#!"> <span>Notices</span></a>
+                    </div>
+                    <div class="container-fluid quick-links-container">
+                          <a href="#!"> <span>Policies</span></a>
+                    </div>
+                    <div class="container-fluid quick-links-container">
+                          <a href="#!"> <span>Calender</span></a>
+                    </div>
+                  </div>
+              </div>
           </div>
-    </footer>
+          <div class="footer-copyright" id="footer-copyright" >
+              <div class="container-fluid" id="copyright-content">
+                  <p >© 2018 Copyright: <a href="https://www.nitdgp.ac.in"> nitdgp.ac.in </a></p>
+              </div>
+          </div>
+      </footer>
+      <!-- FOOTER -->
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
+
+
+    </body>
+
+</html>
