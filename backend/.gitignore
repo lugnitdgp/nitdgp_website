@@ -39,3 +39,6 @@ docs/_build/
 # Custom
 *.sqlite3
 .env
+
+# Fixtures 
+fixtures/
