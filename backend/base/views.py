@@ -12,4 +12,5 @@ class APIRoot(APIView):
 
         return Response({
             'dashboard': reverse('dashboard:list-tile-content', request=request),
+            'department': reverse('department:list-tile-content', request=request),
         })
