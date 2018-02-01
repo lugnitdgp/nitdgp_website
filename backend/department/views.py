@@ -6,7 +6,7 @@ from department.models import Department, Faculty
 from department.serializers import DepartmentListSerializer, FacultySerializer
 
 
-class DepartmentViewSet(ListAPIView):
+class DepartmentListViewSet(ListAPIView):
 
     queryset = Department.objects.all()
     serializer_class = DepartmentListSerializer

@@ -1,10 +1,11 @@
 from django.conf.urls import url, include
 
-from department.views import DepartmentViewSet, FacultyViewSet
+from department.views import DepartmentListViewSet, FacultyViewSet
 
 app_name = 'department'
 
 urlpatterns = [
-    url(r'^department/', DepartmentViewSet.as_view(), name='list-department'),
-    url(r'^faculties/(?P<slug>[\w]+)/$', FacultyViewSet.as_view(), name='list-department-faculty')
+    url(r'^department/', DepartmentListViewSet.as_view(), name='list-department'),
+    #url(r'^department/(?P<slug>[\w]+)/$', DepartmentViewSet.as_view(), name='view-department'),
+    url(r'^faculty/(?P<slug>[\w]+)/$', FacultyViewSet.as_view(), name='list-department-faculty'),
 ]
