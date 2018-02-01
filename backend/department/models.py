@@ -14,7 +14,7 @@ class Faculty(models.Model):
 	research_interest=models.TextField()
 	email=models.CharField(max_length=255,default="")
 	mobile=models.IntegerField()
-	joining_year=models.DateField(default=datetime.datetime.today())
+	joining_year=models.DateField(auto_now_add=True)
 	department=models.ForeignKey(Department,on_delete=models.CASCADE)
 
 class Research(models.Model):
@@ -23,7 +23,7 @@ class Research(models.Model):
 	collab_inst=models.TextField()
 	area=models.CharField(max_length=255)
 	faculty_involved=models.TextField()
-	date=models.DateField(default=datetime.datetime.today())
+	date=models.DateField(auto_now_add=True)
 
 class Electives(models.Model):
 	id=models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
