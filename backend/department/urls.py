@@ -6,5 +6,5 @@ app_name = 'department'
 
 urlpatterns = [
     url(r'^department/', DepartmentViewSet.as_view(), name='list-department'),
-    url(r'^faculties/(?P<slug>[\w]+)/$', FacultyViewSet.as_view(), name='list-departmment-faculty')
+    url(r'^faculties/(?P<slug>[\w]+)/$', FacultyViewSet.as_view(), name='list-department-faculty')
 ]
