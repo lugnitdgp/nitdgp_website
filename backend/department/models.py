@@ -89,6 +89,7 @@ class Roles(BaseModel):
     def __str__(self):
         return self.name
 
+
 class FacultyRoles(BaseModel):
 
     class Meta:
@@ -125,6 +126,7 @@ class Activites(BaseModel):
     def _date(self):
         return self.date
 
+
 class Degree(BaseModel):
 
     class Meta:
@@ -138,6 +140,7 @@ class Degree(BaseModel):
 
     def _description(self):
         return self.description
+
 
 class Programme(BaseModel):
 
@@ -160,6 +163,7 @@ class Programme(BaseModel):
     def _department(self):
         return self.department.name
 
+
 class Courses(BaseModel):
 
     class Meta:
@@ -167,12 +171,16 @@ class Courses(BaseModel):
 
     COURSE_TYPES = (('L','Lecture'), ('T','Tutorial'), ('S','Sessional'))
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
+    title = models.CharField(max_length=255)
     short_code = models.CharField(max_length=7)
     semester = models.IntegerField()
     course_type = models.CharField(choices=COURSE_TYPES, default='L', max_length=30)
     credits = models.IntegerField()
 
     def __str__(self):
+        return self.programme.title
+
+    def _programme(self):
         return self.programme.title
 
     def _short_code(self):
@@ -183,6 +191,7 @@ class Courses(BaseModel):
 
     def _course_type(self):
         return self.course_type
+
 
 class Facilities(BaseModel):
 
@@ -202,6 +211,7 @@ class Facilities(BaseModel):
 
     def _category(self):
         return self.category
+
 
 class Electives(BaseModel):
 
@@ -226,6 +236,7 @@ class Electives(BaseModel):
     def _is_open(self):
         return self.is_open
 
+
 class DepartmentPhotos(BaseModel):
 
     class Meta:
@@ -244,6 +255,7 @@ class DepartmentPhotos(BaseModel):
 
     def _date(self):
         return self.date
+
 
 class DepartmentNews(BaseModel):
 

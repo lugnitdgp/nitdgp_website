@@ -27,8 +27,10 @@ class DegreeModelAdmin(admin.ModelAdmin):
 class ProgrammeModelAdmin(admin.ModelAdmin):
 	list_display = ['_title', '_degree', '_department']
 
+
 class CoursesModelAdmin(admin.ModelAdmin):
-	list_display = ['__str__', '_short_code', '_semester', '_course_type']
+	list_display = ['_programme', '_short_code', '_semester', '_course_type']
+
 
 class FacilitiesModelAdmin(admin.ModelAdmin):
 	list_display = ['_department', '_name', '_category']
