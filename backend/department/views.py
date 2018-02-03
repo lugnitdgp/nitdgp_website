@@ -45,6 +45,17 @@ class DepartmentViewSet(RetrieveAPIView):
         return Response({"details": serializer.data})
 
 
+class PeopleViewSet(RetrieveAPIView):
+
+    queryset = Faculty.objects.all()
+
+    def retrieve(self, request, pk):
+        department = Department.objects.filter(short_code__iexact=pk).first()
+        queryset = self.get_queryset().filter(department=department.id)
+        serializer = PeopleSerializer(queryset)
+        return Response({"details": serializer.data})
+
+
 class AboutUsViewSet(RetrieveAPIView):
 
     queryset = Department.objects.all()

@@ -36,6 +36,33 @@ class CourseSerializer(serializers.ModelSerializer):
         fields = ('title', 'short_code', 'semester', 'course_type', 'credits',)
 
 
+class PeopleSerializer(serializers.ModelSerializer):
+
+    faculty = serializers.SerializerMethodField()
+
+    def get_faculty(self, obj):
+        result = collections.defaultdict()
+        prof = Roles.objects.filter(name="Professor").first()
+        associate_prof = Roles.objects.filter(name="Associate Professor").first()
+        assistant_prof = Roles.objects.filter(name="Assistant Professor").first()
+        for i in self.instance.all():
+            for j in i.facultyroles_set.all():
+                if j.role_id == associate_prof.id or j.role_id == prof.id or j.role_id == assistant_prof.id:
+                    try:
+                        result[j.role.name].append({
+                            'details': FacultySerializer(Faculty.objects.filter(pk=i.id), many=True).data
+                        })
+                    except KeyError:
+                        result[j.role.name] = [{
+                            'details': FacultySerializer(Faculty.objects.filter(pk=i.id), many=True).data
+                        }]
+        return result
+
+    class Meta:
+        model = Faculty
+        fields = ('faculty', )
+
+
 class MainSerializer(serializers.ModelSerializer):
 
     offerings = serializers.SerializerMethodField()
