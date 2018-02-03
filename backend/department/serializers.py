@@ -9,7 +9,6 @@ class DepartmentListSerializer(serializers.ModelSerializer):
         fields = ('name', 'short_code',)
 
 
-
 class FacultySerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty

@@ -1,7 +1,6 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-from rest_framework.viewsets import ModelViewSet
 
 from department.serializers import *
 from department.models import *
@@ -16,11 +15,11 @@ class DepartmentListViewSet(ListAPIView):
     serializer_class = DepartmentListSerializer
     permission_classes = (AllowAny, )
 
-    def list(self, request, *args, **kwargs):
+    def list(self, *args, **kwargs):
 
         queryset = self.get_queryset()
         serializer = DepartmentListSerializer(queryset, many=True)
-        return Response({"departments":serializer.data})
+        return Response({"departments": serializer.data})
 
 
 class FacultyViewSet(ListAPIView):
@@ -40,10 +39,10 @@ class DepartmentViewSet(RetrieveAPIView):
     queryset = Department.objects.all()
     serializer_class = MainSerializer
 
-    def list(self, request, slug):
-    	queryset = self.get_queryset().filter(department__short_code__iexact=slug)
-    	serializer = FacultySerializer(queryset, many=True)
-    	return Response({"faculties": serializer.data})
+    def list(self, request, pk):
+        queryset = self.get_queryset().filter(department__short_code__iexact=pk)
+        serializer = FacultySerializer(queryset, many=True)
+        return Response({"faculties": serializer.data})
 
 
 class AboutUsViewSet(RetrieveAPIView):
@@ -58,8 +57,8 @@ class AboutUsViewSet(RetrieveAPIView):
             queryset = get_object_or_404(self.queryset, **filter_kwargs)
             serializer = AboutUsSerializer(queryset)
             return Response({"about-us": serializer.data})
-        except:
-            raise Http404
+        except Http404:
+            raise
 
 
 class HodViewSet(RetrieveAPIView):
@@ -74,5 +73,5 @@ class HodViewSet(RetrieveAPIView):
             queryset = get_object_or_404(self.queryset, **filter_kwargs)
             serializer = HodSerializer(queryset)
             return Response({"hod": serializer.data})
-        except:
-            raise Http404
+        except Http404:
+            raise
