@@ -24,7 +24,7 @@ function small_tile(link,icon,name) {
   console.log("Hello");
   $.ajax({
     type: "GET",
-    dataType: 'jsonp',
+    dataType: 'json',
     url: "http://172.16.20.3:8000/dashboard/?format=json",
     success: function(data){
       console.log(data);
