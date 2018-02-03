@@ -63,13 +63,15 @@ class AboutUsViewSet(RetrieveAPIView):
 
 class HodViewSet(RetrieveAPIView):
 
-    queryset = Faculty.objects.all()
+    hod_role = Roles.objects.filter(name='HOD')
+    hods = FacultyRoles.objects.filter(role=hod_role)
+    queryset = Faculty.objects.filter(pk=hods.values_list('faculty'))
     serializer_class = HodSerializer
     permission_classes = (AllowAny, )
 
     def retrieve(self, request, id):
         try:
-            filter_kwargs = {'department_id' : id}
+            filter_kwargs = {'department': id}
             queryset = get_object_or_404(self.queryset, **filter_kwargs)
             serializer = HodSerializer(queryset)
             return Response({"hod": serializer.data})

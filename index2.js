@@ -25,13 +25,12 @@ function small_tile(link,icon,name) {
   $.ajax({
     type: "GET",
     dataType: 'jsonp',
-    // url: "http://172.16.20.3:8000/dashboard/?format=json",
-    url: "http://www.mocky.io/v2/5a73798b310000d324a1d65b",
+    url: "http://172.16.20.3:8000/dashboard/?format=json",
     success: function(data){
       console.log(data);
 
       // LOOP FOR SECTION
-      $.each(data.response, function(index, element) {
+      $.each(data.tiles, function(index, element) {
         console.log(element.section_name);
         if (index%3==0)
         {
@@ -57,7 +56,6 @@ function small_tile(link,icon,name) {
     },
     error: function(error){
       console.log(error);
-      console.log("Error hai be");
     }
   });
 });
