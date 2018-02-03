@@ -11,12 +11,11 @@ from django.shortcuts import get_object_or_404
 
 class DepartmentListViewSet(ListAPIView):
 
-    queryset = Department.objects.all()
+    queryset = Department.objects.all().order_by('short_code')
     serializer_class = DepartmentListSerializer
     permission_classes = (AllowAny, )
 
     def list(self, *args, **kwargs):
-
         queryset = self.get_queryset()
         serializer = DepartmentListSerializer(queryset, many=True)
         return Response({"departments": serializer.data})
@@ -31,7 +30,7 @@ class FacultyViewSet(ListAPIView):
     def list(self, request, slug):
         queryset = self.get_queryset().filter(department__short_code__iexact=slug)
         serializer = FacultySerializer(queryset, many=True)
-        return Response({"faculties":serializer.data})
+        return Response({"faculties": serializer.data})
 
 
 class DepartmentViewSet(RetrieveAPIView):

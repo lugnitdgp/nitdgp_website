@@ -66,7 +66,7 @@ class DepartmentNameListing(serializers.RelatedField):
         self.queryset = Department.objects.get(short_code__iexact=value.short_code)
 
     def to_representation(self, value):
-        return '%s' % (value.name)
+        return '%s' % value.name
 
 
 class HodSerializer(serializers.ModelSerializer):

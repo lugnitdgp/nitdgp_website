@@ -57,6 +57,7 @@ class Research(BaseModel):
     def _faculty_involved(self):
         return self.faculty_involved
 
+
 class Project(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = models.TextField()
@@ -79,6 +80,7 @@ class Project(BaseModel):
 
     def _funding(self):
         return self.funding
+
 
 class Roles(BaseModel):
     class Meta:
@@ -103,6 +105,7 @@ class FacultyRoles(BaseModel):
 
     def _role(self):
         return self.role.name
+
 
 class Activites(BaseModel):
 
@@ -169,7 +172,7 @@ class Courses(BaseModel):
     class Meta:
         verbose_name_plural = 'Courses'
 
-    COURSE_TYPES = (('L','Lecture'), ('T','Tutorial'), ('S','Sessional'))
+    COURSE_TYPES = (('L', 'Lecture'), ('T', 'Tutorial'), ('S', 'Sessional'))
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     short_code = models.CharField(max_length=7)
