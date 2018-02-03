@@ -9,10 +9,19 @@ class DepartmentListSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'short_code',)
 
 
-class DepartmentSerializer(serializers.ModelSerializer):
+class AboutUsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision')
+        fields = ('id', 'name', 'short_code', 'about_us', 'mission', 'vision')
+
+
+class HodSerializer(serializers.ModelSerializer):
+
+    department = serializers.ReadOnlyField(source='department.name')
+
+    class Meta:
+        model = Faculty
+        fields = ('id', 'name', 'research_interest', 'email', 'mobile', 'joining_year', 'department')
 
 
 class FacultySerializer(serializers.ModelSerializer):
@@ -63,7 +72,7 @@ class PeopleSerializer(serializers.ModelSerializer):
         fields = ('faculty', )
 
 
-class MainSerializer(serializers.ModelSerializer):
+class ProgrammeSerializer(serializers.ModelSerializer):
 
     offerings = serializers.SerializerMethodField()
 
@@ -86,18 +95,3 @@ class MainSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
         fields = ('offerings',)
-
-
-class AboutUsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Department
-        fields = ('id', 'name', 'short_code', 'about_us', 'mission', 'vision')
-
-
-class HodSerializer(serializers.ModelSerializer):
-
-    department = serializers.ReadOnlyField(source='department.name')
-
-    class Meta:
-        model = Faculty
-        fields = ('id', 'name', 'research_interest', 'email', 'mobile', 'joining_year', 'department')

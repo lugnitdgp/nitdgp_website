@@ -36,55 +36,21 @@ class FacultyViewSet(ListAPIView):
 
 class DepartmentViewSet(RetrieveAPIView):
 
-    queryset = Department.objects.all()
-    serializer_class = DepartmentSerializer
-
-    def retrieve(self, request, pk):
-        queryset = self.get_queryset().filter(short_code__iexact=pk)
-        serializer = DepartmentSerializer(queryset, many=True)
-        return Response({"details": serializer.data})
-
-
-class PeopleViewSet(RetrieveAPIView):
-
-    queryset = Faculty.objects.all()
-
-    def retrieve(self, request, pk):
-        department = Department.objects.filter(short_code__iexact=pk).first()
-        queryset = self.get_queryset().filter(department=department.id)
-        serializer = PeopleSerializer(queryset)
-        return Response({"details": serializer.data})
-
-
-class AboutUsViewSet(RetrieveAPIView):
-
-    queryset = Department.objects.all()
-    serializer_class = AboutUsSerializer
-    permission_classes = (AllowAny, )
-
-    def retrieve(self, request, id):
-        try:
-            filter_kwargs = {'id': id}
-            queryset = get_object_or_404(self.queryset, **filter_kwargs)
-            serializer = AboutUsSerializer(queryset)
-            return Response({"about-us": serializer.data})
-        except Http404:
-            raise
-
-
-class HodViewSet(RetrieveAPIView):
-
     hod_role = Roles.objects.filter(name='HOD')
-    hods = FacultyRoles.objects.filter(role=hod_role)
-    queryset = Faculty.objects.filter(pk=hods.values_list('faculty'))
-    serializer_class = HodSerializer
+    hods = Faculty.objects.filter(pk=FacultyRoles.objects.filter(role=hod_role).values_list('faculty'))
+    queryset = Department.objects.all()
     permission_classes = (AllowAny, )
 
-    def retrieve(self, request, id):
+    def retrieve(self, request, short_code):
         try:
-            filter_kwargs = {'department': id}
-            queryset = get_object_or_404(self.queryset, **filter_kwargs)
-            serializer = HodSerializer(queryset)
-            return Response({"hod": serializer.data})
+            filter_kwargs = {'short_code': short_code}
+            department = get_object_or_404(self.queryset, **filter_kwargs)
+            faculty = Faculty.objects.filter(department=department.id)
+            department_hod = self.hods.filter(department=department.id)
+            people = PeopleSerializer(faculty)
+            about_us = AboutUsSerializer(department)
+            hod = FacultySerializer(department_hod, many=True)
+            return Response({"people": people.data, "about_us": about_us.data, "hod": hod.data})
         except Http404:
             raise
+
