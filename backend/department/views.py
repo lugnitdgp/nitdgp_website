@@ -40,8 +40,6 @@ class DepartmentViewSet(RetrieveAPIView):
     serializer_class = DepartmentSerializer
 
     def retrieve(self, request, pk):
-        import pdb
-        pdb.set_trace()
         queryset = self.get_queryset().filter(short_code__iexact=pk)
         serializer = DepartmentSerializer(queryset, many=True)
         return Response({"details": serializer.data})
