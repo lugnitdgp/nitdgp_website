@@ -125,10 +125,19 @@ body {
 #footer-container{
   padding-bottom:10px;
 }
-#page-content-center{
+.l0{
+  min-height: 50px;
+  padding-top: 4em;
+  padding-bottom: 0.1em;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+.l1-dep{
   min-height: 650px;
   padding-top: 4em;
   padding-bottom: 2em;
+  padding-right: 20%;
+  padding-left: 20%;
 }
 /*hr.style4 {
   border-top: 1px dotted #8c8b8b;
@@ -150,106 +159,119 @@ hr.style4:after {
   background: #E0F7FA;
 }
 /*all-cards*/
-.l1-department .tile-content{
-  padding: 1%;
-  color: #ffffff;
+.l1-dep .card-body{
+  margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
-.l1-department .tile-small{
-  background-color: #004545;
-  margin: 2px;
-  height: 150px;
-  min-height: 50%;
-  max-height: 380px;
+.l1-dep .tile-content{
+  text-align: center;vertical-align: middle;line-height: 110%;padding-top: 12px;margin-bottom: -4px;min-height: 80%;color: #ffffff;
 }
-.l1-department .tile-small:hover {
+.l1-dep .tile-title-text{
+  letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
+}
+.l1-dep .tile-small{
+  background-color: #004545;margin: 1px;
+}
+.l1-dep .tile-title{
+  background-color: #3b5998;height: 1px;
+}
+.l1-dep .tile-small:hover {
   opacity: 0.5;
 }
-.l1-department .tile-small i{
-  font-size: 150%; 
-  padding-top: 4%;
-  padding-bottom: 1%;
+.l1-dep .tile-small-text{
+  font-size: 90%;font-weight: bold;
 }
-.l1-department .tile-small span{
-  text-align: center;
-  vertical-align: middle;
-  line-height: 150px;
-  font-size: 120%;
-  padding-bottom: 60px;
+.l1-dep .fa-2x{
+  font-size: 250%;padding-bottom: 8px;
+  font-family: 'Oswald';font-weight: bold;
 }
-.l1-department .tile-title{
+/*.l1-department .tile-title{
   background-color: #3b5998;
   height: 1px;
 }
 .l1-department .tile-title-text{
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 5px;
-  color: #ffffff;
+  letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
+}
+.l1-department .card-body{
+  margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
+}
+.l1-department .tile-small{
+  background-color: #004545;margin: 2px;height: 95px;
+}
+.l1-department .tile-small:hover {
+  opacity: 0.5;
+}
+.l1-department .tile-content{
+  padding-top: 2%;text-align: center;vertical-align: middle;color: #ffffff;
+  line-height: 100%;min-height: 80%;
+}
+.l1-department .dep-shorts{
+  font-family: 'Oswald';font-weight: bold;font-size: 300%;
+}
+p.l1-department{
+  line-height: 1px;
+}
+.l1-department .dep-text{
+  max-height: 100%;max-width:100%;margin-top: -3.8em;text-align: center;vertical-align: middle;line-height: 150px;font-size: 120%;
+}*/
+@media screen and (max-width: 1000px) {
+  .l0 .big-col{
+    min-width: 100%;
+  }
+  .l0 .fa-2x{
+    font-size: 120%;
+  }
+  .l1-dep .big-col{
+    min-width: 100%;
+  }
+  .l1-dep .fa-2x{
+    font-size: 150%;
+  }
+  .page-content-container{
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  /*.l1-department .tile-small{
+    height: 90px;
+  }
+  .l1-department .dep-shorts{
+    font-size: 200%;
+  }
+  .l1-department .dep-text{
+    display: none;
+  }
+  .l1-department .tile-content{
+    padding-top: 1px;
+  }*/
+  /*.navbar-text h4.hidemee{
+    display: none;
+  }
+  .navbar-text p.showmee{
+    display: block;
+  }*/
+}
+.l0 .card-body{
+  margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
 .l0 .tile-content{
-  text-align: center;
-  vertical-align: middle;
-  line-height: 100%;
-  padding-top: 8px;
-  margin-bottom: -12px;
-  min-height: 80%;
-  color: #ffffff;
+  text-align: center;vertical-align: middle;line-height: 100%;padding-top: 8px;margin-bottom: -12px;min-height: 80%;color: #ffffff;
 }
-
+.l0 .tile-title-text{
+  letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
+}
 .l0 .tile-small{
-  background-color: #004545;
-  margin: 1px;
+  background-color: #004545;margin: 1px;
+}
+.l0 .tile-title{
+  background-color: #3b5998;height: 1px;
 }
 .l0 .tile-small:hover {
   opacity: 0.5;
 }
 .l0 .tile-small-text{
-  font-size: 80%;
-  font-weight: bold;
+  font-size: 80%;font-weight: bold;
 }
 .l0 .fa-2x{
-  font-size: 180%;
-  padding-bottom: 2px;
-}
-.l0 .tile-title{
-  background-color: #3b5998;
-  height: 1px;
-}
-.l0 .tile-title-text{
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 1px;
-  color: #ffffff;
-}
-/*/.all-cards*/
-/*all-cards*/
-.l00 .tile-content{
-  padding: 1em;
-  color: #ffffff;
-}
-.l00 .tile-small{
-  background-color: #004545;
-  margin: 2px;
-  min-height: 60px;
-}
-.l00 .tile-small i{
-  padding: 2px;
-}
-.l00 .tile-title{
-  background-color: #3b5998;
-  height: 1px;
-}
-.l00 .tile-title-text{
-  letter-spacing: 2px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 5px;
-  color: #ffffff;
+  font-size: 180%;padding-bottom: 2px;
 }
 /*/.all-cards*/
 .big-row{
@@ -368,20 +390,6 @@ hr.style4:after {
   color: #ffffff; 
 }
 /*/.card-5*/
- @media screen and (max-width: 500px) {
-  .l0 .big-col{
-    min-width: 100%;
-  }
-  .l0 .fa-2x{
-    font-size: 120%;
-  }
-  /*.navbar-text h4.hidemee{
-    display: none;
-  }
-  .navbar-text p.showmee{
-    display: block;
-  }*/
-}
 
 /*Level 1*/
 /* card bg-color*/

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 from base.models import BaseModel
 
-def next_count(model):
+def next_count():
     return Section.objects.count()+1
 
 
