@@ -6,7 +6,8 @@ import collections
 class DepartmentListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ('name', 'short_code')
+        fields = ('name', 'short_code',)
+
 
 
 class FacultySerializer(serializers.ModelSerializer):
@@ -53,3 +54,26 @@ class MainSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
         fields = ('offerings',)
+
+
+class AboutUsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Department
+        fields = ('id', 'name', 'short_code', 'about_us', 'mission', 'vision')
+
+
+class DepartmentNameListing(serializers.RelatedField):
+    def get_queryset(self, value):
+        self.queryset = Department.objects.get(short_code__iexact=value.short_code)
+
+    def to_representation(self, value):
+        return '%s' % (value.name)
+
+
+class HodSerializer(serializers.ModelSerializer):
+
+    department = DepartmentNameListing()
+
+    class Meta:
+        model = Faculty
+        fields = ('id', 'name', 'research_interest', 'email', 'mobile', 'joining_year', 'department')
