@@ -9,6 +9,12 @@ class DepartmentListSerializer(serializers.ModelSerializer):
         fields = ('name', 'short_code',)
 
 
+class DepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Department
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision')
+
+
 class FacultySerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty

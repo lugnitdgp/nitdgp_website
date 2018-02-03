@@ -28,7 +28,7 @@ class FacultyViewSet(ListAPIView):
     permission_classes = (AllowAny, )
 
     def list(self, request, slug):
-        queryset = self.get_queryset().filter(department__short_code__iexact=slug)
+        queryset = self.get_queryset().filter(short_code__iexact=slug)
         serializer = FacultySerializer(queryset, many=True)
         return Response({"faculties": serializer.data})
 
@@ -36,12 +36,14 @@ class FacultyViewSet(ListAPIView):
 class DepartmentViewSet(RetrieveAPIView):
 
     queryset = Department.objects.all()
-    serializer_class = MainSerializer
+    serializer_class = DepartmentSerializer
 
-    def list(self, request, pk):
-        queryset = self.get_queryset().filter(department__short_code__iexact=pk)
-        serializer = FacultySerializer(queryset, many=True)
-        return Response({"faculties": serializer.data})
+    def retrieve(self, request, pk):
+        import pdb
+        pdb.set_trace()
+        queryset = self.get_queryset().filter(short_code__iexact=pk)
+        serializer = DepartmentSerializer(queryset, many=True)
+        return Response({"details": serializer.data})
 
 
 class AboutUsViewSet(RetrieveAPIView):
