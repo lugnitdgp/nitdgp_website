@@ -23,12 +23,13 @@ class DepartmentListViewSet(ListAPIView):
 
 class FacultyViewSet(ListAPIView):
 
-    queryset = Faculty.objects.all()
+    queryset = Department.objects.all()
     serializer_class = FacultySerializer
     permission_classes = (AllowAny, )
 
     def list(self, request, slug):
-        queryset = self.get_queryset().filter(short_code__iexact=slug)
+        department = self.get_queryset().filter(short_code__iexact=slug).first()
+        queryset = department.faculty_set.all()
         serializer = FacultySerializer(queryset, many=True)
         return Response({"faculties": serializer.data})
 
