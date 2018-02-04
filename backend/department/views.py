@@ -50,7 +50,8 @@ class DepartmentViewSet(RetrieveAPIView):
             people = PeopleSerializer(faculty)
             about_us = AboutUsSerializer(department)
             hod = FacultySerializer(department_hod, many=True)
-            return Response({"people": people.data, "about_us": about_us.data, "hod": hod.data})
+            programmes = ProgrammeSerializer(department)
+            return Response({"people": people.data, "about_us": about_us.data, "hod": hod.data, "programmes": programmes.data})
         except Http404:
             raise
 

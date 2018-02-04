@@ -18,7 +18,7 @@ class Department(BaseModel):
 class Faculty(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'Faculties'
+        verbose_name_plural = 'Faculty'
 
     name = models.CharField(max_length=255)
     research_interest = models.TextField()
@@ -201,7 +201,7 @@ class Facilities(BaseModel):
     class Meta:
         verbose_name_plural = 'Facilities'
 
-    FACILITY_CHOICES = (('1','Laboratory'), ('2','Equipment'))
+    FACILITY_CHOICES = (('1', 'Laboratory'), ('2', 'Equipment'))
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     category = models.IntegerField(choices=FACILITY_CHOICES, default=1)
