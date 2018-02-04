@@ -59,6 +59,7 @@ class Research(BaseModel):
 
 
 class Project(BaseModel):
+
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = models.TextField()
     area = models.CharField(max_length=255)
@@ -83,10 +84,13 @@ class Project(BaseModel):
 
 
 class Roles(BaseModel):
+
     class Meta:
         verbose_name_plural = 'Roles'
 
+    ROLE_TYPES = (('Departmental', 'Departmental'), ('Administrative', 'Administrative'))
     name = models.CharField(max_length=56)
+    type = models.CharField(choices=ROLE_TYPES, default='Departmental', max_length=30)
 
     def __str__(self):
         return self.name
