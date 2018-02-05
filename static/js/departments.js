@@ -13,7 +13,7 @@ function section_header(title) {
 
 function small_tile(link,icon,name) {
   return '<div class="col tile-small">\
-            <a href="172.16.20.3/department/'+link+'">\
+            <a href="/nitdgp_website/department/?id='+link+'">\
             <div align="center" class="tile-content"><i class="fa fa-2x">'+icon+'</i><br>\
               <p class="tile-small-text">'+name+'</p>\
             </div>\
@@ -47,7 +47,7 @@ $( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
           if (index % 4 == 0) {
             $('#card_1').append('<div class="row" id=tile_row'+parseInt(index/4)+'>');
           }
-          $('#tile_row'+parseInt(index/4)).append(small_tile(tile.short_code,tile.short_code,tile.name));
+          $('#tile_row'+parseInt(index/4)).append(small_tile(tile.id,tile.short_code,tile.name));
         });
       }
       else if (n%4==1) {
@@ -67,7 +67,7 @@ $( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
                 ++row_no;
               }
             }
-            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.short_code,tile.short_code,tile.name))
+            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.id,tile.short_code,tile.name))
         });
       }
       else if (n%4==2) {
@@ -87,7 +87,7 @@ $( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
                 ++row_no;
               }
             }
-            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.short_code,tile.short_code,tile.name))
+            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.id,tile.short_code,tile.name))
         });
       }
       else {
@@ -103,7 +103,7 @@ $( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
               $('#card_1').append('<div class="row" id=tile_row'+eval(row_no)+'>');
               ++row_no;
             }
-            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.short_code,tile.short_code,tile.name))
+            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.id,tile.short_code,tile.name))
         });
       }
     },
