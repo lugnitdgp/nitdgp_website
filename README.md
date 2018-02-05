@@ -39,14 +39,9 @@ The footer will follow the format of the NIT Rourkela website, with the followin
 
 #### Quick Links
 
-- Contacts
 - Holidays
-- Tenders
-- NBA Accreditation Data
-- Annual Accounts and Reports
-- Audit Reports
-- Public Grievance Portal
-- NIRF
+- Archives
+- Policies
 
 
 ### Hierarchy
@@ -62,48 +57,58 @@ The footer will follow the format of the NIT Rourkela website, with the followin
   - Departments (Level 0)
     - List of All Departments (Level 1)
       - Department Page (Level 2)
-  - Examination (Level 0)
-    - Examination notices
-  - Academic Information (Level 0)
-    - Academic Calendar
-    - Curricula
-    - Academic Regulations
-    - Fee Structure
+  - Notices (Level 0)
+  - Calendar (Level 0)
+  - Registration(Level 0)
+  - Regulations(Level 0)
+  - Convocation(Level 0)
+  - Curricula(Level 0)
+  - Documents(Level 0)
 
--  Administration (Tile-Group)
-   - Institute Information (Level 0)
-   - Board of Governors (Level 0)
-   - Chairperson's Profile (Level 0)
-   - Director's Profile (Level 0)
-   - Registrar's I/C (Level 0)
-   - Deans (Level 0)
-   - Wardens (Level 0)
+- Administration (Tile-Group)
+  - Chairperson(Level 0)
+  - MHRD(Level 0)
+  - Visitor(Level 0)
+  - Board of Governors(Level 0)
+  - Director(Level 0)
+  - Registrar(Level 0)
+  - BWC(Level 0)
+  - IFC(Level 0)
+  - Senate(Level 0)
 
-- Campus (Tile-Group)
-  - Campus Tour (Level 0)
-    - About Us and campus tour carousel
-  - Facilities (Level 0)
-    - Academic facilities (Group)
-      - Central Library
-      - High Voltage Laboratory
-      - SAC
-      - Computer Centre
-      - Central Instruments Facility
-      - Centre of Excellence in Advanced Materials
-    - Campus Facilities (Group)
-      - Accomodation
-      - Hostels
-      - Health Centre
-      - Canteen facilities
-      - Medical Unit
+- Activities (Title-Group)
+  - Outreach
+  - Placement
+  - Research
+  - Achievements
+  - Students
+  - Seminars and Events
 
-- Research Activities (Tile-Group)
-  - Seminars and Conferences (Level 0)
-  - Research (Level 0)
-
-- Unnamed Group (Not to be named)
-  - Students' Technical Activies (Level 0)
-    - Various Clubs and their activities (Level 1)
-      - List of all clubs (Level 2)
-  - Alumni
+- Information
+  - Annual Reports
+  - Audit Reports
   - Careers
+  - Chanakya
+  - e-Prashasan
+  - NBA
+  - NIRF
+  - RTI
+  - Tender
+  - TEQUIP
+  - History
+  - Location
+  - Public Grievances
+
+- Facilities
+  - Computer Center
+  - Library
+  - SAC
+  - CEAM
+  - CF
+  - HVL
+  - Banks
+  - Canteen
+  - Post Office
+  - Guest House
+  - Hostels
+  - Medical Unit
