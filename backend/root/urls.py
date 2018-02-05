@@ -22,5 +22,6 @@ urlpatterns = [
     # url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^', include('dashboard.urls')),
     url(r'^', include('department.urls')),
+    url(r'^', include('administration.urls')),
     url(r'^$', APIRoot.as_view(), name='root-view')
 ]
