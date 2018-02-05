@@ -4,12 +4,14 @@ import collections
 
 
 class DepartmentListSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Department
         fields = ('id', 'name', 'short_code',)
 
 
 class FacultySerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Faculty
         fields = ('name', 'research_interest', 'email', 'mobile', 'joining_year')
@@ -20,6 +22,20 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Courses
         fields = ('title', 'short_code', 'semester', 'course_type', 'credits',)
+
+
+class ResearchSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Research
+        fields = ('collab_inst', 'area', 'faculty_involved', 'date')
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Project
+        fields = ('collab_inst', 'area', 'faculty_involved', 'funding', 'date')
 
 
 class FacultyRolesSerializer(serializers.ModelSerializer):
@@ -58,6 +74,7 @@ class PeopleSerializer(serializers.ModelSerializer):
 class MainSerializer(serializers.ModelSerializer):
 
     def get_hod(self, obj):
+
         hod_role = Roles.objects.filter(name='HOD')
         department_hod = ''
         for faculty_role in FacultyRoles.objects.filter(role=hod_role):
@@ -68,6 +85,7 @@ class MainSerializer(serializers.ModelSerializer):
         return FacultySerializer(department_hod).data
 
     def get_people(self, obj):
+
         faculty = Faculty.objects.filter(department=obj.id)
         return PeopleSerializer(faculty, context=obj).data
 
@@ -99,11 +117,23 @@ class MainSerializer(serializers.ModelSerializer):
 
         return result
 
+    def get_research(self, obj):
+
+        research = Research.objects.filter(department=obj.id)
+        return ResearchSerializer(research, many=True).data
+
+    def get_projects(self, obj):
+
+        projects = Project.objects.filter(department=obj.id)
+        return ProjectSerializer(projects, many=True).data
+
     hod = serializers.SerializerMethodField()
     people = serializers.SerializerMethodField()
     programmes = serializers.SerializerMethodField()
     facilities = serializers.SerializerMethodField()
+    research = serializers.SerializerMethodField()
+    projects = serializers.SerializerMethodField()
 
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', 'facilities')
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', 'research', 'projects', 'facilities')

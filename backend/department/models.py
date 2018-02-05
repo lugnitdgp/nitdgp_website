@@ -203,7 +203,7 @@ class Facility(BaseModel):
     class Meta:
         verbose_name_plural = 'Facilities'
 
-    FACILITY_CHOICES = (('L', 'Laboratory'), ('E', 'Equipment'))
+    FACILITY_CHOICES = (('Laboratory', 'Laboratory'), ('Equipment', 'Equipment'))
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     category = models.CharField(choices=FACILITY_CHOICES, max_length=1)
