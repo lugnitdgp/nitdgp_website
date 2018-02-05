@@ -6,8 +6,9 @@ class Department(BaseModel):
     name = models.CharField(max_length=255)
     short_code = models.CharField(max_length=4)
     about_us = models.TextField()
-    mission = models.TextField()
-    vision = models.TextField()
+    mission = models.CharField(max_length=1024)
+    vision = models.CharField(max_length=512)
+    contact_us = models.TextField()
 
     def __str__(self):
         return self.name

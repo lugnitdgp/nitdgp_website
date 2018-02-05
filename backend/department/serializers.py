@@ -175,4 +175,4 @@ class MainSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', 'research', 'projects', 'activities', 'facilities', 'photos', 'news')
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'contact_us', 'hod', 'people', 'programmes', 'research', 'projects', 'activities', 'facilities', 'photos', 'news')
