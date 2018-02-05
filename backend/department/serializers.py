@@ -85,10 +85,22 @@ class MainSerializer(serializers.ModelSerializer):
                 }]
         return result
 
+    def get_facilities(self, obj):
+        facilities = {'laboratory': [], 'equipment': []}
+        departmental_facilities = Facility.objects.filter(department=obj.id)
+        for facility in departmental_facilities:
+            if facility.category == 'L':
+                facilities['laboratory'].append(facility.name)
+            else:
+                facilities['equipment'].append(facility.name)
+
+        return facilities
+
     hod = serializers.SerializerMethodField()
     people = serializers.SerializerMethodField()
     programmes = serializers.SerializerMethodField()
+    facilities = serializers.SerializerMethodField()
 
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', )
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', 'facilities')

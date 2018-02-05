@@ -200,21 +200,21 @@ class Courses(BaseModel):
         return self.course_type
 
 
-class Facilities(BaseModel):
+class Facility(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Facilities'
 
-    FACILITY_CHOICES = (('1', 'Laboratory'), ('2', 'Equipment'))
+    FACILITY_CHOICES = (('L', 'Laboratory'), ('E', 'Equipment'))
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    category = models.IntegerField(choices=FACILITY_CHOICES, default=1)
+    category = models.CharField(choices=FACILITY_CHOICES, max_length=1)
+
+    def __str__(self):
+        return self.name
 
     def _department(self):
         return self.department.name
-
-    def _name(self):
-        return self.name
 
     def _category(self):
         return self.category

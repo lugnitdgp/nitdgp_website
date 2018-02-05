@@ -40,8 +40,9 @@ class CoursesModelAdmin(admin.ModelAdmin):
     list_display = ['_programme', '_short_code', '_semester', '_course_type']
 
 
-class FacilitiesModelAdmin(admin.ModelAdmin):
-    list_display = ['_department', '_name', '_category']
+class FacilityModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_department', '_category']
+    ordering = ('department', '-category', )
 
 
 class ElectivesModelAdmin(admin.ModelAdmin):
@@ -66,7 +67,7 @@ admin.site.register(Activites, ActitvitesModelAdmin)
 admin.site.register(Degree, DegreeModelAdmin)
 admin.site.register(Programme, ProgrammeModelAdmin)
 admin.site.register(Courses, CoursesModelAdmin)
-admin.site.register(Facilities, FacilitiesModelAdmin)
+admin.site.register(Facility, FacilityModelAdmin)
 admin.site.register(Electives, ElectivesModelAdmin)
 admin.site.register(DepartmentNews, DepartmentNewsModelAdmin)
 admin.site.register(DepartmentPhotos, DepartmentPhotosModelAdmin)
