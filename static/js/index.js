@@ -21,6 +21,9 @@ function small_tile(link,icon,name) {
     </div>';
 };
 
+$( "#header" ).load( "../nitdgp_website/static/layout/header.html");
+$( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
+
   console.log("Hello");
   $.ajax({
     type: "GET",
@@ -32,10 +35,10 @@ function small_tile(link,icon,name) {
       // LOOP FOR SECTION
       $.each(data.tiles, function(index, element) {
         console.log(element.section_name);
-        if (index%3==0)
-        {
+        // if (index%3==0)
+        // {
           $('#dynamic').append('<div class="row big-row" id=row_'+index+'>');
-        }
+        // }
         console.log(parseInt(index/3));
         $('#row_'+parseInt(index/3)).append('<div class="col big-col" id=col_'+index+'>');
         $('#col_'+index).append(section_card(index));

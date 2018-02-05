@@ -21,6 +21,8 @@ function small_tile(link,icon,name) {
           </div>'
 };
 
+$( "#header" ).load( "../nitdgp_website/static/layout/header.html");
+$( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
 
   console.log("Hello");
   $.ajax({
