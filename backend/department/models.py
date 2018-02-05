@@ -1,5 +1,6 @@
 from django.db import models
 from base.models import BaseModel
+import datetime
 
 
 class Department(BaseModel):
@@ -38,11 +39,12 @@ class Research(BaseModel):
     class Meta:
         verbose_name_plural = 'Research'
 
+    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = models.TextField()
     area = models.CharField(max_length=255)
     faculty_involved = models.TextField()
-    date = models.DateField(auto_now_add=True)
+    date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
     def __str__(self):
         return self.area
@@ -56,15 +58,19 @@ class Research(BaseModel):
     def _faculty_involved(self):
         return self.faculty_involved
 
+    def _date(self):
+        return self.date
+
 
 class Project(BaseModel):
 
+    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = models.TextField()
     area = models.CharField(max_length=255)
     faculty_involved = models.TextField()
     funding = models.CharField(max_length=56)
-    date = models.DateField(auto_now_add=True)
+    date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
     def __str__(self):
         return self.area
@@ -80,6 +86,9 @@ class Project(BaseModel):
 
     def _funding(self):
         return self.funding
+
+    def _date(self):
+        return self.date
 
 
 class Roles(BaseModel):
@@ -118,7 +127,8 @@ class Activity(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     speakers = models.CharField(max_length=512)
     programme = models.TextField()
-    date = models.DateField(auto_now_add=True)
+    start_date = models.DateField()
+    end_date = models.DateField()
 
     def _department(self):
         return self.department.name
@@ -129,8 +139,11 @@ class Activity(BaseModel):
     def _programme(self):
         return self.programme
 
-    def _date(self):
-        return self.date
+    def _start_date(self):
+        return self.start_date
+
+    def _end_date(self):
+        return self.end_date
 
 
 class Degree(BaseModel):
@@ -250,7 +263,7 @@ class DepartmentPhotos(BaseModel):
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField()
     link = models.CharField(max_length=255)
 
     def _department(self):
@@ -269,7 +282,7 @@ class DepartmentNews(BaseModel):
         verbose_name_plural = 'Department News'
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField()
     title = models.CharField(max_length=255)
     link = models.CharField(max_length=255)
 

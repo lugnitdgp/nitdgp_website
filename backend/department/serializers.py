@@ -42,7 +42,7 @@ class ActivitySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Activity
-        fields = ('speakers', 'programme', 'date')
+        fields = ('speakers', 'programme', 'start_date', 'end_date')
 
 
 class DepartmentPhotosSerializer(serializers.ModelSerializer):

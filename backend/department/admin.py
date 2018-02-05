@@ -9,11 +9,11 @@ class FacultyModelAdmin(admin.ModelAdmin):
 
 
 class ResearchModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved']
+    list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved', '_date']
 
 
 class ProjectModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved', '_funding']
+    list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved', '_funding', '_date']
 
 
 class RolesModelAdmin(admin.ModelAdmin):
@@ -25,7 +25,7 @@ class FacultyRolesModelAdmin(admin.ModelAdmin):
 
 
 class ActivitiesModelAdmin(admin.ModelAdmin):
-    list_display = ['_department', '_speakers', '_programme', '_date']
+    list_display = ['_department', '_speakers', '_programme', '_start_date', '_end_date']
 
 
 class DegreeModelAdmin(admin.ModelAdmin):
