@@ -44,5 +44,9 @@ docs/_build/
 # Migrations
 migrations/
 
-# Fixtures 
+# Fixtures
 fixtures/
+
+# Backup files
+*~
+\#*
