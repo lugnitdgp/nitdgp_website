@@ -10,7 +10,9 @@ class APIRoot(APIView):
 
     def get(self, request):
 
-        return Response({
+        resp_dict = {
             'dashboard': reverse('dashboard:list-tile-content', request=request),
             'department': reverse('department:list-department', request=request),
-        })
+        }
+
+        return Response(resp_dict)

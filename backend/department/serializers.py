@@ -6,21 +6,13 @@ import collections
 class DepartmentListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = ('name', 'short_code')
+        fields = ('id', 'name', 'short_code',)
 
 
 class FacultySerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty
         fields = ('name', 'research_interest', 'email', 'mobile', 'joining_year')
-
-
-class OfferingSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Programme
-        fields = ('degree',)
-        depth = 1
 
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -30,11 +22,54 @@ class CourseSerializer(serializers.ModelSerializer):
         fields = ('title', 'short_code', 'semester', 'course_type', 'credits',)
 
 
+class FacultyRolesSerializer(serializers.ModelSerializer):
+
+    name = serializers.ReadOnlyField(source='faculty.name')
+    email = serializers.ReadOnlyField(source='faculty.email')
+    mobile = serializers.ReadOnlyField(source='faculty.mobile')
+    research_interest = serializers.ReadOnlyField(source='faculty.research_interest')
+    joining_year = serializers.ReadOnlyField(source='faculty.joining_year')
+
+    class Meta:
+
+        model = FacultyRoles
+        fields = ('name', 'email', 'mobile', 'research_interest', 'joining_year')
+
+
+class PeopleSerializer(serializers.ModelSerializer):
+
+    faculty = serializers.SerializerMethodField()
+
+    def get_faculty(self, obj):
+        result = collections.defaultdict()
+        for role in Roles.objects.filter(type='Departmental'):
+            faculty_list = role.facultyroles_set.filter(faculty__department=self.context.id)
+            data = FacultyRolesSerializer(faculty_list, many=True).data
+            if len(data) != 0 and role.name != 'HOD':
+                result[role.name] = data
+
+        return result
+
+    class Meta:
+        model = Faculty
+        fields = ('faculty', )
+
+
 class MainSerializer(serializers.ModelSerializer):
 
-    offerings = serializers.SerializerMethodField()
+    def get_hod(self, obj):
+        hod_role = Roles.objects.filter(name='HOD')
+        hods = Faculty.objects.filter(
+            pk=FacultyRoles.objects.filter(role=hod_role).values_list('faculty')
+        )
+        department_hod = hods.filter(department=obj.id).first()
+        return FacultySerializer(department_hod).data
 
-    def get_offerings(self, obj):
+    def get_people(self, obj):
+        faculty = Faculty.objects.filter(department=obj.id)
+        return PeopleSerializer(faculty, context=obj).data
+
+    def get_programmes(self, obj):
 
         result = collections.defaultdict()
         for i in self.instance.programme_set.all():
@@ -50,6 +85,10 @@ class MainSerializer(serializers.ModelSerializer):
                 }]
         return result
 
+    hod = serializers.SerializerMethodField()
+    people = serializers.SerializerMethodField()
+    programmes = serializers.SerializerMethodField()
+
     class Meta:
         model = Department
-        fields = ('offerings',)
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', )

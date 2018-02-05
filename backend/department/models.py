@@ -8,8 +8,8 @@ class Department(BaseModel):
     name = models.CharField(max_length=255)
     short_code = models.CharField(max_length=4)
     about_us = models.TextField()
-    mission = models.CharField(max_length=255)
-    vision = models.CharField(max_length=255)
+    mission = models.TextField()
+    vision = models.TextField()
 
     def __str__(self):
         return self.name
@@ -18,7 +18,7 @@ class Department(BaseModel):
 class Faculty(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'Faculties'
+        verbose_name_plural = 'Faculty'
 
     name = models.CharField(max_length=255)
     research_interest = models.TextField()
@@ -57,7 +57,9 @@ class Research(BaseModel):
     def _faculty_involved(self):
         return self.faculty_involved
 
+
 class Project(BaseModel):
+
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = models.TextField()
     area = models.CharField(max_length=255)
@@ -80,11 +82,15 @@ class Project(BaseModel):
     def _funding(self):
         return self.funding
 
+
 class Roles(BaseModel):
+
     class Meta:
         verbose_name_plural = 'Roles'
 
+    ROLE_TYPES = (('Departmental', 'Departmental'), ('Administrative', 'Administrative'))
     name = models.CharField(max_length=56)
+    type = models.CharField(choices=ROLE_TYPES, default='Departmental', max_length=30)
 
     def __str__(self):
         return self.name
@@ -103,6 +109,7 @@ class FacultyRoles(BaseModel):
 
     def _role(self):
         return self.role.name
+
 
 class Activites(BaseModel):
 
@@ -169,7 +176,7 @@ class Courses(BaseModel):
     class Meta:
         verbose_name_plural = 'Courses'
 
-    COURSE_TYPES = (('L','Lecture'), ('T','Tutorial'), ('S','Sessional'))
+    COURSE_TYPES = (('L', 'Lecture'), ('T', 'Tutorial'), ('S', 'Sessional'))
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     short_code = models.CharField(max_length=7)
@@ -198,7 +205,7 @@ class Facilities(BaseModel):
     class Meta:
         verbose_name_plural = 'Facilities'
 
-    FACILITY_CHOICES = (('1','Laboratory'), ('2','Equipment'))
+    FACILITY_CHOICES = (('1', 'Laboratory'), ('2', 'Equipment'))
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     category = models.IntegerField(choices=FACILITY_CHOICES, default=1)
