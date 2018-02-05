@@ -415,3 +415,41 @@ p.l1-department{
   vertical-align: middle;
   line-height: 50px;
 }
+.card {
+    margin: 1rem;
+}
+
+ul.pg_contents>li {
+    list-style-type: none;
+}
+
+ul.pg_contents>li h1 {
+    text-transform: uppercase;
+}
+
+.admission_contacts {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 770px) {
+    ul.pg_contents>li h1 {
+        font-size: 1.5rem;
+    }
+}
+.heading{
+  padding-top: 1.5rem;
+}
+.card-text div{
+  position:relative;
+  display: inline-flex;
+  flex-direction: row;
+}
+section{
+  margin:2%;
+}
+#search-btn-nav{
+  width: 100%;
