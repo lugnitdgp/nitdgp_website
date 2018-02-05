@@ -24,7 +24,7 @@ class FacultyRolesModelAdmin(admin.ModelAdmin):
     list_display = ['_faculty', '_role']
 
 
-class ActitvitesModelAdmin(admin.ModelAdmin):
+class ActivitiesModelAdmin(admin.ModelAdmin):
     list_display = ['_department', '_speakers', '_programme', '_date']
 
 
@@ -63,7 +63,7 @@ admin.site.register(Research, ResearchModelAdmin)
 admin.site.register(Project, ProjectModelAdmin)
 admin.site.register(Roles, RolesModelAdmin)
 admin.site.register(FacultyRoles, FacultyRolesModelAdmin)
-admin.site.register(Activites, ActitvitesModelAdmin)
+admin.site.register(Activity, ActivitiesModelAdmin)
 admin.site.register(Degree, DegreeModelAdmin)
 admin.site.register(Programme, ProgrammeModelAdmin)
 admin.site.register(Courses, CoursesModelAdmin)

@@ -109,10 +109,10 @@ class FacultyRoles(BaseModel):
         return self.role.name
 
 
-class Activites(BaseModel):
+class Activity(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'Activites'
+        verbose_name_plural = 'Activities'
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     speakers = models.CharField(max_length=512)
@@ -206,7 +206,7 @@ class Facility(BaseModel):
     FACILITY_CHOICES = (('Laboratory', 'Laboratory'), ('Equipment', 'Equipment'))
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    category = models.CharField(choices=FACILITY_CHOICES, max_length=1)
+    category = models.CharField(choices=FACILITY_CHOICES, max_length=15)
 
     def __str__(self):
         return self.name

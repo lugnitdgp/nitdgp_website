@@ -38,6 +38,27 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = ('collab_inst', 'area', 'faculty_involved', 'funding', 'date')
 
 
+class ActivitySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Activity
+        fields = ('speakers', 'programme', 'date')
+
+
+class DepartmentPhotosSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = DepartmentPhotos
+        fields = ('title', 'link')
+
+
+class DepartmentNewsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = DepartmentNews
+        fields = ('title', 'link')
+
+
 class FacultyRolesSerializer(serializers.ModelSerializer):
 
     name = serializers.ReadOnlyField(source='faculty.name')
@@ -127,13 +148,31 @@ class MainSerializer(serializers.ModelSerializer):
         projects = Project.objects.filter(department=obj.id)
         return ProjectSerializer(projects, many=True).data
 
+    def get_activities(self, obj):
+
+        activity = Activity.objects.filter(department=obj.id)
+        return ActivitySerializer(activity, many=True).data
+
+    def get_photos(self, obj):
+
+        photo = DepartmentPhotos.objects.filter(department=obj.id)
+        return DepartmentPhotosSerializer(photo, many=True).data
+
+    def get_news(self, obj):
+
+        news = DepartmentNews.objects.filter(department=obj.id)
+        return DepartmentNewsSerializer(news, many=True).data
+
     hod = serializers.SerializerMethodField()
     people = serializers.SerializerMethodField()
     programmes = serializers.SerializerMethodField()
     facilities = serializers.SerializerMethodField()
     research = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
+    activities = serializers.SerializerMethodField()
+    photos = serializers.SerializerMethodField()
+    news = serializers.SerializerMethodField()
 
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', 'research', 'projects', 'facilities')
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'hod', 'people', 'programmes', 'research', 'projects', 'activities', 'facilities', 'photos', 'news')
