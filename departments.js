@@ -38,10 +38,10 @@ function small_tile(link,icon,name) {
       $('#section_card1').append('<div class="card-body text-center" id=card_1>');
 
       // LOOP FOR SECTION
-      var n = data.departments.length;
+      var n = data.results.length;
       if (n%4==0) {
         // each row has 4 elements
-        $.each(data.departments, function(index, tile) {
+        $.each(data.results, function(index, tile) {
           if (index % 4 == 0) {
             $('#card_1').append('<div class="row" id=tile_row'+parseInt(index/4)+'>');
           }
@@ -51,7 +51,7 @@ function small_tile(link,icon,name) {
       else if (n%4==1) {
         // first 3 rows have 3 elements then rest each row has 4
         var row_no=0;
-        $.each(data.departments, function(index, tile) {
+        $.each(data.results, function(index, tile) {
 
             if (index<=9) {
               if (index%3==0) {
@@ -71,7 +71,7 @@ function small_tile(link,icon,name) {
       else if (n%4==2) {
         // first 2 rows have 3 elements then rest each row has 4
         var row_no=0;
-        $.each(data.departments, function(index, tile) {
+        $.each(data.results, function(index, tile) {
 
             if (index<=6) {
               if(index%3==0){
@@ -91,7 +91,7 @@ function small_tile(link,icon,name) {
       else {
         // first row have 3 elements then rest each row has 4
         var row_no=0;
-        $.each(data.departments, function(index, tile) {
+        $.each(data.results, function(index, tile) {
 
             if (index%3==0 && index<=3) {
               $('#card_1').append('<div class="row" id=tile_row'+eval(row_no)+'>');
