@@ -1,7 +1,5 @@
 from django.db import models
 from base.models import BaseModel
-import datetime
-import uuid
 
 
 class Department(BaseModel):

@@ -59,10 +59,12 @@ class MainSerializer(serializers.ModelSerializer):
 
     def get_hod(self, obj):
         hod_role = Roles.objects.filter(name='HOD')
-        hods = Faculty.objects.filter(
-            pk=FacultyRoles.objects.filter(role=hod_role).values_list('faculty')
-        )
-        department_hod = hods.filter(department=obj.id).first()
+        department_hod = ''
+        for faculty_role in FacultyRoles.objects.filter(role=hod_role):
+            faculty_department = faculty_role.faculty.department
+            if faculty_department.id == obj.id:
+                department_hod = faculty_role.faculty
+
         return FacultySerializer(department_hod).data
 
     def get_people(self, obj):
@@ -86,15 +88,16 @@ class MainSerializer(serializers.ModelSerializer):
         return result
 
     def get_facilities(self, obj):
-        facilities = {'laboratory': [], 'equipment': []}
+
+        result = collections.defaultdict()
         departmental_facilities = Facility.objects.filter(department=obj.id)
         for facility in departmental_facilities:
-            if facility.category == 'L':
-                facilities['laboratory'].append(facility.name)
-            else:
-                facilities['equipment'].append(facility.name)
+            try:
+                result[facility.category].append({'name': facility.name})
+            except KeyError:
+                result[facility.category] = [{'name': facility.name}]
 
-        return facilities
+        return result
 
     hod = serializers.SerializerMethodField()
     people = serializers.SerializerMethodField()
