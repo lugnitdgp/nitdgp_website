@@ -1,19 +1,34 @@
-from django.db import models
-from base.models import BaseModel
 import datetime
+import os
+import shutil
+
+from django.db import models
+from django.http import HttpResponseBadRequest
+
+from base.models import BaseModel
+from root.settings import BASE_DIR
 
 
 class Department(BaseModel):
     name = models.CharField(max_length=255)
     short_code = models.CharField(max_length=4)
     about_us = models.TextField()
-    mission = models.CharField(max_length=1024)
-    vision = models.CharField(max_length=512)
+    mission = models.TextField()
+    vision = models.TextField()
     contact_us = models.TextField()
 
     def __str__(self):
         return self.name
 
+    def save(self, *args, **kwargs):
+        dept_dir = os.path.join(os.path.dirname(BASE_DIR), 'departments')
+        try:
+            os.makedirs(os.path.join(dept_dir, self.short_code.lower()))
+            shutil.copy(os.path.join(dept_dir, 'dummy.html'),
+                        os.path.join(dept_dir, self.short_code.lower(), 'index.html'))
+            super(Department, self).save(*args, **kwargs)
+        except (FileNotFoundError, OSError):  # Handle the error properly
+            pass
 
 class Faculty(BaseModel):
 
