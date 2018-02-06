@@ -5,14 +5,13 @@ from django.core.exceptions import ObjectDoesNotExist
 
 from department.serializers import FacultySerializer
 # from administration.serializers import *
+
 from department.models import FacultyRoles, Faculty, Roles
 from administration.models import *
 
-# Create your views here.
 
-# Base class for chairperson, director, registrar
 class CommonViewSet(RetrieveAPIView):
-
+    """Base class for chairperson, director, registrar."""
     queryset = FacultyRoles.objects.all()
     serializer_class = FacultySerializer
 
@@ -44,6 +43,7 @@ class ChairpersonViewSet(CommonViewSet):
 
     def __init__(self):
         super().__init__("Chairperson")
+
 
 class RegistrarViewSet(CommonViewSet):
 
