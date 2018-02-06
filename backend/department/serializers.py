@@ -97,13 +97,12 @@ class MainSerializer(serializers.ModelSerializer):
     def get_hod(self, obj):
 
         hod_role = Roles.objects.filter(name='HOD')
-        department_hod = ''
         for faculty_role in FacultyRoles.objects.filter(role=hod_role):
             faculty_department = faculty_role.faculty.department
             if faculty_department.id == obj.id:
                 department_hod = faculty_role.faculty
-
-        return FacultySerializer(department_hod).data
+                return FacultySerializer(department_hod).data
+        return {}
 
     def get_people(self, obj):
 

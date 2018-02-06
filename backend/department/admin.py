@@ -21,7 +21,7 @@ class RolesModelAdmin(admin.ModelAdmin):
 
 
 class FacultyRolesModelAdmin(admin.ModelAdmin):
-    list_display = ['_faculty', '_role']
+    list_display = ['_faculty', '_role', '_department']
 
 
 class ActivitiesModelAdmin(admin.ModelAdmin):

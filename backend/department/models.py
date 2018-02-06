@@ -118,6 +118,9 @@ class FacultyRoles(BaseModel):
     def _role(self):
         return self.role.name
 
+    def _department(self):
+        return self.faculty.department.name
+
 
 class Activity(BaseModel):
 
