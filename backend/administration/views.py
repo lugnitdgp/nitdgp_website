@@ -8,13 +8,9 @@ from administration.serializers import *
 from department.models import FacultyRoles
 from administration.models import BOG
 
-# Create your views here.
-
-# Base class for chairperson, director, registrar
-
 
 class CommonViewSet(RetrieveAPIView):
-
+    """Base class for chairperson, director, registrar."""
     queryset = FacultyRoles.objects.all()
     serializer_class = FacultySerializer
 
