@@ -35,12 +35,14 @@ class Faculty(BaseModel):
     class Meta:
         verbose_name_plural = 'Faculty'
 
+    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     name = models.CharField(max_length=255)
     research_interest = models.TextField()
     email = models.CharField(max_length=255, default="")
     mobile = models.BigIntegerField(null=True)
     joining_year = models.CharField(max_length=4, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
     def __str__(self):
         return self.name

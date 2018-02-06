@@ -21,15 +21,15 @@ class Library(BaseModel):
         return self.contact_us
 
 
-class E_resource(BaseModel):
-    """E-resourses for library"""
-    title = models.CharField(max_length=255, default="E Res")
-    url = models.CharField(max_length=255, default="https://www.google.com")
+class EResource(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'E Resources'
+
+    title = models.CharField(max_length=255, default="")
+    url = models.URLField()
 
     def __str__(self):
-        return self.title
-
-    def _title(self):
         return self.title
 
     def _url(self):
