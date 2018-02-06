@@ -47,6 +47,10 @@ migrations/
 # Fixtures
 fixtures/
 
+# Files folder
+
+files/
+
 # Backup files
 *~
 \#*

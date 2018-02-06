@@ -30,6 +30,10 @@ class Department(BaseModel):
         except (FileNotFoundError, OSError):  # Handle the error properly
             pass
 
+def rename_image(instance, filename):
+    return 'faculty/{0}/{1}'.format(instance.name, filename)
+
+
 class Faculty(BaseModel):
 
     class Meta:
@@ -43,6 +47,7 @@ class Faculty(BaseModel):
     joining_year = models.CharField(max_length=4, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    image = models.ImageField(upload_to=rename_image)
 
     def __str__(self):
         return self.name
