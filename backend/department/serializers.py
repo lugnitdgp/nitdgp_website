@@ -49,7 +49,7 @@ class DepartmentPhotosSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DepartmentPhotos
-        fields = ('title', 'link')
+        fields = ('title', 'image')
 
 
 class DepartmentNewsSerializer(serializers.ModelSerializer):
@@ -113,16 +113,27 @@ class MainSerializer(serializers.ModelSerializer):
 
         result = collections.defaultdict()
         for i in self.instance.programme_set.all():
+
             try:
                 result[i.degree.name].append({
-                    'programme_title': i.title,
-                    'courses': CourseSerializer(i.courses_set.order_by('semester'), many=True).data
+                    'programme_title': i.title
                 })
             except KeyError:
                 result[i.degree.name] = [{
-                    'programme_title': i.title,
-                    'courses': CourseSerializer(i.courses_set.order_by('semester'), many=True).data
+                    'programme_title': i.title
                 }]
+
+            for semester in i.courses_set.values('semester').order_by('semester'):
+
+                for j in result[i.degree.name]:
+                    
+                    if j['programme_title'] == i.title:
+
+                        j['semester '+str(semester['semester'])] = CourseSerializer(
+                          i.courses_set.filter(
+                            semester=semester['semester']
+                             ), many=True
+                          ).data
         return result
 
     def get_facilities(self, obj):

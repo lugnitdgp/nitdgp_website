@@ -282,6 +282,11 @@ class Electives(BaseModel):
         return self.is_open
 
 
+def rename_image_department_photo(instance, filename):
+
+    return 'department/{0}/images/{1}'.format(instance.department.short_code, filename)
+
+
 class DepartmentPhotos(BaseModel):
 
     class Meta:
@@ -290,7 +295,7 @@ class DepartmentPhotos(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     date = models.DateField()
-    link = models.CharField(max_length=255)
+    image = models.ImageField(upload_to=rename_image_department_photo)
 
     def _department(self):
         return self.department.name
@@ -302,6 +307,11 @@ class DepartmentPhotos(BaseModel):
         return self.date
 
 
+def rename_image_department_news(instance, filename):
+
+    return 'department/{0}/news/{1}'.format(instance.department.short_code, filename)
+
+
 class DepartmentNews(BaseModel):
 
     class Meta:
@@ -310,7 +320,7 @@ class DepartmentNews(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     date = models.DateField()
     title = models.CharField(max_length=255)
-    link = models.CharField(max_length=255)
+    link = models.FileField(upload_to=rename_image_department_news)
 
     def _department(self):
         return self.department.name
