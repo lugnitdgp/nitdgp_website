@@ -1,18 +1,37 @@
-from django.db import models
-from base.models import BaseModel
 import datetime
+import os
+import shutil
+
+from django.db import models
+from django.http import HttpResponseBadRequest
+
+from base.models import BaseModel
+from root.settings import BASE_DIR
 
 
 class Department(BaseModel):
     name = models.CharField(max_length=255)
     short_code = models.CharField(max_length=4)
     about_us = models.TextField()
-    mission = models.CharField(max_length=1024)
-    vision = models.CharField(max_length=512)
+    mission = models.TextField()
+    vision = models.TextField()
     contact_us = models.TextField()
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        dept_dir = os.path.join(os.path.dirname(BASE_DIR), 'departments')
+        try:
+            os.makedirs(os.path.join(dept_dir, self.short_code.lower()))
+            shutil.copy(os.path.join(dept_dir, 'dummy.html'),
+                        os.path.join(dept_dir, self.short_code.lower(), 'index.html'))
+            super(Department, self).save(*args, **kwargs)
+        except (FileNotFoundError, OSError):  # Handle the error properly
+            pass
+
+def rename_image(instance, filename):
+    return 'faculty/{0}/{1}'.format(instance.name, filename)
 
 
 class Faculty(BaseModel):
@@ -20,12 +39,15 @@ class Faculty(BaseModel):
     class Meta:
         verbose_name_plural = 'Faculty'
 
+    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     name = models.CharField(max_length=255)
     research_interest = models.TextField()
     email = models.CharField(max_length=255, default="")
     mobile = models.BigIntegerField(null=True)
     joining_year = models.CharField(max_length=4, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    image = models.ImageField(upload_to=rename_image)
 
     def __str__(self):
         return self.name
