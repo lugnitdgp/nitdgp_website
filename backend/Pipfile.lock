@@ -9,9 +9,9 @@
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
-            "platform_release": "4.10.0-28-generic",
+            "platform_release": "4.13.0-26-generic",
             "platform_system": "Linux",
-            "platform_version": "#32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017",
+            "platform_version": "#29~16.04.2-Ubuntu SMP Tue Jan 9 22:00:44 UTC 2018",
             "python_full_version": "3.5.2",
             "python_version": "3.5",
             "sys_platform": "linux"
