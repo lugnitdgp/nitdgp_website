@@ -89,7 +89,7 @@ class Project(BaseModel):
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = models.TextField()
-    area = models.CharField(max_length=255)
+    area = models.TextField(max_length=500)
     faculty_involved = models.TextField()
     funding = models.CharField(max_length=56)
     date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
