@@ -3,6 +3,7 @@ import os
 import shutil
 
 from django.db import models
+from ckeditor.fields import RichTextField
 
 from base.models import BaseModel
 from root.settings import BASE_DIR
@@ -11,10 +12,10 @@ from root.settings import BASE_DIR
 class Department(BaseModel):
     name = models.CharField(max_length=255)
     short_code = models.CharField(max_length=4)
-    about_us = models.TextField()
-    mission = models.TextField()
-    vision = models.TextField()
-    contact_us = models.TextField()
+    about_us =  RichTextField()
+    mission = RichTextField()
+    vision = RichTextField()
+    contact_us = RichTextField()
 
     def __str__(self):
         return self.name
@@ -42,7 +43,7 @@ class Faculty(BaseModel):
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     name = models.CharField(max_length=255)
-    research_interest = models.TextField()
+    research_interest = RichTextField()
     email = models.CharField(max_length=255, default="")
     mobile = models.BigIntegerField(null=True)
     joining_year = models.CharField(max_length=4, null=True)
@@ -64,9 +65,9 @@ class Research(BaseModel):
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    collab_inst = models.TextField()
-    area = models.CharField(max_length=255)
-    faculty_involved = models.TextField()
+    collab_inst = RichTextField()
+    area = RichTextField()
+    faculty_involved = RichTextField()
     date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
     def __str__(self):
@@ -89,9 +90,9 @@ class Project(BaseModel):
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    collab_inst = models.TextField()
-    area = models.TextField(max_length=500)
-    faculty_involved = models.TextField()
+    collab_inst = RichTextField()
+    area = RichTextField()
+    faculty_involved = RichTextField()
     funding = models.CharField(max_length=56)
     date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
@@ -152,7 +153,7 @@ class Activity(BaseModel):
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     speakers = models.CharField(max_length=512)
-    programme = models.TextField()
+    programme = RichTextField()
     start_date = models.DateField()
     end_date = models.DateField()
 
