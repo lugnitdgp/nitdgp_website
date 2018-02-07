@@ -3,7 +3,6 @@ import os
 import shutil
 
 from django.db import models
-from django.http import HttpResponseBadRequest
 
 from base.models import BaseModel
 from root.settings import BASE_DIR
@@ -30,7 +29,9 @@ class Department(BaseModel):
         except (FileNotFoundError, OSError):  # Handle the error properly
             pass
 
+
 def rename_image(instance, filename):
+
     return 'faculty/{0}/{1}'.format(instance.name, filename)
 
 
