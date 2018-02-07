@@ -47,12 +47,6 @@
             ],
             "version": "==2.1.0"
         },
-        "django-froala-editor": {
-            "hashes": [
-                "sha256:3fd79e502836484b28c036f347b4761495e38fcb76cf58b61ea2fa4fb331b9d2"
-            ],
-            "version": "==2.7.5"
-        },
         "django-js-asset": {
             "hashes": [
                 "sha256:bcd00d7dc67f86cad1dac4bf7b43fa4b75088c214d2c92002b8705c6a7362e7e",
