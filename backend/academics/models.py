@@ -30,3 +30,49 @@ class Calendar(BaseModel):
 
     def _year(self):
         return self.year
+
+
+class AdmissionDegree(BaseModel):
+    name = models.CharField(max_length=40)
+    description = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+    def _description(self):
+        return self.description
+
+
+class AdmissionProgramme(BaseModel):
+    degree = models.ForeignKey(AdmissionDegree, on_delete=models.CASCADE)
+    name = models.CharField(max_length=40)
+    description = models.CharField(max_length=100)
+
+    def _degree(self):
+        return self.degree.name
+
+    def __str__(self):
+        return self.name
+
+    def _description(self):
+        return self.description
+
+
+def rename_admission_file(instance, filename):
+
+    return 'academics/admission/{0}/{1}/{2}'.format(instance.programme.degree.name, instance.programme.name, filename)
+
+
+class Admission(BaseModel):
+    programme = models.ForeignKey(AdmissionProgramme, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+    file = models.FileField(upload_to=rename_admission_file)
+
+    def _programme(self):
+        return self.programme.name
+
+    def _title(self):
+        return self.title
+
+    def _file(self):
+        return self.file

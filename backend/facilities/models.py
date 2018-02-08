@@ -36,6 +36,7 @@ class EResource(BaseModel):
     def _url(self):
         return self.url
 
+
 class SAC(BaseModel):
 
     class Meta:
