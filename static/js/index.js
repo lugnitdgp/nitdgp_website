@@ -33,7 +33,7 @@ $( "#footer" ).load( "../nitdgp_website/static/layout/footer.html");
       console.log(data);
 
       // LOOP FOR SECTION
-      $.each(data.tiles, function(index, element) {
+      $.each(data.results, function(index, element) {
         console.log(element.section_name);
         // if (index%3==0)
         // {
