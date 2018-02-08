@@ -19,50 +19,78 @@
       <!-- HEADER -->
       <div id="header"></div>
       <!-- /HEADER -->
-      <div">
+      <!-- <div class="row"> -->
+        <div style="height: 5%;max-height: 400px;width: 100%">
         <!--Carousel Wrapper-->
-          <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+          <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
               <!--Indicators-->
               <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                  <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-2" data-slide-to="2"></li>
               </ol>
               <!--/.Indicators-->
               <!--Slides-->
-              <div style="height: 300px;" class="carousel-inner" role="listbox">
-                  <!--First slide-->
+              <div class="carousel-inner" style="height: 5%;max-height: 400px;" role="listbox">
                   <div class="carousel-item active">
-                      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+                      <div class="view hm-black-light">
+                          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+                          <div class="mask"></div>
+                      </div>
+                      <div class="carousel-caption">
+                          <h3 class="h3-responsive">Light mask</h3>
+                          <p>First text</p>
+                      </div>
                   </div>
-                  <!--/First slide-->
-                  <!--Second slide-->
                   <div class="carousel-item">
-                      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+                      <!--Mask color-->
+                      <div class="view hm-black-strong">
+                          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+                          <div class="mask"></div>
+                      </div>
+                      <div class="carousel-caption">
+                          <h3 class="h3-responsive">Strong mask</h3>
+                          <p>Secondary text</p>
+                      </div>
                   </div>
-                  <!--/Second slide-->
-                  <!--Third slide-->
                   <div class="carousel-item">
-                      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+                      <!--Mask color-->
+                      <div class="view hm-black-slight">
+                          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+                          <div class="mask"></div>
+                      </div>
+                      <div class="carousel-caption">
+                          <h3 class="h3-responsive">Slight mask</h3>
+                          <p>Third text</p>
+                      </div>
                   </div>
-                  <!--/Third slide-->
               </div>
               <!--/.Slides-->
               <!--Controls-->
-              <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+              <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+              <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
               </a>
               <!--/.Controls-->
           </div>
-          <!--/.Carousel Wrapper-->
-      </div>
+        <!--/.Carousel Wrapper-->
+        </div>
+        <!-- <div class="col-4 l0" style="width: 30%height:400px;padding-top:5px;padding-bottom: 5px;padding-right: 2em;padding-left: 5px;">
+          <div class="card card-cascade narrower card-2">
+            <div class="view gradient-card-header tile-title" >
+                <p class="tile-title-text">NEWSFEED</p>
+            </div>
+            <div class="card-body text-center">
+            </div>
+          </div>
+        </div> -->
+      <!-- </div> -->
       <!-- CONTENT -->
-      <div class="page-content-container l0" style="position: relative;">
+      <div class="page-content-container l0">
         <!-- all-tiles -->
         <div class="all-tiles" id="dynamic"></div>
         <!--/all-tiles-->
