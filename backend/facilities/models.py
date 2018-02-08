@@ -1,5 +1,6 @@
 from django.db import models
 from base.models import BaseModel
+from ckeditor.fields import RichTextField
 
 
 class Library(BaseModel):
@@ -7,9 +8,9 @@ class Library(BaseModel):
     class Meta:
         verbose_name_plural = 'Library'
 
-    home = models.TextField()
-    about = models.TextField()
-    contact_us = models.TextField()
+    home = RichTextField()
+    about = RichTextField()
+    contact_us = RichTextField()
 
     def _home(self):
         return self.home
@@ -40,13 +41,13 @@ class SAC(BaseModel):
     class Meta:
         verbose_name_plural = 'S A C'
 
-    about = models.TextField()
-    mission = models.CharField(max_length=1024,default="")
-    vision = models.CharField(max_length=1024,default="")
-    program_offered = models.CharField(max_length=1024,default="")
-    other_activities = models.TextField()
-    facility = models.TextField()
-    contact_us = models.TextField()
+    about = RichTextField()
+    mission = RichTextField()
+    vision = RichTextField()
+    program_offered = RichTextField()
+    other_activities = RichTextField()
+    facility = RichTextField()
+    contact_us = RichTextField()
     ach_url = models.URLField()#for adding the link of the record of all the achievements of NIT DGP
     rec_url = models.URLField() #for adding the link of the record of sports and games in NIT DGP
 

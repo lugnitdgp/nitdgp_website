@@ -4,13 +4,10 @@ from facilities.serializers import *
 from facilities.models import *
 
 
-class LibraryViewSet(RetrieveAPIView):
+class LibraryViewSet(ListAPIView):
 
-	queryset = Library.objects.all()
+	queryset = Library.objects.all().order_by('-updated_at')[:1]
 	serializer_class = LibrarySerializer
-
-	def get_object(self):
-		return self.queryset.first()
 
 
 class EResourceViewSet(ListAPIView):
@@ -18,10 +15,8 @@ class EResourceViewSet(ListAPIView):
 	queryset = EResource.objects.all()
 	serializer_class = EResourceSerializer
 
-class SACViewSet(RetrieveAPIView):
 
-	queryset = SAC.objects.all()
+class SACViewSet(ListAPIView):
+
+	queryset = SAC.objects.all().order_by('-updated_at')[:1]
 	serializer_class = SACSerializer
-
-	def get_object(self):
-		return self.queryset.first()
