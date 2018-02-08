@@ -112,11 +112,14 @@ body {
 .l0{ /*container*/
   min-height: 50px;padding-top: 4em;padding-bottom: 0.1em;padding-right: 5%;padding-left: 5%;
 }
+.l1{
+  min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%;
+}
 .l1-dep{ /*container*/
   min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%;
 }
 .l2-idep{
-  min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%; 
+  min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%; 
 }
 hr.style4 {
   border-top: medium double #ECEFF1;color: #ECEFF1;text-align: center;
@@ -158,8 +161,8 @@ hr.style4:after {
     font-size: 150%;
   }
   .page-content-container{
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 1%;
+    padding-left: 1%;
   }
   .l2-idep .card-body .down-content .caros .carousel-title{
     font-size: 180%;
@@ -183,8 +186,17 @@ hr.style4:after {
     margin-left: 5px;margin-right: 5px;
   }
 }
+.page-type-links .card-header{
+  background-color: #001333;
+}
+.l1 .accordion .card-header{
+  background-color: #001333;
+}
+.l1 .accordion .card-header h5{
+  color: #ECEFF1;
+}
 .l2-idep .card-body .up-content .classic-tabs .nav-link{
-  /*font-size: 70%;*/
+  font-size: 100%;
 }
 .l2-idep .card-body .up-content .classic-tabs .nav-item{
   margin: 0;
@@ -218,7 +230,7 @@ hr.style4:after {
   background: linear-gradient(to right,#9C27B0,#B71C1C);
 }
 .l2-idep .card-body .down-content .card-up{
-
+  height: 80px;
 }
 .l2-idep .card-body .down-content .avatar{
   height: 120px;width: 120px;
@@ -294,7 +306,7 @@ hr.style4:after {
   background-color: #B71C1C;
 }
 .l2-idep .card-body{
-  margin-top: -0.5em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
+  margin-top: -0.5em;margin-bottom: -0.5em;margin-left: -0.5em;margin-right:-0.5em;
 }
 .l2-idep .tile-title-text{
   letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
@@ -496,13 +508,12 @@ hr.style4:after {
 }
 /*/level 1 dep*/
 /*Level 2 dep*/
-/* card bg-color*/
 .l2-idep .l2-card {
-  background-color: #FFCDD2;
+  background: linear-gradient(#ECEFF1,#B0BEC5);
 }
 /* card-title color*/
 .l2-idep .l2-card div.tile-title{
-  background-color: #B71C1C;
+  background: linear-gradient(to right,#B71C1C,#F44336);
 } 
 /* title-text color*/
 .l2-idep .l2-card p.tile-title-text{
@@ -510,7 +521,7 @@ hr.style4:after {
 }
 /* small-tile bg-color*/
 .l2-idep .l2-card div.tile-small{
-  background-color: #EF5350;
+  background-color: #B71C1C;
 }
 /* small-tile-text color*/
 .l2-idep .l2-card div.tile-content{
