@@ -3,14 +3,15 @@ from django.db import models
 # Create your models here.
 from base.models import BaseModel
 
-def next_count():
+
+def next_count_section():
     return Section.objects.count()+1
 
 
 class Section(BaseModel):
 
     name = models.CharField(max_length=100)
-    priority = models.PositiveSmallIntegerField(default=next_count, unique=True)
+    priority = models.PositiveSmallIntegerField(default=next_count_section, unique=True)
 
     def __str__(self):
         return self.name
@@ -21,7 +22,7 @@ class Section(BaseModel):
     def _tiles(self):
         return list(Tile.objects.all().filter(section__name__iexact=self.name))
 
-    class Meta():
+    class Meta:
         ordering = ('priority',)
 
 
@@ -30,7 +31,8 @@ class Tile(BaseModel):
     name = models.CharField(max_length=100)
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
     icon = models.CharField(max_length=100)
-    row = models.CharField(max_length=100)
+    row = models.PositiveSmallIntegerField()
+    column = models.PositiveSmallIntegerField()
     link = models.URLField(max_length=128, unique=True)
 
     def __str__(self):
@@ -42,5 +44,8 @@ class Tile(BaseModel):
     def _row(self):
         return self.row
 
-    class Meta():
-        ordering = ('section', 'row', 'name',)
+    def _column(self):
+        return self.column
+
+    class Meta:
+        ordering = ('section', 'row', 'column', 'name')

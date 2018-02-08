@@ -1,5 +1,7 @@
 from django.contrib import admin
 from department.models import *
+from ckeditor.widgets import CKEditorWidget
+
 
 # Register your models here.
 

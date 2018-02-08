@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3ea944ab3e9840f2be951d0a1e6e0ae157bc6d274558b22ce4f893b91b0badc7"
+            "sha256": "04debfd0490ede6f4695509151842bd51aa8dc0513c95064691baca13ef8e9cc"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -34,12 +34,25 @@
             ],
             "version": "==1.11"
         },
+        "django-ckeditor": {
+            "hashes": [
+                "sha256:b49eb630a260eb17dd225ea38b42d58fabc9a8dbbc898224c61f9a570c29e961"
+            ],
+            "version": "==5.4.0"
+        },
         "django-cors-headers": {
             "hashes": [
                 "sha256:4e02be61ffaaab5917f1fd7cc3c305c4fb7ccd0156a649c96f49bc0a09c5f572",
                 "sha256:451bc37a514792c2b46c52362368f7985985933ecdbf1a85f82652579a5cbe01"
             ],
             "version": "==2.1.0"
+        },
+        "django-js-asset": {
+            "hashes": [
+                "sha256:bcd00d7dc67f86cad1dac4bf7b43fa4b75088c214d2c92002b8705c6a7362e7e",
+                "sha256:38fc1de7a93a2f667fe7ee34acc53d682bac5ce6c73ac6f0ecb4ff77d0f61f1b"
+            ],
+            "version": "==1.0.0"
         },
         "djangorestframework": {
             "hashes": [

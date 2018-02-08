@@ -54,3 +54,4 @@ files/
 # Backup files
 *~
 \#*
+static/
