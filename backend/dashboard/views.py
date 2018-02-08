@@ -11,8 +11,3 @@ class DashboardViewSet(ListAPIView):
     queryset = Section.objects.all()
     serializer_class = DashboardSerializer
     permission_classes = (AllowAny, )
-
-    def list(self, request):
-    	queryset = self.get_queryset()
-    	serializer = DashboardSerializer(queryset, many=True)
-    	return Response({"tiles":serializer.data})

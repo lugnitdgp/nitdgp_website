@@ -1,5 +1,7 @@
 from django.contrib import admin
 from department.models import *
+from ckeditor.widgets import CKEditorWidget
+
 
 # Register your models here.
 
@@ -21,7 +23,7 @@ class RolesModelAdmin(admin.ModelAdmin):
 
 
 class FacultyRolesModelAdmin(admin.ModelAdmin):
-    list_display = ['_faculty', '_role']
+    list_display = ['_faculty', '_role', '_department']
 
 
 class ActivitiesModelAdmin(admin.ModelAdmin):

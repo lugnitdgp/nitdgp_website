@@ -49,7 +49,7 @@ class DepartmentPhotosSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DepartmentPhotos
-        fields = ('title', 'link')
+        fields = ('title', 'image')
 
 
 class DepartmentNewsSerializer(serializers.ModelSerializer):
@@ -97,13 +97,12 @@ class MainSerializer(serializers.ModelSerializer):
     def get_hod(self, obj):
 
         hod_role = Roles.objects.filter(name='HOD')
-        department_hod = ''
         for faculty_role in FacultyRoles.objects.filter(role=hod_role):
             faculty_department = faculty_role.faculty.department
             if faculty_department.id == obj.id:
                 department_hod = faculty_role.faculty
-
-        return FacultySerializer(department_hod).data
+                return FacultySerializer(department_hod).data
+        return {}
 
     def get_people(self, obj):
 
@@ -114,16 +113,27 @@ class MainSerializer(serializers.ModelSerializer):
 
         result = collections.defaultdict()
         for i in self.instance.programme_set.all():
+
             try:
                 result[i.degree.name].append({
-                    'programme_title': i.title,
-                    'courses': CourseSerializer(i.courses_set.order_by('semester'), many=True).data
+                    'programme_title': i.title
                 })
             except KeyError:
                 result[i.degree.name] = [{
-                    'programme_title': i.title,
-                    'courses': CourseSerializer(i.courses_set.order_by('semester'), many=True).data
+                    'programme_title': i.title
                 }]
+
+            for semester in i.courses_set.values('semester').order_by('semester'):
+
+                for j in result[i.degree.name]:
+                    
+                    if j['programme_title'] == i.title:
+
+                        j['semester '+str(semester['semester'])] = CourseSerializer(
+                          i.courses_set.filter(
+                            semester=semester['semester']
+                             ), many=True
+                          ).data
         return result
 
     def get_facilities(self, obj):

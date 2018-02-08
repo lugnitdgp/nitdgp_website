@@ -1,18 +1,39 @@
-from django.db import models
-from base.models import BaseModel
 import datetime
+import os
+import shutil
+
+from django.db import models
+from ckeditor.fields import RichTextField
+
+from base.models import BaseModel
+from root.settings import BASE_DIR
 
 
 class Department(BaseModel):
     name = models.CharField(max_length=255)
     short_code = models.CharField(max_length=4)
-    about_us = models.TextField()
-    mission = models.CharField(max_length=1024)
-    vision = models.CharField(max_length=512)
-    contact_us = models.TextField()
+    about_us =  RichTextField()
+    mission = RichTextField()
+    vision = RichTextField()
+    contact_us = RichTextField()
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        dept_dir = os.path.join(os.path.dirname(BASE_DIR), 'departments')
+        try:
+            os.makedirs(os.path.join(dept_dir, self.short_code.lower()))
+            shutil.copy(os.path.join(dept_dir, 'dummy.html'),
+                        os.path.join(dept_dir, self.short_code.lower(), 'index.html'))
+            super(Department, self).save(*args, **kwargs)
+        except (FileNotFoundError, OSError):  # Handle the error properly
+            pass
+
+
+def rename_image(instance, filename):
+
+    return 'faculty/{0}/{1}'.format(instance.name, filename)
 
 
 class Faculty(BaseModel):
@@ -20,12 +41,15 @@ class Faculty(BaseModel):
     class Meta:
         verbose_name_plural = 'Faculty'
 
+    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     name = models.CharField(max_length=255)
-    research_interest = models.TextField()
+    research_interest = RichTextField()
     email = models.CharField(max_length=255, default="")
     mobile = models.BigIntegerField(null=True)
     joining_year = models.CharField(max_length=4, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    image = models.ImageField(upload_to=rename_image)
 
     def __str__(self):
         return self.name
@@ -41,9 +65,9 @@ class Research(BaseModel):
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    collab_inst = models.TextField()
-    area = models.CharField(max_length=255)
-    faculty_involved = models.TextField()
+    collab_inst = RichTextField()
+    area = RichTextField()
+    faculty_involved = RichTextField()
     date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
     def __str__(self):
@@ -66,9 +90,9 @@ class Project(BaseModel):
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    collab_inst = models.TextField()
-    area = models.CharField(max_length=255)
-    faculty_involved = models.TextField()
+    collab_inst = RichTextField()
+    area = RichTextField()
+    faculty_involved = RichTextField()
     funding = models.CharField(max_length=56)
     date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
 
@@ -118,6 +142,9 @@ class FacultyRoles(BaseModel):
     def _role(self):
         return self.role.name
 
+    def _department(self):
+        return self.faculty.department.name
+
 
 class Activity(BaseModel):
 
@@ -126,7 +153,7 @@ class Activity(BaseModel):
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     speakers = models.CharField(max_length=512)
-    programme = models.TextField()
+    programme = RichTextField()
     start_date = models.DateField()
     end_date = models.DateField()
 
@@ -256,6 +283,11 @@ class Electives(BaseModel):
         return self.is_open
 
 
+def rename_image_department_photo(instance, filename):
+
+    return 'department/{0}/images/{1}'.format(instance.department.short_code, filename)
+
+
 class DepartmentPhotos(BaseModel):
 
     class Meta:
@@ -264,7 +296,7 @@ class DepartmentPhotos(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     date = models.DateField()
-    link = models.CharField(max_length=255)
+    image = models.ImageField(upload_to=rename_image_department_photo)
 
     def _department(self):
         return self.department.name
@@ -276,6 +308,11 @@ class DepartmentPhotos(BaseModel):
         return self.date
 
 
+def rename_image_department_news(instance, filename):
+
+    return 'department/{0}/news/{1}'.format(instance.department.short_code, filename)
+
+
 class DepartmentNews(BaseModel):
 
     class Meta:
@@ -284,7 +321,7 @@ class DepartmentNews(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     date = models.DateField()
     title = models.CharField(max_length=255)
-    link = models.CharField(max_length=255)
+    link = models.FileField(upload_to=rename_image_department_news)
 
     def _department(self):
         return self.department.name

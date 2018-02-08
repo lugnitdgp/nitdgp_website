@@ -14,8 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 from base.views import APIRoot
+from root import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,5 +25,10 @@ urlpatterns = [
     url(r'^', include('dashboard.urls')),
     url(r'^', include('department.urls')),
     url(r'^', include('administration.urls')),
+    url(r'^', include('academics.urls')),
+    url(r'^', include('facilities.urls')),
     url(r'^$', APIRoot.as_view(), name='root-view')
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
