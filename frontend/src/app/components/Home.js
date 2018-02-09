@@ -29,8 +29,24 @@ export default class Home extends React.Component {
         }
       )
   }
+  createPageContent() {
+    const { tiles } = this.state;
+    var num_rows = Math.ceil(tiles.length/3);
+    this.rows = [];
+    for (var i = 0; i < num_rows ;  i++) {
+      this.rows.push(
+        <div className="row big-row" key={i}>
+          {tiles.map((tile, index) => {
+            if (index >= 3*i && index < 3*(i+1)) {
+              return <Section key={index} tiles={tile}/>;
+            }
+          })}
+        </div>
+      );
+    }
+  }
   render() {
-    const { error, isLoaded, tiles } = this.state;
+    const { error, isLoaded } = this.state;
     if (error) {
       return (
         <div>
@@ -44,23 +60,11 @@ export default class Home extends React.Component {
         </div>
       );
     } else {
-      var num_rows = Math.ceil(tiles.length/3);
-      var rows = [];
-      for (var i = 0; i < num_rows ;  i++) {
-        rows.push(
-          <div className="row big-row">
-            {tiles.map((tile, index) => {
-              if (index >= 3*i && index < 3*(i+1)) {
-                return <Section key={index} tiles={tile}/>;
-              }
-            })}
-          </div>
-        );
-      }
+      this.createPageContent();
       return (
-        <div class="page-content-container l0">
+        <div className="page-content-container l0">
           <div className="all-tiles">
-          {rows.map((row, index) => {
+          {this.rows.map((row, index) => {
             return row;
           })}
           </div>
