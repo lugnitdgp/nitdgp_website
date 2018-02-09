@@ -17,12 +17,6 @@ class CalendarSerializer(serializers.ModelSerializer):
         fields = ('year', 'file')
 
 
-class ExaminationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Examination
-        fields = ('year', 'title', 'file')
-
-
 class AdmissionSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -60,3 +54,36 @@ class AdmissionMainSerializer(serializers.ModelSerializer):
     class Meta:
         model = Admission
         fields = ('admission', )
+
+
+class ExaminationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Examination
+        fields = ('year', 'title', 'file')
+
+
+class DocumentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Document
+        fields = ('title', 'filename')
+
+
+class DocumentMainSerializer(serializers.ModelSerializer):
+    def get_documents(self, obj):
+        result = collections.defaultdict()
+        for i in self.instance:
+            try:
+                result[i.type].append(
+                    DocumentSerializer(i).data
+                )
+            except KeyError:
+                result[i.type] = [
+                    DocumentSerializer(i).data
+                ]
+        return result
+
+    documents = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Document
+        fields = ('documents', )

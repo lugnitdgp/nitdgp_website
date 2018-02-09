@@ -101,10 +101,26 @@ class Examination(BaseModel):
         return self.file
 
 
+class Document(BaseModel):
+    CHOICES = (('Verification', 'Verification'), ('Transcript', 'Transcript'))
+    type = models.CharField(choices=CHOICES, max_length=30)
+    filename = models.FileField(upload_to='academics/documents')
+    title = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+    def _type(self):
+        return self.type
+
+    def _filename(self):
+        return self.filename
+
+
 class Regulation(BaseModel):
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='academics/regulations/%Y')
-    
+
     def __str__(self):
         return self.title
 

@@ -29,6 +29,15 @@ class ExaminationViewSet(ListAPIView):
     serializer_class = ExaminationSerializer
 
 
+class DocumentViewSet(RetrieveAPIView):
+    """View for academic documents"""
+    queryset = Document.objects.all()
+    serializer_class = DocumentMainSerializer
+
+    def get_object(self):
+        return self.get_queryset()
+
+
 class RegulationViewSet(ListAPIView):
 
     queryset = Regulation.objects.all().order_by('-updated_at')
