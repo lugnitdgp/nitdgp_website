@@ -1,4 +1,5 @@
 import React from "react";
+require('font-awesome/css/font-awesome.css');
 
 export default class Tile extends React.Component {
   render() {
