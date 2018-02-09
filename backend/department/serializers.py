@@ -122,14 +122,14 @@ class MainSerializer(serializers.ModelSerializer):
                 result[i.degree.name] = [{
                     'programme_title': i.title
                 }]
-
             for semester in i.courses_set.values('semester').order_by('semester'):
-
+                # import pdb
+                # pdb.set_trace()
                 for j in result[i.degree.name]:
                     
                     if j['programme_title'] == i.title:
 
-                        j['semester '+str(semester['semester'])] = CourseSerializer(
+                        j[semester['semester']] = CourseSerializer(
                           i.courses_set.filter(
                             semester=semester['semester']
                              ), many=True
