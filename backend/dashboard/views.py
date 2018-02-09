@@ -1,9 +1,8 @@
 from rest_framework.generics import ListAPIView
 from rest_framework.permissions import AllowAny
-from rest_framework.response import Response
 
-from dashboard.models import Section
-from dashboard.serializers import DashboardSerializer
+from dashboard.models import *
+from dashboard.serializers import *
 
 
 class DashboardViewSet(ListAPIView):
@@ -11,3 +10,9 @@ class DashboardViewSet(ListAPIView):
     queryset = Section.objects.all()
     serializer_class = DashboardSerializer
     permission_classes = (AllowAny, )
+
+
+class CarouselViewSet(ListAPIView):
+
+    queryset = Carousel.objects.all().order_by('-updated_at')
+    serializer_class = CarouselSerializer

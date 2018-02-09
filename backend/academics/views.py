@@ -27,3 +27,9 @@ class ExaminationViewSet(ListAPIView):
 
     queryset = Examination.objects.all().order_by('-year')
     serializer_class = ExaminationSerializer
+
+
+class RegulationViewSet(ListAPIView):
+
+    queryset = Regulation.objects.all().order_by('-updated_at')
+    serializer_class = RegulationSerializer

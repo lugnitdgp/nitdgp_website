@@ -30,6 +30,13 @@ class AdmissionSerializer(serializers.ModelSerializer):
         fields = ('title', 'file')
 
 
+class RegulationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Regulation
+        fields = ('title', 'file')
+
+
 class AdmissionMainSerializer(serializers.ModelSerializer):
 
     def get_admission(self, obj):

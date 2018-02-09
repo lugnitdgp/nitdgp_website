@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from dashboard.models import Section, Tile
+from dashboard.models import *
 
 
 class TileSerializer(serializers.ModelSerializer):
@@ -17,3 +17,10 @@ class DashboardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Section
         fields = ('section_name', 'priority', 'contents',)
+
+
+class CarouselSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Carousel
+        fields = ('primary_caption', 'secondary_caption', 'image')

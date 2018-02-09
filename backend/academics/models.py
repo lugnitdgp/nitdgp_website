@@ -87,7 +87,7 @@ def rename_examination_file(instance, filename):
 class Examination(BaseModel):
     CURRENT_YEAR = datetime.date.today().year
     YEAR_CHOICES = [(str(r)+'-'+str(r+1), str(r)+'-'+str(r+1)) for r in range(1965, CURRENT_YEAR+1)]
-    year = models.CharField(max_length=20, choices=YEAR_CHOICES, default=str(CURRENT_YEAR))
+    year = models.CharField(max_length=20, choices=YEAR_CHOICES, default=str(CURRENT_YEAR)+'-'+str(CURRENT_YEAR + 1))
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to=rename_examination_file)
 
@@ -96,6 +96,17 @@ class Examination(BaseModel):
 
     def _year(self):
         return self.year
+
+    def _file(self):
+        return self.file
+
+
+class Regulation(BaseModel):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='academics/regulations/%Y')
+    
+    def __str__(self):
+        return self.title
 
     def _file(self):
         return self.file

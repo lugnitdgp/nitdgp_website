@@ -49,3 +49,19 @@ class Tile(BaseModel):
 
     class Meta:
         ordering = ('section', 'row', 'column', 'name')
+
+
+class Carousel(BaseModel):
+
+    primary_caption = models.CharField(max_length=255)
+    secondary_caption = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='carousel/%Y')
+
+    def __str__(self):
+        return self.primary_caption
+
+    def _secondary(self):
+        return self.secondary_caption
+
+    def _image(self):
+        return self.image
