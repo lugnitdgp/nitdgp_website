@@ -22,8 +22,13 @@ class AdmissionModelAdmin(admin.ModelAdmin):
     list_display = ['_programme', '_title', '_file']
 
 
+class ExaminationModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_year', '_file']
+
+
 admin.site.register(Notice, NoticeModelAdmin)
 admin.site.register(Calendar, CalendarModelAdmin)
 admin.site.register(AdmissionDegree, AdmissionDegreeModelAdmin)
 admin.site.register(AdmissionProgramme, AdmissionProgrammeModelAdmin)
 admin.site.register(Admission, AdmissionModelAdmin)
+admin.site.register(Examination, ExaminationModelAdmin)

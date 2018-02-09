@@ -21,3 +21,9 @@ class AdmissionViewSet(RetrieveAPIView):
 
     def get_object(self):
         return self.get_queryset()
+
+
+class ExaminationViewSet(ListAPIView):
+
+    queryset = Examination.objects.all().order_by('-year')
+    serializer_class = ExaminationSerializer

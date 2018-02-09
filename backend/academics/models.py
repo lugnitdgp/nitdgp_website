@@ -2,12 +2,10 @@ from django.db import models
 from base.models import BaseModel
 import datetime
 
-# Create your models here.
-
 
 class Notice(BaseModel):
     title = models.CharField(max_length=512)
-    file = models.FileField(upload_to='notices/%Y/%m/%d')
+    file = models.FileField(upload_to='academics/notices/%Y/%m/%d')
     date = models.DateField()
 
     def __str__(self):
@@ -20,10 +18,14 @@ class Notice(BaseModel):
         return self.date
 
 
+def rename_calendar(instance, filename):
+    return 'academics/calendar/{1}/'.format(instance.year, filename)
+
+
 class Calendar(BaseModel):
     YEAR_CHOICES = [(str(r)+'-'+str(r+1), str(r)+'-'+str(r+1)) for r in range(1965, datetime.date.today().year+1)]
     year = models.CharField(max_length=20, choices=YEAR_CHOICES, default=str(datetime.datetime.now().year)+'-'+str(datetime.datetime.now().year + 1))
-    file = models.FileField(upload_to='calendar/%Y')
+    file = models.FileField(upload_to=rename_calendar)
 
     def _file(self):
         return self.file
@@ -59,7 +61,6 @@ class AdmissionProgramme(BaseModel):
 
 
 def rename_admission_file(instance, filename):
-
     return 'academics/admission/{0}/{1}/{2}'.format(instance.programme.degree.name, instance.programme.name, filename)
 
 
@@ -73,6 +74,28 @@ class Admission(BaseModel):
 
     def _title(self):
         return self.title
+
+    def _file(self):
+        return self.file
+
+
+def rename_examination_file(instance, filename):
+    print(filename)
+    return 'academics/examination/{0}/{1}'.format(instance.year, filename)
+
+
+class Examination(BaseModel):
+    CURRENT_YEAR = datetime.date.today().year
+    YEAR_CHOICES = [(str(r)+'-'+str(r+1), str(r)+'-'+str(r+1)) for r in range(1965, CURRENT_YEAR+1)]
+    year = models.CharField(max_length=20, choices=YEAR_CHOICES, default=str(CURRENT_YEAR))
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to=rename_examination_file)
+
+    def __str__(self):
+        return self.title
+
+    def _year(self):
+        return self.year
 
     def _file(self):
         return self.file
