@@ -214,6 +214,7 @@ class Courses(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Courses'
+        ordering = ('short_code',)
 
     COURSE_TYPES = (('L', 'Lecture'), ('T', 'Tutorial'), ('S', 'Sessional'))
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
