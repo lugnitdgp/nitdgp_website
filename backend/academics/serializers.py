@@ -17,6 +17,12 @@ class CalendarSerializer(serializers.ModelSerializer):
         fields = ('year', 'file')
 
 
+class ExaminationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Examination
+        fields = ('year', 'title', 'file')
+
+
 class AdmissionSerializer(serializers.ModelSerializer):
 
     class Meta:
