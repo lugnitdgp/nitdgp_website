@@ -1,5 +1,6 @@
 import React from "react";
 
+import Header from "./Header";
 import Section from "./Section";
 
 var axios = require('axios');
@@ -62,13 +63,11 @@ export default class Home extends React.Component {
     } else {
       this.createPageContent();
       return (
-        <div className="page-content-container l0">
           <div className="all-tiles">
           {this.rows.map((row, index) => {
             return row;
           })}
           </div>
-        </div>
       );
     }
   }
