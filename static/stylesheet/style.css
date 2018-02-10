@@ -160,12 +160,15 @@ hr.style4:after {
   .l1-dep .fa-2x{
     font-size: 150%;
   }
+  .page-type-links .card-header{
+    font-size: 90%;
+  }
   .page-type-links .card-text a{
     font-size: 85%;
   }
   .page-content-container{
-    padding-right: 1%;
-    padding-left: 1%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
   }
   .l2-idep .card-body .down-content .caros .carousel-title{
     font-size: 180%;
@@ -188,9 +191,6 @@ hr.style4:after {
   #footer-copyright .row{
     margin-left: 5px;margin-right: 5px;
   }
-}
-.page-type-links .card-header{
-  background-color: #001333;
 }
 .l1 .accordion .card-header{
   background-color: #001333;
@@ -331,10 +331,16 @@ hr.style4:after {
 }
 .page-type-links .card-header{
   font-weight: bold;
-  font-size: 120%;
+  font-size: 110%;
+  letter-spacing: 2px;
+  background-color: #001333;
+}
+.page-type-links .card-text{
+  color:#000000;
 }
 .page-type-links .card-text a{
   font-weight: bold;
+  font-size: 100%;
 }
 .l1-dep .card-body{
   margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
