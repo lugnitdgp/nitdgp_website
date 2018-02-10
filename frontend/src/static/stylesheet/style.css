@@ -112,8 +112,8 @@ body {
 #footer-container{
   padding-bottom:10px;
 }
-.l0{ /*container*/
-  min-height: 50px;padding-top: 4em;padding-bottom: 0.1em;padding-right: 5%;padding-left: 5%;
+.l0 { /*container*/
+  min-height: 50px;padding-top: 4em;padding-bottom: 1.25em;padding-right: 5%;padding-left: 5%;
 }
 .l1{
   min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%;
