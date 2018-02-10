@@ -1,7 +1,7 @@
 import React from "react";
 
-import Header from "./Header";
 import Section from "./Section";
+import Carousel from "./Carousel";
 
 var axios = require('axios');
 
@@ -10,21 +10,37 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       error: null,
-      isLoaded: false,
-      tiles: []
+      isTilesLoaded: false,
+      isCarouselLoaded: false,
+      tiles: [],
+      carousel: []
     };
   }
   componentDidMount() {
     axios("http://172.16.20.3:8000/dashboard")
       .then((response) => {
         this.setState({
-          isLoaded: true,
+          isTilesLoaded: true,
           tiles: response.data.results
         });
         },
         (error) => {
           this.setState({
-            isLoaded: true,
+            isTilesLoaded: true,
+            error
+          });
+        }
+      )
+    axios("http://172.16.20.3:8000/dashboard/carousel")
+      .then((response) => {
+        this.setState({
+          isCarouselLoaded: true,
+          carousel: response.data.results
+        });
+        },
+        (error) => {
+          this.setState({
+            isCarouselLoaded: true,
             error
           });
         }
@@ -47,14 +63,14 @@ export default class Home extends React.Component {
     }
   }
   render() {
-    const { error, isLoaded } = this.state;
+    const { error, isTilesLoaded, isCarouselLoaded, carousel } = this.state;
     if (error) {
       return (
         <div>
           <p>Error: {error.message}</p>
         </div>
       );
-    } else if (!isLoaded) {
+    } else if (!isTilesLoaded || !isCarouselLoaded) {
       return (
         <div className="all-tiles l0">
           <p>Loading...</p>
@@ -63,10 +79,15 @@ export default class Home extends React.Component {
     } else {
       this.createPageContent();
       return (
-          <div className="all-tiles">
-          {this.rows.map((row, index) => {
-            return row;
-          })}
+          <div>
+            <Carousel slides={carousel}/>
+            <div className="page-content-container l0">
+              <div className="all-tiles">
+              {this.rows.map((row, index) => {
+                return row;
+              })}
+              </div>
+            </div>
           </div>
       );
     }

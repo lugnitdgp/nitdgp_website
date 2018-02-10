@@ -9,8 +9,8 @@ body {
   background-color: #ECEFF1;
   /*background-color: #FF6F00;*/
 }
-#header .container-fluid {
-  padding-bottom: 5px;
+#header > .container-fluid > .navbar{
+  padding-bottom: 10px;
 }
 #navbar-link {
   font-size: 90%;
@@ -20,6 +20,13 @@ body {
 }
 .navbar-text {
   text-align: center;vertical-align: middle;line-height: 18px;margin-left: -12px;margin-top: -2px;margin-bottom: -1.8em;
+}
+.carousel-item {
+  max-height: 400px;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
 }
 #top-nav-wrap{
   height: 2em;background-color: #ECEFF1;
