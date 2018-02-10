@@ -160,6 +160,9 @@ hr.style4:after {
   .l1-dep .fa-2x{
     font-size: 150%;
   }
+  .page-type-links .card-text a{
+    font-size: 85%;
+  }
   .page-content-container{
     padding-right: 1%;
     padding-left: 1%;
@@ -223,8 +226,11 @@ hr.style4:after {
 .l2-idep .card-body .down-content #li3 h6{
   margin-top: -1em;
 }
-.l2-idep .card-body .down-content #li3 hr{
-  margin-left: 2em;margin-right: 2em;
+.l2-idep .card-body .down-content .testimonial-card hr{
+  margin:5px;
+}
+.l2-idep .card-body .down-content .carousel-inner .col{
+  max-width: 20%;margin: 2px;
 }
 .l2-idep .card-body .down-content #li3 .card-up{
   background: linear-gradient(to right,#9C27B0,#B71C1C);
@@ -232,13 +238,19 @@ hr.style4:after {
 .l2-idep .card-body .down-content .card-up{
   height: 80px;
 }
+.l2-idep .card-body .down-content .card-body-in .card-title{
+  font-size: 75%;
+}
+.l2-idep .card-body .down-content .card-body-in h6{
+  font-size: 75%;
+}
 .l2-idep .card-body .down-content .avatar{
-  height: 120px;width: 120px;
+  height: 80px;width: 80px;
 }
 .l2-idep .card-body .down-content .min-profile{
-  /*font-size:200%;*/
-  padding-left: 1em;
-  padding-right: 1em;
+  font-size:65%;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .l2-idep .card-body .down-content #li4 .controls-top .btn-floating{
   background-color: #B71C1C;
@@ -256,7 +268,7 @@ hr.style4:after {
   margin-left: 2em;margin-right: 2em;
 }
 .l2-idep .card-body .down-content .carousel-title{
-  font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;font-size: 250%;
+  font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;font-size: 150%;
 }
 .l2-idep .card-body .down-content #li4 .card-up{
   background: linear-gradient(to right,#9C27B0,#B71C1C);
@@ -317,7 +329,13 @@ hr.style4:after {
 .l2-idep .tile-small-text{
   font-size: 90%;font-weight: bold;
 }
-
+.page-type-links .card-header{
+  font-weight: bold;
+  font-size: 120%;
+}
+.page-type-links .card-text a{
+  font-weight: bold;
+}
 .l1-dep .card-body{
   margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
