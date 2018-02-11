@@ -27,11 +27,8 @@ class Calendar(BaseModel):
     year = models.CharField(max_length=20, choices=YEAR_CHOICES, default=str(datetime.datetime.now().year)+'-'+str(datetime.datetime.now().year + 1))
     file = models.FileField(upload_to=rename_calendar)
 
-    def _file(self):
-        return self.file
-
-    def _year(self):
-        return self.year
+    def __str__(self):
+        return "Academic Calendar for year " + self.year
 
 
 class AdmissionDegree(BaseModel):

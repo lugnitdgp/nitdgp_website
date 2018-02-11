@@ -6,10 +6,6 @@ class NoticeModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file', '_date']
 
 
-class CalendarModelAdmin(admin.ModelAdmin):
-    list_display = ['_file', '_year']
-
-
 class AdmissionDegreeModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_description']
 
@@ -35,7 +31,7 @@ class RegulationModelAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Notice, NoticeModelAdmin)
-admin.site.register(Calendar, CalendarModelAdmin)
+admin.site.register(Calendar)
 admin.site.register(AdmissionDegree, AdmissionDegreeModelAdmin)
 admin.site.register(AdmissionProgramme, AdmissionProgrammeModelAdmin)
 admin.site.register(Admission, AdmissionModelAdmin)
