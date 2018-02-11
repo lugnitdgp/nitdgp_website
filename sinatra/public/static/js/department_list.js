@@ -13,7 +13,7 @@ function section_header(title) {
 
 function small_tile(link,icon,name) {
   return '<div class="col tile-small">\
-            <a href="/nitdgp_website/department/?id='+link+'">\
+            <a href="http://172.16.20.3:4567/department/'+link+'">\
             <div align="center" class="tile-content"><i class="fa fa-2x">'+icon+'</i><br>\
               <p class="tile-small-text">'+name+'</p>\
             </div>\
@@ -87,7 +87,7 @@ $( "#footer" ).load( "static/layout/footer.html");
                 ++row_no;
               }
             }
-            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.id,tile.short_code,tile.name))
+            $('#tile_row'+eval(row_no-1)).append(small_tile(tile.short_code,tile.short_code,tile.name))
         });
       }
       else {

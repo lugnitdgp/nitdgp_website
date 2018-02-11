@@ -101,10 +101,10 @@ function tableRender(value) {
             </tr>'
   });
   html+='</tbody></table></div>'
-return html
+  return html
 }
 
-function tab_content(id,state,level) {
+function programme_tab_content(id,state,level) {
   var html = '<div class="tab-pane fade in '+state+'" id="panell'+id+'" role="tabpanel">\
                 <div class="row" id="panell'+id+'-row1">'
   $.each(level,function(index,programme){
@@ -140,12 +140,116 @@ function tab_content(id,state,level) {
 
 function programme_pane(programmes) {
   return pane_header("Programme",2,"")+programme_pills()+'<div class="tab-content" id="programme-content">'+
-         tab_content(1,"show active",programmes.UG)+tab_content(2,"",programmes.PG)+'<div class="tab-pane fade in" id="panell3" role="tabpanel">'
+         programme_tab_content(1,"show active",programmes.UG)+programme_tab_content(2,"",programmes.PG)+'<div class="tab-pane fade in" id="panell3" role="tabpanel">'
 }
 
-function hod_pane() {
-  return pane_header("HOD",3,"")+''
+function person_card(person) {
+  return '<div class="card testimonial-card">\
+            <!--Background color-->\
+            <div class="card-up">\
+            </div>\
+            <!--Avatar-->\
+            <div class="avatar">\
+              <img src="/static/img/nitdgp_logo.png" alt="avatar" class="rounded-circle img-responsive">\
+            </div>\
+            <div class="card-body-in">\
+                <!--Name-->\
+                <h4 class="card-title mt-1"><strong>'+person.name+'</strong></h4>\
+                <h6 class="red-text">Professor & Head</h6>\
+                <hr>\
+                <p class="min-profile">\
+                    <strong>-- Research Interest --</strong><br>\
+                    '+person.research_interest+'\
+                    <i class="fa fa-envelope"></i><br>\
+                    <strong>'+person.email+'</strong><br>\
+                    <i class="fa fa-address-book"></i><br>\
+                    <strong>+91-9434788006</strong></br>\
+                    <span class="grey-text">Joined the Institute in January, '+person.joining_year+'\
+                    </span>\
+                </p>\
+            </div>\
+          </div>'
+}
 
+function hod_pane(hod) {
+  return pane_header("Head of Department",3,"")+'<div class="container">\
+      <div class="row">\
+          <!--Grid column-->\
+          <div class="col-lg-12 col-md-12 mb-r">'+person_card(hod)+'\
+          </div>\
+          <!--Grid column-->\
+      </div>'
+}
+
+function people_pills() {
+  return '<ul class="nav md-pills nav-justified pills-secondary">\
+          <li class="nav-item">\
+              <a class="nav-link active" data-toggle="tab" href="#p4l1" role="tab">Faculty</a>\
+          </li>\
+          <li class="nav-item">\
+              <a class="nav-link" data-toggle="tab" href="#p4l2" role="tab">Staff</a>\
+          </li>\
+          <li class="nav-item">\
+              <a class="nav-link" data-toggle="tab" href="#p4l3" role="tab">Students</a>\
+          </li>\
+      </ul>'
+
+}
+
+function people_tab_content(id,state,people_group) {
+  var html = '<div class="tab-pane fade in '+state+'" id="p4l'+id+'" role="tabpanel">\
+                <div class="container">'
+
+  var row=1;
+  $.each(people_group,function(designation,persons) {
+    var pages = Math.ceil(persons.length/4);
+    html+='<div class="caros">\
+            <div id="caro-p1-'+row+'" class="carousel slide carousel-multi-item" data-ride="carousel">\
+              <span class="carousel-title">'+designation.toUpperCase()+'</span>'
+    html+='<div class="controls-top">\
+                <a class="btn-floating" href="#caro-p1-'+row+'" data-slide="prev"><i class="fa fa-chevron-left"></i></a>\
+                <a class="btn-floating" href="#caro-p1-'+row+'" data-slide="next"><i class="fa fa-chevron-right"></i></a>\
+              </div>'
+    html+= '<ol class="carousel-indicators">'
+    for (i=0; i<pages ;i++) {
+      if(i==0){
+        html+='<li data-target="#caro-p1-'+row+'" data-slide-to="0" class="active"></li>'
+      }
+      else {
+        html+='<li data-target="#caro-p1-'+row+'" data-slide-to="'+i+'"></li>'
+      }
+    }
+    html+= '</ol>'
+    html+='<div class="carousel-inner" role="listbox">'
+    for(i=0;i<pages;i++) {
+      if(i==0) {
+        html+='<div class="carousel-item active">'
+      }
+      else {
+        html+='<div class="carousel-item">'
+      }
+      html+='<div class="row">'
+      for(j=i*4; j<i+4&&j<persons.length; j++) {
+        html+='<div class="col">'
+        html+=person_card(persons[j]);
+        html+="</div>"
+      }
+      html+='</div></div>'
+    }
+    html+='</div>'
+    html+='</div></div>'
+    row++;
+  });
+
+  html+='</div></div>'
+  return html
+}
+
+function people_pane(people) {
+  return pane_header("People",4,"")+people_pills()+'<div class="tab-content">'+
+         people_tab_content(1,"show active",people.faculty)+'\
+         <div class="tab-pane fade in" id="p4l2" role="tabpanel">Staff</div>\
+         <div class="tab-pane fade in" id="p4l3" role="tabpanel">Student</div></div>'
 }
 
   var dept = $('#dept').val();
@@ -175,8 +279,9 @@ function hod_pane() {
               $('#card_1').append('<div class="tab-content card down-content" id=down_content>');
               $('#down_content').append(about_pane(department_info.about_us));
               $('#down_content').append(programme_pane(department_info.programmes));
-              $('down_content').append(hod_pane(department_info.hod));
-
+              $('#down_content').append(hod_pane(department_info.hod));
+              $('#down_content').append(people_pane(department_info.people));
+              // $('#down_content').append(people_pane(department_info.);
             }
 
          });
