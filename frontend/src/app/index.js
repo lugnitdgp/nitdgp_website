@@ -1,16 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "bootstrap";
 
-import Home from "./components/Home";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import App from "./App";
 
-const header = document.getElementById('header');
-const content = document.getElementById('content');
-const footer = document.getElementById('footer');
-
-ReactDOM.render(<Header/>, header);
-ReactDOM.render(<Home/>, content);
-ReactDOM.render(<Footer/>, footer);
+ReactDOM.render(<App />, document.getElementById('app'));
