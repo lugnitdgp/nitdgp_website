@@ -1,7 +1,7 @@
 import React from "react";
 
-import Section from "./Section";
-import Carousel from "./Carousel";
+import Section from "../components/Section";
+import Carousel from "../components/Carousel";
 
 var axios = require('axios');
 

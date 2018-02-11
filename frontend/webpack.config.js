@@ -1,20 +1,17 @@
 var path = require("path");
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
-
 var config = {
-  entry: SRC_DIR + "/app/index.js",
+  entry: "./src/index.js",
   output: {
-    path: DIST_DIR + "/app",
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/app/"
+    publicPath: "/"
   },
   module: {
     loaders: [
       {
         test: /\.js?/,
-        include: SRC_DIR,
+        include: path.resolve(__dirname, "src"),
         loader: "babel-loader",
         query: {
           presets: ["react", "es2015", "stage-2"]
