@@ -6,7 +6,8 @@ body {
   font-family: 'Comfortaa',cursive;
   font-weight: 400;
   /*background:url("https://www.photohdx.com/images/2016/11/clean-dark-green-texture-background.jpg") fixed center;*/
-  background-color: #ECEFF1;
+  background: #ECEFF1;
+  /*background: linear-gradient(45deg,#ECEFF1,#00ACC1,#311B92);*/
   /*background-color: #FF6F00;*/
 }
 #navbar-link {
@@ -153,6 +154,19 @@ hr.style4:after {
   }
   .l0 .fa-2x{
     font-size: 120%;
+  }
+  .newscaro .caro{
+    min-width: 100%;
+  }
+  .newscaro .news{
+    min-width: 100%;
+    height: 320px;
+  }
+  .newscaro .card-news .card-body marquee{
+    font-size: 60%;min-height: 300px;max-height: 300px;
+  }
+  .newscaro .carousel-inner .view img{
+    width: 100%
   }
   .l1-dep .big-col{
     min-width: 100%;
@@ -390,6 +404,70 @@ hr.style4:after {
 }
 .l0 .fa-2x{
   font-size: 210%;padding-bottom: 2px;
+}
+
+.l1-dep .card-body{
+  margin-top: -1em;margin-bottom: -0.5em;
+}
+.newscaro .carousel-inner .view{
+  max-height: 400px;
+}
+.newscaro .carousel-inner .view img{
+  min-width: 100%;
+}
+.newscaro .hr-white{
+  border-top:dashed 1px #ECEFF1;
+}
+.newscaro{
+  max-width: 100%;
+  margin: 0px;
+}
+.newscaro .card-news .card-body marquee{
+  font-size: 80%;min-height: 300px;max-height: 300px;
+}
+.newscaro .caro{
+  padding: 0px;
+}
+.newscaro .card-news .card-body ul{
+  padding-left: 20px;
+}
+.newscaro .card-news .card-body a{
+  color:  #ffffff;
+}
+.newscaro .card-news .card-body a:hover{
+  color:  yellow;
+}
+.newscaro .card-news .tile-title-text{
+  letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
+}
+.newscaro .card-news .tile-title{
+  background-color: #001333;height: 1px;
+}
+.newscaro .card-news .tile-small:hover {
+  opacity: 0.9;
+}
+.newscaro .card-news .tile-small-text{
+  font-size: 80%;font-weight: bold;
+}
+.newscaro .card-news {
+  height: 92%;max-height: 400px;padding-top: 1%;
+  background: linear-gradient(#3F51B5,#001333);
+}
+/* card-title color*/
+.newscaro .card-news div.tile-title{
+  background: linear-gradient(to right,#ECEFF1);
+} 
+/* title-text color*/
+.newscaro .card-news p.tile-title-text{
+  color: #ffffff;
+}
+/* small-tile bg-color*/
+.newscaro .card-news div.tile-small{
+  background-color: #4A148C;
+}
+/* small-tile-text color*/
+.newscaro .card-news div.tile-content{
+  color: #ffffff; 
 }
 /*/.all-cards*/
 .big-row{
