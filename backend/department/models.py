@@ -46,9 +46,8 @@ class Faculty(BaseModel):
     research_interest = RichTextField()
     email = models.CharField(max_length=255, default="")
     mobile = models.BigIntegerField(null=True)
-    joining_year = models.CharField(max_length=4, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    date = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    joining_year = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
     image = models.ImageField(upload_to=rename_image)
 
     def __str__(self):

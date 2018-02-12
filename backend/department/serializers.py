@@ -70,7 +70,7 @@ class FacultyRolesSerializer(serializers.ModelSerializer):
     class Meta:
 
         model = FacultyRoles
-        fields = ('name', 'email', 'mobile', 'research_interest', 'joining_year')
+        fields = ('name', 'email', 'mobile', 'research_interest', 'joining_year', 'image')
 
 
 class PeopleSerializer(serializers.ModelSerializer):
