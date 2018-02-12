@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'administration',
     'facilities',
     'academics',
+    'activities',
+    'information',
     'ckeditor',
 ]
 

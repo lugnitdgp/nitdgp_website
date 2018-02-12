@@ -13,9 +13,14 @@ class TileModelManager(admin.ModelAdmin):
 class CarouselModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_secondary', '_image']
 
+
+class EventModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file']
+
 # Register your models here.
 
 
 admin.site.register(Section, SectionModelManager)
 admin.site.register(Tile, TileModelManager)
 admin.site.register(Carousel, CarouselModelAdmin)
+admin.site.register(Event, EventModelAdmin)

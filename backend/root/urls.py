@@ -27,6 +27,8 @@ urlpatterns = [
     url(r'^', include('administration.urls')),
     url(r'^', include('academics.urls')),
     url(r'^', include('facilities.urls')),
+    url(r'^', include('information.urls')),
+    url(r'^', include('activities.urls')),
     url(r'^$', APIRoot.as_view(), name='root-view')
 ]
 if settings.DEBUG:

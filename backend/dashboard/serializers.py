@@ -24,3 +24,10 @@ class CarouselSerializer(serializers.ModelSerializer):
     class Meta:
         model = Carousel
         fields = ('primary_caption', 'secondary_caption', 'image')
+
+
+class EventSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Event
+        fields = ('title', 'file')

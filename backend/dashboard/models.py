@@ -65,3 +65,15 @@ class Carousel(BaseModel):
 
     def _image(self):
         return self.image
+
+
+class Event(BaseModel):
+
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to='events/%Y/%m/%d')
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file

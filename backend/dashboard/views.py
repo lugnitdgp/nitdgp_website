@@ -16,3 +16,9 @@ class CarouselViewSet(ListAPIView):
 
     queryset = Carousel.objects.all().order_by('-updated_at')
     serializer_class = CarouselSerializer
+
+
+class EventViewSet(ListAPIView):
+
+    queryset = Event.objects.all().order_by('-created_at')
+    serializer_class = EventSerializer

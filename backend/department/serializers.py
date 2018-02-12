@@ -66,6 +66,7 @@ class FacultyRolesSerializer(serializers.ModelSerializer):
     mobile = serializers.ReadOnlyField(source='faculty.mobile')
     research_interest = serializers.ReadOnlyField(source='faculty.research_interest')
     joining_year = serializers.ReadOnlyField(source='faculty.joining_year')
+    image = serializers.ImageField(source='faculty.image')
 
     class Meta:
 
