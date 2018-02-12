@@ -1,12 +1,9 @@
 import datetime
-import os
-import shutil
 
 from django.db import models
 from ckeditor.fields import RichTextField
 
 from base.models import BaseModel
-from root.settings import BASE_DIR
 
 
 class Department(BaseModel):
@@ -19,16 +16,6 @@ class Department(BaseModel):
 
     def __str__(self):
         return self.name
-
-    def save(self, *args, **kwargs):
-        dept_dir = os.path.join(os.path.dirname(BASE_DIR), 'departments')
-        try:
-            os.makedirs(os.path.join(dept_dir, self.short_code.lower()))
-            shutil.copy(os.path.join(dept_dir, 'dummy.html'),
-                        os.path.join(dept_dir, self.short_code.lower(), 'index.html'))
-            super(Department, self).save(*args, **kwargs)
-        except (FileNotFoundError, OSError):  # Handle the error properly
-            pass
 
 
 def rename_image(instance, filename):
