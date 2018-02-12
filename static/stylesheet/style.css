@@ -163,7 +163,7 @@ hr.style4:after {
     height: 320px;
   }
   .newscaro .card-news .card-body marquee{
-    font-size: 60%;min-height: 300px;max-height: 300px;
+    font-size: 60%;max-height: 220px! important;
   }
   .newscaro .carousel-inner .view img{
     width: 100%
@@ -423,7 +423,7 @@ hr.style4:after {
   margin: 0px;
 }
 .newscaro .card-news .card-body marquee{
-  font-size: 80%;min-height: 300px;max-height: 300px;
+  font-size: 80%;max-height: 300px;
 }
 .newscaro .caro{
   padding: 0px;
