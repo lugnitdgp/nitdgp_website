@@ -19,6 +19,9 @@ from django.contrib import admin
 from base.views import APIRoot
 from root import settings
 
+admin.site.site_header = 'NIT Durgapur Administration'
+admin.site.site_title = 'NIT Durgapur'
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^api-auth/', include('rest_framework.urls')),

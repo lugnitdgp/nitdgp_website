@@ -14,7 +14,7 @@ class FacultySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Faculty
-        fields = ('name', 'research_interest', 'email', 'mobile', 'joining_year')
+        fields = ('name', 'research_interest', 'email', 'mobile', 'joining_year', 'image')
 
 
 class CourseSerializer(serializers.ModelSerializer):
@@ -81,8 +81,8 @@ class PeopleSerializer(serializers.ModelSerializer):
     def get_faculty(self, obj):
         result = collections.defaultdict()
         for role in Roles.objects.filter(type='Departmental'):
-            faculty_list = role.facultyroles_set.filter(faculty__department=self.context.id)
-            data = FacultyRolesSerializer(faculty_list, many=True).data
+            faculty_list = role.facultyroles_set.filter(faculty__department=self.context['obj'].id)
+            data = FacultyRolesSerializer(faculty_list, many=True, context=self.context).data
             if len(data) != 0 and role.name != 'HOD':
                 result[role.name] = data
 
@@ -102,13 +102,13 @@ class MainSerializer(serializers.ModelSerializer):
             faculty_department = faculty_role.faculty.department
             if faculty_department.id == obj.id:
                 department_hod = faculty_role.faculty
-                return FacultySerializer(department_hod).data
+                return FacultySerializer(department_hod, context=self.context).data
         return {}
 
     def get_people(self, obj):
 
         faculty = Faculty.objects.filter(department=obj.id)
-        return PeopleSerializer(faculty, context=obj).data
+        return PeopleSerializer(faculty, context={'request': self.context['request'], 'obj': obj}).data
 
     def get_programmes(self, obj):
 
@@ -124,8 +124,7 @@ class MainSerializer(serializers.ModelSerializer):
                     'programme_title': i.title
                 }]
             for semester in i.courses_set.values('semester').order_by('semester'):
-                # import pdb
-                # pdb.set_trace()
+
                 for j in result[i.degree.name]:
                     
                     if j['programme_title'] == i.title:
