@@ -160,7 +160,7 @@ hr.style4:after {
   }
   .newscaro .news{
     min-width: 100%;
-    height: 320px;
+    height: 420px;
   }
   .newscaro .card-news .card-body marquee{
     font-size: 60%;max-height: 220px! important;
@@ -226,9 +226,10 @@ hr.style4:after {
   font-weight: bold;
   padding:10px;
 }
-.l2-idep .card-body .down-content #li2 .accordian-wrap{
-  margin: 0 auto;
+.l2-idep .card-body .down-content #li2 .accordion .card-header{
+  border:solid 1px black;
 }
+
 .l2-idep .card-body .down-content .table .th-lg{
   min-width: 5px;
 }
@@ -280,7 +281,7 @@ hr.style4:after {
   margin-left: 2em;margin-right: 2em;
 }
 .l2-idep .card-body .down-content .table-wrapper-2{
-  display: block;max-height: 500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
+  display: block;max-height: 2000px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 /*.l2-idep .card-body .down-content #li5 .card{
   margin-top: 15px;
@@ -408,18 +409,54 @@ hr.style4:after {
 .newscaro .carousel-inner .view img{
   min-width: 100%;
 }
-.newscaro .hr-white{
+.hr-white{
   border-top:dashed 1px #ECEFF1;
 }
 .newscaro{
   max-width: 100%;
   margin: 0px;
 }
-.newscaro .card-news .card-body marquee{
-  font-size: 80%;max-height: 300px;
-}
 .newscaro .caro{
   padding: 0px;
+}
+.animate-right{
+  position:relative;animation:animateright 0.4s;
+}
+@keyframes animateright{
+  from{right:-300px;opacity:0} to{right:0;opacity:1}
+}
+.nr-1{
+  display: none;
+}
+.nr-2{
+  display: none;
+}
+.nr-3{
+  display: none;
+}
+.nr-4{
+  display: none;
+}
+.news-row{
+  margin-bottom: 5px;margin-top: 5px;min-height: 72px;
+}
+.news-row .date-col{
+  margin-left:0px;padding:5px;
+}
+.news-row .date-col .black-text{
+  margin-top: -5.5em;margin-left: 7em;font-size: 70%;
+}
+.news-row .date-div{
+  height: 60px!important;width: 70px!important;border-radius:5px!important;border:solid 2px #001333!important;background-color:#001333!important;
+}
+.news-row .date-div h3{
+  margin-top: -7px !important;
+}
+.news-row .date-div h6{
+  margin-top: -16px !important;
+}
+.newscaro .card-news .card-body marquee{
+  font-size: 80%;max-height: 300px;
 }
 .newscaro .card-news .card-body ul{
   padding-left: 20px;
@@ -462,6 +499,18 @@ hr.style4:after {
 .newscaro .card-news div.tile-content{
   color: #ffffff; 
 }
+
+
+.animate-left{
+  position:relative;animation:animateleft 0.4s
+}
+@keyframes animateleft{
+  from{left:-300px;opacity:0} to{left:0;opacity:1}
+}
+
+
+
+
 /*/.all-cards*/
 .l0 .big-row{
   padding: 0.2em;
@@ -624,15 +673,15 @@ hr.style4:after {
 /* /.color fac */
 /*color 1 bgs*/
 .l2-idep .l2-card .down-content{
-  background: linear-gradient(#D7CCC8, #D7CCC8);
+  background-color:#ffffff;
 }
 /*/.color 1*/
 /*color 2 reds*/
 .l2-idep .card-body .up-content .classic-tabs{
-  background-color: #B71C1C;
+  background-color: #001333;
 }
 .l2-idep .l2-card .down-content .tab-pane .nav-link.active{
-  background-color: #B71C1C;
+  background-color: #001333;
   color: #ECEFF1;
 }
 .l2-idep .l2-card .down-content .tab-pane .nav-link{
@@ -640,14 +689,14 @@ hr.style4:after {
   color: #78909C;
 }
 .l2-idep .card-body .down-content #li4 .controls-top .btn-floating{
-  background-color: #B71C1C;
+  background-color: #001333;
   height: 25px;width: 25px;margin: 2px ! important;
 }
 .l2-idep .card-body .down-content #li4 .carousel-indicators li{
-  background-color: #B71C1C;
+  background-color: #001333;
 }
 .l2-idep .card-body .down-content #li4 .carousel-indicators li.active{
-  background-color: #B71C1C;
+  background-color: #001333;
 }
 /*/.color 2*/
 /*text on color -1*/
