@@ -143,7 +143,7 @@ function programme_pane(programmes) {
          programme_tab_content(1,"show active",programmes.UG)+programme_tab_content(2,"",programmes.PG)+'<div class="tab-pane fade in" id="panell3" role="tabpanel">'
 }
 
-function person_card(person) {
+function person_card(person,designation) {
   return '<div class="card testimonial-card">\
             <!--Background color-->\
             <div class="card-up">\
@@ -155,7 +155,7 @@ function person_card(person) {
             <div class="card-body-in">\
                 <!--Name-->\
                 <h4 class="card-title mt-1"><strong>'+person.name+'</strong></h4>\
-                <h6 class="red-text">Professor & Head</h6>\
+                <h6 class="red-text">'+designation+'</h6>\
                 <hr>\
                 <p class="min-profile">\
                     <strong>-- Research Interest --</strong><br>\
@@ -175,7 +175,7 @@ function hod_pane(hod) {
   return pane_header("Head of Department",3,"")+'<div class="container">\
       <div class="row">\
           <!--Grid column-->\
-          <div class="col-lg-12 col-md-12 mb-r">'+person_card(hod)+'\
+          <div class="col-lg-12 col-md-12 mb-r">'+person_card(hod,"Professor and Head")+'\
           </div>\
           <!--Grid column-->\
       </div>'
@@ -231,7 +231,7 @@ function people_tab_content(id,state,people_group) {
       html+='<div class="row">'
       for(j=i*4; j<i+4&&j<persons.length; j++) {
         html+='<div class="col">'
-        html+=person_card(persons[j]);
+        html+=person_card(persons[j],designation);
         html+="</div>"
       }
       html+='</div></div>'
@@ -250,6 +250,41 @@ function people_pane(people) {
          people_tab_content(1,"show active",people.faculty)+'\
          <div class="tab-pane fade in" id="p4l2" role="tabpanel">Staff</div>\
          <div class="tab-pane fade in" id="p4l3" role="tabpanel">Student</div></div>'
+}
+
+function projectAndResearchTableRender(array) {
+  html = '<div class="table-wrapper-2 table-bordered">\
+            <table class="table table-responsive-md">\
+              <thead class="mdb-color lighten-4">\
+                <tr>\
+                <th class="th-lg">Collaborating Institute</th>\
+                <th class="th-lg">Area</th>\
+                <th class="th-lg">Faculty Involved</th>\
+                <th class="th-lg">Funding</th>\
+                <th class="th-lg">Year Started</th>\
+                </tr>\
+              </thead>\
+              <tbody>'
+  $.each(array,function(index,entry){
+    html += '<tr>\
+                <td>'+entry.collab_inst+'</td>\
+                <td>'+entry.area+'</td>\
+                <td>'+entry.faculty_involved+'</td>\
+                <td>'+entry.funding+'</td>\
+                <td>'+entry.date+'</td>\
+            </tr>'
+  });
+  html+='</tbody></table></div>'
+  return html
+}
+
+function research_pane(research) {
+  return pane_header("Research",5,"") + projectAndResearchTableRender(research)
+}
+
+
+function project_pane(projects) {
+  return pane_header("project",6,"") + projectAndResearchTableRender(projects)
 }
 
   var dept = $('#dept').val();
@@ -281,7 +316,9 @@ function people_pane(people) {
               $('#down_content').append(programme_pane(department_info.programmes));
               $('#down_content').append(hod_pane(department_info.hod));
               $('#down_content').append(people_pane(department_info.people));
-              // $('#down_content').append(people_pane(department_info.);
+              $('#down_content').append(research_pane(department_info.research));
+              $('#down_content').append(project_pane(department_info.projects));
+
             }
 
          });
