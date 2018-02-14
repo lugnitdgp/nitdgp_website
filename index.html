@@ -14,6 +14,133 @@
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link rel="stylesheet" href="static/stylesheet/style.css">
+        <style>
+        * {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    a {
+    text-decoration: none;
+    }
+
+    #popUp {
+    position: fixed;
+    max-width: 350px;
+    height: 225px;
+    background: rgba(236, 240, 241, 1);
+    border: 7px solid #fff;
+    bottom: 0;
+    margin-left:-425px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    }
+
+    #new span {
+    background: #fff;
+    position: absolute;
+    color: #1c8dc4;
+    padding: 4px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: -5px;
+    }
+
+    #popUp .close {
+    color: #464646;
+    right: 8px;
+    top: 0px;
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    }
+
+    #popUp h2 {
+    font-size: 17px;
+    color: #464646;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+    }
+
+    #body {
+    height: 1200px;
+    background: #eee;
+    }
+
+    a.button {
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 200px;
+    font-size: 15px;
+    color: #fff;
+    border-bottom: 2px solid #18729f;
+    background: #1c8dc4;
+    border-radius: 4px;
+    padding: 8px 0;
+    }
+
+    #plus {
+    position: fixed;
+    color: #fff;
+    bottom: 15%;
+    font-size: 15px;
+    margin-left: 0;
+    -webkit-transition: all 1.25s ease;
+    -moz-transition: all 1.25s ease;
+    -o-transition: all 1.25s ease;
+    transition: all 1.25s ease;
+    cursor: pointer;
+    text-align: left;
+    letter-spacing: 1px;
+    }
+
+    #plus span {
+    z-index: 100000;
+    position: relative;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #73b369;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+    opacity: .9;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    top: 35px;
+    right: 5px;
+    display: inline-block;
+    }
+
+    #plus::after {
+    content: '';
+    display: block;
+    display: relative;
+    }
+
+    @media all and (max-width: 900px) {
+    #popUp {
+      margin-left: -425px;
+    }
+    #plus {
+      margin-left: 0px;
+    }
+    }
+    #contents a{
+      color:#73b369;
+    }
+</style>
     </head>
     <body>
       <!-- HEADER -->
@@ -73,7 +200,7 @@
                       <div class="carousel-caption">
                           <p>Fourth text</p>
                       </div>
-                  </div> 
+                  </div>
                   <div class="carousel-item">
                       <!--Mask color-->
                       <div class="view hm-black-slight">
@@ -104,7 +231,7 @@
             <div class="view gradient-card-header tile-title">
                 <p class="tile-title-text">NEWSFEED</p>
             </div>
-            
+
             <div class="card-body">
               <div class="row card news-row animate-right nr-1">
                 <div class="col date-col">
@@ -290,6 +417,21 @@
           </div>
         </div>
       </div>
+
+      <header>
+  		  <div id="darkBack"></div>
+  		  <div id="popUp">
+  		    <div id="close" class="close"><i class="fa fa-times"></i></div>
+  		    <div id="new"><span>NEW!</span></div><br>
+  				<div id='contents' style="width:200px;padding:10px;">
+  					<a href='#'>Student Notices</a>
+  				</div>
+  		  </div>
+  		  <div id="plus">
+  				<span>Notifications<br></span>
+  			</div>
+  		</header>
+
       <!-- CONTENT -->
       <div class="page-content-container l0">
         <!-- all-tiles -->
@@ -309,12 +451,12 @@
           var i1;
           var x1 = document.getElementsByClassName("nr-1");
           for (i1 = 0; i1 < x1.length; i1++) {
-            x1[i1].style.display = "none";  
+            x1[i1].style.display = "none";
           }
           myIndex1++;
-          if (myIndex1 > x1.length) {myIndex1 = 1}    
-          x1[myIndex1-1].style.display = "block";  
-          setTimeout(carousel1, 6001);    
+          if (myIndex1 > x1.length) {myIndex1 = 1}
+          x1[myIndex1-1].style.display = "block";
+          setTimeout(carousel1, 6001);
       }
 
       var myIndex2 = 0;
@@ -324,12 +466,12 @@
           var i2;
           var x2 = document.getElementsByClassName("nr-2");
           for (i2 = 0; i2 < x2.length; i2++) {
-            x2[i2].style.display = "none";  
+            x2[i2].style.display = "none";
           }
           myIndex2++;
-          if (myIndex2 > x2.length) {myIndex2 = 1}    
-          x2[myIndex2-1].style.display = "block";  
-          setTimeout(carousel2, 6002);    
+          if (myIndex2 > x2.length) {myIndex2 = 1}
+          x2[myIndex2-1].style.display = "block";
+          setTimeout(carousel2, 6002);
       }
 
       var myIndex3 = 0;
@@ -339,12 +481,12 @@
           var i3;
           var x3 = document.getElementsByClassName("nr-3");
           for (i3 = 0; i3 < x3.length; i3++) {
-            x3[i3].style.display = "none";  
+            x3[i3].style.display = "none";
           }
           myIndex3++;
-          if (myIndex3 > x3.length) {myIndex3 = 1}    
-          x3[myIndex3-1].style.display = "block";  
-          setTimeout(carousel3, 6003);    
+          if (myIndex3 > x3.length) {myIndex3 = 1}
+          x3[myIndex3-1].style.display = "block";
+          setTimeout(carousel3, 6003);
       }
 
       var myIndex4 = 0;
@@ -354,13 +496,15 @@
           var i4;
           var x4 = document.getElementsByClassName("nr-4");
           for (i4 = 0; i4 < x4.length; i4++) {
-            x4[i4].style.display = "none";  
+            x4[i4].style.display = "none";
           }
           myIndex4++;
-          if (myIndex4 > x4.length) {myIndex4 = 1}    
-          x4[myIndex4-1].style.display = "block";  
-          setTimeout(carousel4, 6004);    
+          if (myIndex4 > x4.length) {myIndex4 = 1}
+          x4[myIndex4-1].style.display = "block";
+          setTimeout(carousel4, 6004);
       }
+
+
       </script>
 
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -368,5 +512,16 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
       <script src="static/js/index.js"></script>
+      <script>
+      $("#plus").click(function() {
+      $("#popUp").css("margin-left", "0px");
+      $("#plus").css("margin-left", "-425px");
+      });
+
+      $("#close").click(function() {
+      $("#popUp").css("margin-left", "-425px");
+      $("#plus").css("margin-left", "0px");
+      });
+      </script>
     </body>
 </html>
