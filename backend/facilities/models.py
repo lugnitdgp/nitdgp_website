@@ -40,7 +40,7 @@ class EResource(BaseModel):
 class SAC(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'S A C'
+        verbose_name_plural = 'Student Activity Center'
 
     about = RichTextField()
     mission = RichTextField()
@@ -78,3 +78,24 @@ class SAC(BaseModel):
 
     def _rec_url(self):
         return self.rec_url
+
+
+def rename_image_cif_photo(instance,filename):
+
+    return 'CIF/{0}/image/{1}'.format(instance.equipment_name,filename)
+
+
+class CIF(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Central Instruments Facility'
+
+    equipment_name = RichTextField()
+    equipment_desc = RichTextField()
+    image = models.ImageField(upload_to=rename_image_cif_photo)
+
+    def _equipment_name(self):
+        return self.equipment_name
+
+    def _equipment_desc(self):
+        return self.equipment_desc

@@ -52,7 +52,7 @@ function nav_menu(){
 };
 
 function pane_header(header,id,state) {
-  return '<div class="tab-pane fade '+state+'" id="li'+id+'" role="tabpanel" aria-labelledby="li1-list">\
+  return '<div class="tab-pane fade big-list '+state+'" id="li'+id+'" role="tabpanel" aria-labelledby="li1-list">\
     <h3 class="pane-title" align="left">'+header+'</h3>'
 }
 
@@ -110,7 +110,7 @@ function programme_tab_content(id,state,level) {
   $.each(level,function(index,programme){
     // make an accordian in a div col
     html+= '<div class="col">\
-              <h4><strong>Academic Courses and Syllabus for '+programme.programme_title+' Students</strong></h3>\
+              <h5><strong>Academic Courses and Syllabus for '+programme.programme_title+' Students</strong></h5>\
               <div class="card"><div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">'
 
     //LOOP FOR SEMESTER
@@ -144,13 +144,22 @@ function programme_pane(programmes) {
 }
 
 function person_card(person,designation) {
+
+  if(person.research_interest.length > 60) {
+    var research = person.research_interest.slice(3,60);
+  }
+  else {
+    var research = person.research_interest.slice(3,-4);
+  }
+  // console.log(person.image);
+  research += '...'
   return '<div class="card testimonial-card">\
             <!--Background color-->\
             <div class="card-up">\
             </div>\
             <!--Avatar-->\
             <div class="avatar">\
-              <img src="/static/img/nitdgp_logo.png" alt="avatar" class="rounded-circle img-responsive">\
+              <img src="'+person.image+'" alt="avatar" class="rounded-circle img-responsive">\
             </div>\
             <div class="card-body-in">\
                 <!--Name-->\
@@ -159,8 +168,8 @@ function person_card(person,designation) {
                 <hr>\
                 <p class="min-profile">\
                     <strong>-- Research Interest --</strong><br>\
-                    '+person.research_interest+'\
-                    <i class="fa fa-envelope"></i><br>\
+                    '+research+'\
+                      <a href="#">Read More</a><br/><i class="fa fa-envelope"></i><br/>\
                     <strong>'+person.email+'</strong><br>\
                     <i class="fa fa-address-book"></i><br>\
                     <strong>+91-9434788006</strong></br>\
@@ -202,7 +211,7 @@ function people_tab_content(id,state,people_group) {
 
   var row=1;
   $.each(people_group,function(designation,persons) {
-    var pages = Math.ceil(persons.length/4);
+    var pages = Math.ceil(persons.length/5);
     html+='<div class="caros">\
             <div id="caro-p1-'+row+'" class="carousel slide carousel-multi-item" data-ride="carousel">\
               <span class="carousel-title">'+designation.toUpperCase()+'</span>'
@@ -229,7 +238,7 @@ function people_tab_content(id,state,people_group) {
         html+='<div class="carousel-item">'
       }
       html+='<div class="row">'
-      for(j=i*4; j<i+4&&j<persons.length; j++) {
+      for(j=i*5; j<i+5&&j<persons.length; j++) {
         html+='<div class="col">'
         html+=person_card(persons[j],designation);
         html+="</div>"
@@ -284,8 +293,39 @@ function research_pane(research) {
 
 
 function project_pane(projects) {
-  return pane_header("project",6,"") + projectAndResearchTableRender(projects)
+  return pane_header("Project",6,"") + projectAndResearchTableRender(projects)
 }
+
+function facilities_pills() {
+  return '<ul class="nav md-pills nav-justified pills-secondary">\
+      <li class="nav-item">\
+          <a class="nav-link active" data-toggle="tab" href="#p7l1" role="tab">Labratories</a>\
+      </li>\
+      <li class="nav-item">\
+          <a class="nav-link" data-toggle="tab" href="#p7l2" role="tab">Equipments</a>\
+      </li>\
+  </ul>'
+}
+
+function facility_tab_content(id,state,array) {
+
+  var html = '<div class="tab-pane fade '+state+'" id="p7l'+id+'" role="tabpanel">\
+              <div class="row">\
+                <div class="col">\
+                 <ul class="list-group">'
+ $.each(array,function(index,entry) {
+   html+='<li class="list-group-item">'+entry.name+'</li>'
+ });
+ html+='</ul></div></div></div>'
+ return html
+}
+
+function facilities_pane(facilities) {
+  return pane_header("Facilities",7,"")+facilities_pills()+'<div class="tab-content">'+
+         facility_tab_content(1,"show active",facilities.Laboratory)+
+         facility_tab_content(2,"",facilities.Equipment)
+}
+
 
   var dept = $('#dept').val();
 
@@ -318,7 +358,7 @@ function project_pane(projects) {
               $('#down_content').append(people_pane(department_info.people));
               $('#down_content').append(research_pane(department_info.research));
               $('#down_content').append(project_pane(department_info.projects));
-
+              $('#down_content').append(facilities_pane(department_info.facilities));
             }
 
          });
