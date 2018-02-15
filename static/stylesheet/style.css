@@ -116,6 +116,9 @@ body {
 .l1{
   min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%;
 }
+.page-type-person{
+  min-height: 650px;padding-top: 1em;padding-bottom: 2em;padding-right: 20%;padding-left: 20%;
+}
 .l1-dep{ /*container*/
   min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%;
 }
@@ -128,12 +131,35 @@ hr.style4 {
 hr.style4:after {
   content: "Quick Links";display: inline-block;position: relative;top: -0.7em;font-size: 1em;padding: 0 0.5em;background: #001333;
 }
+@media screen and (max-width: 800px)  {
+  .page-type-person .card-up{
+    height: 200px !important;
+  }
+}
 @media screen and (max-width: 1200px) {
   .navbar-brand {
     height: 70px;padding-top: 15px;
   }
   .navbar-img-big{
     padding-left: 5px;height: 0px;
+  }
+  .page-type-person{
+    padding-left: 1.5%;padding-right: 1.5%;
+  }
+  .page-type-person .avatar{
+    max-height: 120px;max-width: 120px;
+  }
+  .page-type-person .min-profile{
+    font-size:55%;
+  }
+  .page-type-person .name-title{
+    font-size: 200%;
+  }
+  .page-type-person .mt-1{
+    font-size: 150%;
+  }
+  .page-type-person .card-up{
+    height: 200px;
   }
   #navbarSupportedContent-4{
     padding-top: 25px;
@@ -248,11 +274,11 @@ hr.style4:after {
 .l2-idep .card-body .down-content .carousel-inner .col{
   max-width: 20%;margin: 2px;
 }
-.l2-idep .card-body .down-content .card-up{
-  height: 80px;
-}
 .l2-idep .card-body .down-content .caros{
   margin-bottom: -45px !important;
+}
+.l2-idep .card-body .down-content .card-up{
+  height: 80px;
 }
 .l2-idep .card-body .down-content .card-body-in .card-title{
   font-size: 75%;
@@ -350,6 +376,31 @@ hr.style4:after {
   font-weight: bold;
   font-size: 100%;
 }
+.page-type-person .testimonial-card{
+  background: linear-gradient(#001333,#001333,#0D47A1);
+}
+.page-type-person .card-up{
+  height: 400px;
+  background: #001333;
+}
+.page-type-person .desig{
+  margin-top: -0.5em;
+}
+.page-type-person .card-up img{
+  max-width: 100%;
+}
+.page-type-person .avatar{
+  height: 150px;width: 150px;margin-bottom:-2em;
+}
+.page-type-person .name-title{
+  font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;color:#001333;
+}
+.page-type-person .min-profile{
+  font-size:55%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .l1-dep .card-body{
   margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
@@ -411,6 +462,9 @@ hr.style4:after {
 }
 .hr-white{
   border-top:dashed 1px #ECEFF1;
+}
+.hr-grey{
+  border-top:dotted 1px #3F51B5;
 }
 .newscaro{
   max-width: 100%;
