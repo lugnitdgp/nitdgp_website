@@ -376,6 +376,21 @@ hr.style4:after {
   font-weight: bold;
   font-size: 100%;
 }
+.page-type-links .date-col{
+  margin-left:0px;padding:5px;
+}
+.page-type-links .date-col .black-text{
+  margin-left: 5.5em;margin-top:-1.5em;
+}
+.page-type-links .date-div{
+  height: 60px!important;width: 70px!important;border-radius:5px!important;border:solid 2px #001333!important;background-color:#001333!important;
+}
+.page-type-links .date-div h3{
+  margin-top: -7px !important;
+}
+.page-type-links .date-div h6{
+  margin-top: -16px !important;
+}
 .page-type-person .testimonial-card{
   background: linear-gradient(#001333,#001333,#0D47A1);
 }
@@ -426,6 +441,9 @@ hr.style4:after {
   font-size: 250%;padding-bottom: 8px;
   font-family: 'Oswald';font-weight: bold;
 }
+.l1-dep .card-body{
+  margin-top: -1em;margin-bottom: -0.5em;
+}
 .l0 .card-body{
   margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
@@ -449,10 +467,6 @@ hr.style4:after {
 }
 .l0 .fa-2x{
   font-size: 210%;padding-bottom: 2px;
-}
-
-.l1-dep .card-body{
-  margin-top: -1em;margin-bottom: -0.5em;
 }
 .newscaro .carousel-inner .view{
   max-height: 400px;
@@ -508,18 +522,6 @@ hr.style4:after {
 }
 .news-row .date-div h6{
   margin-top: -16px !important;
-}
-.newscaro .card-news .card-body marquee{
-  font-size: 80%;max-height: 300px;
-}
-.newscaro .card-news .card-body ul{
-  padding-left: 20px;
-}
-.newscaro .card-news .card-body a{
-  color:  #ffffff;
-}
-.newscaro .card-news .card-body a:hover{
-  color:  yellow;
 }
 .newscaro .card-news .tile-title-text{
   letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
