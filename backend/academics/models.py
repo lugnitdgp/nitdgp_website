@@ -17,6 +17,9 @@ class Notice(BaseModel):
     def _date(self):
         return self.date
 
+    class Meta:
+        ordering = ('-date',)
+
 
 def rename_calendar(instance, filename):
     return 'academics/calendar/{1}/'.format(instance.year, filename)
