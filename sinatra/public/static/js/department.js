@@ -158,8 +158,8 @@ function person_card(person,designation) {
             <div class="card-up">\
             </div>\
             <!--Avatar-->\
-            <div class="avatar">\
-              <img src="'+person.image+'" alt="avatar" class="rounded-circle img-responsive">\
+            <div class="avatar mx-auto">\
+              <img src="'+person.image+'" class="rounded-circle img-responsive">\
             </div>\
             <div class="card-body-in">\
                 <!--Name-->\

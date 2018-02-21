@@ -4,7 +4,7 @@ from academics.serializers import *
 
 class NoticeViewSet(ListAPIView):
 
-    queryset = Notice.objects.all().order_by('date')
+    queryset = Notice.objects.all()
     serializer_class = NoticeSerializer
 
 
