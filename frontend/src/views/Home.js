@@ -2,6 +2,7 @@ import React from "react";
 
 import Section from "../components/Section";
 import Carousel from "../components/Carousel";
+import Notices from "../components/Notices";
 
 var axios = require('axios');
 
@@ -45,6 +46,20 @@ export default class Home extends React.Component {
           });
         }
       )
+    axios("http://172.16.20.3:8000/academics/notices")
+      .then((response) => {
+        this.setState({
+          isNoticeLoaded: true,
+          notices: response.data.results
+        });
+        },
+        (error) => {
+          this.setState({
+            isNoticeLoaded: true,
+            error
+          });
+        }
+      )
   }
   createPageContent() {
     const { tiles } = this.state;
@@ -63,7 +78,7 @@ export default class Home extends React.Component {
     }
   }
   render() {
-    const { error, isTilesLoaded, isCarouselLoaded, carousel } = this.state;
+    const { error, isTilesLoaded, isCarouselLoaded, isNoticesLoaded, carousel, notices } = this.state;
     if (error) {
       return (
         <div>
@@ -80,7 +95,14 @@ export default class Home extends React.Component {
       this.createPageContent();
       return (
           <div>
-            <Carousel slides={carousel}/>
+            <div className="row newscaro">
+              <div className="col-9 caro">
+                <Carousel slides={carousel}/>
+              </div>
+              <div className="col-3 news">
+                <Notices notices={notices}/>
+              </div>
+            </div>
             <div className="page-content-container l0">
               <div className="all-tiles">
               {this.rows.map((row, index) => {
