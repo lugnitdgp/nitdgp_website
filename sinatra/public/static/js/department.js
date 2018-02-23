@@ -15,7 +15,7 @@ $(document).ready(function() {
 function nav_menu(){
     return '<div class="tabs-wrapper up-content" >\
       <!-- Navigation -->\
-      <ul class="nav classic-tabs tabs-cyan" role="tablist">\
+      <ul class="nav classic-tabs" role="tablist">\
         <li class="nav-item">\
           <a class="nav-link waves-light active" data-toggle="tab" href="#li1" role="tab" >About Us</a>\
         </li>\
