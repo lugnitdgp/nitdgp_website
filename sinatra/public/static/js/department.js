@@ -15,7 +15,7 @@ $(document).ready(function() {
 function nav_menu(){
     return '<div class="tabs-wrapper up-content" >\
       <!-- Navigation -->\
-      <ul class="nav classic-tabs tabs-cyan" role="tablist">\
+      <ul class="nav classic-tabs" role="tablist">\
         <li class="nav-item">\
           <a class="nav-link waves-light active" data-toggle="tab" href="#li1" role="tab" >About Us</a>\
         </li>\
@@ -158,8 +158,8 @@ function person_card(person,designation) {
             <div class="card-up">\
             </div>\
             <!--Avatar-->\
-            <div class="avatar">\
-              <img src="'+person.image+'" alt="avatar" class="rounded-circle img-responsive">\
+            <div class="avatar mx-auto">\
+              <img src="'+person.image+'" class="rounded-circle img-responsive">\
             </div>\
             <div class="card-body-in">\
                 <!--Name-->\
