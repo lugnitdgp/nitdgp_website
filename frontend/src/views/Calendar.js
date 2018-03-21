@@ -2,7 +2,7 @@ import React from "react";
 
 var axios = require('axios');
 
-export default class Home extends React.Component {
+export default class Calendar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

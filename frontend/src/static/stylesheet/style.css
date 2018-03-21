@@ -245,6 +245,10 @@ hr.style4:after {
   color: #ECEFF1;
 }
 
+.l1 .accordion .fa {
+  float: right;
+}
+
 .l2-idep .card-body .up-content .classic-tabs .nav-link{
   font-size: 100%;
 }
