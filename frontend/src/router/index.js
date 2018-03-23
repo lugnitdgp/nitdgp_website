@@ -5,11 +5,11 @@ import Home from '@/components/Home'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'Index',
       component: Home
     }
   ]

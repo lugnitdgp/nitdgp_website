@@ -51,7 +51,7 @@
 
 <script>
 export default {
-    name: 'Headr',
+    name: 'Header',
     data () {
         return {
             msg: 'Welcome to Your Vue.js App'
