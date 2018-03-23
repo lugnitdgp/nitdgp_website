@@ -79,14 +79,16 @@ class PeopleSerializer(serializers.ModelSerializer):
     faculty = serializers.SerializerMethodField()
 
     def get_faculty(self, obj):
-        result = collections.defaultdict()
-        for role in Roles.objects.filter(type='Departmental'):
-            faculty_list = role.facultyroles_set.filter(faculty__department=self.context['obj'].id)
-            data = FacultyRolesSerializer(faculty_list, many=True, context=self.context).data
-            if len(data) != 0 and role.name != 'HOD':
-                result[role.name] = data
-
-        return result
+        faculty_list = Faculty.objects.filter(department=self.context['obj'].id)
+        faculty_list = faculty_list.extra(select={
+              'first_name': "SUBSTR(name, 1)",
+              'last_name': "SUBSTR(name, 2)"})
+        faculty_list = faculty_list.order_by('last_name', 'first_name')
+        data = FacultySerializer(faculty_list, many=True, context=self.context).data
+        # departmental_role = Roles.objects.filter(type='Departmental').first()
+        # faculty_list = departmental_role.facultyroles_set.filter(faculty__department=self.context['obj'].id)
+        # data = FacultyRolesSerializer(faculty_list, many=True, context=self.context).data
+        return data
 
     class Meta:
         model = Faculty

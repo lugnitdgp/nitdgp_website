@@ -27,6 +27,7 @@ class Faculty(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Faculty'
+        ordering = ('name', )
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
     name = models.CharField(max_length=255)
