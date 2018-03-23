@@ -1,0 +1,5 @@
+* Sources
+** SEO with vue
+[[https://alligator.io/vuejs/vue-seo-tips/][Vue JS SEO]]
+** Routing in vue
++ Remove hash from url: [[https://stackoverflow.com/questions/34623833/how-to-remove-hashbang-from-url#34624803][Stack Exchange]]
