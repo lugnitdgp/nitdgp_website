@@ -6,13 +6,12 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="description" content="The official website of NIT Durgapur">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Compiled and minified CSS for bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/css/mdb.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel='stylesheet' id='compiled.css-css'  href='https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.4.0' type='text/css' media='all' />
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link rel="stylesheet" href="static/stylesheet/mdb-theme-min.css">
         <link rel="stylesheet" href="static/stylesheet/style.css">
     </head>
     <body>
@@ -22,270 +21,283 @@
 
       <div class="row newscaro">
         <div class="col-8 caro">
-        <!--Carousel Wrapper-->
-          <div id="carousel-home" class="carousel slide carousel-fade"  data-ride="carousel">
-              <!--Indicators-->
-              <ol class="carousel-indicators">
-                  <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-home" data-slide-to="1"></li>
-                  <li data-target="#carousel-home" data-slide-to="2"></li>
-                  <li data-target="#carousel-home" data-slide-to="4"></li>
-                  <li data-target="#carousel-home" data-slide-to="5"></li>
-              </ol>
-              <!--/.Indicators-->
-              <!--Slides-->
-              <div class="carousel-inner" role="listbox">
-                  <div class="carousel-item active">
-                      <div class="view hm-black-light">
-                          <img src="http://nitdgp.ac.in/images/campus/1.jpg" alt="First slide">
-                          <div class="mask"></div>
+          <div class="card card-cascade narrower card-pic">
+            <div class="card-body">
+                <!--Carousel Wrapper-->
+                  <div id="carousel-home" class="carousel slide carousel-fade" data-interval="6000" data-ride="carousel">
+                      <!--Indicators-->
+                      <ol class="carousel-indicators">
+                          <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-home" data-slide-to="1"></li>
+                          <li data-target="#carousel-home" data-slide-to="2"></li>
+                          <li data-target="#carousel-home" data-slide-to="4"></li>
+                      </ol>
+                      <!--/.Indicators-->
+                      <!--Slides-->
+                      <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item anim1 active">
+                              <div class="view hm-black-light">
+                                  <img src="http://nitdgp.ac.in/images/campus/1.jpg" alt="First slide">
+                                  <div class="mask"></div>
+                              </div>
+                              <div class="carousel-caption">
+                                  <p>First text</p>
+                              </div>
+                          </div>
+                          <div class="carousel-item anim1">
+                              <!--Mask color-->
+                              <div class="view hm-black-light">
+                                  <img src="http://nitdgp.ac.in/images/studentActivities/6.jpg" alt="Second slide">
+                                  <div class="mask"></div>
+                              </div>
+                              <div class="carousel-caption">
+                                  <p>Secondary text</p>
+                              </div>
+                          </div>
+                          <div class="carousel-item anim1">
+                              <!--Mask color-->
+                              <div class="view hm-black-slight">
+                                  <img src="http://nitdgp.ac.in/images/hostel/6.jpg" alt="Third slide">
+                                  <div class="mask"></div>
+                              </div>
+                              <div class="carousel-caption">
+                                  <p>Third text</p>
+                              </div>
+                          </div>
+                          <div class="carousel-item anim1">
+                              <!--Mask color-->
+                              <div class="view hm-black-slight">
+                                  <img src="http://www.nitdgp.ac.in/demo/dms/images/photo_%20gallery/pic4.jpg" alt="Fourth slide">
+                                  <div class="mask"></div>
+                              </div>
+                              <div class="carousel-caption">
+                                  <p>Fourth text</p>
+                              </div>
+                          </div> 
                       </div>
-                      <div class="carousel-caption">
-                          <p>First text</p>
-                      </div>
+                      <!--/.Slides-->
+                      <!--Controls-->
+                      <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                      <!--/.Controls-->
                   </div>
-                  <div class="carousel-item">
-                      <!--Mask color-->
-                      <div class="view hm-black-light">
-                          <img src="http://nitdgp.ac.in/images/studentActivities/6.jpg" alt="Second slide">
-                          <div class="mask"></div>
-                      </div>
-                      <div class="carousel-caption">
-                          <p>Secondary text</p>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <!--Mask color-->
-                      <div class="view hm-black-slight">
-                          <img src="http://nitdgp.ac.in/images/hostel/6.jpg" alt="Third slide">
-                          <div class="mask"></div>
-                      </div>
-                      <div class="carousel-caption">
-                          <p>Third text</p>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <!--Mask color-->
-                      <div class="view hm-black-slight">
-                          <img src="http://www.nitdgp.ac.in/demo/dms/images/photo_%20gallery/pic4.jpg" alt="Fourth slide">
-                          <div class="mask"></div>
-                      </div>
-                      <div class="carousel-caption">
-                          <p>Fourth text</p>
-                      </div>
-                  </div> 
-                  <div class="carousel-item">
-                      <!--Mask color-->
-                      <div class="view hm-black-slight">
-                          <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="Fifth slide">
-                          <div class="mask"></div>
-                      </div>
-                      <div class="carousel-caption">
-                          <p>Fifth text</p>
-                      </div>
-                  </div>
-              </div>
-              <!--/.Slides-->
-              <!--Controls-->
-              <a class="carousel-control-prev" href="#carousel-home" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carousel-home" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-              </a>
-              <!--/.Controls-->
+                <!--/.Carousel Wrapper-->
+            </div>
           </div>
-        <!--/.Carousel Wrapper-->
         </div>
         <div class="col-4 news">
-          <div class="card card-cascade narrower card-news">
+          <div class="card card-cascade narrower card-news" >
             <div class="view gradient-card-header tile-title">
-                <p class="tile-title-text">NEWSFEED</p>
+                <p class="tile-title-text">
+                  <a class="btn-floating btn-sm" href="#newscarowrap" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                  NEWSFEED
+                  <a class="btn-floating btn-sm" href="#newscarowrap" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </p>
             </div>
-            
             <div class="card-body">
-              <div class="row card news-row animate-right nr-1">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>1</h3>
-                    <h6>FEB</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+            <div id="newscarowrap" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval="6000">
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                      <div class="row card news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>1</h3>
+                            <h6>FEB</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="row card news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>2</h3>
+                            <h6>FEB</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="row card news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>3</h3>
+                            <h6>FEB</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="row card news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>4</h3>
+                            <h6>FEB</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>5</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>6</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>7</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>8</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>9</h3>
+                            <h6>NOV</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>10</h3>
+                            <h6>NOV</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>11</h3>
+                            <h6>NOV</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>12</h3>
+                            <h6>NOV</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>13</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>14</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>15</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                      <div class="card row news-row anim2">
+                        <div class="col date-col">
+                          <div align="center" class="date-div">
+                            <strong class="white-text">
+                            <h3>16</h3>
+                            <h6>JAN</h6>
+                            </strong>
+                          </div>
+                          <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-              </div>
-              <div class="row card news-row animate-right nr-2">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>2</h3>
-                    <h6>FEB</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="row card news-row animate-right nr-3">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>3</h3>
-                    <h6>FEB</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="row card news-row animate-right nr-4">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>4</h3>
-                    <h6>FEB</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-
-              <div class="card row news-row animate-right nr-1">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>5</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-2">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>6</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-3">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>7</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-4">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>8</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-
-              <div class="card row news-row animate-right nr-1">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>9</h3>
-                    <h6>NOV</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-2">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>10</h3>
-                    <h6>NOV</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-3">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>11</h3>
-                    <h6>NOV</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-4">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>12</h3>
-                    <h6>NOV</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text">Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-
-              <div class="card row news-row animate-right nr-1">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>13</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-2">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>14</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-3">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>15</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-              <div class="card row news-row animate-right nr-4">
-                <div class="col date-col">
-                  <div align="center" class="date-div">
-                    <strong class="white-text">
-                    <h3>16</h3>
-                    <h6>JAN</h6>
-                    </strong>
-                  </div>
-                  <div class="black-text" >Meeting due with director,to be held in senate room at 5:00 PM ,WebTeam is welcomed.Be there!Be there!Be there!</div>
-                </div>
-              </div>
-
+                <!--/.Slides-->
+                <ol class="carousel-indicators newsc-indi">
+                    <li data-target="#newscarowrap" data-slide-to="0" class="active"></li>
+                    <li data-target="#newscarowrap" data-slide-to="1"></li>
+                    <li data-target="#newscarowrap" data-slide-to="2"></li>
+                    <li data-target="#newscarowrap" data-slide-to="3"></li>
+                </ol>
+            </div>
+            <!--/.Carousel Wrapper-->
             </div>
           </div>
         </div>
@@ -300,73 +312,10 @@
       <!-- FOOTER -->
       <div id="footer"></div>
       <!-- FOOTER -->
-
-      <script>
-      var myIndex1 = 0;
-      carousel1();
-
-      function carousel1() {
-          var i1;
-          var x1 = document.getElementsByClassName("nr-1");
-          for (i1 = 0; i1 < x1.length; i1++) {
-            x1[i1].style.display = "none";  
-          }
-          myIndex1++;
-          if (myIndex1 > x1.length) {myIndex1 = 1}    
-          x1[myIndex1-1].style.display = "block";  
-          setTimeout(carousel1, 6001);    
-      }
-
-      var myIndex2 = 0;
-      carousel2();
-
-      function carousel2() {
-          var i2;
-          var x2 = document.getElementsByClassName("nr-2");
-          for (i2 = 0; i2 < x2.length; i2++) {
-            x2[i2].style.display = "none";  
-          }
-          myIndex2++;
-          if (myIndex2 > x2.length) {myIndex2 = 1}    
-          x2[myIndex2-1].style.display = "block";  
-          setTimeout(carousel2, 6002);    
-      }
-
-      var myIndex3 = 0;
-      carousel3();
-
-      function carousel3() {
-          var i3;
-          var x3 = document.getElementsByClassName("nr-3");
-          for (i3 = 0; i3 < x3.length; i3++) {
-            x3[i3].style.display = "none";  
-          }
-          myIndex3++;
-          if (myIndex3 > x3.length) {myIndex3 = 1}    
-          x3[myIndex3-1].style.display = "block";  
-          setTimeout(carousel3, 6003);    
-      }
-
-      var myIndex4 = 0;
-      carousel4();
-
-      function carousel4() {
-          var i4;
-          var x4 = document.getElementsByClassName("nr-4");
-          for (i4 = 0; i4 < x4.length; i4++) {
-            x4[i4].style.display = "none";  
-          }
-          myIndex4++;
-          if (myIndex4 > x4.length) {myIndex4 = 1}    
-          x4[myIndex4-1].style.display = "block";  
-          setTimeout(carousel4, 6004);    
-      }
-      </script>
-
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.5/js/mdb.min.js"></script>
+    
       <script src="static/js/index.js"></script>
     </body>
 </html>
