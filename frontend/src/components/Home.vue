@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="row newscaro">
+      <div class="col caro">
+        <Carousel :slides="slides"></Carousel>
+      </div>
+    </div>
     <div class="page-content-container l0">
       <div class="all-tiles">
         <!-- Big row of sections -->
@@ -40,11 +45,17 @@
 import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
+import Carousel from './Carousel';
+
 export default {
   name: 'Home',
+  components: {
+    'Carousel': Carousel
+  },
   data () {
     return {
       results: {},
+      slides: [],
       errors: []
     }
   },
