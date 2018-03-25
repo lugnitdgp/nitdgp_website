@@ -36,10 +36,10 @@
       </div>
     </nav>
     <nav class="mb-1 navbar fixed-top navbar-expand-sm" id="top-nav-wrap">
-      <span align="left" class="top-nav-container-left">
+      <span class="top-nav-container-left">
         <a href="http://172.16.20.3/nitdgp_website" class="black-text"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
       </span>
-      <span align="right" class="top-nav-container-right">
+      <span class="top-nav-container-right">
         <a href="#" class="top-nav-link">Old website</a>
         <a href="#" class="top-nav-link">A+/A-</a>
         <a href="#" class="top-nav-link">A|अ</a>
