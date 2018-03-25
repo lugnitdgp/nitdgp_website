@@ -4,8 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import './styles/mdb-theme-min.css'
 import './styles/style.css'
-import './style/mdb-theme-min.css'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
