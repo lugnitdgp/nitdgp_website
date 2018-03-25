@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Reports from '@/components/information/Reports'
 import Library from '@/components/facilities/Library'
 import Admission from '@/components/academics/Admission'
+import Calendar from '@/components/academics/Calendar'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/academics/admission',
       name: 'Admission',
       component: Admission
+    },
+    {
+      path: '/academics/calendar',
+      name: 'Calendar',
+      component: Calendar
     }
   ]
 })
