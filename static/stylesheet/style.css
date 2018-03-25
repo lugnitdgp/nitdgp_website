@@ -113,7 +113,7 @@ body {
   padding-bottom:10px;
 }
 .l0{ /*container*/
-  min-height: 50px;padding-top: 4em;padding-bottom: 0.1em;padding-right: 5%;padding-left: 5%;
+  min-height: 50px;padding-top: 1em;padding-bottom: 0.1em;padding-right: 5%;padding-left: 5%;
 }
 .l1{
   min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 5%;padding-left: 5%;
@@ -312,7 +312,7 @@ hr.style4:after {
   margin-left: 2em;margin-right: 2em;
 }
 .l2-idep .card-body .down-content .table-wrapper-2{
-  display: block;max-height: 2000px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
+  display: block;max-height: 2500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 /*.l2-idep .card-body .down-content #li5 .card{
   margin-top: 15px;
@@ -402,7 +402,7 @@ hr.style4:after {
   margin-top: -1em;
 }
 .l3-fac .card-body .down-content .table-wrapper-2{
-  display: block;max-height: 2000px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
+  display: block;max-height: 2500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .l3-fac .card-body .down-content #li2 th{
   background-color: #E0E0E0;
@@ -493,7 +493,30 @@ hr.style4:after {
   padding-left: 5px;
   padding-right: 5px;
 }
-
+.faci .img-wrap{
+  max-width: 100%;max-height:100%;margin: 0 auto;height: 200px;width: 500px;
+}
+.faci .img-wrap img{
+  max-height: 100%;max-width: 100%;
+}
+.faci font{
+  font-family:Calibri; font-size:15px; color:#000;
+}
+.l1 .outr .tbl{
+  margin-left: 20px;margin-right: 40px;width: 70%;margin: 0px auto;float: none;
+}
+.l1.outr .heading2{
+  margin-left: 150px;
+}
+.l1 .outr .mt20{
+  margin-top: 20px;
+}
+.l1 .outr h2{
+  text-align: center;
+}
+.l1 .outr .table-wrapper3{
+  display: block;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
+}
 .l1-dep .card-body{
   margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
@@ -619,7 +642,7 @@ hr.style4:after {
   background-color: #ECEFF1;
 }
 .newscaro .card-news .card-body .newsc-indi li{
-  background-color: #3F51B5;
+  background-color: #001333;
 }
 .newscaro .card-news .tile-title-text .btn-sm{
   background-color: #ECEFF1!important;
@@ -632,11 +655,12 @@ hr.style4:after {
 }
 .newscaro .card-news {
   height: 400px;padding-top: 1%;
-  background: linear-gradient(#3F51B5,#001333);
+  background: linear-gradient(#001333,#3F51B5);
 }
 /* card-title color*/
 .newscaro .card-news div.tile-title{
   background: linear-gradient(to right,#ECEFF1);
+  border: solid #ECEFF1 1px;
 }
 /* small-tile bg-color*/
 .newscaro .card-news div.tile-small{
@@ -649,7 +673,7 @@ hr.style4:after {
 
 .newscaro .card-pic {
   max-height: 400px;padding-top: 1%;
-  background: linear-gradient(#3F51B5,#001333);
+  background: linear-gradient(#001333,#3F51B5);
 }
 
 /*/.all-cards*/
