@@ -85,9 +85,7 @@ class PeopleSerializer(serializers.ModelSerializer):
               'last_name': "SUBSTR(name, 2)"})
         faculty_list = faculty_list.order_by('last_name', 'first_name')
         data = FacultySerializer(faculty_list, many=True, context=self.context).data
-        # departmental_role = Roles.objects.filter(type='Departmental').first()
-        # faculty_list = departmental_role.facultyroles_set.filter(faculty__department=self.context['obj'].id)
-        # data = FacultyRolesSerializer(faculty_list, many=True, context=self.context).data
+
         return data
 
     class Meta:

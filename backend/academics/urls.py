@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^academics/document$', DocumentViewSet.as_view(), name='view-document'),
     url(r'^academics/regulations$', RegulationViewSet.as_view(), name='view-regulation'),
     url(r'^academics/examination$', ExaminationViewSet.as_view(), name='view-examination'),
+    url(r'^academics/registration$', RegistrationViewSet.as_view(), name='view-registration'),
 
 ]

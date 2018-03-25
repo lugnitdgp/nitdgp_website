@@ -30,6 +30,10 @@ class RegulationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
 
+class RegistrationModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file']
+
+
 admin.site.register(Notice, NoticeModelAdmin)
 admin.site.register(Calendar)
 admin.site.register(AdmissionDegree, AdmissionDegreeModelAdmin)
@@ -38,3 +42,4 @@ admin.site.register(Admission, AdmissionModelAdmin)
 admin.site.register(Examination, ExaminationModelAdmin)
 admin.site.register(Document, DocumentModelAdmin)
 admin.site.register(Regulation, RegulationModelAdmin)
+admin.site.register(Registration, RegistrationModelAdmin)

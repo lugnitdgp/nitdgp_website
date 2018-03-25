@@ -126,3 +126,14 @@ class Regulation(BaseModel):
 
     def _file(self):
         return self.file
+
+
+class Registration(BaseModel):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='academics/registrations/%Y')
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
