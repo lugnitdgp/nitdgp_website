@@ -10,6 +10,14 @@ body {
   /*background: linear-gradient(45deg,#ECEFF1,#00ACC1,#311B92);*/
   /*background-color: #FF6F00;*/
 }
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.l0 .big-col .row{
+  margin-left: -15px;
+  margin-right: -15px;
+}
 #navbar-link {
   font-size: 90%;
 }
@@ -185,6 +193,10 @@ hr.style4:after {
   }
   .l0 .fa-2x{
     font-size: 120%;
+  }
+  .col{
+    padding-left: 5px!important;
+    padding-right: 5px!important;
   }
   .newscaro .caro{
     min-width: 100%;
@@ -584,6 +596,8 @@ hr.style4:after {
 .newscaro{
   max-width: 100%;
   margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .newscaro .caro{
   padding: 0px;
