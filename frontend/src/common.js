@@ -1,4 +1,7 @@
-const crypto = require('crypto')
+import crypto from 'crypto'
+
+var baseURL = "http://localhost:8080"
+var backURL = "http://172.16.20.3:8000"
 
 function prettify (str) {
   let s = ""
@@ -27,9 +30,16 @@ function getUniqueId (prefix, length) {
   return id
 }
 
+function genBackendURL (str) {
+  return backURL + "/" + str + "?format=json"
+}
+
 
 export {
+  backURL,
+  baseURL,
   prettify,
   randomValue,
-  getUniqueId
+  getUniqueId,
+  genBackendURL
 }
