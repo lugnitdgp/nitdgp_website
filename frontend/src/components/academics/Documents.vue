@@ -1,0 +1,47 @@
+<template>
+  <links-page>
+    <card title="Academic Documents">
+      <div v-for="(links, doctype) in docs">
+        <h3>{{ doctype }}</h3>
+        <ul>
+          <li v-for="link in links">
+            <a :href="backURL + link.filename" target="new">
+              {{ link.title }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </card>
+  </links-page>
+</template>
+
+<script>
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import axios from 'axios'
+import { backURL, genBackendURL } from '@/common.js'
+
+export default {
+  name: 'Documents',
+  data () {
+    return {
+      docs: {},
+      backURL: backURL
+    }
+  },
+  created () {
+    axios.get(genBackendURL('academics/document'))
+         .then(response => {
+           this.docs = response.data.documents
+         })
+         .catch(e => {
+           this.errors.push(e)
+           console.log(errors)
+         })
+  },
+  components: {
+    LinksPage,
+    Card
+  }
+}
+</script>
