@@ -453,6 +453,12 @@ hr.style4:after {
 .l3-fac .tile-title{
   height: 1px;
 }
+.notices .card-body .nav-tabs{
+  background-color: #001333;
+}
+.notices .card-body .nav-item .active{
+  background-color: #ECEFF1;color: #001333;
+}
 .page-type-links .card-header{
   font-weight: bold;
   font-size: 110%;
