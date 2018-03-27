@@ -9,6 +9,7 @@ import Registrations from '@/components/academics/Registrations'
 import Departments from '@/components/academics/Departments'
 import Documents from '@/components/academics/Documents'
 import Regulations from '@/components/academics/Regulations'
+import Convocation from '@/components/academics/Convocation'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/academics/regulations',
       name: 'Regulations',
       component: Regulations
+    },
+    {
+      path: '/academics/convocation',
+      name: 'Convocation',
+      component: Convocation
     }
   ]
 })
