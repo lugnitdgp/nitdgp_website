@@ -31,11 +31,15 @@ export default {
     }
   },
   created () {
+    let f = false
     axios.get(genBackendURL('facilities/library'))
          .then(response => {
            this.details = response.data.results[0]
            if (response.data.results.length > 1)
              console.log("Error: More than one Library found")
+           if (f)
+             this.$emit('hideloader', true)
+           f = true
          })
          .catch(e => {
            this.errors.push(e)
@@ -44,6 +48,9 @@ export default {
     axios.get(genBackendURL('facilities/eresource'))
          .then(response => {
            this.eresources = response.data.results
+           if (f)
+             this.$emit('hideloader', true)
+           f = true
          })
          .catch(e => {
            this.errors.push(e)

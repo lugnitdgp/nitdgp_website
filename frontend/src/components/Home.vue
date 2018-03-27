@@ -79,6 +79,7 @@ export default {
              }
            })
            this.results = section_rows
+           this.$emit('hideloader', true)
          })
          .catch(e => {
            this.errors.push(e)

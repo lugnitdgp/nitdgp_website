@@ -28,6 +28,7 @@ export default {
     axios.get(genBackendURL("academics/registration"))
          .then(response => {
            this.registrations = response.data.results
+           this.$emit('hideloader', true)
          })
          .catch(e => {
            this.errors.push(e)

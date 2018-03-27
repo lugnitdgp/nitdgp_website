@@ -63,6 +63,7 @@ export default {
                row = []
              }
            }
+           this.$emit('hideloader', true)
          })
          .catch(e => {
            console.log(e)

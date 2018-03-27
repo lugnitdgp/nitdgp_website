@@ -38,6 +38,7 @@ export default {
          .then(response => {
            console.log("Axios(GET[admission]): Success")
            this.results = response.data.admission
+           this.$emit('hideloader', true)
          })
          .catch(e => {
            this.errors.push(e)

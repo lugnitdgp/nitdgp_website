@@ -33,6 +33,7 @@ export default {
     axios.get(genBackendURL('academics/document'))
          .then(response => {
            this.docs = response.data.documents
+           this.$emit('hideloader', true)
          })
          .catch(e => {
            this.errors.push(e)

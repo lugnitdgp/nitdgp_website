@@ -29,6 +29,11 @@ export default {
          .then(response => {
            this.calendars = response.data.results
            console.log(response.data)
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           this.errors.push(e)
+           console.log("Axios(GET[admission]): Error: " + e)
          })
   },
   components: {
