@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <div class="loader" v-show="loader">
-      <span class="loader-dot loader-dot-one"></span>
-      <span class="loader-dot loader-dot-two"></span>
-      <span class="loader-dot loader-dot-three"></span>
+      <span class="loader-dot"></span>
     </div>
     <Header/>
     <router-view @hideloader="hideLoader" />
@@ -24,7 +22,6 @@ export default {
   },
   methods: {
     hideLoader (val) {
-      console.log("Recieved")
       if (typeof val == 'boolean')
         this.loader = !val
       else

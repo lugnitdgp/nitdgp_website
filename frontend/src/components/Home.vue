@@ -5,7 +5,7 @@
         <Carousel :slides="slides"></Carousel>
       </div>
       <div class="col-4 news">
-        <Newsfeed></Newsfeed>
+        <Newsfeed :notices="notices"></Newsfeed>
       </div>
     </div>
     <div class="page-content-container l0">
@@ -61,13 +61,15 @@ export default {
     return {
       results: {},
       slides: [],
+      notices: [],
       errors: []
     }
   },
   created() {
+    let count_axios = 0
     axios.get(genBackendURL('dashboard'))
          .then(response => {
-           this.results = response.data.results;
+           this.results = response.data.results
            let x = 0, y = 0
            let section_rows = [[]]
            // Loop over all the sections
@@ -95,7 +97,54 @@ export default {
              }
            })
            this.results = section_rows
-           this.$emit('hideloader', true)
+           if (count_axios == 2) {
+             this.$emit('hideloader', true)
+           }
+           count_axios++
+         })
+         .catch(e => {
+           this.errors.push(e)
+           console.log(errors)
+         })
+    axios.get(genBackendURL('dashboard/carousel'))
+         .then(response => {
+           this.slides = response.data.results
+           if (count_axios == 2) {
+             this.$emit('hideloader', true)
+           }
+           count_axios++
+         })
+         .catch(e => {
+           this.errors.push(e)
+           console.log(errors)
+         })
+    axios.get(genBackendURL('academics/notices'))
+         .then(response => {
+           this.notices = response.data.results
+           const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July",
+                           "Aug", "Sept", "Oct", "Nov", "Dec"]
+           let notices = []
+           let news_slide = []
+           this.notices.map((news,index) => {
+             news.month = months[parseInt(news.date.split('-')[1])]
+                          .toUpperCase()
+             news.date = parseInt(news.date.split('-')[2])
+             news_slide.push(news)
+             if ((index+1) % 4 == 0) {
+               notices.push(news_slide)
+               news_slide = []
+               this.slides_count++
+             }
+           })
+           if (news_slide.length) {
+             notices.push(news_slide)
+             this.slides_count++
+           }
+           this.notices = notices
+           if (count_axios == 2) {
+             this.$emit('hideloader', true)
+           }
+           count_axios++
          })
          .catch(e => {
            this.errors.push(e)
