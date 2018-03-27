@@ -31,7 +31,11 @@ function getUniqueId (prefix, length) {
 }
 
 function genBackendURL (str) {
-  return backURL + "/" + str + "?format=json"
+  if (str[0] != "/")
+    str = "/" + str
+  if (str[str.length - 1] != "/")
+    str = str + "/"
+  return backURL + str + "?format=json"
 }
 
 

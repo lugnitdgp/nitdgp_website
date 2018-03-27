@@ -33,6 +33,7 @@
 
 <script>
 import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: 'Departments',
@@ -42,7 +43,7 @@ export default {
     }
   },
   created () {
-    axios.get('http://172.16.20.3:8000/department?format=json')
+    axios.get(genBackendURL('department'))
          .then(response => {
            let res = response.data.results
            let j = 0, i = 0

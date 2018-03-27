@@ -20,7 +20,7 @@
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
 import axios from 'axios'
-import { prettify } from '@/common.js'
+import { genBackendURL, prettify } from '@/common.js'
 
 export default {
   name: "Library",
@@ -31,7 +31,7 @@ export default {
     }
   },
   created () {
-    axios.get('http://localhost:8000/facilities/library')
+    axios.get(genBackendURL('facilities/library'))
          .then(response => {
            this.details = response.data.results[0]
            if (response.data.results.length > 1)
@@ -41,7 +41,7 @@ export default {
            this.errors.push(e)
            console.log(errors)
          })
-    axios.get('http://localhost:8000/facilities/eresource')
+    axios.get(genBackendURL('facilities/eresource'))
          .then(response => {
            this.eresources = response.data.results
          })

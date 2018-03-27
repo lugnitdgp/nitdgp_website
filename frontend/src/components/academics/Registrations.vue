@@ -25,7 +25,7 @@ export default {
     }
   },
   created () {
-    axios.get("http://172.16.20.3:8000/academics/registration?format=json")
+    axios.get(genBackendURL("academics/registration"))
          .then(response => {
            this.registrations = response.data.results
          })

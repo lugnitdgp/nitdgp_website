@@ -37,7 +37,8 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: 'Home',
@@ -48,7 +49,7 @@ export default {
     }
   },
   created() {
-    axios.get('http://172.16.20.3:8000/dashboard')
+    axios.get(genBackendURL('dashboard'))
          .then(response => {
            this.results = response.data.results;
            let x = 0, y = 0
@@ -83,6 +84,9 @@ export default {
            this.errors.push(e)
            console.log(errors)
          })
+  },
+  methods: {
+    genBackendURL
   }
 }
 </script>

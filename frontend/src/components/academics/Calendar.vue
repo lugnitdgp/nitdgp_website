@@ -25,7 +25,7 @@ export default {
     }
   },
   created () {
-    axios.get("http://172.16.20.3:8000/academics/calendar?format=json")
+    axios.get(genBackendURL("academics/calendar"))
          .then(response => {
            this.calendars = response.data.results
            console.log(response.data)

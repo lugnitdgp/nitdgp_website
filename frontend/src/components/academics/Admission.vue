@@ -34,7 +34,7 @@ export default {
     }
   },
   created: function () {
-    axios.get('http://172.16.20.3:8000/academics/admission?format=json')
+    axios.get(genBackendURL('academics/admission'))
          .then(response => {
            console.log("Axios(GET[admission]): Success")
            this.results = response.data.admission
