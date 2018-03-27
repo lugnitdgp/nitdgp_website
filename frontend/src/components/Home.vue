@@ -1,8 +1,11 @@
 <template>
   <div>
     <div class="row newscaro">
-      <div class="col caro">
+      <div class="col-8 caro">
         <Carousel :slides="slides"></Carousel>
+      </div>
+      <div class="col-4 news">
+        <Newsfeed></Newsfeed>
       </div>
     </div>
     <div class="page-content-container l0">
@@ -46,11 +49,13 @@ import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
 import Carousel from './Carousel';
+import Newsfeed from './Newsfeed';
 
 export default {
   name: 'Home',
   components: {
-    'Carousel': Carousel
+    'Carousel': Carousel,
+    'Newsfeed': Newsfeed
   },
   data () {
     return {
