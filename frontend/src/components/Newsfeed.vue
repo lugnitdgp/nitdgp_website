@@ -1,11 +1,11 @@
 <template>
   <div class="card card-cascade narrower card-news" >
     <div class="view gradient-card-header tile-title">
-      <p class="tile-title-text">
+      <span class="tile-title-text">
         <a class="btn-floating btn-sm" href="#newscarowrap" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
         NEWSFEED
         <a class="btn-floating btn-sm" href="#newscarowrap" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-      </p>
+      </span>
     </div>
     <div class="card-body">
       <div id="newscarowrap" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval="6000">
@@ -26,9 +26,11 @@
           </div>
         </div>
         <!-- End of Slides-->
-        <ol class="carousel-indicators newsc-indi">
-          <li v-for="(slides,index) in notices" data-target="#newscarowrap" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
-        </ol>
+        <div class="indiwrap">
+          <ol class="carousel-indicators newsc-indi">
+            <li v-for="(slides,index) in notices" data-target="#newscarowrap" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>

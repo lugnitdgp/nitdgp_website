@@ -658,6 +658,9 @@ hr.style4:after {
 .newscaro .card-news .card-body{
   margin-top: -1em!important;
 }
+.newscaro .card-news .card-body .indiwrap{
+  position: relative;margin-top: -10px;
+}
 .newscaro .card-news .card-body .newsc-indi .active{
   background-color: #ECEFF1;
 }
@@ -672,6 +675,10 @@ hr.style4:after {
 }
 .newscaro .card-news .tile-title{
   background-color: #001333;
+  height: 60px!important;padding-top: 0px!important;padding-bottom: 0px!important;
+}
+.newscaro #newscarowrap{
+  height: 200px!important;
 }
 .newscaro .card-news {
   height: 400px;padding-top: 1%;
@@ -689,7 +696,6 @@ hr.style4:after {
 .newscaro .card-news div.tile-content{
   color: #ffffff;
 }
-
 .newscaro .card-pic {
   max-height: 400px;padding-top: 1%;
   background: linear-gradient(#001333,#3F51B5);
