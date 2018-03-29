@@ -2,8 +2,12 @@ from django.contrib import admin
 from academics.models import *
 
 
+class NoticeTypeModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__']
+
+
 class NoticeModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_file', '_date']
+    list_display = ['__str__', '_notice_type', '_file', '_date']
 
 
 class AdmissionDegreeModelAdmin(admin.ModelAdmin):
@@ -34,6 +38,7 @@ class RegistrationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
 
+admin.site.register(NoticeType, NoticeTypeModelAdmin)
 admin.site.register(Notice, NoticeModelAdmin)
 admin.site.register(Calendar)
 admin.site.register(AdmissionDegree, AdmissionDegreeModelAdmin)

@@ -3,8 +3,16 @@ from base.models import BaseModel
 import datetime
 
 
+class NoticeType(BaseModel):
+    notice_type = models.CharField(max_length=255, default="general")
+
+    def __str__(self):
+        return self.notice_type
+
+
 class Notice(BaseModel):
     title = models.CharField(max_length=512)
+    notice_type = models.ForeignKey(NoticeType, on_delete=models.CASCADE)
     file = models.FileField(upload_to='academics/notices/%Y/%m/%d')
     date = models.DateField()
 
@@ -16,6 +24,9 @@ class Notice(BaseModel):
 
     def _date(self):
         return self.date
+
+    def _notice_type(self):
+        return self.notice_type.notice_type
 
     class Meta:
         ordering = ('-date',)

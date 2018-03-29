@@ -10,6 +10,16 @@ class NoticeSerializer(serializers.ModelSerializer):
         fields = ('title', 'file', 'date')
 
 
+class NoticeMainSerializer(serializers.ModelSerializer):
+    """Returns all the notices"""
+
+    notices = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Notice
+        fields = ('notices', )
+
+
 class CalendarSerializer(serializers.ModelSerializer):
 
     class Meta:

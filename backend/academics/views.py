@@ -2,10 +2,23 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from academics.serializers import *
 
 
-class NoticeViewSet(ListAPIView):
+class NoticeViewSet(RetrieveAPIView):
 
     queryset = Notice.objects.all()
+    serializer_class = NoticeMainSerializer
+
+    def get_object(self):
+        return self.get_queryset()
+
+
+class NoticeCustomViewSet(ListAPIView):
+
     serializer_class = NoticeSerializer
+
+    def get_queryset(self):
+        ntype = self.kwargs['ntype']
+        ntype = NoticeType.objects.get(notice_type=ntype)
+        return Notice.objects.filter(notice_type=ntype).order_by('-date')
 
 
 class CalendarViewSet(ListAPIView):

@@ -7,6 +7,7 @@ app_name = 'academics'
 urlpatterns = [
 
     url(r'^academics/notices/$', NoticeViewSet.as_view(), name='view-notices'),
+    url(r'^academics/notices/(?P<ntype>[\w]+)/$', NoticeCustomViewSet.as_view(), name='view-notices-custom'),
     url(r'^academics/calendar/$', CalendarViewSet.as_view(), name='view-calendar'),
     url(r'^academics/admission/$', AdmissionViewSet.as_view(), name='view-admission'),
     url(r'^academics/document/$', DocumentViewSet.as_view(), name='view-document'),

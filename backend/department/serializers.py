@@ -126,7 +126,7 @@ class MainSerializer(serializers.ModelSerializer):
             for semester in i.courses_set.values('semester').order_by('semester'):
 
                 for j in result[i.degree.name]:
-                    
+
                     if j['programme_title'] == i.title:
 
                         j[semester['semester']] = CourseSerializer(
