@@ -12,7 +12,7 @@
         Hospital situated at the other end of the city, or some Advanced Medical Centre.<br><br>
         <strong>Mediacl Officer</strong>
         <p>
-          <strong>Dr. B. K. Sarkar ( MBBS )</strong><br>                 
+          <strong>Dr. B. K. Sarkar ( MBBS )</strong><br>
           Phone: +91-343-2757118<br>
           Mobile: +91-9434788075<br>
           Email: b.sarkar@admin.nitdgp.ac.in<br>
@@ -27,10 +27,10 @@
 </template>
 
 <script>
-	export default {
-		name: 'Mu',
-		created () {
-			this.$emit('hideloader', true)
-		}
-	}
+export default {
+  name: 'Mu',
+  created () {
+    this.$emit('hideloader', true)
+  }
+}
 </script>

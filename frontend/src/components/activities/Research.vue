@@ -1,41 +1,41 @@
 <template>
-	<div class="l1 page-type-links">
-		<!-- CONTENT -->
-		<div class="card">
-		  <a class="card-header white-text">Research Facilities and Centers</a>
-		  <div class="card-body">
-		      <div class="card-text">
-		        <ul>
-		          <li><a target="new" href="http://nitdgp.ac.in/PHD15/Research%20Areas%20of%20Faculty%20Members.docx">Major Research Areas</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/research/helium_geothermal/about.php">GEOTHERMAL HELIUM EARTHQUAKE PRECURSOR</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/all_pdf16/Brics%20Webportal.pdf">BRICS Programme</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/madclab">Multi-Agent and Distributed Computing Lab (MADClab)</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/MCN-RG/mcn-rg.html">Mobile Computing and Networking Research Group</a></li>
-		        </ul>
-		      </div>
-		  </div>
-		</div>
-		<div class="card">
-		  <a class="card-header white-text">Students' Intenrational Research</a>
-		  <div class="card-body">
-		      <div class="card-text">
-		        <ul>
-		          <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20Intenrational%20Research%20Report%20vol%205%202012-13.pdf">Report vol 5 2012-13</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%204%202011-12.pdf">Report vol 4 2011-12</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%203%202010-11.pdf">Report vol 3 2010-11</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%202%202009-10.pdf">Report vol 2 2009-10</a></li>
-		          <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%201%202008-09.pdf">Report vol 1 2008-09</a></li>
-		        </ul>
-		      </div>
-		  </div>
-		</div>
-	</div>	
+  <div class="l1 page-type-links">
+    <!-- CONTENT -->
+    <div class="card">
+      <a class="card-header white-text">Research Facilities and Centers</a>
+      <div class="card-body">
+	<div class="card-text">
+	  <ul>
+	    <li><a target="new" href="http://nitdgp.ac.in/PHD15/Research%20Areas%20of%20Faculty%20Members.docx">Major Research Areas</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/research/helium_geothermal/about.php">GEOTHERMAL HELIUM EARTHQUAKE PRECURSOR</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/all_pdf16/Brics%20Webportal.pdf">BRICS Programme</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/madclab">Multi-Agent and Distributed Computing Lab (MADClab)</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/MCN-RG/mcn-rg.html">Mobile Computing and Networking Research Group</a></li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+    <div class="card">
+      <a class="card-header white-text">Students' Intenrational Research</a>
+      <div class="card-body">
+	<div class="card-text">
+	  <ul>
+	    <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20Intenrational%20Research%20Report%20vol%205%202012-13.pdf">Report vol 5 2012-13</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%204%202011-12.pdf">Report vol 4 2011-12</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%203%202010-11.pdf">Report vol 3 2010-11</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%202%202009-10.pdf">Report vol 2 2009-10</a></li>
+	    <li><a target="new" href="http://nitdgp.ac.in/all_pdf14/Students%27%20International%20Research%20Report%20vol%201%202008-09.pdf">Report vol 1 2008-09</a></li>
+	  </ul>
+	</div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-	export default {
-		name: 'Research',
-		created () {
-			this.$emit('hideloader', true)
-		}
-	}
+export default {
+  name: 'Research',
+  created () {
+    this.$emit('hideloader', true)
+  }
+}
 </script>

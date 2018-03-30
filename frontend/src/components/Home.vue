@@ -61,8 +61,7 @@ export default {
     return {
       results: {},
       slides: [],
-      notices: [],
-      errors: []
+      notices: []
     }
   },
   created() {
@@ -103,8 +102,7 @@ export default {
            count_axios++
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log(errors)
+           console.log(e)
          })
     axios.get(genBackendURL('dashboard/carousel'))
          .then(response => {
@@ -115,10 +113,9 @@ export default {
            count_axios++
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log(errors)
+           console.log(e)
          })
-    axios.get(genBackendURL('academics/notices'))
+    axios.get(genBackendURL('academics/notices/general'))
          .then(response => {
            this.notices = response.data.results
            const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July",
@@ -147,8 +144,7 @@ export default {
            count_axios++
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log(errors)
+           console.log(e)
          })
   },
   methods: {

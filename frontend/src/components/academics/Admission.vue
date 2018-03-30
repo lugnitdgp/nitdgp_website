@@ -5,7 +5,7 @@
         <ul class="pg_contents">
           <li v-for="course in courses" class="bot-margin no-style-list">
             <h4>{{ key = Object.keys(course)[0] }}</h4>
-            <ul>
+            y     <ul>
               <li v-for="link in course[key]">
                 <a target="new" :href="link.file">
                   {{ link.title }}
@@ -41,7 +41,6 @@ export default {
            this.$emit('hideloader', true)
          })
          .catch(e => {
-           this.errors.push(e)
            console.log("Axios(GET[admission]): Error: " + e)
          })
   },

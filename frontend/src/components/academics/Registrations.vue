@@ -31,8 +31,7 @@ export default {
            this.$emit('hideloader', true)
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log(errors)
+           console.log(e)
          })
   },
   components: {

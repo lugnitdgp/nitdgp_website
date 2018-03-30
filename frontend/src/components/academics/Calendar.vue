@@ -33,8 +33,7 @@ export default {
            this.$emit('hideloader', true)
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log("Axios(GET[admission]): Error: " + e)
+           console.log("Axios(GET[calendar]): Error: " + e)
          })
   },
   components: {

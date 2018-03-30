@@ -42,8 +42,7 @@ export default {
            f = true
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log(errors)
+           console.log(e)
          })
     axios.get(genBackendURL('facilities/eresource'))
          .then(response => {
@@ -53,8 +52,7 @@ export default {
            f = true
          })
          .catch(e => {
-           this.errors.push(e)
-           console.log(errors)
+           console.log(e)
          })
   },
   methods: {

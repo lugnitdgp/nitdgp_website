@@ -32,10 +32,10 @@
 	</div>
 </template>
 <script>
-	export default {
-		name: 'Eprashasan',
-		created () {
-			this.$emit('hideloader', true)
-		}
-	}
+export default {
+  name: 'Eprashasan',
+  created () {
+    this.$emit('hideloader', true)
+  }
+}
 </script>
