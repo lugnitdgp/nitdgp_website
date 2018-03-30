@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Reports from '@/components/information/Reports'
+import eprashasan from '@/components/information/eprashasan'
 import Library from '@/components/facilities/Library'
 import Mu from '@/components/facilities/Mu'
 import Ceam from '@/components/facilities/Ceam'
@@ -21,6 +22,11 @@ import Departments from '@/components/academics/Departments'
 import Documents from '@/components/academics/Documents'
 import Regulations from '@/components/academics/Regulations'
 import Convocation from '@/components/academics/Convocation'
+import Outreach from '@/components/activities/Outreach'
+import Research from '@/components/activities/Research'
+import Events from '@/components/activities/Events'
+import Achievements from '@/components/activities/Achievements'
+import Students from '@/components/activities/Students'
 
 Vue.use(Router)
 
@@ -36,6 +42,11 @@ export default new Router({
       path: '/information/reports',
       name: 'Reports',
       component: Reports
+    },
+    {
+      path: '/information/eprashasan',
+      name: 'Eprashasan',
+      component: eprashasan
     },
     {
       path: '/facilities/library',
@@ -131,6 +142,31 @@ export default new Router({
       path: '/academics/convocation',
       name: 'Convocation',
       component: Convocation
+    },
+    {
+      path: '/activities/outreach',
+      name: 'Outreach',
+      component: Outreach
+    },
+    {
+      path: '/activities/research',
+      name: 'Research',
+      component: Research
+    },
+    {
+      path: '/activities/events',
+      name: 'Events',
+      component: Events
+    },
+    {
+      path: '/activities/achievements',
+      name: 'Achievements',
+      component: Achievements
+    },
+    {
+      path: '/activities/students',
+      name: 'Students',
+      component: Students
     }
   ]
 })
