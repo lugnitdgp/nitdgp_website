@@ -17,6 +17,8 @@ import axios from 'axios'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
 
+import { genBackendURL } from '@/common.js'
+
 export default {
   name: 'Registrations',
   data () {

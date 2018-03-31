@@ -16,7 +16,7 @@
 import axios from 'axios'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
-import {genBackendURL} from '@/common.js'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Calendar",
@@ -29,7 +29,6 @@ export default {
     axios.get(genBackendURL("academics/calendar"))
          .then(response => {
            this.calendars = response.data.results
-           console.log(response.data)
            this.$emit('hideloader', true)
          })
          .catch(e => {

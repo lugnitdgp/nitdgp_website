@@ -5,7 +5,7 @@
         <ul class="pg_contents">
           <li v-for="course in courses" class="bot-margin no-style-list">
             <h4>{{ key = Object.keys(course)[0] }}</h4>
-            y     <ul>
+            <ul>
               <li v-for="link in course[key]">
                 <a target="new" :href="link.file">
                   {{ link.title }}
@@ -20,11 +20,13 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 import LinksPage from '@/components/LinksPage'
 import CollapseList from '@/components/CollapseList'
 import CardCollapse from '@/components/CardCollapse'
 
-import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Admission",
@@ -36,7 +38,6 @@ export default {
   created: function () {
     axios.get(genBackendURL('academics/admission'))
          .then(response => {
-           console.log("Axios(GET[admission]): Success")
            this.results = response.data.admission
            this.$emit('hideloader', true)
          })
