@@ -32,7 +32,19 @@ import Canteen from '@/components/facilities/Canteen'
 import Cc from '@/components/facilities/Cc'
 
 import Reports from '@/components/information/Reports'
-import eprashasan from '@/components/information/eprashasan'
+import Eprashasan from '@/components/information/Eprashasan'
+import Accounts from '@/components/information/Accounts'
+import Teqip from '@/components/information/Teqip'
+import Nba from '@/components/information/Nba'
+import Nirf from '@/components/information/Nirf'
+import Rti from '@/components/information/Rti'
+import Grievances from '@/components/information/Grievances'
+import History from '@/components/information/History'
+import Location from '@/components/information/Location'
+import Moreinfo from '@/components/information/Moreinfo'
+import Careers from '@/components/information/Careers'
+import Tenders from '@/components/information/Tenders'
+
 
 
 Vue.use(Router)
@@ -181,7 +193,62 @@ export default new Router({
     {
       path: '/information/eprashasan',
       name: 'Eprashasan',
-      component: eprashasan
+      component: Eprashasan
+    },
+    {
+      path: '/information/accounts',
+      name: 'Accounts',
+      component: Accounts
+    },
+    {
+      path: '/information/teqip',
+      name: 'Teqip',
+      component: Teqip
+    },
+    {
+      path: '/information/nba',
+      name: 'Nba',
+      component: Nba
+    },
+    {
+      path: '/information/nirf',
+      name: 'Nirf',
+      component: Nirf
+    },
+    {
+      path: '/information/rti',
+      name: 'Rti',
+      component: Rti
+    },
+    {
+      path: '/information/grievances',
+      name: 'Grievances',
+      component: Grievances
+    },
+    {
+      path: '/information/history',
+      name: 'History',
+      component: History
+    },
+    {
+      path: '/information/location',
+      name: 'Location',
+      component: Location
+    },
+    {
+      path: '/information/moreinfo',
+      name: 'Moreinfo',
+      component: Moreinfo
+    },
+    {
+      path: '/information/careers',
+      name: 'Careers',
+      component: Careers
+    },
+    {
+      path: '/information/tenders',
+      name: 'Tenders',
+      component: Tenders
     },
 
     // This is meant to be at the last
