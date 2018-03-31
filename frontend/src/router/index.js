@@ -14,6 +14,15 @@ import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
 import Exams from '@/components/academics/Exams'
 
+import Visitor from '@/components/administration/Visitor'
+import Bog from '@/components/administration/Bog'
+import Director from '@/components/administration/Director'
+import Registrar from '@/components/administration/Registrar'
+import Bwcifc from '@/components/administration/Bwcifc'
+import Senate from '@/components/administration/Senate'
+import Deans from '@/components/administration/Deans'
+import Hods from '@/components/administration/Hods'
+
 import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
 import Events from '@/components/activities/Events'
@@ -105,6 +114,48 @@ export default new Router({
       path: '/academics/exams',
       name: 'Exams',
       component: Exams
+    },
+
+    // Administration
+    {
+      path: '/administration/chairperson',
+      name: 'Chairperson',
+      component: Chairperson 
+    },
+    {
+      path: '/administration/bog',
+      name: 'Bog',
+      component: Bog 
+    },
+    {
+      path: '/administration/director',
+      name: 'Director',
+      component: Director 
+    },
+    {
+      path: '/administration/registrar',
+      name: 'Registrar',
+      component: Registrar 
+    },
+    {
+      path: '/administration/bwcifc',
+      name: 'Bwcifc',
+      component: Bwcifc 
+    },
+    {
+      path: '/administration/senate',
+      name: 'Senate',
+      component: Senate 
+    },
+    {
+      path: '/administration/deans',
+      name: 'Deans',
+      component: Deans 
+    },
+    {
+      path: '/administration/hods',
+      name: 'Hods',
+      component: Hods 
     },
 
     // Activities
