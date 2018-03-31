@@ -1,8 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from '@/components/Home'
-import Reports from '@/components/information/Reports'
-import eprashasan from '@/components/information/eprashasan'
+import PageNotFound from '@/components/PageNotFound'
+
+import Admission from '@/components/academics/Admission'
+import Calendar from '@/components/academics/Calendar'
+import Registrations from '@/components/academics/Registrations'
+import Departments from '@/components/academics/Departments'
+import Documents from '@/components/academics/Documents'
+import Regulations from '@/components/academics/Regulations'
+import Convocation from '@/components/academics/Convocation'
+
+import Outreach from '@/components/activities/Outreach'
+import Research from '@/components/activities/Research'
+import Events from '@/components/activities/Events'
+import Achievements from '@/components/activities/Achievements'
+import Students from '@/components/activities/Students'
+
 import Library from '@/components/facilities/Library'
 import Mu from '@/components/facilities/Mu'
 import Ceam from '@/components/facilities/Ceam'
@@ -15,18 +30,10 @@ import Sac from '@/components/facilities/Sac'
 import Hvl from '@/components/facilities/Hvl'
 import Canteen from '@/components/facilities/Canteen'
 import Cc from '@/components/facilities/Cc'
-import Admission from '@/components/academics/Admission'
-import Calendar from '@/components/academics/Calendar'
-import Registrations from '@/components/academics/Registrations'
-import Departments from '@/components/academics/Departments'
-import Documents from '@/components/academics/Documents'
-import Regulations from '@/components/academics/Regulations'
-import Convocation from '@/components/academics/Convocation'
-import Outreach from '@/components/activities/Outreach'
-import Research from '@/components/activities/Research'
-import Events from '@/components/activities/Events'
-import Achievements from '@/components/activities/Achievements'
-import Students from '@/components/activities/Students'
+
+import Reports from '@/components/information/Reports'
+import eprashasan from '@/components/information/eprashasan'
+
 
 Vue.use(Router)
 
@@ -38,16 +45,72 @@ export default new Router({
       name: 'Index',
       component: Home
     },
+
+    // Academics
     {
-      path: '/information/reports',
-      name: 'Reports',
-      component: Reports
+      path: '/academics/admission',
+      name: 'Admission',
+      component: Admission
     },
     {
-      path: '/information/eprashasan',
-      name: 'Eprashasan',
-      component: eprashasan
+      path: '/academics/calendar',
+      name: 'Calendar',
+      component: Calendar
     },
+    {
+      path: '/academics/registrations',
+      name: 'Registrations',
+      component: Registrations
+    },
+    {
+      path: '/academics/departments',
+      name: 'Departments',
+      component: Departments
+    },
+    {
+      path: '/academics/documents',
+      name: 'Documents',
+      component: Documents
+    },
+    {
+      path: '/academics/regulations',
+      name: 'Regulations',
+      component: Regulations
+    },
+    {
+      path: '/academics/convocation',
+      name: 'Convocation',
+      component: Convocation
+    },
+
+    // Activities
+    {
+      path: '/activities/outreach',
+      name: 'Outreach',
+      component: Outreach
+    },
+    {
+      path: '/activities/research',
+      name: 'Research',
+      component: Research
+    },
+    {
+      path: '/activities/events',
+      name: 'Events',
+      component: Events
+    },
+    {
+      path: '/activities/achievements',
+      name: 'Achievements',
+      component: Achievements
+    },
+    {
+      path: '/activities/students',
+      name: 'Students',
+      component: Students
+    },
+
+    // Facilities
     {
       path: '/facilities/library',
       name: 'Library',
@@ -108,65 +171,24 @@ export default new Router({
       name: 'Po',
       component: Po
     },
+
+    // Information
     {
-      path: '/academics/admission',
-      name: 'Admission',
-      component: Admission
+      path: '/information/reports',
+      name: 'Reports',
+      component: Reports
     },
     {
-      path: '/academics/calendar',
-      name: 'Calendar',
-      component: Calendar
+      path: '/information/eprashasan',
+      name: 'Eprashasan',
+      component: eprashasan
     },
+
+    // This is meant to be at the last
     {
-      path: '/academics/registrations',
-      name: 'Registrations',
-      component: Registrations
-    },
-    {
-      path: '/academics/departments',
-      name: 'Departments',
-      component: Departments
-    },
-    {
-      path: '/academics/documents',
-      name: 'Documents',
-      component: Documents
-    },
-    {
-      path: '/academics/regulations',
-      name: 'Regulations',
-      component: Regulations
-    },
-    {
-      path: '/academics/convocation',
-      name: 'Convocation',
-      component: Convocation
-    },
-    {
-      path: '/activities/outreach',
-      name: 'Outreach',
-      component: Outreach
-    },
-    {
-      path: '/activities/research',
-      name: 'Research',
-      component: Research
-    },
-    {
-      path: '/activities/events',
-      name: 'Events',
-      component: Events
-    },
-    {
-      path: '/activities/achievements',
-      name: 'Achievements',
-      component: Achievements
-    },
-    {
-      path: '/activities/students',
-      name: 'Students',
-      component: Students
+      path: '*',
+      name: 'PageNotFound',
+      component: PageNotFound
     }
   ]
 })
