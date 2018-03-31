@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: 'Hostes',
+  name: 'Guest',
   created () {
     this.$emit('hideloader', true)
   }

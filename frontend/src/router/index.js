@@ -11,6 +11,8 @@ import Departments from '@/components/academics/Departments'
 import Documents from '@/components/academics/Documents'
 import Regulations from '@/components/academics/Regulations'
 import Convocation from '@/components/academics/Convocation'
+import Notices from '@/components/academics/Notices'
+import Exams from '@/components/academics/Exams'
 
 import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
@@ -93,6 +95,16 @@ export default new Router({
       path: '/academics/convocation',
       name: 'Convocation',
       component: Convocation
+    },
+    {
+      path: '/academics/notices',
+      name: 'Notices',
+      component: Notices
+    },
+    {
+      path: '/academics/exams',
+      name: 'Exams',
+      component: Exams
     },
 
     // Activities
