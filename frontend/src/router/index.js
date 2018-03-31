@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/components/Home'
+import Department from '@/components/Department'
+import Faculty from '@/components/Faculty'
 import PageNotFound from '@/components/PageNotFound'
 
 import Admission from '@/components/academics/Admission'
@@ -14,7 +16,6 @@ import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
 import Exams from '@/components/academics/Exams'
 
-import Visitor from '@/components/administration/Visitor'
 import Bog from '@/components/administration/Bog'
 import Director from '@/components/administration/Director'
 import Registrar from '@/components/administration/Registrar'
@@ -69,6 +70,18 @@ export default new Router({
       component: Home
     },
 
+    {
+      path: '/department',
+      name: 'Department',
+      component: Department
+    },
+
+    {
+      path: '/faculty',
+      name: 'Faculty',
+      component: Faculty
+    },
+
     // Academics
     {
       path: '/academics/admission',
@@ -120,42 +133,42 @@ export default new Router({
     {
       path: '/administration/chairperson',
       name: 'Chairperson',
-      component: Chairperson 
+      component: Chairperson
     },
     {
       path: '/administration/bog',
       name: 'Bog',
-      component: Bog 
+      component: Bog
     },
     {
       path: '/administration/director',
       name: 'Director',
-      component: Director 
+      component: Director
     },
     {
       path: '/administration/registrar',
       name: 'Registrar',
-      component: Registrar 
+      component: Registrar
     },
     {
       path: '/administration/bwcifc',
       name: 'Bwcifc',
-      component: Bwcifc 
+      component: Bwcifc
     },
     {
       path: '/administration/senate',
       name: 'Senate',
-      component: Senate 
+      component: Senate
     },
     {
       path: '/administration/deans',
       name: 'Deans',
-      component: Deans 
+      component: Deans
     },
     {
       path: '/administration/hods',
       name: 'Hods',
-      component: Hods 
+      component: Hods
     },
 
     // Activities
