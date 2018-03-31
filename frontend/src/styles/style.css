@@ -511,13 +511,13 @@ hr.style4:after {
   padding-left: 5px;
   padding-right: 5px;
 }
-.faci .img-wrap{
+.page-type-links .img-wrap{
   max-width: 100%;max-height:100%;margin: 0 auto;height: 200px;width: 500px;
 }
-.faci .img-wrap img{
+.page-type-links .img-wrap img{
   max-height: 100%;max-width: 100%;
 }
-.faci font{
+.page-type-links font{
   font-family:Calibri; font-size:15px; color:#000;
 }
 .l1 .outr .tbl{

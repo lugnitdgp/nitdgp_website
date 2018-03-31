@@ -1,5 +1,5 @@
 <template>
-  <div class="l1 page-type-links faci">
+  <div class="l1 page-type-links">
     <!-- CONTENT -->
     <div class="card">
       <a class="card-header white-text">State Bank of India(SBI) NIT Durgapur Branch</a>
