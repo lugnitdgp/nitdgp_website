@@ -153,7 +153,7 @@
                     <div class="card-up">
                     </div>
                     <div class="avatar mx-auto">
-                      <img src="./static/img/hodcse.jpg" class="rounded-circle img-fluid">
+                      <img src="/static/img/hodcse.jpg" class="rounded-circle img-fluid">
                     </div>
                     <div class="card-body-in">
                       <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
@@ -215,7 +215,7 @@
                                 <div class="card-up">
                                 </div>
                                 <div class="avatar mx-auto">
-                                  <img src="./static/img/hodcse.jpg" class="rounded-circle img-responsive">
+                                  <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
                                 </div>
                                 <div class="card-body-in">
                                   <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>

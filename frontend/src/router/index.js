@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/components/Home'
-import Department from '@/components/Department'
-import Faculty from '@/components/Faculty'
+//import Department from '@/components/Department'
+//import Faculty from '@/components/Faculty'
 import PageNotFound from '@/components/PageNotFound'
 
 import Admission from '@/components/academics/Admission'
@@ -16,6 +16,7 @@ import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
 import Exams from '@/components/academics/Exams'
 
+import Chairperson from '@/components/administration/Chairperson'
 import Bog from '@/components/administration/Bog'
 import Director from '@/components/administration/Director'
 import Registrar from '@/components/administration/Registrar'
@@ -70,17 +71,17 @@ export default new Router({
       component: Home
     },
 
-    {
-      path: '/department',
-      name: 'Department',
-      component: Department
-    },
+    // {
+    //   path: '/department',
+    //   name: 'Department',
+    //   component: Department
+    // },
 
-    {
-      path: '/faculty',
-      name: 'Faculty',
-      component: Faculty
-    },
+    // {
+    //   path: '/faculty',
+    //   name: 'Faculty',
+    //   component: Faculty
+    // },
 
     // Academics
     {
