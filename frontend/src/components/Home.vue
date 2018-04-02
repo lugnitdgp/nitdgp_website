@@ -118,14 +118,14 @@ export default {
     axios.get(genBackendURL('academics/notices/general'))
          .then(response => {
            this.notices = response.data.results
-           const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July",
-                           "Aug", "Sept", "Oct", "Nov", "Dec"]
+           const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY",
+                           "AUG", "SEPT", "OCT", "NOV", "DEC"]
            let notices = []
            let news_slide = []
            this.notices.map((news,index) => {
-             news.month = months[parseInt(news.date.split('-')[1])]
-                          .toUpperCase()
-             news.date = parseInt(news.date.split('-')[2])
+             let date = new Date(news.date)
+             news.month = months[date.getMonth()]
+             news.date = date.getDate()
              news_slide.push(news)
              if ((index+1) % 4 == 0) {
                notices.push(news_slide)
