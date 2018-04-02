@@ -129,7 +129,7 @@ export default new Router({
       component: Notices
     },
     {
-      path: '/academics/exams',
+      path: '/academics/examinations',
       name: 'Exams',
       component: Exams
     },
