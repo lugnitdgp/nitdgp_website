@@ -92,6 +92,7 @@ export default {
         ]
       }
     ]
+    this.$emit('hideloader', true)
   },
   components: {
     Card,

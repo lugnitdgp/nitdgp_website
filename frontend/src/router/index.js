@@ -16,6 +16,8 @@ import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
 import Exams from '@/components/academics/Exams'
 
+import Visitor from '@/components/administration/Visitor'
+import Mhrd from '@/components/administration/Mhrd'
 import Chairperson from '@/components/administration/Chairperson'
 import Bog from '@/components/administration/Bog'
 import Director from '@/components/administration/Director'
@@ -25,6 +27,7 @@ import Senate from '@/components/administration/Senate'
 import Deans from '@/components/administration/Deans'
 import Hods from '@/components/administration/Hods'
 
+import Placement from '@/components/activities/Placement'
 import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
 import Events from '@/components/activities/Events'
@@ -57,6 +60,7 @@ import Location from '@/components/information/Location'
 import Moreinfo from '@/components/information/Moreinfo'
 import Careers from '@/components/information/Careers'
 import Tenders from '@/components/information/Tenders'
+import Chanakya from '@/components/information/Chanakya'
 
 
 
@@ -132,6 +136,16 @@ export default new Router({
 
     // Administration
     {
+      path: '/administration/visitor',
+      name: 'Visitor',
+      component: Visitor
+    },
+    {
+      path: '/administration/mhrd',
+      name: 'Mhrd',
+      component: Mhrd
+    },
+    {
       path: '/administration/chairperson',
       name: 'Chairperson',
       component: Chairperson
@@ -152,7 +166,7 @@ export default new Router({
       component: Registrar
     },
     {
-      path: '/administration/bwcifc',
+      path: '/administration/bwc/ifc',
       name: 'Bwcifc',
       component: Bwcifc
     },
@@ -174,6 +188,11 @@ export default new Router({
 
     // Activities
     {
+      path: '/activities/placement',
+      name: 'Placement',
+      component: Placement
+    },
+    {
       path: '/activities/outreach',
       name: 'Outreach',
       component: Outreach
@@ -184,7 +203,7 @@ export default new Router({
       component: Research
     },
     {
-      path: '/activities/events',
+      path: '/activities/seminars%20&%20events',
       name: 'Events',
       component: Events
     },
@@ -226,12 +245,12 @@ export default new Router({
       component: Banks
     },
     {
-      path: '/facilities/cc',
+      path: '/facilities/computer%20center',
       name: 'Cc',
       component: Cc
     },
     {
-      path: '/facilities/mu',
+      path: '/facilities/medical%20unit',
       name: 'Mu',
       component: Mu
     },
@@ -246,7 +265,7 @@ export default new Router({
       component: Cif
     },
     {
-      path: '/facilities/guest',
+      path: '/facilities/Guest%20House',
       name: 'Guest',
       component: Guest
     },
@@ -256,7 +275,7 @@ export default new Router({
       component: Sac
     },
     {
-      path: '/facilities/po',
+      path: '/facilities/post-office',
       name: 'Po',
       component: Po
     },
@@ -268,7 +287,7 @@ export default new Router({
       component: Reports
     },
     {
-      path: '/information/eprashasan',
+      path: '/information/e-prashasan',
       name: 'Eprashasan',
       component: Eprashasan
     },
@@ -298,7 +317,7 @@ export default new Router({
       component: Rti
     },
     {
-      path: '/information/grievances',
+      path: '/information/public%20grievances',
       name: 'Grievances',
       component: Grievances
     },
@@ -313,9 +332,14 @@ export default new Router({
       component: Location
     },
     {
-      path: '/information/moreinfo',
+      path: '/information/more',
       name: 'Moreinfo',
       component: Moreinfo
+    },
+    {
+      path: '/information/chanakya',
+      name: 'Chanakya',
+      component: Chanakya
     },
     {
       path: '/information/careers',

@@ -23,7 +23,7 @@
                 <div v-for="tile_row in section.contents" class="row">
                   <!-- A tile -->
                   <div v-for="tile in tile_row" class="col tile-small">
-                    <a :href="tile.link">
+                    <a :href="link(section, tile)">
                       <div align="center" class="tile-content">
                         <i :class="['fa fa-2x ' + tile.icon]"></i></br>
                         <p class="tile-small-text">{{ tile.name }}</p>
@@ -148,7 +148,13 @@ export default {
          })
   },
   methods: {
-    genBackendURL
+    genBackendURL,
+    link (section, tile) {
+      // For generating links on the frontend
+      return '/' + section.section_name + '/' + tile.name
+      // pFor consulting links from backend
+      // return tile.link
+    }
   }
 }
 </script>
