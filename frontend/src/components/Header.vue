@@ -23,10 +23,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-tasks"></i>Alumni</a>
+              <a class="nav-link waves-effect waves-light navbar-link" href="http://nitdgp.ac.in/alumni/index.php"><i class="fa fa-tasks"></i>Alumni</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-plane"></i>Webmail</a>
+              <a class="nav-link waves-effect waves-light navbar-link" href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-plane"></i>Webmail</a>
             </li>
             <li class="nav-item">
               <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-address-book"></i>Contacts</a>
@@ -37,10 +37,10 @@
     </nav>
     <nav class="mb-1 navbar fixed-top navbar-expand-sm" id="top-nav-wrap">
       <span class="top-nav-container-left">
-        <a href="http://172.16.20.3/nitdgp_website" class="black-text"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+        <a href="/" class="black-text"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
       </span>
       <span class="top-nav-container-right">
-        <a href="#" class="top-nav-link">Old website</a>
+        <a href="http://nitdgp.ac.in" class="top-nav-link">Old website</a>
         <a href="#" class="top-nav-link">A+/A-</a>
         <a href="#" class="top-nav-link">A|अ</a>
         <input id="search-btn-nav" type="text" name="" placeholder=" Search">
