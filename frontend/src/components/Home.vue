@@ -151,8 +151,14 @@ export default {
     genBackendURL,
     link (section, tile) {
       // For generating links on the frontend
-      return '/' + section.section_name + '/' + tile.name
-      // pFor consulting links from backend
+      let link = '/' + section.section_name.toLowerCase() + '/'
+      let suburl = tile.name.toLowerCase().replace(/ /g, "");
+      if (suburl.indexOf("event") != -1)
+        return link + "events"
+      if (suburl.indexOf("bwc") != -1)
+        return link + "bwcifc"
+      return link + suburl
+      // For getting links from backend
       // return tile.link
     }
   }

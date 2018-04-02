@@ -14,7 +14,7 @@ import Documents from '@/components/academics/Documents'
 import Regulations from '@/components/academics/Regulations'
 import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
-import Exams from '@/components/academics/Exams'
+import Examinations from '@/components/academics/Examinations'
 
 import Visitor from '@/components/administration/Visitor'
 import Mhrd from '@/components/administration/Mhrd'
@@ -130,8 +130,8 @@ export default new Router({
     },
     {
       path: '/academics/examinations',
-      name: 'Exams',
-      component: Exams
+      name: 'Examinations',
+      component: Examinations
     },
 
     // Administration
@@ -166,7 +166,7 @@ export default new Router({
       component: Registrar
     },
     {
-      path: '/administration/bwc/ifc',
+      path: '/administration/bwcifc',
       name: 'Bwcifc',
       component: Bwcifc
     },
@@ -203,7 +203,7 @@ export default new Router({
       component: Research
     },
     {
-      path: '/activities/seminars%20&%20events',
+      path: '/activities/events',
       name: 'Events',
       component: Events
     },
@@ -245,12 +245,12 @@ export default new Router({
       component: Banks
     },
     {
-      path: '/facilities/computer%20center',
+      path: '/facilities/computercenter',
       name: 'Cc',
       component: Cc
     },
     {
-      path: '/facilities/medical%20unit',
+      path: '/facilities/medicalunit',
       name: 'Mu',
       component: Mu
     },
@@ -265,7 +265,7 @@ export default new Router({
       component: Cif
     },
     {
-      path: '/facilities/Guest%20House',
+      path: '/facilities/GuestHouse',
       name: 'Guest',
       component: Guest
     },
@@ -317,7 +317,7 @@ export default new Router({
       component: Rti
     },
     {
-      path: '/information/public%20grievances',
+      path: '/information/publicgrievances',
       name: 'Grievances',
       component: Grievances
     },

@@ -19,7 +19,7 @@ import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
 export default {
-  name: 'Exams',
+  name: 'Examinations',
   data () {
     return {
       exams: {}
