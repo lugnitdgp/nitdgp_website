@@ -4,6 +4,10 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 //import Department from '@/components/Department'
 //import Faculty from '@/components/Faculty'
+import Holidays from '@/components/Holidays'
+import Archives from '@/components/Archives'
+import Policies from '@/components/Policies'
+import Webteam from '@/components/Webteam'
 import PageNotFound from '@/components/PageNotFound'
 
 import Admission from '@/components/academics/Admission'
@@ -350,6 +354,26 @@ export default new Router({
       path: '/information/tenders',
       name: 'Tenders',
       component: Tenders
+    },
+    {
+      path: '/holidays',
+      name: 'Holidays',
+      component: Holidays
+    },
+    {
+      path: '/archives',
+      name: 'Archives',
+      component: Archives
+    },
+    {
+      path: '/policies',
+      name: 'Policies',
+      component: Policies
+    },
+    {
+      path: '/webteam',
+      name: 'Webteam',
+      component: Webteam
     },
 
     // This is meant to be at the last

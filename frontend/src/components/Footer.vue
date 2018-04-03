@@ -46,10 +46,10 @@ export default {
               {name: 'govlogo6', filename: 'govlogo6.png', href:"#!"},
               {name: 'govlogo7', filename: 'govlogo7.png', href:"#!"},
               {name: 'govlogo8', filename: 'govlogo8.png', href:"#!"}],
-      links: [{name: "Holidays", href:"#!"},
-              {name: "Archives", href:"#!"},
-              {name: "Policies", href:"#!"},
-              {name: "Webteam", href:"#!"}]
+      links: [{name: "Holidays", href: "/holidays"},
+              {name: "Archives", href: "/archives"},
+              {name: "Policies", href: "/policies"},
+              {name: "Webteam", href: "/webteam"}]
     }
   }
 }
