@@ -2,19 +2,14 @@
   <div class="l1 page-type-links">
     <!-- CONTENT -->
     <div class="card">
-      <a class="card-header white-text">State Bank of India(SBI) NIT Durgapur Branch</a>
+      <a class="card-header white-text">Centre of Excellence in Advanced Materials</a>
       <div class="card-body">
-	<div style="text-align: center;">
-	  <img style="max-height:300px;width: 500px;max-width: 100%" src="http://www.nitdgp.ac.in/images/hostel/1.jpg" width="100%"><br>
-	</div>
-      </div>
-    </div>
-    <div class="card">
-      <a class="card-header white-text">Canara Bank</a>
-      <div class="card-body">
-	<div style="text-align: center;">
-	  <img style="max-height:300px;width: 500px;max-width: 100%" src="http://www.nitdgp.ac.in/images/hostel/1.jpg" width="100%"><br>
-	</div>
+        <div class="card-text">
+          <ul>
+            <li><a target="new" href="http://nitdgp.ac.in/all_pdf17/Centre%20of%20Excellence%20in%20Advanced%20Materials-home.pdf">CEAM home</a></li>
+            <li><a target="new" href="http://nitdgp.ac.in/research/coe/images/coe.doc">CEAM Doc</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
