@@ -3,7 +3,7 @@
 		<h1>
 			<a href="http://nitdgp.ac.in/deans.php">Deans on old web</a>
 		</h1>
-		<div class="carousel-inner person-list" role="listbox">
+		<div class="carousel-inner person-list">
       <div class="carousel-item active">
         <div class="row">
 

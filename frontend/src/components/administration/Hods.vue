@@ -3,7 +3,7 @@
 		<h1>
 			<a href="http://www.nitdgp.ac.in/contact_us.php">Take the list of HODs from here</a>
 		</h1>
-		<div class="carousel-inner person-list" role="listbox">
+		<div class="carousel-inner person-list">
       <div class="carousel-item active">
         <div class="row">
 
