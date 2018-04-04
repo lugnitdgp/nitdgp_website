@@ -459,6 +459,41 @@ hr.style4:after {
 .notices .card-body .nav-item .active{
   background-color: #ECEFF1;color: #001333;
 }
+.person-list{
+  padding: 2em 1%;min-height: 500px;
+}
+.person-list .row{
+  padding: 0.5em 0;
+}
+.person-list .card-up{
+  background: linear-gradient(to right,#001333,#26C6DA);
+}
+.person-list .carousel-inner .col{
+  max-width: 20%;margin: 2px;
+}
+.person-list .card-up{
+  height: 80px;
+}
+.person-list .card-body-in .card-title{
+  font-size: 75%;
+}
+.person-list .card-body-in{
+  text-align: center;
+}
+.person-list hr{
+  margin: 0 1em;
+}
+.person-list .card-body-in h6{
+  font-size: 75%;
+}
+.person-list .avatar{
+  height: 80px;width: 80px;
+}
+.person-list .min-profile{
+  font-size:55%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .page-type-links .card-header{
   font-weight: bold;
   font-size: 110%;
