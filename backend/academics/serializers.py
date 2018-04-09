@@ -113,3 +113,9 @@ class DocumentMainSerializer(serializers.ModelSerializer):
     class Meta:
         model = Document
         fields = ('documents', )
+
+
+class ConvocationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Convocation

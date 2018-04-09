@@ -38,9 +38,14 @@ class RegistrationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
 
+class ConvocationModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file']
+
+
 admin.site.register(NoticeType, NoticeTypeModelAdmin)
 admin.site.register(Notice, NoticeModelAdmin)
 admin.site.register(Calendar)
+admin.site.register(Convocation, ConvocationModelAdmin)
 admin.site.register(AdmissionDegree, AdmissionDegreeModelAdmin)
 admin.site.register(AdmissionProgramme, AdmissionProgrammeModelAdmin)
 admin.site.register(Admission, AdmissionModelAdmin)

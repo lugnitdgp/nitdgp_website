@@ -2,8 +2,8 @@
   <links-page>
     <card title="Convocation and Special Events">
       <ul>
-        <li v-for="file in convocations">
-          <a :href="file.file">{{ file.title }}</a>
+        <li v-for="convocation in convocations">
+          <a :href="convocation.file">{{ convocation.title }}</a>
         </li>
       </ul>
     </card>
@@ -24,7 +24,7 @@ export default {
     }
   },
   created () {
-    axios.get(genBackendURL("academics/regulations"))
+    axios.get(genBackendURL("academics/convocation"))
          .then(response => {
            this.convocations = response.data.results
            this.$emit('hideloader', true)

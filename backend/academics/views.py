@@ -27,6 +27,12 @@ class CalendarViewSet(ListAPIView):
     serializer_class = CalendarSerializer
 
 
+class ConvocationViewSet(ListAPIView):
+
+    queryset = Convocation.objects.all()
+    serializer_class = ConvocationSerializer
+
+
 class AdmissionViewSet(RetrieveAPIView):
 
     queryset = Admission.objects.all()
