@@ -17,45 +17,10 @@
       	</ul>
       	<!-- Tab panels -->
       	<div class="tab-content card">
-      	  <!--Panel 1-->
-      	  <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
-      	    <br>
-      	    <ul v-if="academic">
-      	      <li v-for="notice in academic">
-                <a :href="notice.file" target="new">{{ notice.title }}</a>
-              </li>
-      	    </ul>
-      	    <page-list v-if="academic"
-              :num-of-pages="parseInt((academic.length-1)/10 + 1)">
-            </page-list>
-      	  </div>
-      	  <!--/.Panel 1-->
-      	  <!--Panel 2-->
-      	  <div class="tab-pane fade" id="panel2" role="tabpanel">
-      	    <br>
-            <ul v-if="student">
-              <li v-for="notice in student">
-                <a :href="notice.file" target="new">{{ notice.title }}</a>
-              </li>
-            </ul>
-      	    <page-list v-if="student"
-              :num-of-pages="parseInt((student.length-1)/10 + 1)">
-            </page-list>
-      	  </div>
-      	  <!--/.Panel 2-->
-      	  <!--Panel 3-->
-      	  <div class="tab-pane fade" id="panel3" role="tabpanel">
-      	    <br>
-            <ul v-if="general">
-              <li v-for="notice in general">
-                <a :href="notice.file" target="new">{{ notice.title }}</a>
-              </li>
-            </ul>
-      	    <page-list v-if="general"
-              :num-of-pages="parseInt((general.length-1)/10 + 1)">
-            </page-list>
-      	  </div>
-      	  <!--/.Panel 3-->
+      	  <notice-list class="in show active" idn="1" :noticelist="academic">
+          </notice-list>
+      	  <notice-list :noticelist="student" idn="2"></notice-list>
+      	  <notice-list :noticelist="general" idn="3"></notice-list>
       	</div>
       </div>
     </div>
@@ -63,7 +28,7 @@
 </template>
 
 <script>
-import PageList from '@/components/PageList'
+import NoticeList from '@/components/NoticeList'
 import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
@@ -89,7 +54,7 @@ export default {
          })
   },
   components: {
-    PageList
+    NoticeList
   }
 }
 </script>
