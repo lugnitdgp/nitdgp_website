@@ -3,7 +3,7 @@
     <card title="Right to Information">
       <ul>
         <li v-for="rti in rtis">
-          <a target="new" :href="rti.link">
+          <a target="new" :href="rti.file">
             {{ rti.title }}
           </a>
         </li>
@@ -15,21 +15,25 @@
 <script>
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
+import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Rti",
   data () {
     return {
-      rtis: [
-        {
-          link: "http://nitdgp.ac.in/information/Institute%20Information%20Officer/RTI%20Act%202005.pdf",
-          title: "Institute Information Officer"
-        }
-      ]
+      rtis: []
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('information/rti'))
+         .then(response => {
+           this.rtis = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log("Axios(GET[information]): Error: " + e)
+         })
   },
   components: {
     Card,
