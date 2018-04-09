@@ -29,7 +29,7 @@ export default {
   created () {
     axios.get(genBackendURL('information/reports'))
          .then(response => {
-           this.reports = response.data.results[0].reports
+           this.reports = response.data.reports
            this.$emit('hideloader', true)
          })
          .catch(e => {
