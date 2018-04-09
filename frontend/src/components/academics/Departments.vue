@@ -12,7 +12,7 @@
             <!-- Col -->
             <div v-for="col in row" class="col tile-small">
               <!-- Tile -->
-              <a :href="'http://172.16.20.3:4567/department/' + col.id">
+              <a :href="'http://172.16.20.3:4567/department/' + col.short_code">
                 <div class="tile-content" align="center">
                   <i class="fa fa-2x">{{ col.short_code }}</i>
                   <br>
