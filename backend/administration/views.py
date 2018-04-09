@@ -3,10 +3,10 @@ from rest_framework.response import Response
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
 
-from department.serializers import FacultySerializer
 from administration.serializers import *
+from administration.models import *
+from department.serializers import FacultySerializer
 from department.models import FacultyRoles
-from administration.models import BOG
 
 
 class CommonViewSet(RetrieveAPIView):
@@ -50,10 +50,17 @@ class RegistrarViewSet(CommonViewSet):
         super().__init__("Registrar")
 
 
+class BwcIfcViewSet(ListAPIView):
+
+    queryset = BwcIfc.objects.all()
+    serializer_class = BwcIfcSerializer
+
+
 class BOGViewSet(ListAPIView):
 
     queryset = BOG.objects.all()
-    serializer_class = BOGSerializer
+    serializ,
+    url(r'^administration/bog/$', BOGViewSet.as_view(), name='view-bog')er_class = BOGSerializer
 
     def list(self, request, *args, **kwargs):
         chairperson = self.get_queryset().filter(role='Chairperson')

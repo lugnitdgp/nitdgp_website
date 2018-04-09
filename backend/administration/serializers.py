@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from administration.models import BOG
+from administration.models import BOG, BwcIfc
 
 
 class BOGSerializer(serializers.ModelSerializer):
@@ -12,3 +12,10 @@ class BOGSerializer(serializers.ModelSerializer):
     class Meta:
         model = BOG
         fields = ('name', 'email', 'mobile', 'joining_year')
+
+
+class BwcIfcSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BwcIfc
+        fields = ('title', 'type', 'file', 'date')
