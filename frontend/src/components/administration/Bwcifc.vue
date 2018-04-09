@@ -1,34 +1,58 @@
 <template>
-	<div class="l1 page-type-links">
-    <div class="card">
-        <a class="card-header white-text">Minutes of IFC Meeting</a>
-        <div class="card-body">
-            <div class="card-text">
-              <ul>
-                <li> <a href="http://nitdgp.ac.in/information/FC_Meetings/Minutes of 43rd FC meeting.pdf" target=_blank> Minutes of the 43rd FC Meeting</a></li>
-                <li> <a href="http://nitdgp.ac.in/information/FC_Meetings/Agenda of 43rd FC Meeting.pdf" target=_blank> Agenda of the 43rd FC Meeting</a></li>
-              </ul>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <a class="card-header white-text">Minutes of BWC Meeting</a>
-        <div class="card-body">
-            <div class="card-text">
-                <ul>
-                    <li> <a href="http://nitdgp.ac.in/information/BWC_Meetings/BWC_3_MINUTES.pdf" target=_blank>Minutes of the 3rd BWC Meeting</a></li>
-                    <li> <a href="http://nitdgp.ac.in/information/BWC_Meetings/BWC_1_MINUTES.pdf" target=_blank>Minutes of the 1st BWC Meeting</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-  </div>
+	<links-page>
+    <card title="Minutes of IFC Meeting">
+      <ul>
+        <li v-for="i in ifc_docs"><a :href="i.file" target=_blank>{{ i.title }}</a></li>
+      </ul>
+    </card>
+    <card title="Minutes of BWC Meeting">
+      <ul>
+        <li v-for="b in bwc_docs"><a :href="b.file" target=_blank>{{ b.title }}</a></li>
+      </ul>
+    </card>
+  </links-page>
 </template>
+
 <script>
+import axios from 'axios'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import { genBackendURL } from '@/common.js'
+
 export default {
-  name: 'Bwcifc',
+  name: "Calendar",
+  data () {
+    return {
+      bwc_docs: [],
+			ifc_docs: []
+    }
+  },
   created () {
-    this.$emit('hideloader', true)
+		let flag = false
+    axios.get(genBackendURL("administration/bwc"))
+         .then(response => {
+           this.bwc_docs = response.data.results
+					 if (flag)
+             this.$emit('hideloader', true)
+           flag = true
+         })
+         .catch(e => {
+           console.log(e)
+         })
+     axios.get(genBackendURL("administration/ifc"))
+          .then(response => {
+            this.ifc_docs = response.data.results
+ 					 if (flag)
+              this.$emit('hideloader', true)
+            flag = true
+          })
+          .catch(e => {
+            console.log(e)
+          })
+  },
+  components: {
+    LinksPage,
+    Card
   }
 }
 </script>
