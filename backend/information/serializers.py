@@ -9,17 +9,12 @@ class ReportMainSerializer(serializers.ModelSerializer):
 
     def get_reports(self, obj):
         result = collections.defaultdict()
-        reports = Report.objects.all().order_by('-updated_at')
-        for report in reports:
+        for report in self.instance:
             report_type = report.type
             try:
-                result[report_type].append(
-                    ReportSerializer(report).data
-                )
+                result[report_type].append(ReportSerializer(report).data)
             except KeyError:
-                result[report_type] = [
-                    ReportSerializer(report).data
-                ]
+                result[report_type] = [ReportSerializer(report).data]
         return result
 
     class Meta:

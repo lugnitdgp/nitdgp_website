@@ -1,12 +1,15 @@
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView
 from information.serializers import *
 from information.models import *
 
 
-class ReportViewSet(ListAPIView):
+class ReportViewSet(RetrieveAPIView):
 
     queryset = Report.objects.all().order_by('-updated_at')
     serializer_class = ReportMainSerializer
+
+    def get_object(self):
+        return self.get_queryset()
 
 
 class AccountViewSet(ListAPIView):
