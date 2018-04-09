@@ -3,7 +3,7 @@
     <card title="TEQIP">
       <ul>
         <li v-for="teqip in teqips">
-          <a target="new" :href="teqip.link">
+          <a target="new" :href="teqip.file">
             {{ teqip.title }}
           </a>
         </li>
@@ -15,33 +15,25 @@
 <script>
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
+import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Teqips",
   data () {
     return {
-      teqips: [
-        {
-          link: "http://nitdgp.ac.in/information/Annual_Report/NIT DURGAPUR Annual Report 2015-16_Final.pdf",
-          title: "Annual_Report_2015-16"
-        },
-        {
-          link: "http://nitdgp.ac.in/information/Annual_Report/NIT%20Durgapur%20Annual%20teqip%202014-15.pdf",
-          title: "Annual_Report_2014-15"
-        },
-        {
-          link: "http://nitdgp.ac.in/information/Annual_Report/NIT%20Durgapur%20Annual%20Report%202013-14.pdf",
-          title: "Annual_Report_2013-14"
-        },
-        {
-          link: "http://nitdgp.ac.in/information/Annual_Report/Annual_Report_12-13.pdf",
-          title: " Annual_Report_2012-13"
-        }
-      ]
+      teqips: []
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('information/teqip'))
+         .then(response => {
+           this.teqips = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log("Axios(GET[information]): Error: " + e)
+         })
   },
   components: {
     Card,
