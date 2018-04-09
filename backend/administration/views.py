@@ -50,17 +50,22 @@ class RegistrarViewSet(CommonViewSet):
         super().__init__("Registrar")
 
 
-class BwcIfcViewSet(ListAPIView):
+class BwcListViewSet(ListAPIView):
 
-    queryset = BwcIfc.objects.all()
+    queryset = BwcIfc.objects.filter(type='bwc')
+    serializer_class = BwcIfcSerializer
+
+
+class IfcListViewSet(ListAPIView):
+
+    queryset = BwcIfc.objects.filter(type='ifc')
     serializer_class = BwcIfcSerializer
 
 
 class BOGViewSet(ListAPIView):
 
     queryset = BOG.objects.all()
-    serializ,
-    url(r'^administration/bog/$', BOGViewSet.as_view(), name='view-bog')er_class = BOGSerializer
+    serializer_class = BOGSerializer
 
     def list(self, request, *args, **kwargs):
         chairperson = self.get_queryset().filter(role='Chairperson')

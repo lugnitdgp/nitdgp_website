@@ -18,4 +18,4 @@ class BwcIfcSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BwcIfc
-        fields = ('title', 'type', 'file', 'date')
+        fields = ('title', 'file', 'date')
