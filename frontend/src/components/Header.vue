@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <header class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark darken-2" id="nav-below">
       <div class="container-fluid" >
         <div class="navbar-header">
@@ -46,7 +46,7 @@
         <input id="search-btn-nav" type="text" name="" placeholder=" Search">
       </span>
     </nav>
-  </div>
+  </header>
 </template>
 
 <script>
