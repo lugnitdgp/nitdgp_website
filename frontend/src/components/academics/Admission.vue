@@ -1,14 +1,14 @@
 <template>
   <links-page>
     <collapse-list>
-      <card-collapse v-for="(courses, prog) in results" :title="prog" :key="courses.id">
+      <card-collapse v-for="(degree, i) in degrees" :title="degree.name" :show="i == 0" :key="i">
         <ul class="pg_contents">
-          <li v-for="course in courses" class="bot-margin no-style-list">
-            <h4>{{ key = Object.keys(course)[0] }}</h4>
+          <li v-for="(programme, j) in degree.programmes" class="bot-margin no-style-list" :key="j">
+            <h4>{{ programme.name }}</h4>
             <ul>
-              <li v-for="link in course[key]">
-                <a target="new" :href="link.file">
-                  {{ link.title }}
+              <li v-for="doc in programme.documents">
+                <a target="new" :href="doc.file">
+                  {{ doc.title }}
                 </a>
               </li>
             </ul>
@@ -32,13 +32,14 @@ export default {
   name: "Admission",
   data () {
     return {
-      results: {}
+      degrees: []
     }
   },
   created: function () {
     axios.get(genBackendURL('academics/admission'))
          .then(response => {
-           this.results = response.data.admission
+           this.degrees = response.data.results
+           console.log(this.degrees[0].name)
            this.$emit('hideloader', true)
          })
          .catch(e => {

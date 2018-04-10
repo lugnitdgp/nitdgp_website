@@ -33,13 +33,10 @@ class ConvocationViewSet(ListAPIView):
     serializer_class = ConvocationSerializer
 
 
-class AdmissionViewSet(RetrieveAPIView):
+class AdmissionViewSet(ListAPIView):
 
-    queryset = Admission.objects.all()
+    queryset = AdmissionDegree.objects.all()
     serializer_class = AdmissionMainSerializer
-
-    def get_object(self):
-        return self.get_queryset()
 
 
 class ExaminationViewSet(ListAPIView):

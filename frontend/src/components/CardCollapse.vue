@@ -1,13 +1,13 @@
 <template>
   <div class="card">
     <div class="card-header" role="tab" :id="headId">
-      <a data-toggle="collapse" data-parent="#accordionEx" :href="'#' + bodyId" aria-expanded="true" :aria-controls="bodyId">
+      <a class="" data-toggle="collapse" data-parent="#accordionEx" :href="'#' + bodyId" aria-expanded="false" :aria-controls="bodyId" v-on:click="show_status = !show_status">
         <h5 class="mb-0">
-          {{ title }} <i class="fa fa-angle-down rotate-icon"></i>
+          {{ title }} <i class="fa fa-angle-down" :class="show_status ? 'rotate-icon' : ''"></i>
         </h5>
       </a>
     </div>
-    <div :id="bodyId" class="collapse" :class="{ show: show }" role="tabpanel" aria-labelledby="headId">
+    <div :id="bodyId" class="collapse" :class="{show : show}" role="tabpanel" aria-labelledby="headId">
       <div class="card-body">
         <slot></slot>
       </div>
@@ -24,23 +24,24 @@ export default {
     title: {
       type: String,
       required: true,
-      default: "Title goes here"
     },
     show: {
       type: Boolean,
-      required: false,
+      required: true,
       default: false
     }
   },
   data () {
     return {
       headId: "",
-      bodyId: ""
+      bodyId: "",
+      show_status: true
     }
   },
   created () {
     this.headId = getUniqueId("col-card-", 4)
     this.bodyId = getUniqueId(this.headId + "-", 4)
+    this.show_status = this.show
   },
   methods: {
     getUniqueId

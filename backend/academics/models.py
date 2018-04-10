@@ -57,7 +57,7 @@ class AdmissionDegree(BaseModel):
 
 
 class AdmissionProgramme(BaseModel):
-    degree = models.ForeignKey(AdmissionDegree, on_delete=models.CASCADE)
+    degree = models.ForeignKey(AdmissionDegree, related_name='programmes', on_delete=models.CASCADE)
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=100)
 
@@ -76,7 +76,7 @@ def rename_admission_file(instance, filename):
 
 
 class Admission(BaseModel):
-    programme = models.ForeignKey(AdmissionProgramme, on_delete=models.CASCADE)
+    programme = models.ForeignKey(AdmissionProgramme, related_name='documents', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     file = models.FileField(upload_to=rename_admission_file)
 

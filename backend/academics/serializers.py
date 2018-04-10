@@ -36,13 +36,6 @@ class CalendarSerializer(serializers.ModelSerializer):
         fields = ('year', 'file')
 
 
-class AdmissionSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Admission
-        fields = ('title', 'file')
-
-
 class RegulationSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -57,29 +50,29 @@ class RegistrationSerializer(serializers.ModelSerializer):
         fields = ('title', 'file')
 
 
-class AdmissionMainSerializer(serializers.ModelSerializer):
-
-    def get_admission(self, obj):
-        result = collections.defaultdict()
-        degrees = AdmissionDegree.objects.all()
-        for degree in degrees:
-            programmes = degree.admissionprogramme_set.all()
-            for programme in programmes:
-                try:
-                    result[degree.name].append({
-                        programme.name: AdmissionSerializer(programme.admission_set.all(), many=True).data
-                    })
-                except KeyError:
-                    result[degree.name] = [{
-                        programme.name: AdmissionSerializer(programme.admission_set.all(), many=True).data
-                    }]
-        return result
-
-    admission = serializers.SerializerMethodField()
+class AdmissionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Admission
-        fields = ('admission', )
+        fields = ('title', 'file')
+
+
+class AdmissionProgrammeSerializer(serializers.ModelSerializer):
+
+    documents = AdmissionSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = AdmissionProgramme
+        fields = ('name', 'documents')
+
+
+class AdmissionMainSerializer(serializers.ModelSerializer):
+
+    programmes = AdmissionProgrammeSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = AdmissionDegree
+        fields = ('name', 'programmes')
 
 
 class ExaminationSerializer(serializers.ModelSerializer):
