@@ -61,6 +61,17 @@ class IfcListViewSet(ListAPIView):
     queryset = BwcIfc.objects.filter(type='ifc')
     serializer_class = BwcIfcSerializer
 
+class SenateViewSet(ListAPIView):
+
+     queryset = Senate.objects.all()
+     serializer_class = SenateSerializer
+
+
+class DeansViewSet(ListAPIView):
+
+    queryset = Dean.objects.all()
+    serializer_class = DeanSerializer
+
 
 class BOGViewSet(ListAPIView):
 

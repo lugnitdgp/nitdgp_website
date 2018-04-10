@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from administration.models import BOG, BwcIfc
+from administration.models import *
+from department.models import *
 
 
 class BOGSerializer(serializers.ModelSerializer):
@@ -19,3 +20,17 @@ class BwcIfcSerializer(serializers.ModelSerializer):
     class Meta:
         model = BwcIfc
         fields = ('title', 'file', 'date')
+
+
+class SenateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Senate
+        fields = ('title', 'file', 'date')
+
+
+class DeanSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Dean
+        fields = ('name', 'designation', 'role', 'email', 'phone', 'alternate_phone')

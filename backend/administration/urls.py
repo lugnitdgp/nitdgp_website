@@ -12,5 +12,8 @@ urlpatterns = [
     url(r'^administration/bog/$', BOGViewSet.as_view(), name='view-bog'),
     url(r'^administration/bwc/$', BwcListViewSet.as_view(), name='list-bwc'),
     url(r'^administration/ifc/$', IfcListViewSet.as_view(), name='list-ifc'),
+    url(r'^administration/senate/$', SenateViewSet.as_view(), name='list-senate'),
+    url(r'^administration/deans/$', DeansViewSet.as_view(), name='list-deans'),
+    #url(r'^administration/hod/$', HodViewSet.as_view(), name='list-hods'),
 
 ]
