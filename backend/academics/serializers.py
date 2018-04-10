@@ -119,3 +119,4 @@ class ConvocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Convocation
+        fields = '__all__'

@@ -3,7 +3,7 @@
     <card title="Academic Regulations">
       <ul>
         <li v-for="regulation in regulations">
-          <a :href="regulation.file">{{ regulation.title }}</a>
+          <a :href="regulation.file" target="new">{{ regulation.title }}</a>
         </li>
       </ul>
     </card>
