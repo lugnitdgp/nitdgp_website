@@ -3,7 +3,7 @@
     <br>
     <ul v-if="noticelist">
       <li v-for="notice in noticelist">
-        <a :href="notice.file" target="new">{{ notice.title }}</a>
+        <a :href="backURL + notice.file" target="new">{{ notice.title }}</a>
       </li>
     </ul>
     <page-list v-if="noticelist"
@@ -14,10 +14,15 @@
 
 <script>
 import PageList from '@/components/PageList'
+import { backURL } from '@/common.js'
 
 export default {
   name: "NoticeList",
   props: {
+    backURL: {
+      required: false,
+      default: backURL
+    },
     noticelist: {
       required: true,
       default: []
