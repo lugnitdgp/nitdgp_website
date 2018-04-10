@@ -46,23 +46,30 @@ export default {
     axios.get(genBackendURL('department'))
          .then(response => {
            let res = response.data.results
-           let j = 0, i = 0
-           let row = [res[0]]
-           for (i = 1; i < (4 - (res.length % 4)) * 3; i++) {
-             row.push(res[i])
-             if ((i + 1) % 3 == 0) {
-               this.departments.push(row)
-               row = []
+
+           // i counts the total Departments, j counts the total number of rows
+           // and k counts the number of Departments in a row
+           let i = 0, j = 0, k = 0
+
+           // This structure will be followed for laying out the departments
+           let structure = [3, 3, 4, 4, 4, 4, 4]
+
+           let row = []
+           while (i < res.length) {
+             // Don't display the Administrative Department
+             if (res[i].name != "Administrative") {
+               row.push(res[i])
+               k++
+               if (k == structure[j]) {
+                 this.departments.push(row)
+                 row = []
+                 k = 0
+                 j++
+               }
              }
+             i++
            }
-           for (; i < res.length; i++) {
-             let x = res.length - i - 1
-             row.push(res[i])
-             if (x % 4 == 0) {
-               this.departments.push(row)
-               row = []
-             }
-           }
+           this.departments.push(row)
            this.$emit('hideloader', true)
          })
          .catch(e => {

@@ -39,7 +39,6 @@ export default {
     axios.get(genBackendURL('academics/admission'))
          .then(response => {
            this.degrees = response.data.results
-           console.log(this.degrees[0].name)
            this.$emit('hideloader', true)
          })
          .catch(e => {
