@@ -3,7 +3,7 @@
     <card title="Examination">
       <ul>
         <li v-for="link in exams">
-          <a :href="link.filename" target="new">
+          <a :href="link.file" target="new">
             {{ link.title }}
           </a>
         </li>
