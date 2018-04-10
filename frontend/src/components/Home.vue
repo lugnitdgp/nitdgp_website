@@ -8,17 +8,54 @@
         <Newsfeed :notices="notices"></Newsfeed>
       </div>
     </div>
-    <div class="page-content-container l0">
+    <div class="page-content-container l0 mob">
       <div class="all-tiles">
         <!-- Big row of sections -->
         <div v-for="row in results" class="row big-row">
           <!-- A section -->
           <div v-for="section in row" class="col big-col">
             <div :class="['card card-cascade narrower card-' + section.priority]">
-              <div class="view gradient-card-header tile-title">
+              <a data-toggle="collapse" :href="'#collapse'+section.section_name">
+                <div class="view gradient-card-header tile-title">
                 <p class="tile-title-text">{{ section.section_name }}</p>
+                </div>
+              </a>
+              <div class="card-body text-center collapse" :id="'collapse'+section.section_name">
+                <!-- A row of tiles -->
+                <div v-for="tile_row in section.contents" class="row">
+                  <!-- A tile -->
+                  <div v-for="tile in tile_row" class="col tile-small">
+                    <a :href="link(section, tile)">
+                      <div align="center" class="tile-content">
+                        <i :class="['fa fa-2x ' + tile.icon]"></i></br>
+                        <p class="tile-small-text">{{ tile.name }}</p>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- End of a tile -->
+                </div>
+                <!-- End of a row of tiles -->
               </div>
-              <div class="card-body text-center">
+            </div>
+          </div>
+          <!-- End of a section -->
+        </div>
+        <!-- End of big row of sections -->
+      </div>
+    </div>
+    <div class="page-content-container l0 brow">
+      <div class="all-tiles">
+        <!-- Big row of sections -->
+        <div v-for="row in results" class="row big-row">
+          <!-- A section -->
+          <div v-for="section in row" class="col big-col">
+            <div :class="['card card-cascade narrower card-' + section.priority]">
+              <a data-toggle="collapse" :href="'#collapse1'+section.section_name">
+                <div class="view gradient-card-header tile-title">
+                <p class="tile-title-text">{{ section.section_name }}</p>
+                </div>
+              </a>
+              <div class="card-body text-center collapse show" :id="'collapse1'+section.section_name">
                 <!-- A row of tiles -->
                 <div v-for="tile_row in section.contents" class="row">
                   <!-- A tile -->
