@@ -33,4 +33,4 @@ class DeanSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Dean
-        fields = ('name', 'designation', 'role', 'email', 'phone', 'alternate_phone')
+        fields = ('name', 'image', 'designation', 'role', 'email', 'phone', 'alternate_phone')

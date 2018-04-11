@@ -13,8 +13,8 @@ class Dean(BaseModel):
     designation = models.CharField(max_length=512)
     role = models.CharField(choices=ROLE_TYPES, max_length=100)
     email = models.EmailField()
-    phone = models.IntegerField()
-    alternate_phone = models.IntegerField()
+    phone = models.BigIntegerField()
+    alternate_phone = models.BigIntegerField()
     image = models.ImageField(upload_to='administration/deans/')
 
     def ___str__(self):
