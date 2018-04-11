@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from administration.models import *
-from department.models import *
+from department.models import Roles, FacultyRoles
+from department.serializers import FacultySerializer
 
 
 class BOGSerializer(serializers.ModelSerializer):
@@ -34,3 +35,19 @@ class DeanSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dean
         fields = ('name', 'image', 'designation', 'role', 'email', 'phone', 'alternate_phone')
+
+
+class HODSerializer(serializers.ModelSerializer):
+
+    name = serializers.ReadOnlyField(source='faculty.name')
+    email = serializers.ReadOnlyField(source='faculty.email')
+    mobile = serializers.ReadOnlyField(source='faculty.mobile')
+    research_interest = serializers.ReadOnlyField(source='faculty.research_interest')
+    joining_year = serializers.ReadOnlyField(source='faculty.joining_year')
+    image = serializers.ImageField(source='faculty.image')
+    department = serializers.ReadOnlyField(source='faculty.department.name')
+
+    class Meta:
+
+        model = FacultyRoles
+        fields = ('name', 'email', 'mobile', 'research_interest', 'joining_year', 'image', 'department')

@@ -6,7 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from administration.serializers import *
 from administration.models import *
 from department.serializers import FacultySerializer
-from department.models import FacultyRoles
+from department.models import *
 
 
 class CommonViewSet(RetrieveAPIView):
@@ -71,6 +71,13 @@ class DeansViewSet(ListAPIView):
 
     queryset = Dean.objects.all()
     serializer_class = DeanSerializer
+
+
+class HodViewSet(ListAPIView):
+
+    serializer_class = HODSerializer
+    hod_role = Roles.objects.filter(name='HOD')
+    queryset = FacultyRoles.objects.filter(role=hod_role)
 
 
 class BOGViewSet(ListAPIView):
