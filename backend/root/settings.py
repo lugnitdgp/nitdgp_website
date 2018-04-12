@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'activities',
     'information',
     'ckeditor',
+    'logentry_admin',
 ]
 
 MIDDLEWARE = [

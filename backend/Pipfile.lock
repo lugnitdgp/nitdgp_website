@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "844832c96b82d4e392748ba256eb1eadc5c6a99448686a610bfaaba410dca7ce"
+            "sha256": "eb583a4c9c059ef1501a0c38f3716447585f3c74ce6b2f8e73bdc013a36e44f3"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -53,6 +53,12 @@
                 "sha256:38fc1de7a93a2f667fe7ee34acc53d682bac5ce6c73ac6f0ecb4ff77d0f61f1b"
             ],
             "version": "==1.0.0"
+        },
+        "django-logentry-admin": {
+            "hashes": [
+                "sha256:ee6f89a20a3e07f48f087c55a14a65a6c19137dab7bb3ee5055c7703944468cd"
+            ],
+            "version": "==1.0.3"
         },
         "djangorestframework": {
             "hashes": [

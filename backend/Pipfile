@@ -14,6 +14,7 @@ python-decouple = "==3.1"
 django-cors-headers = "*"
 pillow = "*"
 django-ckeditor = "*"
+django-logentry-admin = "*"
 
 
 [dev-packages]
