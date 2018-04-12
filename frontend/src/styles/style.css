@@ -124,7 +124,7 @@ body {
   min-height: 250px;padding-top: 1em;padding-bottom: 0.1em;padding-right: 3%;padding-left: 3%;
 }
 .l1{
-  min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 3%;padding-left: 3%;
+  min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%;
 }
 .page-type-person{
   min-height: 650px;padding-top: 1em;padding-bottom: 2em;padding-right: 20%;padding-left: 20%;
@@ -154,10 +154,19 @@ hr.style4:after {
   .page-type-person .card-up{
     height: 200px !important;
   }
+  .person-list .row{
+    margin-left: 0!important;
+  }
+  .person-list .col{
+    min-width: 100%!important;max-width: 100%!important; 
+  }
 }
 @media screen and (max-width: 1200px) {
   .mob{
     display: block!important;
+  }
+  .l1{
+    padding-right: 1.5%!important;padding-left: 1.5%!important;
   }
   .brow{
     display: none!important;
@@ -326,6 +335,9 @@ hr.style4:after {
 .l2-idep .card-body .down-content #li4 .controls-top{
   margin-bottom: 10px;
 }
+.l2-idep #li4 .person-list .col{
+  max-width: 225px!important;min-width: 225px!important;
+}
 .l2-idep .card-body .down-content #li4 .controls-top i{
   font-size: 60%;margin-top: -20px;
 }
@@ -456,10 +468,17 @@ hr.style4:after {
   background-color: #ECEFF1;color: #001333;
 }
 .person-list{
-  padding: 2em 1%;min-height: 500px;
+  padding: 1em 0;min-height: 500px;
 }
-.person-list .row{
-  padding: 0.5em 0;
+.person-list .testimonial-card{
+  height: 100%;
+}
+.person-list .row{ 
+  margin-left: 1em;
+}
+.person-list .col{
+  max-width: 235px;min-width: 235px;
+  padding-bottom: 15px;
 }
 .person-list .card-up{
   background: linear-gradient(to right,#001333,#26C6DA);
@@ -468,25 +487,22 @@ hr.style4:after {
   max-width: 20%;margin: 2px;
 }
 .person-list .card-up{
-  height: 80px;
+  height: 85px;
 }
 .person-list .card-body-in .card-title{
-  font-size: 75%;
+  font-size: 125%;
 }
 .person-list .card-body-in{
   text-align: center;
 }
 .person-list hr{
-  margin: 0 1em;
-}
-.person-list .card-body-in h6{
-  font-size: 75%;
+  margin: 0.5em 1em;
 }
 .person-list .avatar{
-  height: 80px;width: 80px;
+  height: 95px;width: 95px;
 }
 .person-list .min-profile{
-  font-size:55%;
+  font-size:80%;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -583,6 +599,7 @@ hr.style4:after {
 }
 .l1-dep .tile-small:hover {
   opacity: 0.5;
+  font-size: 108%!important;
 }
 .l1-dep .tile-small-text{
   font-size: 90%;font-weight: bold;
@@ -610,7 +627,8 @@ hr.style4:after {
   background-color: #001333;height: 1px;
 }
 .l0 .tile-small:hover {
-  opacity: 0.9;
+  opacity: 0.5;
+  font-size: 108%!important;
 }
 .l0 .tile-small-text{
   font-size: 80%;font-weight: bold;

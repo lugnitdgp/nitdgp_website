@@ -4,9 +4,8 @@
     </div>
     <img :src="image" class="avatar mx-auto rounded-circle img-fluid">
     <div class="card-body-in">
-      <h4 class="card-title mt-1"><strong>{{ name }}</strong></h4>
-      <strong>{{ desig }}</strong>
-      <br>
+      <p class="card-title">{{ name }}</p>
+      <h6 class="blue-text"><strong>{{ desig }}</strong></h6>
       <hr>
       <p class="min-profile">
         <slot></slot>

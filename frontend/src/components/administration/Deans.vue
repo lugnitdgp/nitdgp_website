@@ -3,15 +3,15 @@
     <card title="Deans">
       <div class="carousel-inner person-list" role="listbox">
         <div class="carousel-item active">
-          <div class="row" v-for="i in range(1, deans.length+1, 6)">
-            <div class="col" v-for="j in range(i, i+6 < (deans.length+1) ? i+6 : (deans.length+1))">
-              <card-testimonial :image="deans[j-1].image" :name="deans[j-1].name"
-                :desig="deans[j-1].role + ' ' + deans[j-1].designation">
+          <div class="row">
+            <div class="col black-text" v-for="dean in deans">
+              <card-testimonial :image="dean.image" :name="dean.name"
+                :desig="dean.role + ' ' + dean.designation">
                 <i class="fa fa-envelope"></i><br>
-                <strong>{{ deans[j-1].email }}</strong><br>
+                <strong>{{ dean.email }}</strong><br>
                 <i class="fa fa-address-book"></i><br>
-                <strong>+91-343-{{ deans[j-1].phone }}</strong></br>
-                <strong>+91-{{ deans[j-1].alternate_phone }}</strong></br>
+                <strong>+91-343-{{ dean.phone }}</strong></br>
+                <strong>+91-{{ dean.alternate_phone }}</strong></br>
               </card-testimonial>
             </div>
           </div>
@@ -36,7 +36,6 @@ export default {
     }
   },
   created () {
-    console.log(range(3))
     axios.get(genBackendURL("administration/deans"))
          .then(response => {
            this.deans = response.data.results
