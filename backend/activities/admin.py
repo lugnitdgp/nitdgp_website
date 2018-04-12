@@ -9,5 +9,10 @@ class StudentClubModelAdmin(admin.ModelAdmin):
 class SeminarEventModelAdmin(admin.ModelAdmin):
 	list_display = ['_title', '_file', '_date']
 
+
+class AchievementModelAdmin(admin.ModelAdmin):
+	list_display = ['_title', '_file', '_date']
+
 admin.site.register(StudentClub, StudentClubModelAdmin)
 admin.site.register(SeminarEvent, SeminarEventModelAdmin)
+admin.site.register(Achievement, AchievementModelAdmin)

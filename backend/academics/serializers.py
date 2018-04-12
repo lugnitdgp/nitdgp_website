@@ -11,7 +11,7 @@ class NoticeSerializer(serializers.ModelSerializer):
 
 
 class NoticeMainSerializer(serializers.ModelSerializer):
-    """Returns all the notices"""
+    
     def get_notices(self, obj):
         result = collections.defaultdict()
         for i in self.instance:

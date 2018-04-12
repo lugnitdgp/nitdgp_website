@@ -42,3 +42,23 @@ class SeminarEvent(BaseModel):
 
 	def _date(self):
 		return self.date
+
+
+class Achievement(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'Achievements'
+		ordering = ('-date', )
+
+	title = models.CharField(max_length=512)
+	file = models.FileField(upload_to='activities/achievements/%Y/%m/%d')
+	date = models.DateField()
+
+	def _title(self):
+		return self.title
+
+	def _file(self):
+		return self.file
+
+	def _date(self):
+		return self.date

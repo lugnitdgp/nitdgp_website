@@ -7,9 +7,6 @@ class NoticeViewSet(RetrieveAPIView):
     queryset = Notice.objects.all()
     serializer_class = NoticeMainSerializer
 
-    def get_object(self):
-        return self.get_queryset()
-
 
 class NoticeCustomViewSet(ListAPIView):
 
