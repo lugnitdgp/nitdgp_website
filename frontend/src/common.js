@@ -3,6 +3,13 @@ import crypto from 'crypto'
 var baseURL = "http://localhost:8080"
 var backURL = "http://172.16.20.3:8000"
 
+function stripDesc (str) {
+  if (str.length < 54)
+    return str.slice(3, -4)
+  else
+    return str.slice(3, 50) + "... More"
+}
+
 function prettify (str) {
   let s = ""
   s += str[0].toUpperCase()
@@ -70,5 +77,6 @@ export {
   randomValue,
   getUniqueId,
   genBackendURL,
-  range
+  range,
+  stripDesc
 }
