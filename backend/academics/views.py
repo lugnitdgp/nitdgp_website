@@ -19,17 +19,6 @@ class NoticeViewSet(ListAPIView):
         return Response({"notices": result})
 
 
-
-class NoticeCustomViewSet(ListAPIView):
-
-    serializer_class = NoticeSerializer
-
-    def get_queryset(self):
-        ntype = self.kwargs['ntype']
-        ntype = NoticeType.objects.get(notice_type=ntype)
-        return Notice.objects.filter(notice_type=ntype).order_by('-date')
-
-
 class CalendarViewSet(ListAPIView):
 
     queryset = Calendar.objects.all().order_by('-year')
