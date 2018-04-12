@@ -3,25 +3,6 @@ import collections
 from information.models import *
 
 
-class ReportMainSerializer(serializers.ModelSerializer):
-
-    reports = serializers.SerializerMethodField()
-
-    def get_reports(self, obj):
-        result = collections.defaultdict()
-        for report in self.instance:
-            report_type = report.type
-            try:
-                result[report_type].append(ReportSerializer(report).data)
-            except KeyError:
-                result[report_type] = [ReportSerializer(report).data]
-        return result
-
-    class Meta:
-        model = Report
-        fields = ('reports', )
-
-
 class ReportSerializer(serializers.ModelSerializer):
 
     class Meta:

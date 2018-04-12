@@ -1,15 +1,23 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.response import Response
 from information.serializers import *
 from information.models import *
 
 
-class ReportViewSet(RetrieveAPIView):
+class ReportViewSet(ListAPIView):
 
     queryset = Report.objects.all().order_by('-updated_at')
-    serializer_class = ReportMainSerializer
+    serializer_class = ReportSerializer
 
-    def get_object(self):
-        return self.get_queryset()
+    def list(self, request, *args, **kwargs):
+        result = {}
+        for report in self.get_queryset():
+            report_type = report.type
+            try:
+                result[report_type].append(ReportSerializer(report, context={"request": request}).data)
+            except KeyError:
+                result[report_type] = [ReportSerializer(report, context={"request": request}).data]
+        return Response({"reports": result})
 
 
 class AccountViewSet(ListAPIView):
