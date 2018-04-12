@@ -10,25 +10,6 @@ class NoticeSerializer(serializers.ModelSerializer):
         fields = ('title', 'file', 'date')
 
 
-class NoticeMainSerializer(serializers.ModelSerializer):
-    
-    def get_notices(self, obj):
-        result = collections.defaultdict()
-        for i in self.instance:
-            ntype = i._notice_type()
-            if ntype in result:
-                result[ntype].append(NoticeSerializer(i).data)
-            else:
-                result[ntype] = [NoticeSerializer(i).data]
-        return result
-
-    notices = serializers.SerializerMethodField()
-
-    class Meta:
-        model = Notice
-        fields = ('notices', )
-
-
 class CalendarSerializer(serializers.ModelSerializer):
 
     class Meta:

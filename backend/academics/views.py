@@ -1,11 +1,23 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.response import Response
 from academics.serializers import *
 
 
-class NoticeViewSet(RetrieveAPIView):
+class NoticeViewSet(ListAPIView):
 
     queryset = Notice.objects.all()
-    serializer_class = NoticeMainSerializer
+    serializer_class = NoticeSerializer
+
+    def list(self, request, *args, **kwargs):
+        result = {}
+        for notice in self.get_queryset():
+            ntype = notice.notice_type
+            if ntype in result:
+                result[ntype].append(NoticeSerializer(notice, context={"request": request}).data)
+            else:
+                result[ntype] = [NoticeSerializer(notice, context={"request": request}).data]
+        return Response({"notices": result})
+
 
 
 class NoticeCustomViewSet(ListAPIView):
