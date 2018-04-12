@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/components/Home'
-//import Department from '@/components/Department'
+import Department from '@/components/Department'
 //import Faculty from '@/components/Faculty'
 import Holidays from '@/components/Holidays'
 import Archives from '@/components/Archives'
@@ -79,11 +79,11 @@ export default new Router({
       component: Home
     },
 
-    // {
-    //   path: '/department',
-    //   name: 'Department',
-    //   component: Department
-    // },
+    {
+      path: '/department/:short_code',
+      name: 'Department',
+      component: Department
+    },
 
     // {
     //   path: '/faculty',
