@@ -1,30 +1,55 @@
 <template>
-  <div class="l1 page-type-links">
-    <!-- CONTENT -->
-    <h1>There will be a list of cards for student clubs</h1>
-    <div class="card">
-      <a class="card-header white-text">Students</a>
-      <div class="card-body">
-	<div class="card-text">
-	  <ul>
-	    <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_application_form.jpg" target="new">Application For Duplicates/ Transcripts/ Migration Certificate</a></li>
-	    <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_fee_slip.jpg" target="new">
-	      Transcript Fee Slip</a></li>
-	    <li><a href="http://nitdgp.ac.in/all_pdf17/Verification%20of%20Education%20Qualification..pdf" target="new">
-	      Verification of Education Qualification</a></li>
-	    <li><a href="http://nitdgp.ac.in/all_pdf17/ISSUANCE%20OF%20ACADEMIC%20DOCUMENTS..pdf" target="new">
-	      Issuance of Academic Documents</a></li>
-	  </ul>
-	</div>
+  <links-page>
+    <card title="Student Clubs">
+      <div class="carousel-inner person-list" role="listbox">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col black-text" v-for="club in clubs">
+              <card-testimonial :image="club.image" :name="club.name">
+                <strong>-- Description --</strong><br>
+                <span v-html="stripDesc(club.description)"></span><br>
+                <i class="fa fa-globe"></i><br>
+                <strong><a :href="club.link">{{ club.link }}</a></strong><br>
+              </card-testimonial>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </card>
+  </links-page>
 </template>
+
 <script>
+import axios from 'axios'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import CardTestimonial from '@/components/CardTestimonial'
+import { genBackendURL,stripDesc } from '@/common.js'
+
 export default {
-  name: 'Students',
+  name: "Students",
+  data () {
+    return {
+      clubs: {}
+    }
+  },
+  methods: {
+    stripDesc: stripDesc
+  },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL("activities/student-clubs"))
+         .then(response => {
+           this.clubs = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })
+  },
+  components: {
+    LinksPage,
+    Card,
+    CardTestimonial
   }
 }
 </script>
