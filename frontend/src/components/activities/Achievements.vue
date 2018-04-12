@@ -1,10 +1,9 @@
 <template>
   <links-page>
-    <card title="Achievements, Honours and Recognitions">
-      <h1>May include a photo carousel here</h1>
+    <card title="Achievements">
       <ul>
-	<li v-for="ach in achievements">
-          <a :href="ach.file" target="new">{{ ach.title }}</a>
+        <li v-for="achievement in achievements">
+          <a :href="achievement.file">{{ achievement.title }}</a>
         </li>
       </ul>
     </card>
@@ -12,39 +11,31 @@
 </template>
 
 <script>
-import Card from '@/components/Card.vue'
-import LinksPage from '@/components/LinksPage.vue'
+import axios from 'axios'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import { genBackendURL } from '@/common.js'
 
 export default {
-  name: 'Achievements',
+  name: "Achievements",
   data () {
     return {
-      achievements: [
-        {
-          title: "Achievement detail here",
-          file: "http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_application_form.jpg"
-        },
-        {
-          title: "Achievement detail here",
-          file: "http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_fee_slip.jpg"
-        },
-        {
-          title: "Achievement detail here",
-          file: "http://nitdgp.ac.in/all_pdf17/Verification%20of%20Education%20Qualification..pdf"
-        },
-        {
-          title: "Achievement detail here",
-          file: "http://nitdgp.ac.in/all_pdf17/ISSUANCE%20OF%20ACADEMIC%20DOCUMENTS..pdf"
-        }
-      ]
+      achievements: {}
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL("activities/achievements"))
+         .then(response => {
+           this.achievements = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })
   },
   components: {
-    Card,
-    LinksPage
+    LinksPage,
+    Card
   }
 }
 </script>
