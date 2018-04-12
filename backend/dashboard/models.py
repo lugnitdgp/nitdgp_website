@@ -77,3 +77,22 @@ class Event(BaseModel):
 
     def _file(self):
         return self.file
+
+
+class NewsFeed(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'News Feed'
+
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to='newsfeed/%Y/%m/%d')
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
+    def _date(self):
+        return self.date

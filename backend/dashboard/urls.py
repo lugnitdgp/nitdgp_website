@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^dashboard/$', DashboardViewSet.as_view(), name='list-tile-content'),
     url(r'^dashboard/carousel/$', CarouselViewSet.as_view(), name='list-carousel'),
     url(r'^dashboard/events/$', EventViewSet.as_view(), name='list-events'),
+    url(r'^dashboard/newsfeed/$', NewsFeedViewSet.as_view(), name='list-newsfeed'),
 ]

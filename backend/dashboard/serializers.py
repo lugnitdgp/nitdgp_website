@@ -31,3 +31,10 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = ('title', 'file')
+
+
+class NewsFeedSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = NewsFeed
+        fields = ('title', 'file', 'date')
