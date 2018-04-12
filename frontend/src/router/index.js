@@ -93,265 +93,265 @@ export default new Router({
 
     // Academics
     {
-      path: '/academics/admission',
+      path: '/admission',
       name: 'Admission',
       component: Admission
     },
     {
-      path: '/academics/calendar',
+      path: '/calendar',
       name: 'Calendar',
       component: Calendar
     },
     {
-      path: '/academics/registrations',
+      path: '/registrations',
       name: 'Registrations',
       component: Registrations
     },
     {
-      path: '/academics/departments',
+      path: '/departments',
       name: 'Departments',
       component: Departments
     },
     {
-      path: '/academics/documents',
+      path: '/documents',
       name: 'Documents',
       component: Documents
     },
     {
-      path: '/academics/regulations',
+      path: '/regulations',
       name: 'Regulations',
       component: Regulations
     },
     {
-      path: '/academics/convocation',
+      path: '/convocation',
       name: 'Convocation',
       component: Convocation
     },
     {
-      path: '/academics/notices',
+      path: '/notices',
       name: 'Notices',
       component: Notices
     },
     {
-      path: '/academics/examinations',
+      path: '/examinations',
       name: 'Examinations',
       component: Examinations
     },
 
     // Administration
     {
-      path: '/administration/visitor',
+      path: '/visitor',
       name: 'Visitor',
       component: Visitor
     },
     {
-      path: '/administration/mhrd',
+      path: '/mhrd',
       name: 'Mhrd',
       component: Mhrd
     },
     {
-      path: '/administration/chairperson',
+      path: '/chairperson',
       name: 'Chairperson',
       component: Chairperson
     },
     {
-      path: '/administration/bog',
+      path: '/bog',
       name: 'Bog',
       component: Bog
     },
     {
-      path: '/administration/director',
+      path: '/director',
       name: 'Director',
       component: Director
     },
     {
-      path: '/administration/registrar',
+      path: '/registrar',
       name: 'Registrar',
       component: Registrar
     },
     {
-      path: '/administration/bwcifc',
+      path: '/bwcifc',
       name: 'Bwcifc',
       component: Bwcifc
     },
     {
-      path: '/administration/senate',
+      path: '/senate',
       name: 'Senate',
       component: Senate
     },
     {
-      path: '/administration/deans',
+      path: '/deans',
       name: 'Deans',
       component: Deans
     },
     {
-      path: '/administration/hods',
+      path: '/hods',
       name: 'Hods',
       component: Hods
     },
 
     // Activities
     {
-      path: '/activities/placement',
+      path: '/placement',
       name: 'Placement',
       component: Placement
     },
     {
-      path: '/activities/outreach',
+      path: '/outreach',
       name: 'Outreach',
       component: Outreach
     },
     {
-      path: '/activities/research',
+      path: '/research',
       name: 'Research',
       component: Research
     },
     {
-      path: '/activities/events',
+      path: '/events',
       name: 'Events',
       component: Events
     },
     {
-      path: '/activities/achievements',
+      path: '/achievements',
       name: 'Achievements',
       component: Achievements
     },
     {
-      path: '/activities/students',
+      path: '/students',
       name: 'Students',
       component: Students
     },
 
     // Facilities
     {
-      path: '/facilities/library',
+      path: '/library',
       name: 'Library',
       component: Library
     },
     {
-      path: '/facilities/hvl',
+      path: '/hvl',
       name: 'Hvl',
       component: Hvl
     },
     {
-      path: '/facilities/canteen',
+      path: '/canteen',
       name: 'Canteen',
       component: Canteen
     },
     {
-      path: '/facilities/hostels',
+      path: '/hostels',
       name: 'Hostels',
       component: Hostels
     },
     {
-      path: '/facilities/banks',
+      path: '/banks',
       name: 'Banks',
       component: Banks
     },
     {
-      path: '/facilities/computercenter',
+      path: '/computercenter',
       name: 'Cc',
       component: Cc
     },
     {
-      path: '/facilities/medicalunit',
+      path: '/medicalunit',
       name: 'Mu',
       component: Mu
     },
     {
-      path: '/facilities/ceam',
+      path: '/ceam',
       name: 'Ceam',
       component: Ceam
     },
     {
-      path: '/facilities/cif',
+      path: '/cif',
       name: 'Cif',
       component: Cif
     },
     {
-      path: '/facilities/GuestHouse',
+      path: '/GuestHouse',
       name: 'Guest',
       component: Guest
     },
     {
-      path: '/facilities/sac',
+      path: '/sac',
       name: 'Sac',
       component: Sac
     },
     {
-      path: '/facilities/post-office',
+      path: '/post-office',
       name: 'Po',
       component: Po
     },
 
     // Information
     {
-      path: '/information/reports',
+      path: '/reports',
       name: 'Reports',
       component: Reports
     },
     {
-      path: '/information/e-prashasan',
+      path: '/e-prashasan',
       name: 'Eprashasan',
       component: Eprashasan
     },
     {
-      path: '/information/accounts',
+      path: '/accounts',
       name: 'Accounts',
       component: Accounts
     },
     {
-      path: '/information/teqip',
+      path: '/teqip',
       name: 'Teqip',
       component: Teqip
     },
     {
-      path: '/information/nba',
+      path: '/nba',
       name: 'Nba',
       component: Nba
     },
     {
-      path: '/information/nirf',
+      path: '/nirf',
       name: 'Nirf',
       component: Nirf
     },
     {
-      path: '/information/rti',
+      path: '/rti',
       name: 'Rti',
       component: Rti
     },
     {
-      path: '/information/publicgrievances',
+      path: '/publicgrievances',
       name: 'Grievances',
       component: Grievances
     },
     {
-      path: '/information/history',
+      path: '/history',
       name: 'History',
       component: History
     },
     {
-      path: '/information/location',
+      path: '/location',
       name: 'Location',
       component: Location
     },
     {
-      path: '/information/more',
+      path: '/more',
       name: 'Moreinfo',
       component: Moreinfo
     },
     {
-      path: '/information/chanakya',
+      path: '/chanakya',
       name: 'Chanakya',
       component: Chanakya
     },
     {
-      path: '/information/careers',
+      path: '/careers',
       name: 'Careers',
       component: Careers
     },
     {
-      path: '/information/tenders',
+      path: '/tenders',
       name: 'Tenders',
       component: Tenders
     },

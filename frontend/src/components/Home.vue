@@ -25,7 +25,7 @@
                 <div v-for="tile_row in section.contents" class="row">
                   <!-- A tile -->
                   <div v-for="tile in tile_row" class="col tile-small">
-                    <a :href="link(section, tile)">
+                    <a :href="link(tile)">
                       <div align="center" class="tile-content">
                         <i :class="['fa fa-2x ' + tile.icon]"></i></br>
                         <p class="tile-small-text">{{ tile.name }}</p>
@@ -60,7 +60,7 @@
                 <div v-for="tile_row in section.contents" class="row">
                   <!-- A tile -->
                   <div v-for="tile in tile_row" class="col tile-small">
-                    <a :href="link(section, tile)">
+                    <a :href="link(tile)">
                       <div align="center" class="tile-content">
                         <i :class="['fa fa-2x ' + tile.icon]"></i></br>
                         <p class="tile-small-text">{{ tile.name }}</p>
@@ -186,9 +186,9 @@ export default {
   },
   methods: {
     genBackendURL,
-    link (section, tile) {
+    link (tile) {
       // For generating links on the frontend
-      let link = '/' + section.section_name.toLowerCase() + '/'
+      let link = '/'
       let suburl = tile.name.toLowerCase().replace(/ /g, "");
       if (suburl.indexOf("event") != -1)
         return link + "events"
