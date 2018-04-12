@@ -38,17 +38,29 @@ class Dean(BaseModel):
 class BOG(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'BOG'
+        verbose_name_plural = 'Board Of Governors'
 
     ROLE_TYPES = (('Chairperson', 'Chairperson'), ('Secretary', 'Secretary'), ('Member', 'Member'))
-    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    name = models.CharField(max_length=512)
     role = models.CharField(choices=ROLE_TYPES, default='Member', max_length=20)
+    designation = models.CharField(max_length=1024)
+    address = models.CharField(max_length=1024)
+    image = models.ImageField(upload_to='administration/bog')
 
     def _role(self):
         return self.role
 
     def _name(self):
-        return self.faculty.name
+        return self.name
+
+    def _role(self):
+        return self.role
+
+    def _designation(self):
+        return self.designation
+
+    def _address(self):
+        return self.address
 
 
 class BwcIfc(BaseModel):

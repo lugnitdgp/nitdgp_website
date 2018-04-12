@@ -6,7 +6,7 @@ class DeanModelAdmin(admin.ModelAdmin):
 
 
 class BOGModelAdmin(admin.ModelAdmin):
-    list_display = ['_role', '_name']
+    list_display = ['_role', '_name', '_designation', '_address']
 
 
 class BwcIfcModelAdmin(admin.ModelAdmin):

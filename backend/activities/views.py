@@ -15,7 +15,6 @@ class SeminarEventViewSet(ListAPIView):
 	serializer_class = SeminarEventSerializer
 
 
-
 class AchievementsViewSet(ListAPIView):
 
 	queryset = Achievement.objects.all()

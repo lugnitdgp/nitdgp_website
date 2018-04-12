@@ -89,7 +89,7 @@ class BOGViewSet(ListAPIView):
         chairperson = self.get_queryset().filter(role='Chairperson')
         secretary = self.get_queryset().filter(role='Secretary')
         members = self.get_queryset().filter(role='Member')
-        return Response({'chairperson': BOGSerializer(chairperson, many=True).data,
-                         'secretary': BOGSerializer(secretary, many=True).data,
-                         'member': BOGSerializer(members, many=True).data
+        return Response({'chairperson': BOGSerializer(chairperson, many=True, context={"request": request}).data,
+                         'secretary': BOGSerializer(secretary, many=True, context={"request": request}).data,
+                         'member': BOGSerializer(members, many=True, context={"request": request}).data
                          })
