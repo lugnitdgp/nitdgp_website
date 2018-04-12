@@ -139,7 +139,7 @@
                             <div class="col" v-for="person in dept.people.faculty">
                               <card-testimonial :name="person.name" :image="person.image" desig="Faculty">
                                 <strong>-- Research Interest --</strong><br>
-                                <span v-html="reduceInterest(person.research_interest)"></span><br>
+                                <span v-html="stripDesc(person.research_interest)"></span><br>
                                 <i class="fa fa-envelope"></i><br>
                                 <strong>{{ person.email }}</strong><br>
                                 <i class="fa fa-address-book"></i><br>
@@ -234,7 +234,7 @@
 import axios from 'axios'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
-import { genBackendURL } from '@/common.js'
+import { genBackendURL,stripDesc } from '@/common.js'
 import TableRenderer from '@/components/TableRenderer'
 import CardCollapse from '@/components/CardCollapse'
 import CardTestimonial from '@/components/CardTestimonial'
@@ -277,19 +277,13 @@ export default {
                  .catch(e => {
                    console.log(e)
                  })
-
          })
          .catch(e => {
            console.log(e)
          })
   },
   methods: {
-    reduceInterest: function(str) {
-      if (str.length < 50)
-        return str.slice(3, -4)
-      else
-        return str.slice(3, 50) + "... More"
-    }
+    stripDesc: stripDesc
   },
   components: {
     LinksPage,
