@@ -152,7 +152,7 @@ export default {
          .catch(e => {
            console.log(e)
          })
-    axios.get(genBackendURL('academics/notices/general'))
+    axios.get(genBackendURL('dashboard/newsfeed'))
          .then(response => {
            this.notices = response.data.results
            const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY",

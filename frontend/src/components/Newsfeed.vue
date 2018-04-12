@@ -12,7 +12,7 @@
         <!--Slides-->
         <div class="carousel-inner" role="listbox">
           <div v-for="(news_slide,index) in notices" class="carousel-item" :class="index == 0 ? 'active' : ''">
-            <div v-for="news in news_slide" class="row card news-row anim2">
+            <a :href="news.file" target="new" v-for="news in news_slide" class="row card news-row anim2">
               <div class="col date-col">
                 <div align="center" class="date-div">
                   <strong class="white-text">
@@ -20,9 +20,9 @@
                   <h6>{{ news.month }}</h6>
                   </strong>
                 </div>
-                <div :href="news.link" class="black-text">{{ news.title }}</div>
+                <div class="black-text">{{ news.title }}</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <!-- End of Slides-->
