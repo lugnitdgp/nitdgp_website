@@ -9,19 +9,14 @@
         <div class="card-body">
           <!-- Row -->
           <div v-for="row in departments" class="row">
-            <!-- Col -->
-            <div v-for="col in row" class="col tile-small">
-              <!-- Tile -->
-              <a :href="getDeptURL(col.short_code)">
-                <div class="tile-content" align="center">
-                  <i class="fa fa-2x">{{ col.short_code }}</i>
-                  <br>
-                  <p class="tile-small-text">{{ col.name }}</p>
-                </div>
-              </a>
-              <!-- Tile -->
-            </div>
-            <!-- /Col -->
+            <!-- A tile -->
+            <small-tile v-for="col in row"
+              :title="col.short_code"
+              :desc="col.name"
+              :link="getDeptURL(col.short_code)"
+              :key="col.short_code">
+            </small-tile>
+            <!-- /End tile -->
           </div>
           <!-- /Row -->
         </div>
@@ -33,6 +28,7 @@
 
 <script>
 import axios from 'axios'
+import SmallTile from '@/components/SmallTile'
 import { baseURL, genBackendURL } from '@/common.js'
 
 export default {
@@ -80,6 +76,9 @@ export default {
          .catch(e => {
            console.log(e)
          })
+  },
+  components: {
+    SmallTile
   }
 }
 </script>

@@ -24,14 +24,12 @@
                 <!-- A row of tiles -->
                 <div v-for="tile_row in section.contents" class="row">
                   <!-- A tile -->
-                  <div v-for="tile in tile_row" class="col tile-small">
-                    <a :href="link(tile)">
-                      <div align="center" class="tile-content">
-                        <i :class="['fa fa-2x ' + tile.icon]"></i></br>
-                        <p class="tile-small-text">{{ tile.name }}</p>
-                      </div>
-                    </a>
-                  </div>
+                  <small-tile v-for="tile in tile_row"
+                    :icon="tile.icon"
+                    :desc="tile.name"
+                    :link="link(tile)"
+                    :key="tile.name">
+                  </small-tile>
                   <!-- End of a tile -->
                 </div>
                 <!-- End of a row of tiles -->
@@ -59,14 +57,12 @@
                 <!-- A row of tiles -->
                 <div v-for="tile_row in section.contents" class="row">
                   <!-- A tile -->
-                  <div v-for="tile in tile_row" class="col tile-small">
-                    <a :href="link(tile)">
-                      <div align="center" class="tile-content">
-                        <i :class="['fa fa-2x ' + tile.icon]"></i></br>
-                        <p class="tile-small-text">{{ tile.name }}</p>
-                      </div>
-                    </a>
-                  </div>
+                  <small-tile v-for="tile in tile_row"
+                    :icon="tile.icon"
+                    :desc="tile.name"
+                    :link="link(tile)"
+                    :key="tile.name">
+                  </small-tile>
                   <!-- End of a tile -->
                 </div>
                 <!-- End of a row of tiles -->
@@ -87,12 +83,14 @@ import { genBackendURL } from '@/common.js'
 
 import Carousel from './Carousel';
 import Newsfeed from './Newsfeed';
+import SmallTile from './SmallTile';
 
 export default {
   name: 'Home',
   components: {
-    'Carousel': Carousel,
-    'Newsfeed': Newsfeed
+    Carousel,
+    Newsfeed,
+    SmallTile
   },
   data () {
     return {
