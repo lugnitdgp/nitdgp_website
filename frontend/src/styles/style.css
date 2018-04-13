@@ -614,7 +614,7 @@ hr.style4:after {
   background: linear-gradient(#ECEFF1,#B0BEC5);
 }
 /* card-title color*/
-.card-1 div.tile-title{
+.card-1 a.tile-title{
   background: linear-gradient(to right,#4A148C,#7E57C2);
 }
 /* title-text color*/
@@ -636,7 +636,7 @@ hr.style4:after {
   background: linear-gradient(#ECEFF1,#B0BEC5);
 }
 /* card-title color*/
-.card-2 div.tile-title{
+.card-2 .tile-title{
   background: linear-gradient(to right,#B71C1C,#F44336);
 }
 /* title-text color*/
@@ -658,7 +658,7 @@ hr.style4:after {
   background: linear-gradient(#ECEFF1,#B0BEC5);
 }
 /* card-title color*/
-.card-3 div.tile-title{
+.card-3 a.tile-title{
   background: linear-gradient(to right,#000000,#424242);
 }
 /* title-text color*/
@@ -680,7 +680,7 @@ hr.style4:after {
   background: linear-gradient(#ECEFF1,#B0BEC5);
 }
 /* card-title color*/
-.card-4 div.tile-title{
+.card-4 a.tile-title{
   background: linear-gradient(to right,#006064,#0097A7);
 }
 /* title-text color*/
@@ -702,7 +702,7 @@ hr.style4:after {
   background: linear-gradient(#ECEFF1,#B0BEC5);
 }
 /* card-title color*/
-.card-5 div.tile-title{
+.card-5 a.tile-title{
   background: linear-gradient(to right,#880E4F,#D81B60);
 }
 /* title-text color*/
@@ -740,20 +740,6 @@ hr.style4:after {
 .l1-dep .l1-card div.tile-content{
   color: #ffffff;
 }
-/*/level 1 dep*/
-/*Level 2 dep*/
-/*title*/
-/* title color*/
-/*color fac*/
-/* /.color fac */
-/*color 1 bgs*/
-/*/.color 1*/
-/*color 2 reds*/
-/*/.color 2*/
-/*text on color -1*/
-/*/.text on color -1*/
-/*/level 2 dep*/
-/*Level 2 dep*/
 .l3-fac .l3-card {
   background: linear-gradient(#ECEFF1,#B0BEC5);
 }

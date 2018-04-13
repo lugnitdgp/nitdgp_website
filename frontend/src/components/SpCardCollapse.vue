@@ -1,9 +1,8 @@
 <template>
   <div class="card card-cascade narrower" :class="containerclass">
-    <a data-toggle="collapse" :href="'#' + bodyId">
-      <div class="view gradient-card-header tile-title">
-        <slot name="header"></slot>
-      </div>
+    <a class="view gradient-card-header tile-title"
+      data-toggle="collapse" :href="'#' + bodyId">
+      <slot name="header"></slot>
     </a>
     <div class="card-body collapse" :class="bodyclass + (show != true ? ' ' : ' show')" :id="bodyId">
       <slot></slot>
