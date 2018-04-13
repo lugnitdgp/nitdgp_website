@@ -14,27 +14,22 @@
         <div v-for="row in results" class="row big-row">
           <!-- A section -->
           <div v-for="section in row" class="col big-col">
-            <div :class="['card card-cascade narrower card-' + section.priority]">
-              <a data-toggle="collapse" :href="'#collapse'+section.section_name">
-                <div class="view gradient-card-header tile-title">
-                <p class="tile-title-text">{{ section.section_name }}</p>
-                </div>
-              </a>
-              <div class="card-body text-center collapse" :id="'collapse'+section.section_name">
-                <div v-for="tile_row in section.contents" class="row">
-                  <small-tile v-for="tile in tile_row"
-                    :icon="tile.icon"
-                    :desc="tile.name"
-                    :link="link(tile)"
-                    :key="tile.name" />
-                </div>
+            <sp-card-collapse bodyclass="text-center" show="false"
+              :containerclass="'card-' + section.priority">
+              <p slot="header" class="tile-title-text">{{ section.section_name }}</p>
+              <div v-for="tile_row in section.contents" class="row">
+                <small-tile v-for="tile in tile_row"
+                  :icon="tile.icon"
+                  :desc="tile.name"
+                  :link="link(tile)"
+                  :key="tile.name" />
               </div>
-            </div>
+            </sp-card-collapse>
           </div>
-          <!-- End of a section -->
         </div>
-        <!-- End of big row of sections -->
+        <!-- End of a section -->
       </div>
+      <!-- End of big row of sections -->
     </div>
     <div class="page-content-container l0 brow">
       <div class="all-tiles">
@@ -42,26 +37,17 @@
         <div v-for="row in results" class="row big-row">
           <!-- A section -->
           <div v-for="section in row" class="col big-col">
-            <div :class="['card card-cascade narrower card-' + section.priority]">
-              <a data-toggle="collapse" :href="'#collapse1'+section.section_name">
-                <div class="view gradient-card-header tile-title">
-                <p class="tile-title-text">{{ section.section_name }}</p>
-                </div>
-              </a>
-              <div class="card-body text-center collapse show" :id="'collapse1'+section.section_name">
-                <!-- A row of tiles -->
-                <div v-for="tile_row in section.contents" class="row">
-                  <!-- A tile -->
-                  <small-tile v-for="tile in tile_row"
-                    :icon="tile.icon"
-                    :desc="tile.name"
-                    :link="link(tile)"
-                    :key="tile.name" />
-                  <!-- End of a tile -->
-                </div>
-                <!-- End of a row of tiles -->
+            <sp-card-collapse bodyclass="text-center"
+              :containerclass="'card-' + section.priority">
+              <p slot="header" class="tile-title-text">{{ section.section_name }}</p>
+              <div v-for="tile_row in section.contents" class="row">
+                <small-tile v-for="tile in tile_row"
+                  :icon="tile.icon"
+                  :desc="tile.name"
+                  :link="link(tile)"
+                  :key="tile.name" />
               </div>
-            </div>
+            </sp-card-collapse>
           </div>
           <!-- End of a section -->
         </div>
@@ -75,16 +61,18 @@
 import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
-import Carousel from './Carousel';
-import Newsfeed from './Newsfeed';
-import SmallTile from './SmallTile';
+import Carousel from './Carousel'
+import Newsfeed from './Newsfeed'
+import SmallTile from './SmallTile'
+import SpCardCollapse from './SpCardCollapse'
 
 export default {
   name: 'Home',
   components: {
     Carousel,
     Newsfeed,
-    SmallTile
+    SmallTile,
+    SpCardCollapse
   },
   data () {
     return {
