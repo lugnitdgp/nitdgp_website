@@ -12,7 +12,7 @@
             <!-- Col -->
             <div v-for="col in row" class="col tile-small">
               <!-- Tile -->
-              <a :href="'http://172.16.20.3:8080/department/' + col.short_code">
+              <a :href="getDeptURL(col.short_code)">
                 <div class="tile-content" align="center">
                   <i class="fa fa-2x">{{ col.short_code }}</i>
                   <br>
@@ -33,13 +33,18 @@
 
 <script>
 import axios from 'axios'
-import { genBackendURL } from '@/common.js'
+import { baseURL, genBackendURL } from '@/common.js'
 
 export default {
   name: 'Departments',
   data () {
     return {
       departments: []
+    }
+  },
+  methods: {
+    getDeptURL: function (short_code) {
+      return baseURL + '/department/' + short_code;
     }
   },
   created () {
