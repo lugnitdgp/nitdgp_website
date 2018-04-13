@@ -1,277 +1,69 @@
 <template>
-	<div>
-		<h1>
-			<a href="http://nitdgp.ac.in/BOG.php">BOG on the old web</a>
-		</h1>
-		<div class="carousel-inner person-list">
-      <div class="carousel-item active">
-        <div class="row">
+  <links-page>
+    <card title="Board of Governors">
+      <div class="carousel-inner person-list" role="listbox">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col black-text" v-for="person in bogs.chairperson">
+              <card-testimonial :image="person.image" :name="person.name"
+                :desig="person.role">
+                <strong>-- {{ person.designation }} --</strong></br>
+                {{ person.address }}</br>
+              </card-testimonial>
+            </div>
+            <div class="col black-text" v-for="person in bogs.secratary">
+              <card-testimonial :image="person.image" :name="person.name"
+                :desig="person.role">
+                <strong>-- {{ person.designation }} --</strong></br>
+                {{ person.address }}</br>
+              </card-testimonial>
+            </div>
+            <div class="col black-text" v-for="person in bogs.member">
+              <card-testimonial :image="person.image" :name="person.name"
+                :desig="person.role">
+                <strong>-- {{ person.designation }} --</strong></br>
+                {{ person.address }}</br>
+              </card-testimonial>
+            </div>
 
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card testimonial-card">
-              <div class="card-up">
-              </div>
-              <div class="avatar mx-auto">
-                <img src="/static/img/hodcse.jpg" class="rounded-circle img-responsive">
-              </div>
-              <div class="card-body-in">
-                <h4 class="card-title mt-1"><strong>Dr. Sanyal Gautam</strong></h4>
-                <hr>
-                <p class="min-profile">
-                  <strong>-- Dean (Faculty Welfare) --</strong><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>gautam.sanyal@cse.nitdgp.ac.in<br>nitgsanyal@gmail.com</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-9434788006</strong></br>
-                  <strong>+91-8465478456</strong></br>
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-	</div>
+    </card>
+  </links-page>
 </template>
+
 <script>
+import axios from 'axios'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import CardTestimonial from '@/components/CardTestimonial'
+import { range, genBackendURL } from '@/common.js'
+
 export default {
-  name: 'Bog',
+  name: "Bog",
+  data () {
+    return {
+      bogs: {}
+    }
+  },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL("administration/bog"))
+         .then(response => {
+           this.bogs = response.data
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })
+  },
+  methods: {
+    range: range
+  },
+  components: {
+    LinksPage,
+    Card,
+    CardTestimonial
   }
 }
 </script>
