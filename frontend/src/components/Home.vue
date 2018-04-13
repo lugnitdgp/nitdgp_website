@@ -21,18 +21,13 @@
                 </div>
               </a>
               <div class="card-body text-center collapse" :id="'collapse'+section.section_name">
-                <!-- A row of tiles -->
                 <div v-for="tile_row in section.contents" class="row">
-                  <!-- A tile -->
                   <small-tile v-for="tile in tile_row"
                     :icon="tile.icon"
                     :desc="tile.name"
                     :link="link(tile)"
-                    :key="tile.name">
-                  </small-tile>
-                  <!-- End of a tile -->
+                    :key="tile.name" />
                 </div>
-                <!-- End of a row of tiles -->
               </div>
             </div>
           </div>
@@ -61,8 +56,7 @@
                     :icon="tile.icon"
                     :desc="tile.name"
                     :link="link(tile)"
-                    :key="tile.name">
-                  </small-tile>
+                    :key="tile.name" />
                   <!-- End of a tile -->
                 </div>
                 <!-- End of a row of tiles -->

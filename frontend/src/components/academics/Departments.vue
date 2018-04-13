@@ -1,34 +1,24 @@
 <template>
   <div class="page-content-container l1-dep">
-    <!-- all-tiles -->
     <div class="all-tiles row big-row">
-      <div class="col big-col card card-cascade narrower card-2">
-        <div class="view gradient-card-header tile-title">
-          <p class="tile-title-text">Departments</p>
+      <sp-card containerclass="col big-col card-2">
+        <p slot="header" class="tile-title-text">Departments</p>
+        <div v-for="row in departments" class="row">
+          <small-tile v-for="col in row"
+            :title="col.short_code"
+            :desc="col.name"
+            :link="getDeptURL(col.short_code)"
+            :key="col.short_code" />
         </div>
-        <div class="card-body">
-          <!-- Row -->
-          <div v-for="row in departments" class="row">
-            <!-- A tile -->
-            <small-tile v-for="col in row"
-              :title="col.short_code"
-              :desc="col.name"
-              :link="getDeptURL(col.short_code)"
-              :key="col.short_code">
-            </small-tile>
-            <!-- /End tile -->
-          </div>
-          <!-- /Row -->
-        </div>
-      </div>
+      </sp-card>
     </div>
-    <!--/all-tiles-->
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import SmallTile from '@/components/SmallTile'
+import SpCard from '@/components/SpCard'
 import { baseURL, genBackendURL } from '@/common.js'
 
 export default {
@@ -78,7 +68,8 @@ export default {
          })
   },
   components: {
-    SmallTile
+    SmallTile,
+    SpCard
   }
 }
 </script>
