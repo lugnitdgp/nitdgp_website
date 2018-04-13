@@ -1,6 +1,6 @@
 <template>
   <div class="page-content-container l2-idep">
-    <div class="card card-cascade narrower l2-card">
+    <div v-if="dept" class="card card-cascade narrower l2-card">
       <div class="view gradient-card-header tile-title" >
         <p class="tile-title-text">Department of {{ dept.short_code }}</p>
       </div>
@@ -243,7 +243,7 @@ export default {
   name: "Department",
   data () {
     return {
-      dept: {},
+      dept: undefined,
       research_header: [
         'Collaborating Institute / Organization',
         'Areas of Collaboration',
@@ -265,18 +265,17 @@ export default {
            let departments = response.data.results
            let i
            for (i = 0; i < departments.length; i++) {
-                if (this.$route.params.short_code == departments[i].short_code)
-                  break;
-            }
-            axios.get(genBackendURL("department/"+departments[i].id))
-                 .then(response => {
-                   console.log(response);
-                   this.dept = response.data
-                   this.$emit('hideloader', true)
-                 })
-                 .catch(e => {
-                   console.log(e)
-                 })
+             if (this.$route.params.short_code == departments[i].short_code)
+               break;
+           }
+           axios.get(genBackendURL("department/"+departments[i].id))
+                .then(response => {
+                  this.dept = response.data
+                  this.$emit('hideloader', true)
+                })
+                .catch(e => {
+                  console.log(e)
+                })
          })
          .catch(e => {
            console.log(e)
