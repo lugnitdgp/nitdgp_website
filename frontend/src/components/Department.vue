@@ -293,3 +293,209 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .l2-idep .l2-card .down-content .big-list .accordion .card-header{
+    padding: 5px 5px! important;
+  }
+  .l2-idep .l2-card .down-content .big-list .mb-0{
+    font-size: 75%;
+  }
+  .l2-idep .l2-card{
+    margin-top: -1em;
+  }
+  .l2-idep .l2-card .down-content .tab-pane .tab-content{
+    background: none;border:dotted 1px #ECEFF1;
+  }
+  .l2-idep .l2-card {
+    background: linear-gradient(#ECEFF1,#B0BEC5);
+  }
+  .l2-idep .l2-card div.tile-title{
+    background: linear-gradient(to right,#001333,#26C6DA);
+  }
+  .l2-idep .l2-card p.tile-title-text{
+    color: #ffffff;
+  }
+  .l2-idep .l2-card .down-content{
+    background-color:#ffffff;
+  }
+  .l2-idep .l2-card .down-content .pane-text{
+    text-align: justify;
+    color:#000000;
+  }
+  .l2-idep .l2-card .down-content .pane-title{
+    text-align: justify;
+    color:#000000;
+  }
+  .l2-idep .l2-card .down-content .big-list h5{
+    color:#000000;
+  }
+  .l2-idep{
+    min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%;
+  }
+  .l2-idep .card-body .down-content .caros .carousel-title{
+    font-size: 180%;
+  }
+  .l2-idep .card-body .down-content .carousel-item .col{
+    width: 100%;margin: 5px;max-width: 500px ! important;min-width: 200px !important;
+  }
+  .l2-idep .card-body .down-content .avatar{
+    max-height: 100px;max-width: 100px;
+  }
+  .l2-idep .card-body .down-content .min-profile{
+    font-size:55%;
+  }
+  .l2-idep .card-body .down-content .testimonial-card .card-title{
+    font-size: 100%;
+  }
+  .l2-idep .card-body .down-content .testimonial-card .desig{
+    font-size: 100%;
+  }
+  .l2-idep .card-body .down-content #li7 .col{
+    min-width: 100%;
+  }
+  .l2-idep .card-body .up-content .classic-tabs .nav-link{
+    font-size: 100%;
+  }
+  .l2-idep .card-body .up-content .classic-tabs .nav-item{
+    margin: 0;
+  }
+  .l2-idep .card-body .up-content .classic-tabs .nav-item a{
+    font-weight: bold;
+    padding:10px;
+  }
+  .l2-idep .card-body .down-content #li2 .accordion .card-header{
+    border:solid 1px black;
+  }
+  .l2-idep .card-body .down-content .table .th-lg{
+    min-width: 5px;
+  }
+  .l2-idep .card-body .down-content .table td{
+    font-weight: bold;
+  }
+  .l2-idep .card-body .down-content .table th{
+    font-weight: bold;
+  }
+  .l2-idep .card-body .down-content #li3 h6{
+    margin-top: -1em;
+  }
+  .l2-idep .card-body .down-content #li3 .col{
+    padding-left: 250px;padding-right: 250px;
+  }
+  .l2-idep .card-body .down-content .testimonial-card hr{
+    margin:5px;
+  }
+  .l2-idep .card-body .down-content .carousel-inner .col{
+    max-width: 20%;margin: 2px;
+  }
+  .l2-idep .card-body .down-content .caros{
+    margin-bottom: -45px !important;
+  }
+  .l2-idep .card-body .down-content .card-up{
+    height: 80px;
+  }
+  .l2-idep .card-body .down-content .card-body-in .card-title{
+    font-size: 75%;
+  }
+  .l2-idep .card-body .down-content .card-body-in h6{
+    font-size: 75%;
+  }
+  .l2-idep .card-body .down-content .avatar{
+    height: 80px;width: 80px;
+  }
+  .l2-idep .card-body .down-content .min-profile{
+    font-size:55%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .l2-idep .card-body .down-content #li4 .controls-top{
+    margin-bottom: 10px;
+  }
+  .l2-idep #li4 .person-list .col{
+    max-width: 220px!important;min-width: 220px!important;
+  }
+  .l2-idep .card-body .down-content #li4 .controls-top i{
+    font-size: 60%;margin-top: -20px;
+  }
+  .l2-idep .card-body .down-content #li4 h6{
+    margin-top: -1em;
+  }
+  .l2-idep .card-body .down-content #li4 hr{
+    margin-left: 2em;margin-right: 2em;
+  }
+  .l2-idep .card-body .down-content .table-wrapper-2{
+    display: block;max-height: 2500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  /*.l2-idep .card-body .down-content #li5 .card{
+    margin-top: 15px;
+    background-color: #ffffff;
+  }
+  .l2-idep .card-body .down-content #li6 .card{
+    margin-top: 15px;
+    background-color: #ffffff;
+  }*/
+  .l2-idep .card-body .down-content #li2 th{
+    background-color: #E0E0E0;
+    padding: 2px;
+  }
+  .l2-idep .card-body .down-content #li2 td{
+    background-color: #F5F5F5;
+    padding: 2px;
+  }
+  .l2-idep .card-body .down-content th{
+    background-color: #E0E0E0;
+    padding: 5px;
+  }
+  .l2-idep .card-body .down-content td{
+    background-color: #F5F5F5;
+    padding: 5px;
+  }
+  .l2-idep .card-body .down-content #li7 .tab-content{
+    font-size: 80%;
+  }
+  .l2-idep .card-body{
+    margin-top: -0.5em;margin-bottom: -0.5em;margin-left: -0.5em;margin-right:-0.5em;
+  }
+  .l2-idep .tile-title-text{
+    letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
+  }
+  .l2-idep .tile-title{
+    height: 1px;
+  }
+  .l2-idep .tile-small-text{
+    font-size: 90%;font-weight: bold;
+  }
+  .l2-idep .card-body .down-content #li4 .card-up{
+    background: linear-gradient(to right,#001333,#26C6DA);
+  }
+  .l2-idep .card-body .down-content #li3 .card-up{
+    background: linear-gradient(to right,#001333,#26C6DA);
+  }
+  .l2-idep .card-body .up-content .classic-tabs{
+    background-color: #001333;
+  }
+  .l2-idep .down-content .pills-secondary .nav-link.active{
+    background-color: #001333 !important;
+    color: #ECEFF1;
+  }
+  .l2-idep .down-content .tab-pane .nav-link{
+    background-color: #E0E0E0;
+    color: #78909C;
+  }
+  .l2-idep .card-body .down-content #li4 .controls-top .btn-floating{
+    background-color: #001333;
+    height: 25px;width: 25px;margin: 2px ! important;
+  }
+  .l2-idep .card-body .down-content #li4 .carousel-indicators li{
+    background-color: #001333;
+  }
+  .l2-idep .card-body .down-content #li4 .carousel-indicators li.active{
+    background-color: #001333;
+  }
+  .l2-idep .white-text{
+    color:#000000 !important;
+  }
+  .l2-idep .card-body .down-content .carousel-title{
+    font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;font-size: 150%;color:#000000;
+  }
+</style>
