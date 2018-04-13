@@ -1,7 +1,7 @@
 <template>
   <div class="card card-cascade narrower" :class="containerclass">
     <div class="view gradient-card-header tile-title">
-      <p class="tile-title-text">{{ title }}</p>
+      <slot name="header"></slot>
     </div>
     <div class="card-body" :class="bodyclass">
       <slot></slot>
@@ -16,10 +16,6 @@ export default {
     containerclass: {
       required: false,
       default: undefined
-    },
-    title: {
-      required: true,
-      default: "Heading Default"
     },
     bodyclass: {
       required: false,

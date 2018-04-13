@@ -1,7 +1,9 @@
 <template>
   <div class="page-content-container l2-idep">
-    <sp-card v-if="dept" :title="'Department of ' + dept.short_code"
-      containerclass="l2-card" bodyclass="text-center">
+    <sp-card v-if="dept" containerclass="l2-card" bodyclass="text-center">
+      <p slot="header" class="tile-title-text">
+        Department of {{ dept.short_code }}
+      </p>
       <div class="tabs-wrapper up-content mx-auto">
         <ul class="nav classic-tabs" role="tablist">
           <li class="nav-item">
