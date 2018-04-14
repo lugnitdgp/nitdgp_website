@@ -2,16 +2,16 @@
   <footer class="page-footer center-on-small-only">
     <div class="container" id="footer-container">
       <div class="container-fluid" align="center">
-        <div class="row">
-          <div v-for="logo in logos" class="container-fluid logo-container">
-            <a :href="logo.href"><img :src="['/static/img/' + logo.filename]"></a>
-          </div>
+        <div class="row quick-links-row quick-links-container">
+          <a v-for="link in links" :href="link.href" class="container-fluid">
+            {{ link.name }}
+          </a>
         </div>
-        <hr class="style4">
-        <div class="row quick-links-row">
-          <div v-for="link in links" class="container-fluid quick-links-container">
-            <a :href="link.href">{{ link.name }}</a>
-          </div>
+        <div class="row">
+          <a v-for="logo in logos" :href="logo.href"
+            class="container-fluid logo-container">
+            <img :src="['/static/img/' + logo.filename]">
+          </a>
         </div>
       </div>
     </div>
@@ -56,12 +56,10 @@ export default {
 </script>
 
 <style scoped>
-  #footer-container > .container-fluid > .row:first-child {
+  #footer-container > .container-fluid > .row:last-child {
+    padding: 3px;
+    margin-top: 20px;
     background-color: #fff;
-    padding:5px;
     border-radius: 10px;
-  }
-  .logo-container:nth-child(6) a img {
-    padding-top: 10%;
   }
 </style>
