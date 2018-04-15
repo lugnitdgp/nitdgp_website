@@ -10,6 +10,20 @@ class DepartmentListSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'short_code',)
 
 
+class StaffSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Staff
+        fields = ('name', 'designation')
+
+
+class StudentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Student
+        fields = ('title', 'file')
+
+
 class FacultySerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -77,6 +91,8 @@ class FacultyRolesSerializer(serializers.ModelSerializer):
 class PeopleSerializer(serializers.ModelSerializer):
 
     faculty = serializers.SerializerMethodField()
+    staff = serializers.SerializerMethodField()
+    students = serializers.SerializerMethodField()
 
     def get_faculty(self, obj):
         faculty_list = Faculty.objects.filter(department=self.context['obj'].id)
@@ -88,9 +104,17 @@ class PeopleSerializer(serializers.ModelSerializer):
 
         return data
 
+    def get_staff(self, obj):
+        staff_list = Staff.objects.filter(department=self.context['obj'].id)
+        return StaffSerializer(staff_list, many=True, context=self.context).data
+
+    def get_students(self, obj):
+        student_list = Student.objects.filter(department=self.context['obj'].id)
+        return StudentSerializer(student_list, many=True, context=self.context).data
+
     class Meta:
         model = Faculty
-        fields = ('faculty', )
+        fields = ('faculty', 'staff', 'students')
 
 
 class MainSerializer(serializers.ModelSerializer):

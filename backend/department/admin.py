@@ -10,6 +10,10 @@ class FacultyModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department']
 
 
+class StaffModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_designation', '_department']
+
+
 class ResearchModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved', '_date']
 
@@ -59,8 +63,14 @@ class DepartmentNewsModelAdmin(admin.ModelAdmin):
     list_display = ['_department', '_title', '_date']
 
 
+class StudentModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_department', '_file']
+
+
 admin.site.register(Department)
 admin.site.register(Faculty, FacultyModelAdmin)
+admin.site.register(Staff, StaffModelAdmin)
+admin.site.register(Student, StudentModelAdmin)
 admin.site.register(Research, ResearchModelAdmin)
 admin.site.register(Project, ProjectModelAdmin)
 admin.site.register(Roles, RolesModelAdmin)

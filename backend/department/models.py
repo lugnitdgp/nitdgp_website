@@ -45,6 +45,50 @@ class Faculty(BaseModel):
         return self.department.name
 
 
+class Staff(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Staff'
+        ordering = ('name', )
+
+    name = models.CharField(max_length=512)
+    designation = models.CharField(max_length=512)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+    def _department(self):
+        return self.department.name
+
+    def _designation(self):
+        return self.designation
+
+
+def rename_student(instance, filename):
+
+    return 'department/{0}/students/{1}'.format(instance.department.short_code, filename)
+
+class Student(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Students'
+        ordering = ('-created_at', )
+
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to=rename_student)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
+
+    def _department(self):
+        return self.department.name
+
+    def _file(self):
+        return self.file
+
+
 class Research(BaseModel):
 
     class Meta:
