@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^information/rti/$', RTIViewSet.as_view(), name='view-rti'),
     url(r'^information/nirf/$', NIRFViewSet.as_view(), name='view-nirf'),
     url(r'^information/nba/$', NBAViewSet.as_view(), name='view-nba'),
+    url(r'^information/more/$', MoreViewSet.as_view(), name='view-more'),
 
     ]

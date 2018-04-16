@@ -60,3 +60,9 @@ class NBAViewSet(ListAPIView):
 
     queryset = NBA.objects.all().order_by('-updated_at')
     serializer_class = NBASerializer
+
+
+class MoreViewSet(ListAPIView):
+
+    queryset = More.objects.all()
+    serializer_class = MoreSerializer
