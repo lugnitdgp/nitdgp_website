@@ -294,9 +294,6 @@ hr.style4:after {
   background-color: #F5F5F5;
   padding: 5px;
 }
-.pane-title{
-  margin-left: -10px;
-}
 .l3-fac .l3-card .downc .big-list .accordion .card-header{
   padding: 5px 5px! important;
 }
@@ -487,12 +484,6 @@ hr.style4:after {
 .l0 .fa-2x{
   font-size: 210%;padding-bottom: 2px;
 }
-.newscaro .carousel-inner .view{
-  max-height: 400px;
-}
-.newscaro .carousel-inner .view img{
-  min-width: 100%;
-}
 .hr-white{
   border-top:dashed 1px #ECEFF1;
 }
@@ -521,7 +512,7 @@ hr.style4:after {
 }
 .anim1{
   animation-duration: 1s;
-  animation-name: bounceInDown;
+  animation-name: fadeIn;
   animation-delay: 0s;
   animation-timing-function: initial;
   animation-iteration-count: initial;
@@ -552,9 +543,6 @@ hr.style4:after {
   letter-spacing: 2px;font-weight: bold;
   margin-top: -1.8em;
 }
-.newscaro .card-pic #carousel-home{
-  margin-top: -1.8em;
-}
 .newscaro .card-news .card-body{
   margin-top: -1em!important;
 }
@@ -582,7 +570,7 @@ hr.style4:after {
 }
 .newscaro .card-news {
   height: 400px;padding-top: 1%;
-  background: linear-gradient(#001333,#3F51B5);
+  background: linear-gradient(#001333,#039BE5);
 }
 /* card-title color*/
 .newscaro .card-news div.tile-title{
@@ -596,11 +584,6 @@ hr.style4:after {
 .newscaro .card-news div.tile-content{
   color: #ffffff;
 }
-.newscaro .card-pic {
-  max-height: 400px;padding-top: 1%;
-  background: linear-gradient(#001333,#3F51B5);
-}
-
 /*/.all-cards*/
 .l0 .big-row{
   padding: 0.2em;

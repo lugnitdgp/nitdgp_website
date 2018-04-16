@@ -2,7 +2,7 @@
   <div class="card card-cascade narrower card-pic">
     <div class="card-body">
       <!-- Carousel Wrapper -->
-      <div id="carousel-home" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+      <div id="carousel-home" class="carousel slide caro-wrap" data-ride="carousel" data-interval="6000">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li v-for="(slide,index) in slides" data-target="#carousel-home" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
@@ -16,8 +16,10 @@
               <div class="mask"></div>
             </div>
             <div class="carousel-caption">
-              <h3 class="h3-responsive">{{ slide.primary_caption }}</h3>
-              <p>{{ slide.secondary_caption }}</p>
+              <h5 class="h5-responsive">
+                <strong>{{ slide.primary_caption }}</strong><br>
+                {{ slide.secondary_caption }}
+              </h5>
             </div>
           </div>
         </div>
@@ -41,3 +43,39 @@ export default {
   props: ['slides']
 }
 </script>
+<style>
+  @media screen and (max-width: 1200px) {
+    .card-pic{
+      height: 180px!important;
+    }
+    .card-pic .caro-wrap{
+      height: 160px!important;
+    }
+  }
+  .card-pic {
+    height: 400px;
+    background: linear-gradient(#001333,#039BE5);
+  }
+  .card-pic .card-body{
+    padding-left: 10px!important;padding-right: 10px!important;padding-top: 10px!important;
+  }
+  .card-pic .caro-wrap{
+    height: 380px;
+    background: linear-gradient(#03A9F4,#039BE5,#039BE5,#039BE5);
+  }
+  .card-pic .carousel-indicators{
+    margin-bottom: -0.2em!important;
+  }
+  .card-pic .carousel-inner{
+    width: 100%!important;height: 100%;
+  }
+  .card-pic .view{
+    height: 100%;margin: 0!important;padding: 0!important;
+  }
+  .card-pic .carousel-item{
+    height: 100%;
+  }
+  .card-pic .carousel-caption{
+    margin-bottom: -2em!important;
+  }
+</style>
