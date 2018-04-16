@@ -33,9 +33,9 @@
           <li class="nav-item">
             <a class="nav-link waves-light" data-toggle="tab" href="#li9" role="tab">Contact Us</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link waves-light" data-toggle="tab" href="#li10" role="tab">Photo Gallery</a>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="tab-content card down-content">
@@ -158,11 +158,30 @@
             </div>
             <div class="tab-pane fade" id="p4l2" role="tabpanel">
               <div class="container-fluid">
-                <h1>Same as faculty</h1>
+                <div class="row">
+                  <div class="col" v-for="person in dept.people.staff">
+                    <card-testimonial :name="person.name" :image="person.image" :desig="person.designation">
+                      <!-- <strong>-- Research Interest --</strong><br>
+                      <span v-html="stripDesc(person.research_interest)"></span><br>
+                      <i class="fa fa-envelope"></i><br>
+                      <strong>{{ person.email }}</strong><br>
+                      <i class="fa fa-address-book"></i><br>
+                      <strong>+91-{{ person.mobile }}</strong></br>
+                      <span class="grey-text">Joined the Institute in {{ person.joining_year }}
+                      </span> -->
+                    </card-testimonial>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="tab-pane fade" id="p4l3" role="tabpanel">
-              <h1>List of students year wise (just names)</h1>
+              <ul>
+                <li v-for="link in dept.people.students">
+                  <a target="new" :href="link.file">
+                    {{ link.title }}
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -219,6 +238,16 @@
           </div>
         </div>
 
+        <div class="tab-pane fade big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
+          <h3 class="pane-title" align="left">Activities</h3>
+          <h4 class="white-text"><strong>Programmes Hosted by the Department</strong></h4>
+          <div class="card">
+            <div class="card-body">
+              <table-renderer :theader="activities_header" :table="dept.activities"></table-renderer>
+            </div>
+          </div>
+        </div>
+
         <div class="tab-pane fade big-list" id="li9" role="tabpanel" aria-labelledby="li9-list">
           <p class="white-text" align="center" v-html="dept.contact_us">
           </p>
@@ -254,6 +283,12 @@ export default {
         'Faculty Members Involved',
         'Funding',
         'Year'
+      ],
+      activities_header: [
+        'Programme',
+        'Speakers',
+        'Start Date',
+        'End Date',
       ]
     }
   },
