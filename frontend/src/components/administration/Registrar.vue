@@ -3,7 +3,7 @@
 	  <h1 class="name-title" align="center"> MEET OUR REGISTRAR </h1>
 	  <div class="card testimonial-card">
       <div class="card-up">
-        <img src="/static/img/director_image.jpg" >
+        <!-- <img src="/static/img/nitdgp_logo.png" > -->
       </div>
       <div class="card-body">
         <h3 class="mt-1 white-text">

@@ -5,7 +5,7 @@
       <a class="card-header white-text">Health Care</a>
       <div class="card-body">
         <div style="text-align: center;">
-          <img style="max-height:200px;width: 500px;max-width: 100%" src="http://nitdgp.ac.in/images/health_centre.jpg" width="100%"><br>
+          <img style="max-height:200px;width: 500px;max-width: 100%" src="/static/img/health_center.jpg" width="100%"><br>
         </div>
         There is a Medical Unit-cum-Hospital with arrangement for both indoor and outdoor treatment of the patients. The medical unit is served by two resident doctors and other medical staff round the clock. The students and the staff with their family members are
         benefited by the services of the Medical Unit. For any specialised treatment the patients are referred to the State Government

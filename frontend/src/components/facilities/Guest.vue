@@ -11,7 +11,7 @@
       <a class="card-header white-text">Guest House</a>
       <div class="card-body">
 	<div style="text-align: center;">
-	  <img style="max-height:300px;width: 500px;max-width: 100%" src="http://nitdgp.ac.in/images/guest_house.jpg" width="100%"><br>
+	  <img style="max-height:300px;width: 500px;max-width: 100%" src="/static/img/guest_house.jpg" width="100%"><br>
 	</div>
 	The Institute Guest House standing beside the Director's Bungalow serves to render hospitality to the Official and Non-official guests of the Institute. It is a unique double storied building with modern living facilities overlooking a beautiful garden and tall sal trees all around. The guests of faculty members and students are also accommodated there with advanced booking as per availability.
       </div>
