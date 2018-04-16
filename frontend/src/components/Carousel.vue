@@ -17,8 +17,8 @@
             </div>
             <div class="carousel-caption">
               <h5 class="h5-responsive">
-                <strong>{{ slide.primary_caption }}</strong><br>
-                {{ slide.secondary_caption }}
+                {{ slide.primary_caption }}
+                <!-- {{ slide.secondary_caption }} -->
               </h5>
             </div>
           </div>
