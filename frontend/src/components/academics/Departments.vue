@@ -7,7 +7,7 @@
           <small-tile v-for="col in row"
             :title="col.short_code"
             :desc="col.name"
-            :link="getDeptURL(col.short_code)"
+            :link="'/department/' + col.short_code"
             :key="col.short_code" />
         </div>
       </sp-card>
@@ -28,25 +28,22 @@ export default {
       departments: []
     }
   },
-  methods: {
-    getDeptURL: function (short_code) {
-      return baseURL + '/department/' + short_code;
-    }
-  },
   created () {
     axios.get(genBackendURL('department'))
          .then(response => {
            let res = response.data.results
 
-           // i counts the total Departments, j counts the total number of rows
-           // and k counts the number of Departments in a row
-           let i = 0, j = 0, k = 0
+           // i : count departments
+           // j : count rows
+           // k : count departments in a row
+           let j = 0, k = 0
 
-           // This structure will be followed for laying out the departments
+           // Numbers in the array represent: number of departments in a row
+           // Length of this array represents row count
            let structure = [3, 3, 4, 4, 4, 4, 4]
 
            let row = []
-           while (i < res.length) {
+           for (let i = 0; i < res.length; i++) {
              // Don't display the Administrative Department
              if (res[i].name != "Administrative") {
                row.push(res[i])
@@ -58,7 +55,6 @@ export default {
                  j++
                }
              }
-             i++
            }
            this.departments.push(row)
            this.$emit('hideloader', true)
