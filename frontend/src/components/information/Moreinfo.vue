@@ -1,10 +1,10 @@
 <template>
   <links-page>
-    <card title="Information">
+    <card title="More Information">
       <ul>
-        <li v-for="info in infos">
-          <a target="new" :href="info.link">
-            {{ info.title }}
+        <li v-for="link in links">
+          <a target="new" :href="link.file">
+            {{ link.title }}
           </a>
         </li>
       </ul>
@@ -15,21 +15,26 @@
 <script>
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
+import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Moreinfo",
   data () {
     return {
-      infos: [
-        {
-          link: "http://nitdgp.ac.in/information/List%20of%20MoUs%20all-1.xlsx",
-          title: "List of MoUs"
-        }
-      ]
+      links: []
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('information/more'))
+         .then(response => {
+           console.log(response)
+           this.links = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log("Axios(GET[information]): Error: " + e)
+         })
   },
   components: {
     Card,
