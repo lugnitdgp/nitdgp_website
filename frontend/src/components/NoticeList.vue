@@ -24,8 +24,7 @@ export default {
       default: backURL
     },
     noticelist: {
-      required: true,
-      default: []
+      required: true
     },
     idn: {
       type: String,

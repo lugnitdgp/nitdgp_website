@@ -44,9 +44,15 @@ export default {
   created () {
     axios.get(genBackendURL('academics/notices'))
          .then(response => {
-           this.academic = response.data.notices.academic
-           this.student = response.data.notices.student
-           this.general = response.data.notices.general
+           console.log(response)
+           let notices = response.data.notices
+           if ("8e23a092684f4c3189728772de4bf244" in notices) {
+             // For backward compatibility
+             this.student.push(...notices["8e23a092684f4c3189728772de4bf244"])
+           }
+           this.student.push(...notices.Student)
+           this.academic = notices.Academic
+           this.general = notices.General
            this.$emit('hideloader', true)
          })
          .catch(e => {
