@@ -58,6 +58,10 @@ class Faculty(BaseModel):
         return self.department.name
 
 
+def rename_staff_image(instance, filename):
+    return 'staff/{0}/{1}'.format(instance.name, filename)
+
+
 class Staff(BaseModel):
 
     class Meta:
@@ -67,6 +71,7 @@ class Staff(BaseModel):
     name = models.CharField(max_length=512)
     designation = models.CharField(max_length=512)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=rename_staff_image, null=True)
 
     def __str__(self):
         return self.name
