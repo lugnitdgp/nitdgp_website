@@ -30,12 +30,25 @@ class Faculty(BaseModel):
         ordering = ('name', )
 
     YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
+    DESIGNATION_CHOICES = (
+        ('Assistant Professor', 'Assistant Professor'),
+        ('Associate Professor', 'Associate Professor'),
+        ('Professor', 'Professor'),
+    )
     name = models.CharField(max_length=255)
     research_interest = RichTextField()
+    designation = models.CharField(
+        choices=DESIGNATION_CHOICES,
+        default='Assistant Professor',
+        max_length=30
+    )
     email = models.CharField(max_length=255, default="")
     mobile = models.BigIntegerField(null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    joining_year = models.IntegerField(choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    joining_year = models.IntegerField(
+        choices=YEAR_CHOICES,
+        default=datetime.datetime.now().year
+    )
     image = models.ImageField(upload_to=rename_image)
 
     def __str__(self):

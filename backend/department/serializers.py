@@ -28,7 +28,7 @@ class FacultySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Faculty
-        fields = ('name', 'research_interest', 'email', 'mobile', 'joining_year', 'image')
+        fields = ('name', 'research_interest', 'email', 'designation', 'mobile', 'joining_year', 'image')
 
 
 class CourseSerializer(serializers.ModelSerializer):
