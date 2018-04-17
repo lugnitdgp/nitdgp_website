@@ -46,7 +46,7 @@ export default {
 }
 </script>
 <style>
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 800px) {
     .card-pic{
       height: 180px!important;
     }
