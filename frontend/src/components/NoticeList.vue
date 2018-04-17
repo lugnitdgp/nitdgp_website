@@ -1,20 +1,17 @@
 <template>
-  <div class="tab-pane fade" :class="classname" :id="'panel' + idn" role="tabpanel">
-    <br>
-    <ul v-if="noticelist">
-      <li v-for="notice in noticelist">
+  <div v-if="noticelist" class="tab-pane fade" :class="classname" :id="'panel' + idn" role="tabpanel">
+    <paginate name="noticelist" :per="10" :list="noticelist" class="paginate-list">
+      <li v-for="notice in paginated('noticelist')">
         <a :href="notice.file" target="new">{{ notice.title }}</a>
       </li>
-    </ul>
-    <page-list v-if="noticelist"
-      :num-of-pages="parseInt((noticelist.length-1)/10 + 1)">
-    </page-list>
+    </paginate>
+    <center>
+      <paginate-links for="noticelist" :limit="5" :show-step-links="true"/>
+    </center>
   </div>
 </template>
 
 <script>
-import PageList from '@/components/PageList'
-
 export default {
   name: "NoticeList",
   props: {
@@ -32,8 +29,57 @@ export default {
       default: ""
     }
   },
-  components: {
-    PageList
+  data () {
+    return {
+      paginate: ['noticelist']
+    }
   }
 }
 </script>
+
+<style scoped>
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .paginate-list {
+    margin: 0 auto;
+    text-align: left;
+    li {
+      display: block;
+      &:before {
+        content: '⚬ ';
+        font-weight: bold;
+        color: slategray;
+      }
+    }
+  }
+
+  .left-arrow {
+    width: 20px;
+  }
+
+  .paginate-links.noticelist {
+    a {
+      cursor: pointer;
+    }
+    li.active a {
+      font-weight: bold;
+    }
+    li.next:before {
+      content: ' | ';
+      margin-right: 13px;
+      color: #ddd;
+    }
+    li.disabled a {
+      color: #ccc;
+      cursor: no-drop;
+    }
+  }
+</style>
