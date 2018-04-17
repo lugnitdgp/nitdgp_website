@@ -12,12 +12,14 @@
         <div class="carousel-inner" role="listbox">
           <div v-for="(slide,index) in slides" class="carousel-item anim1" :class="index == 0 ? 'active' : ''">
             <div class="view hm-black-light">
-              <img class="d-block w-100" :src="slide.image" alt="['Slide ' + (index+1)]"/>
+              <img class="d-block" :src="slide.image" alt="['Slide ' + (index+1)]"/>
               <div class="mask"></div>
             </div>
             <div class="carousel-caption">
               <h5 class="h5-responsive">
+                <span class="cap-text">
                 {{ slide.primary_caption }}
+                </span>
                 <!-- {{ slide.secondary_caption }} -->
               </h5>
             </div>
@@ -77,5 +79,15 @@ export default {
   }
   .card-pic .carousel-caption{
     margin-bottom: -2em!important;
+  }
+  .card-pic .carousel-caption .cap-text{
+    background-color: #ECEFF1;
+    color:#000;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .card-pic img{
+    min-width: 100%;
   }
 </style>
