@@ -354,6 +354,14 @@ hr.style4:after {
   padding-left: 5px;
   padding-right: 5px;
 }
+.page-type-links .list-gr li{
+  list-style-type: none;
+}
+.page-type-links .list-group-item{
+  color: #001333;
+  background-color: #E0F7FA!important;
+  margin: 2px 0px;
+}
 .page-type-links .card-header{
   font-weight: bold;
   font-size: 110%;
@@ -758,12 +766,4 @@ hr.style4:after {
 }
 .l3-fac .dropdown-item:hover{
   background-color: #888888!important;
-}
-.page-type-links .list-gr li{
-  list-style-type: none;
-}
-.page-type-links .list-group-item{
-  color: #fff;
-  background-color: #1A237E!important;
-  margin: 2px 0px;
 }

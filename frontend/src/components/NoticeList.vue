@@ -71,7 +71,7 @@ export default {
     padding-bottom: 5px;
     padding-top: 5px;
     display: inline-block;
-    background-color: #B3E5FC;
+    background-color: #E0F7FA;
     border-radius: 2px;
     margin: 0 1px;
   }
