@@ -6,10 +6,10 @@
       	<!-- Nav tabs -->
       	<ul class="nav nav-tabs nav-justified not-tab">
       	  <li class="nav-item">
-      	    <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Academic</a>
+      	    <a class="nav-link" data-toggle="tab" href="#panel1" role="tab">Academic</a>
       	  </li>
       	  <li class="nav-item">
-      	    <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Student</a>
+      	    <a class="nav-link active" data-toggle="tab" href="#panel2" role="tab">Student</a>
       	  </li>
       	  <li class="nav-item">
       	    <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">General</a>
@@ -17,9 +17,9 @@
       	</ul>
       	<!-- Tab panels -->
       	<div class="tab-content card">
-      	  <notice-list class="in show active" idn="1" :noticelist="academic">
+      	  <notice-list idn="1" :noticelist="academic">
           </notice-list>
-      	  <notice-list :noticelist="student" idn="2"></notice-list>
+      	  <notice-list class="in show active" :noticelist="student" idn="2"></notice-list>
       	  <notice-list :noticelist="general" idn="3"></notice-list>
       	</div>
       </div>

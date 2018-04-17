@@ -1,13 +1,19 @@
 <template>
-  <div v-if="noticelist" class="tab-pane fade" :class="classname" :id="'panel' + idn" role="tabpanel">
-    <paginate name="noticelist" :per="10" :list="noticelist" class="paginate-list">
-      <li v-for="notice in paginated('noticelist')">
-        <a :href="notice.file" target="new">{{ notice.title }}</a>
-      </li>
-    </paginate>
-    <center>
-      <paginate-links for="noticelist" :limit="5" :show-step-links="true"/>
-    </center>
+  <div class="tab-pane fade notice-wrap" :class="classname" :id="'panel' + idn" role="tabpanel">
+    <div class="notice-wrap-l2" v-if="noticelist">
+      <div class="paginate-wrap">
+        <paginate-links
+          for="noticelist"
+          :limit="2"
+          :show-step-links="true"
+        />
+      </div>
+      <paginate name="noticelist" :per="10" :list="noticelist" class="paginate-list list-gr list-group">
+        <li v-for="notice in paginated('noticelist')">
+          <a class="list-group-item" :href="notice.file" target="new">{{ notice.title }}</a>
+        </li>
+      </paginate>
+    </div>
   </div>
 </template>
 
@@ -37,49 +43,51 @@ export default {
 }
 </script>
 
-<style scoped>
-  ul {
+<style>
+  .notice-wrap .paginate-wrap{
+    text-align: center;
+    width: 100%;
+    padding: 30px 0px;
+  }
+  .notice-wrap li.left-arrow{
+    background-color: #001333;
+    color: #fff;
+  }
+  .notice-wrap li.right-arrow{
+    background-color: #001333;
+    color: #fff;
+  }
+  .notice-wrap li.left-arrow.disabled{
+    opacity: 0.3;
+  }
+  .notice-wrap li.right-arrow.disabled{
+    opacity: 0.3;
+  }
+  .notice-wrap .list-group-item{
+    color: #fff;
+    background-color: #1A237E!important;
+    margin: 2px 0px;
+  }
+  .notice-wrap .list-gr li{
     list-style-type: none;
-    padding: 0px;
   }
-
-  li {
+  ul.paginate-links{
+    margin-bottom:0px;
+    padding-left:0px;
+  }
+  .paginate-links li{
+    padding-bottom: 5px;
+    padding-top: 5px;
     display: inline-block;
-    margin: 0 10px;
+    background-color: #B3E5FC;
+    border-radius: 2px;
+    margin: 0 1px;
   }
-
-  .paginate-list {
-    margin: 0 auto;
-    text-align: left;
-    li {
-      display: block;
-      &:before {
-        content: '⚬ ';
-        font-weight: bold;
-        color: slategray;
-      }
-    }
+  .paginate-links a{
+    padding: 5px 15px!important;
   }
-
-  .left-arrow {
-    width: 20px;
-  }
-
-  .paginate-links.noticelist {
-    a {
-      cursor: pointer;
-    }
-    li.active a {
-      font-weight: bold;
-    }
-    li.next:before {
-      content: ' | ';
-      margin-right: 13px;
-      color: #ddd;
-    }
-    li.disabled a {
-      color: #ccc;
-      cursor: no-drop;
-    }
+  .paginate-links li.active{
+    background-color: #001333;
+    color: #fff;
   }
 </style>
