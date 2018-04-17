@@ -136,7 +136,7 @@
                         <div class="row">
 
                           <div class="col" v-for="person in dept.people.faculty">
-                            <card-testimonial :name="person.name" :image="person.image" desig="Faculty">
+                            <card-testimonial :name="person.name" :image="person.image" :desig="person.designation">
                               <strong>-- Research Interest --</strong><br>
                               <span v-html="stripDesc(person.research_interest)"></span><br>
                               <i class="fa fa-envelope"></i><br>
@@ -327,7 +327,7 @@ export default {
   @media screen and (max-width: 600px){
     .l2-idep .tab-content{
       padding-left:5px;
-      padding-right:5px; 
+      padding-right:5px;
     }
   }
   .l2-idep .l2-card .down-content .big-list .accordion .card-header{

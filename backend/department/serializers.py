@@ -96,10 +96,7 @@ class PeopleSerializer(serializers.ModelSerializer):
 
     def get_faculty(self, obj):
         faculty_list = Faculty.objects.filter(department=self.context['obj'].id)
-        faculty_list = faculty_list.extra(select={
-              'first_name': "SUBSTR(name, 1)",
-              'last_name': "SUBSTR(name, 2)"})
-        faculty_list = faculty_list.order_by('last_name', 'first_name')
+        faculty_list = sorted(faculty_list, key=lambda x: x.name.split()[-1])
         data = FacultySerializer(faculty_list, many=True, context=self.context).data
 
         return data
