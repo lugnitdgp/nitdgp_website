@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Achievements">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="achievement in achievements">
-          <a :href="achievement.file">{{ achievement.title }}</a>
+          <a class="list-group-item" :href="achievement.file">{{ achievement.title }}</a>
         </li>
       </ul>
     </card>

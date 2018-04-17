@@ -2,9 +2,9 @@
   <links-page>
     <card v-for="(report, header) in reports"
       :title="header + ' Reports'" :key="report.id">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="link in report">
-          <a target="new" :href="link.file">
+          <a class="list-group-item" target="new" :href="link.file">
             {{ link.title }}
           </a>
         </li>

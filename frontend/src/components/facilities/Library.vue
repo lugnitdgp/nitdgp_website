@@ -5,9 +5,9 @@
       </div>
     </card>
     <card title="E-Resources">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="eres in eresources">
-          <a :href="eres.url">
+          <a class="list-group-item" :href="eres.url">
             {{ eres.title }}
           </a>
         </li>

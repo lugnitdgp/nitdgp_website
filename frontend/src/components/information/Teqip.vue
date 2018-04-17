@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="TEQIP">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="teqip in teqips">
-          <a target="new" :href="teqip.file">
+          <a class="list-group-item" target="new" :href="teqip.file">
             {{ teqip.title }}
           </a>
         </li>

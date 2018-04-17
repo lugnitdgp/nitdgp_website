@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="National Board of Accreditation">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="nba in nbas">
-          <a target="new" :href="nba.file">
+          <a class="list-group-item" target="new" :href="nba.file">
             {{ nba.title }}
           </a>
         </li>

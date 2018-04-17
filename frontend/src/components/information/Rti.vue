@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Right to Information">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="rti in rtis">
-          <a target="new" :href="rti.file">
+          <a class="list-group-item" target="new" :href="rti.file">
             {{ rti.title }}
           </a>
         </li>

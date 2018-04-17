@@ -3,9 +3,9 @@
     <card title="Academic Documents">
       <div v-for="(links, doctype) in docs">
         <h3>{{ doctype }}</h3>
-        <ul>
+        <ul class="list-group list-gr">
           <li v-for="link in links">
-            <a :href="backURL + link.filename" target="new">
+            <a class="list-group-item" :href="backURL + link.filename" target="new">
               {{ link.title }}
             </a>
           </li>

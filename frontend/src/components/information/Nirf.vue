@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="NIRF">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="nirf in nirfs">
-          <a target="new" :href="nirf.file">
+          <a class="list-group-item" target="new" :href="nirf.file">
             {{ nirf.title }}
           </a>
         </li>

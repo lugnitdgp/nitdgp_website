@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Examination">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="link in exams">
-          <a :href="link.file" target="new">
+          <a class="list-group-item" :href="link.file" target="new">
             {{ link.title }}
           </a>
         </li>

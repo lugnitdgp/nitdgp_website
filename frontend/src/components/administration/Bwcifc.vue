@@ -1,13 +1,17 @@
 <template>
-	<links-page>
+  <links-page>
     <card title="Minutes of IFC Meeting">
-      <ul>
-        <li v-for="i in ifc_docs"><a :href="i.file" target=_blank>{{ i.title }}</a></li>
+      <ul class="list-group list-gr">
+        <li v-for="i in ifc_docs">
+          <a class="list-group-item" :href="i.file" target=_blank>{{ i.title }}</a>
+        </li>
       </ul>
     </card>
     <card title="Minutes of BWC Meeting">
-      <ul>
-        <li v-for="b in bwc_docs"><a :href="b.file" target=_blank>{{ b.title }}</a></li>
+      <ul class="list-group list-gr">
+        <li v-for="b in bwc_docs">
+          <a class="list-group-item" :href="b.file" target=_blank>{{ b.title }}</a>
+        </li>
       </ul>
     </card>
   </links-page>

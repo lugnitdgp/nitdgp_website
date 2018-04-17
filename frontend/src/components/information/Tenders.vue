@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Tenders">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="tender in tenders">
-          <a :href="tender.file">{{ tender.title }}</a>
+          <a class="list-group-item" :href="tender.file">{{ tender.title }}</a>
         </li>
       </ul>
     </card>

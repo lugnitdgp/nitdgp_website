@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Seminars and Events">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="event in events">
-          <a :href="event.file">{{ event.title }}</a>
+          <a class="list-group-item" :href="event.file">{{ event.title }}</a>
         </li>
       </ul>
     </card>

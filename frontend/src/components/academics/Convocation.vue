@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Convocation and Special Events">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="convocation in convocations">
-          <a :href="convocation.file">{{ convocation.title }}</a>
+          <a class="list-group-item" :href="convocation.file">{{ convocation.title }}</a>
         </li>
       </ul>
     </card>

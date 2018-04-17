@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Academic Calendars">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="calendar in calendars">
-          <a :href="calendar.file">
+          <a class="list-group-item" :href="calendar.file">
             Academic Calendar for the year {{ calendar.year }}
           </a>
         </li>

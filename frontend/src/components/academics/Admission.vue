@@ -5,9 +5,9 @@
         <ul class="pg_contents">
           <li v-for="(programme, j) in degree.programmes" class="bot-margin no-style-list" :key="j">
             <h4>{{ programme.name }}</h4>
-            <ul>
+            <ul class="list-group list-gr">
               <li v-for="doc in programme.documents">
-                <a target="new" :href="doc.file">
+                <a class="list-group-item" target="new" :href="doc.file">
                   {{ doc.title }}
                 </a>
               </li>

@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Registrations">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="reg in registrations">
-          <a :href="reg.file" target="new">
+          <a class="list-group-item" :href="reg.file" target="new">
             {{ reg.title }}
           </a>
         </li>

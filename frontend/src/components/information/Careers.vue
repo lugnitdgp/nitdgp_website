@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Careers">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="career in careers">
-          <a :href="career.file">{{ career.title }}</a>
+          <a class="list-group-item" :href="career.file">{{ career.title }}</a>
         </li>
       </ul>
     </card>

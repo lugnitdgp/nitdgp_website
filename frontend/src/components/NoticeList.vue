@@ -63,14 +63,6 @@ export default {
   .notice-wrap li.right-arrow.disabled{
     opacity: 0.3;
   }
-  .notice-wrap .list-group-item{
-    color: #fff;
-    background-color: #1A237E!important;
-    margin: 2px 0px;
-  }
-  .notice-wrap .list-gr li{
-    list-style-type: none;
-  }
   ul.paginate-links{
     margin-bottom:0px;
     padding-left:0px;

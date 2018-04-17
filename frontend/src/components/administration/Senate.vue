@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Senate">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="meeting in meetings">
-          <a :href="meeting.file">{{ meeting.title }}</a>
+          <a class="list-group-item" :href="meeting.file">{{ meeting.title }}</a>
         </li>
       </ul>
     </card>

@@ -759,3 +759,11 @@ hr.style4:after {
 .l3-fac .dropdown-item:hover{
   background-color: #888888!important;
 }
+.page-type-links .list-gr li{
+  list-style-type: none;
+}
+.page-type-links .list-group-item{
+  color: #fff;
+  background-color: #1A237E!important;
+  margin: 2px 0px;
+}

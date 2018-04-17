@@ -1,9 +1,11 @@
 <template>
   <links-page>
-    <card title="Academic Regulations">
-      <ul>
+    <card title="Academic Regul class=list-group list-grations">
+      <ul class="list-group list-gr">
         <li v-for="regulation in regulations">
-          <a :href="regulation.file" target="new">{{ regulation.title }}</a>
+          <a class="list-group-item" :href="regulation.file" target="new">
+            {{ regulation.title }}
+          </a>
         </li>
       </ul>
     </card>

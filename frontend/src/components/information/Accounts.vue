@@ -1,9 +1,9 @@
 <template>
   <links-page>
     <card title="Annual Accounts">
-      <ul>
+      <ul class="list-group list-gr">
         <li v-for="account in accounts">
-          <a target="new" :href="account.file">
+          <a class="list-group-item" target="new" :href="account.file">
             {{ account.title }}
           </a>
         </li>
