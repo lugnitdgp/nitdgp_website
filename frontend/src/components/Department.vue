@@ -159,17 +159,11 @@
             <div class="tab-pane fade" id="p4l2" role="tabpanel">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col" v-for="person in dept.people.staff">
-                    <card-testimonial :name="person.name" :image="person.image" :desig="person.designation">
-                      <!-- <strong>-- Research Interest --</strong><br>
-                      <span v-html="stripDesc(person.research_interest)"></span><br>
-                      <i class="fa fa-envelope"></i><br>
-                      <strong>{{ person.email }}</strong><br>
-                      <i class="fa fa-address-book"></i><br>
-                      <strong>+91-{{ person.mobile }}</strong></br>
-                      <span class="grey-text">Joined the Institute in {{ person.joining_year }}
-                      </span> -->
-                    </card-testimonial>
+                  <div class="col staffs" v-for="person in dept.people.staff">
+                    <card-testimonial
+                      :name="person.name"
+                      :image="person.image"
+                      :desig="person.designation"/>
                   </div>
                 </div>
               </div>
@@ -329,6 +323,13 @@ export default {
 </script>
 
 <style>
+
+  @media screen and (max-width: 600px){
+    .l2-idep .tab-content{
+      padding-left:5px;
+      padding-right:5px; 
+    }
+  }
   .l2-idep .l2-card .down-content .big-list .accordion .card-header{
     padding: 5px 5px! important;
   }
@@ -445,8 +446,19 @@ export default {
   .l2-idep .card-body .down-content #li4 .controls-top{
     margin-bottom: 10px;
   }
+  .l2-idep #li4 .staffs{
+    max-width: 220px!important;min-width: 220px!important;
+  }
   .l2-idep #li4 .person-list .col{
     max-width: 220px!important;min-width: 220px!important;
+  }
+  @media screen and (max-width: 600px){
+    .l2-idep #li4 .person-list .col{
+      max-width: 100%!important;min-width: 100%!important;
+    }
+    .l2-idep #li4 .staffs{
+      max-width: 100%!important;min-width: 100%!important;
+    }
   }
   .l2-idep .card-body .down-content #li4 .controls-top i{
     font-size: 60%;margin-top: -20px;
@@ -460,14 +472,6 @@ export default {
   .l2-idep .card-body .down-content .table-wrapper-2{
     display: block;max-height: 2500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
   }
-  /*.l2-idep .card-body .down-content #li5 .card{
-     margin-top: 15px;
-     background-color: #ffffff;
-     }
-     .l2-idep .card-body .down-content #li6 .card{
-     margin-top: 15px;
-     background-color: #ffffff;
-     }*/
   .l2-idep .card-body .down-content #li2 th{
     background-color: #E0E0E0;
     padding: 2px;

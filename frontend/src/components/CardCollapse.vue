@@ -48,3 +48,11 @@ export default {
   }
 }
 </script>
+
+<style>
+  @media screen and (max-width: 600px){
+    .card-body{
+      padding: 15px 5px;
+    }
+  }
+</style>
