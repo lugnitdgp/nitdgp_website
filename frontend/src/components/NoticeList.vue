@@ -67,6 +67,11 @@ export default {
     margin-bottom:0px;
     padding-left:0px;
   }
+  @media screen and (max-width: 600px){
+    .paginate-links a{
+      padding: 2px 12px!important;
+    }
+  }
   .paginate-links li{
     padding-bottom: 5px;
     padding-top: 5px;
@@ -76,7 +81,7 @@ export default {
     margin: 0 1px;
   }
   .paginate-links a{
-    padding: 5px 15px!important;
+    padding: 5px 15px;
   }
   .paginate-links li.active{
     background-color: #001333;

@@ -64,3 +64,10 @@ export default {
   }
 }
 </script>
+<style>
+  .notices .card-body{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px
+  }
+</style>
