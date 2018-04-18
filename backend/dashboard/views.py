@@ -44,4 +44,4 @@ class ContactViewSet(ListAPIView):
                 result[group].append(ContactSerializer(contact, context={"request": request}).data)
             else:
                 result[group] = [ContactSerializer(contact, context={"request": request}).data]
-        return Response({"contact": result})
+        return Response({"groups": result})
