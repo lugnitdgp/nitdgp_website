@@ -111,6 +111,7 @@ class Contact(BaseModel):
               ('Library', 'Library'),
               ('Workshops', 'Workshops'),
               ('Medical Unit', 'Medical Unit'),
+              ('Computer Center', 'Computer Center'),
               ('Training and Placement', 'Training and Placement'),
               ('Officers', 'Officers'))
     name = models.CharField(max_length=512)
