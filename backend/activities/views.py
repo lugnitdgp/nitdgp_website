@@ -19,3 +19,9 @@ class AchievementsViewSet(ListAPIView):
 
 	queryset = Achievement.objects.all()
 	serializer_class = AchievementSerializer
+
+
+class ResearchViewSet(ListAPIView):
+
+	 queryset = Research.objects.all()
+	 serializer_class = ResearchSerializer

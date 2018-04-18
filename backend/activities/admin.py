@@ -13,6 +13,11 @@ class SeminarEventModelAdmin(admin.ModelAdmin):
 class AchievementModelAdmin(admin.ModelAdmin):
 	list_display = ['_title', '_file', '_date']
 
+
+class ResearchModelAdmin(admin.ModelAdmin):
+	list_display = ['_title', '_file', '_date', '_url']
+
 admin.site.register(StudentClub, StudentClubModelAdmin)
 admin.site.register(SeminarEvent, SeminarEventModelAdmin)
 admin.site.register(Achievement, AchievementModelAdmin)
+admin.site.register(Research, ResearchModelAdmin)

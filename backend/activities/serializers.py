@@ -21,3 +21,10 @@ class AchievementSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Achievement
 		fields = ('title', 'file', 'date')
+
+
+class ResearchSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Research
+		fields = ('title', 'file', 'date', 'url')
