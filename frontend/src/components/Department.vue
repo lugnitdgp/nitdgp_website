@@ -143,7 +143,7 @@
                               <strong>{{ person.email }}</strong><br>
                               <i class="fa fa-address-book"></i><br>
                               <strong>+91-{{ person.mobile }}</strong></br>
-                              <span class="grey-text">Joined the Institute in {{ person.joining_year }}
+                              <span class="grey-text">Joined the Institute in {{ convertYear(person.joining_year) }}
                               </span>
                             </card-testimonial>
                           </div>
@@ -309,7 +309,10 @@ export default {
          })
   },
   methods: {
-    stripDesc: stripDesc
+    stripDesc: stripDesc,
+    convertYear: function (year) {
+      return year == 1959 ? "N/A" : year
+    }
   },
   components: {
     LinksPage,
