@@ -29,7 +29,7 @@ class Faculty(BaseModel):
         verbose_name_plural = 'Faculty'
         ordering = ('name', )
 
-    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
+    YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year+1)]
     DESIGNATION_CHOICES = (
         ('Assistant Professor', 'Assistant Professor'),
         ('Associate Professor', 'Associate Professor'),
@@ -47,7 +47,7 @@ class Faculty(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     joining_year = models.IntegerField(
         choices=YEAR_CHOICES,
-        default=datetime.datetime.now().year
+        default=1959
     )
     image = models.ImageField(upload_to=rename_image)
 
@@ -112,7 +112,7 @@ class Research(BaseModel):
     class Meta:
         verbose_name_plural = 'Research'
 
-    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
+    YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = RichTextField()
     area = RichTextField()
@@ -137,7 +137,7 @@ class Research(BaseModel):
 
 class Project(BaseModel):
 
-    YEAR_CHOICES = [(r, r) for r in range(1965, datetime.date.today().year+1)]
+    YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year+1)]
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     collab_inst = RichTextField()
     area = RichTextField()
