@@ -1,7 +1,6 @@
 from django.db import models
-
-# Create your models here.
 from base.models import BaseModel
+from ckeditor.fields import RichTextField
 
 
 def next_count_section():
@@ -96,3 +95,30 @@ class NewsFeed(BaseModel):
 
     def _date(self):
         return self.date
+
+
+class Contact(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Contact Us'
+
+    GROUPS = (('Director', 'Director'), ('Registrar', 'Registrar'), ('Dean', 'Dean'), ('Associate Dean', 'Associate Dean'),
+        ('Warden', 'Warden'), ('HOD','HOD'), ('Administration', 'Administration'), ('Library', 'Library'),
+        ('Workshops', 'Workshops'), ('Medical Unit', 'Medical Unit'), ('Training and Placement', 'Training and Placement'),
+        ('Officers', 'Officers'))
+    name = models.CharField(max_length=512)
+    designation = models.CharField(max_length=512)
+    group = models.CharField(choices=GROUPS, max_length=512)
+    contact = RichTextField()
+
+    def _name(self):
+        return self.name
+
+    def _designation(self):
+        return self.designation
+
+    def _group(self):
+        return self.group
+
+    def _contact(self):
+        return self.contact

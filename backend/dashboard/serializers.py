@@ -38,3 +38,10 @@ class NewsFeedSerializer(serializers.ModelSerializer):
     class Meta:
         model = NewsFeed
         fields = ('title', 'file', 'date')
+
+
+class ContactSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Contact
+        fields = ('name', 'designation', 'contact')

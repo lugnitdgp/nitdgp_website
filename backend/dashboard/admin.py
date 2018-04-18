@@ -21,6 +21,9 @@ class EventModelAdmin(admin.ModelAdmin):
 class NewsFeedModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file', '_date']
 
+
+class ContactModelAdmin(admin.ModelAdmin):
+    list_display = ['_name', '_designation', '_group', '_contact']
 # Register your models here.
 
 
@@ -29,3 +32,4 @@ admin.site.register(Tile, TileModelManager)
 admin.site.register(Carousel, CarouselModelAdmin)
 admin.site.register(Event, EventModelAdmin)
 admin.site.register(NewsFeed, NewsFeedModelAdmin)
+admin.site.register(Contact, ContactModelAdmin)
