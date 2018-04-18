@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'information',
     'ckeditor',
     'logentry_admin',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [

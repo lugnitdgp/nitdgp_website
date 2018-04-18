@@ -15,6 +15,7 @@ django-cors-headers = "*"
 pillow = "*"
 django-ckeditor = "*"
 django-logentry-admin = "*"
+django-cleanup = "*"
 
 
 [dev-packages]

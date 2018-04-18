@@ -1,19 +1,19 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "eb583a4c9c059ef1501a0c38f3716447585f3c74ce6b2f8e73bdc013a36e44f3"
+            "sha256": "f63c128f00355b6b82a83cf909620be06e445044c32000c8e1e19b15f4f90152"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
-            "implementation_version": "3.5.2",
+            "implementation_version": "3.6.4",
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
-            "platform_release": "4.13.0-38-generic",
+            "platform_release": "4.15.14-1-ARCH",
             "platform_system": "Linux",
-            "platform_version": "#43~16.04.1-Ubuntu SMP Wed Mar 14 17:48:43 UTC 2018",
-            "python_full_version": "3.5.2",
-            "python_version": "3.5",
+            "platform_version": "#1 SMP PREEMPT Wed Mar 28 17:34:29 UTC 2018",
+            "python_full_version": "3.6.4",
+            "python_version": "3.6",
             "sys_platform": "linux"
         },
         "pipfile-spec": 6,
@@ -39,6 +39,13 @@
                 "sha256:b49eb630a260eb17dd225ea38b42d58fabc9a8dbbc898224c61f9a570c29e961"
             ],
             "version": "==5.4.0"
+        },
+        "django-cleanup": {
+            "hashes": [
+                "sha256:36f04ec3901e6d9fd996b99b383c2367c0b880c77e6699142b51ca64cb659e54",
+                "sha256:0e91783200d75f21a64cb5f9d9dbc1bedd377a7d8de97a55ec8a0e2e28abaf5d"
+            ],
+            "version": "==2.1.0"
         },
         "django-cors-headers": {
             "hashes": [
