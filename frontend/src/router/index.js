@@ -9,6 +9,7 @@ import Archives from '@/components/Archives'
 import Policies from '@/components/Policies'
 import Webteam from '@/components/Webteam'
 import PageNotFound from '@/components/PageNotFound'
+import Contacts from '@/components/Contacts'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -65,7 +66,6 @@ import Moreinfo from '@/components/information/Moreinfo'
 import Careers from '@/components/information/Careers'
 import Tenders from '@/components/information/Tenders'
 import Chanakya from '@/components/information/Chanakya'
-
 
 
 Vue.use(Router)
@@ -374,6 +374,11 @@ export default new Router({
       path: '/webteam',
       name: 'Webteam',
       component: Webteam
+    },
+    {
+      path: '/contacts',
+      name: 'Contacts',
+      component: Contacts
     },
 
     // This is meant to be at the last

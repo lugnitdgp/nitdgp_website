@@ -357,6 +357,12 @@ hr.style4:after {
   padding-left: 5px;
   padding-right: 5px;
 }
+.accordion .card-header{
+  padding: 0px!important;
+}
+.accordion .card-header h5{
+  padding: 15px;
+}
 .page-type-links .list-gr li{
   list-style-type: none;
 }

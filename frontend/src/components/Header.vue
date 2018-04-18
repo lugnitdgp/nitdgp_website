@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link waves-effect waves-light navbar-link" href="http://nitdgp.ac.in/alumni/index.php"><i class="fa fa-tasks"></i>Alumni</a>
+              <a class="nav-link waves-effect waves-light navbar-link" href="http://nitdgp.ac.in/alumni/index.php"><i class="fa fa-plane"></i>Alumni</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link waves-effect waves-light navbar-link" href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-plane"></i>Webmail</a>
+              <a class="nav-link waves-effect waves-light navbar-link" href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-tasks"></i>Webmail</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link waves-effect waves-light navbar-link" href="#"><i class="fa fa-address-book"></i>Contacts</a>
+              <a class="nav-link waves-effect waves-light navbar-link" href="/contacts"><i class="fa fa-address-book"></i>Contacts</a>
             </li>
           </ul>
         </div>
