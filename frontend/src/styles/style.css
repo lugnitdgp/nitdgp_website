@@ -362,8 +362,12 @@ hr.style4:after {
 }
 .page-type-links .list-group-item{
   color: #001333;
-  background-color: #E0F7FA!important;
+  background-color: #E0F7FA;
   margin: 2px 0px;
+}
+.page-type-links .list-group-item:hover{
+  background-color: #001333;
+  color: #E0F7FA;
 }
 .page-type-links .card-header{
   font-weight: bold;
