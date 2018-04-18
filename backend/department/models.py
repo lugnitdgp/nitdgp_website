@@ -2,7 +2,6 @@ import datetime
 
 from django.db import models
 from ckeditor.fields import RichTextField
-
 from base.models import BaseModel
 
 
@@ -274,7 +273,7 @@ class Courses(BaseModel):
     credits = models.IntegerField()
 
     def __str__(self):
-        return self.programme.title
+        return self.short_code
 
     def _programme(self):
         return self.programme.title
