@@ -94,8 +94,8 @@
                   <strong>{{ dept.hod.email }}</strong><br>
                   <i class="fa fa-address-book"></i><br>
                   <strong>+91-{{ dept.hod.mobile }}</strong></br>
-                  <span class="grey-text">Joined the Institute in {{ dept.hod.joining_year }}
-                  </span>
+                  <strong><span class="blue-text">Joined the Institute in {{ convertYear(dept.hod.joining_year) }}
+                  </span></strong>
                 </card-testimonial>
               </div>
             </div>
@@ -143,8 +143,8 @@
                               <strong>{{ person.email }}</strong><br>
                               <i class="fa fa-address-book"></i><br>
                               <strong>+91-{{ person.mobile }}</strong></br>
-                              <span class="grey-text">Joined the Institute in {{ convertYear(person.joining_year) }}
-                              </span>
+                              <strong><span class="blue-text">Joined the Institute in {{ convertYear(person.joining_year) }}
+                              </span></strong>
                             </card-testimonial>
                           </div>
                         </div>
