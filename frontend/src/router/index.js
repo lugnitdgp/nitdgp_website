@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Home from '@/components/Home'
 import Department from '@/components/Department'
-//import Faculty from '@/components/Faculty'
+import Faculty from '@/components/Faculty'
 import Holidays from '@/components/Holidays'
 import Archives from '@/components/Archives'
 import Policies from '@/components/Policies'
@@ -85,11 +85,11 @@ export default new Router({
       component: Department
     },
 
-    // {
-    //   path: '/faculty',
-    //   name: 'Faculty',
-    //   component: Faculty
-    // },
+    {
+      path: '/faculty',
+      name: 'Faculty',
+      component: Faculty
+    },
 
     // Academics
     {
