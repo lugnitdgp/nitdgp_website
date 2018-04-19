@@ -28,7 +28,7 @@ class SyllabusSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Syllabus
-        fields = ('title', 'file', 'degree')
+        fields = ('title', 'file')
 
 
 class FacultySerializer(serializers.ModelSerializer):
