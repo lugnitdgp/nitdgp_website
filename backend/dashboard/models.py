@@ -84,7 +84,8 @@ class NewsFeed(BaseModel):
         verbose_name_plural = 'News Feed'
 
     title = models.CharField(max_length=512)
-    file = models.FileField(upload_to='newsfeed/%Y/%m/%d')
+    file = models.FileField(upload_to='newsfeed/%Y/%m/%d', blank=True)
+    url = models.URLField(blank=True)
     date = models.DateField()
 
     def __str__(self):
