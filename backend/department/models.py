@@ -403,7 +403,7 @@ class Syllabus(BaseModel):
         return self.title
 
     def _degree(self):
-        return self.degree.title
+        return self.degree.name
 
     def _file(self):
         return self.file
