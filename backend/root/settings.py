@@ -53,7 +53,11 @@ INSTALLED_APPS = [
     'ckeditor',
     'logentry_admin',
     'django_cleanup',
+    'dbbackup'
 ]
+
+DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+DBBACKUP_STORAGE_OPTIONS = {'location': '../../backups'}
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

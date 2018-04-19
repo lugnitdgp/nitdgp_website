@@ -16,6 +16,7 @@ pillow = "*"
 django-ckeditor = "*"
 django-logentry-admin = "*"
 django-cleanup = "*"
+django-dbbackup = "*"
 
 
 [dev-packages]
