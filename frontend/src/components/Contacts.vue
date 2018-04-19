@@ -364,6 +364,7 @@ export default {
   .list-gr .contact-col{
     min-width: 33%;
     max-width: 33%;
+    padding-bottom: 15px;
   }
   @media screen and (max-width: 1200px){
     .list-gr .contact-col{
