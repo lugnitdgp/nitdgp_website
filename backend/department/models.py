@@ -380,3 +380,30 @@ class DepartmentNews(BaseModel):
 
     def _date(self):
         return self.date
+
+
+def rename_syllabus(instance, filename):
+    return 'department/{0}/{1}/{2}'.format(instance.department.short_code,
+                                           instance.degree.name, filename)
+
+
+class Syllabus(BaseModel):
+    class Meta:
+        verbose_name_plural = 'Syllabus'
+
+    title = models.CharField(max_length=255)
+    degree = models.ForeignKey(Degree, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    file = models.FileField(upload_to=rename_syllabus)
+
+    def _department(self):
+        return self.department.name
+
+    def __str__(self):
+        return self.title
+
+    def _degree(self):
+        return self.degree.title
+
+    def _file(self):
+        return self.file

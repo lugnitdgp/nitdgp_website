@@ -67,6 +67,10 @@ class StudentModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_file']
 
 
+class SyllabusModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file', '_degree', '_department']
+
+
 admin.site.register(Department)
 admin.site.register(Faculty, FacultyModelAdmin)
 admin.site.register(Staff, StaffModelAdmin)
@@ -83,3 +87,4 @@ admin.site.register(Facility, FacilityModelAdmin)
 admin.site.register(Electives, ElectivesModelAdmin)
 admin.site.register(DepartmentNews, DepartmentNewsModelAdmin)
 admin.site.register(DepartmentPhotos, DepartmentPhotosModelAdmin)
+admin.site.register(Syllabus, SyllabusModelAdmin)

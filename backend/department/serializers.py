@@ -24,6 +24,13 @@ class StudentSerializer(serializers.ModelSerializer):
         fields = ('title', 'file')
 
 
+class SyllabusSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Syllabus
+        fields = ('title', 'file', 'degree')
+
+
 class FacultySerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -168,6 +175,10 @@ class MainSerializer(serializers.ModelSerializer):
                 result[facility.category] = [{'name': facility.name}]
 
         return result
+
+    def get_students(self, obj):
+        syllabus = Syllabus.objects.filter(department=obj.id)
+        return StudentSerializer(syllabus, many=True).data
 
     def get_research(self, obj):
 
