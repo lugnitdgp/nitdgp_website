@@ -176,9 +176,15 @@ class MainSerializer(serializers.ModelSerializer):
 
         return result
 
-    def get_students(self, obj):
+    def get_syllabus(self, obj):
+        result = collections.defaultdict()
         syllabus = Syllabus.objects.filter(department=obj.id)
-        return StudentSerializer(syllabus, many=True).data
+        for i in syllabus:
+            try:
+                result[i._degree()].append(SyllabusSerializer(i).data)
+            except KeyError:
+                result[i._degree()] = [SyllabusSerializer(i).data]
+        return result
 
     def get_research(self, obj):
 
@@ -214,7 +220,8 @@ class MainSerializer(serializers.ModelSerializer):
     activities = serializers.SerializerMethodField()
     photos = serializers.SerializerMethodField()
     news = serializers.SerializerMethodField()
+    syllabus = serializers.SerializerMethodField()
 
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'contact_us', 'hod', 'people', 'programmes', 'research', 'projects', 'activities', 'facilities', 'photos', 'news')
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'contact_us', 'hod', 'people', 'programmes', 'research', 'projects', 'activities', 'facilities', 'photos', 'news', 'syllabus')
