@@ -12,13 +12,16 @@
         <div class="carousel-inner" role="listbox">
           <div v-for="(slide,index) in slides" class="carousel-item anim1" :class="index == 0 ? 'active' : ''">
             <div class="view hm-black-light">
-              <img class="d-block" :src="slide.image" alt="['Slide ' + (index+1)]"/>
+              <img class="d-block" :src="slide.image" :alt="['Slide ' + (index+1)]"/>
               <div class="mask"></div>
             </div>
             <div class="carousel-caption">
               <h5 class="h5-responsive">
-                <span class="cap-text">
+                <span class="cap-text" v-if="slide.primary_caption">
                 {{ slide.primary_caption }}
+                </span>
+                <span class="cap-text" v-if="slide.title">
+                {{ slide.title }}
                 </span>
                 <!-- {{ slide.secondary_caption }} -->
               </h5>

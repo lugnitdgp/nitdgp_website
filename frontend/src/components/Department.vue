@@ -31,11 +31,11 @@
             <a class="nav-link waves-light" data-toggle="tab" href="#li8" role="tab" >Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li9" role="tab">Contact Us</a>
+            <a class="nav-link waves-light" data-toggle="tab" href="#li9" role="tab">Photo Gallery</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li10" role="tab">Photo Gallery</a>
-          </li> -->
+          <li class="nav-item">
+            <a class="nav-link waves-light" data-toggle="tab" href="#li10" role="tab">Contact Us</a>
+          </li>
         </ul>
       </div>
       <div class="tab-content card down-content">
@@ -58,10 +58,7 @@
               <a class="nav-link active" data-toggle="tab" href="#panell1" role="tab">UG</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#panell2" role="tab">PG</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#panell3" role="tab">PhD</a>
+              <a class="nav-link" data-toggle="tab" href="#panell2" role="tab">PG/PhD</a>
             </li>
           </ul>
           <div class="tab-content">
@@ -80,10 +77,18 @@
               </div>
             </div>
             <div class="tab-pane fade" id="panell2" role="tabpanel">
-              PG details
-            </div>
-            <div class="tab-pane fade" id="panell3" role="tabpanel">
-              PhD details
+              <div class="row">
+                <div class="col" v-for="programme,index in dept.programmes.PG">
+                  <h5><strong>Academic Courses and Syllabus for {{ programme.programme_title }} Students</strong></h5>
+                  <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+                    <div class="card" v-for="syllabus,sem in programme">
+                      <card-collapse v-if="sem!='programme_title'" :title="'Semester '+sem">
+                        <table-renderer :table="syllabus" :theader="['CODE','COURSE TITLE','L','T','S','C']"></table-renderer>
+                      </card-collapse>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -249,6 +254,33 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li9" role="tabpanel" aria-labelledby="li9-list">
+          <div id="carousel-dept" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li v-for="(slide,index) in dept.photos" data-target="#carousel-home" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div v-for="(slide,index) in dept.photos" class="carousel-item anim1" :class="index == 0 ? 'active' : ''">
+                <div class="view">
+                  <img class="d-block w-100" :src="slide.image" :alt="['Slide ' + (index+1)]">
+                  <div class="mask rgba-black-light"></div>
+                </div>
+                <div class="carousel-caption">
+                  <h5 class="h5-responsive" style="color:#fff">{{ slide.title }}</h5>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carousel-dept" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-dept" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="tab-pane fade big-list" id="li10" role="tabpanel" aria-labelledby="li10-list">
           <p class="white-text" align="center" v-html="dept.contact_us">
           </p>
         </div>
