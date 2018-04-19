@@ -56,6 +56,8 @@ class Faculty(BaseModel):
     def _department(self):
         return self.department.name
 
+    def dept_short_code(self):
+        return self.department.short_code
 
 def rename_staff_image(instance, filename):
     return 'staff/{0}/{1}'.format(instance.name, filename)

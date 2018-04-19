@@ -49,7 +49,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty
         fields = ('name', 'research_interest', 'image', 'email', 'joining_year', 'designation',
-        'education', 'projects', 'publication', 'books_and_patents', 'teachings', 'work_experience', 'awards_and_recognition',
+        'education', 'projects', 'dept_short_code', 'publication', 'books_and_patents', 'teachings', 'work_experience', 'awards_and_recognition',
         'administrative_responsibilities')
 
 
