@@ -41,8 +41,14 @@
       <div class="tab-content card down-content">
         <div class="tab-pane fade show active big-list" id="li1" role="tabpanel" aria-labelledby="li1-list">
           <h3 class="pane-title" align="left">About Us</h3>
-          <p class="pane-text" align="left" v-html="dept.about_us">
-          </p>
+          <div class="row newscaro">
+            <div class="col-8 caro">
+              <p class="pane-text" align="left" v-html="dept.about_us"></p>
+            </div>
+            <div class="col-4 news">
+              <Newsfeed :notices="dept.news"></Newsfeed>
+            </div>
+          </div>
         </div>
 
         <div class="tab-pane fade big-list" id="li2" role="tabpanel" aria-labelledby="li2-list">
@@ -252,6 +258,7 @@
 </template>
 <script>
 import axios from 'axios'
+import Newsfeed from './Newsfeed'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
 import { genBackendURL,stripDesc } from '@/common.js'
@@ -316,6 +323,7 @@ export default {
   },
   components: {
     LinksPage,
+    Newsfeed,
     Card,
     TableRenderer,
     CardCollapse,
