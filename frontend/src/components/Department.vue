@@ -122,7 +122,7 @@
                 <div class="caros">
                   <div id="caro-p1-1" class="carousel slide carousel-multi-item" data-ride="carousel">
                     <span class="carousel-title">FACULTIES</span>
-                    <div class="controls-top">
+                    <!-- <div class="controls-top">
                       <a class="btn-floating" href="#caro-p1-1" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
                       <a class="btn-floating" href="#caro-p1-1" data-slide="next"><i class="fa fa-chevron-right"></i></a>
                     </div>
@@ -130,7 +130,7 @@
                       <li data-target="#caro-p1-1" data-slide-to="0" class="active"></li>
                       <li data-target="#caro-p1-1" data-slide-to="1"></li>
                       <li data-target="#caro-p1-1" data-slide-to="2"></li>
-                    </ol>
+                    </ol> -->
                     <div class="carousel-inner person-list" role="listbox">
                       <div class="carousel-item active">
                         <div class="row">
