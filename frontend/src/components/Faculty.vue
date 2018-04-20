@@ -2,7 +2,11 @@
   <div class="page-content-container l3-fac">
     <sp-card containerclass="l3-card">
       <div slot="header">
-        <p class="tile-title-text">FACULTY | {{ faculty.dept_short_code }}</p>
+        <p class="tile-title-text">
+          <a class="white-text" :href="'/department/' + faculty.dept_short_code">
+            FACULTY | {{ faculty.dept_short_code }}
+          </a>
+        </p>
       </div>
       <div class="container-fluid card fac-sm">
         <div class="row">
@@ -194,7 +198,7 @@ export default {
     }
   },
   created () {
-    axios.get(genBackendURL("faculty/a4a13818-14bc-4d08-ad46-a06bea79b3c9/"))
+    axios.get(genBackendURL("faculty/" + this.$route.params.id))
          .then(response => {
            this.faculty = response.data
            console.log(this.faculty)
@@ -202,6 +206,7 @@ export default {
          })
          .catch(e => {
            console.log(e)
+           window.location = '/NotAvailable'
          })
   },
   components: {
