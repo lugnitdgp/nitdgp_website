@@ -59,8 +59,7 @@
 
 <script>
 import axios from 'axios'
-import { genBackendURL } from '@/common.js'
-
+import { genBackendURL, convertNewsfeed } from '@/common.js'
 import Carousel from './Carousel'
 import Newsfeed from './Newsfeed'
 import SmallTile from './SmallTile'
@@ -134,27 +133,7 @@ export default {
          })
     axios.get(genBackendURL('dashboard/newsfeed'))
          .then(response => {
-           this.notices = response.data.results
-           const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY",
-                           "AUG", "SEPT", "OCT", "NOV", "DEC"]
-           let notices = []
-           let news_slide = []
-           this.notices.map((news,index) => {
-             let date = new Date(news.date)
-             news.month = months[date.getMonth()]
-             news.date = date.getDate()
-             news_slide.push(news)
-             if ((index+1) % 4 == 0) {
-               notices.push(news_slide)
-               news_slide = []
-               this.slides_count++
-             }
-           })
-           if (news_slide.length) {
-             notices.push(news_slide)
-             this.slides_count++
-           }
-           this.notices = notices
+           this.notices = convertNewsfeed(response.data.results)
            if (count_axios == 2) {
              this.$emit('hideloader', true)
            }

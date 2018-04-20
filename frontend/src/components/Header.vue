@@ -3,10 +3,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark darken-2" id="nav-below">
       <div class="container-fluid" >
         <div class="navbar-header">
-          <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
+          <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
+            <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
+            }
+          </a>
           <img class="line-img" src="/static/img/line.png">
           <img class="navbar-img-small" src="/static/img/emblem.png">
-          <div class="navbar-text white-text ">
+          <div class="navbar-text white-text">
             <div align="left">
               <h6>National Institute of Technology Durgapur</h6>
               <h6> राष्ट्रीय प्रौद्योगिकी संस्थान दुर्गापुर </h6>
@@ -37,7 +40,9 @@
     </nav>
     <nav class="mb-1 navbar fixed-top navbar-expand-sm" id="top-nav-wrap">
       <span class="top-nav-container-left">
-        <a href="/" class="black-text"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+        <a v-if="$route.path != '/'" href="/" class="black-text">
+          <i class="fa fa-home fa-lg fa-2x" aria-hidden="true"></i>
+        </a>
       </span>
       <span class="top-nav-container-right">
         <a href="http://nitdgp.ac.in" class="top-nav-link">Old website</a>

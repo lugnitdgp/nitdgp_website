@@ -13,7 +13,7 @@
       <!--Slides-->
       <div class="carousel-inner" role="listbox">
         <div v-for="(news_slide,index) in notices" class="carousel-item" :class="index == 0 ? 'active' : ''">
-          <a :href="news.file" target="new" v-for="news in news_slide" class="row card news-row anim2">
+          <a :href="news.link" target="new" v-for="news in news_slide" class="row card news-row anim2">
             <div class="col date-col">
               <div align="center" class="date-div">
                 <strong class="white-text">
@@ -21,7 +21,7 @@
                   <h6>{{ news.month }}</h6>
                 </strong>
               </div>
-              <div class="black-text">{{ news.title }}</div>
+              <div class="news-title black-text">{{ news.title }}</div>
             </div>
           </a>
         </div>
@@ -49,3 +49,71 @@ export default {
   }
 }
 </script>
+<style>
+.news-row{
+  margin-bottom: 5px;margin-top: 5px;min-height: 72px;
+}
+.news-row .date-col{
+  margin-left:0px;padding:5px;
+}
+.news-row .date-col .black-text{
+  margin-top: -5.5em;margin-left: 7em;font-size: 70%;
+}
+.news-row .date-div{
+  height: 60px!important;width: 70px!important;border-radius:5px!important;border:solid 2px #001333!important;background-color:#001333!important;
+}
+.news-title{
+  text-align: left!important;
+}
+.news-row .date-div h3{
+  margin-top: -7px !important;
+}
+.news-row .date-div h6{
+  margin-top: -16px !important;
+}
+.card-news .tile-title-text{
+  letter-spacing: 2px;font-weight: bold;
+  margin-top: -1.8em;
+}
+.card-news .card-body{
+  margin-top: -1em!important;
+}
+.card-news .card-body .indiwrap{
+  position: relative;margin-top: -10px;
+}
+.card-news .card-body .newsc-indi .active{
+  background-color: #ECEFF1;
+}
+.card-news .card-body .newsc-indi li{
+  background-color: #001333;
+}
+.card-news .tile-title-text .btn-sm{
+  background-color: #ECEFF1!important;
+}
+.card-news .tile-title-text .fa{
+  padding: 0px!important;margin: 0px!important;color: #001333;
+}
+.card-news .tile-title{
+  background-color: #001333;
+  height: 60px!important;padding-top: 0px!important;padding-bottom: 0px!important;
+}
+#newscarowrap{
+  height: 200px!important;
+}
+.card-news {
+  height: 400px;padding-top: 1%;
+  background: linear-gradient(#001333,#039BE5);
+}
+/* card-title color*/
+.card-news div.tile-title{
+  border: solid #ECEFF1 1px;
+}
+/* small-tile bg-color*/
+.card-news div.tile-small{
+  background-color: #4A148C;
+}
+/* small-tile-text color*/
+.card-news div.tile-content{
+  color: #ffffff;
+}
+</style>
