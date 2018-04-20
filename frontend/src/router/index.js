@@ -86,7 +86,7 @@ export default new Router({
     },
 
     {
-      path: '/faculty',
+      path: '/faculty/:id',
       name: 'Faculty',
       component: Faculty
     },

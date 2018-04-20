@@ -40,12 +40,12 @@
       </div>
       <div class="tab-content card down-content">
         <div class="tab-pane fade show active big-list" id="li1" role="tabpanel" aria-labelledby="li1-list">
-          <h3 class="pane-title" align="left">About Us</h3>
           <div class="row newscaro">
             <div class="col-8 caro">
+              <h3 class="pane-title" align="left">About Us</h3>
               <p class="pane-text" align="left" v-html="dept.about_us"></p>
             </div>
-            <div class="col-4 news">
+            <div class="col-4 news" align="left">
               <Newsfeed :notices="dept.news"></Newsfeed>
             </div>
           </div>
@@ -58,7 +58,10 @@
               <a class="nav-link active" data-toggle="tab" href="#panell1" role="tab">UG</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#panell2" role="tab">PG/PhD</a>
+              <a class="nav-link" data-toggle="tab" href="#panell2" role="tab">PG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#panell3" role="tab">PhD</a>
             </li>
           </ul>
           <div class="tab-content">
@@ -75,20 +78,40 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="tab-pane fade" id="panell2" role="tabpanel">
-              <div class="row">
-                <div class="col" v-for="programme,index in dept.programmes.PG">
-                  <h5><strong>Academic Courses and Syllabus for {{ programme.programme_title }} Students</strong></h5>
-                  <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-                    <div class="card" v-for="syllabus,sem in programme">
-                      <card-collapse v-if="sem!='programme_title'" :title="'Semester '+sem">
-                        <table-renderer :table="syllabus" :theader="['CODE','COURSE TITLE','L','T','S','C']"></table-renderer>
-                      </card-collapse>
-                    </div>
-                  </div>
-                </div>
+              <br>
+              <div class="page-type-links"> 
+                <h5><strong>Details of Syllabus in UG</strong></h5>
+                <h6 class="red-text" v-if="!dept.syllabus.UG">
+                  Not Available at the moment
+                </h6>
+                <ul class="list-group list-gr">
+                  <li v-for="list,index in dept.syllabus.UG">
+                    <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                  </li>
+                </ul>
               </div>
+            </div>
+            <div class="tab-pane fade page-type-links" id="panell2" role="tabpanel">
+              <h5><strong>Details of Syllabus/Programmes in PG</strong></h5>
+              <h6 class="red-text" v-if="!dept.syllabus.PG">
+                Not Available at the moment
+              </h6>
+              <ul class="list-group list-gr">
+                <li v-for="list,index in dept.syllabus.PG">
+                  <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-pane fade page-type-links" id="panell3" role="tabpanel">
+              <h5><strong>Details of Syllabus/Programmes in PhD</strong></h5>
+              <h6 class="red-text" v-if="!dept.syllabus.PhD">
+                Not Available at the moment
+              </h6>
+              <ul class="list-group list-gr">
+                <li v-for="list,index in dept.syllabus.PhD">
+                  <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -147,7 +170,10 @@
                         <div class="row">
 
                           <div class="col" v-for="person in dept.people.faculty">
-                            <card-testimonial :name="person.name" :image="person.image" :desig="person.designation">
+                            <card-testimonial :name="person.name"
+                              :id="person.id"
+                              :image="person.image"
+                              :desig="person.designation">
                               <strong>-- Research Interest --</strong><br>
                               <span v-html="stripDesc(person.research_interest)"></span><br>
                               <i class="fa fa-envelope"></i><br>
@@ -168,6 +194,7 @@
               </div>
             </div>
             <div class="tab-pane fade" id="p4l2" role="tabpanel">
+              <span class="carousel-title">STAFFS</span>
               <div class="container-fluid">
                 <div class="row">
                   <div class="col staffs" v-for="person in dept.people.staff">
@@ -179,10 +206,11 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="p4l3" role="tabpanel">
-              <ul>
+            <div class="tab-pane fade page-type-links" id="p4l3" role="tabpanel">
+              <span class="carousel-title">STUDENT</span>
+              <ul class="list-group list-gr">
                 <li v-for="link in dept.people.students">
-                  <a target="new" :href="link.file">
+                  <a class="list-group-item" target="new" :href="link.file">
                     {{ link.title }}
                   </a>
                 </li>
@@ -193,7 +221,7 @@
 
         <div class="tab-pane fade big-list" id="li5" role="tabpanel" aria-labelledby="li5-list">
           <h3 class="pane-title" align="left">Research</h3>
-          <h4 class="white-text"><strong>Collaboration with Academic and Research Institutions in recent times</strong></h4>
+          <h4><strong>Collaboration with Academic and Research Institutions in recent times</strong></h4>
           <div class="card">
             <div class="card-body">
               <table-renderer :theader="research_header" :table="dept.research"></table-renderer>
@@ -203,7 +231,7 @@
 
         <div class="tab-pane fade big-list" id="li6" role="tabpanel" aria-labelledby="li5-list">
           <h3 class="pane-title" align="left">Projects</h3>
-          <h4 class="white-text"><strong>Ongoing Sponsored Projects</strong></h4>
+          <h4 ><strong>Ongoing Sponsored Projects</strong></h4>
           <div class="card">
             <div class="card-body">
               <table-renderer :theader="project_header" :table="dept.projects"></table-renderer>
@@ -245,7 +273,7 @@
 
         <div class="tab-pane fade big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
           <h3 class="pane-title" align="left">Activities</h3>
-          <h4 class="white-text"><strong>Programmes Hosted by the Department</strong></h4>
+          <h4 class="black-text"><strong>Programmes Hosted by the Department</strong></h4>
           <div class="card">
             <div class="card-body">
               <table-renderer :theader="activities_header" :table="dept.activities"></table-renderer>
@@ -261,7 +289,7 @@
             <div class="carousel-inner" role="listbox">
               <div v-for="(slide,index) in dept.photos" class="carousel-item anim1" :class="index == 0 ? 'active' : ''">
                 <div class="view">
-                  <img class="d-block w-100" :src="slide.image" :alt="['Slide ' + (index+1)]">
+                  <img class="d-block w-100" :src="genBackendURL(slide.image, true)" :alt="['Slide ' + (index+1)]">
                   <div class="mask rgba-black-light"></div>
                 </div>
                 <div class="carousel-caption">
@@ -281,7 +309,7 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li10" role="tabpanel" aria-labelledby="li10-list">
-          <p class="white-text" align="center" v-html="dept.contact_us">
+          <p align="center" v-html="dept.contact_us">
           </p>
         </div>
       </div>
@@ -293,7 +321,7 @@ import axios from 'axios'
 import Newsfeed from './Newsfeed'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
-import { genBackendURL,stripDesc } from '@/common.js'
+import { genBackendURL, stripDesc, convertNewsfeed } from '@/common.js'
 import TableRenderer from '@/components/TableRenderer'
 import CardCollapse from '@/components/CardCollapse'
 import CardTestimonial from '@/components/CardTestimonial'
@@ -337,6 +365,7 @@ export default {
            axios.get(genBackendURL("department/"+departments[i].id))
                 .then(response => {
                   this.dept = response.data
+                  this.dept.news = convertNewsfeed(this.dept.news)
                   this.$emit('hideloader', true)
                 })
                 .catch(e => {
@@ -349,6 +378,7 @@ export default {
   },
   methods: {
     stripDesc: stripDesc,
+    genBackendURL: genBackendURL,
     convertYear: function (year) {
       return year == 1959 ? "N/A" : year
     }
@@ -572,9 +602,6 @@ export default {
   }
   .l2-idep .card-body .down-content #li4 .carousel-indicators li.active{
     background-color: #001333;
-  }
-  .l2-idep .white-text{
-    color:#000000 !important;
   }
   .l2-idep .card-body .down-content .carousel-title{
     font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;font-size: 150%;color:#000000;

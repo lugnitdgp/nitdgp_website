@@ -37,7 +37,12 @@ function getUniqueId (prefix, length) {
   return id
 }
 
-function genBackendURL (str) {
+function genBackendURL (str, fromBackend=false) {
+  if (fromBackend) {
+    if (str[0] == "/")
+      return backURL + str
+    return str
+  }
   if (str[0] != "/")
     str = "/" + str
   if (str[str.length - 1] != "/")
@@ -70,6 +75,30 @@ function range(start, stop, step) {
 }
 
 
+function convertNewsfeed(raw_data){
+  const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY",
+                 "AUG", "SEPT", "OCT", "NOV", "DEC"]
+  let notices = []
+  let news_slide = []
+  raw_data.map((news,index) => {
+    let date = new Date(news.date)
+    news.month = months[date.getMonth()]
+    news.date = date.getDate()
+    if (news.file)
+      news.link = news.file
+    news.link = genBackendURL(news.link, true)
+    news_slide.push(news)
+    if ((index+1) % 4 == 0) {
+      notices.push(news_slide)
+       news_slide = []
+    }
+  })
+  if (news_slide.length) {
+    notices.push(news_slide)
+  }
+  return notices
+}
+
 export {
   backURL,
   baseURL,
@@ -78,5 +107,6 @@ export {
   getUniqueId,
   genBackendURL,
   range,
+  convertNewsfeed,
   stripDesc
 }
