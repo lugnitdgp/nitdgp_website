@@ -2,7 +2,7 @@
   <div class="card testimonial-card">
     <div class="card-up">
     </div>
-    <a :href="'/faculty/' + id">
+    <a align="center" :href="'/faculty/' + id">
       <img :src="imageModified" class="avatar mx-auto rounded-circle img-fluid">
     </a>
     <div class="card-body-in">

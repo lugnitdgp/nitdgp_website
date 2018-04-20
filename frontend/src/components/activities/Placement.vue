@@ -1,23 +1,50 @@
 <template>
-  	<div class="l1 page-type-links">
-	    <!-- CONTENT -->
-	    <div class="card">
-	      <a class="card-header white-text">Placement Activities</a>
-	      	<div class="card-body">
-				<div class="card-text">
-				  <ul class="list-group list-gr">
-				    <li><a class="list-group-item" target="new" href="#">Placement Statistics</a></li>
-				  </ul>
-				</div>
-	    	</div>
-	    </div>
-   	</div>
+	<links-page>
+    <card title="Placement Activities and Statistics">
+      <div>
+        <ul class="list-group list-gr">
+          <li v-for="link in docs">
+            <a class="list-group-item" v-if="link.file" :href="link.file" target="new">
+              {{ link.title }}
+            </a>
+            <a class="list-group-item" v-if="link.url" :href="link.url" target="new">
+              {{ link.title }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </card>
+  </links-page>
 </template>
 <script>
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import axios from 'axios'
+import { backURL, genBackendURL } from '@/common.js'
+
 export default {
-  name: 'Placement',
+  name: 'Research',
+  data () {
+    return {
+      docs: {},
+      backURL: backURL
+    }
+  },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('activities/placement'))
+         .then(response => {
+           this.docs = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           window.location = "/WorkInProgress"
+           console.log(e)
+         })
+  },
+  components: {
+    LinksPage,
+    Card
   }
+
 }
 </script>
