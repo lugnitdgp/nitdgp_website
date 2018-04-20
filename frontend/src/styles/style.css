@@ -261,12 +261,20 @@ hr.style4:after {
 
 /*00ss*/
 .l3-fac .fac-sm{
-  padding: 20px;margin: 1em auto;width: 700px;height: 100%;max-height: 100%;max-width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 700px;
+  max-height: 100%;
+  max-width: 100%;
 }
 /*00ss*/
 
 .l3-fac .card-body .downc .accordion .card-header{
   border:solid 1px black;
+}
+
+.table {
+  margin-bottom: 0px;
 }
 
 .l3-fac .card-body .downc .table .th-lg{
