@@ -77,7 +77,7 @@ class DepartmentNewsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DepartmentNews
-        fields = ('title', 'link')
+        fields = ('title', 'link', 'date')
 
 
 class FacultyRolesSerializer(serializers.ModelSerializer):
