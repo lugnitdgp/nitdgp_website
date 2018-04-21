@@ -21,6 +21,7 @@
           {{ director.email }}<br>
           <i class="fa fa-phone fa-1x"></i><br>
           Phone :+91 {{ director.mobile }} (O)<br>
+          Fax :+91 {{ director.fax }}<br>
           <!-- Fax :+91 343 2547375<br> -->
           <!-- <a href="#" class="white-text">*MoreInfo*</a> -->
         </p>
@@ -37,19 +38,16 @@ export default {
   name: 'Director',
   data () {
     return {
-      director: {}
+      director: {
+        name: "Prof. Anupam Basu",
+        image: "/static/img/director_image.jpg",
+        email: "director@admin.nitdgp.ac.in",
+        mobile: "343 2546397",
+        fax: "343 2547375"
+      }
     }
   },
   created () {
-    axios.get(genBackendURL("administration/director"))
-         .then(response => {
-           this.director = response.data.director
-           this.director.mobile = String(this.director.mobile).slice(0,3) +
-                                  " " + String(this.director.mobile).slice(3,)
-         })
-         .catch(e => {
-           console.log(e)
-         })
     this.$emit('hideloader', true)
   }
 }
