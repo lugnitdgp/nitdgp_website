@@ -156,15 +156,6 @@
                 <div class="caros">
                   <div id="caro-p1-1" class="carousel slide carousel-multi-item" data-ride="carousel">
                     <span class="carousel-title">FACULTIES</span>
-                    <!-- <div class="controls-top">
-                      <a class="btn-floating" href="#caro-p1-1" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                      <a class="btn-floating" href="#caro-p1-1" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                    </div>
-                    <ol class="carousel-indicators">
-                      <li data-target="#caro-p1-1" data-slide-to="0" class="active"></li>
-                      <li data-target="#caro-p1-1" data-slide-to="1"></li>
-                      <li data-target="#caro-p1-1" data-slide-to="2"></li>
-                    </ol> -->
                     <div class="carousel-inner person-list" role="listbox">
                       <div class="carousel-item active">
                         <div class="row">
@@ -175,7 +166,9 @@
                               :image="person.image"
                               :desig="person.designation">
                               <strong>-- Research Interest --</strong><br>
-                              <span v-html="stripDesc(person.research_interest)"></span><br>
+                              <a :href="'/faculty/' + person.id">
+                                <span v-html="stripDesc(person.research_interest)"></span><br>
+                              </a>
                               <i class="fa fa-envelope"></i><br>
                               <strong>{{ person.email }}</strong><br>
                               <i class="fa fa-address-book"></i><br>

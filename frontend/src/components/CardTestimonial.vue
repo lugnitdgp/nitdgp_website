@@ -2,14 +2,20 @@
   <div class="card testimonial-card">
     <div class="card-up">
     </div>
-    <a align="center" :href="'/faculty/' + id">
+    <a v-if="id" align="center" :href="'/faculty/' + id">
       <img :src="imageModified" class="avatar mx-auto rounded-circle img-fluid">
     </a>
+    <div v-if="!id" align="center">
+      <img :src="imageModified" class="avatar mx-auto rounded-circle img-fluid">
+    </div>
     <div class="card-body-in">
-      <p class="card-title">
+      <p v-if="id" class="card-title">
         <a class="black-text" :href="'/faculty/' + id">
           {{ name }}
         </a>
+      </p>
+      <p v-if="!id" class="card-title">
+          {{ name }}
       </p>
       <h6 class="blue-text"><strong>{{ desig }}</strong></h6>
       <hr>
