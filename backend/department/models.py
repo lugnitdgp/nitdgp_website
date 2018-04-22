@@ -266,12 +266,13 @@ class Courses(BaseModel):
         verbose_name_plural = 'Courses'
         ordering = ('semester', 'short_code')
 
-    COURSE_TYPES = (('L', 'Lecture'), ('T', 'Tutorial'), ('S', 'Sessional'))
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     short_code = models.CharField(max_length=7)
     semester = models.IntegerField()
-    course_type = models.CharField(choices=COURSE_TYPES, default='L', max_length=30)
+    l = models.IntegerField()
+    t = models.IntegerField()
+    s = models.IntegerField()
     credits = models.IntegerField()
 
     def __str__(self):
@@ -286,8 +287,14 @@ class Courses(BaseModel):
     def _semester(self):
         return self.semester
 
-    def _course_type(self):
-        return self.course_type
+    def _l(self):
+        return self.l
+
+    def _t(self):
+        return self.t
+
+    def _s(self):
+        return self.s
 
 
 class Facility(BaseModel):

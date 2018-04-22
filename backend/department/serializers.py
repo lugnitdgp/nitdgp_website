@@ -42,7 +42,7 @@ class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Courses
-        fields = ('title', 'short_code', 'semester', 'course_type', 'credits',)
+        fields = ('title', 'short_code', 'semester', 'l', 't', 's', 'credits')
 
 
 class ResearchSerializer(serializers.ModelSerializer):

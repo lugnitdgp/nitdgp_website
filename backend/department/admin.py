@@ -43,7 +43,7 @@ class ProgrammeModelAdmin(admin.ModelAdmin):
 
 
 class CoursesModelAdmin(admin.ModelAdmin):
-    list_display = ['_programme', '_short_code', '_semester', '_course_type']
+    list_display = ['_programme', '_short_code', '_semester', '_l', '_t', '_s']
 
 
 class FacilityModelAdmin(admin.ModelAdmin):
