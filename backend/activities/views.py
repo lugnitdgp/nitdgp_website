@@ -25,3 +25,9 @@ class ResearchViewSet(ListAPIView):
 
 	 queryset = Research.objects.all()
 	 serializer_class = ResearchSerializer
+
+
+class PlacementViewSet(ListAPIView):
+
+	 queryset = Placement.objects.all()
+	 serializer_class = PlacementSerializer

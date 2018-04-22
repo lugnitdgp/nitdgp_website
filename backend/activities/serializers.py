@@ -28,3 +28,10 @@ class ResearchSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Research
 		fields = ('title', 'file', 'date', 'url')
+
+
+class PlacementSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Placement
+		fields = ('title', 'file', 'date', 'url')
