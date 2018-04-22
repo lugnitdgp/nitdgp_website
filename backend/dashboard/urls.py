@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^dashboard/events/$', EventViewSet.as_view(), name='list-events'),
     url(r'^dashboard/newsfeed/$', NewsFeedViewSet.as_view(), name='list-newsfeed'),
     url(r'^dashboard/contacts/$', ContactViewSet.as_view(), name='list-contact'),
+    url(r'^dashboard/footer/$', FooterViewSet.as_view(), name='list-footer-content'),
 ]

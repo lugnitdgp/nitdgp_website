@@ -131,3 +131,8 @@ class Contact(BaseModel):
 
     def _contact(self):
         return self.contact
+
+
+class HitCount(models.Model):
+
+    count = models.IntegerField(default=0)
