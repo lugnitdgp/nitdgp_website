@@ -47,10 +47,6 @@ export default {
            console.log(response)
            let notices = response.data.notices
            this.student.push(...notices.Student)
-           if ("8e23a092684f4c3189728772de4bf244" in notices) {
-             // For backward compatibility
-             this.student.push(...notices["8e23a092684f4c3189728772de4bf244"])
-           }
            this.academic = notices.Academic
            this.general = notices.General
            this.$emit('hideloader', true)
