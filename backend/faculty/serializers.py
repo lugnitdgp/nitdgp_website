@@ -2,6 +2,7 @@ from rest_framework import serializers
 from faculty.models import *
 from department.models import Faculty
 from department.serializers import CourseSerializer
+import collections
 
 class FacultyDetailSerializer(serializers.ModelSerializer):
 
@@ -17,15 +18,29 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
 
     def get_teachings(self, obj):
         info = GeneralInformation.objects.filter(faculty=obj.id)
-        return CourseSerializer(info.first().teachings, many=True).data
+        if info.count() == 0:
+            return {}
+        else :
+            #return CourseSerializer(info.first().teachings, many=True).data
+            result = collections.defaultdict(list)
+            teachings = info.first().teachings
+            for course in teachings.order_by('semester'):
+                    result[course.semester].append(CourseSerializer(course).data)
+            return result
 
     def get_education(self, obj):
         info = GeneralInformation.objects.filter(faculty=obj.id)
-        return info.first().education
+        if info.count() == 0:
+            return {}
+        else :
+            return info.first().education
 
     def get_projects(self, obj):
         info = GeneralInformation.objects.filter(faculty=obj.id)
-        return info.first().projects
+        if info.count() == 0:
+            return {}
+        else :
+            return info.first().projects
 
     def get_publication(self, obj):
         info = Publication.objects.filter(faculty=obj.id)
@@ -41,15 +56,24 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
 
     def get_work_experience(self, obj):
         info = GeneralInformation.objects.filter(faculty=obj.id)
-        return info.first().work_experience
+        if info.count() == 0:
+            return {}
+        else :
+            return info.first().work_experience
 
     def get_awards_and_recognition(self, obj):
         info = GeneralInformation.objects.filter(faculty=obj.id)
-        return info.first().awards_and_recognition
+        if info.count() == 0:
+            return {}
+        else :
+            return info.first().awards_and_recognition
 
     def get_administrative_responsibilities(self, obj):
         info = GeneralInformation.objects.filter(faculty=obj.id)
-        return info.first().administrative_responsibilities
+        if info.count() == 0:
+            return {}
+        else :
+            return info.first().administrative_responsibilities
 
     class Meta:
         model = Faculty
