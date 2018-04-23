@@ -5,7 +5,7 @@ from academics.serializers import *
 
 class NoticeViewSet(ListAPIView):
 
-    queryset = Notice.objects.all()
+    queryset = Notice.objects.all().order_by('-date')
     serializer_class = NoticeSerializer
 
     def list(self, request, *args, **kwargs):
