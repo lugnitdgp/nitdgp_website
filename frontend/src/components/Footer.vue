@@ -18,13 +18,13 @@
     <div class="footer-copyright" id="footer-copyright">
       <div class="row">
         <div class="container-fluid ftr-1">
-          <span class="copyright-txt">Last updated: {{ last_updated }} </span>
+          <span class="copyright-txt">Last updated: {{ footer.last_updated.slice(0,10) }} </span>
         </div>
         <div class="container-fluid ftr-2">
           <span class="copyright-txt">© 2018 Copyright: <a href="https://www.nitdgp.ac.in"> nitdgp.ac.in </a></span>
         </div>
         <div class="container-fluid ftr-3">
-          <span class="copyright-txt">Visitors Count: {{ visitors }} </span>
+          <span class="copyright-txt">Visitors Count: {{ footer.hits }} </span>
         </div>
       </div>
     </div>
@@ -32,12 +32,14 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { genBackendURL } from '@/common.js'
+
 export default {
   name: 'Footer',
   data() {
     return {
-      visitors: 12312,
-      last_updated: "1/12/18 12:12 PM",
+      footer: {},
       logos: [{name: 'govlogo1', filename: 'govlogo1.png', href:"#!"},
               {name: 'govlogo2', filename: 'govlogo2.png', href:"#!"},
               {name: 'govlogo3', filename: 'govlogo3.png', href:"#!"},
@@ -51,6 +53,16 @@ export default {
               {name: "Policies", href: "/policies"},
               {name: "Webteam", href: "/webteam"}]
     }
+  },
+  created () {
+    axios.get(genBackendURL("dashboard/footer"))
+         .then(response => {
+           this.footer = response.data
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })
   }
 }
 </script>
