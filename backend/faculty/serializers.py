@@ -9,6 +9,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     education = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
     publication = serializers.SerializerMethodField()
+    students = serializers.SerializerMethodField()
     books_and_patents = serializers.SerializerMethodField()
     work_experience = serializers.SerializerMethodField()
     awards_and_recognition = serializers.SerializerMethodField()
@@ -30,6 +31,10 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
         info = Publication.objects.filter(faculty=obj.id)
         return PublicationSerializer(info, many=True).data
 
+    def get_students(self, obj):
+        info = Students.objects.filter(faculty=obj.id)
+        return StudentSerializer(info, context=self.context, many=True).data
+
     def get_books_and_patents(self, obj):
         info = BooksPatents.objects.filter(faculty=obj.id)
         return BookPatentSerializer(info, many=True).data
@@ -49,7 +54,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty
         fields = ('name', 'research_interest', 'image', 'email', 'joining_year', 'designation',
-        'education', 'projects', 'dept_short_code', 'publication', 'books_and_patents', 'teachings', 'work_experience', 'awards_and_recognition',
+        'education', 'projects', 'dept_short_code', 'students', 'publication', 'books_and_patents', 'teachings', 'work_experience', 'awards_and_recognition',
         'administrative_responsibilities')
 
 
@@ -65,3 +70,10 @@ class BookPatentSerializer(serializers.ModelSerializer):
     class Meta:
         model = BooksPatents
         fields = ('title', 'file', 'url')
+
+
+class StudentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Students
+        fields = ('title', 'file')

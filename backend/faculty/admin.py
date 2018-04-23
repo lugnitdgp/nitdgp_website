@@ -12,6 +12,11 @@ class BooksPatentsModelAdmin(admin.ModelAdmin):
 class PublicationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', '_authors', '_journal']
 
+
+class StudentsModelAdmin(admin.ModelAdmin):
+	list_display = ['__str__', '_title', '_file']
+
 admin.site.register(GeneralInformation, GeneralInformationModelAdmin)
 admin.site.register(BooksPatents, BooksPatentsModelAdmin)
 admin.site.register(Publication, PublicationModelAdmin)
+admin.site.register(Students, StudentsModelAdmin)

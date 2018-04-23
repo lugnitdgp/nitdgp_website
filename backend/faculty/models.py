@@ -82,3 +82,27 @@ class BooksPatents(BaseModel):
 
     def _url(self):
         return self.url
+
+
+def rename_students(instance, filename):
+
+    return 'faculty/{0}/students/{1}'.format(instance.faculty.name, filename)
+
+
+class Students(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Students under Faculty'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to=rename_students)
+
+    def __str__(self):
+        return self.faculty.name
+
+    def _title(self):
+        return self.title
+
+    def _file(self):
+        return self.file
