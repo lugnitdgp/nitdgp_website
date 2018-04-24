@@ -15,9 +15,13 @@ class BwcIfcModelAdmin(admin.ModelAdmin):
 class SenateAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file', '_date']
 
+class BogAgendaAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file', '_date']
+
 # Register your models here.
 
 admin.site.register(Dean, DeanModelAdmin)
 admin.site.register(BOG, BOGModelAdmin)
 admin.site.register(BwcIfc, BwcIfcModelAdmin)
 admin.site.register(Senate, SenateAdmin)
+admin.site.register(BogAgenda, BogAgendaAdmin)

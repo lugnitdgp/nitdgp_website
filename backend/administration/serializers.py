@@ -25,6 +25,13 @@ class SenateSerializer(serializers.ModelSerializer):
         fields = ('title', 'file', 'date')
 
 
+class BogAgendaSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = BogAgenda
+        fields = ('title', 'file', 'date')
+
+
 class DeanSerializer(serializers.ModelSerializer):
 
     class Meta:

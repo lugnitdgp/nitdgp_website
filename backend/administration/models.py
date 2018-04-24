@@ -63,6 +63,26 @@ class BOG(BaseModel):
         return self.address
 
 
+class BogAgenda(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'BOG Agenda for Meetings'
+        ordering = ('-date',)
+
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to='academics/notices/%Y/%m/%d')
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
+    def _date(self):
+        return self.date
+
+
 class BwcIfc(BaseModel):
 
     class Meta:

@@ -67,6 +67,12 @@ class SenateViewSet(ListAPIView):
      serializer_class = SenateSerializer
 
 
+class BogAgendaViewSet(ListAPIView):
+
+     queryset = BogAgenda.objects.all()
+     serializer_class = BogAgendaSerializer
+
+
 class DeansViewSet(ListAPIView):
 
     queryset = Dean.objects.all()
