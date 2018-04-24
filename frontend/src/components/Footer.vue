@@ -1,5 +1,5 @@
 <template>
-  <footer class="page-footer center-on-small-only">
+  <footer v-if="footer" class="page-footer center-on-small-only">
     <div class="container" id="footer-container">
       <div class="container-fluid" align="center">
         <div class="row quick-links-row quick-links-container">
@@ -18,7 +18,9 @@
     <div class="footer-copyright" id="footer-copyright">
       <div class="row">
         <div class="container-fluid ftr-1">
-          <span class="copyright-txt">Last updated: {{ footer.last_updated.slice(0,10) }} </span>
+          <span class="copyright-txt">
+            Last updated: {{ footer.last_updated.slice(0,10) }}
+          </span>
         </div>
         <div class="container-fluid ftr-2">
           <span class="copyright-txt">© 2018 Copyright: <a href="https://www.nitdgp.ac.in"> nitdgp.ac.in </a></span>
@@ -39,7 +41,7 @@ export default {
   name: 'Footer',
   data() {
     return {
-      footer: {},
+      footer: undefined,
       logos: [{name: 'govlogo1', filename: 'govlogo1.png', href:"#!"},
               {name: 'govlogo2', filename: 'govlogo2.png', href:"#!"},
               {name: 'govlogo3', filename: 'govlogo3.png', href:"#!"},

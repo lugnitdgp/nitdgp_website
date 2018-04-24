@@ -17,10 +17,9 @@
       	</ul>
       	<!-- Tab panels -->
       	<div class="tab-content card">
-      	  <notice-list idn="1" :noticelist="academic">
-          </notice-list>
-      	  <notice-list class="in show active" :noticelist="student" idn="2"></notice-list>
-      	  <notice-list :noticelist="general" idn="3"></notice-list>
+      	  <notice-list idn="1" :noticelist="academic" />
+      	  <notice-list class="in show active" :noticelist="student" idn="2" />
+      	  <notice-list :noticelist="general" idn="3" />
       	</div>
       </div>
     </div>
