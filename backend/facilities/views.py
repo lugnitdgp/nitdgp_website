@@ -1,5 +1,5 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
-
+from rest_framework.response import Response
 from facilities.serializers import *
 from facilities.models import *
 
@@ -10,10 +10,20 @@ class LibraryViewSet(ListAPIView):
 	serializer_class = LibrarySerializer
 
 
-class EResourceViewSet(ListAPIView):
+class ResourceViewSet(ListAPIView):
 
-	queryset = EResource.objects.all()
-	serializer_class = EResourceSerializer
+	queryset = Resource.objects.all()
+	serializer_class = ResourceSerializer
+
+	def list(self, request, *args, **kwargs):
+		result = {}
+		for resource in self.get_queryset():
+			rtype = resource.type
+			if rtype in result:
+				result[rtype].append(ResourceSerializer(resource, context={"request": request}).data)
+			else:
+				result[rtype] = [ResourceSerializer(resource, context={"request": request}).data]
+		return Response({"resources": result})
 
 
 class SACViewSet(ListAPIView):

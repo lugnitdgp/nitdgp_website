@@ -22,19 +22,24 @@ class Library(BaseModel):
         return self.contact_us
 
 
-class EResource(BaseModel):
+class Resource(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'E Resources'
+        verbose_name_plural = 'Resources'
 
+    TYPES = (('E Resource', 'E Resource'), ('Text Resource', 'Text Resource'))
     title = models.CharField(max_length=255, default="")
     url = models.URLField()
+    type = models.CharField(choices=TYPES, max_length=512)
 
     def __str__(self):
         return self.title
 
     def _url(self):
         return self.url
+
+    def _type(self):
+        return self.type
 
 
 class SAC(BaseModel):

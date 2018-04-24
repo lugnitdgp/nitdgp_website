@@ -7,7 +7,7 @@ app_name = 'facilities'
 urlpatterns = [
 
     url(r'^facilities/library/$', LibraryViewSet.as_view(), name='view-library'),
-    url(r'^facilities/eresource/$', EResourceViewSet.as_view(), name='view-eresource'),
+    url(r'^facilities/resource/$', ResourceViewSet.as_view(), name='view-resource'),
     url(r'^facilities/sac/$', SACViewSet.as_view(), name='view-sac'),
     url(r'^facilities/cif/$',CIFViewSet.as_view(), name='view-cif'),
 

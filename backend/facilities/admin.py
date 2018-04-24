@@ -7,8 +7,8 @@ class LibraryModelAdmin(admin.ModelAdmin):
     list_display = ['_home', '_about', '_contact_us']
 
 
-class EResourceModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_url']
+class ResourceModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_url', '_type']
 
 class SACModelAdmin(admin.ModelAdmin):
 	list_display = ['_about','__str__','_other_activities','_facility','_contact_us','_ach_url','_rec_url']
@@ -18,6 +18,6 @@ class CIFModelAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Library, LibraryModelAdmin)
-admin.site.register(EResource, EResourceModelAdmin)
+admin.site.register(Resource, ResourceModelAdmin)
 admin.site.register(SAC,SACModelAdmin)
 admin.site.register(CIF,CIFModelAdmin)

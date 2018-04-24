@@ -10,10 +10,10 @@ class LibrarySerializer(serializers.ModelSerializer):
 		fields = ('home','about','contact_us')
 
 
-class EResourceSerializer(serializers.ModelSerializer):
+class ResourceSerializer(serializers.ModelSerializer):
 
 	class Meta:
-		model = EResource
+		model = Resource
 		fields = ('title','url')
 
 
