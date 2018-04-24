@@ -31,11 +31,17 @@ class CareerViewSet(ListAPIView):
     queryset = Career.objects.all().order_by('-updated_at')
     serializer_class = CareerSerializer
 
+    def list(self, request, *args, **kwargs):
+        return Response({"careers": CareerSerializer(self.get_queryset(), many=True).data })
+
 
 class TenderViewSet(ListAPIView):
 
     queryset = Tender.objects.all().order_by('-updated_at')
     serializer_class = TenderSerializer
+
+    def list(self, request, *args, **kwargs):
+        return Response({"tenders": TenderSerializer(self.get_queryset(), many=True).data })
 
 
 class TEQIPViewSet(ListAPIView):
