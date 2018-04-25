@@ -7,7 +7,7 @@ class StudentClubModelAdmin(admin.ModelAdmin):
 
 
 class SeminarEventModelAdmin(admin.ModelAdmin):
-	list_display = ['_title', '_file', '_date']
+	list_display = ['_title', '_file', '_url', '_date']
 
 
 class AchievementModelAdmin(admin.ModelAdmin):

@@ -13,7 +13,7 @@ class SeminarEventSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = SeminarEvent
-		fields = ('title', 'file', 'date')
+		fields = ('title', 'file', 'url', 'date')
 
 
 class AchievementSerializer(serializers.ModelSerializer):

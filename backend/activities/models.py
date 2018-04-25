@@ -31,7 +31,8 @@ class SeminarEvent(BaseModel):
 		ordering = ('-date', )
 
 	title = models.CharField(max_length=512)
-	file = models.FileField(upload_to='activities/seminar_and_events/%Y/%m/%d')
+	file = models.FileField(upload_to='activities/seminar_and_events/%Y/%m/%d', blank=True)
+	url = models.URLField(blank=True)
 	date = models.DateField()
 
 	def _title(self):
@@ -39,6 +40,9 @@ class SeminarEvent(BaseModel):
 
 	def _file(self):
 		return self.file
+
+	def _url(self):
+		return self.url
 
 	def _date(self):
 		return self.date
