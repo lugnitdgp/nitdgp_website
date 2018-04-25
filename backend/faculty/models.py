@@ -8,7 +8,7 @@ class GeneralInformation(BaseModel):
     class Meta:
         verbose_name_plural = 'General Information'
 
-    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     education = RichTextField()
     work_experience = RichTextField()
     projects = RichTextField()
@@ -37,7 +37,7 @@ class GeneralInformation(BaseModel):
 
 class Publication(BaseModel):
 
-     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+     faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
      authors = models.TextField()
      title = RichTextField()
      journal = models.TextField()
@@ -66,7 +66,7 @@ class BooksPatents(BaseModel):
     class Meta:
         verbose_name_plural = 'Books and Patents'
 
-    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     title = models.CharField(max_length=512)
     file = models.FileField(upload_to=rename_book, blank=True)
     url = models.URLField(blank=True)

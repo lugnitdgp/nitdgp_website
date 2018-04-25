@@ -17,7 +17,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     administrative_responsibilities = serializers.SerializerMethodField()
 
     def get_teachings(self, obj):
-        info = GeneralInformation.objects.filter(faculty=obj.id)
+        info = GeneralInformation.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
@@ -29,47 +29,47 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
             return result
 
     def get_education(self, obj):
-        info = GeneralInformation.objects.filter(faculty=obj.id)
+        info = GeneralInformation.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().education
 
     def get_projects(self, obj):
-        info = GeneralInformation.objects.filter(faculty=obj.id)
+        info = GeneralInformation.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().projects
 
     def get_publication(self, obj):
-        info = Publication.objects.filter(faculty=obj.id)
+        info = Publication.objects.filter(faculty_id=obj.id)
         return PublicationSerializer(info, many=True).data
 
     def get_students(self, obj):
-        info = Students.objects.filter(faculty=obj.id)
+        info = Students.objects.filter(faculty_id=obj.id)
         return StudentSerializer(info, context=self.context, many=True).data
 
     def get_books_and_patents(self, obj):
-        info = BooksPatents.objects.filter(faculty=obj.id)
+        info = BooksPatents.objects.filter(faculty_id=obj.id)
         return BookPatentSerializer(info, many=True).data
 
     def get_work_experience(self, obj):
-        info = GeneralInformation.objects.filter(faculty=obj.id)
+        info = GeneralInformation.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().work_experience
 
     def get_awards_and_recognition(self, obj):
-        info = GeneralInformation.objects.filter(faculty=obj.id)
+        info = GeneralInformation.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().awards_and_recognition
 
     def get_administrative_responsibilities(self, obj):
-        info = GeneralInformation.objects.filter(faculty=obj.id)
+        info = GeneralInformation.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
