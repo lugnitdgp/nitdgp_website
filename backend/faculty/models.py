@@ -17,10 +17,10 @@ class GeneralInformation(BaseModel):
     teachings = models.ManyToManyField(Courses)
 
     def __str__(self):
-        return self.faculty.name
+        return self.faculty_id.name
 
     def _department(self):
-        return self.faculty.department.name
+        return self.faculty_id.department.name
 
     def _education(self):
         return self.education
@@ -44,7 +44,7 @@ class Publication(BaseModel):
      year_or_volume = models.CharField(max_length=100)
 
      def __str__(self):
-         return self.faculty.name
+         return self.faculty_id.name
 
      def _title(self):
         return self.title
@@ -58,7 +58,7 @@ class Publication(BaseModel):
 
 def rename_book(instance, filename):
 
-    return 'faculty/{0}/books_and_patents/{1}'.format(instance.faculty.name, filename)
+    return 'faculty/{0}/books_and_patents/{1}'.format(instance.faculty_id.name, filename)
 
 
 class BooksPatents(BaseModel):
@@ -72,7 +72,7 @@ class BooksPatents(BaseModel):
     url = models.URLField(blank=True)
 
     def __str__(self):
-        return self.faculty.name
+        return self.faculty_id.name
 
     def _title(self):
         return self.title
@@ -86,7 +86,7 @@ class BooksPatents(BaseModel):
 
 def rename_students(instance, filename):
 
-    return 'faculty/{0}/students/{1}'.format(instance.faculty.name, filename)
+    return 'faculty/{0}/students/{1}'.format(instance.faculty_id.name, filename)
 
 
 class Students(BaseModel):
@@ -99,7 +99,7 @@ class Students(BaseModel):
     file = models.FileField(upload_to=rename_students)
 
     def __str__(self):
-        return self.faculty.name
+        return self.faculty_id.name
 
     def _title(self):
         return self.title

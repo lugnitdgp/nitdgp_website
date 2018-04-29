@@ -50,6 +50,9 @@ class Faculty(BaseModel):
     )
     image = models.ImageField(upload_to=rename_image)
 
+    def _name(self):
+        return self.name
+
     def __str__(self):
         return self.name
 
