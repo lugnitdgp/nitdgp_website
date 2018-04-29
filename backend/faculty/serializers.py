@@ -52,7 +52,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
 
     def get_books_and_patents(self, obj):
         info = BooksPatents.objects.filter(faculty_id=obj.id)
-        return BookPatentSerializer(info, many=True).data
+        return BookPatentSerializer(info, context=self.context, many=True).data
 
     def get_work_experience(self, obj):
         info = GeneralInformation.objects.filter(faculty_id=obj.id)

@@ -181,35 +181,35 @@ class MainSerializer(serializers.ModelSerializer):
         syllabus = Syllabus.objects.filter(department=obj.id)
         for i in syllabus:
             try:
-                result[i._degree()].append(SyllabusSerializer(i).data)
+                result[i._degree()].append(SyllabusSerializer(i, context=self.context,).data)
             except KeyError:
-                result[i._degree()] = [SyllabusSerializer(i).data]
+                result[i._degree()] = [SyllabusSerializer(i, context=self.context,).data]
         return result
 
     def get_research(self, obj):
 
         research = Research.objects.filter(department=obj.id)
-        return ResearchSerializer(research, many=True).data
+        return ResearchSerializer(research, context=self.context, many=True).data
 
     def get_projects(self, obj):
 
         projects = Project.objects.filter(department=obj.id)
-        return ProjectSerializer(projects, many=True).data
+        return ProjectSerializer(projects, context=self.context, many=True).data
 
     def get_activities(self, obj):
 
         activity = Activity.objects.filter(department=obj.id)
-        return ActivitySerializer(activity, many=True).data
+        return ActivitySerializer(activity, context=self.context, many=True).data
 
     def get_photos(self, obj):
 
         photo = DepartmentPhotos.objects.filter(department=obj.id)
-        return DepartmentPhotosSerializer(photo, many=True).data
+        return DepartmentPhotosSerializer(photo, context=self.context, many=True).data
 
     def get_news(self, obj):
 
         news = DepartmentNews.objects.filter(department=obj.id)
-        return DepartmentNewsSerializer(news, many=True).data
+        return DepartmentNewsSerializer(news, context=self.context, many=True).data
 
     hod = serializers.SerializerMethodField()
     people = serializers.SerializerMethodField()
