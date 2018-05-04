@@ -2,7 +2,7 @@
   <links-page>
     <card title="Careers">
       <ul class="list-group list-gr">
-        <li v-for="career in careers">
+        <li v-for="career, key in careers">
           <a class="list-group-item" :href="career.file">{{ career.title }}</a>
         </li>
       </ul>
@@ -26,7 +26,7 @@ export default {
   created () {
     axios.get(genBackendURL("information/careers"))
          .then(response => {
-           this.careers = response.data.results
+           this.careers = response.data.careers
            this.$emit('hideloader', true)
          })
          .catch(e => {

@@ -14,6 +14,7 @@
 import axios from 'axios'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
+import NoticeList from '@/components/NoticeList'
 import { genBackendURL } from '@/common.js'
 
 export default {
@@ -26,7 +27,7 @@ export default {
   created () {
     axios.get(genBackendURL("information/tenders"))
          .then(response => {
-           this.tenders = response.data.results
+           this.tenders = response.data.tenders
            this.$emit('hideloader', true)
          })
          .catch(e => {
@@ -35,7 +36,8 @@ export default {
   },
   components: {
     LinksPage,
-    Card
+    Card,
+    NoticeList
   }
 }
 </script>
