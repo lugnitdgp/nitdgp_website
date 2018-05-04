@@ -4,7 +4,7 @@
       <div v-html="content">
       </div>
     </card>
-    <card title="E-Resources">
+    <card v-if="eresources" title="E-Resources">
       <ul class="list-group list-gr">
         <li v-for="eres in eresources">
           <a class="list-group-item" :href="eres.url">
@@ -44,7 +44,7 @@ export default {
          .catch(e => {
            console.log(e)
          })
-    axios.get(genBackendURL('facilities/eresource'))
+    axios.get(genBackendURL('facilities/resource'))
          .then(response => {
            this.eresources = response.data.results
            if (f)
