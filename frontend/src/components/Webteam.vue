@@ -5,15 +5,13 @@
 	<div class="carousel-item active">
 	  <div class="row">
 	    <div class="col" v-for="person in webteam.people">
-	      <card-testimonial :name="person.name" :image="person.image" :desig="person.designation">
-		<!-- <strong>-- Research Interest --</strong><br>
-		     <span v-html="stripDesc(person.research_interest)"></span><br>
-		     <i class="fa fa-envelope"></i><br>
-		     <strong>{{ person.email }}</strong><br>
-		     <i class="fa fa-address-book"></i><br>
-		     <strong>+91-{{ person.mobile }}</strong></br>
-		     <span class="grey-text">Joined the Institute in {{ person.joining_year }}
-		     </span> -->
+	      <card-testimonial :name="person.name" :image="person.image">
+		
+		<strong>
+		  <i class="fa fa-github fa-lg"></i>
+		  <a :href="'https://github.com/' + person.github_id">{{ person.github_id }}</a>
+		</strong>
+		
 	      </card-testimonial>
 	    </div>
 	  </div>
@@ -36,44 +34,34 @@ export default {
 			webteam: {
 				people: [
 					{
-						name: "Dr. Saravanan Chandran",
-						image: "",
-						designation: "Faculty in Charge"
-					},
-					{
 						name: "Abhishek Prasad",
-						image: "",
-						designation: "Developer"
+						image: "static/img/abhishek_prasad.jpg",
+						github_id: "Compro-Prasad"
 					},
 					{
 						name: "Ankan Poddar",
-						image: "",
-						designation: "Developer"
+						image: "static/img/ankan_poddar.jpg",
+						github_id: "ankan17"
 					},
 					{
 						name: "Arnav",
-						image: "",
-						designation: "Developer"
+						image: "static/img/arnav_kumar.jpg",
+						github_id: "arnav-amb"
 					},
 					{
 						name: "Devansh Goenka",
 						image: "",
-						designation: "Developer"
+						github_id: "devanshgoenka97"
 					},
 					{
 						name: "Divyanshu Mehta",
-						image: "",
-						designation: "Developer"
+						image: "static/img/divyanshu_mehta.jpg",
+						github_id: "divyanshumehta"
 					},
 					{
 						name: "Vivek Modi",
-						image: "",
-						designation: "Developer"
-					},
-					{
-						name: "Parul Chandel",
-						image: "",
-						designation: "Developer"
+						image: "static/img/vivek_modi.jpg",
+						github_id: "modihere"
 					}
 				]
 			}
