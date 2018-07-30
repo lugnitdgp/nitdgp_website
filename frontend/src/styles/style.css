@@ -109,7 +109,7 @@ hr.style4:after {
     min-width: 100%!important;max-width: 100%!important;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1010px) {
   .mob{
     display: block!important;
   }

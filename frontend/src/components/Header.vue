@@ -79,11 +79,11 @@
     padding-left: 5px;
   }
   .top-nav-container-left{
-    width: 10%;
+    width: 22%;
     text-align: left;
   }
   .top-nav-container-right{
-    width: 90%;
+    width: 78%;
     text-align: right;
   }
   .top-nav-link{
@@ -109,7 +109,7 @@
     padding-right: 2px;
     border-radius: 4px;
     background-color: #ffffff;
-    width: 30%;
+    width: 45%;
   }
   #navbarSupportedContent-4{
     padding-top: 6em;margin-top: -2em;

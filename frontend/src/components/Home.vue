@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row newscaro">
-      <div class="col-8 caro">
+      <div v-if="(windowWidth > 1000)" class="col-8 caro">
         <Carousel :slides="slides"></Carousel>
       </div>
       <div class="col-4 news">
@@ -77,7 +77,8 @@ export default {
     return {
       results: {},
       slides: [],
-      notices: []
+      notices: [],
+      windowWidth: 1000
     }
   },
   created() {
@@ -142,9 +143,14 @@ export default {
          .catch(e => {
            console.log(e)
          })
+    window.addEventListener('resize', this.updateWidth)
+    this.windowWidth = document.body.clientWidth
   },
   methods: {
     genBackendURL,
+    updateWidth () {
+      this.windowWidth = document.body.clientWidth
+    },
     link (tile) {
       // For generating links on the frontend
       let link = '/'
@@ -157,6 +163,9 @@ export default {
       // For getting links from backend
       // return tile.link
     }
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateWidth);
   }
 }
 </script>
