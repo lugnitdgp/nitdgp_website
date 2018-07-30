@@ -15,60 +15,8 @@ body {
   margin-left: -15px;
   margin-right: -15px;
 }
-#navbar-link {
-  font-size: 90%;
-}
-.navbar-header{
-  margin-top: 1.7em;
-}
-.navbar-text {
-  text-align: center;vertical-align: middle;line-height: 18px;margin-left: -25px;margin-top: -2px;margin-bottom: -1.8em;
-}
-#top-nav-wrap{
-  height: 2em;background-color: #ECEFF1;
-}
-.top-nav-container-left{
-  width: 10%;
-  text-align: left;
-}
-.top-nav-container-right{
-  width: 90%;
-  text-align: right;
-}
-.top-nav-link{
-  color: #000000;font-size: 80%;
-}
-.top-nav-link:not(:nth-child(4))::after {
-  padding: 0 0.2em;content: '|';
-}
-
-.top-nav-link:nth-child(4) {
-  padding-right: 0.5em;
-}
-#nav-below{
-  background-color: #001333;
-  /*opacity: 0.8;*/
-}
-#search-btn-nav{
-  height: 0.95em;padding-left: 2px;padding-right: 2px;border: 1px solid;border-radius: 4px;background-color: #ffffff;width: 5%;max-width: 120px;min-width: 70px;
-}
-#navbarSupportedContent-4{
-  padding-top: 6em;margin-top: -2em;
-}
-.navbar-brand {
-  height: 90px;margin-top: -20px;margin-bottom: -20px;
-}
-.navbar-img-big{
-  padding-left: 5px;height: 70px;
-}
-.navbar-img-small{
-  height: 0px;
-}
 .line-img{
   height:0px;
-}
-.navbar-text-small{
-  font-size: 65%;
 }
 #footer-copyright{
   height: 2.5em;

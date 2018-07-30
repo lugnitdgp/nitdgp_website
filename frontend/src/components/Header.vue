@@ -45,26 +45,87 @@
         </a>
       </span>
       <span class="top-nav-container-right">
-        <a href="http://nitdgp.ac.in" class="top-nav-link">Old website</a>
-        <a href="#" class="top-nav-link">A+/A-</a>
-        <a href="#" class="top-nav-link">A|अ</a>
         <input id="search-btn-nav" type="text" name="" placeholder=" Search">
+        <a href="http://nitdgp.ac.in" class="top-nav-link">Old website</a>
       </span>
     </nav>
   </header>
 </template>
 
 <script>
-export default {
-  name: 'Header',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+ export default {
+     name: 'Header',
+     data () {
+         return {
+             msg: 'Welcome to Your Vue.js App'
+         }
+     }
+ }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  #navbar-link {
+    font-size: 90%;
+  }
+  .navbar-header{
+    margin-top: 1.7em;
+  }
+  .navbar-text {
+    text-align: center;vertical-align: middle;line-height: 18px;margin-left: -25px;margin-top: -2px;margin-bottom: -1.8em;
+  }
+  #top-nav-wrap{
+    height: 2em;
+    background-color: #ECEFF1;
+    padding: 0px;
+    padding-left: 5px;
+  }
+  .top-nav-container-left{
+    width: 10%;
+    text-align: left;
+  }
+  .top-nav-container-right{
+    width: 90%;
+    text-align: right;
+  }
+  .top-nav-link{
+    color: #000000;
+    padding-left: 10px;
+    font-size: 90%;
+  }
+  .top-nav-link:not(:nth-child(4))::after {
+    padding: 0 0.2em;
+    content: '>';
+  }
+
+  .top-nav-link:nth-child(4) {
+    padding-right: 0.5em;
+  }
+  #nav-below{
+    background-color: #001333;
+  }
+  #search-btn-nav{
+    height: 1.8em;
+    padding: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    width: 30%;
+  }
+  #navbarSupportedContent-4{
+    padding-top: 6em;margin-top: -2em;
+  }
+  .navbar-brand {
+    height: 90px;margin-top: -20px;margin-bottom: -20px;
+  }
+  .navbar-img-big{
+    padding-left: 5px;height: 70px;
+  }
+  .navbar-img-small{
+    height: 0px;
+  }
+  .navbar-text-small{
+    font-size: 65%;
+  }
 </style>
