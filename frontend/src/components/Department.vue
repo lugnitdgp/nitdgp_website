@@ -79,7 +79,7 @@
                 </div>
               </div>
               <br>
-              <div class="page-type-links"> 
+              <div class="page-type-links">
                 <h5><strong>Details of Syllabus in UG</strong></h5>
                 <h6 class="red-text" v-if="!dept.syllabus.UG">
                   Not Available at the moment
@@ -403,7 +403,7 @@ export default {
     font-size: 75%;
   }
   .l2-idep .l2-card{
-    margin-top: -1em;
+    /*margin-top: -1em;*/
   }
   .l2-idep .l2-card .down-content .tab-pane .tab-content{
     background: none;border:dotted 1px #ECEFF1;
@@ -412,7 +412,7 @@ export default {
     background: linear-gradient(#ECEFF1,#B0BEC5);
   }
   .l2-idep .l2-card div.tile-title{
-    background: linear-gradient(to right,#001333,#26C6DA);
+    background: #001333;
   }
   .l2-idep .l2-card p.tile-title-text{
     color: #ffffff;
@@ -432,7 +432,9 @@ export default {
     color:#000000;
   }
   .l2-idep{
-    min-height: 650px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%;
+    min-height: 650px;
+    padding-top: 1em;
+    padding-bottom: 1em;padding-right: 1.5%;padding-left: 1.5%;
   }
   .l2-idep .card-body .down-content .caros .carousel-title{
     font-size: 180%;
