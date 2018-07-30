@@ -5,7 +5,6 @@
         <div class="navbar-header">
           <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
             <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
-            }
           </a>
           <img class="line-img" src="/static/img/line.png">
           <img class="navbar-img-small" src="/static/img/emblem.png">
@@ -17,7 +16,6 @@
             </div>
           </div>
           <img class="navbar-img-big"  src="/static/img/emblem.png">
-          <!-- <h6 class="showmee" style="color: #3b5998">NIT Durgapur</h6> -->
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" style="margin-left: -10px;"></span>
