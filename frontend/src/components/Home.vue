@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding-top: 15px">
     <div class="row newscaro">
       <div v-if="(windowWidth > 1000)" class="col-8 caro">
         <Carousel :slides="slides"></Carousel>
@@ -160,8 +160,6 @@ export default {
       if (suburl.indexOf("bwc") != -1)
         return link + "bwcifc"
       return link + suburl
-      // For getting links from backend
-      // return tile.link
     }
   },
   beforeDestroy() {
@@ -171,5 +169,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

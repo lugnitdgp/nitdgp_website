@@ -1,7 +1,7 @@
 <template>
   <header class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark darken-2" id="nav-below">
-      <div class="container-fluid" >
+      <div v-show="header" class="container-fluid" >
         <div class="navbar-header">
           <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
             <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
@@ -41,6 +41,7 @@
         <a v-if="$route.path != '/'" href="/" class="black-text">
           <i class="fa fa-home fa-lg fa-2x" aria-hidden="true"></i>
         </a>
+        <a @click="toggleHeader()">H</a>
       </span>
       <span class="top-nav-container-right">
         <input id="search-btn-nav" type="text" name="" placeholder=" Search">
@@ -51,14 +52,24 @@
 </template>
 
 <script>
- export default {
-     name: 'Header',
-     data () {
-         return {
-             msg: 'Welcome to Your Vue.js App'
-         }
-     }
- }
+export default {
+  name: 'Header',
+  data () {
+    return {
+      header: true
+    }
+  },
+  created () {
+    if (window.localStorage["header"] !== undefined)
+      this.header = window.localStorage.getItem("header") == "true"
+  },
+  methods: {
+    toggleHeader() {
+      this.header = !this.header
+      window.localStorage.setItem("header", this.header)
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
