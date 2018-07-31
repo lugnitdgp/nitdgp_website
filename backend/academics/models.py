@@ -7,7 +7,8 @@ class Notice(BaseModel):
     NOTICE_TYPES = (('Academic', 'Academic'), ('Student', 'Student'), ('General', 'General'))
     title = models.CharField(max_length=512)
     notice_type = models.CharField(choices=NOTICE_TYPES, max_length=512)
-    file = models.FileField(upload_to='academics/notices/%Y/%m/%d')
+    file = models.FileField(upload_to='academics/notices/%Y/%m/%d', blank=True)
+    url = models.URLField(blank=True)
     date = models.DateField()
 
     def __str__(self):

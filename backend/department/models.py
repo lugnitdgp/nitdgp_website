@@ -7,7 +7,7 @@ from base.models import BaseModel
 
 class Department(BaseModel):
     name = models.CharField(max_length=255)
-    short_code = models.CharField(max_length=4)
+    short_code = models.CharField(max_length=6)
     about_us =  RichTextField()
     mission = RichTextField()
     vision = RichTextField()
@@ -271,7 +271,7 @@ class Courses(BaseModel):
 
     programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    short_code = models.CharField(max_length=7)
+    short_code = models.CharField(max_length=15)
     semester = models.IntegerField()
     l = models.IntegerField()
     t = models.IntegerField()

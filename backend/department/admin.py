@@ -14,7 +14,7 @@ class FacultyModelAdmin(admin.ModelAdmin):
             return []
         if obj is None:
             return []
-        return ['name']
+        return ['name', 'department']
 
     def get_queryset(self, request):
         queryset = super(FacultyModelAdmin, self).get_queryset(request)
@@ -25,13 +25,13 @@ class FacultyModelAdmin(admin.ModelAdmin):
             return queryset.filter(name=request.user.get_full_name())
         return queryset.filter(department__name=request.user.get_full_name())
 
-    def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        if db_field.name == 'department':
-            if not request.user.is_superuser:
-                kwargs["queryset"] = Department.objects.filter(
-                    name=request.user.get_full_name())
-        return super(FacultyModelAdmin, self).formfield_for_foreignkey(
-            db_field, request, **kwargs)
+    # def formfield_for_foreignkey(self, db_field, request, **kwargs):
+    #     if db_field.name == 'department':
+    #         if not request.user.is_superuser:
+    #             kwargs["queryset"] = Department.objects.filter(
+    #                 name=request.user.get_full_name())
+    #     return super(FacultyModelAdmin, self).formfield_for_foreignkey(
+    #         db_field, request, **kwargs)
 
 
 class StaffModelAdmin(admin.ModelAdmin):

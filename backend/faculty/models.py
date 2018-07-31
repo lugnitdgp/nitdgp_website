@@ -14,7 +14,7 @@ class GeneralInformation(BaseModel):
     projects = RichTextField()
     awards_and_recognition = RichTextField()
     administrative_responsibilities = RichTextField()
-    teachings = models.ManyToManyField(Courses)
+    teachings = models.ManyToManyField(Courses, blank=True)
 
     def __str__(self):
         return self.faculty_id.name
@@ -34,6 +34,41 @@ class GeneralInformation(BaseModel):
     def _teachings(self):
         return self.teachings
 
+
+class Conference(BaseModel):
+
+     faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+     authors = models.TextField()
+     title = RichTextField()
+     location = models.TextField()
+     year_or_volume = models.CharField(max_length=100)
+
+     def __str__(self):
+         return self.faculty_id.name
+
+     def _title(self):
+        return self.title
+
+     def _authors(self):
+        return self.authors
+
+     def _location(self):
+        return self.location
+
+def rename_conference(instance, filename):
+    return 'faculty/{0}/conferences/{1}'.format(instance.faculty_id.name, filename)
+
+
+class ConferencePDF(BaseModel):
+
+     faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+     conference = models.FileField(upload_to=rename_conference)
+
+     def __str__(self):
+        return self.faculty_id.name
+
+     def _conference(self):
+        return self.conference
 
 class Publication(BaseModel):
 
@@ -55,6 +90,20 @@ class Publication(BaseModel):
      def _journal(self):
         return self.journal
 
+def rename_publication(instance, filename):
+    return 'faculty/{0}/publications/{1}'.format(instance.faculty_id.name, filename)
+
+
+class PublicationPDF(BaseModel):
+
+     faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+     publication = models.FileField(upload_to=rename_publication)
+
+     def __str__(self):
+        return self.faculty_id.name
+
+     def _publication(self):
+        return self.publication
 
 def rename_book(instance, filename):
 
