@@ -10,6 +10,9 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     education = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
     publication = serializers.SerializerMethodField()
+    conference = serializers.SerializerMethodField()
+    publication_pdf = serializers.SerializerMethodField()
+    conference_pdf = serializers.SerializerMethodField()
     students = serializers.SerializerMethodField()
     books_and_patents = serializers.SerializerMethodField()
     work_experience = serializers.SerializerMethodField()
@@ -45,6 +48,18 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     def get_publication(self, obj):
         info = Publication.objects.filter(faculty_id=obj.id)
         return PublicationSerializer(info, many=True).data
+
+    def get_conference(self, obj):
+        info = Conference.objects.filter(faculty_id=obj.id)
+        return ConferenceSerializer(info, many=True).data
+
+    def get_publication_pdf(self, obj):
+        info = PublicationPDF.objects.filter(faculty_id=obj.id)
+        return PublicationPDFSerializer(info, many=True).data
+
+    def get_conference_pdf(self, obj):
+        info = ConferencePDF.objects.filter(faculty_id=obj.id)
+        return ConferencePDFSerializer(info, many=True).data
 
     def get_students(self, obj):
         info = Students.objects.filter(faculty_id=obj.id)
@@ -87,6 +102,27 @@ class PublicationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication
         fields = ('authors', 'title', 'journal', 'year_or_volume')
+
+
+class ConferenceSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Conference
+        fields = ('authors', 'title', 'location', 'year_or_volume')
+
+
+class PublicationPDFSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PublicationPDF
+        fields = ('publication', )
+
+
+class ConferencePDFSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ConferencePDF
+        fields = ('conference', )
 
 
 class BookPatentSerializer(serializers.ModelSerializer):
