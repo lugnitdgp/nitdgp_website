@@ -22,13 +22,9 @@ body {
 }
 #footer-copyright{
   height: 2.5em;
-  /*background-color: #ECEFF1;*/
 }
 #copyright-content{
   margin-top: -0.5em;
-}
-.copyright-txt {
-  /*background-color: #001333;*/
 }
 #footer-logos{
   max-height: 100%;max-width: 100%;
@@ -94,9 +90,6 @@ hr.style4 {
 hr.style4:after {
   content: "Quick Links";display: inline-block;position: relative;top: -0.7em;font-size: 1em;padding: 0 0.5em;background: #001333;
 }
-.brow{
-  /*display: block;*/
-}
 .mob{
   display: none;
 }
@@ -144,9 +137,6 @@ hr.style4:after {
   }
   .page-type-person .card-up{
     height: 200px;
-  }
-  #navbarSupportedContent-4{
-    padding-top: 25px;
   }
   .line-img{
     margin-left: -20px;width: 2px;height: 45px;padding-top: 10px;
@@ -485,7 +475,6 @@ hr.style4:after {
   animation-timing-function: initial;
   animation-iteration-count: initial;
   animation-direction: initial;
-  /*animation-delay: initial;*/
   animation-fill-mode: initial;
   animation-play-state: initial;
 }
@@ -496,7 +485,6 @@ hr.style4:after {
   animation-timing-function: initial;
   animation-iteration-count: initial;
   animation-direction: initial;
-  /*animation-delay: initial;*/
   animation-fill-mode: initial;
   animation-play-state: initial;
 }
