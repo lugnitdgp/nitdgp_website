@@ -14,7 +14,7 @@ class DashboardViewSet(ListAPIView):
         hits = HitCount()
         hits.count = 1;
         hits.save()
-    
+
     else:
         hits = HitCount.objects.all().first()
         hits.count = hits.count + 1

@@ -15,7 +15,7 @@ class AdmissionProgrammeModelAdmin(admin.ModelAdmin):
 
 
 class AdmissionModelAdmin(admin.ModelAdmin):
-    list_display = ['_programme', '_title', '_file']
+    list_display = ['_programme', '_title', '_file', '_link']
 
 
 class ExaminationModelAdmin(admin.ModelAdmin):

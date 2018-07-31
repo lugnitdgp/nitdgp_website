@@ -72,8 +72,9 @@ def rename_admission_file(instance, filename):
 
 class Admission(BaseModel):
     programme = models.ForeignKey(AdmissionProgramme, related_name='documents', on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
-    file = models.FileField(upload_to=rename_admission_file)
+    title = models.CharField(max_length=1024)
+    file = models.FileField(upload_to=rename_admission_file, blank=True)
+    link = models.URLField(blank=True)
 
     def _programme(self):
         return self.programme.name
@@ -83,6 +84,9 @@ class Admission(BaseModel):
 
     def _file(self):
         return self.file
+
+    def _link(self):
+        return self.link
 
 
 def rename_examination_file(instance, filename):
