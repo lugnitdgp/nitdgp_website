@@ -10,14 +10,16 @@
     </div>
     <div class="card-body-in">
       <p v-if="id" class="card-title">
-        <a class="black-text" :href="'/faculty/' + id">
-          {{ name }}
-        </a>
+        <strong>
+          <a class="blue-text" :href="'/faculty/' + id">
+            {{ name }}
+          </a>
+        </strong>
       </p>
       <p v-if="!id" class="card-title">
           {{ name }}
       </p>
-      <h6 class="blue-text"><strong>{{ desig }}</strong></h6>
+      <h6 class="black-text">{{ desig }}</h6>
       <hr>
       <p class="min-profile">
         <slot></slot>
