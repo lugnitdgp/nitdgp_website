@@ -396,9 +396,6 @@ export default {
       padding-right:5px;
     }
   }
-  .l2-idep .l2-card .down-content .big-list .accordion .card-header{
-    padding: 5px 5px! important;
-  }
   .l2-idep .l2-card .down-content .big-list .mb-0{
     font-size: 75%;
   }
@@ -432,7 +429,6 @@ export default {
     color:#000000;
   }
   .l2-idep{
-    min-height: 650px;
     padding-top: 1em;
     padding-bottom: 1em;padding-right: 1.5%;padding-left: 1.5%;
   }

@@ -69,7 +69,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+  footer {
+    position: absolute;
+    width: 100%;
+    min-height: 170px;
+  }
   #footer-container > .container-fluid > .row:last-child {
     padding: 3px;
     margin-top: 20px;
