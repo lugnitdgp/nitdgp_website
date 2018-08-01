@@ -105,8 +105,9 @@ export default {
   .top-nav-link:hover {
     color: #459;
   }
-  #nav-below{
+  #nav-below {
     background-color: #001333;
+    margin-bottom: -50px;
   }
   #search-btn-nav{
     height: 1.8em;

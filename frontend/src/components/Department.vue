@@ -389,7 +389,9 @@ export default {
 </script>
 
 <style>
-
+  .l2-idep {
+    margin-top: 50px;
+  }
   @media screen and (max-width: 600px){
     .l2-idep .tab-content{
       padding-left:5px;
@@ -398,9 +400,6 @@ export default {
   }
   .l2-idep .l2-card .down-content .big-list .mb-0{
     font-size: 75%;
-  }
-  .l2-idep .l2-card{
-    /*margin-top: -1em;*/
   }
   .l2-idep .l2-card .down-content .tab-pane .tab-content{
     background: none;border:dotted 1px #ECEFF1;

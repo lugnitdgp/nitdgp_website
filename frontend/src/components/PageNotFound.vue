@@ -1,5 +1,5 @@
 <template>
-  <div class="l0">
+  <div>
     <div class="img-container">
       <img src="/static/img/nitdgp_logo.png" />
     </div>
