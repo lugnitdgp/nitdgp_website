@@ -155,7 +155,7 @@
 
                 <div class="caros">
                   <div id="caro-p1-1" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <span class="carousel-title">FACULTIES</span>
+                    <span class="carousel-title">FACULTY</span>
                     <div class="carousel-inner person-list" role="listbox">
                       <div class="carousel-item active">
                         <div class="row">
@@ -187,7 +187,7 @@
               </div>
             </div>
             <div class="tab-pane fade" id="p4l2" role="tabpanel">
-              <span class="carousel-title">STAFFS</span>
+              <span class="carousel-title">STAFF</span>
               <div class="container-fluid">
                 <div class="row">
                   <div class="col staffs" v-for="person in dept.people.staff">
@@ -200,7 +200,7 @@
               </div>
             </div>
             <div class="tab-pane fade page-type-links" id="p4l3" role="tabpanel">
-              <span class="carousel-title">STUDENT</span>
+              <span class="carousel-title">STUDENTS</span>
               <ul class="list-group list-gr">
                 <li v-for="link in dept.people.students">
                   <a class="list-group-item" target="new" :href="link.file">
