@@ -25,7 +25,6 @@
         <a v-if="$route.path != '/'" href="/" class="top-nav-link">
           <i class="fa fa-home fa-lg fa-2x" aria-hidden="true"></i>
         </a>
-        <a class="top-nav-link" @click="toggleHeader()">H</a>
         <div style="display:inline-block">
         <a class="top-nav-link" href="http://nitdgp.ac.in/alumni/index.php">Alumni</a>
         <a class="top-nav-link" href="https://mail.google.com/a/nitdgp.ac.in">Webmail</a>

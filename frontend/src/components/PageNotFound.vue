@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="margin-top: 50px">
     <div class="img-container">
       <img src="/static/img/nitdgp_logo.png" />
     </div>
