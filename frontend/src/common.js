@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 
 var baseURL = "http://localhost:8080"
-var backURL = "http://172.16.20.3:8000"
+var backURL = "http://172.16.1.250:8000"
 
 function stripDesc (str) {
   if (str.length < 54)
