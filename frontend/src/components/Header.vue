@@ -23,7 +23,7 @@
     <nav class="mb-1 navbar fixed-top navbar-expand-sm" id="top-nav-wrap">
       <span class="top-nav-container-left">
         <a v-if="$route.path != '/'" href="/" class="top-nav-link">
-          <i class="fa fa-home fa-lg fa-2x" aria-hidden="true"></i> |
+          <i class="fa fa-home fa-lg fa-2x" aria-hidden="true"></i>
         </a>
         <a class="top-nav-link" @click="toggleHeader()">H</a>
         <div style="display:inline-block">
