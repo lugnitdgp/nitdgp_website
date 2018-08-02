@@ -100,7 +100,7 @@ class PlacementLinks(BaseModel):
 		ordering = ('-date',)
 
 	title = models.CharField(max_length=512)
-	file = models.FileField(upload_to='activities/placement/%Y/%m/%d', blank=True)
+	file = models.FileField(upload_to='activities/placement_links/%Y/%m/%d', blank=True)
 	url = models.URLField(blank=True)
 	date = models.DateField()
 
@@ -116,7 +116,7 @@ class PlacementLinks(BaseModel):
 	def _url(self):
 		return self.url
 
-		
+
 class Placement(BaseModel):
 
 	class Meta:
