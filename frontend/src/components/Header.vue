@@ -5,13 +5,15 @@
         <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
           <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
         </a>
+        <img class="line-img" src="/static/img/line.png">
         <img class="navbar-img-small" src="/static/img/emblem.png">
         <div class="navbar-text white-text">
           <div align="left">
             <h6>National Institute of Technology Durgapur</h6>
             <h6> राष्ट्रीय प्रौद्योगिकी संस्थान दुर्गापुर </h6>
-            <p v-show="windowWidth > 800" class="navbar-text-small">
-              An Institute of National Importance under Government of India,<br> Ministry of Human Resource Development
+            <p class="navbar-text-small">
+              An Institute of National Importance under Government of India,<br>
+              Ministry of Human Resource Development
             </p>
           </div>
         </div>
@@ -118,13 +120,33 @@ export default {
     padding-top: 6em;margin-top: -2em;
   }
   .navbar-brand {
-    height: 90px;margin-top: -20px;margin-bottom: -20px;
+    height: 90px;
+    margin-top: -20px;
+    margin-bottom: -20px;
   }
   .navbar-img-big{
-    padding-left: 5px;height: 70px;
+    padding-left: 5px;
+    height: 70px;
   }
   .navbar-img-small{
     height: 0px;
+  }
+  @media screen and (max-width: 1010px) {
+    .navbar-brand {
+      height: 70px;
+      padding-top: 15px;
+    }
+    .navbar-text {
+      margin-left: 0px;
+    }
+    .navbar-img-small {
+      height: 50px;
+      padding-top: 10px;
+      margin-left: 3px;
+    }
+    .navbar-img-big {
+      padding-left: 5px;height: 0px;
+    }
   }
   .navbar-text-small{
     font-size: 65%;

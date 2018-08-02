@@ -114,12 +114,6 @@ hr.style4:after {
   .brow{
     display: none!important;
   }
-  .navbar-brand {
-    height: 70px;padding-top: 15px;
-  }
-  .navbar-img-big{
-    padding-left: 5px;height: 0px;
-  }
   .page-type-person{
     padding-left: 1.5%;padding-right: 1.5%;
   }
@@ -140,14 +134,6 @@ hr.style4:after {
   }
   .line-img{
     margin-left: -20px;width: 2px;height: 45px;padding-top: 10px;
-  }
-  .navbar-text{
-    margin-left: 0px;
-  }
-  .navbar-img-small{
-    height: 50px;
-    padding-top: 10px;
-    margin-left: 3px;
   }
   .l0 .big-col{
     min-width: 100%;
