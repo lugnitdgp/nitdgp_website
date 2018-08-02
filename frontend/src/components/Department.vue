@@ -1,5 +1,5 @@
 <template>
-  <div class="page-content-container l2-idep">
+  <div class="l2-idep">
     <sp-card v-if="dept" containerclass="l2-card" bodyclass="text-center">
       <p slot="header" class="tile-title-text">
         Department of {{ dept.short_code }}

@@ -1,5 +1,5 @@
 <template>
-  <div class="page-content-container l3-fac">
+  <div class="l3-fac">
     <sp-card containerclass="l3-card">
       <div slot="header">
         <p class="tile-title-text">

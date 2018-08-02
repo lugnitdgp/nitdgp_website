@@ -8,7 +8,7 @@
         <Newsfeed :notices="notices"></Newsfeed>
       </div>
     </div>
-    <div class="page-content-container l0 mob">
+    <div class="l0 mob">
       <div class="all-tiles">
         <!-- Big row of sections -->
         <div v-for="row in results" class="row big-row">
@@ -31,7 +31,7 @@
       </div>
       <!-- End of big row of sections -->
     </div>
-    <div class="page-content-container l0 brow">
+    <div class="l0 brow">
       <div class="all-tiles">
         <!-- Big row of sections -->
         <div v-for="row in results" class="row big-row">

@@ -1,5 +1,5 @@
 <template>
-  <div class="page-content-container l1-dep">
+  <div class="l1-dep">
     <div class="all-tiles row big-row">
       <sp-card containerclass="col big-col card-2">
         <p slot="header" class="tile-title-text">Departments</p>

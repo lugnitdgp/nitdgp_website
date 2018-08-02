@@ -167,10 +167,6 @@ hr.style4:after {
   .page-type-links .card-text a{
     font-size: 85%;
   }
-  .page-content-container{
-    padding-right: 1.5%;
-    padding-left: 1.5%;
-  }
   #footer-copyright .row{
     margin-left: 5px;margin-right: 5px;
   }
@@ -386,10 +382,16 @@ hr.style4:after {
   display: block;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .l1-dep .card-body{
-  margin-top: -1em;margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
+  margin-bottom: -0.5em;margin-left:0.2em ;margin-right:0.2em;
 }
 .l1-dep .tile-content{
-  text-align: center;vertical-align: middle;line-height: 110%;padding-top: 12px;margin-bottom: -4px;min-height: 80%;color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 110%;
+    padding-top: 12px;
+    margin-bottom: -4px;
+    min-height: 80%;
+    color: #ffffff;
 }
 .l1-dep .tile-title-text{
   letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
