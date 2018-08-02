@@ -16,7 +16,12 @@
           <div v-for="section in row" class="col big-col">
             <sp-card-collapse bodyclass="text-center" show="false"
               :containerclass="'card-' + section.priority">
-              <p slot="header" class="tile-title-text">{{ section.section_name }}</p>
+              <p slot="header" class="tile-title-text">
+                <span style="float: left; width:80%; text-align:left">
+                  {{ section.section_name }}
+                </span>
+                <i style="float:right; width:20%; text-align:right; margin-top:-10px" class="fa fa-chevron-down" aria-hidden="true"></i>
+              </p>
               <div v-for="tile_row in section.contents" class="row">
                 <small-tile v-for="tile in tile_row"
                   :icon="tile.icon"
