@@ -30,6 +30,13 @@ class ResearchSerializer(serializers.ModelSerializer):
 		fields = ('title', 'file', 'date', 'url')
 
 
+class PlacementLinksSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = PlacementLinks
+		fields = ('title', 'file', 'date', 'url')
+
+
 class PlacementSerializer(serializers.ModelSerializer):
 
 	class Meta:

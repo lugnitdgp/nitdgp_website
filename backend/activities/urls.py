@@ -11,4 +11,5 @@ urlpatterns = [
 		url(r'^activities/achievements/$', AchievementsViewSet.as_view(), name='view-achievements'),
 		url(r'^activities/research/$', ResearchViewSet.as_view(), name='view-research'),
 		url(r'^activities/placement/$', PlacementViewSet.as_view(), name='view-placement'),
+		url(r'^activities/placement-links/$', PlacementLinksViewSet.as_view(), name='view-placement-links'),
     ]

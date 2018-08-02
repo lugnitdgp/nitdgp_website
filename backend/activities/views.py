@@ -31,3 +31,9 @@ class PlacementViewSet(ListAPIView):
 
 	 queryset = Placement.objects.all()
 	 serializer_class = PlacementSerializer
+
+
+class PlacementLinksViewSet(ListAPIView):
+
+	queryset = PlacementLinks.objects.all()
+	serializer_class = PlacementLinksSerializer

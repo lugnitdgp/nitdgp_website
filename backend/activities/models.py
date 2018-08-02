@@ -92,6 +92,31 @@ class Research(BaseModel):
 		return self.url
 
 
+
+class PlacementLinks(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'Important Links for Placement'
+		ordering = ('-date',)
+
+	title = models.CharField(max_length=512)
+	file = models.FileField(upload_to='activities/placement/%Y/%m/%d', blank=True)
+	url = models.URLField(blank=True)
+	date = models.DateField()
+
+	def _title(self):
+		return self.title
+
+	def _file(self):
+		return self.file
+
+	def _date(self):
+		return self.date
+
+	def _url(self):
+		return self.url
+
+		
 class Placement(BaseModel):
 
 	class Meta:

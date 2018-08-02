@@ -6,7 +6,7 @@ from information.models import *
 
 class ReportViewSet(ListAPIView):
 
-    queryset = Report.objects.all().order_by('-updated_at')
+    queryset = Report.objects.all().order_by('-created_at')
     serializer_class = ReportSerializer
 
     def list(self, request, *args, **kwargs):
@@ -22,13 +22,13 @@ class ReportViewSet(ListAPIView):
 
 class AccountViewSet(ListAPIView):
 
-    queryset = Account.objects.all().order_by('-updated_at')
+    queryset = Account.objects.all().order_by('-created_at')
     serializer_class = AccountSerializer
 
 
 class CareerViewSet(ListAPIView):
 
-    queryset = Career.objects.all().order_by('-updated_at')
+    queryset = Career.objects.all().order_by('-created_at')
     serializer_class = CareerSerializer
 
     def list(self, request, *args, **kwargs):
@@ -37,7 +37,7 @@ class CareerViewSet(ListAPIView):
 
 class TenderViewSet(ListAPIView):
 
-    queryset = Tender.objects.all().order_by('-updated_at')
+    queryset = Tender.objects.all().order_by('-created_at')
     serializer_class = TenderSerializer
 
     def list(self, request, *args, **kwargs):
@@ -46,25 +46,25 @@ class TenderViewSet(ListAPIView):
 
 class TEQIPViewSet(ListAPIView):
 
-    queryset = TEQIP.objects.all().order_by('-updated_at')
+    queryset = TEQIP.objects.all().order_by('-created_at')
     serializer_class = TEQIPSerializer
 
 
 class RTIViewSet(ListAPIView):
 
-    queryset = RTI.objects.all().order_by('-updated_at')
+    queryset = RTI.objects.all().order_by('-created_at')
     serializer_class = RTISerializer
 
 
 class NIRFViewSet(ListAPIView):
 
-    queryset = NIRF.objects.all().order_by('-updated_at')
+    queryset = NIRF.objects.all().order_by('-created_at')
     serializer_class = NIRFSerializer
 
 
 class NBAViewSet(ListAPIView):
 
-    queryset = NBA.objects.all().order_by('-updated_at')
+    queryset = NBA.objects.all().order_by('-created_at')
     serializer_class = NBASerializer
 
 

@@ -35,7 +35,7 @@ class RegistrationModelAdmin(admin.ModelAdmin):
 
 
 class ConvocationModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_file']
+    list_display = ['__str__', '_file', '_url']
 
 
 admin.site.register(Notice, NoticeModelAdmin)

@@ -151,10 +151,14 @@ class Registration(BaseModel):
 
 class Convocation(BaseModel):
     title = models.CharField(max_length=255)
-    file = models.FileField(upload_to='academics/convocation/%Y')
+    file = models.FileField(upload_to='academics/convocation/%Y', blank=True)
+    url = models.URLField(blank=True)
 
     def __str__(self):
         return self.title
 
     def _file(self):
         return self.file
+
+    def _url(self):
+        return self.url
