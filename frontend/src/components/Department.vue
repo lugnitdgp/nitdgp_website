@@ -599,6 +599,6 @@ export default {
     background-color: #001333;
   }
   .l2-idep .card-body .down-content .carousel-title{
-    font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;font-size: 150%;color:#000000;
+    font-weight: bold;letter-spacing: 2px;font-size: 150%;color:#000000;
   }
 </style>

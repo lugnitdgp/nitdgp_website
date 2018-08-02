@@ -350,7 +350,7 @@ hr.style4:after {
   height: 150px;width: 150px;margin-bottom:-2em;
 }
 .page-type-person .name-title{
-  font-family: 'Oswald';font-weight: bold;letter-spacing: 2px;color:#001333;
+  font-weight: bold;letter-spacing: 2px;color:#001333;
 }
 .page-type-person .min-profile{
   font-size:55%;
@@ -364,7 +364,7 @@ hr.style4:after {
   max-height: 100%;max-width: 100%;
 }
 .page-type-links font{
-  font-family:Calibri; font-size:15px; color:#000;
+  font-size:15px; color:#000;
 }
 .l1 .outr .tbl{
   margin-left: 20px;margin-right: 40px;width: 70%;margin: 0px auto;float: none;
@@ -411,7 +411,7 @@ hr.style4:after {
 }
 .l1-dep .fa-2x{
   font-size: 250%;padding-bottom: 8px;
-  font-family: 'Oswald';font-weight: bold;
+  font-weight: bold;
 }
 .l1-dep .card-body{
   margin-top: -1em;margin-bottom: -0.5em;
