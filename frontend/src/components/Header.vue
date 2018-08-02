@@ -2,20 +2,20 @@
   <header class="container-fluid">
     <nav class="navbar navbar-expand-lg container-fluid navbar-dark darken-2" id="nav-below">
       <div class="navbar-header">
-        <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
-          <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
-        </a>
-        <img class="line-img" src="/static/img/line.png">
-        <img class="navbar-img-small" src="/static/img/emblem.png">
-        <div class="navbar-text white-text">
-          <div align="left">
-            <h6>National Institute of Technology Durgapur</h6>
-            <h6> राष्ट्रीय प्रौद्योगिकी संस्थान दुर्गापुर </h6>
-            <p class="navbar-text-small">
-              An Institute of National Importance under Government of India,<br>
-              Ministry of Human Resource Development
-            </p>
-          </div>
+        <div id="brand-logo-block">
+          <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
+            <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
+          </a>
+          <img class="line-img" src="/static/img/line.png">
+          <img class="navbar-img-small" src="/static/img/emblem.png">
+        </div>
+        <div id="brand-name-block" class="navbar-text white-text" align="center">
+          <h4>National Institute of Technology, Durgapur</h4>
+          <h4>राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर</h4>
+          <p class="navbar-text-small">
+            An Institute of National Importance under Government of India,<br>
+            Ministry of Human Resource Development
+          </p>
         </div>
         <img class="navbar-img-big"  src="/static/img/emblem.png">
       </div>
@@ -95,7 +95,15 @@ export default {
     margin: 10px auto;
   }
   .navbar-text {
-    text-align: center;vertical-align: middle;line-height: 18px;margin-left: -25px;margin-top: -2px;margin-bottom: -1.8em;
+    vertical-align: middle;
+    margin-top: -10px;
+    margin-bottom: -1.8em;
+  }
+  .navbar-text h4 {
+    margin-top: -5px;
+    margin-bottom: 2px;
+    font-size: 135%;
+    line-height: 35px;
   }
   #top-nav-wrap{
     height: 2em;
@@ -143,6 +151,7 @@ export default {
     height: 90px;
     margin-top: -20px;
     margin-bottom: -20px;
+    margin-right: -10px;
   }
   .navbar-img-big{
     padding-left: 5px;
@@ -151,25 +160,39 @@ export default {
   .navbar-img-small{
     height: 0px;
   }
+  #brand-logo-block, #brand-name-block {
+    display: inline-block;
+  }
+  @media screen and (max-width: 540px) {
+    #brand-logo-block {
+      display: block;
+      padding: 0px;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+    #brand-name-block {
+      display: block;
+      padding: 0px;
+      margin: 0 auto;
+      margin-bottom: -40px;
+      margin-top: 15px;
+    }
+  }
   @media screen and (max-width: 1010px) {
     .navbar-brand {
       height: 70px;
-      padding-top: 15px;
-    }
-    .navbar-text {
-      margin-left: 0px;
+      margin-right: 16px;
     }
     .navbar-img-small {
       height: 50px;
-      padding-top: 10px;
       margin-left: 3px;
     }
     .navbar-img-big {
-      padding-left: 5px;height: 0px;
+      height: 0px;
     }
   }
-  .navbar-text-small{
-    font-size: 65%;
+  .navbar-text-small {
+    font-size: 90%;
   }
   .menu-div {
     position: absolute;
