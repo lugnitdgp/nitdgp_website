@@ -49,6 +49,10 @@ export default {
 }
 </script>
 <style>
+  .d-block {
+    height: 100%;
+    width: 100%;
+  }
   @media screen and (max-width: 800px) {
     .card-pic{
       height: 180px!important;
