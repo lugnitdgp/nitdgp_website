@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 15px">
+  <div style="padding-top: 30px">
     <div class="row newscaro">
       <div v-if="(windowWidth > 1000)" class="col-8 caro">
         <Carousel :slides="slides"></Carousel>

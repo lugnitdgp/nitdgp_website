@@ -72,8 +72,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .navbar-header{
-    margin-top: 1.7em;
+  .navbar-header {
+    padding-top: 20px;
+    margin: 10px auto;
   }
   .navbar-text {
     text-align: center;vertical-align: middle;line-height: 18px;margin-left: -25px;margin-top: -2px;margin-bottom: -1.8em;
