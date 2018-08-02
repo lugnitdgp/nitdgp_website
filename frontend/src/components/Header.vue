@@ -1,6 +1,6 @@
 <template>
   <header class="container-fluid">
-    <nav v-show="header" class="navbar navbar-expand-lg container-fluid navbar-dark darken-2" id="nav-below">
+    <nav class="navbar navbar-expand-lg container-fluid navbar-dark darken-2" id="nav-below">
       <div class="navbar-header">
         <a :class="$route.path == '/' ? 'disabled' : ''" href="/">
           <img class="navbar-brand" src="/static/img/nitdgp_logo_white.png">
@@ -25,15 +25,34 @@
         <a v-if="$route.path != '/'" href="/" class="top-nav-link">
           <i class="fa fa-home fa-lg fa-2x" aria-hidden="true"></i>
         </a>
-        <div style="display:inline-block">
-        <a class="top-nav-link" href="http://nitdgp.ac.in/alumni/index.php">Alumni</a>
-        <a class="top-nav-link" href="https://mail.google.com/a/nitdgp.ac.in">Webmail</a>
-        <a class="top-nav-link" href="/contacts">Contacts</a>
+        <div v-if="windowWidth < 720" style="display:inline-block">
+          <a @click="menu = !menu" class="top-nav-link"><i class="fa fa-bars fa-lg fa-2x"></i></a>
         </div>
+        <div v-show="windowWidth >= 720 || menu"
+          :class="windowWidth >= 720 && !menu ? 'disp-inline-block' : 'menu-div'">
+          <a v-show="menu" class="red white-text" @click="menu = !menu" href="javascript:void(0)">
+            Close dialog
+          </a><hr v-show="menu">
+          <a class="top-nav-link" href="http://nitdgp.ac.in/alumni/index.php">
+            Alumni
+          </a><hr v-show="menu">
+          <a class="top-nav-link" href="https://mail.google.com/a/nitdgp.ac.in">
+            Webmail
+          </a><hr v-show="menu">
+          <a class="top-nav-link" href="/contacts">
+            Contacts
+          </a><hr v-show="menu">
+          <a class="top-nav-link" href="http://nitdgp.ac.in">
+            Old website
+          </a><hr v-show="menu">
+          <a v-show="menu" class="top-nav-link" href="/notices">
+            Notices
+          </a>
+        </div>
+        <div v-show="menu" id="fade" class="black_overlay"></div>
       </span>
       <span class="top-nav-container-right">
         <input id="search-btn-nav" type="text" name="" placeholder=" Search">
-        <a href="http://nitdgp.ac.in" class="top-nav-link">Old website</a>
       </span>
     </nav>
   </header>
@@ -44,7 +63,7 @@ export default {
   name: 'Header',
   data () {
     return {
-      header: true,
+      menu: false,
       windowWidth: 1000
     }
   },
@@ -115,7 +134,7 @@ export default {
     padding-right: 2px;
     border-radius: 4px;
     background-color: #ffffff;
-    width: 45%;
+    width: 100%;
   }
   #navbarSupportedContent-4{
     padding-top: 6em;margin-top: -2em;
@@ -151,5 +170,44 @@ export default {
   }
   .navbar-text-small{
     font-size: 65%;
+  }
+  .menu-div {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+    z-index: 2;
+    overflow: auto;
+  }
+  .disp-inline-block {
+    display: inline-block;
+  }
+  .black_overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 2000%;
+    z-index: 1;
+    background-color: black;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+  }
+  .menu-div a {
+    color: blue;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .menu-div hr {
+    width: 95%;
+    color: #aaa;
+    padding: 0px;
+    margin: 0 auto;
   }
 </style>
