@@ -1,22 +1,22 @@
 <template>
-	<links-page style="margin: 0 auto;">
+  <links-page>
     <collapse-list>
       <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Director'" :key="groupname.id" :show="true" :title="groupname">
-				<div class="card-text">
-				  <ul class="list-group list-gr">
+	<div class="card-text">
+	  <ul class="list-group list-gr">
             <div class="row">
               <div v-for="details in list" class="col contact-col ">
-    				    <li class="list-group-item disabled" style="height: 100%">
-    				    	<h4>{{ details.name }}</h4>
-    				    	<h5 style="font-weight: bold" v-if="details.designation">
-    				    		{{ details.designation }}
-    				    	</h5>
-    				    	<span v-html="details.contact"/>
-    				    </li>
+    		<li class="list-group-item disabled" style="height: 100%">
+    		  <h4>{{ details.name }}</h4>
+    		  <h5 style="font-weight: bold" v-if="details.designation">
+    		    {{ details.designation }}
+    		  </h5>
+    		  <span v-html="details.contact"/>
+    		</li>
               </div>
             </div>
-				  </ul>
-				</div>
+	  </ul>
+	</div>
       </card-collapse>
       <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Registrar'" :key="groupname.id" :title="groupname">
         <div class="card-text">
@@ -311,15 +311,15 @@
                 </li>
               </div>
               <!-- <br>xxxxxxxxxxxxxx<br>
-              <div v-for="details in list" class="col contact-col ">
-                <li class="list-group-item disabled" style="height: 100%">
-                  <h4>{{ details.name }}</h4>
-                  <h5 style="font-weight: bold" v-if="details.designation">
-                    {{ details.designation }}
-                  </h5>
-                  <span v-html="details.contact"/>
-                </li>
-              </div> -->
+                   <div v-for="details in list" class="col contact-col ">
+                   <li class="list-group-item disabled" style="height: 100%">
+                   <h4>{{ details.name }}</h4>
+                   <h5 style="font-weight: bold" v-if="details.designation">
+                   {{ details.designation }}
+                   </h5>
+                   <span v-html="details.contact"/>
+                   </li>
+                   </div> -->
             </div>
           </ul>
         </div>
@@ -338,10 +338,10 @@ import { genBackendURL } from '@/common.js'
 export default {
   name: 'Contacts',
   created () {
-  	axios.get(genBackendURL("dashboard/contacts"))
-  			 .then(response => {
-  			 	 this.groups = response.data.groups
-  			   this.$emit('hideloader', true)
+    axios.get(genBackendURL("dashboard/contacts"))
+  	 .then(response => {
+  	   this.groups = response.data.groups
+  	   this.$emit('hideloader', true)
          })
          .catch(e => {
            console.log(e)
@@ -349,9 +349,9 @@ export default {
     this.$emit('hideloader', true)
   },
   data () {
-  	return {
-  		groups: {}
-  	}
+    return {
+      groups: {}
+    }
   },
   components: {
     LinksPage,
@@ -376,6 +376,6 @@ export default {
     .list-gr .contact-col{
       min-width: 100%;
       max-width: 100%;
-    }  
+    }
   }
 </style>
