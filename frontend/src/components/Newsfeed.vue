@@ -18,7 +18,7 @@
               <div align="center" class="date-div">
                 <strong class="white-text">
                   <h3>{{ news.date }}</h3>
-                  <h6>{{ news.month }}</h6>
+                  <h6>{{ news.month }} {{ news.year % 100 }}</h6>
                 </strong>
               </div>
               <div class="news-title black-text">{{ news.title }}</div>

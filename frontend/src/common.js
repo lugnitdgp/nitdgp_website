@@ -84,6 +84,7 @@ function convertNewsfeed(raw_data){
     let date = new Date(news.date)
     news.month = months[date.getMonth()]
     news.date = date.getDate()
+    news.year = date.getFullYear()
     if (news.file)
       news.link = news.file
     news.link = genBackendURL(news.link, true)
