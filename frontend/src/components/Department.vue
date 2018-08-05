@@ -72,7 +72,7 @@
                   <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
                     <div class="card" v-for="syllabus,sem in programme">
                       <card-collapse v-if="sem!='programme_title'" :title="'Semester '+sem">
-                        <table-renderer :table="syllabus" :theader="['CODE','COURSE TITLE','L','T','S','C']"></table-renderer>
+                        <table-renderer :table="syllabus" :theader="['COURSE TITLE', 'CODE','L','T','S','C']"></table-renderer>
                       </card-collapse>
                     </div>
                   </div>
@@ -126,8 +126,6 @@
                   <span v-html="dept.hod.research_interest.slice(3,-4)"></span><br>
                   <i class="fa fa-envelope"></i><br>
                   <strong>{{ dept.hod.email }}</strong><br>
-                  <i class="fa fa-address-book"></i><br>
-                  <strong>+91-{{ dept.hod.mobile }}</strong></br>
                   <strong><span class="blue-text">Joined the Institute in {{ convertYear(dept.hod.joining_year) }}
                   </span></strong>
                 </card-testimonial>
