@@ -12,7 +12,7 @@
                   {{ person.address }}</br>
                 </card-testimonial>
               </div>
-              <div class="col black-text" v-for="person in bogs.secratary">
+              <div class="col black-text" v-for="person in bogs.secretary">
                 <card-testimonial :image="person.image" :name="person.name"
                   :desig="person.role">
                   <strong>-- {{ person.designation }} --</strong></br>
