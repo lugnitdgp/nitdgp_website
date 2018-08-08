@@ -164,7 +164,7 @@
             <a class="dropdown-item" :class="{ 'disabled': !('teachings' in faculty) }" data-toggle="list" href="#li6" role="tab">Teachings</a>
             <a class="dropdown-item" :class="{ 'disabled': !('students' in faculty) }" data-toggle="list" href="#li7" role="tab">Students</a>
             <a class="dropdown-item" :class="{ 'disabled': !('awards_and_recognition' in faculty) }" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
-            <a class="dropdown-item" :class="{ 'disabled': ('administrative_responsiblities' in faculty) }" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
+            <a class="dropdown-item" :class="{ 'disabled': !('administrative_responsiblities' in faculty) }" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
             <a class="dropdown-item" :class="{ 'disabled': !('contact' in faculty) }" data-toggle="list" href="#li10" role="tab">Contact</a>
           </div>
           <div v-show="nav" id="fade" class="black_overlay"></div>
