@@ -274,11 +274,12 @@ hr.style4:after {
 .l3-fac .tile-title{
   height: 1px;
 }
-.notices .card-body .nav-tabs{
+.nav-tabs {
   background-color: #001333;
 }
-.notices .card-body .nav-item .active{
-  background-color: #ECEFF1;color: #001333;
+.nav-item .active{
+  background-color: #ECEFF1;
+  color: #001333;
 }
 .person-list{
   padding: 1em 0;min-height: 500px;
@@ -328,12 +329,13 @@ hr.style4:after {
 .page-type-links .list-gr li{
   list-style-type: none;
 }
-.page-type-links .list-group-item{
+.page-type-links .list-group-item {
   color: #001333;
   background-color: #E0F7FA;
   margin: 2px 0px;
+  padding: 7px;
 }
-.page-type-links .list-group-item:hover{
+.page-type-links .list-group-item:hover {
   background-color: #001333;
   color: #E0F7FA;
 }
@@ -342,13 +344,14 @@ hr.style4:after {
   font-size: 110%;
   letter-spacing: 2px;
   background-color: #001333;
+  padding: 6px 15px;
 }
 .page-type-links .card-text{
   color:#000000;
 }
 .page-type-links .card-text a{
   font-weight: bold;
-  font-size: 100%;
+  font-size: 100% !important;
 }
 .page-type-links .date-col{
   margin-left:0px;padding:5px;

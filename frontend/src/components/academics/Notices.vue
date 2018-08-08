@@ -1,33 +1,36 @@
 <template>
-  <div class="l1 page-type-links notices">
-    <div class="card">
-      <a class="card-header white-text">Notices</a>
-      <div class="card-body">
-      	<!-- Nav tabs -->
-      	<ul class="nav nav-tabs nav-justified not-tab">
-      	  <li class="nav-item">
-      	    <a class="nav-link" data-toggle="tab" href="#panel1" role="tab">Academic</a>
-      	  </li>
-      	  <li class="nav-item">
-      	    <a class="nav-link active" data-toggle="tab" href="#panel2" role="tab">Student</a>
-      	  </li>
-      	  <li class="nav-item">
-      	    <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">General</a>
-      	  </li>
-      	</ul>
-      	<!-- Tab panels -->
-      	<div class="tab-content card">
-      	  <notice-list idn="1" :noticelist="academic" />
-      	  <notice-list class="in show active" :noticelist="student" idn="2" />
-      	  <notice-list :noticelist="general" idn="3" />
-      	</div>
+  <links-page>
+    <card title="Notices">
+      <ul class="nav nav-tabs nav-justified not-tab">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#panel1" role="tab">Academic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#panel2" role="tab">Student</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">General</a>
+        </li>
+      </ul>
+      <div class="tab-content card">
+        <div class="tab-pane fade notice-wrap" id="panel1" role="tabpanel">
+          <notice-list idn="1" :noticelist="academic" />
+        </div>
+        <div class="tab-pane in show active fade notice-wrap" id="panel2" role="tabpanel">
+          <notice-list :noticelist="student" />
+        </div>
+        <div class="tab-pane fade notice-wrap" id="panel3" role="tabpanel">
+      	  <notice-list :noticelist="general" />
+        </div>
       </div>
-    </div>
-  </div>
+    </card>
+  </links-page>
 </template>
 
 <script>
 import NoticeList from '@/components/NoticeList'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
 import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
@@ -55,14 +58,19 @@ export default {
          })
   },
   components: {
-    NoticeList
+    NoticeList,
+    LinksPage,
+    Card
   }
 }
 </script>
 <style>
-  .notices .card-body{
+  .card-body {
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px
+  }
+  .nav-tabs {
+    padding: 0px;
   }
 </style>
