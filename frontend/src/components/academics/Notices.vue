@@ -13,13 +13,13 @@
         </li>
       </ul>
       <div class="tab-content card">
-        <div class="tab-pane fade notice-wrap" id="panel1" role="tabpanel">
-          <notice-list idn="1" :noticelist="academic" />
+        <div class="tab-pane fade" id="panel1" role="tabpanel">
+          <notice-list :noticelist="academic" />
         </div>
-        <div class="tab-pane in show active fade notice-wrap" id="panel2" role="tabpanel">
+        <div class="tab-pane in show active fade" id="panel2" role="tabpanel">
           <notice-list :noticelist="student" />
         </div>
-        <div class="tab-pane fade notice-wrap" id="panel3" role="tabpanel">
+        <div class="tab-pane fade" id="panel3" role="tabpanel">
       	  <notice-list :noticelist="general" />
         </div>
       </div>

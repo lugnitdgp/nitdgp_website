@@ -1,5 +1,5 @@
 <template>
-  <div class="notice-wrap-l2" v-if="noticelist">
+  <div class="notice-wrap" v-if="noticelist">
     <div class="paginate-wrap">
       <paginate-links
         for="noticelist"
