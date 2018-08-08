@@ -11,7 +11,7 @@
           </span>
         </p>
       </div>
-      <div class="container-fluid card fac-sm">
+      <div class="container-fluid fac-sm">
         <div class="row">
           <div class="photo" :class="getClassImg()">
             <img :src="faculty.image" style="max-width: 100%; max-height: 100%">
