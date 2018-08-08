@@ -14,7 +14,15 @@ body {
   background: #ECEFF1;
   margin: 0 0 230px;
 }
-
+.div-none {
+  display: none;
+}
+.div-block {
+  display: block;
+}
+.div-inline-block {
+  display: inline-block;
+}
 @media screen and (max-width: 500px)  {
   body {
     margin: 0 0 300px;
@@ -642,21 +650,14 @@ hr.style4:after {
 .l1-dep .l1-card div.tile-content{
   color: #ffffff;
 }
-.l3-fac .l3-card {
-  background: linear-gradient(#ECEFF1,#B0BEC5);
-}
 /*title*/
 .l3-fac .l3-card div.tile-title{
-  background: linear-gradient(to right,#001333,#26C6DA);
+  background: #001333;
 }
 .l3-fac .l3-card p.tile-title-text{
   color: #ffffff;
 }
 /* title color*/
-/*color 1 bgs*/
-.l3-fac .l3-card .downc{
-  background-color:#ffffff;
-}
 /*/.color 1*/
 .l3-fac .downc .pills-secondary .nav-link.active{
   background-color: #001333 !important;
@@ -674,7 +675,4 @@ hr.style4:after {
 }
 .l3-fac .dropdown-item.active{
   background-color: #001333;
-}
-.l3-fac .dropdown-item:hover{
-  background-color: #888888!important;
 }

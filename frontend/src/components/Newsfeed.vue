@@ -95,7 +95,8 @@ export default {
 }
 .card-news .tile-title{
   background-color: #001333;
-  height: 60px!important;padding-top: 0px!important;padding-bottom: 0px!important;
+  height: 60px!important;
+  padding-top: 0px!important;
 }
 #newscarowrap{
   height: 200px!important;

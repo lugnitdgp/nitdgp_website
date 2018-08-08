@@ -29,7 +29,7 @@
           <a @click="menu = !menu" class="top-nav-link"><i class="fa fa-bars fa-lg fa-2x"></i></a>
         </div>
         <div v-show="windowWidth >= 720 || menu"
-          :class="windowWidth >= 720 && !menu ? 'disp-inline-block' : 'menu-div'">
+          :class="windowWidth >= 720 && !menu ? 'div-inline-block' : 'menu-div'">
           <a v-show="menu" class="red white-text" @click="menu = !menu" href="javascript:void(0)">
             Close dialog
           </a><hr v-show="menu">
@@ -201,9 +201,6 @@ export default {
     background-color: white;
     z-index: 2;
     overflow: auto;
-  }
-  .disp-inline-block {
-    display: inline-block;
   }
   .black_overlay {
     position: absolute;

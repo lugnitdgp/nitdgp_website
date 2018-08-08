@@ -12,8 +12,8 @@
         </p>
       </div>
       <div class="container-fluid card fac-sm">
-        <div v-if="general" @dblclick="general = false" class="row">
-          <div class="col-2">
+        <div class="row">
+          <div class="photo" :class="getClassImg()">
             <img :src="faculty.image" style="border: solid grey 2px;max-width: 100%; max-height: 100%">
             <p style="font-weight: bold">{{ faculty.name }}</p>
             <p>{{ faculty.designation }}</p>
@@ -26,7 +26,10 @@
               {{ faculty.email }}
             </p>
           </div>
-          <div class="col-10 downc card tab-content">
+          <div class="downc card tab-content" :class="getClassContent()">
+            <button class="btn" type="button" @click="showNav($event)">
+              <i class="fa fa-bars fa-2x"></i>
+            </button>
             <div class="tab-pane fade show active big-list" id="li1" role="tabpanel">
               <h3 class="pane-title" align="left">Education</h3>
               <hr>
@@ -150,25 +153,19 @@
               <h4 v-else class="red-text">Not Available</h4>
             </div>
           </div>
-        </div>
-        <div class="dropdown" style="text-align: center">
-          <button class="btn btn-lg dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-bars fa-2x"> &nbsp; &nbsp; Details</i>
-          </button>
-          <div class="dropdown-menu" id="list-tab" role="tablist">
-            <div class="list-group">
-              <a class="dropdown-item active" :class="!('education' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li1" role="tab">Education</a>
-              <a class="dropdown-item" :class="!('work_experience' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li2" role="tab">Work Experience</a>
-              <a class="dropdown-item" :class="!('research_interest' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li3" role="tab">Research Interest</a>
-              <a class="dropdown-item" :class="!('projects' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li4" role="tab">Projects</a>
-              <a class="dropdown-item" :class="!('publication' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li5" role="tab">Publication</a>
-              <a class="dropdown-item" :class="!('teachings' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li6" role="tab">Teachings</a>
-              <a class="dropdown-item" :class="!('students' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li7" role="tab">Students</a>
-              <a class="dropdown-item" :class="!('awards_and_recognition' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
-              <a class="dropdown-item" :class="!('administrative_responsiblities' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
-              <a class="dropdown-item" :class="!('contact' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li10" role="tab">Contact</a>
-            </div>
+          <div class="list-group" :class="extraNavClasses.concat([getClassNav()])">
+            <a class="dropdown-item active" :class="!('education' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li1" role="tab">Education</a>
+            <a class="dropdown-item" :class="!('work_experience' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li2" role="tab">Work Experience</a>
+            <a class="dropdown-item" :class="!('research_interest' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li3" role="tab">Research Interest</a>
+            <a class="dropdown-item" :class="!('projects' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li4" role="tab">Projects</a>
+            <a class="dropdown-item" :class="!('publication' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li5" role="tab">Publication</a>
+            <a class="dropdown-item" :class="!('teachings' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li6" role="tab">Teachings</a>
+            <a class="dropdown-item" :class="!('students' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li7" role="tab">Students</a>
+            <a class="dropdown-item" :class="!('awards_and_recognition' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
+            <a class="dropdown-item" :class="('administrative_responsiblities' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
+            <a class="dropdown-item" :class="!('contact' in faculty) ? 'disabled' : ''" data-toggle="list" href="#li10" role="tab">Contact</a>
           </div>
+          <div v-show="nav" id="fade" class="black_overlay"></div>
         </div>
       </div>
     </sp-card>
@@ -198,7 +195,10 @@ export default {
         'semester',
         'credits'
       ],
-      general: true
+      general: true,
+      windowWidth: 1000,
+      extraNavClasses: [],
+      nav: false
     }
   },
   created () {
@@ -218,11 +218,120 @@ export default {
            console.log(e)
            window.location = '/NotAvailable'
          })
+    window.addEventListener('resize', this.updateWidth)
+    this.windowWidth = document.body.clientWidth
+  },
+  mounted () {
+    Array.from(document.getElementsByClassName('dropdown-item')).forEach(el => {
+      console.log("Hiding Div", el)
+      el.addEventListener('click', this.hideNav)
+    })
+  },
+  methods: {
+    hideNav () {
+      this.nav = false
+      this.extraNavClasses = []
+    },
+    showNav (event) {
+      console.log(event)
+      this.extraNavClasses = ['lift', 'div-block']
+      this.nav = true
+      document.getElementsByClassName('lift')[0].style.top = event.clientY.toString() + 'px'
+    },
+    getClassImg () {
+      let width = this.windowWidth
+      if (width > 1180)
+        return 'col-2'
+      else if (width > 900)
+        return 'col-3'
+      else if (width > 600)
+        return 'col-4'
+      else
+        return 'col-12'
+    },
+    getClassContent () {
+      let width = this.windowWidth
+      if (width > 1180)
+        return 'col-8'
+      else if (width > 900)
+        return 'col-6'
+      else if (width > 600)
+        return 'col-8'
+      else
+        return 'col-12'
+    },
+    getClassNav () {
+      let width = this.windowWidth
+      if (width > 1180)
+        return 'col-2'
+      else if (width > 900)
+        return 'col-3'
+      else
+        return 'div-none'
+    },
+    updateWidth () {
+      this.windowWidth = document.body.clientWidth
+    }
   },
   components: {
     TableRenderer,
     CardCollapse,
     SpCard
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateWidth);
   }
 }
 </script>
+
+<style scoped>
+    .list-group a, .list-group a:hover {
+      white-space: pre-wrap;
+    }
+    .dropdown-item:hover{
+      background-color: #001333!important;
+      color: #fff!important;
+    }
+    .photo {
+      text-align: center;
+    }
+    .downc {
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .btn {
+      background: #001333;
+      width: 50px;
+      padding: 10px;
+      float: right;
+      margin-left: auto;
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: 909px) {
+      .btn {
+        display: none;
+        height: 0px;
+      }
+    }
+    .lift {
+      position: absolute;
+      left: 10%;
+      width: 80%;
+      background-color: white;
+      z-index: 2;
+      overflow: auto;
+    }
+    .black_overlay {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      bottom: 0%;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: black;
+      -moz-opacity: 0.8;
+      opacity: .80;
+      filter: alpha(opacity=80);
+    }
+</style>
