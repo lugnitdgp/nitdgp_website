@@ -10,7 +10,7 @@
         <div class="row">
           <a v-for="logo in logos" :href="logo.href"
             class="container-fluid logo-container">
-            <img :src="['/static/img/' + logo.filename]">
+            <img :src="['/static/img/' + logo.name + '.png']">
           </a>
         </div>
       </div>
@@ -42,14 +42,14 @@ export default {
   data() {
     return {
       footer: undefined,
-      logos: [{name: 'govlogo1', filename: 'govlogo1.png', href:"#!"},
-              {name: 'govlogo2', filename: 'govlogo2.png', href:"#!"},
-              {name: 'govlogo3', filename: 'govlogo3.png', href:"#!"},
-              {name: 'govlogo4', filename: 'govlogo4.png', href:"#!"},
-              {name: 'govlogo5', filename: 'govlogo5.png', href:"#!"},
-              {name: 'govlogo6', filename: 'govlogo6.png', href:"#!"},
-              {name: 'govlogo7', filename: 'govlogo7.png', href:"#!"},
-              {name: 'govlogo8', filename: 'govlogo8.png', href:"#!"}],
+      logos: [{name: 'govlogo1', href:"https://www.india.gov.in/"},
+              {name: 'govlogo2', href:"https://www.mygov.in/"},
+              {name: 'govlogo3', href:"http://dial.gov.in/"},
+              {name: 'govlogo4', href:"http://digitalindia.gov.in/"},
+              {name: 'govlogo5', href:"https://evisitors.nic.in/"},
+              {name: 'govlogo6', href:"http://www.nvsp.in/"},
+              {name: 'govlogo7', href:"https://data.gov.in/"},
+              {name: 'govlogo8', href:"http://rti.gov.in/"}],
       links: [{name: "Holidays", href: "/holidays"},
               {name: "Archives", href: "/archives"},
               {name: "Policies", href: "/policies"},
