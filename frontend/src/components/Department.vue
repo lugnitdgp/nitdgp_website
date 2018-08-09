@@ -594,4 +594,9 @@ export default {
   .l2-idep .card-body .down-content .carousel-title{
     font-weight: bold;letter-spacing: 2px;font-size: 150%;color:#000000;
   }
+  .classic-tabs li a.active {
+    border: 1px solid;
+    border-radius: 5px;
+    color: inherit;
+  }
 </style>
