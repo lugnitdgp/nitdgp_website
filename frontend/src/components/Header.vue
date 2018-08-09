@@ -33,7 +33,7 @@
           <a v-show="menu" class="red white-text" @click="menu = !menu" href="javascript:void(0)">
             Close dialog
           </a><hr v-show="menu">
-          <a class="top-nav-link" href="http://nitdgp.ac.in/alumni/index.php">
+          <a class="top-nav-link" href="http://alumni.nitdgp.ac.in">
             Alumni
           </a><hr v-show="menu">
           <a class="top-nav-link" href="https://mail.google.com/a/nitdgp.ac.in">
