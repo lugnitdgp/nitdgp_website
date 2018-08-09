@@ -595,8 +595,8 @@ export default {
     font-weight: bold;letter-spacing: 2px;font-size: 150%;color:#000000;
   }
   .classic-tabs li a.active {
-    border: 1px solid;
+    border: 1px solid !important;
     border-radius: 5px;
-    color: inherit;
+    color: inherit !important;
   }
 </style>
