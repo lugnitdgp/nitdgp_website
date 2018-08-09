@@ -5,12 +5,12 @@
       <div id="carousel-home" class="carousel slide caro-wrap" data-ride="carousel" data-interval="6000">
         <!-- Indicators -->
         <ol class="carousel-indicators">
-          <li v-for="(slide,index) in slides" data-target="#carousel-home" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
+          <li v-for="(slide,index) in slides" data-target="#carousel-home" :data-slide-to="index" :class="{ active: (index == 0) }"></li>
         </ol>
         <!-- End of Indicators -->
         <!-- Slides -->
         <div class="carousel-inner" role="listbox">
-          <div v-for="(slide,index) in slides" class="carousel-item anim1" :class="index == 0 ? 'active' : ''">
+          <div v-for="(slide,index) in slides" class="carousel-item anim1" :class="{ active: (index == 0) }">
             <div class="view hm-black-light">
               <img class="d-block" :src="slide.image" :alt="['Slide ' + (index+1)]"/>
               <div class="mask"></div>
@@ -51,7 +51,6 @@ export default {
 <style>
   .d-block {
     height: 100%;
-    width: 100%;
   }
   @media screen and (max-width: 800px) {
     .card-pic{
@@ -76,7 +75,7 @@ export default {
     margin-bottom: -0.2em!important;
   }
   .card-pic .carousel-inner{
-    width: 100%!important;height: 100%;
+    height: 100%;
   }
   .card-pic .view{
     height: 100%;margin: 0!important;padding: 0!important;
@@ -93,8 +92,5 @@ export default {
     font-weight: bold;
     padding: 5px;
     border-radius: 10px;
-  }
-  .card-pic img{
-    min-width: 100%;
   }
 </style>

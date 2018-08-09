@@ -275,10 +275,10 @@
         <div class="tab-pane fade big-list" id="li9" role="tabpanel" aria-labelledby="li9-list">
           <div id="carousel-dept" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
-              <li v-for="(slide,index) in dept.photos" data-target="#carousel-home" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
+              <li v-for="(slide,index) in dept.photos" data-target="#carousel-home" :data-slide-to="index" :class="{ active: (index == 0) }"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-              <div v-for="(slide,index) in dept.photos" class="carousel-item anim1" :class="index == 0 ? 'active' : ''">
+              <div v-for="(slide,index) in dept.photos" class="carousel-item anim1" :class="{ active: (index == 0) }">
                 <div class="view">
                   <img class="d-block w-100" :src="genBackendURL(slide.image, true)" :alt="['Slide ' + (index+1)]">
                   <div class="mask rgba-black-light"></div>
