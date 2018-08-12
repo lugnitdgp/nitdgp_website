@@ -42,3 +42,10 @@ class PlacementSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Placement
 		fields = ('title', 'file', 'date', 'url')
+
+
+class VisitorSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Visitor
+		fields = ('name', 'designation', 'event_name', 'image')

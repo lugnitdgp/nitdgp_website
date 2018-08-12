@@ -33,6 +33,12 @@ class PlacementViewSet(ListAPIView):
 	 serializer_class = PlacementSerializer
 
 
+class VisitorViewSet(ListAPIView):
+
+	queryset = Visitor.objects.all()
+	serializer_class = VisitorSerializer
+
+
 class PlacementLinksViewSet(ListAPIView):
 
 	queryset = PlacementLinks.objects.all()

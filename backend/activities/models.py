@@ -92,6 +92,26 @@ class Research(BaseModel):
 		return self.url
 
 
+class Visitor(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'Event Visitors'
+		ordering = ('-created_at', )
+
+	name = models.CharField(max_length=512)
+	designation = models.CharField(max_length=1024)
+	event_name = models.CharField(max_length=1024)
+	image = models.ImageField(upload_to='activites/event_visitors/%Y/%m/%d')
+
+	def _name(self):
+		return self.name
+
+	def _designation(self):
+		return self.designation
+
+	def _event_name(self):
+		return self.event_name
+
 
 class PlacementLinks(BaseModel):
 
