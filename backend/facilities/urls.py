@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^facilities/resource/$', ResourceViewSet.as_view(), name='view-resource'),
     url(r'^facilities/sac/$', SACViewSet.as_view(), name='view-sac'),
     url(r'^facilities/cif/$',CIFViewSet.as_view(), name='view-cif'),
-
+    url(r'^facilities/hostels/$',HostelViewSet.as_view(), name='view-hostels'),
     ]

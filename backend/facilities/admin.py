@@ -13,6 +13,9 @@ class ResourceModelAdmin(admin.ModelAdmin):
 class SACModelAdmin(admin.ModelAdmin):
 	list_display = ['_about','__str__','_other_activities','_facility','_contact_us','_ach_url','_rec_url']
 
+class HostelModelAdmin(admin.ModelAdmin):
+    list_display = ['_name', ]
+
 class CIFModelAdmin(admin.ModelAdmin):
 	list_display = ['_equipment_name','_equipment_desc']
 
@@ -20,4 +23,5 @@ class CIFModelAdmin(admin.ModelAdmin):
 admin.site.register(Library, LibraryModelAdmin)
 admin.site.register(Resource, ResourceModelAdmin)
 admin.site.register(SAC,SACModelAdmin)
+admin.site.register(Hostel, HostelModelAdmin)
 admin.site.register(CIF,CIFModelAdmin)

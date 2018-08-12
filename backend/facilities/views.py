@@ -32,6 +32,11 @@ class SACViewSet(ListAPIView):
 	serializer_class = SACSerializer
 
 
+class HostelViewSet(ListAPIView):
+	queryset = Hostel.objects.all()
+	serializer_class = HostelSerializer
+
+
 class CIFViewSet(ListAPIView):
 	queryset = CIF.objects.all()
 	serializer_class = CIFSerializer

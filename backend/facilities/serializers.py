@@ -24,6 +24,13 @@ class SACSerializer(serializers.ModelSerializer):
 		fields = ('about','mission','vision','program_offered','other_activities','facility','contact_us','ach_url','rec_url')
 
 
+class HostelSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Hostel
+		fields = ('name', )
+
+
 class CIFSerializer(serializers.ModelSerializer):
 
 	class Meta:

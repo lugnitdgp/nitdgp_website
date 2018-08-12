@@ -90,6 +90,14 @@ def rename_image_cif_photo(instance,filename):
     return 'CIF/{0}/image/{1}'.format(instance.equipment_name,filename)
 
 
+class Hostel(BaseModel):
+
+    name = models.CharField(max_length=512)
+
+    def _name(self):
+        return self.name
+
+
 class CIF(BaseModel):
 
     class Meta:
