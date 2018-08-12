@@ -34,6 +34,10 @@ class NBAModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
 
+class OfficeNoticeModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file', '_date']
+
+
 class MoreModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file', '_date']
 
@@ -46,4 +50,5 @@ admin.site.register(TEQIP, TEQIPModelAdmin)
 admin.site.register(RTI, RTIModelAdmin)
 admin.site.register(NIRF, NIRFModelAdmin)
 admin.site.register(NBA, NBAModelAdmin)
+admin.site.register(OfficeNotice, OfficeNoticeModelAdmin)
 admin.site.register(More, MoreModelAdmin)

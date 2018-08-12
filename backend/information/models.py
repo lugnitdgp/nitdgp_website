@@ -56,7 +56,7 @@ class Tender(BaseModel):
 
     class Meta:
         ordering = ('-created_at', )
-        
+
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/tender/%Y')
 
@@ -129,6 +129,25 @@ class NBA(BaseModel):
 
     def _file(self):
         return self.file
+
+
+class OfficeNotice(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Office Notices'
+
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='information/officenotice/%Y')
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
+    def _date(self):
+        return self.date
 
 
 class More(BaseModel):

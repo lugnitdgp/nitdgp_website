@@ -68,6 +68,12 @@ class NBAViewSet(ListAPIView):
     serializer_class = NBASerializer
 
 
+class OfficeNoticeViewSet(ListAPIView):
+
+    queryset = OfficeNotice.objects.all().order_by('-created_at')
+    serializer_class = OfficeNoticeSerializer
+
+
 class MoreViewSet(ListAPIView):
 
     queryset = More.objects.all()

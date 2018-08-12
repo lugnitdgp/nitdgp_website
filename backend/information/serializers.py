@@ -59,6 +59,14 @@ class NIRFSerializer(serializers.ModelSerializer):
         fields = ('title', 'file')
 
 
+
+class OfficeNoticeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = OfficeNotice
+        fields = ('title', 'file', 'date')
+
+
 class MoreSerializer(serializers.ModelSerializer):
 
     class Meta:
