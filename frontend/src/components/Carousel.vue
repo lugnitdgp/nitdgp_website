@@ -93,4 +93,7 @@ export default {
     padding: 5px;
     border-radius: 10px;
   }
+  .card-pic img{
+    min-width: 100% !important;
+  }
 </style>
