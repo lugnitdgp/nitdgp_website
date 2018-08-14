@@ -1,18 +1,10 @@
 <template>
   <links-page>
     <card title="Minutes of IFC Meeting">
-      <ul class="list-group list-gr">
-        <li v-for="i in ifc_docs">
-          <a class="list-group-item" :href="i.file" target=_blank>{{ i.title }}</a>
-        </li>
-      </ul>
+      <notice-list :noticelist="ifc_docs" />
     </card>
     <card title="Minutes of BWC Meeting">
-      <ul class="list-group list-gr">
-        <li v-for="b in bwc_docs">
-          <a class="list-group-item" :href="b.file" target=_blank>{{ b.title }}</a>
-        </li>
-      </ul>
+      <notice-list :noticelist="bwc_docs" />
     </card>
   </links-page>
 </template>
@@ -21,6 +13,7 @@
 import axios from 'axios'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
+import NoticeList from '@/components/NoticeList'
 import { genBackendURL } from '@/common.js'
 
 export default {
@@ -28,7 +21,9 @@ export default {
   data () {
     return {
       bwc_docs: [],
-			ifc_docs: []
+      paginate: ['bwc_docs'],
+      ifc_docs: [],
+      paginate: ['ifc_docs']
     }
   },
   created () {
@@ -56,7 +51,8 @@ export default {
   },
   components: {
     LinksPage,
-    Card
+    Card,
+    NoticeList
   }
 }
 </script>
