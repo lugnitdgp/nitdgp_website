@@ -5,29 +5,35 @@
       <a class="card-header white-text">Hostels</a>
       <div class="card-body">
       	<ul>
-          <li><a href="#">Hall 1 - Netaji Subhas Hall</a></li>
-          <li><a href="#">Hall 2 - J.C. Bose Hall</a></li>
-          <li><a href="#">Hall 3 - Tagore Hall </a></li>
-          <li><a href="#">Hall 4 - C.V. Raman Hall</a></li>
-          <li><a href="#">Hall 5 - Vivekananda Hall</a></li>
-          <li><a href="#">Hall 6 - Aurobindo Hall</a></li>
-          <li><a href="#">Hall 7 - Sister Nivedita Hall</a></li>
-          <li><a href="#">Hall 8 - Preetilata Hall</a></li>
-          <li><a href="#">Hall 9 - Satyendra Nath Bose Hall</a></li>
-          <li><a href="#">Hall 10 - XXX HALL</a></li>
-          <li><a href="#">Hall 11 - XXX HALL</a></li>
-          <li><a href="#">Hall 12 - XXX HALL</a></li>
-          <li><a href="#">Hall 13 - XXX HALL</a></li>
+          <li v-for="hostel in hostels"><a href="#">{{hostel.name}}</a></li>
         </ul>
       </div>
     </div>
   </div>
 </template>
 <script>
+import axios from "axios";
+import { range, genBackendURL } from "@/common.js";
 export default {
-  name: 'Hostels',
-  created () {
-    this.$emit('hideloader', true)
+  name: "Hostels",
+  data() {
+    return {
+      hostels: {}
+    };
+  },
+  created() {
+    axios
+      .get(genBackendURL("facilities/hostels/"))
+      .then(response => {
+        this.hostels = response.data.results;
+        this.$emit("hideloader", true);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  },
+  methods: {
+    range: range
   }
-}
+};
 </script>
