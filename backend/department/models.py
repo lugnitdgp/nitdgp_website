@@ -181,6 +181,21 @@ class Roles(BaseModel):
         return self.name
 
 
+class HOD(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'HODs'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+
+    def _faculty(self):
+        return self.faculty.name
+
+    def _department(self):
+        return self.department.name
+
+
 class FacultyRoles(BaseModel):
 
     class Meta:
@@ -188,15 +203,16 @@ class FacultyRoles(BaseModel):
 
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     role = models.ForeignKey(Roles, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE)
 
     def _faculty(self):
         return self.faculty.name
 
+    def _department(self):
+        return self.department.name
+
     def _role(self):
         return self.role.name
-
-    def _department(self):
-        return self.faculty.department.name
 
 
 class Activity(BaseModel):

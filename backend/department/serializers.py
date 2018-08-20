@@ -80,21 +80,6 @@ class DepartmentNewsSerializer(serializers.ModelSerializer):
         fields = ('title', 'link', 'date')
 
 
-class FacultyRolesSerializer(serializers.ModelSerializer):
-
-    name = serializers.ReadOnlyField(source='faculty.name')
-    email = serializers.ReadOnlyField(source='faculty.email')
-    mobile = serializers.ReadOnlyField(source='faculty.mobile')
-    research_interest = serializers.ReadOnlyField(source='faculty.research_interest')
-    joining_year = serializers.ReadOnlyField(source='faculty.joining_year')
-    image = serializers.ImageField(source='faculty.image')
-
-    class Meta:
-
-        model = FacultyRoles
-        fields = ('name', 'email', 'mobile', 'research_interest', 'joining_year', 'image')
-
-
 class PeopleSerializer(serializers.ModelSerializer):
 
     faculty = serializers.SerializerMethodField()
@@ -126,8 +111,8 @@ class MainSerializer(serializers.ModelSerializer):
     def get_hod(self, obj):
 
         hod_role = Roles.objects.filter(name='HOD')
-        for faculty_role in FacultyRoles.objects.filter(role=hod_role):
-            faculty_department = faculty_role.faculty.department
+        for faculty_role in HOD.objects.all():
+            faculty_department = faculty_role.department
             if faculty_department.id == obj.id:
                 department_hod = faculty_role.faculty
                 return FacultySerializer(department_hod, context=self.context).data

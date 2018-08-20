@@ -9,12 +9,11 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     teachings = serializers.SerializerMethodField()
     education = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
-    publication = serializers.SerializerMethodField()
-    conference = serializers.SerializerMethodField()
-    publication_pdf = serializers.SerializerMethodField()
-    conference_pdf = serializers.SerializerMethodField()
+    journals = serializers.SerializerMethodField()
+    conferences = serializers.SerializerMethodField()
     students = serializers.SerializerMethodField()
-    books_and_patents = serializers.SerializerMethodField()
+    books = serializers.SerializerMethodField()
+    patents = serializers.SerializerMethodField()
     work_experience = serializers.SerializerMethodField()
     awards_and_recognition = serializers.SerializerMethodField()
     administrative_responsibilities = serializers.SerializerMethodField()
@@ -45,29 +44,25 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
         else :
             return info.first().projects
 
-    def get_publication(self, obj):
-        info = Publication.objects.filter(faculty_id=obj.id)
-        return PublicationSerializer(info, many=True).data
+    def get_journals(self, obj):
+        info = Journal.objects.filter(faculty_id=obj.id)
+        return JournalSerializer(info, many=True).data
 
-    def get_conference(self, obj):
+    def get_conferences(self, obj):
         info = Conference.objects.filter(faculty_id=obj.id)
         return ConferenceSerializer(info, many=True).data
-
-    def get_publication_pdf(self, obj):
-        info = PublicationPDF.objects.filter(faculty_id=obj.id)
-        return PublicationPDFSerializer(info, many=True).data
-
-    def get_conference_pdf(self, obj):
-        info = ConferencePDF.objects.filter(faculty_id=obj.id)
-        return ConferencePDFSerializer(info, many=True).data
 
     def get_students(self, obj):
         info = Students.objects.filter(faculty_id=obj.id)
         return StudentSerializer(info, context=self.context, many=True).data
 
-    def get_books_and_patents(self, obj):
-        info = BooksPatents.objects.filter(faculty_id=obj.id)
-        return BookPatentSerializer(info, context=self.context, many=True).data
+    def get_books(self, obj):
+        info = Book.objects.filter(faculty_id=obj.id)
+        return BookSerializer(info, context=self.context, many=True).data
+
+    def get_patents(self, obj):
+        info = Patent.objects.filter(faculty_id=obj.id)
+        return PatentSerializer(info, context=self.context, many=True).data
 
     def get_work_experience(self, obj):
         info = GeneralInformation.objects.filter(faculty_id=obj.id)
@@ -93,43 +88,9 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty
         fields = ('name', 'research_interest', 'image', 'email', 'joining_year', 'designation',
-        'education', 'projects', 'dept_short_code', 'students', 'publication', 'publication_pdf', 'conference', 'conference_pdf', 'books_and_patents', 'teachings', 'work_experience', 'awards_and_recognition',
+        'education', 'projects', 'dept_short_code', 'students', 'journals', 'conferences', 'books', 'patents', 'teachings', 'work_experience', 'awards_and_recognition',
         'administrative_responsibilities')
 
-
-class PublicationSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Publication
-        fields = ('authors', 'title', 'journal', 'year_or_volume')
-
-
-class ConferenceSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Conference
-        fields = ('authors', 'title', 'location', 'year_or_volume')
-
-
-class PublicationPDFSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = PublicationPDF
-        fields = ('publication', )
-
-
-class ConferencePDFSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = ConferencePDF
-        fields = ('conference', )
-
-
-class BookPatentSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = BooksPatents
-        fields = ('title', 'file', 'url')
 
 
 class StudentSerializer(serializers.ModelSerializer):

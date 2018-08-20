@@ -92,8 +92,9 @@ class RolesModelAdmin(admin.ModelAdmin):
     list_display = ['__str__']
 
 
+
 class FacultyRolesModelAdmin(admin.ModelAdmin):
-    list_display = ['_faculty', '_role', '_department']
+    list_display = ['_faculty', '_department']
 
     def get_queryset(self, request):
         queryset = super(FacultyRolesModelAdmin, self).get_queryset(request)
@@ -107,6 +108,24 @@ class FacultyRolesModelAdmin(admin.ModelAdmin):
                 kwargs["queryset"] = Faculty.objects.filter(
                     department__name=request.user.get_full_name())
         return super(FacultyRolesModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
+
+
+class HODModelAdmin(admin.ModelAdmin):
+    list_display = ['_faculty', '_department']
+
+    def get_queryset(self, request):
+        queryset = super(HODModelAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return queryset
+        return queryset.filter(faculty__department__name=request.user.get_full_name())
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    department__name=request.user.get_full_name())
+        return super(HODModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
 
@@ -283,6 +302,7 @@ admin.site.register(Student, StudentModelAdmin)
 admin.site.register(Research, ResearchModelAdmin)
 admin.site.register(Project, ProjectModelAdmin)
 admin.site.register(Roles, RolesModelAdmin)
+admin.site.register(HOD, HODModelAdmin)
 admin.site.register(FacultyRoles, FacultyRolesModelAdmin)
 admin.site.register(Activity, ActivitiesModelAdmin)
 admin.site.register(Degree, DegreeModelAdmin)

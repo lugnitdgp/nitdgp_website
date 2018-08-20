@@ -6,19 +6,16 @@ from department.models import Faculty
 class Dean(BaseModel):
 
     class Meta:
-        ordering = ('-role', )
+        ordering = ('-role', '-seniority')
 
     ROLE_TYPES = (('Dean', 'Dean'), ('Associate Dean', 'Associate Dean'))
-    name = models.CharField(max_length=512)
     designation = models.CharField(max_length=512)
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     role = models.CharField(choices=ROLE_TYPES, max_length=100)
-    email = models.EmailField()
-    phone = models.BigIntegerField()
-    alternate_phone = models.BigIntegerField()
-    image = models.ImageField(upload_to='administration/deans/')
+    seniority = models.IntegerField(choices=[(i, i) for i in range(1,7)])
 
     def ___str__(self):
-        return self.name
+        return self.faculty.name
 
     def _designation(self):
         return self.designation
@@ -27,13 +24,10 @@ class Dean(BaseModel):
         return self.role
 
     def _email(self):
-        return self.email
-
-    def _phone(self):
-        return self.phone
+        return self.faculty.email
 
     def _image(self):
-        return self.image
+        return self.faculty.image
 
 class BOG(BaseModel):
 

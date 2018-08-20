@@ -54,8 +54,8 @@ class SAC(BaseModel):
     other_activities = RichTextField()
     facility = RichTextField()
     contact_us = RichTextField()
-    ach_url = models.URLField()#for adding the link of the record of all the achievements of NIT DGP
-    rec_url = models.URLField() #for adding the link of the record of sports and games in NIT DGP
+    ach_url = models.URLField()
+    rec_url = models.URLField()
 
     def _about(self):
         return self.about

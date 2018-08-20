@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'academics',
     'activities',
     'information',
+    'publication',
     'ckeditor',
     'logentry_admin',
     'django_cleanup',

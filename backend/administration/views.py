@@ -82,8 +82,7 @@ class DeansViewSet(ListAPIView):
 class HodViewSet(ListAPIView):
 
     serializer_class = HODSerializer
-    hod_role = Roles.objects.filter(name='HOD')
-    queryset = FacultyRoles.objects.filter(role=hod_role)
+    queryset = HOD.objects.all().order_by('department__name')
 
 
 class BOGViewSet(ListAPIView):

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from administration.models import *
-from department.models import Roles, FacultyRoles
+from department.models import Roles, HOD
 from department.serializers import FacultySerializer
 
 
@@ -34,22 +34,31 @@ class BogAgendaSerializer(serializers.ModelSerializer):
 
 class DeanSerializer(serializers.ModelSerializer):
 
+    id = serializers.ReadOnlyField(source='faculty.id')
+    name = serializers.ReadOnlyField(source='faculty.name')
+    email = serializers.ReadOnlyField(source='faculty.email')
+    mobile = serializers.ReadOnlyField(source='faculty.mobile')
+    image = serializers.ImageField(source='faculty.image')
+    department = serializers.ReadOnlyField(source='faculty.department.name')
+
     class Meta:
         model = Dean
-        fields = ('name', 'image', 'designation', 'role', 'email', 'phone', 'alternate_phone')
+        fields = ('id', 'name', 'role', 'designation', 'email', 'mobile', 'image', 'department')
 
 
 class HODSerializer(serializers.ModelSerializer):
 
+    id = serializers.ReadOnlyField(source='faculty.id')
     name = serializers.ReadOnlyField(source='faculty.name')
     email = serializers.ReadOnlyField(source='faculty.email')
     mobile = serializers.ReadOnlyField(source='faculty.mobile')
     research_interest = serializers.ReadOnlyField(source='faculty.research_interest')
     joining_year = serializers.ReadOnlyField(source='faculty.joining_year')
     image = serializers.ImageField(source='faculty.image')
-    department = serializers.ReadOnlyField(source='faculty.department.name')
+    department = serializers.ReadOnlyField(source='department.name')
+    department_shortcode = serializers.ReadOnlyField(source='department.short_code')
 
     class Meta:
 
-        model = FacultyRoles
-        fields = ('name', 'email', 'mobile', 'research_interest', 'joining_year', 'image', 'department')
+        model = HOD
+        fields = ('id', 'name', 'email', 'mobile', 'research_interest', 'joining_year', 'image', 'department', 'department_shortcode')

@@ -2,7 +2,7 @@ from django.contrib import admin
 from administration.models import *
 
 class DeanModelAdmin(admin.ModelAdmin):
-	list_display = ['__str__', '_image', '_designation', '_role', '_email', '_phone']
+	list_display = ['__str__', '_image', '_designation', '_role', '_email']
 
 
 class BOGModelAdmin(admin.ModelAdmin):

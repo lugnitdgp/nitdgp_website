@@ -4,7 +4,7 @@ import datetime
 
 
 class Notice(BaseModel):
-    NOTICE_TYPES = (('Academic', 'Academic'), ('Student', 'Student'), ('General', 'General'))
+    NOTICE_TYPES = (('Academic', 'Academic'), ('Student', 'Student'), ('General', 'General'), ('Hostel', 'Hostel'))
     title = models.CharField(max_length=512)
     notice_type = models.CharField(choices=NOTICE_TYPES, max_length=512)
     file = models.FileField(upload_to='academics/notices/%Y/%m/%d', blank=True)

@@ -10,15 +10,15 @@ class DashboardViewSet(ListAPIView):
 
     queryset = Section.objects.all()
     serializer_class = DashboardSerializer
-    if(HitCount.objects.count()==0):
-        hits = HitCount()
-        hits.count = 1;
-        hits.save()
-
-    else:
-        hits = HitCount.objects.all().first()
-        hits.count = hits.count + 1
-        hits.save()
+    # if(HitCount.objects.count()==0):
+    #     hits = HitCount()
+    #     hits.count = 1;
+    #     hits.save()
+    #
+    # else:
+    #     hits = HitCount.objects.all().first()
+    #     hits.count = hits.count + 1
+    #     hits.save()
     permission_classes = (AllowAny, )
 
 
