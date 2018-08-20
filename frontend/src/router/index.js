@@ -38,6 +38,7 @@ import Research from '@/components/activities/Research'
 import Events from '@/components/activities/Events'
 import Achievements from '@/components/activities/Achievements'
 import Students from '@/components/activities/Students'
+import EventVisitors from '@/components/activities/EventVisitors'
 
 import Library from '@/components/facilities/Library'
 import Mu from '@/components/facilities/Mu'
@@ -210,6 +211,11 @@ export default new Router({
       path: '/events',
       name: 'Events',
       component: Events
+    },
+    {
+      path: '/eventvisitors',
+      name: 'Event Visitors',
+      component: EventVisitors
     },
     {
       path: '/achievements',

@@ -160,8 +160,8 @@ export default {
       // For generating links on the frontend
       let link = '/'
       let suburl = tile.name.toLowerCase().replace(/ /g, "");
-      if (suburl.indexOf("event") != -1)
-        return link + "events"
+      //if (suburl.indexOf("event") != -1)
+      //  return link + "events"
       if (suburl.indexOf("bwc") != -1)
         return link + "bwcifc"
       return link + suburl
