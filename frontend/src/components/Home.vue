@@ -26,7 +26,7 @@
                 <small-tile v-for="tile in tile_row"
                   :icon="tile.icon"
                   :desc="tile.name"
-                  :link="link(tile)"
+                  :link="link(tile,section.section_name)"
                   :key="tile.name" />
               </div>
             </sp-card-collapse>
@@ -49,7 +49,7 @@
                 <small-tile v-for="tile in tile_row"
                   :icon="tile.icon"
                   :desc="tile.name"
-                  :link="link(tile)"
+                  :link="link(tile, section.section_name)"
                   :key="tile.name" />
               </div>
             </sp-card-collapse>
@@ -192,12 +192,21 @@ export default {
     updateWidth () {
       this.windowWidth = document.body.clientWidth
     },
-    link (tile) {
+    link (tile,section) {
       // For generating links on the frontend
       let link = '/'
       let suburl = tile.name.toLowerCase().replace(/ /g, "");
       //if (suburl.indexOf("event") != -1)
       //  return link + "events"
+      if (suburl.indexOf("notice") != -1) {
+        if(section == "Academics")
+          return link + "notices/" + "academic"
+        if(section == "Students & Alumni")
+          return link + "notices/" + "student"
+        if(section == "Information")
+          return link + "notices/" + "general"
+        }
+        // return link + "notices/"
       if (suburl.indexOf("bwc") != -1)
         return link + "bwcifc"
       return link + suburl

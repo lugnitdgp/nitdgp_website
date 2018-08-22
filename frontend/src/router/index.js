@@ -129,7 +129,7 @@ export default new Router({
       component: Convocation
     },
     {
-      path: '/notices',
+      path: '/notices/:tab',
       name: 'Notices',
       component: Notices
     },
