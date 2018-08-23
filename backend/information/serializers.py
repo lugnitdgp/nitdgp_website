@@ -7,56 +7,56 @@ class ReportSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Report
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class AccountSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Account
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class CareerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Career
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class TenderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tender
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class TEQIPSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TEQIP
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class RTISerializer(serializers.ModelSerializer):
 
     class Meta:
         model = RTI
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class NBASerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NBA
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 class NIRFSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NIRF
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'date')
 
 
 

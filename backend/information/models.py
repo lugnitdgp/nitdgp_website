@@ -11,6 +11,7 @@ class Report(BaseModel):
     title = models.CharField(max_length=255)
     type = models.CharField(choices=CHOICES, max_length=255)
     file = models.FileField(upload_to='information/reports/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -29,6 +30,7 @@ class Account(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/accounts/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -44,6 +46,7 @@ class Career(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/careers/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -59,6 +62,7 @@ class Tender(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/tender/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -75,6 +79,7 @@ class TEQIP(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/teqip/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -91,6 +96,7 @@ class RTI(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/rti/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -107,6 +113,7 @@ class NIRF(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/nirf/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
@@ -123,6 +130,7 @@ class NBA(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/nba/%Y')
+    date = models.DateField()
 
     def __str__(self):
         return self.title
