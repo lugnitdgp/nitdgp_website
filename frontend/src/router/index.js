@@ -37,7 +37,7 @@ import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
 import Events from '@/components/activities/Events'
 import Achievements from '@/components/activities/Achievements'
-import Students from '@/components/activities/Students'
+import Clubs from '@/components/activities/Clubs'
 import EventVisitors from '@/components/activities/EventVisitors'
 
 import Library from '@/components/facilities/Library'
@@ -223,9 +223,9 @@ export default new Router({
       component: Achievements
     },
     {
-      path: '/students',
-      name: 'Students',
-      component: Students
+      path: '/clubs',
+      name: 'Clubs',
+      component: Clubs
     },
 
     // Facilities

@@ -3,12 +3,12 @@
     <card title="Public Grievances">
       <span>
         <h4>Staff Grievance Officer</h4>
-        Prof.S. K. Mitra<br>
-        Department of Metallurgical & Materials Engineering,<br>
+        Prof. Vijay Kumar Dwivedi<br>
+        Department of Civil Engineering,<br>
         National Institute of Technology,<br>
         Durgapur, West Bengal-713209.<br>
-        Mobile No. - 9434788005<br>
-        Email - sgo@admin.nitdgp.ac.in<br>
+        Mobile: +91-9434788097<br>
+        Email: sgo@admin.nitdgp.ac.in<br>
       </span>
       <br>
       <ul>
