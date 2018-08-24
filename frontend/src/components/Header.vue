@@ -1,6 +1,18 @@
 <template>
   <header class="container-fluid">
+
     <nav class="mb-1 navbar fixed-top navbar-expand-sm" id="nav-below">
+      <div class="navbar-menu">
+         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-2x fa-bars" ></i></a>
+          <div class="dropdown-menu" style="background-color: #001333">
+              <a class="dropdown-item" href="/"><i class="fa fa-2x fa-home" ></i></a>
+              <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
+              <a class="dropdown-item" href="http://nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
+          </div>
+      </div>
+      <div class="navbar-home">
+        <a href="/"><i class="fa fa-3x fa-home" ></i></a>
+      </div>
       <div class="navbar-header">
         <div id="brand-logo-block" align="center">
           <a :class="$route.path == '/'" href="/">
@@ -10,7 +22,7 @@
           </a>
         </div>
         <div id="brand-name-block" class="navbar-text white-text" align="center">
-          <h4>National Institute of Technology, Durgapur</h4>
+          <h4>National &nbsp;Institute &nbsp;of &nbsp;Technology, &nbsp;Durgapur</h4>
           <h4>राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर</h4>
           <p class="navbar-text-small">
             An Institute of National Importance under Government of India,<br>
@@ -23,6 +35,10 @@
           </p>
         </div>
         <img class="navbar-img-big"  src="/static/img/emblem.png">
+      </div>
+      <div class="navbar-list">
+        <a href="http://nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb </a>&nbsp;
+        <a href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
       </div>
     </nav>
   </header>
@@ -54,8 +70,32 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .navbar-menu {
+    display: none;
+    background-color: #001333;
+  }
+  .navbar-menu a{
+    color: white!important;
+  }
+  .navbar-menu a:hover{
+    background-color: #001c50!important;
+  }
+  .navbar-list {
+    margin-bottom: -4%;font-size: 120%;
+    background-color: #001333;
+    color: white;
+  }
+  .navbar-home {
+    margin-top: -3%;
+    background-color: #001333;
+    color: white;
+  }
+  .navbar a{
+    color: white;
+  }
   .navbar-header {
     margin: 0px auto;
+    padding-left: 100px;
   }
   .navbar-text {
     vertical-align: middle;
@@ -111,14 +151,14 @@ export default {
     padding-top: 6em;margin-top: -2em;
   }
   .navbar-brand {
-    height: 90px;
+    height: 130px;
     margin-top: -20px;
     margin-bottom: -20px;
     margin-right: -10px;
   }
   .navbar-img-big{
     padding-left: 5px;
-    height: 70px;
+    height: 100px;
   }
   .navbar-img-small{
     height: 0px;
@@ -126,7 +166,20 @@ export default {
   #brand-logo-block, #brand-name-block {
     display: inline-block;
   }
+  #brand-name-block h4{
+    font-size: 160%;
+    letter-spacing: 3px;
+    font-weight: bold;
+  }
+  .navbar-text-small{
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
   @media screen and (max-width: 540px) {
+    .navbar-menu {
+      margin-left: -2%;
+      margin-top: -8%!important;
+    }
     #brand-logo-block {
       display: block;
       padding: 0px;
@@ -168,5 +221,21 @@ export default {
   }
   #brand-name-block-small{
     display: none;
+  }
+  @media screen and (max-width: 1200px) {
+    .navbar-header {
+      padding-left: 0px!important;
+    }
+    .navbar-list {
+      display: none;
+    }
+    .navbar-home {
+      display: none;
+    }
+    .navbar-menu {
+      margin-left: -2%;
+      margin-top: -3%;
+      display: block;
+    }
   }
 </style>

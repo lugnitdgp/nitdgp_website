@@ -128,6 +128,11 @@ hr.style4:after {
 .mob{
   display: none;
 }
+@media screen and (max-width: 540px) {
+  .newscaro {
+    margin-top: -170px!important;
+  }
+}
 @media screen and (max-width: 800px)  {
   .page-type-person .card-up{
     height: 200px !important;
@@ -140,6 +145,9 @@ hr.style4:after {
   }
 }
 @media screen and (max-width: 1010px) {
+  .newscaro {
+    padding-top: 170px!important;
+  }
   .mob{
     display: block!important;
   }
