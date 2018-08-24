@@ -6,6 +6,13 @@ from department.models import Faculty
 class StudentsModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', '_file']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['faculty']
+
     def get_queryset(self, request):
         queryset = super(StudentsModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -31,6 +38,14 @@ class EducationModelAdmin(admin.ModelAdmin):
             return []
         return ['faculty']
 
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(EducationModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
+
     def get_queryset(self, request):
         queryset = super(EducationModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -47,6 +62,14 @@ class TeachingsModelAdmin(admin.ModelAdmin):
         if obj is None:
             return []
         return ['faculty']
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(TeachingsModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
 
     def get_queryset(self, request):
         queryset = super(TeachingsModelAdmin, self).get_queryset(request)
@@ -65,6 +88,14 @@ class AwardsAndRecognitionModelAdmin(admin.ModelAdmin):
             return []
         return ['faculty']
 
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(AwardsAndRecognitionModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
+
     def get_queryset(self, request):
         queryset = super(AwardsAndRecognitionModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -81,6 +112,14 @@ class ProjectsModelAdmin(admin.ModelAdmin):
         if obj is None:
             return []
         return ['faculty']
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(ProjectsModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
 
     def get_queryset(self, request):
         queryset = super(ProjectsModelAdmin, self).get_queryset(request)
@@ -99,6 +138,14 @@ class WorkExperienceModelAdmin(admin.ModelAdmin):
             return []
         return ['faculty']
 
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(WorkExperienceModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
+
     def get_queryset(self, request):
         queryset = super(WorkExperienceModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -115,6 +162,14 @@ class AdministrativeResponsibilityModelAdmin(admin.ModelAdmin):
         if obj is None:
             return []
         return ['faculty']
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(AdministrativeResponsibilityModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
 
     def get_queryset(self, request):
         queryset = super(AdministrativeResponsibilityModelAdmin, self).get_queryset(request)
