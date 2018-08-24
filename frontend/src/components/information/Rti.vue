@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li v-for="rti in rtis">
           <a class="list-group-item" target="new" :href="rti.file">
-            {{ rti.title }}
+            <span style="background-color: green;color: white">[ {{ rti.date }} ]</span> {{ rti.title }}
           </a>
         </li>
       </ul>

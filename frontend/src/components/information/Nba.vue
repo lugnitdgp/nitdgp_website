@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li v-for="nba in nbas">
           <a class="list-group-item" target="new" :href="nba.file">
-            {{ nba.title }}
+            <span style="background-color: green;color: white">[ {{ nba.date }} ]</span> {{ nba.title }}
           </a>
         </li>
       </ul>

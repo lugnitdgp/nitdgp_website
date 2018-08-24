@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li v-for="account in accounts">
           <a class="list-group-item" target="new" :href="account.file">
-            {{ account.title }}
+            <span style="background-color: green;color: white">[ {{ account.date }} ]</span> {{ account.title }}
           </a>
         </li>
       </ul>

@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li v-for="teqip in teqips">
           <a class="list-group-item" target="new" :href="teqip.file">
-            {{ teqip.title }}
+            <span style="background-color: green;color: white">[ {{ teqip.date }} ]</span> {{ teqip.title }}
           </a>
         </li>
       </ul>

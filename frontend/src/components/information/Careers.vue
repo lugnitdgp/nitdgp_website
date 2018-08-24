@@ -3,7 +3,7 @@
     <card title="Careers">
       <ul class="list-group list-gr">
         <li v-for="career, key in careers">
-          <a class="list-group-item" :href="career.file">{{ career.title }}</a>
+          <a class="list-group-item" :href="career.file"><span style="background-color: green;color: white">[ {{ career.date }} ]</span> {{ career.title }}</a>
         </li>
       </ul>
     </card>

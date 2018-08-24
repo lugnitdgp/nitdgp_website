@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li v-for="nirf in nirfs">
           <a class="list-group-item" target="new" :href="nirf.file">
-            {{ nirf.title }}
+            <span style="background-color: green;color: white">[ {{ nirf.date }} ]</span> {{ nirf.title }}
           </a>
         </li>
       </ul>

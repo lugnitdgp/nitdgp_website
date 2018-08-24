@@ -9,7 +9,7 @@
     </div>
     <paginate name="noticelist" :per="10" :list="noticelist" class="paginate-list list-gr list-group">
       <li v-for="notice in paginated('noticelist')">
-        <a class="list-group-item" :href="notice.file" target="new">{{ notice.title }}</a>
+        <a class="list-group-item" :href="notice.file" target="new"><span style="background-color: green;color: white">[ {{ notice.date }} ]</span> {{ notice.title }}</a>
       </li>
     </paginate>
   </div>
