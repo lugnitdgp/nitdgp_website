@@ -1,7 +1,9 @@
 from rest_framework import serializers
 from faculty.models import *
+from publication.models import *
 from department.models import Faculty
 from department.serializers import CourseSerializer
+from publication.serializers import *
 import collections
 
 class FacultyDetailSerializer(serializers.ModelSerializer):
@@ -19,26 +21,21 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     administrative_responsibilities = serializers.SerializerMethodField()
 
     def get_teachings(self, obj):
-        info = GeneralInformation.objects.filter(faculty_id=obj.id)
+        info = Teachings.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
-            #return CourseSerializer(info.first().teachings, many=True).data
-            result = collections.defaultdict(list)
-            teachings = info.first().teachings
-            for course in teachings.order_by('semester'):
-                    result[course.semester].append(CourseSerializer(course).data)
-            return result
+            return info.first()
 
     def get_education(self, obj):
-        info = GeneralInformation.objects.filter(faculty_id=obj.id)
+        info = Education.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().education
 
     def get_projects(self, obj):
-        info = GeneralInformation.objects.filter(faculty_id=obj.id)
+        info = Projects.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
@@ -65,21 +62,21 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
         return PatentSerializer(info, context=self.context, many=True).data
 
     def get_work_experience(self, obj):
-        info = GeneralInformation.objects.filter(faculty_id=obj.id)
+        info = WorkExperience.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().work_experience
 
     def get_awards_and_recognition(self, obj):
-        info = GeneralInformation.objects.filter(faculty_id=obj.id)
+        info = AwardsAndRecognition.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :
             return info.first().awards_and_recognition
 
     def get_administrative_responsibilities(self, obj):
-        info = GeneralInformation.objects.filter(faculty_id=obj.id)
+        info = AdministrativeResponsibility.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
         else :

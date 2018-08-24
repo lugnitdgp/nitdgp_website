@@ -3,36 +3,94 @@ from base.models import BaseModel
 from ckeditor.fields import RichTextField
 from department.models import Faculty, Courses
 
-class GeneralInformation(BaseModel):
+class Teachings(BaseModel):
 
     class Meta:
-        verbose_name_plural = 'General Information'
+        verbose_name_plural = 'Teachings'
 
-    faculty_id = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    education = RichTextField()
-    work_experience = RichTextField()
-    projects = RichTextField()
-    awards_and_recognition = RichTextField()
-    administrative_responsibilities = RichTextField()
-    teachings = models.ManyToManyField(Courses, blank=True)
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    teachings = RichTextField()
 
     def __str__(self):
-        return self.faculty_id.name
+        return self.faculty.name
 
-    def _department(self):
-        return self.faculty_id.department.name
+    def _teachings(self):
+        return self.teachings
+
+
+class AdministrativeResponsibility(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Administrative Responsibilities'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    administrative_responsibilities = RichTextField()
+
+    def __str__(self):
+        return self.faculty.name
+
+    def _administrative_responsibilities(self):
+        return self.administrative_responsibilities
+
+
+class AwardsAndRecognition(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Awards and Recognition'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    awards_and_recognition = RichTextField()
+
+    def __str__(self):
+        return self.faculty.name
+
+    def _awards_and_recognition(self):
+        return self.awards_and_recognition
+
+
+class Education(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Education'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    education = RichTextField()
+
+    def __str__(self):
+        return self.faculty.name
 
     def _education(self):
         return self.education
 
+
+class WorkExperience(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Work Experience'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    work_experience = RichTextField()
+
+    def __str__(self):
+        return self.faculty.name
+
     def _work_experience(self):
         return self.work_experience
 
+
+class Projects(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Projects'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    projects = RichTextField()
+
+    def __str__(self):
+        return self.faculty.name
+
     def _projects(self):
         return self.projects
-
-    def _teachings(self):
-        return self.teachings
 
 
 def rename_students(instance, filename):
