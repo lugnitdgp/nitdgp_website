@@ -426,7 +426,7 @@ export default {
     color:#000000;
   }
   .l2-idep{
-    padding-top: 1em;
+    padding-top: 5em;
     padding-bottom: 1em;padding-right: 1.5%;padding-left: 1.5%;
   }
   .l2-idep .card-body .down-content .caros .carousel-title{

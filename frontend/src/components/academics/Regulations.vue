@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title="Academic Regul class=list-group list-grations">
+    <card title="Academic Regulations" class="list-group list-grations">
       <ul class="list-group list-gr">
         <li v-for="regulation in regulations">
           <a class="list-group-item" :href="regulation.file" target="new">
