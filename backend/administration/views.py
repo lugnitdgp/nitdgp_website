@@ -78,6 +78,13 @@ class DeansViewSet(ListAPIView):
     queryset = Dean.objects.all()
     serializer_class = DeanSerializer
 
+    def list(self, request, *args, **kwargs):
+        deans = self.get_queryset().filter(role='Dean')
+        associate_deans = self.get_queryset().filter(role='Associate Dean')
+        return Response({'deans': DeanSerializer(deans, many=True, context={"request": request}).data,
+                         'associate_deans': DeanSerializer(associate_deans, many=True, context={"request": request}).data
+                         })
+
 
 class HodViewSet(ListAPIView):
 
