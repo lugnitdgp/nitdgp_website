@@ -25,7 +25,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
         if info.count() == 0:
             return {}
         else :
-            return info.first()
+            return info.first().teachings
 
     def get_education(self, obj):
         info = Education.objects.filter(faculty_id=obj.id)
