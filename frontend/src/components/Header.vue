@@ -11,7 +11,7 @@
           </div>
       </div>
       <div class="navbar-home">
-        <a href="/"><i class="fa fa-3x fa-home" ></i></a>
+        <a href="/"><i class="fa fa-2x fa-home" ></i></a>
       </div>
       <div class="navbar-header">
         <div id="brand-logo-block" align="center">
@@ -171,7 +171,7 @@ export default {
   }
   #brand-name-block h4{
     font-size: 160%;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     font-weight: bold;
   }
   .navbar-text-small{
