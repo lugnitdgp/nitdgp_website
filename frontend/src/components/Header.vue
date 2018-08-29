@@ -39,6 +39,7 @@
       <div class="navbar-list">
         <a href="http://nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb </a>&nbsp;
         <a href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
+        <div id="google_translate_element"></div>
       </div>
     </nav>
   </header>
