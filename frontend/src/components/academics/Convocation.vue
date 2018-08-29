@@ -3,7 +3,8 @@
     <card title="Convocation and Special Events">
       <ul class="list-group list-gr">
         <li v-for="convocation in convocations">
-          <a class="list-group-item" :href="convocation.file"><span style="background-color: green;color: white">[ {{ convocation.updated_at.substring(0,10) }} ]</span> {{ convocation.title }}</a>
+          <a class="list-group-item" :href="convocation.file">
+            <span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ convocation.updated_at.substring(0,10) }} </span>&nbsp;{{ convocation.title }}</a>
         </li>
       </ul>
     </card>

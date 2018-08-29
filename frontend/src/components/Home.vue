@@ -90,8 +90,7 @@ export default {
     let count_axios = 0
     axios.get(genBackendURL('dashboard'))
          .then(response => {
-           var struct_up = [0,1,11,111,1111,1121,2121,2122,2222,2232,3232,3323,3333,3343,3344,4434,4444];
-           var struct_dw = [0,1,11,111,1111,1121,2121,2122,2222,2232,3232,3323,3333,3343,3344,4434,4444];
+           var struct = [0,1,11,111,1111,1121,2121,2122,2222,2232,3232,3323,3333,3343,3344,4434,4444];
            this.results = response.data.results
            let x = 0, y = 0
            let section_rows = []
@@ -106,11 +105,7 @@ export default {
                   return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
               })
               let tiles_rows = []
-              let div = 0
-              if(index <= 2)
-                  div = struct_up[cur_inp.length]
-              else
-                  div = struct_dw[cur_inp.length]
+              let div =  struct[cur_inp.length]
               let it = -1
               let row = 0
               while(div!=0)
@@ -129,30 +124,6 @@ export default {
               else
                 section_rows[1][group_dw++] = element
             })
-
-           // this.results.map((element, index) => {
-           //   let row = 0, col = 0
-           //   let tiles_rows = []
-           //   // Loop over the tiles of a section
-           //   element.contents.map((tile) => {
-           //     // Go to the next row when a new tile row value has been encountered.
-           //     // Reset the col value and initialize the new row with an empty list.
-           //     if (row != tile.row) {
-           //       row++
-           //       col = 0
-           //       tiles_rows[row-1] = []
-           //     }
-           //     tiles_rows[row-1][col++] = tile
-           //   })
-           //   element.contents = tiles_rows
-           //   section_rows[x][y++] = element
-           //   // Go to next row after 3 elements. Increment the x value, reset the y
-           //   // value and initialize the next row with an empty list.
-           //   if ((index+1) % 3 == 0) {
-           //     x++, y = 0
-           //     section_rows[x] = []
-           //   }
-           // })
            this.results = section_rows
            if (count_axios == 2) {
              this.$emit('hideloader', true)

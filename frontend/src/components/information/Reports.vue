@@ -5,7 +5,7 @@
       <ul class="list-group list-gr">
         <li v-for="link in report">
           <a class="list-group-item" target="new" :href="link.file">
-            <span style="background-color: green;color: white">[ {{ link.date }} ]</span> {{ link.title }}
+            <span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ link.date }} </span>&nbsp; {{ link.title }}
           </a>
         </li>
       </ul>

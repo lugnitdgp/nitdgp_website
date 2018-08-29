@@ -28,7 +28,10 @@ body {
     margin: 0 0 300px;
   }
 }
-
+.list-gr a:hover span{
+  color:#001333!important;
+  background-color: #E0F7FA!important;
+}
 .row{
   margin-left: 0px;
   margin-right: 0px;
