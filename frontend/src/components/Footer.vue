@@ -8,7 +8,26 @@
           </a>
         </div>
         <div class="row">
-          <a v-for="logo in logos" :href="logo.href"
+          <div v-for="(logo, index) in logos" class="modal fade" :id="'basicExampleModal'+index" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 style="color:black;" class="modal-title" id="exampleModalLabel">You are leaving www.nitdgp.ac.in</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" style="color:black;">
+                  Are you sure you want to go to <img :src="['/static/img/' + logo.name + '.png']">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Stay Here</button>
+                  <a :href="logo.href" class="btn btn-danger">Go There</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a v-for="(logo,index) in logos" data-toggle="modal" :data-target="'#basicExampleModal'+index"
             class="container-fluid logo-container">
             <img :src="['/static/img/' + logo.name + '.png']">
           </a>
