@@ -69,7 +69,8 @@ export default {
               {name: 'govlogo6', href:"http://www.nvsp.in/"},
               {name: 'govlogo7', href:"https://data.gov.in/"},
               {name: 'govlogo8', href:"http://rti.gov.in/"}],
-      links: [{name: "Holidays", href: "/holidays"},
+      links: [{name: "Quick Links", href: "/quicklinks"},
+              {name: "Holidays", href: "/holidays"},
               {name: "Archives", href: "/archives"},
               {name: "Policies", href: "/policies"},
               {name: "Webteam", href: "/webteam"}]

@@ -144,7 +144,7 @@ export default new Router({
 
     // Administration
     {
-      path: '/visitor',
+      path: 'w/visitor',
       name: 'Visitor',
       component: Visitor
     },
