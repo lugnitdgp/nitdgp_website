@@ -32,6 +32,7 @@ import Senate from '@/components/administration/Senate'
 import Deans from '@/components/administration/Deans'
 import Hods from '@/components/administration/Hods'
 
+import Alumni from '@/components/activities/Alumni'
 import Placement from '@/components/activities/Placement'
 import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
@@ -385,6 +386,13 @@ export default new Router({
       path: '/contacts',
       name: 'Contacts',
       component: Contacts
+    },
+
+    // new added
+    {
+      path: '/alumni',
+      name: 'Contacts',
+      component: Alumni
     },
 
     // This is meant to be at the last
