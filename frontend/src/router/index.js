@@ -189,7 +189,7 @@ export default new Router({
       component: Deans
     },
     {
-      path: '/hods',
+      path: '/heads',
       name: 'Hods',
       component: Hods
     },
