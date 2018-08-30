@@ -5,6 +5,13 @@ from department.models import Faculty
 class BookModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', '_file', '_url']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['faculty']
+
     def get_queryset(self, request):
         queryset = super(BookModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -22,6 +29,13 @@ class BookModelAdmin(admin.ModelAdmin):
 
 class JournalModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_citation', '_year', '_journal']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['faculty']
 
     def get_queryset(self, request):
         queryset = super(JournalModelAdmin, self).get_queryset(request)
@@ -41,6 +55,13 @@ class JournalModelAdmin(admin.ModelAdmin):
 class ConferenceModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_citation', '_year', '_location']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['faculty']
+
     def get_queryset(self, request):
         queryset = super(ConferenceModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -58,6 +79,13 @@ class ConferenceModelAdmin(admin.ModelAdmin):
 
 class PatentModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', '_file']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['faculty']
 
     def get_queryset(self, request):
         queryset = super(PatentModelAdmin, self).get_queryset(request)

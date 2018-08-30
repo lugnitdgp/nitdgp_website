@@ -37,6 +37,13 @@ class FacultyModelAdmin(admin.ModelAdmin):
 class StaffModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_designation', '_department']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(StaffModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -55,6 +62,13 @@ class StaffModelAdmin(admin.ModelAdmin):
 class ResearchModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved', '_date']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(ResearchModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -72,6 +86,13 @@ class ResearchModelAdmin(admin.ModelAdmin):
 
 class ProjectModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_institute_involved', '_faculty_involved', '_funding', '_date']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
 
     def get_queryset(self, request):
         queryset = super(ProjectModelAdmin, self).get_queryset(request)
@@ -96,6 +117,13 @@ class RolesModelAdmin(admin.ModelAdmin):
 class FacultyRolesModelAdmin(admin.ModelAdmin):
     list_display = ['_faculty', '_department']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(FacultyRolesModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -114,6 +142,13 @@ class FacultyRolesModelAdmin(admin.ModelAdmin):
 class HODModelAdmin(admin.ModelAdmin):
     list_display = ['_faculty', '_department']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(HODModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -131,6 +166,13 @@ class HODModelAdmin(admin.ModelAdmin):
 
 class ActivitiesModelAdmin(admin.ModelAdmin):
     list_display = ['_department', '_speakers', '_programme', '_start_date', '_end_date']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
 
     def get_queryset(self, request):
         queryset = super(ActivitiesModelAdmin, self).get_queryset(request)
@@ -153,6 +195,13 @@ class DegreeModelAdmin(admin.ModelAdmin):
 
 class ProgrammeModelAdmin(admin.ModelAdmin):
     list_display = ['_title', '_degree', '_department']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
 
     def get_queryset(self, request):
         queryset = super(ProgrammeModelAdmin, self).get_queryset(request)
@@ -191,6 +240,13 @@ class FacilityModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_category']
     ordering = ('department', '-category', )
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(FacilityModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -209,6 +265,13 @@ class FacilityModelAdmin(admin.ModelAdmin):
 class ElectivesModelAdmin(admin.ModelAdmin):
     list_display = ['_department', '_title', '_is_open', '_semester']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(ElectivesModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -225,6 +288,13 @@ class ElectivesModelAdmin(admin.ModelAdmin):
 
 class DepartmentPhotosModelAdmin(admin.ModelAdmin):
     list_display = ['_department', '_title', '_date']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
 
     def get_queryset(self, request):
         queryset = super(DepartmentPhotosModelAdmin, self).get_queryset(request)
@@ -244,6 +314,13 @@ class DepartmentPhotosModelAdmin(admin.ModelAdmin):
 class DepartmentNewsModelAdmin(admin.ModelAdmin):
     list_display = ['_department', '_title', '_date']
 
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
+
     def get_queryset(self, request):
         queryset = super(DepartmentNewsModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
@@ -261,6 +338,13 @@ class DepartmentNewsModelAdmin(admin.ModelAdmin):
 
 class StudentModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_file']
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['department']
 
     def get_queryset(self, request):
         queryset = super(StudentModelAdmin, self).get_queryset(request)

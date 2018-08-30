@@ -6,6 +6,15 @@ from department.models import Faculty
 class StudentsModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', '_file']
 
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
+
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
@@ -30,6 +39,15 @@ class StudentsModelAdmin(admin.ModelAdmin):
 
 class EducationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_education']
+
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
@@ -56,6 +74,15 @@ class EducationModelAdmin(admin.ModelAdmin):
 class TeachingsModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_teachings']
 
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
+
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
@@ -80,6 +107,15 @@ class TeachingsModelAdmin(admin.ModelAdmin):
 
 class AwardsAndRecognitionModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_awards_and_recognition']
+
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
@@ -106,6 +142,15 @@ class AwardsAndRecognitionModelAdmin(admin.ModelAdmin):
 class ProjectsModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_projects']
 
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
+
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
@@ -131,6 +176,15 @@ class ProjectsModelAdmin(admin.ModelAdmin):
 class WorkExperienceModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_work_experience']
 
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
+
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
@@ -155,6 +209,15 @@ class WorkExperienceModelAdmin(admin.ModelAdmin):
 
 class AdministrativeResponsibilityModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_administrative_responsibilities']
+
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
