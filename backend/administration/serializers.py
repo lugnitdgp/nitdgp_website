@@ -46,6 +46,20 @@ class DeanSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'role', 'designation', 'email', 'mobile', 'image', 'department')
 
 
+class WardenSerializer(serializers.ModelSerializer):
+
+    id = serializers.ReadOnlyField(source='faculty.id')
+    name = serializers.ReadOnlyField(source='faculty.name')
+    email = serializers.ReadOnlyField(source='faculty.email')
+    mobile = serializers.ReadOnlyField(source='faculty.mobile')
+    image = serializers.ImageField(source='faculty.image')
+    department = serializers.ReadOnlyField(source='faculty.department.name')
+
+    class Meta:
+        model = Warden
+        fields = ('id', 'name', 'role', 'designation', 'email', 'mobile', 'image', 'department')
+
+
 class HODSerializer(serializers.ModelSerializer):
 
     id = serializers.ReadOnlyField(source='faculty.id')

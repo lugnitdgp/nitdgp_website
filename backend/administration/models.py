@@ -29,6 +29,32 @@ class Dean(BaseModel):
     def _image(self):
         return self.faculty.image
 
+
+class Warden(BaseModel):
+
+    class Meta:
+        ordering = ('-role', 'designation')
+
+    ROLE_TYPES = (('Chief Warden', 'Chief Warden'), ('Associate Chief Warden', 'Associate Chief Warden'), ('Warden', 'Warden'))
+    designation = models.CharField(max_length=512)
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    role = models.CharField(choices=ROLE_TYPES, max_length=100)
+
+    def ___str__(self):
+        return self.faculty.name
+
+    def _designation(self):
+        return self.designation
+
+    def _role(self):
+        return self.role
+
+    def _email(self):
+        return self.faculty.email
+
+    def _image(self):
+        return self.faculty.image
+
 class BOG(BaseModel):
 
     class Meta:

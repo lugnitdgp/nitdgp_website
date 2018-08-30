@@ -105,10 +105,6 @@ class Contact(BaseModel):
 
     GROUPS = (('Director', 'Director'),
               ('Registrar', 'Registrar'),
-              ('Dean', 'Dean'),
-              ('Associate Dean', 'Associate Dean'),
-              ('Warden', 'Warden'),
-              ('HOD','HOD'),
               ('Library', 'Library'),
               ('Workshops', 'Workshops'),
               ('Medical Unit', 'Medical Unit'),

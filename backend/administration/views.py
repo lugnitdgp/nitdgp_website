@@ -92,6 +92,22 @@ class HodViewSet(ListAPIView):
     queryset = HOD.objects.all().order_by('department__name')
 
 
+class WardenViewSet(ListAPIView):
+
+    queryset = Warden.objects.all()
+    serializer_class = WardenSerializer
+
+    def list(self, request, *args, **kwargs):
+        result = {}
+        for warden in self.get_queryset():
+            role = warden.role
+            if role in result:
+                result[role].append(WardenSerializer(warden, context={"request": request}).data)
+            else:
+                result[role] = [WardenSerializer(warden, context={"request": request}).data]
+        return Response({"wardens": result})
+
+
 class BOGViewSet(ListAPIView):
 
     queryset = BOG.objects.all()

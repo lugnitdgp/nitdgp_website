@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^administration/senate/$', SenateViewSet.as_view(), name='list-senate'),
     url(r'^administration/deans/$', DeansViewSet.as_view(), name='list-deans'),
     url(r'^administration/hod/$', HodViewSet.as_view(), name='list-hods'),
+    url(r'^administration/wardens/$', WardenViewSet.as_view(), name='list-wardens'),
 
 ]
