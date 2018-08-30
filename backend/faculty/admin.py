@@ -6,15 +6,6 @@ from department.models import Faculty
 class StudentsModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', '_file']
 
-    def has_add_permission(self, request):
-        if request.user.is_superuser:
-            return True
-        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
-        if num_objects >= 1:
-          return False
-        else:
-          return True
-
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
