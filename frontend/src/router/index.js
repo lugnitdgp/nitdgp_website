@@ -268,7 +268,7 @@ export default new Router({
       component: Mu
     },
     {
-      path: '/ceam',
+      path: '/coe',
       name: 'Ceam',
       component: Ceam
     },
