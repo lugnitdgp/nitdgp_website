@@ -12,7 +12,10 @@ html {
 body {
   font-weight: 400;
   background: #ECEFF1;
-  margin: 0 0 230px;
+  padding-bottom: 230px;
+}
+font {
+  color: inherit!important;
 }
 .div-none {
   display: none;

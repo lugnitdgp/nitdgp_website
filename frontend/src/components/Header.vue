@@ -71,6 +71,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .navbar-expand-sm{
+    padding-top: 50px;
+  }
   .navbar .dropdown-item{
     color: white!important;
   }
