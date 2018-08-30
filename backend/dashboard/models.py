@@ -15,7 +15,7 @@ class QuickLinks(BaseModel):
         ('National Portal', 'National Portal')
     )
     title = models.CharField(max_length=1024)
-    file = models.FileField(upload_to=rename_admission_file, blank=True)
+    file = models.FileField(upload_to='dashboard/quick_links/%Y/%m/%d', blank=True)
     link = models.URLField(blank=True)
     category = models.CharField(max_length=64, choices=CHOICES, default='General')
 
