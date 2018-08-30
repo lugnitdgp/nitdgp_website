@@ -4,6 +4,11 @@ from facilities.serializers import *
 from facilities.models import *
 
 
+class CentersViewSet(ListAPIView):
+        queryset = Center.objects.all().order_by('date')
+        serializer_class = CentersSerializer
+
+
 class LibraryViewSet(ListAPIView):
 
 	queryset = Library.objects.all().order_by('-updated_at')[:1]

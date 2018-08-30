@@ -20,6 +20,7 @@ class CIFModelAdmin(admin.ModelAdmin):
 	list_display = ['_equipment_name','_equipment_desc']
 
 
+admin.site.register(Centers)
 admin.site.register(Library, LibraryModelAdmin)
 admin.site.register(Resource, ResourceModelAdmin)
 admin.site.register(SAC,SACModelAdmin)
