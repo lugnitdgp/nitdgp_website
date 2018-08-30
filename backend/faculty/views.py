@@ -8,3 +8,7 @@ class FacultyViewSet(RetrieveAPIView):
 
     queryset = Faculty.objects.all()
     serializer_class = FacultyDetailSerializer
+
+    def retrieve(self, request, *args, **kwargs):
+        return Response({"faculty": FacultyDetailSerializer(self.get_queryset().filter(id=kwargs['pk']), many=True, context={'request': request}).data
+                       })
