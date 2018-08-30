@@ -45,6 +45,28 @@ class Festival(BaseModel):
 		return self.link
 
 
+class GrievanceCell(BaseModel):
+        class Meta:
+                verbose_name_plural = 'Grievance Cell'
+        	ordering = ('-date', )
+
+	title = models.CharField(max_length=512)
+	file = models.FileField(upload_to='activities/grievance_cell/%Y/%m/%d', blank=True)
+	url = models.URLField(blank=True)
+	date = models.DateField()
+
+	def _title(self):
+		return self.title
+
+	def _file(self):
+		return self.file
+
+	def _url(self):
+		return self.url
+
+	def _date(self):
+		return self.date
+
 
 class SeminarEvent(BaseModel):
 

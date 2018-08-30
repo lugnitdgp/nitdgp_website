@@ -15,6 +15,11 @@ class FestivalViewSet(ListAPIView):
 	serializer_class = FestivalSerializer
 
 
+class GrievanceCellViewSet(ListAPIView):
+
+	queryset = GrievanceCell.objects.all()
+	serializer_class = GrievanceCellSerializer
+
 
 class SeminarEventViewSet(ListAPIView):
 

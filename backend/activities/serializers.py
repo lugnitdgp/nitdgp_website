@@ -16,6 +16,13 @@ class FestivalSerializer(serializers.ModelSerializer):
 		fields = ('name', 'link', 'image', 'description')
 
 
+class GrievanceCellSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = GrievanceCell
+		fields = ('title', 'file', 'url', 'date')
+
+
 class SeminarEventSerializer(serializers.ModelSerializer):
 
 	class Meta:
