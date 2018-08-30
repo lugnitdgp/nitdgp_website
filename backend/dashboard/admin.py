@@ -27,6 +27,7 @@ class ContactModelAdmin(admin.ModelAdmin):
 # Register your models here.
 
 
+admin.site.register(QuickLinks)
 admin.site.register(Section, SectionModelManager)
 admin.site.register(Tile, TileModelManager)
 admin.site.register(Carousel, CarouselModelAdmin)

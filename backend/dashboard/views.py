@@ -22,6 +22,23 @@ class DashboardViewSet(ListAPIView):
     permission_classes = (AllowAny, )
 
 
+class QuickLinksViewSet(ListAPIView):
+
+    queryset = QuickLinks.objects.all()
+    serializer_class = QuickLinksSerializer
+
+    def list(self, request, *args, **kwargs):
+        result = {}
+        for link in self.get_queryset():
+            group = link.category
+            if group in result:
+                result[group].append(QuickLinksSerializer(link, context={"request": request}).data)
+            else:
+                result[group] = [QuickLinksSerializer(link, context={"request": request}).data]
+        return Response({"groups": result})
+
+
+
 class CarouselViewSet(ListAPIView):
 
     queryset = Carousel.objects.all().order_by('-updated_at')

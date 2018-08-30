@@ -2,6 +2,12 @@ from rest_framework import serializers
 from dashboard.models import *
 
 
+class QuickLinksSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuickLinks
+        fields = ('title', 'file', 'link', 'category')
+
+
 class TileSerializer(serializers.ModelSerializer):
 
     class Meta:

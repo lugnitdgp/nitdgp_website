@@ -7,6 +7,22 @@ def next_count_section():
     return Section.objects.count()+1
 
 
+class QuickLinks(BaseModel):
+    CHOICES = (
+        ('General', 'General'),
+        ('Admission', 'Admission'),
+        ('Social Media', 'Social Media'),
+        ('National Portal', 'National Portal')
+    )
+    title = models.CharField(max_length=1024)
+    file = models.FileField(upload_to=rename_admission_file, blank=True)
+    link = models.URLField(blank=True)
+    category = models.CharField(max_length=64, choices=CHOICES, default='General')
+
+    def __str__(self):
+        return self.title
+
+
 class Section(BaseModel):
 
     name = models.CharField(max_length=100)
