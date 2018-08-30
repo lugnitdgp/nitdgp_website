@@ -34,6 +34,7 @@ import Hods from '@/components/administration/Hods'
 
 import Festivals from '@/components/activities/Festivals'
 import Alumni from '@/components/activities/Alumni'
+import GrievanceCell from '@/components/activities/GrievanceCell'
 import Placement from '@/components/activities/Placement'
 import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
@@ -299,7 +300,7 @@ export default new Router({
       component: Reports
     },
     {
-      path: '/e-prashasan',
+      path: '/eprashasan',
       name: 'Eprashasan',
       component: Eprashasan
     },
@@ -399,6 +400,11 @@ export default new Router({
       path: '/festivals',
       name: 'Festivals',
       component: Festivals
+    },
+    {
+      path: '/grievancecell',
+      name: 'GrievanceCell',
+      component: GrievanceCell
     },
 
     // This is meant to be at the last
