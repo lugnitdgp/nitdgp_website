@@ -6,6 +6,10 @@ class StudentClubModelAdmin(admin.ModelAdmin):
 	list_display = ['_name', '_description', '_link']
 
 
+class FestivalModelAdmin(admin.ModelAdmin):
+	list_display = ['_name', '_description', '_link']
+
+
 class SeminarEventModelAdmin(admin.ModelAdmin):
 	list_display = ['_title', '_file', '_url', '_date']
 
@@ -31,6 +35,7 @@ class VisitorModelAdmin(admin.ModelAdmin):
 
 
 admin.site.register(StudentClub, StudentClubModelAdmin)
+admin.site.register(Festival, FestivalModelAdmin)
 admin.site.register(SeminarEvent, SeminarEventModelAdmin)
 admin.site.register(Achievement, AchievementModelAdmin)
 admin.site.register(Research, ResearchModelAdmin)

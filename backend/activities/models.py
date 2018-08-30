@@ -24,6 +24,28 @@ class StudentClub(BaseModel):
 		return self.link
 
 
+class Festival(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'Festivals'
+		ordering = ('name', )
+
+	name = models.CharField(max_length=512)
+	image = models.ImageField(upload_to='activities/student_festivals/')
+	description = RichTextField()
+	link = models.URLField()
+
+	def _name(self):
+		return self.name
+
+	def _description(self):
+		return self.description
+
+	def _link(self):
+		return self.link
+
+
+
 class SeminarEvent(BaseModel):
 
 	class Meta:

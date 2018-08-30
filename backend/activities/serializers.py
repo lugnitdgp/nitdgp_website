@@ -9,6 +9,13 @@ class StudentClubSerializer(serializers.ModelSerializer):
 		fields = ('name', 'link', 'image', 'description')
 
 
+class FestivalSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Festival
+		fields = ('name', 'link', 'image', 'description')
+
+
 class SeminarEventSerializer(serializers.ModelSerializer):
 
 	class Meta:

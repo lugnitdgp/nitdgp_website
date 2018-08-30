@@ -9,6 +9,13 @@ class StudentViewSet(ListAPIView):
 	serializer_class = StudentClubSerializer
 
 
+class FestivalViewSet(ListAPIView):
+
+	queryset = Festival.objects.all()
+	serializer_class = FestivalSerializer
+
+
+
 class SeminarEventViewSet(ListAPIView):
 
 	queryset = SeminarEvent.objects.all()
