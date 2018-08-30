@@ -283,7 +283,7 @@ export default new Router({
       component: Guest
     },
     {
-      path: '/sac',
+      path: '/sa&sports',
       name: 'Sac',
       component: Sac
     },
