@@ -1,7 +1,26 @@
+import threading
 from django.db import models
+from django.core.mail import send_mail
 from base.models import BaseModel
 from ckeditor.fields import RichTextField
 from department.models import Faculty, Courses
+from django.core.mail import EmailMessage
+
+
+class EmailThread(threading.Thread):
+
+    def __init__(self, subject, html_content, recipient_list, sender):
+        self.subject = subject
+        self.recipient_list = recipient_list
+        self.html_content = html_content
+        self.sender = sender
+        threading.Thread.__init__(self)
+
+    def run(self):
+        msg = EmailMessage(self.subject, self.html_content, self.sender, self.recipient_list)
+        msg.content_subtype = 'html'
+        msg.send()
+
 
 class Teachings(BaseModel):
 
@@ -16,6 +35,10 @@ class Teachings(BaseModel):
 
     def _teachings(self):
         return self.teachings
+
+    def save(self):
+        EmailThread('subject', 'html_content', ['devanshgoenka97@gmail.com'], 'webmaster@nitdgp.ac.in').start()
+        super(Teachings, self).save()
 
 
 class AdministrativeResponsibility(BaseModel):
@@ -95,7 +118,7 @@ class Projects(BaseModel):
 
 def rename_students(instance, filename):
 
-    return 'faculty/{0}/students/{1}'.format(instance.faculty_id.name, filename)
+    return 'faculty/{0}/students/{1}'.format(instance.faculty.name, filename)
 
 
 class Students(BaseModel):
@@ -108,7 +131,7 @@ class Students(BaseModel):
     file = models.FileField(upload_to=rename_students)
 
     def __str__(self):
-        return self.faculty_id.name
+        return self.faculty.name
 
     def _title(self):
         return self.title

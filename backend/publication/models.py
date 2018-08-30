@@ -74,7 +74,7 @@ class Book(BaseModel):
 
 def rename_patents(instance, filename):
 
-    return 'faculty/{0}/Patents/{1}'.format(instance.faculty_id.name, filename)
+    return 'faculty/{0}/Patents/{1}'.format(instance.faculty.name, filename)
 
 
 class Patent(BaseModel):
@@ -87,7 +87,7 @@ class Patent(BaseModel):
     file = models.FileField(upload_to=rename_patents)
 
     def __str__(self):
-        return self.faculty_id.name
+        return self.faculty.name
 
     def _title(self):
         return self.title

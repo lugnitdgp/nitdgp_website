@@ -29,7 +29,7 @@ class StudentsModelAdmin(admin.ModelAdmin):
         return queryset.filter(faculty_id__name=request.user.get_full_name())
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        if db_field.name == 'faculty_id':
+        if db_field.name == 'faculty':
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
