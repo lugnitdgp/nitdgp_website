@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title="Student Clubs">
+    <card title="Festivals">
       <div class="carousel-inner person-list" role="listbox">
         <div class="carousel-item active">
           <div class="row">
@@ -53,7 +53,7 @@ export default {
     stripDesc: stripDesc
   },
   created () {
-    axios.get(genBackendURL("activities/student-clubs"))
+    axios.get(genBackendURL("activities/festivals"))
          .then(response => {
            this.clubs = response.data.results
            this.$emit('hideloader', true)

@@ -1,7 +1,7 @@
 <template>
   <header class="container-fluid">
     <!--Navbar-->
-<nav class="navbar navbar-expand-lg primary-color fixed-top" style="background-color: #001333!important;padding: 0px;padding-right:0px;">
+<nav class="navbar navbar-expand-lg primary-color fixed-top" style="background-color: #001333!important;padding: 0px;padding-right:0px;display:none;">
 
  <div class="container" style="margin: 0px;padding:0px!important;min-width: 100%">
   <div class="navbar-menu" style="margin-top: -50px;">
