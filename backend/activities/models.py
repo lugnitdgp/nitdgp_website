@@ -46,9 +46,9 @@ class Festival(BaseModel):
 
 
 class GrievanceCell(BaseModel):
-        class Meta:
-                verbose_name_plural = 'Grievance Cell'
-        	ordering = ('-date', )
+	class Meta:
+		verbose_name_plural = 'Grievance Cell'
+		ordering = ('-date', )
 
 	title = models.CharField(max_length=512)
 	file = models.FileField(upload_to='activities/grievance_cell/%Y/%m/%d', blank=True)
