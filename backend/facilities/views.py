@@ -38,7 +38,7 @@ class SACViewSet(ListAPIView):
 
 
 class HostelViewSet(ListAPIView):
-	queryset = Hostel.objects.all()
+	queryset = Hostel.objects.all().order_by('name')
 	serializer_class = HostelSerializer
 
 
