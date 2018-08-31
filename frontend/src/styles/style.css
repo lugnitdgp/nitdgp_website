@@ -105,6 +105,10 @@ font {
 .quick-links-container span{
   letter-spacing: 2px;
 }
+.quick-links-container a{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 /* unvisited link */
 .quick-links-container a:link {
     color: #ECEFF1;

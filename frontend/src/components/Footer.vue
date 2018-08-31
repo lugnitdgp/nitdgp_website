@@ -70,6 +70,7 @@ export default {
               {name: 'govlogo7', href:"https://data.gov.in/"},
               {name: 'govlogo8', href:"http://rti.gov.in/"}],
       links: [{name: "Quick Links", href: "/quicklinks"},
+              {name: "MHRD", href: "/mhrd"},
               {name: "Holidays", href: "/holidays"},
               {name: "Archives", href: "/archives"},
               {name: "Policies", href: "/policies"},
@@ -94,6 +95,7 @@ export default {
     position: absolute;
     width: 100%;
     min-height: 170px;
+    bottom: 0;
   }
   #footer-container > .container-fluid > .row:last-child {
     padding: 3px;

@@ -142,7 +142,7 @@ export default {
     position: absolute;top: 0;
   }
   .navbar .hm-btn{
-    position: absolute;top: 0;
+    position: absolute;bottom: 0;
   }
   .navbar .hm-btn i{
     color: white
