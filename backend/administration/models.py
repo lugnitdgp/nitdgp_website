@@ -35,7 +35,7 @@ class Warden(BaseModel):
     class Meta:
         ordering = ('-role', 'designation')
 
-    ROLE_TYPES = (('Chief Warden', 'Chief Warden'), ('Associate Chief Warden', 'Associate Chief Warden'), ('Warden', 'Warden'))
+    ROLE_TYPES = (('chief_warden', 'Chief Warden'), ('associate_chief_warden', 'Associate Chief Warden'), ('warden', 'Warden'))
     designation = models.CharField(max_length=512)
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     role = models.CharField(choices=ROLE_TYPES, max_length=100)
