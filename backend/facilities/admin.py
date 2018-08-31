@@ -16,11 +16,14 @@ class SACModelAdmin(admin.ModelAdmin):
 class HostelModelAdmin(admin.ModelAdmin):
     list_display = ['_name', ]
 
+class CenterModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file', '_link']
+
 class CIFModelAdmin(admin.ModelAdmin):
 	list_display = ['_equipment_name','_equipment_desc']
 
 
-admin.site.register(Centers)
+admin.site.register(Center, CenterModelAdmin)
 admin.site.register(Library, LibraryModelAdmin)
 admin.site.register(Resource, ResourceModelAdmin)
 admin.site.register(SAC,SACModelAdmin)

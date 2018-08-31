@@ -4,9 +4,10 @@ import collections
 
 
 class CentersSerializer(serializers.ModelSerializer):
-        class Meta:
-                model = Centers
-                fields = ('title', 'file', 'url', 'date')
+
+    class Meta:
+            model = Center
+            fields = ('title', 'file', 'url', 'date')
 
 
 class LibrarySerializer(serializers.ModelSerializer):

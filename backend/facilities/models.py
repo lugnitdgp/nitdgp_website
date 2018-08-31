@@ -3,16 +3,21 @@ from base.models import BaseModel
 from ckeditor.fields import RichTextField
 
 
-class Centers(BaseModel):
-    class Meta:
-        verbose_name_plural = 'Centers'
+class Center(BaseModel):
+
     title = models.CharField(max_length=1024)
-    file = models.FileField(upload_to='dashboard/quick_links/%Y/%m/%d', blank=True)
+    file = models.FileField(upload_to='dashboard/centers/%Y/%m/%d', blank=True)
     link = models.URLField(blank=True)
     date = models.DateField()
 
     def __str__(self):
         return self.title
+
+    def _file(self):
+        return self.file
+
+    def _link(self):
+        return self.link
 
 
 class Library(BaseModel):
