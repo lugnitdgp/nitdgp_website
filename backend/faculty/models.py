@@ -19,7 +19,7 @@ class EmailThread(threading.Thread):
     def run(self):
         msg = EmailMessage(self.subject, self.html_content, self.sender, self.recipient_list)
         msg.content_subtype = 'html'
-        msg.send()
+        msg.send(fail_silently=False)
 
 
 class Teachings(BaseModel):
@@ -37,7 +37,7 @@ class Teachings(BaseModel):
         return self.teachings
 
     def save(self):
-        EmailThread('subject', 'html_content', ['devanshgoenka97@gmail.com'], 'webmaster@nitdgp.ac.in').start()
+        #EmailThread('Teachings field added for ' + self.faculty.name, 'The following field was added : ' + self.teachings, ['devanshgoenka97@gmail.com'], 'webmaster@nitdgp.ac.in').start()
         super(Teachings, self).save()
 
 

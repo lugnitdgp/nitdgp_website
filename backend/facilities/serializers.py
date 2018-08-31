@@ -7,7 +7,7 @@ class CentersSerializer(serializers.ModelSerializer):
 
     class Meta:
             model = Center
-            fields = ('title', 'file', 'url', 'date')
+            fields = ('title', 'image', 'link', 'description')
 
 
 class LibrarySerializer(serializers.ModelSerializer):

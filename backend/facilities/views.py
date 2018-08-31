@@ -5,7 +5,7 @@ from facilities.models import *
 
 
 class CentersViewSet(ListAPIView):
-        queryset = Center.objects.all().order_by('date')
+        queryset = Center.objects.all().order_by('title')
         serializer_class = CentersSerializer
 
 

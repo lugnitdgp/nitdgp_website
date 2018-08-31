@@ -6,7 +6,6 @@ from ckeditor.widgets import CKEditorWidget
 class LibraryModelAdmin(admin.ModelAdmin):
     list_display = ['_home', '_about', '_contact_us']
 
-
 class ResourceModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_url', '_type']
 
@@ -17,7 +16,7 @@ class HostelModelAdmin(admin.ModelAdmin):
     list_display = ['_name', ]
 
 class CenterModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_file', '_link']
+    list_display = ['__str__', '_description', '_link']
 
 class CIFModelAdmin(admin.ModelAdmin):
 	list_display = ['_equipment_name','_equipment_desc']

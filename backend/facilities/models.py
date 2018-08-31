@@ -6,15 +6,15 @@ from ckeditor.fields import RichTextField
 class Center(BaseModel):
 
     title = models.CharField(max_length=1024)
-    file = models.FileField(upload_to='dashboard/centers/%Y/%m/%d', blank=True)
+    image = models.ImageField(upload_to='dashboard/centers/')
     link = models.URLField(blank=True)
-    date = models.DateField()
+    description = models.TextField()
 
     def __str__(self):
         return self.title
 
-    def _file(self):
-        return self.file
+    def _description(self):
+        return self.description
 
     def _link(self):
         return self.link
