@@ -204,7 +204,7 @@ export default {
     text-decoration: underline;margin: 0;font-weight: normal;color:white;padding-left: 2px;padding-right: 2px
   }
   .nav-_links{
-    position: absolute;bottom: 0;right: 0;font-size: 90%
+    position: absolute;bottom: 0;right: 0;font-size: 120%
   }
   .nav-_links a{
     color: white!important;
