@@ -92,7 +92,6 @@ export default {
 
 <style>
   footer {
-    position: absolute;
     width: 100%;
     min-height: 170px;
     bottom: 0;

@@ -24,9 +24,6 @@
 .hidemee{
   display: none!important
 }
-body {
-    top: 0px !important; 
-    }
 .goog-te-gadget-icon{
   display: none;
 }
@@ -48,9 +45,9 @@ html {
   min-height: 100%;
 }
 body {
+  min-height:100%; 
   font-weight: 400;
   background: #ECEFF1;
-  padding-bottom: 230px;
 }
 font {
   color: inherit!important;
@@ -63,11 +60,6 @@ font {
 }
 .div-inline-block {
   display: inline-block;
-}
-@media screen and (max-width: 500px)  {
-  body {
-    margin: 0 0 300px;
-  }
 }
 .list-gr a:hover span{
   color:#001333!important;
@@ -135,6 +127,7 @@ font {
   padding-bottom:10px;
 }
 .l0{ /*container*/
+  min-height: 300px;
   padding-top: 1em;
   padding-bottom: 0.1em;
   padding-right: 3%;
@@ -144,6 +137,7 @@ font {
   min-height: 350px!important;
 }
 .l1{
+  min-height: 750px;
   margin-top: 80px;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -157,7 +151,11 @@ font {
   padding-right: 20%;
   padding-left: 20%;
 }
+.l2-idep{
+  min-height: 750px;
+}
 .l1-dep{ /*container*/
+  min-height: 750px;
   margin-top: 80px;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -165,7 +163,7 @@ font {
   padding-left: 5%;
 }
 .l3-fac{
-  margin-top: 30px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%;
+  min-height: 750px;margin-top: 30px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%;
 }
 hr.style4 {
   border-top: medium double #ECEFF1;color: #ECEFF1;text-align: center;

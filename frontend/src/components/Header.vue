@@ -207,12 +207,13 @@ export default {
     position: absolute;bottom: 0;right: 0;font-size: 90%
   }
   .nav-_links a{
-    color: white;
+    color: white!important;
   }
-  .dropdown-menu a{
+  .dropdown-menu .dropdown-item{
     color:white!important;
   }
   .dropdown-menu a:hover{
-    background-color: #001333;
+    color: white!important;
+    background-color: #001388!important;
   }
 </style>
