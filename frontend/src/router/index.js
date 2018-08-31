@@ -10,6 +10,7 @@ import Policies from '@/components/Policies'
 import Webteam from '@/components/Webteam'
 import PageNotFound from '@/components/PageNotFound'
 import Contacts from '@/components/Contacts'
+import QuickLinks from '@/components/QuickLinks'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -393,7 +394,7 @@ export default new Router({
     // new added
     {
       path: '/alumni',
-      name: 'Contacts',
+      name: 'Alumni',
       component: Alumni
     },
     {
@@ -405,6 +406,11 @@ export default new Router({
       path: '/grievancecell',
       name: 'GrievanceCell',
       component: GrievanceCell
+    },
+    {
+      path: '/quicklinks',
+      name: 'QuickLinks',
+      component: QuickLinks
     },
 
     // This is meant to be at the last
