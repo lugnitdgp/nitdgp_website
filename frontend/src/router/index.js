@@ -72,7 +72,7 @@ import Moreinfo from '@/components/information/Moreinfo'
 import Careers from '@/components/information/Careers'
 import Tenders from '@/components/information/Tenders'
 import Chanakya from '@/components/information/Chanakya'
-
+import Icc from '@/components/information/Icc'
 
 Vue.use(Router)
 
@@ -360,6 +360,11 @@ export default new Router({
       path: '/chanakya',
       name: 'Chanakya',
       component: Chanakya
+    },
+    {
+      path: '/icc',
+      name: 'Icc',
+      component: Icc
     },
     {
       path: '/careers',
