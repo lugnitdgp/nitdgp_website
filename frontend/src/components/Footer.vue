@@ -3,9 +3,35 @@
     <div class="container" id="footer-container">
       <div class="container-fluid" align="center">
         <div class="row quick-links-row quick-links-container">
-          <a v-for="link in links" :href="link.href" class="container-fluid">
-            {{ link.name }}
-          </a>
+          <div v-for="link in links" class="container-fluid">
+            <div v-if="link.name == 'MHRD'">
+              <div class="modal fade" :id="'mhrdModal'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 style="color:black;" class="modal-title" id="mhrdModal">You are leaving www.nitdgp.ac.in</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" style="color:black;">
+                    Are you sure you want to go to {{link.name}}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Stay Here</button>
+                    <a :href="link.href" class="btn btn-danger">Go There</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <a href="#" data-toggle="modal" :data-target="'#mhrdModal'" class="container-fluid logo-container">
+                {{link.name}}
+              </a>
+            </div>
+            <div v-else>
+              <a :href="link.href">{{ link.name }}</a>
+            </div>
+          </div>
         </div>
         <div class="row">
           <div v-for="(logo, index) in logos" class="modal fade" :id="'basicExampleModal'+index" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -1,48 +1,46 @@
 <template>
-  <links-page>
-    <card v-for="(links, title, i) in categories" :title="title" :key="i">
-      <ul class="list-group list-gr">
-        <li v-for="(link, j) in links" :key="j">
-          <a v-if="typeof link.file != 'undefined'" class="list-group-item" target="new" :href="link.file">
-            {{ link.title }}
-          </a>
-          <a v-if="typeof link.url != 'undefined'" class="list-group-item" target="new" :href="link.url">
-            {{ link.title }}
-          </a>
-        </li>
-      </ul>
-    </card>
-  </links-page>
+  <div class="l1 page-type-links">
+    <!-- CONTENT -->
+    <div class="card">
+      <a class="card-header white-text">Quick Links</a>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h3>Admissions</h3>
+            <ul>
+              <li><a href="/admission">DASA</a></li>
+              <li><a href="/admission">ICCR</a></li>
+              <li><a href="/admission">MEA</a></li>
+              <li><a href="/admission">GATE</a></li>
+              <li><a href="/admission">JEE Main</a></li>
+              <li><a href="/admission">JAM</a></li>
+              <li><a href="/admission">PhD</a></li>
+              <li><a href="/admission">MBA</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Others</h3>
+            <ul>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
-
 <script>
-import axios from 'axios'
-
-import LinksPage from '@/components/LinksPage'
-import Card from '@/components/Card'
-
-import { genBackendURL } from '@/common.js'
-
 export default {
-  name: "QuickLinks",
-  data () {
-    return {
-      categories: {}
-    }
-  },
-  created: function () {
-    axios.get(genBackendURL('dashboard/quick-links'))
-         .then(response => {
-           this.categories = response.data.groups
-           this.$emit('hideloader', true)
-         })
-         .catch(e => {
-           console.log("Axios(GET[admission]): Error: " + e)
-         })
-  },
-  components: {
-    LinksPage,
-    Card
+  name: 'QuickLinks',
+  created () {
+    this.$emit('hideloader', true)
   }
 }
 </script>
+<style scoped>
+ul {
+  text-decoration: none;
+}
+</style>
