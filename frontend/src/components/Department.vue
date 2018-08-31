@@ -388,7 +388,7 @@ export default {
 
 <style>
   .l2-idep {
-    margin-top: 50px;
+    margin-top: 20px;
   }
   @media screen and (max-width: 600px){
     .l2-idep .tab-content{

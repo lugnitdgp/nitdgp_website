@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-top: 80px;">
+  <div style="margin-top: 80px">
     <div class="row newscaro">
       <div v-if="(windowWidth > 1000)" class="col-8 caro">
         <Carousel :slides="slides"></Carousel>
@@ -17,10 +17,10 @@
             <sp-card-collapse bodyclass="text-center" show="false"
               :containerclass="'card-' + section.priority">
               <p slot="header" class="tile-title-text">
-                <span style="float: left; width:80%; text-align:left">
+                <span>
                   {{ section.section_name }}
                 </span>
-                <i style="float:right; width:20%; text-align:right; margin-top:-10px" class="fa fa-chevron-down" aria-hidden="true"></i>
+                <i style="float:right; text-align:right; margin-top:-10px" class="fa fa-chevron-down" aria-hidden="true"></i>
               </p>
               <div v-for="tile_row in section.contents" class="row">
                 <small-tile v-for="tile in tile_row"
