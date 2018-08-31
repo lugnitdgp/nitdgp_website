@@ -32,6 +32,7 @@ import Bwcifc from '@/components/administration/Bwcifc'
 import Senate from '@/components/administration/Senate'
 import Deans from '@/components/administration/Deans'
 import Hods from '@/components/administration/Hods'
+import Wardens from '@/components/administration/Wardens'
 
 import Festivals from '@/components/activities/Festivals'
 import Alumni from '@/components/activities/Alumni'
@@ -145,7 +146,7 @@ export default new Router({
 
     // Administration
     {
-      path: 'w/visitor',
+      path: '/visitor',
       name: 'Visitor',
       component: Visitor
     },
@@ -193,6 +194,11 @@ export default new Router({
       path: '/heads',
       name: 'Hods',
       component: Hods
+    },
+    {
+      path: '/wardens',
+      name: 'Wardens',
+      component: Wardens
     },
 
     // Activities
