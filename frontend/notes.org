@@ -1,0 +1,13 @@
+* Sources
+** Full page div
+[[https://stackoverflow.com/questions/3250790/making-a-div-that-covers-the-entire-page#3250861][Div that covers entire page - Stack Overflow]]
+** CSS Animation
+[[https://webdesignerhut.com/css-animation-basics-creating-a-css-loader/][Animating with CSS - Web Desginer Hut]]
+[[https://jsfiddle.net/rta7bomt/13/][Practice CSS animation - JS Fiddle]]
+** SEO with vue
+[[https://alligator.io/vuejs/vue-seo-tips/][Vue JS SEO - alligator.io]]
+** Routing in vue
+[[https://stackoverflow.com/questions/34623833/how-to-remove-hashbang-from-url#34624803][Remove hash from url - Stack Exchange]]
+** Events in Vue JS
+[[https://stackoverflow.com/questions/44088646/passing-data-from-child-to-parent-component-in-vue#44088668][Passing data from child component to parent component - Stack Overflow]]
+[[https://vuejs.org/v2/guide/components-custom-events.html][Custom Events - Official Vue Js Documentation]]

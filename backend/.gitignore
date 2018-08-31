@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+.DS_Store
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.idea/
+include/
+pip-selfcheck.json
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Translations
+*.mo
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+# Custom
+*.sqlite3
+.env
+
+# Migrations
+migrations/
+
+# Fixtures
+fixtures/
+
+# Files folder
+
+files/
+
+# Backup files
+*~
+\#*
+static/
+Pipfile.lock
