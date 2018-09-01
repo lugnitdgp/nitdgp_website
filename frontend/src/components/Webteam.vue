@@ -50,7 +50,7 @@ export default {
 					},
 					{
 						name: "Devansh Goenka",
-						image: "",
+						image: "static/img/devansh_goenka.jpeg",
 						github_id: "devanshgoenka97"
 					},
 					{
