@@ -17,8 +17,6 @@
             <img :src="faculty[0].image" style="max-width: 100%; max-height: 100%">
             <p style="font-weight: bold">{{ faculty[0].name }}</p>
             <p>{{ faculty[0].designation }}</p>
-            <i class="fa fa-mortar-board"></i><br>
-            <span v-html="faculty[0].education" style="font-size: 80%"/>
             <p style="font-size: 80%">
               <strong v-if="faculty[0].joining_year==1959" >Joined in N/A<br></strong>
               <strong v-if="faculty[0].joining_year!=1959" >Joined in {{ faculty[0].joining_year }}<br></strong>
@@ -157,7 +155,7 @@
             <a class="dropdown-item" :class="{ 'disabled': !('awards_and_recognition' in faculty[0]) }" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
             <a class="dropdown-item" :class="{ 'disabled': !('administrative_responsibilities' in faculty[0]) }" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
             <a class="dropdown-item" data-toggle="list" href="#li10" role="tab">Contact</a>
-            <a class="dropdown-item" :href="genBackendURL('admin')" role="tab">Faculty Login</a>
+            <a class="dropdown-item" :href="genBackendURL('admin')" target="new" role="tab">Faculty Login</a>
           </div>
           <div v-show="nav" id="fade" class="black_overlay"></div>
         </div>
