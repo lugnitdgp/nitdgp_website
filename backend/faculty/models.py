@@ -39,7 +39,7 @@ class Teachings(BaseModel):
     def save(self):
         EmailThread('Profile Update for ' + self.faculty.name,
         'The following information was added/modified in your profile:<br> <b>Teachings</b> on <b>' +
-        self.updated_at.strftime("%d/%m/%Y %H:%M %p") + '</b><br>' + self.teachings, ['devanshgoenka97@gmail.com'],
+        self.updated_at.strftime("%d/%m/%Y %H:%M %p") + '</b><br><br>' + self.teachings, ['devanshgoenka97@gmail.com'],
         'NITDGP Admin <webmaster@nitdgp.ac.in>').start()
         super(Teachings, self).save()
 
@@ -130,14 +130,16 @@ class Students(BaseModel):
         verbose_name_plural = 'Students under Faculty'
 
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    title = models.CharField(max_length=512)
-    file = models.FileField(upload_to=rename_students)
+    name = models.CharField(max_length=512)
+    image = models.ImageField(upload_to=rename_students)
+    degree = models.CharField(max_length=512)
+    description = models.TextField()
 
     def __str__(self):
         return self.faculty.name
 
-    def _title(self):
-        return self.title
+    def _name(self):
+        return self.name
 
-    def _file(self):
-        return self.file
+    def _degree(self):
+        return self.degree

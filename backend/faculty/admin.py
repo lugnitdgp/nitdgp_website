@@ -4,7 +4,7 @@ from department.models import Faculty
 
 
 class StudentsModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_title', '_file']
+    list_display = ['__str__', '_name', '_degree']
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:

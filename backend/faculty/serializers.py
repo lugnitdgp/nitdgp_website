@@ -94,4 +94,4 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Students
-        fields = ('title', 'file')
+        fields = ('name', 'image', 'degree', 'description')
