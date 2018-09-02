@@ -16,7 +16,7 @@ class BookModelAdmin(admin.ModelAdmin):
         queryset = super(BookModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return queryset
-        return queryset.filter(faculty_id__name=request.user.get_full_name())
+        return queryset.filter(faculty__name=request.user.get_full_name())
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'faculty_id':
@@ -41,10 +41,10 @@ class JournalModelAdmin(admin.ModelAdmin):
         queryset = super(JournalModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
              return queryset
-        return queryset.filter(faculty_id__name=request.user.get_full_name())
+        return queryset.filter(faculty__name=request.user.get_full_name())
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        if db_field.name == 'faculty_id':
+        if db_field.name == 'faculty':
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
@@ -66,10 +66,10 @@ class ConferenceModelAdmin(admin.ModelAdmin):
         queryset = super(ConferenceModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
              return queryset
-        return queryset.filter(faculty_id__name=request.user.get_full_name())
+        return queryset.filter(faculty__name=request.user.get_full_name())
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        if db_field.name == 'faculty_id':
+        if db_field.name == 'faculty':
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
@@ -91,7 +91,7 @@ class PatentModelAdmin(admin.ModelAdmin):
         queryset = super(PatentModelAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return queryset
-        return queryset.filter(faculty_id__name=request.user.get_full_name())
+        return queryset.filter(faculty__name=request.user.get_full_name())
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == 'faculty':

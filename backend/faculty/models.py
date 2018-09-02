@@ -37,7 +37,10 @@ class Teachings(BaseModel):
         return self.teachings
 
     def save(self):
-        #EmailThread('Teachings field added for ' + self.faculty.name, 'The following field was added : ' + self.teachings, ['devanshgoenka97@gmail.com'], 'webmaster@nitdgp.ac.in').start()
+        EmailThread('Profile Update for ' + self.faculty.name,
+        'The following information was added/modified in your profile:<br> <b>Teachings</b> on <b>' +
+        self.updated_at.strftime("%d/%m/%Y %H:%M %p") + '</b><br>' + self.teachings, ['devanshgoenka97@gmail.com'],
+        'NITDGP Admin <webmaster@nitdgp.ac.in>').start()
         super(Teachings, self).save()
 
 
