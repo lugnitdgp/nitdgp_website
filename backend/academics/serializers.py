@@ -35,7 +35,7 @@ class AdmissionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Admission
-        fields = ('title', 'file')
+        fields = ('title', 'file', 'link')
 
 
 class AdmissionProgrammeSerializer(serializers.ModelSerializer):

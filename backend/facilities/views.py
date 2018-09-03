@@ -8,6 +8,10 @@ class CentersViewSet(ListAPIView):
         queryset = Center.objects.all().order_by('title')
         serializer_class = CentersSerializer
 
+        def list(self, request, *args, **kwargs):
+            return Response({"centers": CentersSerializer(self.get_queryset(), many=True, context={"request": request}).data
+            })
+
 
 class LibraryViewSet(ListAPIView):
 

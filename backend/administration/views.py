@@ -66,6 +66,10 @@ class SenateViewSet(ListAPIView):
      queryset = Senate.objects.all()
      serializer_class = SenateSerializer
 
+     def list(self, request, *args, **kwargs):
+         return Response({"results": SenateSerializer(self.get_queryset(), many=True, context={"request": request}).data
+         })
+
 
 class BogAgendaViewSet(ListAPIView):
 
