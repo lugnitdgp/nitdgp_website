@@ -7,7 +7,10 @@
             <h4>{{ programme.name }}</h4>
             <ul class="list-group list-gr">
               <li v-for="doc in programme.documents">
-                <a class="list-group-item" target="new" :href="doc.file">
+                <a v-if="doc.file" class="list-group-item" target="new" :href="doc.file">
+                  {{ doc.title }}
+                </a>
+                <a v-else class="list-group-item" target="new" :href="doc.link">
                   {{ doc.title }}
                 </a>
               </li>
