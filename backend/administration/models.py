@@ -6,7 +6,7 @@ from department.models import Faculty
 class Dean(BaseModel):
 
     class Meta:
-        ordering = ('-role', '-seniority')
+        ordering = ('-role', 'seniority')
 
     ROLE_TYPES = (('Dean', 'Dean'), ('Associate Dean', 'Associate Dean'))
     designation = models.CharField(max_length=512)
