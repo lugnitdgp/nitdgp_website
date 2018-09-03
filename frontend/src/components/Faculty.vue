@@ -114,11 +114,20 @@
               <h3 class="pane-title" align="left">List of students</h3>
               <hr>
               <div v-if="'students' in faculty[0]">
-                <ul>
-                  <li v-for="student in faculty[0].students">
-                    <a :href="student.file" target="new">{{student.title}}</a>
-                  </li>
-                </ul>
+                <div class="carousel-inner person-list" role="listbox">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col staffs" v-for="student in faculty[0].students">
+                        <card-testimonial
+                          :name="student.name"
+                          :image="student.image"
+                          :desig="student.degree">
+                          {{student.description}}
+                        </card-testimonial>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
@@ -169,6 +178,7 @@ import { genBackendURL } from '@/common.js'
 import TableRenderer from '@/components/TableRenderer'
 import CardCollapse from '@/components/CardCollapse'
 import SpCard from '@/components/SpCard'
+import CardTestimonial from '@/components/CardTestimonial'
 
 export default {
   name: 'Faculty',
@@ -262,7 +272,8 @@ export default {
   components: {
     TableRenderer,
     CardCollapse,
-    SpCard
+    SpCard,
+    CardTestimonial
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.updateWidth);
