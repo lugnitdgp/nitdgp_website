@@ -8,14 +8,14 @@
         <Newsfeed :notices="notices"></Newsfeed>
       </div>
     </div>
-    <div class="l0">
+    <div class="l0 brow">
       <div class="all-tiles">
         <!-- Big row of sections -->
-        <div v-for="row in results" class="row big-row">
+        <div v-for="(row,row_index) in results" class="row big-row">
           <!-- A section -->
           <div v-for="section in row" class="col big-col">
-            <sp-card-collapse bodyclass="text-center" show="false"
-              :containerclass="'card-' + section.priority">
+            <sp-card-collapse :bodyclass="'text-center click-bait-'+row_index" show="false"
+              :containerclass="'card-' + section.priority" :row_index="row_index">
               <p slot="header" class="tile-title-text">
                 <span>
                   {{ section.section_name }}
@@ -36,6 +36,34 @@
       </div>
       <!-- End of big row of sections -->
     </div>
+    <div class="l0 mobi">
+      <div class="all-tiles">
+        <!-- Big row of sections -->
+        <div v-for="row in results" class="row big-row">
+          <!-- A section -->
+          <div v-for="section in row" class="col big-col">
+            <sp-card-collapse2 bodyclass="text-center" show="false"
+              :containerclass="'card-' + section.priority">
+              <p slot="header" class="tile-title-text">
+                <span>
+                  {{ section.section_name }}
+                </span>
+                <i style="float:right; text-align:right; margin-top:-10px" class="fa fa-chevron-down" aria-hidden="true"></i>
+              </p>
+              <div v-for="tile_row in section.contents" class="row">
+                <small-tile v-for="tile in tile_row"
+                  :icon="tile.icon"
+                  :desc="tile.name"
+                  :link="link(tile,section.section_name)"
+                  :key="tile.name" />
+              </div>
+            </sp-card-collapse2>
+          </div>
+        </div>
+        <!-- End of a section -->
+      </div>
+      <!-- End of big row of sections -->
+    </div>
     
   </div>
 </template>
@@ -47,6 +75,7 @@ import Carousel from './Carousel'
 import Newsfeed from './Newsfeed'
 import SmallTile from './SmallTile'
 import SpCardCollapse from './SpCardCollapse'
+import SpCardCollapse2 from './SpCardCollapse2'
 
 export default {
   name: 'Home',
@@ -54,7 +83,8 @@ export default {
     Carousel,
     Newsfeed,
     SmallTile,
-    SpCardCollapse
+    SpCardCollapse,
+    SpCardCollapse2
   },
   data () {
     return {
@@ -168,4 +198,18 @@ export default {
 </script>
 
 <style scoped>
+
+.mobi {
+  display: none;
+}
+
+@media screen and (max-width: 1010px)  {
+  .brow {
+    display: none;
+  }
+  .mobi {
+    display: block !important;
+  }
+  
+}
 </style>
