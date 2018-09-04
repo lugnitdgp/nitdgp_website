@@ -47,7 +47,7 @@ import EventVisitors from '@/components/activities/EventVisitors'
 
 import Library from '@/components/facilities/Library'
 import Mu from '@/components/facilities/Mu'
-import Ceam from '@/components/facilities/Ceam'
+import Coe from '@/components/facilities/Coe'
 import Cif from '@/components/facilities/Cif'
 import Hostels from '@/components/facilities/Hostels'
 import Po from '@/components/facilities/Po'
@@ -276,8 +276,8 @@ export default new Router({
     },
     {
       path: '/coe',
-      name: 'Ceam',
-      component: Ceam
+      name: 'Coe',
+      component: Coe
     },
     {
       path: '/cif',
