@@ -36,7 +36,6 @@ import Wardens from '@/components/administration/Wardens'
 
 import Festivals from '@/components/activities/Festivals'
 import Alumni from '@/components/activities/Alumni'
-import GrievanceCell from '@/components/activities/GrievanceCell'
 import Placement from '@/components/activities/Placement'
 import Outreach from '@/components/activities/Outreach'
 import Research from '@/components/activities/Research'
@@ -56,7 +55,7 @@ import Guest from '@/components/facilities/Guest'
 import Sac from '@/components/facilities/Sac'
 import Hvl from '@/components/facilities/Hvl'
 import Canteen from '@/components/facilities/Canteen'
-import Cc from '@/components/facilities/Cc'
+import Centers from '@/components/facilities/Centers'
 
 import Reports from '@/components/information/Reports'
 import Eprashasan from '@/components/information/Eprashasan'
@@ -65,7 +64,6 @@ import Teqip from '@/components/information/Teqip'
 import Nba from '@/components/information/Nba'
 import Nirf from '@/components/information/Nirf'
 import Rti from '@/components/information/Rti'
-import Grievances from '@/components/information/Grievances'
 import History from '@/components/information/History'
 import Location from '@/components/information/Location'
 import Moreinfo from '@/components/information/Moreinfo'
@@ -73,6 +71,7 @@ import Careers from '@/components/information/Careers'
 import Tenders from '@/components/information/Tenders'
 import Chanakya from '@/components/information/Chanakya'
 import Icc from '@/components/information/Icc'
+import Pgcell from '@/components/information/Pgcell'
 
 Vue.use(Router)
 
@@ -265,9 +264,9 @@ export default new Router({
       component: Banks
     },
     {
-      path: '/computercenter',
-      name: 'Cc',
-      component: Cc
+     path: '/centers',
+      name: 'Centers',
+      component: Centers
     },
     {
       path: '/medicalunit',
@@ -327,6 +326,11 @@ export default new Router({
       component: Nba
     },
     {
+      path: '/pgcell',
+      name: 'Pgcell',
+      component: Pgcell
+    },
+    {
       path: '/nirf',
       name: 'Nirf',
       component: Nirf
@@ -335,11 +339,6 @@ export default new Router({
       path: '/rti',
       name: 'Rti',
       component: Rti
-    },
-    {
-      path: '/publicgrievances',
-      name: 'Grievances',
-      component: Grievances
     },
     {
       path: '/history',
@@ -412,11 +411,6 @@ export default new Router({
       path: '/festivals',
       name: 'Festivals',
       component: Festivals
-    },
-    {
-      path: '/grievancecell',
-      name: 'GrievanceCell',
-      component: GrievanceCell
     },
     {
       path: '/quicklinks',

@@ -1,51 +1,24 @@
 <template>
-  <links-page>
-    <card title="Centers of Excellence">
-      <div class="carousel-inner person-list" role="listbox">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col" v-for="center in centers">
-              <card-testimonial :name="center.title" :image="center.image">
-                <a :href="center.link">
-                  <span v-html="center.description"></span>
-                </a>
-              </card-testimonial>
-            </div>
-          </div>
+  <div class="l1 page-type-links">
+    <!-- CONTENT -->
+    <div class="card">
+      <a class="card-header white-text">Centre of Excellence in Advanced Materials</a>
+      <div class="card-body">
+        <div class="card-text">
+          <ul>
+            <li><a target="new" href="http://nitdgp.ac.in/all_pdf17/Centre%20of%20Excellence%20in%20Advanced%20Materials-home.pdf">CEAM home</a></li>
+            <li><a target="new" href="http://nitdgp.ac.in/research/coe/images/coe.doc">CEAM Doc</a></li>
+          </ul>
         </div>
       </div>
-    </card>
-  </links-page>
+    </div>
+  </div>
 </template>
-
 <script>
-import axios from 'axios'
-import LinksPage from '@/components/LinksPage'
-import Card from '@/components/Card'
-import CardTestimonial from '@/components/CardTestimonial'
-import { range, genBackendURL } from '@/common.js'
-
 export default {
-  name: 'Coe',
-  data () {
-    return {
-      centers: {}
-    }
-  },
+  name: 'Ceam',
   created () {
-    axios.get(genBackendURL("facilities/centers"))
-         .then(response => {
-           this.centers = response.data.centers
-           this.$emit('hideloader', true)
-         })
-         .catch(e => {
-           console.log(e)
-         })
-  },
-  components: {
-    LinksPage,
-    Card,
-    CardTestimonial
+    this.$emit('hideloader', true)
   }
 }
 </script>
