@@ -1,11 +1,7 @@
 <template>
   <links-page>
     <card title="Senate">
-      <ul class="list-group list-gr">
-        <li v-for="meeting in meetings">
-          <a class="list-group-item" :href="meeting.file">{{ meeting.title }}</a>
-        </li>
-      </ul>
+      <notice-list :noticelist="meetings" />
     </card>
   </links-page>
 </template>
@@ -14,13 +10,15 @@
 import axios from 'axios'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
+import NoticeList from '@/components/NoticeList'
 import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Senate",
   data () {
     return {
-      meetings: {}
+      meetings: [],
+      paginate: ['meetings'],
     }
   },
   created () {
@@ -35,7 +33,8 @@ export default {
   },
   components: {
     LinksPage,
-    Card
+    Card,
+    NoticeList
   }
 }
 </script>
