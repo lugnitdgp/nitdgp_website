@@ -19,7 +19,7 @@
             <p>{{ faculty.designation }}</p>
             <p style="font-size: 80%">
               <strong v-if="faculty.joining_year==1959" >Joined in N/A<br></strong>
-              <strong v-if="faculty.joining_year!=1959" >Joined in {{ faculty.joining_year }}<br></strong>
+              <strong v-if="faculty.joining_year!=1959" >Joined in {{ joining_year }}<br></strong>
               <i class="fa fa-envelope"></i><br>
               {{ faculty.email }}
             </p>
@@ -146,7 +146,7 @@
             <div class="tab-pane fade big-list" id="li10" role="tabpanel">
               <h3 class="pane-title" align="left">Contact</h3>
               <hr>
-              <span>Mobile : +91-{{faculty.mobile}}<br/>
+              <span>Mobile : +91-{{mobile}}<br/>
                     Email : {{faculty.email}}<br/>
               </span>
             </div>
@@ -185,6 +185,8 @@ export default {
   data () {
     return {
       faculty: {},
+      mobile: 0,
+      joining_year: "",
       general: true,
       windowWidth: 1000,
       extraNavClasses: [],
@@ -197,7 +199,8 @@ export default {
     axios.get(genBackendURL("faculty/" + this.$route.params.id))
          .then(response => {
            this.faculty = response.data.faculty[0]
-           console.log(this.faculty.mobile)
+           this.mobile = this.faculty.mobile
+           this.joining_year = this.faculty.joining_year
            for (var key in this.faculty) {
              if (this.faculty.hasOwnProperty(key) &&
                  Object.keys(this.faculty[key]).length === 0) {
