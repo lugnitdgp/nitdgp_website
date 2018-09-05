@@ -43,6 +43,7 @@ import Events from '@/components/activities/Events'
 import Achievements from '@/components/activities/Achievements'
 import Clubs from '@/components/activities/Clubs'
 import EventVisitors from '@/components/activities/EventVisitors'
+import GrievanceCell from '@/components/activities/GrievanceCell'
 
 import Library from '@/components/facilities/Library'
 import Mu from '@/components/facilities/Mu'
@@ -220,6 +221,11 @@ export default new Router({
       path: '/events',
       name: 'Events',
       component: Events
+    },
+    {
+      path: '/grievancecell',
+      name: 'GrievanceCell',
+      component: GrievanceCell
     },
     {
       path: '/eventvisitors',
