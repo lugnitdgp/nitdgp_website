@@ -166,10 +166,10 @@
             <a class="dropdown-item" data-toggle="list" href="#li10" role="tab">Contact</a>
             <a class="dropdown-item" :href="genBackendURL('admin')" target="new" role="tab">Faculty Login</a>
           </div>
-          <div v-show="nav" id="fade" class="black_overlay"></div>
         </div>
       </div>
     </sp-card>
+    <div v-show="nav" id="fade" class="black_overlay"></div>
   </div>
 </template>
 <script>
