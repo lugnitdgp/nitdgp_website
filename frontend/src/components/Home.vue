@@ -14,7 +14,7 @@
         <div v-for="(row,row_index) in results" class="row big-row">
           <!-- A section -->
           <div v-for="section in row" class="col big-col">
-            <sp-card-collapse :bodyclass="'text-center click-bait-'+row_index" show="false"
+            <sp-card-collapse bodyclass="text-center" :show="false"
               :containerclass="'card-' + section.priority" :row_index="row_index">
               <p slot="header" class="tile-title-text">
                 <span>
@@ -64,7 +64,6 @@
       </div>
       <!-- End of big row of sections -->
     </div>
-    
   </div>
 </template>
 
@@ -210,6 +209,5 @@ export default {
   .mobi {
     display: block !important;
   }
-  
 }
 </style>
