@@ -2,7 +2,7 @@
   <div class="l2-idep">
     <sp-card v-if="dept" containerclass="l2-card" bodyclass="text-center">
       <p slot="header" class="tile-title-text">
-        Department of {{ dept.short_code }}
+        <a href="/departments" class="white-text">Department of {{ dept.short_code }}</a>
       </p>
       <div class="tabs-wrapper up-content mx-auto">
         <ul class="nav classic-tabs" role="tablist">
