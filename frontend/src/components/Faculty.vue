@@ -164,7 +164,7 @@
             <a class="dropdown-item" :class="{ 'disabled': !('awards_and_recognition' in faculty) }" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
             <a class="dropdown-item" :class="{ 'disabled': !('administrative_responsibilities' in faculty) }" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
             <a class="dropdown-item" data-toggle="list" href="#li10" role="tab">Contact</a>
-            <a class="dropdown-item" :href="genBackendURL('admin')" target="new" role="tab">Faculty Login</a>
+            <a class="dropdown-item faculty-login" :href="genBackendURL('admin')" target="new" role="tab">Faculty Login</a>
           </div>
         </div>
       </div>
@@ -282,53 +282,59 @@ export default {
 </script>
 
 <style scoped>
-    .list-group a, .list-group a:hover {
-      white-space: pre-wrap;
-    }
-    .dropdown-item:hover{
-      background-color: #001333!important;
-      color: #fff!important;
-    }
-    .photo {
-      text-align: center;
-    }
-    .downc {
-      margin: 0 auto;
-      padding: 10px;
-    }
+  .list-group a, .list-group a:hover {
+    white-space: pre-wrap;
+  }
+  .dropdown-item:hover{
+    background-color: #001333!important;
+    color: #fff!important;
+  }
+  .photo {
+    text-align: center;
+  }
+  .downc {
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .btn {
+    background: #001333;
+    width: 50px;
+    padding: 10px;
+    float: right;
+    margin-left: auto;
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: 909px) {
     .btn {
-      background: #001333;
-      width: 50px;
-      padding: 10px;
-      float: right;
-      margin-left: auto;
-      margin-bottom: 0px;
+      display: none;
+      height: 0px;
     }
-    @media screen and (min-width: 909px) {
-      .btn {
-        display: none;
-        height: 0px;
-      }
-    }
-    .lift {
-      position: absolute;
-      left: 10%;
-      width: 80%;
-      background-color: white;
-      z-index: 2;
-      overflow: auto;
-    }
-    .black_overlay {
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      bottom: 0%;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background-color: black;
-      -moz-opacity: 0.8;
-      opacity: .80;
-      filter: alpha(opacity=80);
-    }
+  }
+  .lift {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+    z-index: 2;
+    overflow: auto;
+  }
+  .black_overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+  }
+  .dropdown-item.faculty-login {
+    background-color: #8f8;
+  }
+  .dropdown-item.faculty-login:hover {
+    background-color: #0f0!important;
+  }
 </style>
