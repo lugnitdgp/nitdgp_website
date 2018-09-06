@@ -41,7 +41,7 @@ class QuickLinksViewSet(ListAPIView):
 
 class CarouselViewSet(ListAPIView):
 
-    queryset = Carousel.objects.all().order_by('-created_at')
+    queryset = Carousel.objects.all().order_by('created_at')
     serializer_class = CarouselSerializer
 
 
