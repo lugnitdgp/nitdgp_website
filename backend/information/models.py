@@ -164,7 +164,8 @@ class More(BaseModel):
         verbose_name_plural = 'More Information'
 
     title = models.CharField(max_length=255)
-    file = models.FileField(upload_to='information/more/%Y')
+    file = models.FileField(upload_to='information/more/%Y', blank=True)
+    link = models.URLField(blank=True)
     date = models.DateField()
 
     def __str__(self):

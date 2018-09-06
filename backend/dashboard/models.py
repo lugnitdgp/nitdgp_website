@@ -120,10 +120,14 @@ class Contact(BaseModel):
         verbose_name_plural = 'Contact Us'
 
     GROUPS = (('Director', 'Director'),
+              ('Director Office', 'Director Office'),
               ('Registrar', 'Registrar'),
+              ('Registrar Office', 'Registrar Office'),
               ('Library', 'Library'),
               ('Workshops', 'Workshops'),
               ('Medical Unit', 'Medical Unit'),
+              ('Pension Cell', 'Pension Cell'),
+              ('Guest House', 'Guest House'),
               ('Computer Center', 'Computer Center'),
               ('Training and Placement', 'Training and Placement'),
               ('Officers', 'Officers'))

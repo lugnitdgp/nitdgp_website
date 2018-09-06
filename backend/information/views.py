@@ -76,5 +76,5 @@ class OfficeNoticeViewSet(ListAPIView):
 
 class MoreViewSet(ListAPIView):
 
-    queryset = More.objects.all()
+    queryset = More.objects.all().order_by('-created_at')
     serializer_class = MoreSerializer
