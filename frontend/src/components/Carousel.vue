@@ -2,7 +2,7 @@
   <div class="card card-cascade narrower card-pic">
     <div class="card-body">
       <!-- Carousel Wrapper -->
-      <div id="carousel-home" class="carousel slide caro-wrap" data-ride="carousel" data-interval="16996000">
+      <div id="carousel-home" class="carousel slide caro-wrap" data-ride="carousel" data-interval="6000">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li v-for="(slide,index) in slides" data-target="#carousel-home" :data-slide-to="index" :class="{ active: (index == 0) }"></li>
