@@ -42,7 +42,7 @@ class RTISerializer(serializers.ModelSerializer):
 
     class Meta:
         model = RTI
-        fields = ('title', 'file', 'date')
+        fields = ('title', 'file', 'date', 'link')
 
 
 class NBASerializer(serializers.ModelSerializer):

@@ -95,7 +95,8 @@ class RTI(BaseModel):
         ordering = ('-created_at', )
 
     title = models.CharField(max_length=255)
-    file = models.FileField(upload_to='information/rti/%Y')
+    file = models.FileField(upload_to='information/rti/%Y', blank=True)
+    link = models.URLField()
     date = models.DateField()
 
     def __str__(self):

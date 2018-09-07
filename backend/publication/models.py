@@ -8,8 +8,8 @@ class Conference(BaseModel):
 
      faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
      citation = RichTextField()
-     location = models.TextField()
-     year = models.CharField(max_length=100)
+     location = models.TextField(blank=True)
+     year = models.CharField(max_length=100, blank=True)
 
      def __str__(self):
          return self.faculty.name
@@ -28,8 +28,8 @@ class Journal(BaseModel):
 
      faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
      citation = RichTextField()
-     journal = models.TextField()
-     year = models.CharField(max_length=100)
+     journal = models.TextField(blank=True)
+     year = models.CharField(max_length=100, blank=True)
 
      def __str__(self):
          return self.faculty.name
@@ -55,7 +55,7 @@ class Book(BaseModel):
         verbose_name_plural = 'Books and Book Chapters'
 
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    title = models.CharField(max_length=512)
+    title = RichTextField()
     file = models.FileField(upload_to=rename_book, blank=True)
     url = models.URLField(blank=True)
 
@@ -83,8 +83,8 @@ class Patent(BaseModel):
         verbose_name_plural = 'Patents'
 
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-    title = models.CharField(max_length=512)
-    file = models.FileField(upload_to=rename_patents)
+    title = RichTextField()
+    file = models.FileField(upload_to=rename_patents, blank=True)
 
     def __str__(self):
         return self.faculty.name
