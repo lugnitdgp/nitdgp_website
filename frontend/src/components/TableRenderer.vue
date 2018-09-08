@@ -31,3 +31,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+td {
+  font-weight: normal !important;
+}
+</style>
+

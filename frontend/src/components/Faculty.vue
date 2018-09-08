@@ -15,7 +15,7 @@
         <div class="row">
           <div class="photo" :class="getClassImg()">
             <img :src="faculty.image" style="max-width: 100%; max-height: 100%">
-            <p style="font-weight: bold">{{ faculty.name }}</p>
+            <h4><p style="font-weight: bold">{{ faculty.name }}</p></h4>
             <p>{{ faculty.designation }}</p>
             <p style="font-size: 80%">
               <strong v-if="faculty.joining_year==1959" >Joined in N/A<br></strong>
@@ -29,35 +29,35 @@
               <i class="fa fa-bars fa-2x"></i>
             </button>
             <div class="tab-pane fade show active big-list" id="li1" role="tabpanel">
-              <h3 class="pane-title" align="left">Education</h3>
+              <h4 class="pane-title" align="left">Education</h4>
               <hr>
               <span v-if="'education' in faculty" v-html="faculty.education"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
 
             <div class="tab-pane fade big-list" id="li2" role="tabpanel">
-              <h3 class="pane-title" align="left">Work Experiences</h3>
+              <h4 class="pane-title" align="left">Work Experiences</h4>
               <hr>
               <span v-if="'work_experience' in faculty" v-html="faculty.work_experience"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
 
             <div class="tab-pane fade big-list" id="li3" role="tabpanel">
-              <h3 class="pane-title" align="left">Research Interest</h3>
+              <h4 class="pane-title" align="left">Research Interest</h4>
               <hr>
               <span v-if="'research_interest' in faculty" v-html="faculty.research_interest"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
 
             <div class="tab-pane fade big-list" id="li4" role="tabpanel">
-              <h3 class="pane-title" align="left">Projects</h3>
+              <h4 class="pane-title" align="left">Projects</h4>
               <hr>
               <span v-if="'projects' in faculty" v-html="faculty.projects"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
 
             <div class="tab-pane fade big-list" id="li5" role="tabpanel">
-              <h3 class="pane-title" align="left">Publication</h3>
+              <h4 class="pane-title" align="left">Publication</h4>
               <hr>
               <ul class="nav md-pills nav-justified pills-secondary">
                 <li class="nav-item">
@@ -75,29 +75,35 @@
               </ul>
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="p5l1" role="tabpanel">
-                  <h3>Journals</h3>
+                  <h4>Journals</h4>
                   <table-renderer :table="faculty.journals" :theader="['Citation','Journal','Year']"></table-renderer>
                 </div>
                 <div class="tab-pane fade page-type-links" id="p5l2" role="tabpanel">
                   <ul class="list-group list-gr">
-                  <h3>Conferences</h3>
+                  <h4>Conferences</h4>
                   <table-renderer :table="faculty.conferences" :theader="['Citation','Location','Year']"></table-renderer>
                   </ul>
                 </div>
                 <div class="tab-pane fade in" id="p5l3" role="tabpanel">
-                  <h3>Books</h3>
+                  <h4>Books</h4>
                   <ul>
                     <li v-for="book in faculty.books" >
-                      <a v-if="book.file" :href="book.file" target="new">{{ book.title }}</a>
-                      <a v-else :href="book.url" target="new">{{ book.title }}</a>
+                      <a v-if="book.file" :href="book.file" target="new">
+                        <div v-html="book.title"></div>
+                      </a>
+                      <a v-else :href="book.url" target="new">
+                        <div v-html="book.title"></div>
+                      </a>
                     </li>
                   </ul>
                 </div>
                 <div class="tab-pane fade in" id="p5l4" role="tabpanel">
-                  <h3>Patents</h3>
+                  <h4>Patents</h4>
                     <ul>
                       <li v-for="patent in faculty.patents" >
-                        <a v-if="patent.file" :href="patent.file" target="new">{{ patent.title }}</a>
+                        <a v-if="patent.file" :href="patent.file" target="new">
+                          <div v-html="patent.title"></div>
+                        </a>
                       </li>
                     </ul>
                 </div>
@@ -105,13 +111,13 @@
             </div>
 
             <div class="tab-pane fade big-list" id="li6" role="tabpanel">
-              <h3 class="pane-title" align="left">Teachings</h3>
+              <h4 class="pane-title" align="left">Teachings</h4>
               <hr>
               <span v-if="'teachings' in faculty" v-html="faculty.teachings"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
             <div class="tab-pane fade big-list" id="li7" role="tabpanel">
-              <h3 class="pane-title" align="left">List of students</h3>
+              <h4 class="pane-title" align="left">List of students</h4>
               <hr>
               <div v-if="'students' in faculty">
                 <div class="carousel-inner person-list" role="listbox">
@@ -132,19 +138,19 @@
               <h4 v-else class="red-text">Not Available</h4>
             </div>
             <div class="tab-pane fade big-list" id="li8" role="tabpanel">
-              <h3 class="pane-title" align="left">Awards and Recognitions</h3>
+              <h4 class="pane-title" align="left">Awards and Recognitions</h4>
               <hr>
               <span v-if="'awards_and_recognition' in faculty" v-html="faculty.awards_and_recognition"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
             <div class="tab-pane fade big-list" id="li9" role="tabpanel">
-              <h3 class="pane-title" align="left">Administrative Responsibilities</h3>
+              <h4 class="pane-title" align="left">Administrative Responsibilities</h4>
               <hr>
               <span v-if="'administrative_responsibilities' in faculty" v-html="faculty.administrative_responsibilities"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
             <div class="tab-pane fade big-list" id="li10" role="tabpanel">
-              <h3 class="pane-title" align="left">Contact</h3>
+              <h4 class="pane-title" align="left">Contact</h4>
               <hr>
               <span>Mobile : +91-{{mobile}}<br/>
                     Email : {{faculty.email}}<br/>
