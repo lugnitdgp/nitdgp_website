@@ -7,7 +7,7 @@
       </div>
       <div class="card-body">
         <h3 class="mt-1 white-text">
-          <strong>{{director.name}}</strong>
+          <a :href="genBackendURL('faculty/2c36b313-cfa6-47bf-b1fa-9b2b226fa8f0',true)"><strong>{{director.name}}</strong></a>
         </h3>
         <h4 class="desig cyan-text">Director</h4>
         <hr class="hr-grey">
@@ -46,6 +46,9 @@ export default {
         fax: "343 2547375"
       }
     }
+  },
+  methods: {
+    genBackendURL: genBackendURL
   },
   created () {
     this.$emit('hideloader', true)
