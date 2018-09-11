@@ -71,4 +71,4 @@ class MoreSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = More
-        fields = ('title', 'file', 'date')
+        fields = ('title', 'file', 'date', 'link')

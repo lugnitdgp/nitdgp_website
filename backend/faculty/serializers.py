@@ -42,11 +42,11 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
             return info.first().projects
 
     def get_journals(self, obj):
-        info = Journal.objects.filter(faculty_id=obj.id)
+        info = Journal.objects.filter(faculty_id=obj.id).order_by('date')
         return JournalSerializer(info, many=True).data
 
     def get_conferences(self, obj):
-        info = Conference.objects.filter(faculty_id=obj.id)
+        info = Conference.objects.filter(faculty_id=obj.id).order_by('date')
         return ConferenceSerializer(info, many=True).data
 
     def get_students(self, obj):

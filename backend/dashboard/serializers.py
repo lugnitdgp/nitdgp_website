@@ -43,7 +43,7 @@ class NewsFeedSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NewsFeed
-        fields = ('title', 'file', 'date')
+        fields = ('title', 'file', 'date', 'url')
 
 
 class ContactSerializer(serializers.ModelSerializer):
