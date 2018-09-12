@@ -16,7 +16,7 @@
             <a class="nav-link waves-light" data-toggle="tab" href="#li3" role="tab" >HOD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li4" role="tab" >People</a>
+            <a class="nav-link waves-light" data-toggle="tab" href="#li4" role="tab" >Peoples</a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-light" data-toggle="tab" href="#li5" role="tab" >Research</a>
@@ -135,7 +135,7 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li4" role="tabpanel" aria-labelledby="li4-list">
-          <h3 class="pane-title" align="left">People</h3>
+          <h3 class="pane-title" align="left">Peoples</h3>
           <ul class="nav md-pills nav-justified pills-secondary">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#p4l1" role="tab">Faculty</a>
