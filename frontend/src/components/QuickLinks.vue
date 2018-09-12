@@ -6,39 +6,79 @@
       <div class="card-body">
         <div class="row">
           <div class="col">
-            <h3>Admissions</h3>
+            <h4>Admissions</h4>
             <ul>
-              <li><a href="/admission">DASA</a></li>
-              <li><a href="/admission">ICCR</a></li>
-              <li><a href="/admission">MEA</a></li>
-              <li><a href="/admission">GATE</a></li>
-              <li><a href="/admission">JEE Main</a></li>
-              <li><a href="/admission">JAM</a></li>
-              <li><a href="/admission">PhD</a></li>
-              <li><a href="/admission">MBA</a></li>
+              <li v-for="link in links['Admission']">
+                <a v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a v-else :href="link.file">{{link.title}}</a>
+              </li>
             </ul>
           </div>
           <div class="col">
-            <h3>Others</h3>
+            <h4>General</h4>
             <ul>
-              <li><a href=""></a></li>
-              <li><a href=""></a></li>
+              <li v-for="link in links['General']">
+                <a v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a v-else :href="link.file">{{link.title}}</a>
+              </li>
             </ul>
           </div>
-
+          <div class="col">
+            <h4>National Portal</h4>
+            <ul>
+              <li v-for="link in links['National Portal']">
+                <a v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a v-else :href="link.file">{{link.title}}</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h4>Social Media</h4>
+            <ul>
+              <li v-for="link in links['Social Media']">
+                <a v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a v-else :href="link.file">{{link.title}}</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import axios from 'axios'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import CardTestimonial from '@/components/CardTestimonial'
+import { range, genBackendURL } from '@/common.js'
+
 export default {
-  name: 'QuickLinks',
+  name: "QuickLinks",
+  data () {
+    return {
+      links: {}
+    }
+  },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL("dashboard/quick-links"))
+         .then(response => {
+           this.links = response.data.groups
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })
+  },
+  components: {
+    LinksPage,
+    Card,
+    CardTestimonial
   }
 }
 </script>
+
 <style scoped>
 ul {
   text-decoration: none;
