@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 
 var baseURL = "http://localhost:8080"
-var backURL = "http://admin.nitdgp.ac.in"
+var backURL = "https://admin.nitdgp.ac.in"
 
 function stripDesc (str) {
   if (str.length < 54)
