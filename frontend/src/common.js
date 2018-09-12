@@ -85,8 +85,6 @@ function convertNewsfeed(raw_data){
     news.month = months[date.getMonth()]
     news.date = date.getDate()
     news.year = date.getFullYear()
-    console.log(news.file)
-    console.log(news.link)
     if (news.file != null || news.link) {
       if (news.file)
         news.link = news.file
