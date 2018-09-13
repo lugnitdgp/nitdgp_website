@@ -8,6 +8,10 @@ def next_count_section():
 
 
 class QuickLinks(BaseModel):
+    
+    class Meta:
+        verbose_name_plural = 'Quick Links'
+        
     CHOICES = (
         ('General', 'General'),
         ('Admission', 'Admission'),
