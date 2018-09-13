@@ -102,7 +102,7 @@
                     <ul>
                       <li v-for="patent in faculty.patents" >
                         <a v-if="patent.file" :href="patent.file" target="new">
-                          <div v-html="patent.title"></div>
+                          <div>{{  patent.title }}</div>
                         </a>
                         <a v-else href="#">
                           <div v-html="patent.title"></div>
