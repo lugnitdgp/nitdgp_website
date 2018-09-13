@@ -104,6 +104,9 @@
                         <a v-if="patent.file" :href="patent.file" target="new">
                           <div v-html="patent.title"></div>
                         </a>
+                        <a v-else href="#">
+                          <div v-html="patent.title"></div>
+                        </a>
                       </li>
                     </ul>
                 </div>
