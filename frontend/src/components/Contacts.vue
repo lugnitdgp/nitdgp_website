@@ -1,39 +1,39 @@
 <template>
   <links-page>
     <collapse-list>
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Director'" :key="groupname.id" :show="true" :title="groupname">
-	<div class="card-text">
-	  <ul class="list-group list-gr">
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Director'" :key="groupname.id" :title="groupname">
+        <div class="card-text">
+          <ul class="list-group list-gr">
             <div class="row">
               <div v-for="details in list" class="col contact-col ">
-    		<li class="list-group-item disabled" style="height: 100%">
-    		  <h4>{{ details.name }}</h4>
-    		  <h5 style="font-weight: bold" v-if="details.designation">
-    		    {{ details.designation }}
-    		  </h5>
-    		  <span v-html="details.contact"/>
-    		</li>
+                <li class="list-group-item disabled" style="height: 100%">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
               </div>
             </div>
-	  </ul>
-	</div>
+          </ul>
+        </div>
       </card-collapse>
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Director Office'" :key="groupname.id" :show="true" :title="groupname">
-	<div class="card-text">
-	  <ul class="list-group list-gr">
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Director Office'" :key="groupname.id" :title="groupname">
+        <div class="card-text">
+          <ul class="list-group list-gr">
             <div class="row">
               <div v-for="details in list" class="col contact-col ">
-    		<li class="list-group-item disabled" style="height: 100%">
-    		  <h4>{{ details.name }}</h4>
-    		  <h5 style="font-weight: bold" v-if="details.designation">
-    		    {{ details.designation }}
-    		  </h5>
-    		  <span v-html="details.contact"/>
-    		</li>
+                <li class="list-group-item disabled" style="height: 100%">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
               </div>
             </div>
-	  </ul>
-	</div>
+          </ul>
+        </div>
       </card-collapse>
       <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Registrar'" :key="groupname.id" title="Registrar I/C">
         <div class="card-text">
@@ -52,22 +52,22 @@
           </ul>
         </div>
       </card-collapse>
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Registrar Office'" :key="groupname.id" :show="true" :title="groupname">
-	<div class="card-text">
-	  <ul class="list-group list-gr">
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Registrar Office'" :key="groupname.id" :title="groupname">
+        <div class="card-text">
+          <ul class="list-group list-gr">
             <div class="row">
               <div v-for="details in list" class="col contact-col ">
-    		<li class="list-group-item disabled" style="height: 100%">
-    		  <h4>{{ details.name }}</h4>
-    		  <h5 style="font-weight: bold" v-if="details.designation">
-    		    {{ details.designation }}
-    		  </h5>
-    		  <span v-html="details.contact"/>
-    		</li>
+                <li class="list-group-item disabled" style="height: 100%">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
               </div>
             </div>
-	  </ul>
-	</div>
+          </ul>
+        </div>
       </card-collapse>
       <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Dean'" :key="groupname.id" :title="groupname">
         <div class="card-text">
