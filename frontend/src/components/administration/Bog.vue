@@ -31,13 +31,7 @@
         </div>
       </card-collapse>
       <card-collapse v-if="bog_agendas" title="Agenda of BOG Meetings">
-        <ul class="list-group list-gr">
-          <li v-for="bog_agenda in bog_agendas">
-            <a class="list-group-item" target="new" :href="bog_agenda.file">
-              {{ bog_agenda.title }}
-            </a>
-          </li>
-        </ul>
+        <notice-list :noticelist="bog_agendas" />
       </card-collapse>
     </collapse-list>
   </links-page>
@@ -49,6 +43,7 @@ import LinksPage from '@/components/LinksPage'
 import CardCollapse from '@/components/CardCollapse'
 import CollapseList from '@/components/CollapseList'
 import CardTestimonial from '@/components/CardTestimonial'
+import NoticeList from '@/components/NoticeList'
 import { range, genBackendURL } from '@/common.js'
 
 export default {
@@ -56,7 +51,8 @@ export default {
   data () {
     return {
       bogs: {},
-      bog_agendas: []
+      bog_agendas: [],
+      paginate: ['bog_agendas']
     }
   },
   created () {
@@ -91,7 +87,8 @@ export default {
     LinksPage,
     CardCollapse,
     CollapseList,
-    CardTestimonial
+    CardTestimonial,
+    NoticeList
   }
 }
 </script>
