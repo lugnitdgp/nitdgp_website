@@ -5,13 +5,9 @@
 	<div class="carousel-item active">
 	  <div class="row">
 	    <div class="col" v-for="person in webteam.people">
-	      <card-testimonial :name="person.name" :image="person.image">
-		
-		<strong>
-		  <i class="fa fa-github fa-lg"></i>
-		  <a :href="'https://github.com/' + person.github_id">{{ person.github_id }}</a>
-		</strong>
-		
+	      <card-testimonial :name="person.name" :image="person.image" :desig="'Batch of '+person.passing_year">
+		  	<i class="fa fa-github fa-lg"></i>
+		  	<a :href="'https://github.com/' + person.github_id">{{ person.github_id }}</a>
 	      </card-testimonial>
 	    </div>
 	  </div>
@@ -34,34 +30,64 @@ export default {
 			webteam: {
 				people: [
 					{
-						name: "Abhishek Prasad",
-						image: "static/img/abhishek_prasad.jpg",
-						github_id: "Compro-Prasad"
+						name: "Adarsh Singh",
+						image: "static/img/adarsh-singh.jpg",
+						github_id: "nxtbig",
+						passing_year: 2018
 					},
 					{
-						name: "Ankan Poddar",
-						image: "static/img/ankan_poddar.jpg",
-						github_id: "ankan17"
+						name: "Arka Roy",
+						image: "static/img/arka-roy.jpeg",
+						github_id: "arka-nitd",
+						passing_year: 2018
+					},
+					{
+						name: "Bishakh Ghosh",
+						image: "static/img/bishak-ghosh.jpeg",
+						github_id: "ghoshbishakh",
+						passing_year: 2018
+					},
+					{
+						name: "Abhishek Prasad",
+						image: "static/img/abhishek_prasad.jpg",
+						github_id: "Compro-Prasad",
+						passing_year: 2019
 					},
 					{
 						name: "Arnav",
 						image: "static/img/arnav_kumar.jpg",
-						github_id: "arnav-amb"
+						github_id: "arnav-amb",
+						passing_year: 2019
 					},
 					{
 						name: "Devansh Goenka",
 						image: "static/img/devansh_goenka.jpeg",
-						github_id: "devanshgoenka97"
+						github_id: "devanshgoenka97",
+						passing_year: 2019
 					},
 					{
 						name: "Divyanshu Mehta",
 						image: "static/img/divyanshu_mehta.jpg",
-						github_id: "divyanshumehta"
+						github_id: "divyanshumehta",
+						passing_year: 2019
 					},
 					{
 						name: "Vivek Modi",
 						image: "static/img/vivek_modi.jpg",
-						github_id: "modihere"
+						github_id: "modihere",
+						passing_year: 2019
+					},
+					{
+						name: "Ankan Poddar",
+						image: "static/img/ankan_poddar.jpg",
+						github_id: "ankan17",
+						passing_year: 2020
+					},
+					{
+						name: "Parul Chandel",
+						image: "static/img/parul-chandel.jpeg",
+						github_id: "Deathrow77",
+						passing_year: 2020
 					}
 				]
 			}
