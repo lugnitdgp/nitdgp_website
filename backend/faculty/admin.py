@@ -232,6 +232,40 @@ class AdministrativeResponsibilityModelAdmin(admin.ModelAdmin):
         return queryset.filter(faculty_id__name=request.user.get_full_name())
 
 
+class MiscModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__',]
+
+    def has_add_permission(self, request):
+        if request.user.is_superuser:
+            return True
+        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
+        if num_objects >= 1:
+          return False
+        else:
+          return True
+
+    def get_readonly_fields(self, request, obj=None):
+        if request.user.is_superuser:
+            return []
+        if obj is None:
+            return []
+        return ['faculty']
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'faculty':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Faculty.objects.filter(
+                    name=request.user.get_full_name())
+        return super(MiscModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
+
+    def get_queryset(self, request):
+        queryset = super(MiscModelAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return queryset
+        return queryset.filter(faculty_id__name=request.user.get_full_name())
+
+
 admin.site.register(AdministrativeResponsibility, AdministrativeResponsibilityModelAdmin)
 admin.site.register(WorkExperience, WorkExperienceModelAdmin)
 admin.site.register(Projects, ProjectsModelAdmin)
@@ -239,3 +273,4 @@ admin.site.register(AwardsAndRecognition, AwardsAndRecognitionModelAdmin)
 admin.site.register(Education, EducationModelAdmin)
 admin.site.register(Teachings, TeachingsModelAdmin)
 admin.site.register(Students, StudentsModelAdmin)
+admin.site.register(Misc, MiscModelAdmin)

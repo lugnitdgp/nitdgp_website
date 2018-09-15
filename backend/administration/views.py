@@ -76,6 +76,10 @@ class BogAgendaViewSet(ListAPIView):
      queryset = BogAgenda.objects.all()
      serializer_class = BogAgendaSerializer
 
+     def list(self, request, *args, **kwargs):
+         return Response({'result': BogAgendaSerializer(self.get_queryset(), many=True, context={'request': request}).data
+         })
+
 
 class DeansViewSet(ListAPIView):
 

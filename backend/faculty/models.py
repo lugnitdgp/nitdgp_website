@@ -143,3 +143,15 @@ class Students(BaseModel):
 
     def _degree(self):
         return self.degree
+
+
+class Misc(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Miscellanous Details'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    content = RichTextField()
+
+    def __str__(self):
+        return self.faculty.name

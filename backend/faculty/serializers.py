@@ -19,6 +19,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     work_experience = serializers.SerializerMethodField()
     awards_and_recognition = serializers.SerializerMethodField()
     administrative_responsibilities = serializers.SerializerMethodField()
+    misc = serializers.SerializerMethodField()
 
     def get_teachings(self, obj):
         info = Teachings.objects.filter(faculty_id=obj.id)
@@ -82,11 +83,18 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
         else :
             return info.first().administrative_responsibilities
 
+    def get_misc(self, obj):
+        info = Misc.objects.filter(faculty_id=obj.id)
+        if info.count() == 0:
+            return {}
+        else :
+            return info.first().content
+
     class Meta:
         model = Faculty
         fields = ('name', 'mobile', 'research_interest', 'image', 'email', 'joining_year', 'designation',
         'education', 'projects', 'dept_short_code', 'students', 'journals', 'conferences', 'books', 'patents', 'teachings', 'work_experience', 'awards_and_recognition',
-        'administrative_responsibilities')
+        'administrative_responsibilities', 'misc')
 
 
 
