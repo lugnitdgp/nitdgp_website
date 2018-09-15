@@ -159,6 +159,12 @@
                     Email : {{faculty.email}}<br/>
               </span>
             </div>
+            <div class="tab-pane fade big-list" id="li11" role="tabpanel">
+              <h4 class="pane-title" align="left">Miscellanous</h4>
+              <hr>
+              <span v-if="'misc' in faculty" v-html="faculty.misc"/>
+              <h4 v-else class="red-text">Not Available</h4>
+            </div>
           </div>
           <div class="list-group"
             :class="extraNavClasses.concat([getClassNav()])"
@@ -173,6 +179,7 @@
             <a class="dropdown-item" :class="{ 'disabled': !('awards_and_recognition' in faculty) }" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
             <a class="dropdown-item" :class="{ 'disabled': !('administrative_responsibilities' in faculty) }" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
             <a class="dropdown-item" data-toggle="list" href="#li10" role="tab">Contact</a>
+            <a class="dropdown-item" data-toggle="list" href="#li11" role="tab">Miscellanous</a>
             <a class="dropdown-item faculty-login" :href="genBackendURL('admin')" target="new" role="tab">Faculty Login</a>
           </div>
         </div>
