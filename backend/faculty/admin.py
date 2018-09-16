@@ -24,6 +24,8 @@ class StudentsModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(StudentsModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -52,6 +54,8 @@ class EducationModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(EducationModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -86,6 +90,8 @@ class TeachingsModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(TeachingsModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -120,6 +126,8 @@ class AwardsAndRecognitionModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(AwardsAndRecognitionModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -154,6 +162,8 @@ class ProjectsModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ProjectsModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -188,6 +198,8 @@ class WorkExperienceModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(WorkExperienceModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -222,6 +234,8 @@ class AdministrativeResponsibilityModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(AdministrativeResponsibilityModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -256,6 +270,8 @@ class MiscModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(MiscModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 

@@ -3,9 +3,6 @@ from department.models import *
 from ckeditor.widgets import CKEditorWidget
 
 
-# Register your models here.
-
-
 class FacultyModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department']
 
@@ -55,6 +52,8 @@ class StaffModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(StaffModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -80,6 +79,8 @@ class ResearchModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ResearchModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -105,6 +106,8 @@ class ProjectModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ProjectModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -185,6 +188,8 @@ class ActivitiesModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ActivitiesModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -214,6 +219,8 @@ class ProgrammeModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ProgrammeModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -258,6 +265,8 @@ class FacilityModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(FacilityModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -283,6 +292,8 @@ class ElectivesModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ElectivesModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -307,6 +318,8 @@ class DepartmentPhotosModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(DepartmentPhotosModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -332,6 +345,8 @@ class DepartmentNewsModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(DepartmentNewsModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -357,6 +372,8 @@ class StudentModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(StudentModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -375,6 +392,8 @@ class SyllabusModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Department.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Department.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(SyllabusModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 

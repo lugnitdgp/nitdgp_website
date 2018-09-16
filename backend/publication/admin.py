@@ -19,10 +19,12 @@ class BookModelAdmin(admin.ModelAdmin):
         return queryset.filter(faculty__name=request.user.get_full_name())
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        if db_field.name == 'faculty_id':
+        if db_field.name == 'faculty':
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(BookModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -48,6 +50,8 @@ class JournalModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(JournalModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -73,6 +77,8 @@ class ConferenceModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(ConferenceModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 
@@ -98,6 +104,8 @@ class PatentModelAdmin(admin.ModelAdmin):
             if not request.user.is_superuser:
                 kwargs["queryset"] = Faculty.objects.filter(
                     name=request.user.get_full_name())
+                kwargs["initial"] = Faculty.objects.filter(
+                    name=request.user.get_full_name()).first()
         return super(PatentModelAdmin, self).formfield_for_foreignkey(
             db_field, request, **kwargs)
 

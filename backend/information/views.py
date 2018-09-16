@@ -32,7 +32,7 @@ class CareerViewSet(ListAPIView):
     serializer_class = CareerSerializer
 
     def list(self, request, *args, **kwargs):
-        return Response({"careers": CareerSerializer(self.get_queryset(), many=True).data })
+        return Response({"careers": CareerSerializer(self.get_queryset(), many=True, context={"request": request}).data })
 
 
 class TenderViewSet(ListAPIView):
@@ -41,7 +41,7 @@ class TenderViewSet(ListAPIView):
     serializer_class = TenderSerializer
 
     def list(self, request, *args, **kwargs):
-        return Response({"tenders": TenderSerializer(self.get_queryset(), many=True).data })
+        return Response({"tenders": TenderSerializer(self.get_queryset(), many=True, context={"request": request}).data })
 
 
 class TEQIPViewSet(ListAPIView):
