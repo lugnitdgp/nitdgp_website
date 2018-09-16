@@ -70,7 +70,7 @@ export default {
          })
     axios.get(genBackendURL("administration/bogagenda"))
          .then(response => {
-           this.bog_agendas = response.data.results
+           this.bog_agendas = response.data.result
            if (count_axios == 1) {
              this.$emit('hideloader', true)
            }
