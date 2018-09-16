@@ -18,8 +18,8 @@
             <h4><p style="font-weight: bold">{{ faculty.name }}</p></h4>
             <p>{{ faculty.designation }}</p>
             <p style="font-size: 80%">
-              <strong v-if="faculty.joining_year=='1959'" >Joined in N/A<br></strong>
-              <strong v-if="faculty.joining_year!=1959" >Joined in {{ joining_year }}<br></strong>
+              <strong v-if="joining_year==1959" >Joined in N/A<br></strong>
+              <strong v-if="joining_year!=1959" >Joined in {{ joining_year }}<br></strong>
               <i class="fa fa-envelope"></i><br>
               {{ faculty.email }}
             </p>
