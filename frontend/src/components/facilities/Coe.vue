@@ -6,8 +6,8 @@
       <div class="card-body">
         <div class="card-text">
           <ul>
-            <li><a target="new" href="http://nitdgp.ac.in/all_pdf17/Centre%20of%20Excellence%20in%20Advanced%20Materials-home.pdf">CEAM home</a></li>
-            <li><a target="new" href="http://nitdgp.ac.in/research/coe/images/coe.doc">CEAM Doc</a></li>
+            <li><a target="new" href="http://new.nitdgp.ac.in/AllPDF/Centre of Excellence in Advanced Materials-home.pdf">CEAM home</a></li>
+            <li><a target="new" href="http://new.nitdgp.ac.in/AllPDF/coe-converted.pdf">CEAM Doc</a></li>
           </ul>
         </div>
       </div>
