@@ -13,7 +13,7 @@
           <a class="dropdown-item" href="/"><i class="fa fa-2x fa-home" ></i></a>
           <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
           <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a>
-          <a class="dropdown-item" href="http://nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
+          <a class="dropdown-item" href="http://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
         </div>
       </div>
       <div class="navbar-content-cen container">
@@ -60,7 +60,7 @@
       <div class="nav-_links">
         <a href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail&nbsp;</a>
         <a href="/contacts"><i class="fa fa-1x fa-phone"></i> Contact&nbsp;</a>
-        <a href="http://nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> Old&nbsp;</a>
+        <a href="http://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> Old&nbsp;</a>
       </div>
     </nav>
   </header>
