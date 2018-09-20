@@ -30,12 +30,12 @@
                   <span class="nm-en-sm">
                     &nbsp;&nbsp;&nbsp;NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR
                   </span>
-                  <span class="nm-en">
-                    NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR
-                  </span>
                   <span class="nm-hi">
+                  राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर
+                  </span>
+                  <span class="nm-en">
                     &nbsp;|&nbsp;
-                  राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर<br>
+                    NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR<br>
                   </span>
                   <span class="nm-det">
                     An Institute of National Importance under Government of India, 
