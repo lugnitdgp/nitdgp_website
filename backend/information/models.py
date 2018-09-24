@@ -190,6 +190,9 @@ class PublicGrievance(BaseModel):
 
 
 class ICC(BaseModel):
+    class Meta:
+        verbose_name_plural = 'ICC'
+
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/ICC/%Y', blank=True)
     link = models.URLField(blank=True)

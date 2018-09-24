@@ -28,6 +28,9 @@ class QuickLinks(BaseModel):
 
 
 class Downloads(BaseModel):
+    class Meta:
+        verbose_name_plural = 'Downloads'
+
     title = models.CharField(max_length=1024)
     file = models.FileField(upload_to='dashboard/downloads/%Y/%m/%d')
 
