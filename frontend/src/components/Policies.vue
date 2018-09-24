@@ -1,7 +1,7 @@
 <template>
 	<div class="l1 page-type-links">
     <div class="card">
-      <a class="card-header white-text">Holidays</a>
+      <a class="card-header white-text">Policies</a>
       <div class="card-body content">
         <ul>
           <li><a href="#" target="new">Copyright Policy</a></li>

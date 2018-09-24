@@ -8,6 +8,7 @@ import Holidays from '@/components/Holidays'
 import Archives from '@/components/Archives'
 import Policies from '@/components/Policies'
 import Webteam from '@/components/Webteam'
+import Downloads from '@/components/Downloads'
 import PageNotFound from '@/components/PageNotFound'
 import Contacts from '@/components/Contacts'
 import QuickLinks from '@/components/QuickLinks'
@@ -400,6 +401,11 @@ export default new Router({
       path: '/webteam',
       name: 'Webteam',
       component: Webteam
+    },
+    {
+      path: '/downloads',
+      name: 'Downloads',
+      component: Downloads
     },
     {
       path: '/contacts',

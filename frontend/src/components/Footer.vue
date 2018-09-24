@@ -99,7 +99,8 @@ export default {
               {name: "MHRD", href: "/mhrd"},
               {name: "Holidays", href: "/holidays"},
               {name: "Archives", href: "/archives"},
-              {name: "Policies", href: "/policies"},
+              // {name: "Policies", href: "/policies"},
+              {name: "Downloads", href: "/downloads"},
               {name: "Webteam", href: "/webteam"}]
     }
   },
