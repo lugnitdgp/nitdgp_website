@@ -83,3 +83,8 @@ class MoreViewSet(ListAPIView):
 class PublicGrievanceViewSet(ListAPIView):
     queryset = PublicGrievance.objects.all().order_by('-date')
     serializer_class = PublicGrievanceSerializer
+
+
+class ICCViewSet(ListAPIView):
+    queryset = ICC.objects.all().order_by('-date')
+    serializer_class = ICCSerializer

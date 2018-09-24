@@ -78,3 +78,9 @@ class PublicGrievanceSerializer(serializers.ModelSerializer)
     class Meta:
         model = PublicGrievance
         fields = ('title', 'file', 'date', 'link')
+
+
+class ICCSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = ICC
+        fields = ('title', 'file', 'date', 'link')

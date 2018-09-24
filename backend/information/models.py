@@ -187,3 +187,13 @@ class PublicGrievance(BaseModel):
 
     def __str__(self):
         return self.title
+
+
+class ICC(BaseModel):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='information/ICC/%Y', blank=True)
+    link = models.URLField(blank=True)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
