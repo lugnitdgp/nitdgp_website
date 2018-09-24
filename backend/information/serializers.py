@@ -74,13 +74,13 @@ class MoreSerializer(serializers.ModelSerializer):
         fields = ('title', 'file', 'date', 'link')
 
 
-class PublicGrievanceSerializer(serializers.ModelSerializer)
+class PublicGrievanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = PublicGrievance
         fields = ('title', 'file', 'date', 'link')
 
 
-class ICCSerializer(serializers.ModelSerializer)
+class ICCSerializer(serializers.ModelSerializer):
     class Meta:
         model = ICC
         fields = ('title', 'file', 'date', 'link')
