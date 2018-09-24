@@ -8,6 +8,12 @@ class QuickLinksSerializer(serializers.ModelSerializer):
         fields = ('title', 'file', 'link', 'category')
 
 
+class DownloadsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Downloads
+        fields = ('title', 'file')
+
+
 class TileSerializer(serializers.ModelSerializer):
 
     class Meta:

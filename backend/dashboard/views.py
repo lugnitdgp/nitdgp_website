@@ -37,6 +37,11 @@ class QuickLinksViewSet(ListAPIView):
         return Response({"groups": result})
 
 
+class DownloadsViewSet(ListAPIView):
+    queryset = Downloads.objects.all().order_by('created_at')
+    serializer_class = DownloadsSerializer
+
+
 
 class CarouselViewSet(ListAPIView):
 

@@ -24,10 +24,10 @@ class NewsFeedModelAdmin(admin.ModelAdmin):
 
 class ContactModelAdmin(admin.ModelAdmin):
     list_display = ['_name', '_designation', '_group', '_contact']
-# Register your models here.
 
 
 admin.site.register(QuickLinks)
+admin.site.register(Downloads)
 admin.site.register(Section, SectionModelManager)
 admin.site.register(Tile, TileModelManager)
 admin.site.register(Carousel, CarouselModelAdmin)

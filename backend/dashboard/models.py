@@ -8,10 +8,10 @@ def next_count_section():
 
 
 class QuickLinks(BaseModel):
-    
+
     class Meta:
         verbose_name_plural = 'Quick Links'
-        
+
     CHOICES = (
         ('General', 'General'),
         ('Admission', 'Admission'),
@@ -22,6 +22,14 @@ class QuickLinks(BaseModel):
     file = models.FileField(upload_to='dashboard/quick_links/%Y/%m/%d', blank=True)
     link = models.URLField(blank=True)
     category = models.CharField(max_length=64, choices=CHOICES, default='General')
+
+    def __str__(self):
+        return self.title
+
+
+class Downloads(BaseModel):
+    title = models.CharField(max_length=1024)
+    file = models.FileField(upload_to='dashboard/downloads/%Y/%m/%d')
 
     def __str__(self):
         return self.title
