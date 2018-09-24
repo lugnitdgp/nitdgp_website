@@ -16,5 +16,5 @@ urlpatterns = [
     url(r'^information/nba/$', NBAViewSet.as_view(), name='view-nba'),
     url(r'^information/officenotice/$', OfficeNoticeViewSet.as_view(), name='view-office-notice'),
     url(r'^information/more/$', MoreViewSet.as_view(), name='view-more'),
-
+    url(r'^information/publicgrievance/$', PublicGrievanceViewSet.as_view(), name='view-public-grievance')
     ]

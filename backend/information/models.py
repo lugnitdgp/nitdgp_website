@@ -177,3 +177,13 @@ class More(BaseModel):
 
     def _date(self):
         return self.date
+
+
+class PublicGrievance(BaseModel):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='information/public_grievance/%Y', blank=True)
+    link = models.URLField(blank=True)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title

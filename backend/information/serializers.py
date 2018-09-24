@@ -72,3 +72,9 @@ class MoreSerializer(serializers.ModelSerializer):
     class Meta:
         model = More
         fields = ('title', 'file', 'date', 'link')
+
+
+class PublicGrievanceSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = PublicGrievance
+        fields = ('title', 'file', 'date', 'link')

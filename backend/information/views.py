@@ -78,3 +78,8 @@ class MoreViewSet(ListAPIView):
 
     queryset = More.objects.all().order_by('-created_at')
     serializer_class = MoreSerializer
+
+
+class PublicGrievanceViewSet(ListAPIView):
+    queryset = PublicGrievance.objects.all().order_by('-date')
+    serializer_class = PublicGrievanceSerializer
