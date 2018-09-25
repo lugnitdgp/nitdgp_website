@@ -10,6 +10,13 @@ function stripDesc (str) {
     return str.slice(3, 50) + "... More"
 }
 
+function stripDesc2 (str) {
+  if (str.length < 104)
+    return str.slice(3, -4)
+  else
+    return str.slice(3, 100) + "... More"
+}
+
 function prettify (str) {
   let s = ""
   s += str[0].toUpperCase()
@@ -111,5 +118,6 @@ export {
   genBackendURL,
   range,
   convertNewsfeed,
-  stripDesc
+  stripDesc,
+  stripDesc2
 }
