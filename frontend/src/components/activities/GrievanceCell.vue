@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title="Public Grievance Cell">
+    <card title="Student Cell">
       <ul class="list-group list-gr">
         <li v-for="link in links">
           <a v-if="link.file" class="list-group-item" :href="link.file">

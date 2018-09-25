@@ -3,10 +3,10 @@
     <card title="Public Grievance Cell">
       <ul class="list-group list-gr">
         <li v-for="link in links">
-          <a v-if="link.file" class="list-group-item" :href="link.file">
+          <a v-if="link.file" class="list-group-item" :href="link.file" target="new">
             {{ link.title }}
             </a>
-          <a v-else class="list-group-item" :href="link.url">
+          <a v-else class="list-group-item" :href="link.link" target="new">
             {{ link.title }}
           </a>
         </li>
@@ -42,7 +42,7 @@ export default {
     }
   },
   created () {
-    axios.get(genBackendURL("activities/grievance-cell"))
+    axios.get(genBackendURL("information/publicgrievance"))
          .then(response => {
            this.links = response.data.results
            this.$emit('hideloader', true)
