@@ -108,9 +108,35 @@ export default {
            let inp = JSON.parse(JSON.stringify(this.results))
            inp.map((element,index) => {
               let cur_inp = element.contents
-              cur_inp.sort(function(a,b){
-                  return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
-              })
+              // Custom logic for Facilities Section
+              if(element.section_name == 'Facilities') {
+                let libindex = 0      // Index of Library tile
+                cur_inp.map((tile,tindex) => {
+                  if(tile.name == 'Library')
+                    libindex = tindex
+                })
+                // Making library as the first tile
+                var temp = cur_inp[0]
+                cur_inp[0] = cur_inp[libindex]
+                cur_inp[libindex] = temp
+                // Buble Sort from index i to n-1
+                var len = cur_inp.length, i, j, stop;
+                for (i=1; i < len; i++){
+                  for (j=1, stop=len-i; j < stop; j++){
+                    if (cur_inp[j].name > cur_inp[j+1].name) {
+                      temp = cur_inp[j];
+                      cur_inp[j] = cur_inp[j+1];
+                      cur_inp[j+1] = temp;
+                    }
+                  }
+                }
+                
+              }
+              else {
+                cur_inp.sort(function(a,b){
+                    return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
+                })
+              }
               let tiles_rows = []
               let div =  struct[cur_inp.length]
               let it = -1
