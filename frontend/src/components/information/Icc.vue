@@ -2,9 +2,12 @@
   <links-page>
     <card title="ICC">
       <ul class="list-group list-gr">
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/information/Internal%20Complaint%20Committee/Office%20Order%20Regarding%20Internal%20Complaints%20Committee..pdf">
-            Internal Complain Committee
+        <li v-for="icc in iccs">
+          <a v-if="icc.link" class="list-group-item" target="new" :href="icc.link">
+           {{icc.title}}
+          </a>
+          <a v-else class="list-group-item" target="new" :href="icc.file">
+            {{icc.title}}
           </a>
         </li>
       </ul>
@@ -22,11 +25,11 @@ export default {
   name: "Icc",
   data () {
     return {
-      // iccs: []
+      iccs: []
     }
   },
   created () {
-    axios.get(genBackendURL('information/nba'))
+    axios.get(genBackendURL('information/icc'))
          .then(response => {
            this.iccs = response.data.results
            this.$emit('hideloader', true)
