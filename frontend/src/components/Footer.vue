@@ -96,12 +96,14 @@ export default {
               {name: 'govlogo7', href:"https://data.gov.in/"},
               {name: 'govlogo8', href:"http://rti.gov.in/"}],
       links: [{name: "Quick Links", href: "/quicklinks"},
-              {name: "MHRD", href: "/mhrd"},
               {name: "Holidays", href: "/holidays"},
+              {name: "Careers@NITD", href: "/careers"},
+              {name: "Tenders@NITD", href: "/tenders"},
+              {name: "MHRD", href: "/mhrd"},
+              {name: "Webteam", href: "/webteam"},
               {name: "Archives", href: "/archives"},
               // {name: "Policies", href: "/policies"},
-              {name: "Downloads", href: "/downloads"},
-              {name: "Webteam", href: "/webteam"}]
+              {name: "Downloads", href: "/downloads"}]
     }
   },
   created () {
