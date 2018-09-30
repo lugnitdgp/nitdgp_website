@@ -162,3 +162,6 @@ class Convocation(BaseModel):
 
     def _url(self):
         return self.url
+
+    class Meta:
+        ordering = ('-created_at',)
