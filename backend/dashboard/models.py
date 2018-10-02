@@ -134,18 +134,24 @@ class Contact(BaseModel):
     class Meta:
         verbose_name_plural = 'Contact Us'
 
-    GROUPS = (('Director', 'Director'),
-              ('Director Office', 'Director Office'),
-              ('Registrar', 'Registrar'),
-              ('Registrar Office', 'Registrar Office'),
-              ('Library', 'Library'),
-              ('Workshops', 'Workshops'),
-              ('Medical Unit', 'Medical Unit'),
-              ('Pension Cell', 'Pension Cell'),
-              ('Guest House', 'Guest House'),
-              ('Computer Center', 'Computer Center'),
-              ('Training and Placement', 'Training and Placement'),
-              ('Officers', 'Officers'))
+    GROUPS = (
+        ('Associate Dean', 'Associate Dean'),
+        ('Computer Center', 'Computer Center'),
+        ('Dean', 'Dean'),
+        ('Director', 'Director'),
+        ('Director Office', 'Director Office'),
+        ('Guest House', 'Guest House'),
+        ('HOD', 'HOD'),
+        ('Library', 'Library'),
+        ('Medical Unit', 'Medical Unit'),
+        ('Officers', 'Officers'),
+        ('Pension Cell', 'Pension Cell'),
+        ('Registrar', 'Registrar'),
+        ('Registrar Office', 'Registrar Office'),
+        ('Training and Placement', 'Training and Placement'),
+        ('Warden', 'Warden'),
+        ('Workshops', 'Workshops')
+    )
     name = models.CharField(max_length=512)
     designation = models.CharField(max_length=512,blank=True)
     group = models.CharField(choices=GROUPS, max_length=512)
