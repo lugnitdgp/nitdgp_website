@@ -41,7 +41,7 @@
 	  </div>
 	  <div class="col">
 	    <div style="text-align: right;">
-	      <img style="height:400px;width: 280px" src="http://nitdgp.ac.in/images/hvl1.jpg" width="100%">
+	      <img style="height:400px;width: 280px" src="/static/img/hvl1.jpg" width="100%">
 	    </div>
 	  </div>
 	</div>
@@ -73,7 +73,7 @@
 	  In electrical power engineering education, it is advisable for students to be acquainted in laboratory courses with practical high voltage engineering knowledge. Because of high cost for setting up a high voltage laboratory, the laboratory is a potential cost effective educational tool for all the institutions that offer such programs at undergraduate or postgraduate levels. The laboratory provides an opportunity to share the teaching resources in terms of personnel and facilities. It has the opportunity to support all the learning objectives of the traditional high voltage laboratory in a remote setup. This work reports on the development of an ICT-enabled remotely operated high voltage laboratory at the National Institute of Technology, Durgapur, India, for online control of generation, measurement and analysis of steady state and transient high voltage phenomena. In the field of education, the laboratory is a potential tool for all institutions that offer electrical power engineering programs at undergraduate and postgraduate levels. The students can access and familiarize themselves with operations of the laboratory for conducting experiments and for testing high voltage power apparatus by using a local area network (LAN) as well as through the Internet. This work explains the approaches developed at the laboratory for experimentation in remote impulse voltage testing and online report generation. The laboratory can also be used for commercial high voltage tests for industries and utilities.
 	</font>
 	<div style="text-align: center;">
-	  <img style="max-height:400px;width: 680px;max-width: 100%" src="http://nitdgp.ac.in/images/hlv12.jpg" width="100%">
+	  <img style="max-height:400px;width: 680px;max-width: 100%" src="/static/img/hvl12.jpg" width="100%">
 	</div>
       </div>
     </div>
@@ -94,7 +94,7 @@
 	  The Non-Destructive Evaluation of Power transformer by monitoring various parameters, to predict its in-service behavior, is very much necessary for operating engineer to avoid catastrophic failures and costly outages. Dissolved Gas Analysis (DGA) is an important tool for transformer fault diagnosis. It is observed that the result of DGA doesn’t have a perceivable change over a short period. For less population of data availability grey modeling is used. To apply probability theory, statistics, and fuzzy systems, there is a requirement for a large number of data, then only conclusion or some inference can be drawn. The advantage of using the grey system theory is that, it gives a fair accuracy in predicting the volume of the gases, expected to be generated after some time period, using a small sample of data. In this paper we have done a comparative study on the predicted results obtained by different model of Grey theory mainly whitened model, connotation model and modified grey model. It is found that the error generated from the prediction by all the three model are within the limit of 15% which is acceptable. Additional by linear regression we are establishing a correlation between the key gases. This helps us to detect the abnormality of the situation and diagnose the type of fault. Additional this work deals with the study on the behavior of the gas dissolved in the oil which has undergone filtration and the one without filtration. Through graphical means it has been clearly shown that filtration at periodic interval will extend the life of the transformer. It has been shown that the rate of gas generation also plays an important role to detect an active fault.
 	</font>
 	<div style="text-align: center;">
-	  <img style="max-height:400px;width: 680px;max-width: 100%" src="http://nitdgp.ac.in/images/hvl13.jpg" width="100%">
+	  <img style="max-height:400px;width: 680px;max-width: 100%" src="/static/img/hvl13.jpg" width="100%">
 	</div>
       </div>
     </div>
@@ -107,7 +107,7 @@
 	  In this context, development of optical fiber based PD sensor can be promising as the optical fibers are made of dielectric material so can be easily placed inside the equipment without any additional insulation arrangements. On the other hand, it has very low transmission loss therefore the measured signal can be transmitted to the sub-station control room without use of any electrical amplification system and it is free from EMI. In this work, a Fiber Bragg Grating (FBG) based optical PD sensor has been developed for online detection of PD within HV power transformer. The shift in wavelength of FBG due to impulsive acoustic pressure generated during PD event has been used for the detection. The performance of the developed FBG based sensor has been validated experimentally with standard electrical (IEC60270) PD measurement system. Experimental results show that the developed sensor is a suitable substitute for conventional PD measuring system and it can be placed inside the apparatus.
 	</font>
 	<div style="text-align: center;">
-	  <img style="max-height:400px;width: 680px;max-width: 100%" src="http://nitdgp.ac.in/images/hlv14.jpg" width="100%"><br>
+	  <img style="max-height:400px;width: 680px;max-width: 100%" src="/static/img/hvl14.jpg" width="100%"><br>
 	  The schematic diagram of combined electrical and optical PD measuring system
 	</div>
       </div>
@@ -121,8 +121,8 @@
 	  In this work, a wide BW Microstrip patch antenna has been designed for detection of radiated EM wave in the UHF band due to PD activity within insulator. The proposed antenna is cost effective and having very specific center frequency capable of rejection of surrounding! noise. In this paper the test results obtained from the experiments of characterizing the proposed sensor are presented. The characterization of the sensor has been performed by varying the supply voltage of the insulator and also the distance of the sensor from PD source. The experiment result shows that sensor having good sensitivity and can be used to detect PD from a distance of 15m.
 	</font>
 	<div style="text-align: center;">
-	  <img style="max-height:400px;width: 680px;max-width: 100%" src="http://nitdgp.ac.in/images/hvl15.jpg" width="100%">
-	  <img style="max-height:400px;width: 680px;max-width: 100%" src="http://nitdgp.ac.in/images/hvl16.jpg" width="100%"><br>
+	  <img style="max-height:400px;width: 680px;max-width: 100%" src="/static/img/hvl15.jpg" width="100%">
+	  <img style="max-height:400px;width: 680px;max-width: 100%" src="/static/img/hvl16.jpg" width="100%"><br>
 	  The schematic diagram of combined electrical and optical PD measuring system
 	</div>
       </div>
@@ -136,7 +136,7 @@
 	  Power Transformers are one of the most critical component of power system in which mineral oil is used for both insulation and cooling purposes. It acts a insulating medium between solid insulations like kraft paper, pressboard etc. In transformer, dielectric strength of insulation materials mainly depends on the properties of the transformer oil. In this work, a comparative analysis can be made with pure and aged mineral insulating oil using high dielectric permittivity CCTO (CaCu3Ti4O12) nanopowder and its electrical and physical properties are investigated. Nanopowder is added with mineral insulating oil under various particle volume fractions to form nanofluids (NF’s). The electrical and physical properties like breakdown voltage, loss tangent, viscosity, interfacial tension, flash point were measured at room temperature under IS standards. In this work, as an initiative new nanofluids were prepared with high dielectric permittivty CCTO nanopowders dispersed in mineral oil with less than (1%) of particle volume fractions inorder to prevent agglomeration and their electrical and physical properties were studied. The electrical properties like breakdown voltage and loss tangent of nanofluids samples of both pure and aged oil shows enhanced values compared to base oil samples. The physical properties like viscosity, interfacial tension shows satisfactory results but reduction in the properties based on higher concentration of nanopowder. Flash point shows the nature of higher thermal stability in both pure and aged oil samples. Hence, Increased particle volume fraction shows enhanced flash point values.
 	</font>
 	<div style="text-align: center;">
-	  <img style="max-height:400px;width: 580px;max-width: 100%" src="http://nitdgp.ac.in/images/hvl17.jpg" width="100%"><br>
+	  <img style="max-height:400px;width: 580px;max-width: 100%" src="/static/img/hvl17.jpg" width="100%"><br>
 	  The schematic diagram of combined electrical and optical PD measuring system
 	</div>
 	<br><br>
