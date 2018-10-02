@@ -5,7 +5,7 @@
       <a class="card-header white-text">Central Instruments Facilities</a>
       <div class="card-body">
 	<div class="img-wrap">
-	  <img src="http://nitdgp.ac.in/images/xray.jpg" width="100%">
+	  <img src="/static/img/xray.jpg" width="100%">
 	</div>
 	<div>
 	  <div align="justify">
