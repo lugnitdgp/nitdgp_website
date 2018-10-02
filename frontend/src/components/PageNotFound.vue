@@ -1,7 +1,7 @@
 <template>
   <div style="margin-top: 120px;min-height: 420px;">
     <div class="img-container">
-      <img src="/static/img/nitdgp_logo.png" />
+      <img alt="NIT Durgapur Logo" src="/static/img/nitdgp_logo.png" />
     </div>
     <h4 align="center">Oops! Seems like you are at a wrong page!</h4>
     <h4 align="center">Head back to <a href="/">home.</a></h4>

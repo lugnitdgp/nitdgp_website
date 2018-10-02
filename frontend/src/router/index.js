@@ -85,7 +85,11 @@ export default new Router({
       name: 'Index',
       component: Home
     },
-
+    {
+      path: '/home',
+      name: 'Index',
+      component: Home
+    },
     {
       path: '/department/:short_code',
       name: 'Department',

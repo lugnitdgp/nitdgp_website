@@ -2,7 +2,7 @@
   <header class="container-fluid">
     <nav class="navbar navbar-expand-lg primary-color fixed-top">
       <div class="hm-btn">
-        <a href="/"><i class="fa fa-2x fa-home" ></i></a>
+        <a href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>
       </div>
       <div class="navbar-menu">
         <a class="nav-link dropdown-toggle" style="color:white;padding-left: 5px"
@@ -10,7 +10,7 @@
           <i style="color: white" class="fa fa-2x fa-bars" ></i>
         </a>
         <div class="dropdown-menu" style="background-color: #001333;">
-          <a class="dropdown-item" href="/"><i class="fa fa-2x fa-home" ></i></a>
+          <a class="dropdown-item" href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>
           <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
           <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a>
           <a class="dropdown-item" href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
@@ -19,8 +19,8 @@
       <div class="navbar-content-cen container">
         <div class="row nav-logo">
           <div class="col-1">
-            <a class="navbar-brand" :class="$route.path == '/'" href="/">
-              <img class="navbar-brand" height="80" src="/static/img/nitdgp_logo_white.png"><span class="nm-en-smm" style="color: white;font-weight: bold;visibility: hidden">NIT DURGAPUR</span>
+            <a class="navbar-brand" :class="$route.path == '/'" href="/home">
+              <img alt="NIT Durgapur Logo" class="navbar-brand" height="80" src="/static/img/nitdgp_logo_white.png"><span class="nm-en-smm" style="color: white;font-weight: bold;visibility: hidden">NIT DURGAPUR</span>
             </a>
           </div>
           <div class="col-11">
@@ -52,7 +52,7 @@
           <div id=":0.targetLanguage" class="goog-te-gadget-simple">
             <h5>अ|A</h5>
             <!-- <div class="goog-te-banner">
-            <a id=":2.close" class="goog-close-link" href="javascript:void(0)" title="Close"><img src="https://www.google.com/images/cleardot.gif" width="15" height="15" alt="Close" style="background-image:url(https://translate.googleapis.com/translate_static/img/te_ctrl3.gif);background-position:-28px 0px"></a>
+            <a id=":2.close" class="goog-close-link" href="javascript:void(0)" title="Close"><img alt="NIT Durgapur Logo" src="https://www.google.com/images/cleardot.gif" width="15" height="15" alt="Close" style="background-image:url(https://translate.googleapis.com/translate_static/img/te_ctrl3.gif);background-position:-28px 0px"></a>
             </div> -->
           </div>
         </div>
@@ -145,6 +145,9 @@ export default {
     position: absolute;bottom: 0;
   }
   .navbar .hm-btn i{
+    color: white
+  }
+  .navbar .hm-btn a{
     color: white
   }
   .navbar .navbar-content-cen{
