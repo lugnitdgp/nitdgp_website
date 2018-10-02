@@ -38,6 +38,12 @@ class VisitorModelAdmin(admin.ModelAdmin):
 	list_display = ['_name', '_designation', '_event_name']
 
 
+class OutreachModelAdmin(admin.ModelAdmin):
+        list_display = ['category', 'name']
+
+
+
+admin.site.register(Outreach, OutreachModelAdmin)
 admin.site.register(StudentClub, StudentClubModelAdmin)
 admin.site.register(Festival, FestivalModelAdmin)
 admin.site.register(GrievanceCell, GrievanceCellModelAdmin)

@@ -55,3 +55,16 @@ class PlacementLinksViewSet(ListAPIView):
 
 	queryset = PlacementLinks.objects.all()
 	serializer_class = PlacementLinksSerializer
+
+
+class OutreachViewSet(RetrieveAPIView):
+
+	queryset = Outreach.objects.all()
+	serializer_class = OutreachMainSerializer
+
+	def get_object(self):
+		return self.get_queryset()
+
+	def list(self, request, *args, **kwargs):
+		return Response({"results": OutreachMainSerializer(self.get_queryset(), context={"request": request}).data
+		})

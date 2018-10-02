@@ -63,3 +63,25 @@ class VisitorSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Visitor
 		fields = ('name', 'designation', 'event_name', 'image')
+
+
+class OutreachSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Outreach
+		fields = ('name', 'icon', 'mou')
+
+
+class OutreachMainSerializer(serializers.ModelSerializer):
+	def get_outreach(self, obj):
+		result = {}
+		for i in self.instance:
+			value = OutreachSerializer(i, context=self.context).data
+			try:
+				result[i.category].append(value)
+			except KeyError:
+				result[i.category] = [value]
+		return result
+	outreach = serializers.SerializerMethodField()
+	class Meta:
+		model = Outreach
+		fields = ('outreach',)

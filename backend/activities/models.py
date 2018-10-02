@@ -203,3 +203,33 @@ class Placement(BaseModel):
 
 	def _url(self):
 		return self.url
+
+
+def outreach_icon_path(instance, filename):
+    return 'activities/outreach/{0}/icon-{1}'.format(
+            instance.category.replace('/', '_slash_'),
+            instance.name.replace('/', '_slash_') + ' - ' + filename.replace('/', '_slash_')
+    )
+
+
+def outreach_mou_path(instance, filename):
+    return 'activities/outreach/{0}/mou-{1}'.format(
+            instance.category.replace('/', '_slash_'),
+            instance.name.replace('/', '_slash_').replace('-', '_') + '-' + filename.replace('/', '_slash_').replace('-', '_')
+    )
+
+
+class Outreach(BaseModel):
+        class Meta:
+                verbose_name_plural = 'Outreach'
+                ordering = ('category', 'name')
+        OUTREACH_CATEGORIES = (
+                ("Colleges/Institutes/Universities (Abroad)", "Colleges/Institutes/Universities (Abroad)"),
+                ("Colleges/Institutes/Universities (India)", "Colleges/Institutes/Universities (India)"),
+                ("Industries/Organizations (India)", "Industries/Organizations (India)"),
+                ("Research Institutions (India)", "Research Institutions (India)")
+        )
+        category = models.CharField(choices=OUTREACH_CATEGORIES, max_length=512, blank=False)
+        name = models.CharField(max_length=512, blank=False)
+        mou = models.FileField(upload_to=outreach_mou_path, blank=False)
+        icon = models.FileField(upload_to=outreach_icon_path, blank=False)
