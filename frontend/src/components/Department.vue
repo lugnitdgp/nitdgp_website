@@ -121,7 +121,7 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <card-testimonial :name="dept.hod.name" :image="dept.hod.image" desig="Head of Department">
+                <card-testimonial v-if="Object.keys(dept.hod).length" :name="dept.hod.name" :image="dept.hod.image" desig="Head of Department">
                   <strong>-- Research Interest --</strong><br>
                   <span v-html="dept.hod.research_interest.slice(3,-4)"></span><br>
                   <i class="fa fa-envelope"></i><br>
