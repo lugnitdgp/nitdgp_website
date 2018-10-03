@@ -2,17 +2,17 @@
   <links-page>
     <card title="Web Team">
       <div class="carousel-inner person-list" role="listbox">
-	<div class="carousel-item active">
-	  <div class="row">
-	    <div class="col" v-for="person in webteam.people">
-	      <card-testimonial :name="person.name" :image="person.image" :desig="'Batch of '+person.passing_year">
-		  	<!-- <i class="fa fa-github fa-lg"></i> -->
-		  	<!-- <a :href="'https://github.com/' + person.github_id">{{ person.github_id }}</a> -->
-				GLUG Member
-	      </card-testimonial>
-	    </div>
-	  </div>
-	</div>
+				<div class="carousel-item active">
+					<div class="row">
+						<div class="col" v-for="person in webteam.people">
+							<card-testimonial :name="person.name" :image="person.image" :desig="'Batch of '+person.passing_year">
+							<!-- <i class="fa fa-github fa-lg"></i> -->
+							<!-- <a :href="'https://github.com/' + person.github_id">{{ person.github_id }}</a> -->
+							GLUG Member
+							</card-testimonial>
+						</div>
+					</div>
+				</div>
       </div>
     </card>
   </links-page>
