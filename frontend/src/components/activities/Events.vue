@@ -3,7 +3,10 @@
     <card title="Seminars and Events">
       <ul class="list-group list-gr">
         <li v-for="event in events">
-          <a class="list-group-item" :href="event.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ event.date }} </span>&nbsp;{{ event.title }}</a>
+        	
+          <a v-if="event.file" class="list-group-item" :href="event.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ event.date }} </span>&nbsp;{{ event.title }}</a>
+
+          <a v-else="event.url" class="list-group-item" :href="event.url"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ event.date }} </span>&nbsp;{{ event.title }}</a>
         </li>
       </ul>
     </card>
