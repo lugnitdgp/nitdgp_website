@@ -3,16 +3,16 @@
     <card title="Notices">
       <ul class="nav nav-tabs nav-justified not-tab">
         <li class="nav-item">
+          <a v-if="$route.params.tab === 'general'" class="nav-link active" data-toggle="tab" href="#panel3" role="tab">General</a>
+          <a v-else class="nav-link" data-toggle="tab" href="#panel3" role="tab">General</a>
+        </li>
+        <li class="nav-item">
           <a v-if="$route.params.tab === 'academic'" class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Academic</a>
           <a v-else class="nav-link" data-toggle="tab" href="#panel1" role="tab">Academic</a>
         </li>
         <li class="nav-item">
           <a v-if="$route.params.tab === 'student'" class="nav-link active" data-toggle="tab" href="#panel2" role="tab">Student</a>
           <a v-else class="nav-link" data-toggle="tab" href="#panel2" role="tab">Student</a>
-        </li>
-        <li class="nav-item">
-          <a v-if="$route.params.tab === 'general'" class="nav-link active" data-toggle="tab" href="#panel3" role="tab">General</a>
-          <a v-else class="nav-link" data-toggle="tab" href="#panel3" role="tab">General</a>
         </li>
       </ul>
       <div class="tab-content card">
