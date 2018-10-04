@@ -1,50 +1,55 @@
 <template>
-  <div class="l1 page-type-links">
-    <!-- CONTENT -->
-    <div class="card">
-      <a class="card-header white-text">Quick Links</a>
-      <div class="card-body">
+    <ul class="">
+    <li class="dropdown mega-dropdown active">
+      <a class="dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">QuickLinks
+        <span class="sr-only">(current)</span>
+      </a>
+      <div class="dropdown-menu mega-menu v-2 z-depth-1 special-color py-5 px-3" aria-labelledby="navbarDropdownMenuLink2">
         <div class="row">
-          <div class="col">
-            <h4>Admissions</h4>
-            <ul>
+          <div class="col-md-6 col-xl-3 sub-menu mb-xl-0 mb-4">
+            <h6 class="sub-title text-uppercase font-weight-bold white-text">Admission</h6>
+            <ul class="list-unstyled">
               <li v-for="link in links['Admission']">
-                <a v-if="link.link" :href="link.link">{{link.title}}</a>
-                <a v-else :href="link.file">{{link.title}}</a>
+                <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
+                <br>---------------------
               </li>
             </ul>
           </div>
-          <div class="col">
-            <h4>General</h4>
-            <ul>
+          <div class="col-md-6 col-xl-3 sub-menu mb-xl-0 mb-4">
+            <h6 class="sub-title text-uppercase font-weight-bold white-text">General</h6>
+            <ul class="list-unstyled">
               <li v-for="link in links['General']">
-                <a v-if="link.link" :href="link.link">{{link.title}}</a>
-                <a v-else :href="link.file">{{link.title}}</a>
+                <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
+                <br>---------------------
               </li>
             </ul>
           </div>
-          <div class="col">
-            <h4>National Portal</h4>
-            <ul>
+          <div class="col-md-6 col-xl-3 sub-menu mb-xl-0 mb-4">
+            <h6 class="sub-title text-uppercase font-weight-bold white-text">National Portal</h6>
+            <ul class="list-unstyled">
               <li v-for="link in links['National Portal']">
-                <a v-if="link.link" :href="link.link">{{link.title}}</a>
-                <a v-else :href="link.file">{{link.title}}</a>
+                <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
+                <br>---------------------
               </li>
             </ul>
           </div>
-          <div class="col">
-            <h4>Social Media</h4>
-            <ul>
+          <div class="col-md-6 col-xl-3 sub-menu mb-xl-0 mb-4">
+            <h6 class="sub-title text-uppercase font-weight-bold white-text">Social Media</h6>
+            <ul class="list-unstyled">
               <li v-for="link in links['Social Media']">
-                <a v-if="link.link" :href="link.link">{{link.title}}</a>
-                <a v-else :href="link.file">{{link.title}}</a>
+                <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
+                <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
+                <br>---------------------
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </li>
+    </ul>
 </template>
 
 <script>
@@ -80,6 +85,17 @@ export default {
 </script>
 
 <style scoped>
+.col-md-6{
+  padding: 5px!important;
+}
+.mega-menu{
+  width: 500px;padding: 10px!important;
+}
+@media screen and (max-width: 600px){
+  .mega-menu{
+    width: 300px;padding: 10px!important;
+  }
+}
 ul {
   text-decoration: none;
 }

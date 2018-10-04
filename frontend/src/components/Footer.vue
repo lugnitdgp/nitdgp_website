@@ -28,6 +28,9 @@
                 {{link.name}}
               </a>
             </div>
+            <quick-links v-else-if="link.name == 'Quick Links'">
+              
+            </quick-links>
             <div v-else>
               <a :href="link.href">{{ link.name }}</a>
             </div>
@@ -81,6 +84,7 @@
 <script>
 import axios from 'axios'
 import { genBackendURL } from '@/common.js'
+import QuickLinks from '@/components/QuickLinks'
 
 export default {
   name: 'Footer',
@@ -97,7 +101,7 @@ export default {
               {name: 'govlogo8', href:"http://rti.gov.in/"},
               {name: 'govlogo9', href:"http://electronicsindia.co.in/"},
               {name: 'govlogo10', href:"http://swachhbharatmission.gov.in"}],
-      links: [{name: "Quick Links", href: "/quicklinks"},
+      links: [{name: "Quick Links", href: "#"},
               {name: "Holidays", href: "/holidays"},
               {name: "Notices@NITD", href: "/notices/general"},
               {name: "Careers@NITD", href: "/careers"},
@@ -118,6 +122,9 @@ export default {
          .catch(e => {
            console.log(e)
          })
+  },
+  components:{
+    QuickLinks
   }
 }
 </script>

@@ -224,6 +224,9 @@ export default {
 
 <style scoped>
 
+.col-4 {
+  padding-right: 0px;
+}
 .mobi {
   display: none;
 }
