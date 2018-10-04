@@ -56,13 +56,16 @@ export default {
 .news-row .date-col{
   margin-left:0px;padding:5px;
 }
-.news-row .date-col .black-text{
-  margin-top: -5.5em;margin-left: 7em;font-size: 70%;
-}
 .news-row .date-div{
   height: 60px!important;width: 70px!important;border-radius:5px!important;border:solid 2px #001333!important;background-color:#001333!important;
 }
+@media screen and (min-width: 1920px)  {
+  .news-title{
+    margin-top: -4.0em!important;margin-left: 4.8em!important;font-size: 100%!important;
+  }
+}
 .news-title{
+  margin-top: -5.2em;margin-left: 6em;font-size: 80%;
   text-align: left!important;
 }
 .news-row .date-div h3{
