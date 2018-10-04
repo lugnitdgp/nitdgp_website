@@ -44,7 +44,7 @@
                   </button>
                 </div>
                 <div class="modal-body" style="color:black;">
-                  Are you sure you want to go to <img :src="['/static/img/' + logo.name + '.png']">
+                  Are you sure you want to go to <img :src="['/static/img/' + logo.name + '.png']" :alt="logo.name">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" data-dismiss="modal">Stay Here</button>
