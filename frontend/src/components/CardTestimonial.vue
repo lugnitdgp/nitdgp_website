@@ -11,12 +11,12 @@
     <div class="card-body-in">
       <p v-if="id" class="card-title">
         <strong>
-          <a class="blue-text" :href="'/faculty/' + id">
+          <a class="blue-text notranslate" :href="'/faculty/' + id">
             {{ name }}
           </a>
         </strong>
       </p>
-      <p v-if="!id" class="card-title">
+      <p v-if="!id" class="card-title notranslate">
           {{ name }}
       </p>
       <h6 class="black-text">{{ desig }}</h6>

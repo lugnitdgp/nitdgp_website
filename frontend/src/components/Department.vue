@@ -2,7 +2,8 @@
   <div class="l2-idep">
     <sp-card v-if="dept" containerclass="l2-card" bodyclass="text-center">
       <p slot="header" class="tile-title-text">
-        <a href="/departments" class="white-text">Department of {{ dept.short_code }}</a>
+        <a href="/departments" class="white-text sh-dex">Department of {{ dept.name }}</a>
+        <a href="/departments" class="white-text sh-mob notranslate">Department of {{ dept.short_code }}</a>
       </p>
       <div class="tabs-wrapper up-content mx-auto">
         <ul class="nav classic-tabs" role="tablist">
@@ -387,6 +388,17 @@ export default {
 </script>
 
 <style>
+  .l2-idep .sh-mob{
+    display: none;
+  }
+  @media screen and (max-width: 750px){
+     .l2-idep .sh-mob{
+      display: block!important;
+    }
+     .l2-idep .sh-dex{
+      display: none!important;
+    }
+  }
   .l2-idep {
     margin-top: 20px;
   }
