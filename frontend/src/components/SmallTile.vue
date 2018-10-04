@@ -2,7 +2,7 @@
   <div class="col tile-small">
     <a :href="link">
       <div class="tile-content" align="center">
-        <i class="fa fa-2x" :class="icon">{{ title }}</i>
+        <i class="fa fa-2x notranslate" :class="icon">{{ title }}</i>
         <br>
         <p class="tile-small-text">{{ desc }}</p>
       </div>
