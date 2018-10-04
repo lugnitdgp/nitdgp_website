@@ -55,7 +55,7 @@
           </div>
           <a v-for="(logo,index) in logos" data-toggle="modal" :data-target="'#basicExampleModal'+index"
             class="container-fluid logo-container">
-            <img :src="['/static/img/' + logo.name + '.png']">
+            <img :src="['/static/img/' + logo.name + '.png']" :alt="logo.name">
           </a>
         </div>
       </div>
