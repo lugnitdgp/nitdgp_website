@@ -135,6 +135,7 @@ class Contact(BaseModel):
         verbose_name_plural = 'Contact Us'
 
     GROUPS = (
+        ('Academic Qualification Verification', 'Academic Qualification Verification'),
         ('Associate Dean', 'Associate Dean'),
         ('Computer Center', 'Computer Center'),
         ('Dean', 'Dean'),
