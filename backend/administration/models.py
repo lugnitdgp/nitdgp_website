@@ -1,8 +1,8 @@
 from django.db import models
+from django.core.validators import RegexValidator
 from base.models import BaseModel
 from department.models import Faculty
 
-# Create your models here.
 class Dean(BaseModel):
 
     class Meta:
@@ -151,3 +151,17 @@ class Senate(BaseModel):
 
     def _date(self):
         return self.date
+
+
+class Officer(BaseModel):
+    class Meta:
+        ordering = ('designation', 'name')
+
+    name = models.CharField(max_length=512)
+    designation = models.CharField(max_length=512)
+    phone = models.CharField(
+        max_length=10,
+        validators=[RegexValidator(r'^\d{10}$')]
+    )
+    email = models.EmailField()
+    photo = models.ImageField(upload_to='administration/officer/')

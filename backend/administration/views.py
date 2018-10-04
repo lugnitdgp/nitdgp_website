@@ -129,3 +129,8 @@ class BOGViewSet(ListAPIView):
                          'secretary': BOGSerializer(secretary, many=True, context={"request": request}).data,
                          'member': BOGSerializer(members, many=True, context={"request": request}).data
                          })
+
+
+class OfficerViewSet(ListAPIView):
+    queryset = Officer.objects.all()
+    serializer_class = OfficerSerializer

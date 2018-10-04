@@ -76,3 +76,9 @@ class HODSerializer(serializers.ModelSerializer):
 
         model = HOD
         fields = ('id', 'name', 'email', 'mobile', 'research_interest', 'joining_year', 'image', 'department', 'department_shortcode')
+
+
+class OfficerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Officer
+        fields = ('name', 'designation', 'phone', 'email', 'photo')
