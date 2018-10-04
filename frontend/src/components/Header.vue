@@ -27,13 +27,13 @@
             <div class="text-cont">
               <div class="row">
                 <p>
-                  <span class="nm-en-sm">
+                  <span class="nm-en-sm notranslate">
                     &nbsp;&nbsp;&nbsp;NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR
                   </span>
                   <span class="nm-hi">
                   राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर
                   </span>
-                  <span class="nm-en">
+                  <span class="nm-en notranslate">
                     &nbsp;|&nbsp;
                     NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR<br>
                   </span>
