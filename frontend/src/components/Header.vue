@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-      <div class="lang-tr">
+      <div class="lang-tr" style="display:none;">
         <div id="google_translate_element">
           <div id=":0.targetLanguage" class="goog-te-gadget-simple">
             <h5>अ|A</h5>
