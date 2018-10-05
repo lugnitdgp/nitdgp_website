@@ -12,7 +12,7 @@
         <div class="dropdown-menu" style="background-color: #001333;">
           <a class="dropdown-item" href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>
           <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
-          <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a>
+          <!-- <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a> -->
           <a class="dropdown-item" href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
         </div>
       </div>

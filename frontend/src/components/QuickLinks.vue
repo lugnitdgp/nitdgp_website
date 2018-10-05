@@ -12,7 +12,7 @@
               <li v-for="link in links['Admission']">
                 <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
                 <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
-                <br>---------------------
+                <br><div class="line-break">-------------------</div>
               </li>
             </ul>
           </div>
@@ -22,7 +22,7 @@
               <li v-for="link in links['General']">
                 <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
                 <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
-                <br>---------------------
+                <br><div class="line-break">-------------------</div>
               </li>
             </ul>
           </div>
@@ -32,7 +32,7 @@
               <li v-for="link in links['National Portal']">
                 <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
                 <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
-                <br>---------------------
+                <br><div class="line-break">-------------------</div>
               </li>
             </ul>
           </div>
@@ -42,7 +42,7 @@
               <li v-for="link in links['Social Media']">
                 <a class="menu-item pl-0" v-if="link.link" :href="link.link">{{link.title}}</a>
                 <a class="menu-item pl-0" v-else :href="link.file">{{link.title}}</a>
-                <br>---------------------
+                <br><div class="line-break">-------------------</div>
               </li>
             </ul>
           </div>
@@ -98,5 +98,12 @@ export default {
 }
 ul {
   text-decoration: none;
+}
+.menu-item {
+  font-size: 85%
+}
+
+.line-break {
+  margin: -8px auto
 }
 </style>
