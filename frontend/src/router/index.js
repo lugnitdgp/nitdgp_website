@@ -74,6 +74,7 @@ import Tenders from '@/components/information/Tenders'
 import Chanakya from '@/components/information/Chanakya'
 import Icc from '@/components/information/Icc'
 import Pgcell from '@/components/information/Pgcell'
+import Pension from '@/components/information/Pension'
 
 Vue.use(Router)
 
@@ -320,6 +321,11 @@ export default new Router({
       path: '/eprashasan',
       name: 'Eprashasan',
       component: Eprashasan
+    },
+    {
+      path: '/Pension',
+      name: 'Pension',
+      component: Pension
     },
     {
       path: '/accounts',
