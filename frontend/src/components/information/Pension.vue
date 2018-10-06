@@ -33,6 +33,9 @@ export default {
     return {
       
     }
+  },  
+  created () {
+    this.$emit('hideloader', true)
   },
   components: {
     Card,
