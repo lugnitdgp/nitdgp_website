@@ -161,11 +161,13 @@ class Officer(BaseModel):
     designation = models.CharField(max_length=512)
     phone = models.CharField(
         max_length=10,
-        validators=[RegexValidator(r'^\d{10}$')]
+        validators=[RegexValidator(r'^\d{10}$')],
+        blank=True
     )
     mobile = models.CharField(
         max_length=10,
-        validators=[RegexValidator(r'^\d{10}$')]
+        validators=[RegexValidator(r'^\d{10}$')],
+        blank=True
     )
-    email = models.EmailField()
+    email = models.EmailField(blank=True)
     photo = models.ImageField(upload_to='administration/officer/')
