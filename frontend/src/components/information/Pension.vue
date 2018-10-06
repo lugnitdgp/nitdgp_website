@@ -3,9 +3,6 @@
     <card title="Pensioners' Corner">
       <ul class="list-group list-gr">
         <li>
-          <!--<a class="list-group-item" target="new" :href="nba.file">
-            <span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ nba.date }} </span>&nbsp; {{ nba.title }}
-          </a>-->
           <a class="list-group-item" target="new" href="nitdgp.ac.in/AllPDF/Circular Dated 06.11.2015.pdf">Circular Dated 06.11.2015</a>
         </li>
         <li>
