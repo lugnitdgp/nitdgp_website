@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title="National Board of Accreditation">
+    <card title="Pensioners' Corner">
       <ul class="list-group list-gr">
         <li>
           <!--<a class="list-group-item" target="new" :href="nba.file">
@@ -26,8 +26,6 @@
 <script>
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
-import axios from 'axios'
-import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Pension",
@@ -35,7 +33,7 @@ export default {
     return {
       
     }
-  }
+  },
   components: {
     Card,
     LinksPage
