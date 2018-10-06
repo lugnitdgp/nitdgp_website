@@ -27,7 +27,7 @@ class BogAgendaAdmin(admin.ModelAdmin):
 
 
 class OfficerModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'designation', 'phone', 'email']
+    list_display = ['name', 'designation', 'phone', 'mobile', 'email']
 
 
 admin.site.register(Dean, DeanModelAdmin)

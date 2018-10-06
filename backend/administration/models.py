@@ -163,5 +163,9 @@ class Officer(BaseModel):
         max_length=10,
         validators=[RegexValidator(r'^\d{10}$')]
     )
+    mobile = models.CharField(
+        max_length=10,
+        validators=[RegexValidator(r'^\d{10}$')]
+    )
     email = models.EmailField()
     photo = models.ImageField(upload_to='administration/officer/')
