@@ -126,14 +126,13 @@
                 <div class="carousel-inner person-list" role="listbox">
                   <div class="carousel-item active">
                     <div class="row">
-                      <div class="col staffs" v-for="student in faculty.students">
-                        <card-testimonial
-                          :name="student.name"
-                          :image="student.image"
-                          :desig="student.degree">
-                          {{student.description}}
-                        </card-testimonial>
-                      </div>
+                      <card-testimonial v-for="(student, i) in faculty.students" :key="i"
+                        class="staffs"
+                        :name="student.name"
+                        :image="student.image"
+                        :desig="student.degree">
+                        {{student.description}}
+                      </card-testimonial>
                     </div>
                   </div>
                 </div>
@@ -301,6 +300,13 @@ export default {
 </script>
 
 <style scoped>
+  .staffs {
+    min-width: 200px !important;
+    min-height: 300px !important;
+    max-width: 500px !important;
+    max-height: 500px !important;
+    padding: 10px !important;
+  }
   .list-group a, .list-group a:hover {
     white-space: pre-wrap;
   }

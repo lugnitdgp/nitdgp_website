@@ -1,17 +1,14 @@
 <template>
   <links-page>
     <card title="Visitors">
-      <div class="carousel-inner person-list" role="listbox">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col black-text" v-for="visitor in visitors">
-              <card-testimonial :image="visitor.image" :name="visitor.name"
-                :desig="visitor.designation">
-                <strong>{{ visitor.event_name }}</strong><br>
-              </card-testimonial>
-            </div>
-          </div>
-        </div>
+      <div class="row">
+        <card-testimonial v-for="(visitor, i) in visitors" :key="i"
+          class="card-visitors black-text"
+          :image="visitor.image"
+          :name="visitor.name"
+          :desig="visitor.designation">
+          <strong>{{ visitor.event_name }}</strong><br>
+        </card-testimonial>
       </div>
     </card>
   </links-page>
@@ -52,3 +49,13 @@ export default {
   }
 };
 </script>
+
+<style>
+  .card-visitors {
+    min-width: 230px !important;
+    min-height: 200px !important;
+    max-width: 500px !important;
+    max-height: 500px !important;
+    padding: 10px !important;
+  }
+</style>

@@ -5,39 +5,36 @@
         <div class="carousel-item active">
           <div class="row">
             <div style="min-width:100%;"><h3>Chief Warden</h3></div>
-            <div class="col black-text" v-for="warden in wardens.chief_warden">
-              <card-testimonial :image="warden.image" :name="warden.name"
-                :desig="warden.designation">
-                <i class="fa fa-envelope"></i><br>
+            <card-testimonial v-for="(warden, i) in wardens.chief_warden" :key="i"
+              class="card-wardens black-text"
+              :image="warden.image"
+              :name="warden.name"
+              :desig="warden.designation">
                 <strong>{{ warden.email }}</strong><br>
-                <i class="fa fa-address-book"></i><br>
                 <strong>+91-{{ warden.mobile }}</strong></br>
-              </card-testimonial>
-            </div>
+            </card-testimonial>
           </div>
           <div class="row">
             <div style="min-width:100%;"><h3>Associate Chief Warden</h3></div>
-            <div class="col black-text" v-for="warden in wardens.associate_chief_warden">
-              <card-testimonial :image="warden.image" :name="warden.name"
-                :desig="warden.designation">
-                <i class="fa fa-envelope"></i><br>
-                <strong>{{ warden.email }}</strong><br>
-                <i class="fa fa-address-book"></i><br>
-                <strong>+91-{{ warden.mobile }}</strong></br>
-              </card-testimonial>
-            </div>
+            <card-testimonial v-for="(warden, i) in wardens.associate_chief_warden" :key="i"
+              class="card-wardens black-text"
+              :image="warden.image"
+              :name="warden.name"
+              :desig="warden.designation">
+              <strong>{{ warden.email }}</strong><br>
+              <strong>+91-{{ warden.mobile }}</strong></br>
+            </card-testimonial>
           </div>
           <div class="row">
             <div style="min-width:100%;"><h3>Warden</h3></div>
-            <div class="col black-text" v-for="warden in wardens.warden">
-              <card-testimonial :image="warden.image" :name="warden.name"
-                :desig="warden.designation">
-                <i class="fa fa-envelope"></i><br>
-                <strong>{{ warden.email }}</strong><br>
-                <i class="fa fa-address-book"></i><br>
-                <strong>+91-{{ warden.mobile }}</strong></br>
-              </card-testimonial>
-            </div>
+            <card-testimonial v-for="(warden, i) in wardens.warden" :key="i"
+              class="card-wardens black-text"
+              :image="warden.image"
+              :name="warden.name"
+              :desig="warden.designation">
+              <strong>{{ warden.email }}</strong><br>
+              <strong>+91-{{ warden.mobile }}</strong></br>
+            </card-testimonial>
           </div>
         </div>
       </div>
@@ -78,3 +75,13 @@ export default {
   }
 }
 </script>
+
+<style>
+  .card-wardens {
+    min-width: 230px !important;
+    min-height: 200px !important;
+    max-width: 400px !important;
+    max-height: 500px !important;
+    padding: 10px !important;
+  }
+</style>

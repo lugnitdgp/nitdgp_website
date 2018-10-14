@@ -4,15 +4,17 @@
       <div class="carousel-inner person-list" role="listbox">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col black-text" v-for="hod in hods">
-              <card-testimonial :image="hod.image" :name="hod.name" :id="hod.id"
-                :desig="hod.department">
-                <i class="fa fa-envelope"></i><br>
-                <strong>{{ hod.email }}</strong><br>
-                <i class="fa fa-address-book"></i><br>
-                <strong>+91-{{ hod.mobile }}</strong></br>
-              </card-testimonial>
-            </div>
+            <card-testimonial v-for="(hod, i) in hods" :key="i"
+              class="black-text"
+              :image="hod.image"
+              :name="hod.name"
+              :id="hod.id"
+              :desig="hod.department">
+              <i class="fa fa-envelope"></i><br>
+              <strong>{{ hod.email }}</strong><br>
+              <i class="fa fa-address-book"></i><br>
+              <strong>+91-{{ hod.mobile }}</strong></br>
+            </card-testimonial>
           </div>
         </div>
       </div>

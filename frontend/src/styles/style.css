@@ -180,12 +180,6 @@ hr.style4:after {
   .page-type-person .card-up{
     height: 200px !important;
   }
-  .person-list .row{
-    margin-left: 0!important;
-  }
-  .person-list .col{
-    min-width: 100%!important;max-width: 100%!important;
-  }
 }
 @media screen and (max-width: 1010px) {
   .mob{
@@ -326,45 +320,6 @@ hr.style4:after {
   background-color: #ECEFF1;
   color: #001333;
 }
-.person-list{
-  padding: 1em 0;min-height: 500px;
-}
-.person-list .testimonial-card{
-  height: 100%!important;
-}
-.person-list .row{
-  margin-left: 1em;
-}
-.person-list .col{
-  max-width: 235px;min-width: 235px;
-  padding-bottom: 15px;
-}
-.person-list .card-up{
-  background: linear-gradient(to right,#001333,#26C6DA);
-}
-.person-list .carousel-inner .col{
-  max-width: 20%;margin: 2px;
-}
-.person-list .card-up{
-  height: 85px;
-}
-.person-list .card-body-in .card-title{
-  font-size: 125%;
-}
-.person-list .card-body-in{
-  text-align: center;
-}
-.person-list hr{
-  margin: 0.5em 1em;
-}
-.person-list .avatar{
-  height: 95px;width: 95px;
-}
-.person-list .min-profile{
-  font-size:80%;
-  padding-left: 5px;
-  padding-right: 5px;
-}
 .accordion .card-header{
   padding: 0px!important;
 }
@@ -472,6 +427,9 @@ hr.style4:after {
     margin-bottom: -4px;
     min-height: 80%;
     color: #ffffff;
+}
+.row {
+    justify-content: center !important;
 }
 .l1-dep .tile-title-text{
   letter-spacing: 2px;font-weight: bold;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;

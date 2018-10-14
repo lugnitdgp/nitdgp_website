@@ -2,22 +2,23 @@
   <links-page>
     <card title="ICC Members">
       <div class="carousel-inner person-list" role="listbox">
-				<div class="carousel-item active">
-					<div class="row">
-						<div class="col" v-for="person in members">
-							<card-testimonial :name="person.name" :image="person.image" :desig="person.title">
-							{{person.designation}}
-							</card-testimonial>
-						</div>
-					</div>
-				</div>
+	<div class="carousel-item active">
+	  <div class="row">
+	    <card-testimonial v-for="(person, i) in members" :key="i"
+              :name="person.name"
+              :image="person.image"
+              :desig="person.title">
+	      {{person.designation}}
+	    </card-testimonial>
+	  </div>
+	</div>
       </div>
     </card>
     <card title="ICC">
       <ul class="list-group list-gr">
         <li v-for="icc in iccs">
           <a v-if="icc.link" class="list-group-item" target="new" :href="icc.link">
-           {{icc.title}}
+            {{icc.title}}
           </a>
           <a v-else class="list-group-item" target="new" :href="icc.file">
             {{icc.title}}

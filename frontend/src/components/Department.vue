@@ -53,7 +53,6 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li2" role="tabpanel" aria-labelledby="li2-list">
-          <h3 class="pane-title" align="left">Programmes</h3>
           <ul class="nav md-pills nav-justified pills-secondary">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#panell1" role="tab">UG</a>
@@ -121,22 +120,22 @@
           <h3 class="pane-title" align="left">Head Of Department</h3>
           <div class="container">
             <div class="row">
-              <div class="col">
-                <card-testimonial v-if="Object.keys(dept.hod).length" :name="dept.hod.name" :image="dept.hod.image" desig="Head of Department">
-                  <strong>-- Research Interest --</strong><br>
-                  <span v-html="dept.hod.research_interest.slice(3,-4)"></span><br>
-                  <i class="fa fa-envelope"></i><br>
-                  <strong>{{ dept.hod.email }}</strong><br>
-                  <strong><span class="blue-text">Joined the Institute in {{ convertYear(dept.hod.joining_year) }}
-                  </span></strong>
-                </card-testimonial>
-              </div>
+              <card-testimonial v-if="Object.keys(dept.hod).length"
+                :name="dept.hod.name"
+                :image="dept.hod.image"
+                desig="Head of Department">
+                <strong>Research Interest</strong><br>
+                <span v-html="dept.hod.research_interest.slice(3,-4)"></span><br>
+                <i class="fa fa-envelope"></i><br>
+                <strong>{{ dept.hod.email }}</strong><br>
+                <strong><span class="blue-text">Joined the Institute in {{ convertYear(dept.hod.joining_year) }}
+                </span></strong>
+              </card-testimonial>
             </div>
           </div>
         </div>
 
         <div class="tab-pane fade big-list" id="li4" role="tabpanel" aria-labelledby="li4-list">
-          <h3 class="pane-title" align="left">People</h3>
           <ul class="nav md-pills nav-justified pills-secondary">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#p4l1" role="tab">Faculty</a>
@@ -154,30 +153,24 @@
 
                 <div class="caros">
                   <div id="caro-p1-1" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <span class="carousel-title">FACULTY</span>
-                    <div class="carousel-inner person-list" role="listbox">
-                      <div class="carousel-item active">
-                        <div class="row">
-
-                          <div class="col" v-for="person in dept.people.faculty">
-                            <card-testimonial :name="person.name"
-                              :id="person.id"
-                              :image="person.image"
-                              :desig="person.designation">
-                              <strong>-- Research Interest --</strong><br>
-                              <a :href="'/faculty/' + person.id">
-                                <span v-html="stripDesc(person.research_interest)"></span><br>
-                              </a>
-                              <i class="fa fa-envelope"></i><br>
-                              <strong>{{ person.email }}</strong><br>
-                              <i class="fa fa-address-book"></i><br>
-                              <strong>+91-{{ person.mobile }}</strong></br>
-                              <strong><span class="blue-text">Joined the Institute in {{ convertYear(person.joining_year) }}
-                              </span></strong>
-                            </card-testimonial>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="row">
+                      <card-testimonial v-for="(person, i) in dept.people.faculty" :key="i"
+                        class="card-test"
+                        :name="person.name"
+                        :id="person.id"
+                        :image="person.image"
+                        :desig="person.designation">
+                        <strong>Research Interest</strong><br>
+                        <a :href="'/faculty/' + person.id">
+                          <span v-html="stripDesc(person.research_interest)" /><br>
+                        </a>
+                        <i class="fa fa-envelope" /><br>
+                        <strong>{{ person.email }}</strong><br>
+                        <strong>+91-{{ person.mobile }}</strong></br>
+                        <strong>
+                          <span class="blue-text">Joined the Institute in {{ convertYear(person.joining_year) }}</span>
+                        </strong>
+                      </card-testimonial>
                     </div>
 
                   </div>
@@ -186,20 +179,18 @@
               </div>
             </div>
             <div class="tab-pane fade" id="p4l2" role="tabpanel">
-              <span class="carousel-title">STAFF</span>
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col staffs" v-for="person in dept.people.staff">
-                    <card-testimonial
-                      :name="person.name"
-                      :image="person.image"
-                      :desig="person.designation"/>
-                  </div>
+                  <card-testimonial v-for="(person, i) in dept.people.staff" :key="i"
+                    class="staffs"
+                    :name="person.name"
+                    :image="person.image"
+                    :desig="person.designation"
+                  />
                 </div>
               </div>
             </div>
             <div class="tab-pane fade page-type-links" id="p4l3" role="tabpanel">
-              <span class="carousel-title">STUDENTS</span>
               <ul class="list-group list-gr">
                 <li v-for="link in dept.people.students">
                   <a class="list-group-item" target="new" :href="link.file">
@@ -212,7 +203,6 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li5" role="tabpanel" aria-labelledby="li5-list">
-          <h3 class="pane-title" align="left">Research</h3>
           <h4><strong>Collaboration with Academic and Research Institutions in recent times</strong></h4>
           <div class="card">
             <div class="card-body">
@@ -222,7 +212,6 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li6" role="tabpanel" aria-labelledby="li5-list">
-          <h3 class="pane-title" align="left">Projects</h3>
           <h4 ><strong>Ongoing Sponsored Projects</strong></h4>
           <div class="card">
             <div class="card-body">
@@ -232,7 +221,6 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li7" role="tabpanel" aria-labelledby="li7-list">
-          <h3 class="pane-title" align="left">Facilities</h3>
           <ul class="nav md-pills nav-justified pills-secondary">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#p7l1" role="tab">Labratories</a>
@@ -264,7 +252,6 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
-          <h3 class="pane-title" align="left">Activities</h3>
           <h4 class="black-text"><strong>Programmes Hosted by the Department</strong></h4>
           <div class="card">
             <div class="card-body">
@@ -388,14 +375,28 @@ export default {
 </script>
 
 <style>
+  .card-test {
+    min-width: 230px !important;
+    min-height: 300px !important;
+    max-width: 500px !important;
+    max-height: 500px !important;
+    padding: 10px !important;
+  }
+  .staffs {
+    min-width: 200px !important;
+    min-height: 300px !important;
+    max-width: 500px !important;
+    max-height: 500px !important;
+    padding: 10px !important;
+  }
   .l2-idep .sh-mob{
     display: none;
   }
   @media screen and (max-width: 750px){
-     .l2-idep .sh-mob{
+    .l2-idep .sh-mob{
       display: block!important;
     }
-     .l2-idep .sh-dex{
+    .l2-idep .sh-dex{
       display: none!important;
     }
   }
@@ -447,18 +448,6 @@ export default {
   .l2-idep .card-body .down-content .carousel-item .col{
     width: 100%;margin: 5px;max-width: 500px ! important;min-width: 200px !important;
   }
-  .l2-idep .card-body .down-content .avatar{
-    max-height: 100px;max-width: 100px;
-  }
-  .l2-idep .card-body .down-content .min-profile{
-    font-size:55%;
-  }
-  .l2-idep .card-body .down-content .testimonial-card .card-title{
-    font-size: 100%;
-  }
-  .l2-idep .card-body .down-content .testimonial-card .desig{
-    font-size: 100%;
-  }
   .l2-idep .card-body .down-content #li7 .col{
     min-width: 100%;
   }
@@ -484,63 +473,19 @@ export default {
   .l2-idep .card-body .down-content .table th{
     font-weight: bold;
   }
-  .l2-idep .card-body .down-content #li3 h6{
-    margin-top: -1em;
-  }
-  .l2-idep .card-body .down-content #li3 .col{
-    padding-left: 250px;padding-right: 250px;
-  }
-  .l2-idep .card-body .down-content .testimonial-card hr{
-    margin:5px;
-  }
   .l2-idep .card-body .down-content .carousel-inner .col{
     max-width: 20%;margin: 2px;
   }
   .l2-idep .card-body .down-content .caros{
     margin-bottom: -45px !important;
   }
-  .l2-idep .card-body .down-content .card-up{
-    height: 80px;
-  }
-  .l2-idep .card-body .down-content .card-body-in .card-title{
-    font-size: 75%;
-  }
-  .l2-idep .card-body .down-content .card-body-in h6{
-    font-size: 75%;
-  }
-  .l2-idep .card-body .down-content .avatar{
-    height: 80px;width: 80px;
-  }
   .l2-idep .card-body .down-content .min-profile{
     font-size:55%;
     padding-left: 5px;
     padding-right: 5px;
   }
-  .l2-idep .card-body .down-content #li4 .controls-top{
-    margin-bottom: 10px;
-  }
-  .l2-idep #li4 .staffs{
-    max-width: 220px!important;min-width: 220px!important;
-  }
-  .l2-idep #li4 .person-list .col{
-    max-width: 220px!important;min-width: 220px!important;
-  }
-  @media screen and (max-width: 600px){
-    .l2-idep #li4 .person-list .col{
-      max-width: 100%!important;min-width: 100%!important;
-    }
-    .l2-idep #li4 .staffs{
-      max-width: 100%!important;min-width: 100%!important;
-    }
-  }
-  .l2-idep .card-body .down-content #li4 .controls-top i{
-    font-size: 60%;margin-top: -20px;
-  }
   .l2-idep .card-body .down-content #li4 h6{
     margin-top: -1em;
-  }
-  .l2-idep .card-body .down-content #li4 hr{
-    margin-left: 2em;margin-right: 2em;
   }
   .l2-idep .card-body .down-content .table-wrapper-2{
     display: block;max-height: 2500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
@@ -576,12 +521,6 @@ export default {
   .l2-idep .tile-small-text{
     font-size: 90%;font-weight: bold;
   }
-  .l2-idep .card-body .down-content #li4 .card-up{
-    background: linear-gradient(to right,#001333,#26C6DA);
-  }
-  .l2-idep .card-body .down-content #li3 .card-up{
-    background: linear-gradient(to right,#001333,#26C6DA);
-  }
   .l2-idep .card-body .up-content .classic-tabs{
     background-color: #001333;
   }
@@ -592,10 +531,6 @@ export default {
   .l2-idep .down-content .tab-pane .nav-link{
     background-color: #E0E0E0;
     color: #78909C;
-  }
-  .l2-idep .card-body .down-content #li4 .controls-top .btn-floating{
-    background-color: #001333;
-    height: 25px;width: 25px;margin: 2px ! important;
   }
   .l2-idep .card-body .down-content #li4 .carousel-indicators li{
     background-color: #001333;

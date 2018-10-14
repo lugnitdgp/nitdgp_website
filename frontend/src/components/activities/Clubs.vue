@@ -23,14 +23,15 @@
       <div class="carousel-inner person-list" role="listbox">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col black-text" v-for="(club,index) in clubs">
-              <card-testimonial :image="club.image" :name="club.name">
-                <strong>-- Description --</strong><br>
-                <a style="font-weight:normal!important;" data-toggle="modal" :data-target="'#basicExampleModal'+index" v-html="stripDesc2(club.description)"></a><br>
-                <i class="fa fa-globe"></i><br>
-                <strong><a :href="club.link">{{ club.link }}</a></strong><br>
-              </card-testimonial>
-            </div>
+            <card-testimonial v-for="(club, i) in clubs" :key="i"
+              class="black-text"
+              :image="club.image"
+              :name="club.name">
+              <strong>Description</strong><br>
+              <a style="font-weight:normal!important;" data-toggle="modal" :data-target="'#basicExampleModal'+i" v-html="stripDesc2(club.description)"></a><br>
+              <i class="fa fa-globe"></i><br>
+              <strong><a :href="club.link">{{ club.link }}</a></strong><br>
+            </card-testimonial>
           </div>
         </div>
       </div>

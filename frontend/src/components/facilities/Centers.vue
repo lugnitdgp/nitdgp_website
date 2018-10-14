@@ -4,13 +4,14 @@
       <div class="carousel-inner person-list" role="listbox">
         <div class="carousel-item active">
           <div class="row">
-            <div class="col" v-for="center in centers">
-              <card-testimonial :name="center.title" :image="center.image">
-                <a :href="center.link">
-                  <span v-html="center.description"></span>
-                </a>
-              </card-testimonial>
-            </div>
+            <card-testimonial v-for="(center, i) in centers" :key="i"
+              class="card-centers"
+              :name="center.title"
+              :image="center.image">
+              <a :href="center.link">
+                <span v-html="center.description"></span>
+              </a>
+            </card-testimonial>
           </div>
         </div>
       </div>
@@ -49,3 +50,13 @@ export default {
   }
 }
 </script>
+
+<style>
+  .card-centers {
+    min-width: 230px !important;
+    min-height: 200px !important;
+    max-width: 300px !important;
+    max-height: 500px !important;
+    padding: 10px !important;
+  }
+</style>
