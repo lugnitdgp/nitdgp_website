@@ -20,19 +20,19 @@
             <a class="nav-link waves-light" data-toggle="tab" href="#li4" role="tab" >People</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li5" role="tab" >Research</a>
+            <a class="nav-link waves-light" :class="{'disabled': !dept.research.length }" data-toggle="tab" href="#li5" role="tab" >Research</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li6" role="tab" >Projects</a>
+            <a class="nav-link waves-light" :class="{'disabled': !dept.projects.length }" data-toggle="tab" href="#li6" role="tab" >Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-light" data-toggle="tab" href="#li7" role="tab" >Facilities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li8" role="tab" >Activities</a>
+            <a class="nav-link waves-light" :class="{'disabled': !dept.activities.length }" data-toggle="tab" href="#li8" role="tab" >Activities</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" data-toggle="tab" href="#li9" role="tab">Photo Gallery</a>
+            <a class="nav-link waves-light" :class="{'disabled': !dept.photos.length }" data-toggle="tab" href="#li9" role="tab">Photo Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-light" data-toggle="tab" href="#li10" role="tab">Contact Us</a>
@@ -137,45 +137,36 @@
 
         <div class="tab-pane fade big-list" id="li4" role="tabpanel" aria-labelledby="li4-list">
           <ul class="nav md-pills nav-justified pills-secondary">
-            <li class="nav-item">
+            <li class="nav-item" :class="{'disabled': !dept.people.faculty.length }">
               <a class="nav-link active" data-toggle="tab" href="#p4l1" role="tab">Faculty</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" :class="{'disabled': !dept.people.staff.length }">
               <a class="nav-link" data-toggle="tab" href="#p4l2" role="tab">Staff</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" :class="{'disabled': !dept.people.students.length }">
               <a class="nav-link" data-toggle="tab" href="#p4l3" role="tab">Students</a>
             </li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane fade in show active" id="p4l1" role="tabpanel">
-              <div class="container-fluid">
-
-                <div class="caros">
-                  <div id="caro-p1-1" class="carousel slide carousel-multi-item" data-ride="carousel">
-                    <div class="row">
-                      <card-testimonial v-for="(person, i) in dept.people.faculty" :key="i"
-                        class="card-test"
-                        :name="person.name"
-                        :id="person.id"
-                        :image="person.image"
-                        :desig="person.designation">
-                        <strong>Research Interest</strong><br>
-                        <a :href="'/faculty/' + person.id">
-                          <span v-html="stripDesc(person.research_interest)" /><br>
-                        </a>
-                        <i class="fa fa-envelope" /><br>
-                        <strong>{{ person.email }}</strong><br>
-                        <strong>+91-{{ person.mobile }}</strong></br>
-                        <strong>
-                          <span class="blue-text">Joined the Institute in {{ convertYear(person.joining_year) }}</span>
-                        </strong>
-                      </card-testimonial>
-                    </div>
-
-                  </div>
-                </div>
-
+              <div class="row">
+                <card-testimonial v-for="(person, i) in dept.people.faculty" :key="i"
+                  class="card-test"
+                  :name="person.name"
+                  :id="person.id"
+                  :image="person.image"
+                  :desig="person.designation">
+                  <strong>Research Interest</strong><br>
+                  <a :href="'/faculty/' + person.id">
+                    <span v-html="stripDesc(person.research_interest)" /><br>
+                  </a>
+                  <i class="fa fa-envelope" /><br>
+                  <strong>{{ person.email }}</strong><br>
+                  <strong>+91-{{ person.mobile }}</strong></br>
+                  <strong>
+                    <span class="blue-text">Joined the Institute in {{ convertYear(person.joining_year) }}</span>
+                  </strong>
+                </card-testimonial>
               </div>
             </div>
             <div class="tab-pane fade" id="p4l2" role="tabpanel">
@@ -204,20 +195,12 @@
 
         <div class="tab-pane fade big-list" id="li5" role="tabpanel" aria-labelledby="li5-list">
           <h4><strong>Collaboration with Academic and Research Institutions in recent times</strong></h4>
-          <div class="card">
-            <div class="card-body">
-              <table-renderer :theader="research_header" :table="dept.research"></table-renderer>
-            </div>
-          </div>
+          <table-renderer :theader="research_header" :table="dept.research" />
         </div>
 
         <div class="tab-pane fade big-list" id="li6" role="tabpanel" aria-labelledby="li5-list">
           <h4 ><strong>Ongoing Sponsored Projects</strong></h4>
-          <div class="card">
-            <div class="card-body">
-              <table-renderer :theader="project_header" :table="dept.projects"></table-renderer>
-            </div>
-          </div>
+          <table-renderer :theader="project_header" :table="dept.projects" />
         </div>
 
         <div class="tab-pane fade big-list" id="li7" role="tabpanel" aria-labelledby="li7-list">
@@ -253,11 +236,7 @@
 
         <div class="tab-pane fade big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
           <h4 class="black-text"><strong>Programmes Hosted by the Department</strong></h4>
-          <div class="card">
-            <div class="card-body">
-              <table-renderer :theader="activities_header" :table="dept.activities"></table-renderer>
-            </div>
-          </div>
+          <table-renderer :theader="activities_header" :table="dept.activities"></table-renderer>
         </div>
 
         <div class="tab-pane fade big-list" id="li9" role="tabpanel" aria-labelledby="li9-list">
@@ -288,8 +267,7 @@
         </div>
 
         <div class="tab-pane fade big-list" id="li10" role="tabpanel" aria-labelledby="li10-list">
-          <p align="center" v-html="dept.contact_us">
-          </p>
+          <p align="center" v-html="dept.contact_us" />
         </div>
       </div>
     </sp-card>
