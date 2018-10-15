@@ -707,3 +707,7 @@ hr.style4:after {
 .l3-fac .dropdown-item.active{
   background-color: #001333;
 }
+
+.tab-content {
+  padding: 10px;
+}
