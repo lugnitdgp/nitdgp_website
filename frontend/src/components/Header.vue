@@ -31,14 +31,14 @@
                     &nbsp;&nbsp;&nbsp;NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR
                   </span>
                   <span class="nm-hi">
-                  राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर
+                    राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर
+                    &nbsp;|&nbsp;
                   </span>
                   <span class="nm-en notranslate">
-                    &nbsp;|&nbsp;
                     NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR<br>
                   </span>
                   <span class="nm-det">
-                    An Institute of National Importance under Government of India, 
+                    An Institute of National Importance under Government of India,
                     Ministry of Human Resource Development
                   </span>
                 </p>
@@ -159,8 +159,12 @@ export default {
   .nav-logo .navbar-brand{
     padding: 0px;margin:0px;
   }
-  .nav-logo .col-11{
+  .nav-logo .col-11 {
     margin: auto;
+    padding: 0px;
+  }
+  .col-1 {
+    padding: 0px;
   }
   .nav-logo .col-11 .text-cont{
     height: 100%;margin: 0 auto
