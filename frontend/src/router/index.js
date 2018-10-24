@@ -34,6 +34,7 @@ import Senate from '@/components/administration/Senate'
 import Deans from '@/components/administration/Deans'
 import Hods from '@/components/administration/Hods'
 import Wardens from '@/components/administration/Wardens'
+import Officers from '@/components/administration/Officers'
 
 import Festivals from '@/components/activities/Festivals'
 import Alumni from '@/components/activities/Alumni'
@@ -205,6 +206,11 @@ export default new Router({
       path: '/wardens',
       name: 'Wardens',
       component: Wardens
+    },
+    {
+      path: '/officers',
+      name: 'Officers',
+      component: Officers
     },
 
     // Activities
