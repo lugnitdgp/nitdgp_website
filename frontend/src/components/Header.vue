@@ -14,6 +14,7 @@
           <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
           <!-- <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a> -->
           <a class="dropdown-item" href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
+          <a class="dropdown-item" href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail</a>
         </div>
       </div>
       <div class="navbar-content-cen container">
