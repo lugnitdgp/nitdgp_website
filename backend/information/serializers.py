@@ -84,3 +84,9 @@ class ICCSerializer(serializers.ModelSerializer):
     class Meta:
         model = ICC
         fields = ('title', 'file', 'date', 'link')
+
+class NADSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = NAD
+        fields = ('title', 'file', 'date')

@@ -88,3 +88,7 @@ class PublicGrievanceViewSet(ListAPIView):
 class ICCViewSet(ListAPIView):
     queryset = ICC.objects.all().order_by('-date')
     serializer_class = ICCSerializer
+
+class NADViewSet(ListAPIView):
+    queryset = NAD.objects.all().order_by('-date')
+    serializer_class = NADSerializer

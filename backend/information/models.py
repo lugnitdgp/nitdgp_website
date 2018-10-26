@@ -200,3 +200,15 @@ class ICC(BaseModel):
 
     def __str__(self):
         return self.title
+
+class NAD(BaseModel):
+    class Meta:
+        verbose_name_plural = 'National Academic Depository'
+
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='information/NAD/%Y', blank=True)
+    link = models.URLField(blank=True)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
