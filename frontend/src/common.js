@@ -92,9 +92,11 @@ function convertNewsfeed(raw_data){
     news.month = months[date.getMonth()]
     news.date = date.getDate()
     news.year = date.getFullYear()
-    if (news.file != null || news.link) {
+    if (news.file != null || news.link || news.url) {
       if (news.file)
         news.link = news.file
+      if (news.url)
+        news.link = news.url
       news.link = genBackendURL(news.link, true)
     }
     news_slide.push(news)
