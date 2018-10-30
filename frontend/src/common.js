@@ -83,6 +83,7 @@ function range(start, stop, step) {
 
 
 function convertNewsfeed(raw_data){
+
   const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUNE", "JULY",
                  "AUG", "SEPT", "OCT", "NOV", "DEC"]
   let notices = []
