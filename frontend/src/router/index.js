@@ -48,6 +48,7 @@ import EventVisitors from '@/components/activities/EventVisitors'
 import GrievanceCell from '@/components/activities/GrievanceCell'
 
 import Library from '@/components/facilities/Library'
+import Question from '@/components/facilities/Question'
 import Mu from '@/components/facilities/Mu'
 import Coe from '@/components/facilities/Coe'
 import Cif from '@/components/facilities/Cif'
@@ -265,6 +266,11 @@ export default new Router({
       path: '/hvl',
       name: 'Hvl',
       component: Hvl
+    },
+    {
+      path: '/question',
+      name: 'Question',
+      component: Question
     },
     {
       path: '/canteen',
