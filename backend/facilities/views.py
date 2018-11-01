@@ -34,6 +34,11 @@ class ResourceViewSet(ListAPIView):
 				result[rtype] = [ResourceSerializer(resource, context={"request": request}).data]
 		return Response({"resources": result})
 
+class SemesterquestionViewSet(ListAPIView):
+    queryset = Semesterquestion.objects.all().order_by('-updated_at')
+    serializer_class = SemesterquestionSerializer
+
+
 
 class SACViewSet(ListAPIView):
 

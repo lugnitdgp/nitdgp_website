@@ -21,7 +21,10 @@ class CenterModelAdmin(admin.ModelAdmin):
 class CIFModelAdmin(admin.ModelAdmin):
 	list_display = ['_equipment_name','_equipment_desc']
 
-
+class SemesterquestionModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file']
+    
+admin.site.register(Semesterquestion,SemesterquestionModelAdmin)
 admin.site.register(Center, CenterModelAdmin)
 admin.site.register(Library, LibraryModelAdmin)
 admin.site.register(Resource, ResourceModelAdmin)

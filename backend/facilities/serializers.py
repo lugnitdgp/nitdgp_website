@@ -24,6 +24,14 @@ class ResourceSerializer(serializers.ModelSerializer):
 		fields = ('title','url')
 
 
+
+class SemesterquestionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Semesterquestion
+        fields = ('title','file')
+
+
 class SACSerializer(serializers.ModelSerializer):
 
 	class Meta:

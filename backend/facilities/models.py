@@ -58,6 +58,20 @@ class Resource(BaseModel):
     def _type(self):
         return self.type
 
+class Semesterquestion(BaseModel):
+
+    class Meta:
+        verbose_name_plural = 'Semester Question'
+
+    title = models.CharField(max_length=255, default="")
+    file = models.FileField(upload_to='facilities/questions/%Y')
+   
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
 
 class SAC(BaseModel):
 
