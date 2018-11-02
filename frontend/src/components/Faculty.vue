@@ -130,7 +130,7 @@
                         class="staffs"
                         :name="student.name"
                         :image="student.image"
-                        :desig="student.degree">
+                        :desig="student.degree + ' (' + student.type + ')'">
                         {{student.description}}
                       </card-testimonial>
                     </div>
