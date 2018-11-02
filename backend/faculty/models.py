@@ -129,10 +129,13 @@ class Students(BaseModel):
     class Meta:
         verbose_name_plural = 'Students under Faculty'
 
+    TYPES = (('Ongoing', 'Ongoing'), ('Completed', 'Completed'))
+
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     name = models.CharField(max_length=512)
     image = models.ImageField(upload_to=rename_students, blank=True)
     degree = models.CharField(max_length=512, blank=True)
+    type = models.CharField(choices=TYPES, max_length=64, default=TYPES[0][0])
     description = models.TextField(blank=True)
 
     def __str__(self):
