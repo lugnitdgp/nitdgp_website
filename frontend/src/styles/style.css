@@ -372,7 +372,7 @@ hr.style4:after {
   background: linear-gradient(#001333,#001333,#0D47A1);
 }
 .page-type-person .card-up{
-  height: 400px;
+  height: 400px !important;
   background: #001333;
 }
 .page-type-person .desig{
