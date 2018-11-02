@@ -128,6 +128,7 @@ class Students(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Students under Faculty'
+        ordering = ['-type']
 
     TYPES = (('Ongoing', 'Ongoing'), ('Completed', 'Completed'))
 
