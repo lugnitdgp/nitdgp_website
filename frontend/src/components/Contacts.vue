@@ -90,15 +90,51 @@
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
-              <div v-for="details in list" class="col contact-col ">
-                <li class="list-group-item disabled" style="height: 100%">
+              <div v-for="details in list" v-if="details.designation=='Associate Dean (Academic & Examination)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
                     {{ details.designation }}
                   </h5>
                   <span v-html="details.contact"/>
                 </li>
-              </div>
+            </div>
+            <div v-for="details in list" v-if="details.designation=='Associate Dean (Alumni & Outreach)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+            </div>
+            <div v-for="details in list" v-if="details.designation=='Associate Dean (Research & Consultancy)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+            </div>
+            <div v-for="details in list" v-if="details.designation=='Associate Dean (Student Welfare)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+            </div>
+            <div v-for="details in list" v-if="details.designation=='Associate Dean (Training & Placement)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+            </div>
             </div>
           </ul>
         </div>
