@@ -160,7 +160,7 @@
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
-              <div v-for="details in list" class="col contact-col ">
+              <div v-for="details in sortedHOD" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -428,6 +428,8 @@ export default {
     axios.get(genBackendURL("dashboard/contacts"))
   	 .then(response => {
   	   this.groups = response.data.groups
+       this.hodlist = this.groups['HOD']
+
   	   this.$emit('hideloader', true)
          })
          .catch(e => {
@@ -437,7 +439,21 @@ export default {
   },
   data () {
     return {
-      groups: {}
+      groups: {},
+      hodlist: {}
+    }
+  },
+  computed: {
+    sortedHOD: function() {
+      function compare(a, b) {
+        if (a.designation < b.designation)
+          return -1;
+        if (a.designation > b.designation)
+          return 1;
+        return 0;
+      }
+
+      return this.hodlist.sort(compare)
     }
   },
   components: {
