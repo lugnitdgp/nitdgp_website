@@ -12,6 +12,7 @@ import Downloads from '@/components/Downloads'
 import PageNotFound from '@/components/PageNotFound'
 import Contacts from '@/components/Contacts'
 import QuickLinks from '@/components/QuickLinks'
+import Liveconvocation from '@/components/Liveconvocation'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -105,6 +106,11 @@ export default new Router({
       component: Faculty
     },
 
+    {
+      path: '/liveconvocation',
+      name: 'Liveconvocation',
+      component: Liveconvocation
+    },
     // Academics
     {
       path: '/admission',
