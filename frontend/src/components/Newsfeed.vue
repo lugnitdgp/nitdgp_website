@@ -17,7 +17,7 @@
                   <h6 style="font-size: 15px;"> Sep 2018</h6>
                 </strong>
               </div>
-              <div class="news-title" style="color: #fff;font-weight: bold;text-align: center;">14th Convocation will Streaming Live at 9 AM</div>
+              <div class="news-title" style="color: #fff;font-weight: bold;text-align: center;">14th Convocation is Streaming Live </div>
             </div>
           </a>
         </div>
