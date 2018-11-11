@@ -14,7 +14,7 @@
               <div align="center" class="date-div">
                 <strong class="white-text">
                   <h3>11</h3>
-                  <h6 style="font-size: 15px;"> Sep 2018</h6>
+                  <h6 style="font-size: 15px;"> Nov 2018</h6>
                 </strong>
               </div>
               <div class="news-title" style="color: #fff;font-weight: bold;text-align: center;">14th Convocation is Streaming Live </div>
