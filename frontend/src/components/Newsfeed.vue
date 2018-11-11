@@ -1,44 +1,37 @@
 <template>
   <sp-card containerclass="card-news">
     <span slot="header" class="tile-title-text">
-      
+      <a class="btn-floating btn-sm" href="#newscarowrap" data-slide="prev">
+        <i class="fa fa-chevron-left"></i>
+      </a>
       NEWSFEED
-      
+      <a class="btn-floating btn-sm" href="#newscarowrap" data-slide="next">
+        <i class="fa fa-chevron-right"></i>
+      </a>
     </span>
-    <div>
+    <div id="newscarowrap" class="carousel slide carousel-multi-item" data-ride="carousel" data-interval="6000">
       <!--Slides-->
-      <div>
-        <div>
-          <a href="http://nitdgp.ac.in/liveconvocation" target="new"  class="row card news-row">
-            <div class="col date-col" style="background: #D81B60;">
+      <div class="carousel-inner" role="listbox">
+        <div v-for="(news_slide,index) in notices" class="carousel-item" :class="index == 0 ? 'active' : ''">
+          <a :href="news.link" target="new" v-for="news in news_slide" class="row card news-row anim2">
+            <div class="col date-col">
               <div align="center" class="date-div">
                 <strong class="white-text">
-                  <h3>11</h3>
-                  <h6 style="font-size: 15px;"> Nov 2018</h6>
+                  <h3>{{ news.date }}</h3>
+                  <h6>{{ news.month }} {{ news.year % 100 }}</h6>
                 </strong>
               </div>
-              <div class="news-title" style="color: #fff;font-weight: bold;text-align: center;">14th Convocation is Streaming Live </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div>
-        <div>
-          <a href="http://nitdgp.ac.in/AllPDF/14th_Convocation_Notice.pdf" target="new"  class="row card news-row">
-            <div class="col date-col" style="background: #D81B60;">
-              <div align="center" class="date-div">
-                <strong class="white-text">
-                  <h3>27</h3>
-                  <h6 style="font-size: 15px;"> Sep 2018</h6>
-                </strong>
-              </div>
-              <div class="news-title" style="color: #fff;font-weight: bold;text-align: center;">Notice for 14th Convocation </div>
+              <div class="news-title black-text">{{ news.title }}</div>
             </div>
           </a>
         </div>
       </div>
       <!-- End of Slides-->
-     
+      <div class="indiwrap">
+        <ol class="carousel-indicators newsc-indi">
+          <li v-for="(slides,index) in notices" data-target="#newscarowrap" :data-slide-to="index" :class="index == 0 ? 'active' : ''"></li>
+        </ol>
+      </div>
     </div>
   </sp-card>
 </template>
