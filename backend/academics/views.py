@@ -39,7 +39,7 @@ class AdmissionViewSet(ListAPIView):
 
 class ExaminationViewSet(ListAPIView):
 
-    queryset = Examination.objects.all().order_by('-year')
+    queryset = Examination.objects.all().order_by('-updated_at')
     serializer_class = ExaminationSerializer
 
 
