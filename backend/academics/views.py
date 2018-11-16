@@ -1,7 +1,10 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
 from academics.serializers import *
-
+from django.http import HttpResponse
+from pathlib import Path
+from os import listdir
+import json
 
 class NoticeViewSet(ListAPIView):
 
@@ -62,3 +65,14 @@ class RegistrationViewSet(ListAPIView):
 
     queryset = Registration.objects.all().order_by('-updated_at')
     serializer_class = RegistrationSerializer
+
+
+def convocation_links(request, sets):
+        BASE_DIR = "/var/www/html/nitdgp_website/frontend/dist/convocation-images/"
+        sets = int(sets)
+        x = {}
+        for i in range(1, sets + 1):
+                path = BASE_DIR + "SET" + str(i) + "-small"
+                if Path(path).exists():
+                        x[path.split("/")[-1]] = listdir(path)
+        return HttpResponse(json.dumps(x), content_type="application/json")
