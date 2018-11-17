@@ -127,7 +127,7 @@ export default new Router({
       component: Departments
     },
     {
-      path: '/convocation-images',
+      path: '/convocation-pictures',
       name: 'Liveconvocation',
       component: Liveconvocation
     },
