@@ -3,10 +3,10 @@
     <card title="Convocation Images">
       <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/C1_mK81r7jA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
       <collapse-list>
-        <card-collapse v-for="images,key in image_sets" :title="key.split('-')[0]">
+        <card-collapse v-for="(images,key) in image_sets" :title="key.split('-')[0]">
           <div class="row" style="margin:0 auto;">
-            <div class="col" v-for="image in images">
-              <img :src="'https://nitdgp.ac.in/convocation-images/' + key + '/' + image" class="imageview img img-responsive" />
+            <div class="col" v-for="image in images" :key="image">
+              <img :src="'https://nitdgp.ac.in/convocation-photos/' + key + '/' + image" :alt="image" class="imageview" />
             </div>
           </div>
         </card-collapse>
