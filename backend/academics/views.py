@@ -68,7 +68,7 @@ class RegistrationViewSet(ListAPIView):
 
 
 def convocation_links(request, sets):
-        BASE_DIR = "/var/www/html/nitdgp_website/frontend/dist/convocation-images/"
+        BASE_DIR = "/var/www/html/nitdgp_website/frontend/dist/convocation-photos/"
         sets = int(sets)
         x = {}
         for i in range(1, sets + 1):
