@@ -241,12 +241,147 @@
           </ul>
         </div>
       </card-collapse>
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
+      <!-- <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
               <div v-for="details in list" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </card-collapse> -->
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
+        <div class="card-text">
+          <ul class="list-group list-gr">
+            <div class="row">
+              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Academic & Examinations)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Establishment)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Finance & Accounts)'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Purchase & Stores)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (Establishment)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Assistant Registrar(Internal Audit)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+
+              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (Registrar Secretariat, Legal Affairs & CPIO)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (Student Welfare)'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Executive Engineer'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Liason Officer, SC-ST Cell'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Medical Officers'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Nodal Officer of DASA - 2015'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Security Officer'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Staff Grievance Officer'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
                     {{ details.designation }}
