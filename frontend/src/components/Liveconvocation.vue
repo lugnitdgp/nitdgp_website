@@ -6,7 +6,7 @@
         <card-collapse v-for="(images,key) in image_sets" :title="key.split('-')[0]">
           <div class="row" style="margin:0 auto;">
             <div class="col" v-for="image in images" :key="image">
-              <img :src="'https://nitdgp.ac.in/convocation-images/' + key + '/' + image" :alt="image" class="imageview" />
+              <img :src="'https://nitdgp.ac.in/convocation-photos/' + key + '/' + image" :alt="image" class="imageview" />
             </div>
           </div>
         </card-collapse>
