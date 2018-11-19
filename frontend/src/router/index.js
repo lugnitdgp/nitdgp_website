@@ -23,6 +23,7 @@ import Regulations from '@/components/academics/Regulations'
 import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
 import Examinations from '@/components/academics/Examinations'
+import Fees from '@/components/academics/Fees'
 
 import Visitor from '@/components/administration/Visitor'
 import Mhrd from '@/components/administration/Mhrd'
@@ -155,6 +156,11 @@ export default new Router({
       path: '/examinations',
       name: 'Examinations',
       component: Examinations
+    },
+    {
+      path: '/fees',
+      name: 'Fees',
+      component: Fees
     },
 
     // Administration
