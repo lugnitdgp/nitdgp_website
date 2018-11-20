@@ -9,6 +9,7 @@ import collections
 class FacultyDetailSerializer(serializers.ModelSerializer):
 
     teachings = serializers.SerializerMethodField()
+    notes = serializers.SerializerMethodField()
     education = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
     journals = serializers.SerializerMethodField()
@@ -25,21 +26,25 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
         info = Teachings.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
-        else :
+        else:
             return info.first().teachings
+
+    def get_notes(self, obj):
+        info = Notes.objects.filter(faculty_id=obj.id)
+        return NotesSerializer(info, context=self.context, many=True).data
 
     def get_education(self, obj):
         info = Education.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
-        else :
+        else:
             return info.first().education
 
     def get_projects(self, obj):
         info = Projects.objects.filter(faculty_id=obj.id)
         if info.count() == 0:
             return {}
-        else :
+        else:
             return info.first().projects
 
     def get_journals(self, obj):
@@ -93,7 +98,7 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Faculty
         fields = ('name', 'mobile', 'research_interest', 'image', 'email', 'joining_year', 'designation',
-        'education', 'projects', 'dept_short_code', 'students', 'journals', 'conferences', 'books', 'patents', 'teachings', 'work_experience', 'awards_and_recognition',
+                  'education', 'projects', 'dept_short_code', 'students', 'journals', 'conferences', 'books', 'patents', 'teachings', 'notes', 'work_experience', 'awards_and_recognition',
         'administrative_responsibilities', 'misc')
 
 
@@ -103,3 +108,9 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Students
         fields = ('name', 'image', 'type', 'degree', 'description')
+
+
+class NotesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notes
+        fields = ('subject_name', 'subject_code', 'semester', 'degree', 'note')

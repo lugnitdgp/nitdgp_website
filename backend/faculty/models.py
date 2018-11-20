@@ -5,6 +5,11 @@ from base.models import BaseModel
 from ckeditor.fields import RichTextField
 from department.models import Faculty, Courses
 from django.core.mail import EmailMessage
+from django.core.validators import MaxValueValidator
+from django.dispatch import receiver
+from django.db.models.signals import pre_save
+from random import choice
+from string import ascii_lowercase
 
 
 class EmailThread(threading.Thread):
@@ -159,3 +164,28 @@ class Misc(BaseModel):
 
     def __str__(self):
         return self.faculty.name
+
+
+class Notes(BaseModel):
+    class Meta:
+        verbose_name_plural = 'Notes'
+
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    subject_name = models.CharField(max_length=64)
+    subject_code = models.CharField(max_length=16)
+    semester = models.PositiveIntegerField(validators=[MaxValueValidator(8)])
+    degree = models.CharField(choices=(
+        ("UG", "UG"),
+        ("PG", "PG")
+    ), max_length=4)
+    secret_key = models.CharField(max_length=10)
+    note = models.FileField(upload_to="faculty/notes", blank=True)
+
+    def __str__(self):
+        return self.subject_name + ' [' + self.subject_code + ']'
+
+
+@receiver(pre_save, sender=Notes)
+def save_profile(sender, instance, **kwargs):
+    # Generate random and short secret keys
+    instance.secret_key = ''.join(choice(ascii_lowercase) for i in range(8))
