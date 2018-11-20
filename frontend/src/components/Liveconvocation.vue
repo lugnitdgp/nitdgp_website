@@ -1,12 +1,15 @@
 <template>
   <links-page>
     <card title="Convocation Images">
-      <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/C1_mK81r7jA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
       <collapse-list>
-        <card-collapse v-for="(images,key) in image_sets" :title="key.split('-')[0]">
+        <card-collapse v-for="(images,key,i) in image_sets" :title="key.split('-')[0]" :key="i">
           <div class="row" style="margin:0 auto;">
-            <div class="col" v-for="image in images" :key="image">
-              <img :src="'https://nitdgp.ac.in/convocation-photos/' + key + '/' + image" :alt="image" class="imageview" />
+            <div class="col" v-for="(image,index) in images" :key="index">
+              <a :href="'https://nitdgp.ac.in/convocation-photos/'+key.split('-')[0] + '/' + image"
+                :download="key.split('-')[0] + '-' + image"
+                @contextmenu.prevent="">
+                <img :src="'https://nitdgp.ac.in/convocation-photos/' + key + '/' + image" :alt="image" class="imageview" />
+              </a>
             </div>
           </div>
         </card-collapse>
