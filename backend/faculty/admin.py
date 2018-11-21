@@ -284,7 +284,6 @@ class MiscModelAdmin(admin.ModelAdmin):
 
 class NotesModelAdmin(admin.ModelAdmin):
     list_display = ['subject_code', 'subject_name','semester', 'degree', 'secret_key']
-    exclude = ("secret_key", )
 
     def has_add_permission(self, request):
         if request.user.is_superuser:

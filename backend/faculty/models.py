@@ -194,5 +194,6 @@ class Notes(BaseModel):
 
 @receiver(pre_save, sender=Notes)
 def save_profile(sender, instance, **kwargs):
-    # Generate random and short secret keys
-    instance.secret_key = ''.join(choice(ascii_lowercase) for i in range(8))
+    # Generate random and short secret keys if not given
+    if instance.secret_key.trim() == '':
+        instance.secret_key = ''.join(choice(ascii_lowercase) for i in range(8))
