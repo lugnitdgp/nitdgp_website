@@ -16,15 +16,15 @@ class FacultyViewSet(RetrieveAPIView):
 
     def retrieve(self, request, *args, **kwargs):
         return Response({"faculty": FacultyDetailSerializer(self.get_queryset().filter(id=kwargs['pk']), many=True, context={'request': request}).data
-                       })
+        })
 
 
 @csrf_exempt
 def download_note(request):
     if request.POST.get('secret_key', False):
         print("$", request.POST.get(u'secret_key', False))
-	qset = Notes.objects.filter(secret_key=request.POST['secret_key'])
-	if len(qset) > 0:
+        qset = Notes.objects.filter(secret_key=request.POST['secret_key'])
+        if len(qset) > 0:
             qset = qset[0]
             file_name = qset.note.path
             old_cwd = os.getcwd()
