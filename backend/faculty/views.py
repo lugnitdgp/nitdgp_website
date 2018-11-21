@@ -34,7 +34,7 @@ def download_note(request):
             print(file_name, dir_name)
             os.chdir(dir_name)
             tmp = tempfile.NamedTemporaryFile(
-                mode="w+",
+                mode="wb+",
                 dir=dir_name,
                 delete=False,
                 prefix="NOTES-",
