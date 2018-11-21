@@ -131,7 +131,7 @@
                         <span v-if="key != 'input_key'" v-html="data" />
                         <form v-else-if="key == 'input_key' && data != 'Notes Not Available'"
                           @submit.prevent="download_note(faculty.notes[i]['id'], data)">
-                          <input v-model="faculty.notes[i][key]" value="data" />
+                          <input v-model="faculty.notes[i][key]" />
                           <input type="submit" class="btn-primary" value="Submit" />
                         </form>
                         <span v-else-if="key == 'input_key' && data == 'Notes Not Available'" v-html="data" />
@@ -143,7 +143,7 @@
               </div>
               <br>
               <span v-if="'teachings' in faculty" v-html="faculty.teachings"/>
-              <h4 v-else class="red-text">Not Available</h4>
+              <h4 v-else-if="!('notes' in faculty || 'teachings' in faculty)" class="red-text">Not Available</h4>
             </div>
             <div class="tab-pane fade big-list" id="li7" role="tabpanel">
               <h4 class="pane-title" align="left">List of students</h4>
@@ -199,7 +199,7 @@
             <a class="dropdown-item" :class="{ 'disabled': !('research_interest' in faculty) }" data-toggle="list" href="#li3" role="tab">Research Interest</a>
             <a class="dropdown-item" :class="{ 'disabled': !('projects' in faculty) }" data-toggle="list" href="#li4" role="tab">Projects</a>
             <a class="dropdown-item" data-toggle="list" href="#li5" role="tab">Publication</a>
-            <a class="dropdown-item" :class="{ 'disabled': !('teachings' in faculty) }" data-toggle="list" href="#li6" role="tab">Teachings</a>
+            <a class="dropdown-item" :class="{ 'disabled': !('teachings' in faculty || 'notes' in faculty) }" data-toggle="list" href="#li6" role="tab">Teachings</a>
             <a class="dropdown-item" :class="{ 'disabled': !('students' in faculty) }" data-toggle="list" href="#li7" role="tab">Students</a>
             <a class="dropdown-item" :class="{ 'disabled': !('awards_and_recognition' in faculty) }" data-toggle="list" href="#li8" role="tab">Awards and recognitions</a>
             <a class="dropdown-item" :class="{ 'disabled': !('administrative_responsibilities' in faculty) }" data-toggle="list" href="#li9" role="tab">Administrative Responsibilities</a>
