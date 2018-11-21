@@ -76,12 +76,12 @@
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="p5l1" role="tabpanel">
                   <h4>Journals</h4>
-                  <table-renderer :table="faculty.journals" :theader="['Citation','Journal','Year']"></table-renderer>
+                  <table-renderer :table="faculty.journals" :theader="['Citation','Journal','Year']" />
                 </div>
                 <div class="tab-pane fade page-type-links" id="p5l2" role="tabpanel">
                   <ul class="list-group list-gr">
-                  <h4>Conferences</h4>
-                  <table-renderer :table="faculty.conferences" :theader="['Citation','Location','Year']"></table-renderer>
+                    <h4>Conferences</h4>
+                    <table-renderer :table="faculty.conferences" :theader="['Citation','Location','Year']" />
                   </ul>
                 </div>
                 <div class="tab-pane fade in" id="p5l3" role="tabpanel">
@@ -116,6 +116,32 @@
             <div class="tab-pane fade big-list" id="li6" role="tabpanel">
               <h4 class="pane-title" align="left">Teachings</h4>
               <hr>
+              <div v-if="'notes' in faculty" class="table-wrapper-2 table-bordered">
+                <table class="table table-responsive-md">
+                  <thead class="mdb-color lighten-4">
+                    <tr>
+                      <th class="th-lg" v-for="thead in ['Subject Name','Subject Code','Semester','Degree','Download Key']">
+                        {{ thead }}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="(row, i) in faculty.notes">
+                      <td v-for="(data,key) in row" v-if="key != 'id'">
+                        <span v-if="key != 'input_key'" v-html="data" />
+                        <form v-else-if="key == 'input_key' && data == ''"
+                          @submit.prevent="download_note(faculty.notes[i]['id'], data)">
+                          <input v-model="faculty.notes[i][key]" value="data" />
+                          <input type="submit" class="btn-primary" value="Submit" />
+                        </form>
+                        <span v-else-if="key == 'input_key' && data != ''" v-html="data" />
+          </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <br>
               <span v-if="'teachings' in faculty" v-html="faculty.teachings"/>
               <h4 v-else class="red-text">Not Available</h4>
             </div>
@@ -189,7 +215,7 @@
 </template>
 <script>
 import axios from 'axios'
-import { genBackendURL } from '@/common.js'
+import { genBackendURL, backURL } from '@/common.js'
 import TableRenderer from '@/components/TableRenderer'
 import CardCollapse from '@/components/CardCollapse'
 import SpCard from '@/components/SpCard'
@@ -216,16 +242,16 @@ export default {
            this.faculty = response.data.faculty[0]
            this.mobile = this.faculty.mobile
            this.joining_year = this.faculty.joining_year
-           for (var key in this.faculty) {
-             if (this.faculty.hasOwnProperty(key) &&
-                 Object.keys(this.faculty[key]).length === 0) {
-               delete this.faculty[key];
+           for (let key in this.faculty) {
+             if (this.faculty.hasOwnProperty(key)) {
+               if (Object.keys(this.faculty[key]).length === 0) {
+                 delete this.faculty[key]
+               }
              }
            }
            this.$emit('hideloader', true)
          })
          .catch(e => {
-           console.log(e)
            window.location = '/NotAvailable'
          })
     window.addEventListener('resize', this.updateWidth)
@@ -285,6 +311,22 @@ export default {
     },
     updateWidth () {
       this.windowWidth = document.body.clientWidth
+    },
+    download_note (id, input) {
+      let data = new FormData()
+      data.append('id', id)
+      data.append('input_key', input)
+      axios({
+	method: 'post',
+	url: genBackendURL('faculty/notes'),
+	data: data,
+      })
+          .then(response => {
+            window.location.href = backURL + response.data.download_url
+          })
+          .catch(e => {
+            alert("Wrong download key")
+          })
     }
   },
   components: {
