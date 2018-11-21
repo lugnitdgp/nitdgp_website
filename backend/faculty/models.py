@@ -11,6 +11,8 @@ from django.db.models.signals import pre_save
 from random import choice
 from string import ascii_lowercase
 
+from .validators import validate_pdf
+
 
 class EmailThread(threading.Thread):
 
@@ -179,7 +181,7 @@ class Notes(BaseModel):
         ("PG", "PG")
     ), max_length=4)
     secret_key = models.CharField(max_length=10, blank=True)
-    note = models.FileField(upload_to="faculty/notes", blank=True)
+    note = models.FileField(upload_to="faculty/notes", validators=[validate_pdf], blank=True)
 
     def __str__(self):
         return self.subject_name + ' [' + self.subject_code + ']'
