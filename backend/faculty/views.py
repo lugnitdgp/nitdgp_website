@@ -41,8 +41,10 @@ def download_note(request):
                 suffix=file_extension
             )
             tmp.write(qset.note.read())
-            download_file_name = "/".join(qset.note.url.split('/')[0:-1]) + "/" + tmp.name.split("/")[-1]
-            print(download_file_name)
+            tmp_file_name = tmp.name
+            download_file_name = "/".join(qset.note.url.split('/')[0:-1]) + "/" + os.path.basename(tmp.name)
+            tmp.close()
+            os.chmod(tmp_file_name, 0o640)
             os.chdir(old_cwd)
             return HttpResponse(
                 json.dumps({"download_url": download_file_name}),
