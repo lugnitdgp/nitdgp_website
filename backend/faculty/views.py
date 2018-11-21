@@ -21,11 +21,12 @@ class FacultyViewSet(RetrieveAPIView):
 
 @csrf_exempt
 def download_note(request):
-    if request.POST.get('secret_key', False):
-        print("$", request.POST.get(u'secret_key', False))
-        qset = Notes.objects.filter(secret_key=request.POST['secret_key'])
-        if len(qset) > 0:
-            qset = qset[0]
+    if request.POST.get('input_key', False) and request.POST.get('id', False):
+        try:
+            qset = Notes.objects.get(id=request.POST['id'])
+        except Notes.DoesNotExist:
+            return HttpResponse(status=404)
+        if qset.secret_key == request.POST.get('input_key', ""):
             file_name = qset.note.path
             old_cwd = os.getcwd()
             file_extension = "." + file_name.split('.')[-1]
@@ -47,4 +48,6 @@ def download_note(request):
                 json.dumps({"download_url": download_file_name}),
                 content_type="application/json"
             )
-    return HttpResponse(status=201)
+        else:
+            return HttpResponse(status=403)
+    return HttpResponse(status=404)
