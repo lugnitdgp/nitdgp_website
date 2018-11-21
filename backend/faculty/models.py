@@ -186,7 +186,10 @@ class Notes(BaseModel):
 
     def input_key(self):
         # Will always be an empty string just like password
-        return ""
+        if self.note:
+            return ""
+        else:
+            return "Notes Not Available"
 
 
 @receiver(pre_save, sender=Notes)
