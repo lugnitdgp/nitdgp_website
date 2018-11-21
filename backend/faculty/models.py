@@ -178,7 +178,7 @@ class Notes(BaseModel):
         ("UG", "UG"),
         ("PG", "PG")
     ), max_length=4)
-    secret_key = models.CharField(max_length=10)
+    secret_key = models.CharField(max_length=10, blank=True)
     note = models.FileField(upload_to="faculty/notes", blank=True)
 
     def __str__(self):
