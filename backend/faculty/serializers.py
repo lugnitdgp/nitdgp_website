@@ -113,4 +113,4 @@ class StudentSerializer(serializers.ModelSerializer):
 class NotesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notes
-        fields = ('subject_name', 'subject_code', 'semester', 'degree', 'input_key')
+        fields = ('id', 'subject_name', 'subject_code', 'semester', 'degree', 'input_key')
