@@ -285,15 +285,6 @@ class MiscModelAdmin(admin.ModelAdmin):
 class NotesModelAdmin(admin.ModelAdmin):
     list_display = ['subject_code', 'subject_name','semester', 'degree', 'secret_key']
 
-    def has_add_permission(self, request):
-        if request.user.is_superuser:
-            return True
-        num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
-        if num_objects >= 1:
-          return False
-        else:
-          return True
-
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
