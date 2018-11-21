@@ -129,12 +129,12 @@
                     <tr v-for="(row, i) in faculty.notes">
                       <td v-for="(data,key) in row" v-if="key != 'id'">
                         <span v-if="key != 'input_key'" v-html="data" />
-                        <form v-else-if="key == 'input_key' && data == ''"
+                        <form v-else-if="key == 'input_key' && data != 'Notes Not Available'"
                           @submit.prevent="download_note(faculty.notes[i]['id'], data)">
                           <input v-model="faculty.notes[i][key]" value="data" />
                           <input type="submit" class="btn-primary" value="Submit" />
                         </form>
-                        <span v-else-if="key == 'input_key' && data != ''" v-html="data" />
+                        <span v-else-if="key == 'input_key' && data == 'Notes Not Available'" v-html="data" />
           </span>
                       </td>
                     </tr>
