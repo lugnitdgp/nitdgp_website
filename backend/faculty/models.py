@@ -184,6 +184,10 @@ class Notes(BaseModel):
     def __str__(self):
         return self.subject_name + ' [' + self.subject_code + ']'
 
+    def input_key(self):
+        # Will always be an empty string just like password
+        return ""
+
 
 @receiver(pre_save, sender=Notes)
 def save_profile(sender, instance, **kwargs):
