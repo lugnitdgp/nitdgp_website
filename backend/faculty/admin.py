@@ -284,6 +284,7 @@ class MiscModelAdmin(admin.ModelAdmin):
 
 class NotesModelAdmin(admin.ModelAdmin):
     list_display = ['subject_code', 'subject_name','semester', 'degree', 'secret_key']
+    list_editable = ['secret_key']
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
