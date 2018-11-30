@@ -62,6 +62,7 @@ import Sac from '@/components/facilities/Sac'
 import Hvl from '@/components/facilities/Hvl'
 import Canteen from '@/components/facilities/Canteen'
 import Centers from '@/components/facilities/Centers'
+import Cec from '@/components/facilities/Cec'
 
 import Reports from '@/components/information/Reports'
 import Eprashasan from '@/components/information/Eprashasan'
@@ -317,6 +318,11 @@ export default new Router({
       path: '/cif',
       name: 'Cif',
       component: Cif
+    },
+    {
+      path: '/cec',
+      name: 'Cec',
+      component: Cec
     },
     {
       path: '/GuestHouse',
