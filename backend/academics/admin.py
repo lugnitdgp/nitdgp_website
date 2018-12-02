@@ -4,7 +4,7 @@ from academics.models import *
 
 class NoticeModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'archive', 'notice_type', 'date']
-    list_editable = ['notice_type']
+    list_editable = ['notice_type', 'archive']
     list_filter = ['notice_type', 'archive']
     search_fields = ['title', 'notice_type']
     actions = ['archive_notices', 'restore_notices']
