@@ -3,6 +3,9 @@
     <card title="Academic Fees" class="list-group list-grations">
       <ul class="list-group list-gr">
         <li>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/Fee Structure for PhD programme at National Institute of Technology Durgapur for the admission year of 2018-2019.pdf">Fee structure for PhD programme at National Institute of Technology Durgapur for the admission year of 2018-19</a>
+        </li>
+        <li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/Fee structure for B.Tech, B.Tech & M.Tech(Dual degree) programme at National Institute of Technology Durgapur for the admission year of 2018-2019.pdf">Fee structure for B.Tech, B.Tech & M.Tech(Dual degree) programme at National Institute of Technology Durgapur for the admission year of 2018-2019</a>
         </li>
         <li>
