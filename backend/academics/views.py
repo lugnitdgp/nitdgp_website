@@ -8,7 +8,7 @@ import json
 
 class NoticeViewSet(ListAPIView):
 
-    queryset = Notice.objects.all().order_by('-date')
+    queryset = Notice.objects.all().filter(archive=False).order_by('-date')
     serializer_class = NoticeSerializer
 
     def list(self, request, *args, **kwargs):
