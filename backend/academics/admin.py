@@ -5,8 +5,8 @@ from academics.models import *
 class NoticeModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'archive', 'notice_type', 'date']
     list_editable = ['notice_type', 'archive']
-    list_filter = ['notice_type', 'archive']
-    search_fields = ['title', 'notice_type']
+    list_filter = ['notice_type', 'archive', 'date']
+    search_fields = ['title', 'date']
     actions = ['archive_notices', 'restore_notices']
 
     def archive_notices(self, request, queryset):
@@ -56,6 +56,10 @@ class RegulationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
 
+class FeeModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file']
+
+
 class RegistrationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
@@ -73,4 +77,5 @@ admin.site.register(Admission, AdmissionModelAdmin)
 admin.site.register(Examination, ExaminationModelAdmin)
 admin.site.register(Document, DocumentModelAdmin)
 admin.site.register(Regulation, RegulationModelAdmin)
+admin.site.register(Fee, FeeModelAdmin)
 admin.site.register(Registration, RegistrationModelAdmin)

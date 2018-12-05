@@ -28,7 +28,7 @@ class AccountViewSet(ListAPIView):
 
 class CareerViewSet(ListAPIView):
 
-    queryset = Career.objects.all().order_by('-created_at')
+    queryset = Career.objects.all().filter(archive=False).order_by('-created_at')
     serializer_class = CareerSerializer
 
     def list(self, request, *args, **kwargs):
@@ -37,7 +37,7 @@ class CareerViewSet(ListAPIView):
 
 class TenderViewSet(ListAPIView):
 
-    queryset = Tender.objects.all().order_by('-created_at')
+    queryset = Tender.objects.all().filter(archive=False).order_by('-created_at')
     serializer_class = TenderSerializer
 
     def list(self, request, *args, **kwargs):

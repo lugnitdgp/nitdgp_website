@@ -2,6 +2,13 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework.renderers import JSONRenderer
+from django.http import JsonResponse
+from django.core import serializers
+
+from information.models import Tender,Career
+from academics.models import Notice
+from activities.models import SeminarEvent
 
 
 class APIRoot(APIView):
@@ -16,3 +23,45 @@ class APIRoot(APIView):
         }
 
         return Response(resp_dict)
+
+
+def convert_url(f, r):
+    return r.build_absolute_uri(f.url) if f.name != "" else f.name
+
+
+def archives(request):
+    serializerTender = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'file': convert_url(x.file, request)
+    }, list(Tender.objects.filter(archive=True).order_by('-date'))))
+
+    serializerCareer = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'file': convert_url(x.file, request)
+    }, list(Career.objects.filter(archive=True).order_by('-date'))))
+
+    serializerNotice = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'type':x.notice_type,
+        'file': convert_url(x.file, request),
+        'url': x.url
+    }, list(Notice.objects.filter(archive=True).order_by('-date'))))
+
+    serializerEvent = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'file': convert_url(x.file, request),
+        'url': x.url
+    }, list(SeminarEvent.objects.filter(archive=True).order_by('-date'))))
+
+    json = {
+        "tender": serializerTender,
+        "notice": serializerNotice,
+        "career":serializerCareer,
+        "event":serializerEvent
+    }
+
+    return JsonResponse(json)

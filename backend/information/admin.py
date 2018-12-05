@@ -11,11 +11,31 @@ class AccountModelAdmin(admin.ModelAdmin):
 
 
 class CareerModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_file']
+    list_display = ['title', 'archive', 'date']
+    search_fields = ['title', 'date']
+    list_filter = ['date', 'archive']
+    list_editable = ['archive', 'date']
+    actions = ['archive_careers', 'restore_careers']
+
+    def archive_careers(self, request, queryset):
+        queryset.update(archive=True)
+
+    def restore_careers(self, request, queryset):
+        queryset.update(archive=False)
 
 
 class TenderModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_file']
+    list_display = ['title', 'archive', 'date']
+    search_fields = ['title', 'date']
+    list_filter = ['date', 'archive']
+    list_editable = ['archive', 'date']
+    actions = ['archive_tenders', 'restore_tenders']
+
+    def archive_tenders(self, request, queryset):
+        queryset.update(archive=True)
+
+    def restore_tenders(self, request, queryset):
+        queryset.update(archive=False)
 
 
 class TEQIPModelAdmin(admin.ModelAdmin):

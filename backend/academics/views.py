@@ -61,6 +61,12 @@ class RegulationViewSet(ListAPIView):
     serializer_class = RegulationSerializer
 
 
+class FeeViewSet(ListAPIView):
+
+    queryset = Fee.objects.all().order_by('-updated_at')
+    serializer_class = FeeSerializer
+
+
 class RegistrationViewSet(ListAPIView):
 
     queryset = Registration.objects.all().order_by('-updated_at')

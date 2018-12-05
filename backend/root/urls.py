@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
-from base.views import APIRoot
+from base.views import APIRoot, archives
 from root import settings
 
 admin.site.site_header = 'NIT Durgapur Administration'
@@ -33,7 +33,8 @@ urlpatterns = [
     url(r'^', include('information.urls')),
     url(r'^', include('activities.urls')),
     url(r'^', include('faculty.urls')),
-    url(r'^$', APIRoot.as_view(), name='root-view')
+    url(r'^$', APIRoot.as_view(), name='root-view'),
+    url(r'^archives/$', archives, name='archives')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

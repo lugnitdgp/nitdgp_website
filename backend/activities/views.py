@@ -23,7 +23,7 @@ class GrievanceCellViewSet(ListAPIView):
 
 class SeminarEventViewSet(ListAPIView):
 
-	queryset = SeminarEvent.objects.all()
+	queryset = SeminarEvent.objects.all().filter(archive=False)
 	serializer_class = SeminarEventSerializer
 
 

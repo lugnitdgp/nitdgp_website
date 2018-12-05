@@ -46,6 +46,7 @@ class Career(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/careers/%Y')
+    archive = models.BooleanField(default=False)
     date = models.DateField()
 
     def __str__(self):
@@ -62,6 +63,7 @@ class Tender(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/tender/%Y')
+    archive = models.BooleanField(default=False)
     date = models.DateField()
 
     def __str__(self):

@@ -15,7 +15,17 @@ class GrievanceCellModelAdmin(admin.ModelAdmin):
 
 
 class SeminarEventModelAdmin(admin.ModelAdmin):
-	list_display = ['_title', '_file', '_url', '_date']
+	list_display = ['title', 'archive', 'date']
+	search_fields = ['title', 'date']
+	list_filter = ['date', 'archive']
+	list_editable = ['archive', 'date']
+	actions = ['archive_events', 'restore_events']
+
+	def archive_events(self, request, queryset):
+		queryset.update(archive=True)
+
+	def restore_events(self, request, queryset):
+		queryset.update(archive=False)
 
 
 class AchievementModelAdmin(admin.ModelAdmin):

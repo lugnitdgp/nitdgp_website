@@ -76,6 +76,7 @@ class SeminarEvent(BaseModel):
 
 	title = models.CharField(max_length=512)
 	file = models.FileField(upload_to='activities/seminar_and_events/%Y/%m/%d', blank=True)
+	archive = models.BooleanField(default=False)
 	url = models.URLField(blank=True)
 	date = models.DateField()
 

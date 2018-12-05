@@ -24,6 +24,13 @@ class RegulationSerializer(serializers.ModelSerializer):
         fields = ('title', 'file')
 
 
+class FeeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Fee
+        fields = ('title', 'file')
+
+
 class RegistrationSerializer(serializers.ModelSerializer):
 
     class Meta:
