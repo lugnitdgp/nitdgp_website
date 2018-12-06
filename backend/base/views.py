@@ -42,13 +42,26 @@ def archives(request):
         'file': convert_url(x.file, request)
     }, list(Career.objects.filter(archive=True).order_by('-date'))))
 
-    serializerNotice = list(map(lambda x: {
+    serializerAcademicNotice = list(map(lambda x: {
         'title': x.title,
         'date': x.date,
-        'type':x.notice_type,
         'file': convert_url(x.file, request),
         'url': x.url
-    }, list(Notice.objects.filter(archive=True).order_by('-date'))))
+    }, list(Notice.objects.filter(archive=True,notice_type='Academic').order_by('-date'))))
+
+    serializerStudentNotice = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'file': convert_url(x.file, request),
+        'url': x.url
+    }, list(Notice.objects.filter(archive=True,notice_type='Student').order_by('-date'))))
+
+    serializerGeneralNotice = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'file': convert_url(x.file, request),
+        'url': x.url
+    }, list(Notice.objects.filter(archive=True,notice_type='General').order_by('-date'))))
 
     serializerEvent = list(map(lambda x: {
         'title': x.title,
@@ -59,7 +72,9 @@ def archives(request):
 
     json = {
         "tender": serializerTender,
-        "notice": serializerNotice,
+        "academic_notice": serializerAcademicNotice,
+        "student_notice": serializerStudentNotice,
+        "general_notice": serializerGeneralNotice,
         "career":serializerCareer,
         "event":serializerEvent
     }
