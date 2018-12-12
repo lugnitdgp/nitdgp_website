@@ -7,7 +7,7 @@
       </div>
       <div class="card-body">
         <h3 class="mt-1 white-text">
-          <strong>Shri Uday Chandra Mukherjee</strong>
+          <strong>Shri Soumya Sen Sharma</strong>
         </h3>
         <h4 class="desig cyan-text">Registrar</h4>
         <hr class="hr-grey">
