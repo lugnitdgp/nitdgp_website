@@ -2,7 +2,8 @@
   <header class="container-fluid">
     <nav class="navbar navbar-expand-lg primary-color fixed-top">
       <div class="hm-btn">
-        <a href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>
+        <a href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>&nbsp;&nbsp;
+        <a href="/chanakya"><i class="fa fa-1x fa-tv"></i> Chanakya&nbsp;</a>
       </div>
       <div class="navbar-menu">
         <a class="nav-link dropdown-toggle" style="color:white;padding-left: 5px"
@@ -10,8 +11,8 @@
           <i style="color: white" class="fa fa-2x fa-bars" ></i>
         </a>
         <div class="dropdown-menu" style="background-color: #001333;">
-          <a class="dropdown-item" href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>
-          <a class="dropdown-item" href="/chanakya"><i class="fa fa-1x fa-tv"></i> Chanakya&nbsp;</a>
+          <a class="dropdown-item" href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>          
+          <a class="dropdown-item" href="/home"><i class="fa fa-1x fa-tv" ></i> Chanakya</a>          
           <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
           <!-- <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a> -->
           <a class="dropdown-item" href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
@@ -60,7 +61,6 @@
         </div>
       </div>
       <div class="nav-_links">
-        <a href="/chanakya"><i class="fa fa-1x fa-tv"></i> Chanakya&nbsp;</a>
         <a href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail&nbsp;</a>
         <a href="/contacts"><i class="fa fa-1x fa-phone"></i> Contact&nbsp;</a>
         <a href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> Old&nbsp;</a>
