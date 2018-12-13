@@ -7,7 +7,7 @@
             <ul class="list-group list-gr">
               <div class="row">
                 <div v-for="list in academicnotices" class="col contact-col ">
-                  <li class="list-group-item disabled" style="width: 100%;">
+                  <li class="list-group-item" style="width: 100%;">
                     <a :href="list.file">{{ list.title }}</a>
                   </li>       
                 </div>
@@ -20,7 +20,7 @@
             <ul class="list-group list-gr">
               <div class="row">
                 <div v-for="list in generalnotices" class="col contact-col ">
-                  <li class="list-group-item disabled" style="width: 100%;">
+                  <li class="list-group-item" style="width: 100%;">
                     <a :href="list.file">{{ list.title }}</a>
                   </li>
                 </div>
@@ -33,7 +33,7 @@
             <ul class="list-group list-gr">
               <div class="row">
                 <div v-for="list in studentnotices" class="col contact-col ">
-                  <li class="list-group-item disabled" style="width: 100%;">
+                  <li class="list-group-item" style="width: 100%;">
                     <a :href="list.file">{{ list.title }}</a>
                   </li>
                 </div>
@@ -46,7 +46,7 @@
             <ul class="list-group list-gr">
               <div class="row">
                 <div v-for="list in careers" class="col contact-col ">
-                  <li class="list-group-item disabled" style="width: 100%;">
+                  <li class="list-group-item" style="width: 100%;">
                     <a :href="list.file">{{ list.title }}</a>
                   </li>
                 </div>
