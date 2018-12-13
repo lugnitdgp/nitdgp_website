@@ -59,7 +59,7 @@
             <ul class="list-group list-gr">
               <div class="row">
                 <div v-for="list in tenders" class="col contact-col ">
-                  <li class="list-group-item disabled" style="width: 100%;">
+                  <li class="list-group-item" style="width: 100%;">
                     <a :href="list.file">{{ list.title }}</a>
                   </li>
                 </div>
@@ -119,6 +119,7 @@ export default {
     min-width: 100%;
     max-width: 100%;
     padding-bottom: 15px;
+    color: #fff;
   }
   .col {
     -ms-flex-preferred-size: 0;
@@ -129,8 +130,8 @@ export default {
 }
   @media screen and (max-width: 1200px){
     .list-gr .contact-col{
-      min-width: 50%;
-      max-width: 50%;
+      min-width: 100%;
+      max-width: 100%;
     }
   }
   @media screen and (max-width: 800px){
