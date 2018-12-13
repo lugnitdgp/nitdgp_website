@@ -1,68 +1,142 @@
 <template>
-	<div class="l1 page-type-links">
-    <div class="card">
-      <a class="card-header white-text">ARCHIVES</a>
-      <div class="card-body content">
-        <ul>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_application_form.jpg" target="new">Application For Duplicates/ Transcripts/ Migration Certificate</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_fee_slip.jpg" target="new">
-          Transcript Fee Slip</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/Verification%20of%20Education%20Qualification..pdf" target="new">
-          Verification of Education Qualification</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/ISSUANCE%20OF%20ACADEMIC%20DOCUMENTS..pdf" target="new">
-          Issuance of Academic Documents</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_application_form.jpg" target="new">Application For Duplicates/ Transcripts/ Migration Certificate</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_fee_slip.jpg" target="new">
-          Transcript Fee Slip</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/Verification%20of%20Education%20Qualification..pdf" target="new">
-          Verification of Education Qualification</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/ISSUANCE%20OF%20ACADEMIC%20DOCUMENTS..pdf" target="new">
-          Issuance of Academic Documents</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_application_form.jpg" target="new">Application For Duplicates/ Transcripts/ Migration Certificate</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/transcript_notice/transcript_fee_slip.jpg" target="new">
-          Transcript Fee Slip</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/Verification%20of%20Education%20Qualification..pdf" target="new">
-          Verification of Education Qualification</a></li>
-          <li><a href="http://nitdgp.ac.in/all_pdf17/ISSUANCE%20OF%20ACADEMIC%20DOCUMENTS..pdf" target="new">
-          Issuance of Academic Documents</a></li>
-        </ul>
-        <div id="selector">
-          <ul class="pagination justify-content-center">
-            <li class="page-item">
-              <a class="page-link" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Previous</span>
-              </a>
-            </li>
-
-            <li class="page-item active" ><a class="page-link" data-toggle="tab" href="#li1" role="tab">1</a></li>
-            <li class="page-item"><a class="page-link" data-toggle="tab" href="#li2" role="tab">2</a></li>
-            <li class="page-item"><a class="page-link" data-toggle="tab" href="#li3" role="tab">3</a></li>
-            <li class="page-item"><a class="page-link" data-toggle="tab" href="#li4" role="tab">4</a></li>
-            <li class="page-item">
-              <a class="page-link" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Next</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  <links-page>
+    <card title="Archives">
+      <collapse-list>
+        <card-collapse  title="Academic Notices">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <div class="row">
+                <div v-for="list in academicnotices" class="col contact-col ">
+                  <li class="list-group-item disabled" style="width: 100%;">
+                    <a :href="list.file">{{ list.title }}</a>
+                  </li>       
+                </div>
+              </div>
+            </ul>
+          </div>
+        </card-collapse>
+        <card-collapse  title="General Notices">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <div class="row">
+                <div v-for="list in generalnotices" class="col contact-col ">
+                  <li class="list-group-item disabled" style="width: 100%;">
+                    <a :href="list.file">{{ list.title }}</a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </card-collapse>
+        <card-collapse  title="Student Notices">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <div class="row">
+                <div v-for="list in studentnotices" class="col contact-col ">
+                  <li class="list-group-item disabled" style="width: 100%;">
+                    <a :href="list.file">{{ list.title }}</a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </card-collapse>
+        <card-collapse  title="Careers">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <div class="row">
+                <div v-for="list in careers" class="col contact-col ">
+                  <li class="list-group-item disabled" style="width: 100%;">
+                    <a :href="list.file">{{ list.title }}</a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </card-collapse>
+        <card-collapse  title="Tenders">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <div class="row">
+                <div v-for="list in tenders" class="col contact-col ">
+                  <li class="list-group-item disabled" style="width: 100%;">
+                    <a :href="list.file">{{ list.title }}</a>
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </card-collapse>
+      </collapse-list>
+    </card>
+  </links-page>
 </template>
-
 <script>
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import CollapseList from '@/components/CollapseList'
+import CardCollapse from '@/components/CardCollapse'
 import axios from 'axios'
+import { genBackendURL } from '@/common.js'
+
 
 export default {
   name: 'Archives',
   data () {
+    return {
+      academicnotices: [],
+      generalnotices: [],
+      studentnotices: [],
+      careers: [],
+      tenders: [],
+    }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL("/archives/"))
+     .then(response => {
+           let archives = response.data
+           this.careers = archives.career
+           this.academicnotices = archives.academic_notice
+           this.generalnotices = archives.general_notice
+           this.studentnotices = archives.student_notice
+           this.tenders = archives.tender
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })    
   },
   components: {
+    LinksPage,
+    CollapseList,
+    CardCollapse,
+    Card
   }
 }
 </script>
+<style >
+  .list-gr .contact-col{
+    min-width: 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+  .col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+  @media screen and (max-width: 1200px){
+    .list-gr .contact-col{
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .list-gr .contact-col{
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+</style>
