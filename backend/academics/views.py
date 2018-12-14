@@ -36,7 +36,7 @@ class ConvocationViewSet(ListAPIView):
 
 class AdmissionViewSet(ListAPIView):
 
-    queryset = AdmissionDegree.objects.all().order_by('-updated_at')
+    queryset = AdmissionDegree.objects.all()
     serializer_class = AdmissionMainSerializer
 
 
