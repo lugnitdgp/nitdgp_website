@@ -6,7 +6,7 @@
           <div class="card-text">
             <ul class="list-group list-gr">
               <li v-for="list in academicnotices">
-                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp; {{ list.title }}</a>
               </li>                
             </ul>
           </div>
@@ -15,7 +15,7 @@
           <div class="card-text">
             <ul class="list-group list-gr">
               <li v-for="list in generalnotices">
-                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
               </li>                
             </ul>
           </div>
@@ -24,7 +24,7 @@
           <div class="card-text">
             <ul class="list-group list-gr">
               <li v-for="list in studentnotices">
-                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
               </li>                
             </ul>
           </div>
@@ -33,7 +33,7 @@
           <div class="card-text">
             <ul class="list-group list-gr">
               <li v-for="list in careers">
-                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
               </li>                
             </ul>
           </div>
@@ -42,7 +42,16 @@
           <div class="card-text">
             <ul class="list-group list-gr">
               <li v-for="list in tenders">
-                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
+              </li>                
+            </ul>
+          </div>
+        </card-collapse>
+        <card-collapse  title="Seminar and Events">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <li v-for="list in events">
+                <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
               </li>                
             </ul>
           </div>
@@ -69,6 +78,7 @@ export default {
       studentnotices: [],
       careers: [],
       tenders: [],
+      events: [],
     }
   },
   created () {
@@ -80,6 +90,7 @@ export default {
            this.generalnotices = archives.general_notice
            this.studentnotices = archives.student_notice
            this.tenders = archives.tender
+           this.events = archives.event
            this.$emit('hideloader', true)
          })
          .catch(e => {
