@@ -5,65 +5,45 @@
         <card-collapse  title="Academic Notices">
           <div class="card-text">
             <ul class="list-group list-gr">
-              <div class="row">
-                <div v-for="list in academicnotices" class="col contact-col ">
-                  <li class="list-group-item" style="width: 100%;">
-                    <a :href="list.file">{{ list.title }}</a>
-                  </li>       
-                </div>
-              </div>
+              <li v-for="list in academicnotices">
+                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+              </li>                
             </ul>
           </div>
         </card-collapse>
         <card-collapse  title="General Notices">
           <div class="card-text">
             <ul class="list-group list-gr">
-              <div class="row">
-                <div v-for="list in generalnotices" class="col contact-col ">
-                  <li class="list-group-item" style="width: 100%;">
-                    <a :href="list.file">{{ list.title }}</a>
-                  </li>
-                </div>
-              </div>
+              <li v-for="list in generalnotices">
+                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+              </li>                
             </ul>
           </div>
         </card-collapse>
         <card-collapse  title="Student Notices">
           <div class="card-text">
             <ul class="list-group list-gr">
-              <div class="row">
-                <div v-for="list in studentnotices" class="col contact-col ">
-                  <li class="list-group-item" style="width: 100%;">
-                    <a :href="list.file">{{ list.title }}</a>
-                  </li>
-                </div>
-              </div>
+              <li v-for="list in studentnotices">
+                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+              </li>                
             </ul>
           </div>
         </card-collapse>
         <card-collapse  title="Careers">
           <div class="card-text">
             <ul class="list-group list-gr">
-              <div class="row">
-                <div v-for="list in careers" class="col contact-col ">
-                  <li class="list-group-item" style="width: 100%;">
-                    <a :href="list.file">{{ list.title }}</a>
-                  </li>
-                </div>
-              </div>
+              <li v-for="list in careers">
+                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+              </li>                
             </ul>
           </div>
         </card-collapse>
         <card-collapse  title="Tenders">
           <div class="card-text">
             <ul class="list-group list-gr">
-              <div class="row">
-                <div v-for="list in tenders" class="col contact-col ">
-                  <li class="list-group-item" style="width: 100%;">
-                    <a :href="list.file">{{ list.title }}</a>
-                  </li>
-                </div>
-              </div>
+              <li v-for="list in tenders">
+                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+              </li>                
             </ul>
           </div>
         </card-collapse>
