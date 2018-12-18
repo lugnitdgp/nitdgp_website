@@ -1,8 +1,11 @@
 <script>
 export default {
-  name: 'Chanakya',
+  name: 'Cec',
   created () {
-    window.location = 'https://nitdgp.ac.in/nitdcec'
+    // window.location.href = 'https://nitdgp.ac.in/nitdcec'
+    window.open('https://nitdgp.ac.in/nitdcec','_blank')
+    window.location.href = 'https://nitdgp.ac.in/'
+    
   }
 }
 </script>
