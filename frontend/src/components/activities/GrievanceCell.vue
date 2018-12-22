@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <links-page>
     <card title="Student Cell">
       <ul class="list-group list-gr">
@@ -25,34 +25,35 @@
       </div>
     </div>
   </links-page>
-</template>
+</template>-->
 
 <script>
-import axios from 'axios'
-import LinksPage from '@/components/LinksPage'
-import Card from '@/components/Card'
-import { genBackendURL } from '@/common.js'
+// import axios from 'axios'
+// import LinksPage from '@/components/LinksPage'
+// import Card from '@/components/Card'
+// import { genBackendURL } from '@/common.js'
 
 export default {
   name: "Pgcell",
-  data () {
-    return {
-      links: {}
-    }
-  },
+  // data () {
+  //   return {
+  //     links: {}
+  //   }
+  // },
   created () {
-    axios.get(genBackendURL("activities/grievance-cell"))
-         .then(response => {
-           this.links = response.data.results
-           this.$emit('hideloader', true)
-         })
-         .catch(e => {
-           console.log(e)
-         })
+    window.location.href = 'https://nitdgp.ac.in/scst'
+    // axios.get(genBackendURL("activities/grievance-cell"))
+    //      .then(response => {
+    //        this.links = response.data.results
+    //        this.$emit('hideloader', true)
+    //      })
+    //      .catch(e => {
+    //        console.log(e)
+    //      })
   },
-  components: {
-    LinksPage,
-    Card
-  }
+  // components: {
+  //   LinksPage,
+  //   Card
+  // }
 }
 </script>
