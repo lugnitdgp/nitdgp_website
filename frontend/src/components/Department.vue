@@ -236,7 +236,7 @@
 
         <div class="tab-pane fade big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
           <h4 class="black-text"><strong>Programmes Hosted by the Department</strong></h4>
-          <table-renderer :theader="activities_header" :table="dept.activities"></table-renderer>
+          <activity-renderer :theader="activities_header" :table="dept.activities"></activity-renderer>
         </div>
 
         <div class="tab-pane fade big-list" id="li9" role="tabpanel" aria-labelledby="li9-list">
@@ -280,6 +280,7 @@ import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
 import { genBackendURL, stripDesc, convertNewsfeed } from '@/common.js'
 import TableRenderer from '@/components/TableRenderer'
+import ActivityRenderer from '@/components/ActivityRenderer'
 import CardCollapse from '@/components/CardCollapse'
 import CardTestimonial from '@/components/CardTestimonial'
 import SpCard from '@/components/SpCard'
@@ -303,8 +304,8 @@ export default {
         'Year'
       ],
       activities_header: [
-        'Programme',
         'Speakers',
+        'Programme',        
         'Start Date',
         'End Date',
       ]
@@ -345,6 +346,7 @@ export default {
     Newsfeed,
     Card,
     TableRenderer,
+    ActivityRenderer,
     CardCollapse,
     CardTestimonial,
     SpCard
