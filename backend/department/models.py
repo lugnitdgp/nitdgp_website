@@ -224,7 +224,7 @@ class Activity(BaseModel):
     speakers = models.CharField(max_length=512)
     programme = RichTextField()
     start_date = models.DateField()
-    end_date = models.DateField()
+    end_date = models.DateField(blank=True)
 
     def _department(self):
         return self.department.name
@@ -398,7 +398,7 @@ class DepartmentNews(BaseModel):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     date = models.DateField()
     title = models.CharField(max_length=255)
-    link = models.FileField(upload_to=rename_image_department_news)
+    link = models.FileField(upload_to=rename_image_department_news,blank=True)
 
     def _department(self):
         return self.department.name
