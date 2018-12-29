@@ -224,7 +224,7 @@ class Activity(BaseModel):
     speakers = models.CharField(max_length=512)
     programme = RichTextField()
     start_date = models.DateField()
-    end_date = models.DateField(blank=True)
+    end_date = models.DateField(blank=True,default='1959-01-01')
 
     def _department(self):
         return self.department.name
