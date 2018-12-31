@@ -4,7 +4,7 @@
       <a class="card-header white-text">Holidays</a>
       <div class="card-body content">
         <ul>
-          <li><a href="https://old.nitdgp.ac.in/information/Office%20Notice/Holidays_2018.pdf" target="new">List of holidays in the year 2018</a></li>
+          <li><a href="http://nitdgp.ac.in/AllPDF/Institute Holidays.pdf" target="new">List of holidays in the year 2019</a></li>
         </ul>
       </div>
     </div>
