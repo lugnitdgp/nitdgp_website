@@ -219,6 +219,7 @@ class Activity(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Activities'
+        ordering = ('-start_date', 'end_date')
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     speakers = models.CharField(max_length=512)
@@ -394,6 +395,7 @@ class DepartmentNews(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Department News'
+        ordering = ('-date',)
 
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     date = models.DateField()
