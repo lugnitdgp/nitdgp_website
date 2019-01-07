@@ -33,6 +33,8 @@ class Faculty(BaseModel):
         ('Assistant Professor', 'Assistant Professor'),
         ('Associate Professor', 'Associate Professor'),
         ('Professor', 'Professor'),
+        ('Emeritus Professor', 'Emeritus Professor'),
+        ('Trainee Teacher', 'Trainee Teacher'),
     )
     name = models.CharField(max_length=255)
     research_interest = RichTextField()
