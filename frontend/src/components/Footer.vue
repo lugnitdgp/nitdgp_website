@@ -106,6 +106,7 @@ export default {
               {name: "Notices@NITD", href: "/notices/general"},
               {name: "Careers@NITD", href: "/careers"},
               {name: "Tenders@NITD", href: "/tenders"},
+              {name: "Placement@NITD", href: "/placement"},
               {name: "MHRD", href: "/mhrd"},
               {name: "Webteam", href: "/webteam"},
               {name: "Archives", href: "/archives"},
