@@ -330,7 +330,7 @@ export default new Router({
       component: Guest
     },
     {
-      path: '/sa&sports',
+      path: '/activities&sports',
       name: 'Sac',
       component: Sac
     },
@@ -387,7 +387,7 @@ export default new Router({
       component: Rti
     },
     {
-      path: '/history',
+      path: '/aboutus',
       name: 'History',
       component: History
     },
