@@ -387,7 +387,7 @@ export default new Router({
       component: Rti
     },
     {
-      path: '/history',
+      path: '/aboutus',
       name: 'History',
       component: History
     },
