@@ -34,6 +34,7 @@ def rename_calendar(instance, filename):
 
 class Calendar(BaseModel):
     YEAR_CHOICES = [(str(r)+'-'+str(r+1), str(r)+'-'+str(r+1)) for r in range(1965, datetime.date.today().year+1)]
+    title = models.CharField(max_length=512)
     year = models.CharField(max_length=20, choices=YEAR_CHOICES, default=str(datetime.datetime.now().year)+'-'+str(datetime.datetime.now().year + 1))
     file = models.FileField(upload_to=rename_calendar)
 

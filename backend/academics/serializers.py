@@ -14,7 +14,7 @@ class CalendarSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Calendar
-        fields = ('year', 'file')
+        fields = ('year', 'file', 'title')
 
 
 class RegulationSerializer(serializers.ModelSerializer):
