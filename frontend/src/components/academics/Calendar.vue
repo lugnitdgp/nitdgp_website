@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li v-for="calendar in calendars">
           <a class="list-group-item" :href="calendar.file">
-            Academic Calendar for the year {{ calendar.year }}
+            {{calendar.title}} for year {{ calendar.year }}
           </a>
         </li>
       </ul>
