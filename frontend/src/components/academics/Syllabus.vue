@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li>
           <a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/COMPILED 2017 admission - FOR PROSPECTUS.pdf" target="_blank">
-            Curriculmn of 2017-18 Undergraduate Admission Batch
+            Curriculum of 2017-18 Undergraduate Admission Batch
           </a>
         </li>
       </ul>
@@ -19,7 +19,7 @@ import Card from '@/components/Card'
 import { genBackendURL } from '@/common.js'
 
 export default {
-  name: "Calendar",
+  name: "Curriculmn",
   data () {
     return {
       curriculmn: {}

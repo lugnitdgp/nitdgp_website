@@ -135,7 +135,7 @@ export default new Router({
       component: Departments
     },
     {
-      path: '/curriculmn&syllabus',
+      path: '/curriculum&syllabus',
       name: 'Syllabus',
       component: Syllabus
     },
