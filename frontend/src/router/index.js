@@ -24,6 +24,7 @@ import Convocation from '@/components/academics/Convocation'
 import Notices from '@/components/academics/Notices'
 import Examinations from '@/components/academics/Examinations'
 import Fees from '@/components/academics/Fees'
+import Syllabus from '@/components/academics/Syllabus'
 
 import Visitor from '@/components/administration/Visitor'
 import Mhrd from '@/components/administration/Mhrd'
@@ -132,6 +133,11 @@ export default new Router({
       path: '/departments',
       name: 'Departments',
       component: Departments
+    },
+    {
+      path: '/curriculmn&syllabus',
+      name: 'Syllabus',
+      component: Syllabus
     },
     {
       path: '/convocation-pictures',

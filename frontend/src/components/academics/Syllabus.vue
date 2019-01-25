@@ -1,0 +1,36 @@
+<template>
+  <links-page>
+    <card title="Curriculmn and Syllabus">
+      <ul class="list-group list-gr">
+        <li>
+          <a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/COMPILED 2017 admission - FOR PROSPECTUS.pdf" target="_blank">
+            Curriculmn and Syllabus 2017-18
+          </a>
+        </li>
+      </ul>
+    </card>
+  </links-page>
+</template>
+
+<script>
+import axios from 'axios'
+import LinksPage from '@/components/LinksPage'
+import Card from '@/components/Card'
+import { genBackendURL } from '@/common.js'
+
+export default {
+  name: "Calendar",
+  data () {
+    return {
+      curriculmn: {}
+    }
+  },
+  created () {
+    this.$emit('hideloader', true)
+  },
+  components: {
+    LinksPage,
+    Card
+  }
+}
+</script>
