@@ -4,7 +4,7 @@
       <ul class="list-group list-gr">
         <li>
           <a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/COMPILED 2017 admission - FOR PROSPECTUS.pdf" target="_blank">
-            Curriculmn and Syllabus 2017-18
+            Curriculmn of 2017-18 Undergraduate Admission Batch
           </a>
         </li>
       </ul>
