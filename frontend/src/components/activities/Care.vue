@@ -1,14 +1,14 @@
 <template>
   <links-page>
     <card title="Centre for Advanced Research on Energy (CARE)">
-    	<div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+    	<div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
     		<h2>Introduction</h2>
           <p style="padding: 10px;">
             In the wake of environmental concerns and the global uproar about rapidly-declining reserves of fossil fuels the development of alternative fuels is crucial for the sustenance and development of human civilization. Climate change, pollution, and energy insecurity are significant problems, and addressing them requires major changes to energy infrastructures. Renewable energy technologies are essential contributors to the energy supply portfolio, as they contribute to world energy security, reduce dependency on fossil fuels, and provide opportunities for mitigating greenhouse gases. Climate-disrupting fossil fuels are being replaced by clean, climate-stabilizing, non-depletable sources of energy. Today, renewables are seen not only as sources of energy, but also as tools to address many other pressing needs, including: improving energy security; reducing the health and environmental impacts associated with fossil and nuclear energy; mitigating greenhouse gas emissions; improving educational opportunities; creating jobs; reducing poverty; and increasing gender equality. Renewables have entered the mainstream.
 
     		</p>
       </div>
-      <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2>About the Centre </h2>
           <p style="padding: 10px;">
             Due to the growing environmental concerns and depleting reserves of fossil fuels along with their expensive extraction and processing, more emphasis is being laid on finding alternative fuels which are non-polluting and renewable/abundant. Solar energy, being the most abundant of the renewable energy sources, is being sought after to cater to the increasing global power demand in order to minimise environmental damage. The average solar power received by the earth's surface stands at 173000 terawatts. This enormous amount of energy can act as source of energy if we can successfully convert and store it as electrical energy as per our requirement. One can achieve this by photovoltaic devices which are capable of converting the solar photons into electrons to creative a current or can hydrolyse water (another abundant resource) by the means of a photo-catalyst through photo-elctro-chemical water splitting. Both these approaches have enormous potential as alternative and renewable energy technology for the future generation.
@@ -16,7 +16,7 @@
 
         </p>
         </div>
-        <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+        <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2>Vision and Mission</h2>
           <p style="padding: 10px;">
            <span style="color:green;">Vission : </span>To be a globally recognised centre of excellence in the field of energy for providing/imparting quality education, interdisciplinary research and innovative development of products for the betterment of society.<br><br>
@@ -25,7 +25,7 @@
 
         </p>
         </div>
-      <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2>Goals/Objectives</h2>
           <p style="padding: 10px;">
               To realize its vision and accomplish its mission, the centre will have the following specific objectives:
@@ -47,7 +47,7 @@
 
         </p>
         </div>
-      <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2>Tangible deliverables</h2>
           <p style="padding: 10px;">
           Patents, papers and technology transfer
@@ -57,7 +57,7 @@
 
         </p>
       </div>
-      <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2>Partners and Stakeholders</h2>
           <p style="padding: 10px;">
             The following are the major partners and stakeholders of the Center for Advanced Research on Energy (CARE) in its teaching and research activity. 
@@ -75,7 +75,7 @@
             </ul>
           </p>
       </div>
-      <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2>Benefits</h2>
           <p style="padding: 10px;">
             <h3>Students will: </h3>
@@ -105,7 +105,7 @@
       <collapse-list>
         <card-collapse  title="Focus Area of Research">
           <div class="card-text">
-            <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+            <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
               <p style="padding: 10px;">
                 The objective of the center can be distinguished into two main categories as given in the schematic below:
                 <h3>Energy: </h3>
@@ -124,7 +124,7 @@
         </card-collapse>
         <card-collapse  title="Members">
           <div class="card-text">
-            <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+            <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
               <p style="padding: 10px;">
                 <h3>Academic Committee Members: </h3>
                   <ol>
@@ -138,7 +138,7 @@
                   </ol>
                 </p>
               </div>
-              <div style="border: 2px solid #cad;margin-bottom: 5px;text-align: justify;" class="descbox">
+              <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
                 <p style="padding: 10px;">
                   <h3>Associated members: </h3>
                   <ol>
@@ -217,6 +217,7 @@ export default {
     color: #FFF;
     text-align: center;
     line-height: 40px;
+    border-top-left-radius: 8px;
   }
    .descbox:hover{
     background: #C7ECF5;
@@ -235,6 +236,7 @@ export default {
     font-size: 18px;
     color: #FFF;
     line-height: 40px;
+    border-top-left-radius: 8px;
     }
   }
   @media screen and (max-width: 800px){
@@ -250,6 +252,7 @@ export default {
     width: 100%;
     font-size: 25px;
     line-height: 40px;
+    border-top-left-radius: 8px;
   }
   }
 </style>
