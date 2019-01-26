@@ -48,6 +48,7 @@ import Achievements from '@/components/activities/Achievements'
 import Clubs from '@/components/activities/Clubs'
 import EventVisitors from '@/components/activities/EventVisitors'
 import GrievanceCell from '@/components/activities/GrievanceCell'
+import Care from '@/components/activities/Care'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -63,6 +64,7 @@ import Hvl from '@/components/facilities/Hvl'
 import Canteen from '@/components/facilities/Canteen'
 import Centers from '@/components/facilities/Centers'
 import Cec from '@/components/facilities/Cec'
+import Brics from '@/components/facilities/Brics'
 
 import Reports from '@/components/information/Reports'
 import Eprashasan from '@/components/information/Eprashasan'
@@ -80,6 +82,9 @@ import Chanakya from '@/components/information/Chanakya'
 import Icc from '@/components/information/Icc'
 import Pgcell from '@/components/information/Pgcell'
 import Pension from '@/components/information/Pension'
+
+import Collaboration from '@/components/activities/Collaboration'
+import Srcc from '@/components/Srcc'
 
 Vue.use(Router)
 
@@ -233,6 +238,11 @@ export default new Router({
       component: Placement
     },
     {
+      path: '/care',
+      name: 'Care',
+      component: Care
+    },
+    {
       path: '/outreach',
       name: 'Outreach',
       component: Outreach
@@ -244,6 +254,11 @@ export default new Router({
     },
     {
       path: '/events',
+      name: 'Events',
+      component: Events
+    },
+    {
+      path: '/scientificevents',
       name: 'Events',
       component: Events
     },
@@ -325,6 +340,11 @@ export default new Router({
       component: Cec
     },
     {
+      path: '/srcc',
+      name: 'Srcc',
+      component: Srcc
+    },
+    {
       path: '/GuestHouse',
       name: 'Guest',
       component: Guest
@@ -338,6 +358,11 @@ export default new Router({
       path: '/post-office',
       name: 'Po',
       component: Po
+    },
+    {
+      path: '/brics',
+      name: 'Brics',
+      component: Brics
     },
 
     // Information
@@ -450,6 +475,12 @@ export default new Router({
       path: '/contacts',
       name: 'Contacts',
       component: Contacts
+    },
+    //Reasearch and Collaboration 
+    {
+      path: '/collaboration',
+      name: 'Collaboration',
+      component: Collaboration
     },
 
     // new added

@@ -659,7 +659,28 @@ hr.style4:after {
   color: #ffffff;
 }
 /*/.card-6*/
-
+/*card-7*/
+/* car7 bg-color*/
+.card-7 {
+  background: linear-gradient(#ECEFF1,#B0BEC5);
+}
+/* card-title color*/
+.card-7 a.tile-title{
+  background: linear-gradient(to right,#018152,#00D083);
+}
+/* title-text color*/
+.card-7 p.tile-title-text{
+  color: #ffffff;
+}
+/* small-tile bg-color*/
+.card-7 div.tile-small{
+  background-color: #018152;
+}
+/* small-tile-text color*/
+.card-7 div.tile-content{
+  color: #ffffff;
+}
+/*/.card-7*/
 /*Level 1 dep*/
 /* card bg-color*/
 .l1-dep .l1-card {
