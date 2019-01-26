@@ -43,6 +43,14 @@ class PlacementModelAdmin(admin.ModelAdmin):
 class PlacementLinksModelAdmin(admin.ModelAdmin):
 	list_display = ['_title', '_file', '_date', '_url']
 
+class CollaborationModelAdmin(admin.ModelAdmin):
+	list_display = ['_title', '_file', '_type', '_date', '_url']
+
+class BricsModelAdmin(admin.ModelAdmin):
+	list_display = ['title', '_file', '_date']
+
+class CoeModelAdmin(admin.ModelAdmin):
+	list_display = ['_name', '_description', '_link']
 
 class VisitorModelAdmin(admin.ModelAdmin):
 	list_display = ['_name', '_designation', '_event_name']
@@ -61,5 +69,8 @@ admin.site.register(SeminarEvent, SeminarEventModelAdmin)
 admin.site.register(Achievement, AchievementModelAdmin)
 admin.site.register(Research, ResearchModelAdmin)
 admin.site.register(Placement, PlacementModelAdmin)
+admin.site.register(Collaboration, CollaborationModelAdmin)
+admin.site.register(Brics, BricsModelAdmin)
+admin.site.register(Coe, CoeModelAdmin)
 admin.site.register(PlacementLinks, PlacementLinksModelAdmin)
 admin.site.register(Visitor, VisitorModelAdmin)

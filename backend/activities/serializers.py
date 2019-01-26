@@ -64,6 +64,24 @@ class VisitorSerializer(serializers.ModelSerializer):
 		model = Visitor
 		fields = ('name', 'designation', 'event_name', 'image')
 
+class CollaborationSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Collaboration
+		fields = ('title', 'file', 'type', 'date', 'url')
+
+class BricsSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Brics
+		fields = ('title', 'file', 'date')
+
+class CoeSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Coe
+		fields = ('name', 'link', 'description', 'image')
+
 
 class OutreachSerializer(serializers.ModelSerializer):
 	class Meta:

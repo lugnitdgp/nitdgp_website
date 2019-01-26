@@ -205,6 +205,72 @@ class Placement(BaseModel):
 	def _url(self):
 		return self.url
 
+class Collaboration(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'Collaboration'
+		ordering = ('-date', )
+	COLLABLIST = (('National','National'),('International','International'))
+	title = models.CharField(max_length=512)
+	file = models.FileField(upload_to='activities/collaboration/%Y/%m/%d', blank=True)
+	type = models.CharField(choices=COLLABLIST,default='National',max_length=512)
+	url = models.URLField(blank=True)
+	date = models.DateField()
+
+	def _title(self):
+		return self.title
+
+	def _file(self):
+		return self.file
+
+	def _type(self):
+		return self.type
+
+	def _date(self):
+		return self.date
+
+	def _url(self):
+		return self.url
+
+class Brics(BaseModel):
+
+    class Meta:
+    	verbose_name_plural = 'Brics'
+        ordering = ('-created_at', )
+
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='activities/brics/%Y')
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
+    def _date(self):
+		return self.date
+
+class Coe(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'Center of Excellence'
+		ordering = ('name', )
+
+	name = models.CharField(max_length=512)
+	image = models.ImageField(upload_to='activities/coe/%Y')
+	description = RichTextField()
+	link = models.URLField()
+
+	def _name(self):
+		return self.name
+
+	def _description(self):
+		return self.description
+
+	def _link(self):
+		return self.link
+
 
 def outreach_icon_path(instance, filename):
     return 'activities/outreach/{0}/icon-{1}'.format(

@@ -1,5 +1,5 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
-
+from rest_framework.response import Response
 from activities.serializers import *
 from activities.models import *
 
@@ -55,6 +55,31 @@ class PlacementLinksViewSet(ListAPIView):
 
 	queryset = PlacementLinks.objects.all()
 	serializer_class = PlacementLinksSerializer
+
+class CollaborationViewSet(ListAPIView):
+
+	queryset = Collaboration.objects.all()
+	serializer_class = CollaborationSerializer
+
+	def list(self, request, *args, **kwargs):
+		result = {}
+		for collaboration in self.get_queryset():
+			ctype = collaboration.type
+			if ctype in result:
+				result[ctype].append(CollaborationSerializer(collaboration, context={"request":request}).data)
+			else:
+				result[ctype] = [CollaborationSerializer(collaboration, context={"request":request}).data]
+		return Response({"collaborations":result})
+
+class BricsViewSet(ListAPIView):
+
+	queryset = Brics.objects.all()
+	serializer_class = BricsSerializer
+
+class CoeViewSet(ListAPIView):
+
+	queryset = Coe.objects.all()
+	serializer_class = CoeSerializer
 
 
 class OutreachViewSet(RetrieveAPIView):
