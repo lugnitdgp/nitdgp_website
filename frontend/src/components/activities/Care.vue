@@ -12,7 +12,7 @@
         <h2 style="color: #FFF;width: 100%;">About the Centre </h2>
           <p style="padding: 10px;">
             Due to the growing environmental concerns and depleting reserves of fossil fuels along with their expensive extraction and processing, more emphasis is being laid on finding alternative fuels which are non-polluting and renewable/abundant. Solar energy, being the most abundant of the renewable energy sources, is being sought after to cater to the increasing global power demand in order to minimise environmental damage. The average solar power received by the earth's surface stands at 173000 terawatts. This enormous amount of energy can act as source of energy if we can successfully convert and store it as electrical energy as per our requirement. One can achieve this by photovoltaic devices which are capable of converting the solar photons into electrons to creative a current or can hydrolyse water (another abundant resource) by the means of a photo-catalyst through photo-elctro-chemical water splitting. Both these approaches have enormous potential as alternative and renewable energy technology for the future generation.
-            In view of the above, and due to rapid urbanisation of Indian economy, the demand for alternative energy has been ever increasing in India. Durgapur being an industrial city, and due to Govt. of India’s look east policy, need for developing technologies that can provide energy in a sustainable way for long term economic growth of the eastern India, it is high time that researchers at NIT Durgapur, take proactive role in transforming this growth process within the region. It is with these objectives, that a group of researchers as underlined below from a number of departments of NIT Durgapur, a premier technological institute, have come together to work jointly to develop technologies that can contribute significantly to the sustainable growth of the eastern region of India. 
+            In view of the above, and due to rapid urbanisation of Indian economy, the demand for alternative energy has been ever increasing in India. Durgapur being an industrial city, and due to Govt. of India’s look east policy, need for developing technologies that can provide energy in a sustainable way for long term economic growth of the eastern India, it is high time that researchers at NIT Durgapur, take proactive role in transforming this growth process within the region. It is with these objectives, that a group of researchers as underlined below from a number of departments of NIT Durgapur, a premier technological institute, have come together to work jointly to develop technologies that can contribute significantly to the sustainable growth of the eastern region of India.
 
         </p>
         </div>
@@ -21,7 +21,7 @@
           <p style="padding: 10px;">
            <span style="color:green;">Vission : </span>To be a globally recognised centre of excellence in the field of energy for providing/imparting quality education, interdisciplinary research and innovative development of products for the betterment of society.<br><br>
 
-          <span style="color:green;">Mission : </span>To establish a Center for Advanced Research on Energy (CARE) at NIT Durgapur is to promote multidisciplinary activities focused to various facets of energy technology and systems in the form of research, teaching and consultancy. The research activities in the centre will be in the form of research based projects funded by various national and international funding agencies. Faculty members from various departments of the institute will be associated with the centre for the promotion of interdisciplinary research for sustainable energy. The centre will provide support for the betterment of society through training program, short term courses. The centre will start academic programmes - Doctor of Philosophy (PhD) and M. Tech.  
+          <span style="color:green;">Mission : </span>To establish a Center for Advanced Research on Energy (CARE) at NIT Durgapur is to promote multidisciplinary activities focused to various facets of energy technology and systems in the form of research, teaching and consultancy. The research activities in the centre will be in the form of research based projects funded by various national and international funding agencies. Faculty members from various departments of the institute will be associated with the centre for the promotion of interdisciplinary research for sustainable energy. The centre will provide support for the betterment of society through training program, short term courses. The centre will start academic programmes - Doctor of Philosophy (PhD) and M. Tech.
 
         </p>
         </div>
@@ -60,7 +60,7 @@
       <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2 style="color: #FFF;width: 100%;">Partners and Stakeholders</h2>
           <p style="padding: 10px;">
-            The following are the major partners and stakeholders of the Center for Advanced Research on Energy (CARE) in its teaching and research activity. 
+            The following are the major partners and stakeholders of the Center for Advanced Research on Energy (CARE) in its teaching and research activity.
             <h3>Potential Partners</h3>
             <ul>
               <li>CSIR-CMERI, Durgapur</li>
@@ -94,7 +94,7 @@
               <li>have access to core facilities and shared equipment;</li>
               <li>have the opportunity to work in a highly collaborative research environment;
                 <ul>
-                  <li>be eligible to receive support for attending national meetings and professional development programs/workshops in the relevant areas</li> 
+                  <li>be eligible to receive support for attending national meetings and professional development programs/workshops in the relevant areas</li>
                   <li>be able to strengthen the depth and breadth of their research projects through interdisciplinary research, which will enhance their ability to secure external funding. </li>
                 </ul>
               </li>
@@ -179,12 +179,10 @@ export default {
   name: 'Care',
   data () {
     return {
-      
     }
   },
   created () {
   	this.$emit('hideloader', true)
-         
   },
   components: {
     LinksPage,
@@ -194,7 +192,7 @@ export default {
   }
 }
 </script>
-<style >
+<style scoped>
   .list-gr .contact-col{
     min-width: 100%;
     max-width: 100%;
