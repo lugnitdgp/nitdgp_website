@@ -208,6 +208,18 @@ export default {
     flex-grow: 1;
     max-width: 100%;
   }
+  h2{
+    height: 40px;
+    background: #01576A;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    line-height: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
    .descbox:hover{
     background: #C7ECF5;
 
@@ -217,33 +229,11 @@ export default {
       min-width: 100%;
       max-width: 100%;
     }
-    h2{
-    height: 40px;
-    background: #01576A;
-    display: block;
-    width: 30%;
-    font-size: 18px;
-    text-align: center;
-    color: #FFF;
-    line-height: 40px;
-    border-top-left-radius: 8px;
-    }
   }
   @media screen and (max-width: 800px){
     .list-gr .contact-col{
       min-width: 100%;
       max-width: 100%;
     }
-    h2{
-    height: 40px;
-    background: #01576A;
-    color: #FFF;
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-size: 25px;
-    line-height: 40px;
-    border-top-left-radius: 8px;
-  }
   }
 </style>
