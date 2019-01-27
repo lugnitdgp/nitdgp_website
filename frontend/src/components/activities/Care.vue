@@ -212,7 +212,7 @@ export default {
     height: 40px;
     background: #01576A;
     display: block;
-    width: 15%;
+    width: 30%;
     font-size: 20px;
     color: #FFF;
     text-align: center;

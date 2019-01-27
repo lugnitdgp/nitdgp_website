@@ -8,8 +8,8 @@
 <script>
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
-import CollapseList from '@/components/CollapseList'
-import CardCollapse from '@/components/CardCollapse'
+// import CollapseList from '@/components/CollapseList'
+// import CardCollapse from '@/components/CardCollapse'
 
 
 export default {
@@ -25,8 +25,6 @@ export default {
   },
   components: {
     LinksPage,
-    CollapseList,
-    CardCollapse,
     Card
   }
 }
