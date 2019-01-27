@@ -234,21 +234,21 @@ class Collaboration(BaseModel):
 
 class Brics(BaseModel):
 
-    class Meta:
-    	verbose_name_plural = 'Brics'
-        ordering = ('-created_at', )
+	class Meta:
+		verbose_name_plural = 'Brics'
+		ordering = ('-created_at', )
 
-    title = models.CharField(max_length=255)
-    file = models.FileField(upload_to='activities/brics/%Y')
-    date = models.DateField()
+	title = models.CharField(max_length=255)
+	file = models.FileField(upload_to='activities/brics/%Y')
+	date = models.DateField()
 
-    def __str__(self):
-        return self.title
+	def __str__(self):
+		return self.title
 
-    def _file(self):
-        return self.file
+	def _file(self):
+		return self.file
 
-    def _date(self):
+	def _date(self):
 		return self.date
 
 class Coe(BaseModel):
@@ -273,30 +273,30 @@ class Coe(BaseModel):
 
 
 def outreach_icon_path(instance, filename):
-    return 'activities/outreach/{0}/icon-{1}'.format(
-            instance.category.replace('/', '_slash_'),
-            instance.name.replace('/', '_slash_') + ' - ' + filename.replace('/', '_slash_')
-    )
+	return 'activities/outreach/{0}/icon-{1}'.format(
+		instance.category.replace('/', '_slash_'),
+		instance.name.replace('/', '_slash_') + ' - ' + filename.replace('/', '_slash_')
+	)
 
 
 def outreach_mou_path(instance, filename):
-    return 'activities/outreach/{0}/mou-{1}'.format(
-            instance.category.replace('/', '_slash_'),
-            instance.name.replace('/', '_slash_').replace('-', '_') + '-' + filename.replace('/', '_slash_').replace('-', '_')
-    )
+	return 'activities/outreach/{0}/mou-{1}'.format(
+		instance.category.replace('/', '_slash_'),
+		instance.name.replace('/', '_slash_').replace('-', '_') + '-' + filename.replace('/', '_slash_').replace('-', '_')
+	)
 
 
 class Outreach(BaseModel):
-        class Meta:
-                verbose_name_plural = 'Outreach'
-                ordering = ('category', 'name')
-        OUTREACH_CATEGORIES = (
-                ("Colleges/Institutes/Universities (Abroad)", "Colleges/Institutes/Universities (Abroad)"),
-                ("Colleges/Institutes/Universities (India)", "Colleges/Institutes/Universities (India)"),
-                ("Industries/Organizations (India)", "Industries/Organizations (India)"),
-                ("Research Institutions (India)", "Research Institutions (India)")
-        )
-        category = models.CharField(choices=OUTREACH_CATEGORIES, max_length=512, blank=False)
-        name = models.CharField(max_length=512, blank=False)
-        mou = models.FileField(upload_to=outreach_mou_path, blank=False)
-        icon = models.FileField(upload_to=outreach_icon_path, blank=False)
+	class Meta:
+		verbose_name_plural = 'Outreach'
+		ordering = ('category', 'name')
+	OUTREACH_CATEGORIES = (
+		("Colleges/Institutes/Universities (Abroad)", "Colleges/Institutes/Universities (Abroad)"),
+		("Colleges/Institutes/Universities (India)", "Colleges/Institutes/Universities (India)"),
+		("Industries/Organizations (India)", "Industries/Organizations (India)"),
+		("Research Institutions (India)", "Research Institutions (India)")
+	)
+	category = models.CharField(choices=OUTREACH_CATEGORIES, max_length=512, blank=False)
+	name = models.CharField(max_length=512, blank=False)
+	mou = models.FileField(upload_to=outreach_mou_path, blank=False)
+	icon = models.FileField(upload_to=outreach_icon_path, blank=False)
