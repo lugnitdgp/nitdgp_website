@@ -208,17 +208,6 @@ export default {
     flex-grow: 1;
     max-width: 100%;
   }
-  h2{
-    height: 40px;
-    background: #01576A;
-    display: block;
-    width: 30%;
-    font-size: 20px;
-    color: #FFF;
-    text-align: center;
-    line-height: 40px;
-    border-top-left-radius: 8px;
-  }
    .descbox:hover{
     background: #C7ECF5;
 
