@@ -50,6 +50,9 @@ import Clubs from '@/components/activities/Clubs'
 import EventVisitors from '@/components/activities/EventVisitors'
 import GrievanceCell from '@/components/activities/GrievanceCell'
 import Care from '@/components/activities/Care'
+import Coeam from '@/components/activities/Coeam'
+import Crew from '@/components/activities/Crew'
+import Iotis from '@/components/activities/Iotis'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -247,6 +250,21 @@ export default new Router({
       path: '/care',
       name: 'Care',
       component: Care
+    },
+    {
+      path: '/coeam',
+      name: 'Coeam',
+      component: Coeam
+    },
+    {
+      path: '/crew',
+      name: 'Crew',
+      component: Crew
+    },
+    {
+      path: '/iotis',
+      name: 'Iotis',
+      component: Iotis
     },
     {
       path: '/outreach',
