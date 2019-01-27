@@ -45,6 +45,13 @@ class CourseSerializer(serializers.ModelSerializer):
         fields = ('title', 'short_code', 'l', 't', 's', 'credits')
 
 
+class PreviousYearCurriculumSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = PreviousYearCurriculum
+        fields = ('details', 'title')
+
+
 class ResearchSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -141,12 +148,17 @@ class MainSerializer(serializers.ModelSerializer):
                 for j in result[i.degree.name]:
 
                     if j['programme_title'] == i.title:
+                        sem = semester['semester']
+                        courses = i.courses_set.filter(semester=sem)
+                        j[sem] = CourseSerializer(courses, many=True).data
+        return result
 
-                        j[semester['semester']] = CourseSerializer(
-                          i.courses_set.filter(
-                            semester=semester['semester']
-                             ), many=True
-                          ).data
+    def get_previous_year_curriculum(self, obj):
+        result = {}
+        for i in self.instance.programme_set.all():
+            result[i.degree.name] = PreviousYearCurriculumSerializer(
+                i.previousyearcurriculum_set.all(), many=True
+            ).data
         return result
 
     def get_facilities(self, obj):
@@ -199,6 +211,7 @@ class MainSerializer(serializers.ModelSerializer):
     hod = serializers.SerializerMethodField()
     people = serializers.SerializerMethodField()
     programmes = serializers.SerializerMethodField()
+    previous_year_curriculum = serializers.SerializerMethodField()
     facilities = serializers.SerializerMethodField()
     research = serializers.SerializerMethodField()
     projects = serializers.SerializerMethodField()
@@ -209,4 +222,4 @@ class MainSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Department
-        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'contact_us', 'hod', 'people', 'programmes', 'research', 'projects', 'activities', 'facilities', 'photos', 'news', 'syllabus')
+        fields = ('name', 'short_code', 'about_us', 'mission', 'vision', 'contact_us', 'hod', 'people', 'programmes', 'previous_year_curriculum', 'research', 'projects', 'activities', 'facilities', 'photos', 'news', 'syllabus')

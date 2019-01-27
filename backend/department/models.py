@@ -319,6 +319,21 @@ class Courses(BaseModel):
         return self.s
 
 
+class PreviousYearCurriculum(BaseModel):
+    class Meta:
+        verbose_name_plural = "Previous Year Curricula"
+
+    programme = models.ForeignKey(Programme, on_delete=models.CASCADE)
+    title = models.CharField(max_length=500, default="")
+    details = RichTextField()
+
+    def __str__(self):
+        return self.programme.degree.name + " " + self.programme.department.name
+
+    def _programme(self):
+        return self.programme.title
+
+
 class Facility(BaseModel):
 
     class Meta:

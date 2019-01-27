@@ -22,14 +22,6 @@ class FacultyModelAdmin(admin.ModelAdmin):
             return queryset.filter(name=request.user.get_full_name())
         return queryset.filter(department__name=request.user.get_full_name())
 
-    # def formfield_for_foreignkey(self, db_field, request, **kwargs):
-    #     if db_field.name == 'department':
-    #         if not request.user.is_superuser:
-    #             kwargs["queryset"] = Department.objects.filter(
-    #                 name=request.user.get_full_name())
-    #     return super(FacultyModelAdmin, self).formfield_for_foreignkey(
-    #         db_field, request, **kwargs)
-
 
 class StaffModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_designation', '_department']
@@ -243,6 +235,24 @@ class CoursesModelAdmin(admin.ModelAdmin):
             db_field, request, **kwargs)
 
 
+class PreviousYearCurriculumModelAdmin(admin.ModelAdmin):
+    list_display = ['_programme', 'title']
+
+    def get_queryset(self, request):
+        queryset = super(PreviousYearCurriculumModelAdmin, self).get_queryset(request)
+        if request.user.is_superuser:
+            return queryset
+        return queryset.filter(programme__department__name=request.user.get_full_name())
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == 'programme':
+            if not request.user.is_superuser:
+                kwargs["queryset"] = Programme.objects.filter(
+                    department__name=request.user.get_full_name())
+        return super(PreviousYearCurriculumModelAdmin, self).formfield_for_foreignkey(
+            db_field, request, **kwargs)
+
+
 class FacilityModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_department', '_category']
     ordering = ('department', '-category', )
@@ -416,3 +426,4 @@ admin.site.register(Electives, ElectivesModelAdmin)
 admin.site.register(DepartmentNews, DepartmentNewsModelAdmin)
 admin.site.register(DepartmentPhotos, DepartmentPhotosModelAdmin)
 admin.site.register(Syllabus, SyllabusModelAdmin)
+admin.site.register(PreviousYearCurriculum, PreviousYearCurriculumModelAdmin)

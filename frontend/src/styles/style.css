@@ -243,12 +243,6 @@ hr.style4:after {
     margin-left: 5px;margin-right: 5px;
   }
 }
-.l1 .accordion .card-header{
-  background-color: #001333;
-}
-.l1 .accordion .card-header h5{
-  color: #ECEFF1;
-}
 .pane-title{
   margin-left: -10px;
 }
@@ -322,9 +316,12 @@ hr.style4:after {
 }
 .accordion .card-header{
   padding: 0px!important;
+  background-color: #001333;
 }
 .accordion .card-header h5{
   padding: 15px;
+  background-color: #001333;
+  color: #ECEFF1;
 }
 .page-type-links .list-gr li{
   list-style-type: none;
@@ -344,6 +341,7 @@ hr.style4:after {
   font-size: 110%;
   letter-spacing: 2px;
   background-color: #001333;
+  color: white;
   padding: 6px 15px;
 }
 .page-type-links .card-text{

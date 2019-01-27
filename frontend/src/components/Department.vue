@@ -70,7 +70,7 @@
                 <div class="col" v-for="programme,index in dept.programmes.UG">
                   <h5><strong>Academic Courses and Syllabus for {{ programme.programme_title }} Students</strong></h5>
                   <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-                    <div class="card" v-for="syllabus,sem in programme">
+                    <div v-for="syllabus,sem in programme">
                       <card-collapse v-if="sem!='programme_title'" :title="'Semester '+sem">
                         <table-renderer :table="syllabus" :theader="['COURSE TITLE', 'CODE','L','T','S','C']"></table-renderer>
                       </card-collapse>
@@ -78,6 +78,13 @@
                   </div>
                 </div>
               </div>
+              <br>
+              <collapse-list>
+                <card-collapse v-for="(curriculum,i) in dept.previous_year_curriculum.UG"
+                  :title="curriculum.title" :key="i">
+                  <div v-html="curriculum.details" />
+                </card-collapse>
+              </collapse-list>
               <br>
               <div class="page-type-links">
                 <h5><strong>Details of Syllabus in UG</strong></h5>
@@ -282,6 +289,7 @@ import { genBackendURL, stripDesc, convertNewsfeed } from '@/common.js'
 import TableRenderer from '@/components/TableRenderer'
 import ActivityRenderer from '@/components/ActivityRenderer'
 import CardCollapse from '@/components/CardCollapse'
+import CollapseList from '@/components/CollapseList'
 import CardTestimonial from '@/components/CardTestimonial'
 import SpCard from '@/components/SpCard'
 
@@ -305,7 +313,7 @@ export default {
       ],
       activities_header: [
         'Speakers',
-        'Programme',        
+        'Programme',
         'Start Date',
         'End Date',
       ]
@@ -348,6 +356,7 @@ export default {
     TableRenderer,
     ActivityRenderer,
     CardCollapse,
+    CollapseList,
     CardTestimonial,
     SpCard
   }
@@ -415,9 +424,6 @@ export default {
     text-align: justify;
     color:#000000;
   }
-  .l2-idep .l2-card .down-content .big-list h5{
-    color:#000000;
-  }
   .l2-idep{
     padding-top: 5em;
     padding-bottom: 1em;padding-right: 1.5%;padding-left: 1.5%;
@@ -470,17 +476,9 @@ export default {
   .l2-idep .card-body .down-content .table-wrapper-2{
     display: block;max-height: 2500px;overflow-y: auto;-ms-overflow-style: -ms-autohiding-scrollbar;
   }
-  .l2-idep .card-body .down-content #li2 th{
-    background-color: #E0E0E0;
-    padding: 2px;
-  }
-  .l2-idep .card-body .down-content #li2 td{
-    background-color: #F5F5F5;
-    padding: 2px;
-  }
   .l2-idep .card-body .down-content th{
     background-color: #E0E0E0;
-    padding: 5px;
+    padding: 6px;
   }
   .l2-idep .card-body .down-content td{
     background-color: #F5F5F5;
