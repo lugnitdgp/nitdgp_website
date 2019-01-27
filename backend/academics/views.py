@@ -8,7 +8,7 @@ import json
 
 class NoticeViewSet(ListAPIView):
 
-    queryset = Notice.objects.all().filter(archive=False).order_by('-date')
+    queryset = Notice.objects.filter(archive=False).order_by('-date')
     serializer_class = NoticeSerializer
 
     def list(self, request, *args, **kwargs):
@@ -36,7 +36,7 @@ class ConvocationViewSet(ListAPIView):
 
 class AdmissionViewSet(ListAPIView):
 
-    queryset = AdmissionDegree.objects.all()
+    queryset = AdmissionDegree.objects.filter(programmes__documents__archive=False)
     serializer_class = AdmissionMainSerializer
 
 

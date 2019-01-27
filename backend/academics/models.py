@@ -77,6 +77,7 @@ class Admission(BaseModel):
     title = models.CharField(max_length=1024)
     file = models.FileField(upload_to=rename_admission_file, blank=True)
     link = models.URLField(blank=True)
+    archive = models.BooleanField(default=False)
 
     def _programme(self):
         return self.programme.name
@@ -89,6 +90,22 @@ class Admission(BaseModel):
 
     def _link(self):
         return self.link
+
+    def add_to_dict(self, request, dct):
+        from base.views import convert_url
+        obj = {
+            'title': self.title,
+            'link': self.link,
+            'file': convert_url(self.file, request)
+        }
+        d = self.programme.degree.name
+        p = self.programme.name
+        if dct.get(d) == None:
+            dct[d] = {}
+        if dct[d].get(p) == None:
+            dct[d][p] = [obj]
+        else:
+            dct[d][p].append(obj)
 
 
 def rename_examination_file(instance, filename):

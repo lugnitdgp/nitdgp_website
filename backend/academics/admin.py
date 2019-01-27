@@ -1,19 +1,20 @@
 from django.contrib import admin
 from academics.models import *
 
+def archive_selected(modeladmin, request, queryset):
+    queryset.update(archive=True)
+archive_selected.short_description = "Archive selected items"
+
+def unarchive_selected(modeladmin, request, queryset):
+    queryset.update(archive=False)
+unarchive_selected.short_description = "Unarchive selected items"
 
 class NoticeModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'archive', 'notice_type', 'date']
     list_editable = ['notice_type', 'archive']
     list_filter = ['notice_type', 'archive', 'date']
     search_fields = ['title', 'date']
-    actions = ['archive_notices', 'restore_notices']
-
-    def archive_notices(self, request, queryset):
-        queryset.update(archive=True)
-
-    def restore_notices(self, request, queryset):
-        queryset.update(archive=False)
+    actions = [archive_selected, unarchive_selected]
 
     def get_queryset(self, request):
         queryset = super(NoticeModelAdmin, self).get_queryset(request)
@@ -41,7 +42,9 @@ class AdmissionProgrammeModelAdmin(admin.ModelAdmin):
 
 
 class AdmissionModelAdmin(admin.ModelAdmin):
-    list_display = ['_programme', '_title', '_file', '_link']
+    list_display = ['_programme', '_title', '_file', '_link', 'archive']
+    list_editable = ['archive']
+    actions = [archive_selected, unarchive_selected]
 
 
 class ExaminationModelAdmin(admin.ModelAdmin):

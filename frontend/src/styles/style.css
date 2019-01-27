@@ -730,3 +730,10 @@ hr.style4:after {
 .tab-content {
   padding: 10px;
 }
+.no-style-list {
+  list-style: none;
+}
+
+.bot-margin {
+  margin-bottom: 20px;
+}

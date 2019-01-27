@@ -7,7 +7,7 @@
             <ul class="list-group list-gr">
               <li v-for="list in academicnotices">
                 <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp; {{ list.title }}</a>
-              </li>                
+              </li>
             </ul>
           </div>
         </card-collapse>
@@ -16,7 +16,7 @@
             <ul class="list-group list-gr">
               <li v-for="list in generalnotices">
                 <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
-              </li>                
+              </li>
             </ul>
           </div>
         </card-collapse>
@@ -25,7 +25,7 @@
             <ul class="list-group list-gr">
               <li v-for="list in studentnotices">
                 <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
-              </li>                
+              </li>
             </ul>
           </div>
         </card-collapse>
@@ -34,7 +34,7 @@
             <ul class="list-group list-gr">
               <li v-for="list in careers">
                 <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
-              </li>                
+              </li>
             </ul>
           </div>
         </card-collapse>
@@ -43,7 +43,7 @@
             <ul class="list-group list-gr">
               <li v-for="list in tenders">
                 <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
-              </li>                
+              </li>
             </ul>
           </div>
         </card-collapse>
@@ -52,9 +52,30 @@
             <ul class="list-group list-gr">
               <li v-for="list in events">
                 <a class="list-group-item" :href="list.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ list.date }}</span>&nbsp;&nbsp;&nbsp;{{ list.title }}</a>
-              </li>                
+              </li>
             </ul>
           </div>
+        </card-collapse>
+        <card-collapse  title="Admission">
+          <collapse-list>
+            <card-collapse v-for="(programmes, degree) in admission" :title="degree" :show="i == 0" :key="i">
+              <ul class="pg_contents">
+                <li v-for="(programme, name) in programmes" class="bot-margin no-style-list" :key="j">
+                  <h4>{{ name }}</h4>
+                  <ul class="list-group list-gr">
+                    <li v-for="doc in programme">
+                      <a v-if="doc.file" class="list-group-item" target="new" :href="doc.file">
+                        {{ doc.title }}
+                      </a>
+                      <a v-else class="list-group-item" target="new" :href="doc.link">
+                        {{ doc.title }}
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </card-collapse>
+          </collapse-list>
         </card-collapse>
       </collapse-list>
     </card>
@@ -79,6 +100,7 @@ export default {
       careers: [],
       tenders: [],
       events: [],
+      admission: {}
     }
   },
   created () {
@@ -91,11 +113,12 @@ export default {
            this.studentnotices = archives.student_notice
            this.tenders = archives.tender
            this.events = archives.event
+           this.admission = archives.admission
            this.$emit('hideloader', true)
          })
          .catch(e => {
            console.log(e)
-         })    
+         })
   },
   components: {
     LinksPage,

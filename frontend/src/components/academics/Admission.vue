@@ -55,13 +55,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  .no-style-list {
-    list-style: none;
-  }
-
-  .bot-margin {
-    margin-bottom: 20px;
-  }
-</style>
