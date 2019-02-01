@@ -19,8 +19,8 @@
         <div v-else class="tab-pane fade" id="panel1" role="tabpanel">
            <!-- <notice-list :noticelist="international" /> --><br><br>
            <div v-for="category,category_name in outreach" v-if="category_name=='Colleges/Institutes/Universities (Abroad)'">
-            <h2 style="margin-left: 15%;">{{category_name}}</h2>
-            <table class="table table-bordered tbl" style="width: 70%;margin-left: 15%;">
+            <h2 style="width: 100%;">{{category_name}}</h2>
+            <table class="table table-bordered tbl">
               <thead>
                 <td>Sl. No.</td>
                 <td>Name of {{category_name}}</td>
@@ -42,8 +42,8 @@
         <div v-else class="tab-pane fade show active" id="panel3" role="tabpanel">
           <!-- <notice-list :noticelist="national" /> --><br><br>
           <div v-for="category,category_name in outreach" v-if="category_name=='Colleges/Institutes/Universities (India)'">
-            <h2 style="margin-left: 15%;">{{category_name}}</h2>
-            <table class="table table-bordered tbl" style="width: 70%;margin-left: 15%;">
+            <h2 style="width: 100%;">{{category_name}}</h2>
+            <table class="table table-bordered tbl">
               <thead>
                 <td>Sl. No.</td>
                 <td>Name of {{category_name}}</td>
@@ -58,8 +58,8 @@
             <br/>
           </div>
           <div v-for="category,category_name in outreach" v-if="category_name=='Industries/Organizations (India)'">
-            <h2 style="margin-left: 15%;">{{category_name}}</h2>
-            <table class="table table-bordered tbl" style="width: 70%;margin-left: 15%;">
+            <h2 style="width: 100%;">{{category_name}}</h2>
+            <table class="table table-bordered tbl">
               <thead>
                 <td>Sl. No.</td>
                 <td>Name of {{category_name}}</td>
@@ -75,8 +75,8 @@
           </div>
         </div>
         <div v-for="category,category_name in outreach" v-if="category_name=='Research Institutions (India)'">
-            <h2 style="margin-left: 15%;">{{category_name}}</h2>
-            <table class="table table-bordered tbl" style="width: 70%;margin-left: 15%;">
+            <h2 style="width: 100%;">{{category_name}}</h2>
+            <table class="table table-bordered tbl">
               <thead>
                 <td>Sl. No.</td>
                 <td>Name of {{category_name}}</td>
@@ -142,7 +142,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   .card-body {
     padding-left: 0px;
     padding-right: 0px;
@@ -156,5 +156,16 @@ export default {
   }
   tr:hover{
     background: #C7ECF5;
+  }
+  h2{
+    height: 40px;
+    background: #01576A;
+    display: block;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    line-height: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 </style>
