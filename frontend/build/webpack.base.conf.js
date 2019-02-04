@@ -2,9 +2,10 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -78,5 +79,8 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
 }
