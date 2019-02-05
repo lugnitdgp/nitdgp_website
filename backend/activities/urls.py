@@ -19,5 +19,6 @@ urlpatterns = [
     url(r'^activities/collaboration/$', CollaborationViewSet.as_view(), name='view-collaboration'),
     url(r'^activities/brics/$', BricsViewSet.as_view(), name='view-brics'),
     url(r'^activities/coe/$', CoeViewSet.as_view(), name='view-coe'),
+    url(r'^activities/coecarousel/$', CoecarouselViewSet.as_view(), name='view-coecarousel'),
 
 ]

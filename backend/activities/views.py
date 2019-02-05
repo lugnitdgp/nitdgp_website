@@ -80,6 +80,11 @@ class CoeViewSet(ListAPIView):
 
 	queryset = Coe.objects.all()
 	serializer_class = CoeSerializer
+	
+class CoecarouselViewSet(ListAPIView):
+
+	queryset = Coecarousel.objects.all()
+	serializer_class = CoecarouselSerializer
 
 
 class OutreachViewSet(RetrieveAPIView):

@@ -52,6 +52,10 @@ class BricsModelAdmin(admin.ModelAdmin):
 class CoeModelAdmin(admin.ModelAdmin):
 	list_display = ['_name', '_description', '_link']
 
+class CoecarouselModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_secondary', '_image']
+
+
 class VisitorModelAdmin(admin.ModelAdmin):
 	list_display = ['_name', '_designation', '_event_name']
 
@@ -72,5 +76,6 @@ admin.site.register(Placement, PlacementModelAdmin)
 admin.site.register(Collaboration, CollaborationModelAdmin)
 admin.site.register(Brics, BricsModelAdmin)
 admin.site.register(Coe, CoeModelAdmin)
+admin.site.register(Coecarousel, CoecarouselModelAdmin)
 admin.site.register(PlacementLinks, PlacementLinksModelAdmin)
 admin.site.register(Visitor, VisitorModelAdmin)

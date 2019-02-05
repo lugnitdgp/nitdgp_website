@@ -271,6 +271,25 @@ class Coe(BaseModel):
 	def _link(self):
 		return self.link
 
+class Coecarousel(BaseModel):
+
+	class Meta:
+		verbose_name_plural = 'CoE Carousel Images'
+	COES = (('CARE','CARE'),('CREW','CREW'),('AM','AM'),('IOTIS','IOTIS'))
+	primary_caption = models.CharField(max_length=255)
+	secondary_caption = models.CharField(max_length=255)
+	coe_type = models.CharField(choices=COES,default='CREW',max_length=255)
+	image = models.ImageField(upload_to='coecarousel/%Y')
+
+	def __str__(self):
+		return self.primary_caption
+
+	def _secondary(self):
+		return self.secondary_caption
+
+	def _image(self):
+		return self.image
+
 
 def outreach_icon_path(instance, filename):
 	return 'activities/outreach/{0}/icon-{1}'.format(
