@@ -86,6 +86,7 @@ import Chanakya from '@/components/information/Chanakya'
 import Icc from '@/components/information/Icc'
 import Pgcell from '@/components/information/Pgcell'
 import Pension from '@/components/information/Pension'
+import Mission from '@/components/information/Mission'
 
 import Collaboration from '@/components/activities/Collaboration'
 import Srcc from '@/components/Srcc'
@@ -449,6 +450,11 @@ export default new Router({
       path: '/more',
       name: 'Moreinfo',
       component: Moreinfo
+    },
+    {
+      path: '/mission&vision',
+      name: 'Mission',
+      component: Mission
     },
     {
       path: '/chanakya',
