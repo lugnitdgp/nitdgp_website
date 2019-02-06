@@ -76,12 +76,12 @@
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="p5l1" role="tabpanel">
                   <h4>Journals</h4>
-                  <table-renderer :table="faculty.journals" :theader="['Citation','Journal','Year']" />
+                  <table-renderer :table="faculty.journals" :theader="['Publication Details','Journal','Year']" />
                 </div>
                 <div class="tab-pane fade page-type-links" id="p5l2" role="tabpanel">
                   <ul class="list-group list-gr">
                     <h4>Conferences</h4>
-                    <table-renderer :table="faculty.conferences" :theader="['Citation','Location','Year']" />
+                    <table-renderer :table="faculty.conferences" :theader="['Publication Details','Location','Year']" />
                   </ul>
                 </div>
                 <div class="tab-pane fade in" id="p5l3" role="tabpanel">
