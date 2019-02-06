@@ -96,10 +96,30 @@
       <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2 style="color: #FFF;width: 100%;">Baneficiaries and Stakeholders</h2>
           <p style="padding: 10px;">
-            The following are the major beneficiaries and stakeholders of the Centre for Research on Environment and Water (CREW) in its teaching and research activity
+            <span style="color:green;">Baneficiaries : </span><br>
+            The following are the major beneficiaries and stakeholders of the Centre for Research on Environment and Water (CREW) in its teaching and research activity<br>
+            <span style="color:green;">Potential Baneficiaries : </span>
+            <ul>
+            <li>Steel Authority India Ltd., Eastern Coal Field Ltd</li>
+            <li>Durgapur Project Ltd.,</li>
+            <li>Damodar Valley Corporation Ltd.,</li>
+            <li>Philips carbon Black Ltd.,</li>
+            <li>Graphite India Ltd.,</li>
+            <li>ESSAR OIL Ltd.,</li>
+            <li>MATIX Fertilizer,</li>
+            <li>Balaji Steel and many others medium scale sponge Iron and Ferro-Alloy Companies</li>
+            <li>Pharmaceutical, Cement and Chemical Industries Ferro-Alloy</li>
+            <li>Durgapur Municipal Corporation and</li>
+            <li>Asansol Municipal Corporation</li>
+          </ul>
+            <span style="color:green;">Stakeholders : </span>
+            <ul>
+              <li>MHRD, GOI</li>
+              <li>Different Departments of National Institute of Technology Durgapur</li>
+            </ul>
           </p>
       </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
+      <!--<div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2 style="color: #FFF;width: 100%;">Potential Baneficiaries</h2>
           <p style="padding: 10px;">
           <ul>
@@ -125,7 +145,7 @@
               <li>Different Departments of National Institute of Technology Durgapur</li>
             </ul>
         </p>
-      </div>
+      </div>-->
       <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2 style="color: #FFF;width: 100%;">Participating Department(s)</h2>
           <p style="padding: 10px;">
@@ -292,9 +312,10 @@ export default {
     }
   },
   created () {
-    axios.get(genBackendURL('dashboard/carousel'))
+    axios.get(genBackendURL('activities/coecarousel'))
          .then(response => {
            this.slides = response.data.results
+           console.log(response);
            })
          .catch(e => {
            console.log(e)
