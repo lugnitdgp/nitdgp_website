@@ -308,19 +308,22 @@ export default {
   name: 'Crew',
   data () {
     return {
+      crewimg: {},
       slides:{},
     }
   },
   created () {
     axios.get(genBackendURL('activities/coecarousel'))
          .then(response => {
-           this.slides = response.data.results
-           console.log(response);
-           })
+          let coecarousels = response.data.coecarousels
+          console.log(coecarousels)
+          this.slides = coecarousels.CREW
+          this.$emit('hideloader', true)
+          })
          .catch(e => {
            console.log(e)
          })
-  	this.$emit('hideloader', true)
+  	
          
   },
   components: {

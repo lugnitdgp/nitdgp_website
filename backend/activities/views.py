@@ -86,6 +86,16 @@ class CoecarouselViewSet(ListAPIView):
 	queryset = Coecarousel.objects.all()
 	serializer_class = CoecarouselSerializer
 
+	def list(self, request, *args, **kwargs):
+		result = {}
+		for coecarousels in self.get_queryset():
+			coetype = coecarousels.coe_type
+			if coetype in result:
+				result[coetype].append(CoecarouselSerializer(coecarousels, context={"request":request}).data)
+			else:
+				result[coetype] = [CoecarouselSerializer(coecarousels, context={"request":request}).data]
+		return Response({"coecarousels":result})
+
 
 class OutreachViewSet(RetrieveAPIView):
 
