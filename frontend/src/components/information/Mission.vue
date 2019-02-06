@@ -12,7 +12,12 @@
         <card-collapse  title="Vision and Mission Statements of the Departments">
           <div class="card-text">
             <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Department of Biotechnology</div>
-            <div style="border: 2px solid #001333;padding: 10px;">Vision: To produce responsible citizens who can sincerely serve the society with honesty and integrity.Mission:1.To  produce  highly  qualified,  well-rounded  and  motivated  graduates  possessing fundamental  understanding  and  knowledge  in  Biotechnology,  who  can  provide service and eventually leadership to the nation and to the world.2.To  pursue  creative  research  and  develop  new  technologies  in  the  field  of Biotechnology, in order to serve the needs of government and of industry.
+            <div style="border: 2px solid #001333;padding: 10px;"><span style="color: #000;font-weight: bold;">Vision:</span> To produce responsible citizens who can sincerely serve the society with honesty and integrity.<br>
+              <span style="color: #000;font-weight: bold;">Mission:</span>
+              <ol>
+               <li>To  produce  highly  qualified,  well-rounded  and  motivated  graduates  possessing fundamental  understanding  and  knowledge  in  Biotechnology,  who  can  provide service and eventually leadership to the nation and to the world.</li>
+               <li>To  pursue  creative  research  and  develop  new  technologies  in  the  field  of Biotechnology, in order to serve the needs of government and of industry.</li>
+             </ol>
             </div><br>
             <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Department of Chemical Engineering</div>
             <div style="border: 2px solid #001333;padding: 10px;">
