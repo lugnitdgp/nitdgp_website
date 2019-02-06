@@ -286,7 +286,10 @@ class Coecarousel(BaseModel):
 
 	def _secondary(self):
 		return self.secondary_caption
-
+	
+	def _type(self):
+		return self.coe_type
+		
 	def _image(self):
 		return self.image
 

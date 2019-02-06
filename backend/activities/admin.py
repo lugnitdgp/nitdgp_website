@@ -53,7 +53,7 @@ class CoeModelAdmin(admin.ModelAdmin):
 	list_display = ['_name', '_description', '_link']
 
 class CoecarouselModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_secondary', '_image']
+    list_display = ['__str__', '_type', '_secondary', '_image']
 
 
 class VisitorModelAdmin(admin.ModelAdmin):

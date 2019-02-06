@@ -86,7 +86,7 @@ class CoecarouselSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Coecarousel
-        fields = ('primary_caption', 'secondary_caption', 'image')
+        fields = ('primary_caption', 'coe_type', 'secondary_caption', 'image')
 
 
 class OutreachSerializer(serializers.ModelSerializer):
