@@ -3,6 +3,7 @@
     <nav class="navbar navbar-expand-lg primary-color fixed-top">
       <div class="hm-btn">
         <a href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>&nbsp;&nbsp;
+        <a href="/nirf"><i class="fa fa-1x fa-newspaper-o" ></i> NIRF</a>&nbsp;&nbsp;
         <a href="/chanakya"><i class="fa fa-1x fa-tv"></i> Chanakya&nbsp;</a>
       </div>
       <div class="navbar-menu">
