@@ -103,6 +103,7 @@ export default {
               {name: 'govlogo10', href:"http://swachhbharatmission.gov.in"}],
       links: [{name: "Quick Links", href: "#"},
               {name: "Holidays", href: "/holidays"},
+              {name: "NIRF", href: "/nirf"},
               {name: "Notices@NITD", href: "/notices/general"},
               {name: "Careers@NITD", href: "/careers"},
               {name: "Tenders@NITD", href: "/tenders"},
