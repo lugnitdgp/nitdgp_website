@@ -1,6 +1,9 @@
 <template>
   <links-page>
     <card title="Advanced Material (AM)">
+      <div class="col-12 caro">
+        <Carousel :slides="slides"></Carousel>
+      </div><br>
     	<div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2 style="color: #FFF;width: 100%;">Introduction</h2>
           <p style="padding: 10px;">
@@ -34,19 +37,10 @@
           </p>
           <p><u><h3 class="text-center">CoE Synthesis Lab</h3></u></p>
           <div class="text-center">
-            <img src="http://nitdgp.ac.in/AllPDF/spincoater.jpg" class="img img-responsive text-center" style="height:250px;width: 50%;margin-left: 2%;">
-            <p class="text-center">Spin Coater</p>
-          </div>
-          <div class="text-center">
-            <img src="http://nitdgp.ac.in/AllPDF/glovebox.jpg" class="img img-responsive img-thumbnails text-center" style="height:250px;width: 50%;margin-left: 2%;">
-            <p class="text-center">Glove Box</p>
-          </div>
-          <div class="text-center">
-            <img src="http://nitdgp.ac.in/AllPDF/rotaryvacum.jpg" class="img img-responsive img-thumbnails text-center" style="height:250px;width: 50%;margin-left: 2%;">
-            <p class="text-center">Rotary Vacuum Evaporator</p>
-          </div>
-          <div class="text-center">
             <ul>
+              <li>Spin Coater</li>
+              <li>Glove Box</li>
+              <li>Rotary Vacuum Evaporator</li>
               <li>Stirrer Hot Plate</li>
               <li>CVD ( yet to be installed)</li>
               <li>Thermal Evaporator ( yet to be installed)</li>
@@ -58,16 +52,9 @@
             The Lab is currently under construction and it will be mostly engaged in characterizing the surface profile of thin films, electrochemical and electrical properties of nanocomposites for the purpose of energy harvesting and storage. The main objective is to develop an energy application centre at NIT Durgapur. The Lab presently has the following facilities
           </p>
           <div class="text-center">
-            <img src="http://nitdgp.ac.in/AllPDF/atomicforce.jpg" class="img img-responsive text-center" style="height:250px;width: 50%;margin-left: 2%;">
-            <p class="text-center">Atomic Force Microscopy</p>
-          </div>
-          <div class="text-center">
-            <img src="http://nitdgp.ac.in/AllPDF/galvanostar.jpg" class="img img-responsive img-thumbnails text-center" style="height:250px;width: 50%;margin-left: 2%;">
-            <p class="text-center">Potentiostat/ Galvanostat</p>
-          </div>
-          
-          <div class="text-center">
             <ul>
+              <li>Atomic Force Microscopy</li>
+              <li>Potentiostat/ Galvanostat</li>
               <li>FESEM ( Yet to be installed)</li>
               <li>Li Ion Battery Fabrication & Testing Unit (yet to be installed)</li>
               <li>Solar Simulator (Yet To be Installed)</li>
@@ -86,8 +73,11 @@
   </links-page>
 </template>
 <script>
+import axios from 'axios'
+import { genBackendURL, convertNewsfeed } from '@/common.js'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
+import Carousel from '@/components/Carousel'
 // import CollapseList from '@/components/CollapseList'
 // import CardCollapse from '@/components/CardCollapse'
 
@@ -96,16 +86,26 @@ export default {
   name: 'Am',
   data () {
     return {
+      slides:{},
       
     }
   },
   created () {
-  	this.$emit('hideloader', true)
+  	axios.get(genBackendURL('activities/coecarousel'))
+         .then(response => {
+          let coecarousels = response.data.coecarousels
+          this.slides = coecarousels.AM
+          this.$emit('hideloader', true)
+          })
+         .catch(e => {
+           console.log(e)
+         })
          
   },
   components: {
     LinksPage,
-    Card
+    Card,
+    Carousel
   }
 }
 </script>
