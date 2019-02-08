@@ -25,6 +25,7 @@ import Notices from '@/components/academics/Notices'
 import Examinations from '@/components/academics/Examinations'
 import Fees from '@/components/academics/Fees'
 import Syllabus from '@/components/academics/Syllabus'
+import Brochure from '@/components/academics/Brochure'
 
 import Visitor from '@/components/administration/Visitor'
 import Mhrd from '@/components/administration/Mhrd'
@@ -178,6 +179,11 @@ export default new Router({
       path: '/fees',
       name: 'Fees',
       component: Fees
+    },
+    {
+      path: '/prospectus',
+      name: 'Brochure',
+      component: Brochure
     },
 
     // Administration
