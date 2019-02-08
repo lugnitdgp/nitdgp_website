@@ -34,9 +34,10 @@ def download_note(request):
             file_name = absolute_file.split('/')[-1]
 
             # Create a temp directory
+            os.makedirs(settings.MEDIA_ROOT + "/tmp", exist_ok=True)
             tmp_dir = tempfile.TemporaryDirectory(
                 prefix="download-notes-",
-                dir=settings.MEDIA_ROOT
+                dir=settings.MEDIA_ROOT + "/tmp"
             ).name
             os.mkdir(tmp_dir)
             tmp_file = tmp_dir + "/" + file_name
@@ -46,6 +47,7 @@ def download_note(request):
 
             # Generate and send the download URL as a response
             download_file_name = ("/".join(qset.note.url.split('/')[0:2]) +
+                                  "/tmp" +
                                   "/" + os.path.basename(tmp_dir) +
                                   "/" + file_name)
             return HttpResponse(
