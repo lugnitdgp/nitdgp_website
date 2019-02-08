@@ -109,10 +109,11 @@ export default {
               {name: "Tenders@NITD", href: "/tenders"},
               {name: "Placement@NITD", href: "/placement"},
               {name: "MHRD", href: "/mhrd"},
-              {name: "Webteam", href: "/webteam"},
+              {name: "Downloads", href: "/downloads"},
               {name: "Archives", href: "/archives"},
               // {name: "Policies", href: "/policies"},
-              {name: "Downloads", href: "/downloads"}]
+              {name: "Downloads", href: "/downloads"},
+              {name: "Webteam", href: "/webteam"}]
     }
   },
   created () {
