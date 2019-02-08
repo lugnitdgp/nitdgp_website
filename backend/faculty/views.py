@@ -4,7 +4,9 @@ from faculty.serializers import *
 from department.models import Faculty
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from root import settings
 import tempfile
+from shutil import copyfile
 import os
 import json
 
@@ -27,25 +29,25 @@ def download_note(request):
         except Notes.DoesNotExist:
             return HttpResponse(status=404)
         if qset.secret_key == request.POST.get('input_key', ""):
-            file_name = qset.note.path
-            old_cwd = os.getcwd()
-            file_extension = "." + file_name.split('.')[-1]
-            dir_name = os.path.dirname(file_name)
-            print(file_name, dir_name)
-            os.chdir(dir_name)
-            tmp = tempfile.NamedTemporaryFile(
-                mode="wb+",
-                dir=dir_name,
-                delete=False,
-                prefix="NOTES-",
-                suffix=file_extension
-            )
-            tmp.write(qset.note.read())
-            tmp_file_name = tmp.name
-            download_file_name = "/".join(qset.note.url.split('/')[0:-1]) + "/" + os.path.basename(tmp.name)
-            tmp.close()
-            os.chmod(tmp_file_name, 0o640)
-            os.chdir(old_cwd)
+            # Get file name from db
+            absolute_file = qset.note.path
+            file_name = absolute_file.split('/')[-1]
+
+            # Create a temp directory
+            tmp_dir = tempfile.TemporaryDirectory(
+                prefix="download-notes-",
+                dir=settings.MEDIA_ROOT
+            ).name
+            os.mkdir(tmp_dir)
+            tmp_file = tmp_dir + "/" + file_name
+
+            # Copy the file over to the temp directory
+            copyfile(absolute_file, tmp_file)
+
+            # Generate and send the download URL as a response
+            download_file_name = ("/".join(qset.note.url.split('/')[0:2]) +
+                                  "/" + os.path.basename(tmp_dir) +
+                                  "/" + file_name)
             return HttpResponse(
                 json.dumps({"download_url": download_file_name}),
                 content_type="application/json"
