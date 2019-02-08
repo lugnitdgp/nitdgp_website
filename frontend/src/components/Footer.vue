@@ -112,7 +112,6 @@ export default {
               {name: "Downloads", href: "/downloads"},
               {name: "Archives", href: "/archives"},
               // {name: "Policies", href: "/policies"},
-              {name: "Downloads", href: "/downloads"},
               {name: "Webteam", href: "/webteam"}]
     }
   },

@@ -53,6 +53,7 @@ import Care from '@/components/activities/Care'
 import Coeam from '@/components/activities/Coeam'
 import Crew from '@/components/activities/Crew'
 import Iotis from '@/components/activities/Iotis'
+import Raa from '@/components/activities/Raa'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -266,6 +267,11 @@ export default new Router({
       path: '/iotis',
       name: 'Iotis',
       component: Iotis
+    },
+    {
+      path: '/raa',
+      name: 'Raa',
+      component: Raa
     },
     {
       path: '/outreach',
