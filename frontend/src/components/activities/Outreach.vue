@@ -6,11 +6,11 @@
       <div class="card-body outr">
 				<div class="text-center"><img src="/static/img/nitdgp_logo.png" width="100px" height="100px"></div>
 				<div class="text-center">
-					<h2>National Institute of Technology Durgapur</h2>
-					<p><u><h3>List of Memorandum of Understanding (MoU)</h3></u></p>
+					<h3>National Institute of Technology Durgapur</h3>
+					<p><u><h4>List of Memorandum of Understanding (MoU)</h4></u></p>
 				</div>
 				<div v-for="category,category_name in outreach">
-					<h2 style="width: 100%;">{{category_name}}</h2>
+					<h3 class="text-center">{{category_name}}</h3>
 					<table class="table table-bordered tbl">
 						<thead>
 							<td>Sl. No.</td>
