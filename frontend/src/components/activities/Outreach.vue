@@ -10,7 +10,7 @@
 					<p><u><h3>List of Memorandum of Understanding (MoU)</h3></u></p>
 				</div>
 				<div v-for="category,category_name in outreach">
-					<h2>{{category_name}}</h2>
+					<h2 style="width: 100%;">{{category_name}}</h2>
 					<table class="table table-bordered tbl">
 						<thead>
 							<td>Sl. No.</td>
