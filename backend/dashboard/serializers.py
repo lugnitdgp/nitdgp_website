@@ -18,7 +18,7 @@ class TileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tile
-        fields = ('name', 'icon', 'row', 'column', 'link',)
+        fields = ('name', 'icon', 'image', 'row', 'column', 'link',)
 
 
 class DashboardSerializer(serializers.ModelSerializer):

@@ -2,7 +2,8 @@
   <div class="col tile-small">
     <a :href="link">
       <div class="tile-content" align="center">
-        <i class="fa fa-2x notranslate" :class="icon">{{ title }}</i>
+        <i v-if="image == undefined" class="fa fa-2x notranslate" :class="icon">{{ title }}</i>
+        <img v-else :src="image" width="36px" />
         <br>
         <p class="tile-small-text">{{ desc }}</p>
       </div>
@@ -23,6 +24,10 @@ export default {
       default: ""
     },
     icon: {
+      required: false,
+      default: undefined
+    },
+    image: {
       required: false,
       default: undefined
     },

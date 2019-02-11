@@ -56,11 +56,21 @@ class Section(BaseModel):
         ordering = ('priority',)
 
 
+def rename_image(i, f):
+    return 'tile/{0}/{1}/{2}'.format(i.section.name, i.name, f)
+
+
 class Tile(BaseModel):
 
     name = models.CharField(max_length=100)
     section = models.ForeignKey(Section, on_delete=models.CASCADE)
-    icon = models.CharField(max_length=100)
+    icon = models.CharField(max_length=100, default=None, null=True, blank=True)
+    image = models.ImageField(
+        upload_to=rename_image,
+        default=None,
+        null=True,
+        blank=True
+    )
     row = models.PositiveSmallIntegerField()
     column = models.PositiveSmallIntegerField()
     link = models.URLField(max_length=128, unique=True)
