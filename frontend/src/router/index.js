@@ -275,7 +275,7 @@ export default new Router({
       component: Iotis
     },
     {
-      path: '/raa',
+      path: '/rashtriyaavishkarabhiyan',
       name: 'Raa',
       component: Raa
     },

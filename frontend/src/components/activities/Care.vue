@@ -1,33 +1,26 @@
 <template>
   <links-page>
     <card title="Centre for Advanced Research on Energy (CARE)">
-    	<div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-    		<h2 style="color: #FFF;width: 100%;">Introduction</h2>
-          <p style="padding: 10px;">
+    	<div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Introduction</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             In the wake of environmental concerns and the global uproar about rapidly-declining reserves of fossil fuels the development of alternative fuels is crucial for the sustenance and development of human civilization. Climate change, pollution, and energy insecurity are significant problems, and addressing them requires major changes to energy infrastructures. Renewable energy technologies are essential contributors to the energy supply portfolio, as they contribute to world energy security, reduce dependency on fossil fuels, and provide opportunities for mitigating greenhouse gases. Climate-disrupting fossil fuels are being replaced by clean, climate-stabilizing, non-depletable sources of energy. Today, renewables are seen not only as sources of energy, but also as tools to address many other pressing needs, including: improving energy security; reducing the health and environmental impacts associated with fossil and nuclear energy; mitigating greenhouse gas emissions; improving educational opportunities; creating jobs; reducing poverty; and increasing gender equality. Renewables have entered the mainstream.
 
-    		</p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">About the Centre </h2>
-          <p style="padding: 10px;">
+    		</div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">About the Centre </div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             Due to the growing environmental concerns and depleting reserves of fossil fuels along with their expensive extraction and processing, more emphasis is being laid on finding alternative fuels which are non-polluting and renewable/abundant. Solar energy, being the most abundant of the renewable energy sources, is being sought after to cater to the increasing global power demand in order to minimise environmental damage. The average solar power received by the earth's surface stands at 173000 terawatts. This enormous amount of energy can act as source of energy if we can successfully convert and store it as electrical energy as per our requirement. One can achieve this by photovoltaic devices which are capable of converting the solar photons into electrons to creative a current or can hydrolyse water (another abundant resource) by the means of a photo-catalyst through photo-elctro-chemical water splitting. Both these approaches have enormous potential as alternative and renewable energy technology for the future generation.
             In view of the above, and due to rapid urbanisation of Indian economy, the demand for alternative energy has been ever increasing in India. Durgapur being an industrial city, and due to Govt. of India’s look east policy, need for developing technologies that can provide energy in a sustainable way for long term economic growth of the eastern India, it is high time that researchers at NIT Durgapur, take proactive role in transforming this growth process within the region. It is with these objectives, that a group of researchers as underlined below from a number of departments of NIT Durgapur, a premier technological institute, have come together to work jointly to develop technologies that can contribute significantly to the sustainable growth of the eastern region of India.
 
-        </p>
-        </div>
-        <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Vision and Mission</h2>
-          <p style="padding: 10px;">
+        </div><br>
+        <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Vision and Mission</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
            <span style="color:green;">Vission : </span>To be a globally recognised centre of excellence in the field of energy for providing/imparting quality education, interdisciplinary research and innovative development of products for the betterment of society.<br><br>
 
           <span style="color:green;">Mission : </span>To establish a Center for Advanced Research on Energy (CARE) at NIT Durgapur is to promote multidisciplinary activities focused to various facets of energy technology and systems in the form of research, teaching and consultancy. The research activities in the centre will be in the form of research based projects funded by various national and international funding agencies. Faculty members from various departments of the institute will be associated with the centre for the promotion of interdisciplinary research for sustainable energy. The centre will provide support for the betterment of society through training program, short term courses. The centre will start academic programmes - Doctor of Philosophy (PhD) and M. Tech.
 
-        </p>
-        </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Goals/Objectives</h2>
-          <p style="padding: 10px;">
+        </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Goals/Objectives</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
               To realize its vision and accomplish its mission, the centre will have the following specific objectives:
             <ol>
               <li>To carry out advanced interdisciplinary research activities in the area of energy to the needs of the society. </li>
@@ -45,21 +38,17 @@
               <li>To enter into collaborative research engagements with Extra-mural funding agencies and Industrial Organizations for better understanding of issues of scientific and technological management between different stakeholders.</li>
             </ol>
 
-        </p>
-        </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Tangible deliverables</h2>
-          <p style="padding: 10px;">
+        </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Tangible deliverables</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
           Patents, papers and technology transfer
           High quality man power with adequate skill to meet the new challenges evolving out of rapid technology changes.
           Technological innovation that directly impact on society.
           Generate revenue form consultancy, technology transfer and training programmes.
 
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Partners and Stakeholders</h2>
-          <p style="padding: 10px;">
+       </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Partners and Stakeholders</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             The following are the major partners and stakeholders of the Center for Advanced Research on Energy (CARE) in its teaching and research activity.
             <h3>Potential Partners</h3>
             <ul>
@@ -73,11 +62,10 @@
               <li>Ministry of New and Renewable Energy (MNRE)</li>
               <li>Different Departments of National Institute of Technology Durgapur</li>
             </ul>
-          </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Benefits</h2>
-          <p style="padding: 10px;">
+          
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Benefits</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             <h3>Students will: </h3>
             <ul>
               <li>gain broad exposure in the field of energy research; </li>
@@ -100,8 +88,7 @@
               </li>
             </ul>
 
-        </p>
-    	</div>
+        </div><br>
       <collapse-list>
         <card-collapse  title="Focus Area of Research">
           <div class="card-text">
@@ -205,22 +192,6 @@ export default {
     -ms-flex-positive: 1;
     flex-grow: 1;
     max-width: 100%;
-  }
-  h2{
-    height: 40px;
-    background: #01576A;
-    display: block;
-    width: 100%;
-    font-size: 20px;
-    color: #FFF;
-    text-align: center;
-    line-height: 40px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-   .descbox:hover{
-    background: #C7ECF5;
-
   }
   @media screen and (max-width: 1200px){
     .list-gr .contact-col{
