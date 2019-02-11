@@ -3,95 +3,84 @@
     <card title="Collaboration">
       <ul class="nav nav-tabs nav-justified not-tab">
         <li class="nav-item">
-          <a v-if="$route.params.tab === 'national'" class="nav-link active show" data-toggle="tab" href="#panel3" role="tab">National Collaboration</a>
-          <a v-else class="nav-link active show" data-toggle="tab" href="#panel3" role="tab">National Collaboration</a>
+          <a class="nav-link active show" data-toggle="tab" href="#panel1" role="tab">National Collaboration</a>
         </li>
         <li class="nav-item">
-          <a v-if="$route.params.tab === 'international'" class="nav-link " data-toggle="tab" href="#panel1" role="tab">International Collaboration</a>
-          <a v-else class="nav-link" data-toggle="tab" href="#panel1" role="tab">International Collaboration</a>
+          <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">International Collaboration</a>
         </li>
       </ul>
       <div class="tab-content card">
-
-        <div v-if="$route.params.tab === 'international'" class="tab-pane " id="panel1" role="tabpanel">
-          <notice-list :noticelist="international" />
-        </div>
-        <div v-else class="tab-pane fade" id="panel1" role="tabpanel">
+        <div class="tab-pane fade" id="panel2" role="tabpanel">
            <!-- <notice-list :noticelist="international" /> --><br><br>
            <div v-for="category,category_name in outreach" v-if="category_name=='Colleges/Institutes/Universities (Abroad)'">
-            <h2 style="width: 100%;">{{category_name}}</h2>
+            <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">{{category_name}}</div>
             <table class="table table-bordered tbl">
               <thead>
-                <td>Sl. No.</td>
-                <td>Name of {{category_name}}</td>
-                <td>Details of MoU</td>
+                <td style="color: #000;font-weight: bold;">Sl. No.</td>
+                <td style="color: #000;font-weight: bold;">Name of {{category_name}}</td>
+                <td style="color: #000;font-weight: bold;">Details of MoU</td>
               </thead>
               <tr v-for="(row,index) in category">
                 <td>{{index+1}}</td>
-                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div>{{ row.name }}</td>
+                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div><p style="color: #000;font-weight: bold;">{{ row.name }}</p></td>
                 <td><a :href="row.mou" >Click Here</a></td>
               </tr> 
             </table>
             <br/>
           </div>
         </div>
-
-        <div v-if="$route.params.tab === 'national'" class="tab-pane in show active fade" id="panel3" role="tabpanel">
-          <notice-list :noticelist="national" />
-        </div>
-        <div v-else class="tab-pane fade show active" id="panel3" role="tabpanel">
+        <div class="tab-pane fade show active" id="panel1" role="tabpanel">
           <!-- <notice-list :noticelist="national" /> --><br><br>
           <div v-for="category,category_name in outreach" v-if="category_name=='Colleges/Institutes/Universities (India)'">
-            <h2 style="width: 100%;">{{category_name}}</h2>
+            <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">{{category_name}}</div>
             <table class="table table-bordered tbl">
               <thead>
-                <td>Sl. No.</td>
-                <td>Name of {{category_name}}</td>
-                <td>Details of MoU</td>
+                <td style="color: #000;font-weight: bold;">Sl. No.</td>
+                <td style="color: #000;font-weight: bold;">Name of {{category_name}}</td>
+                <td style="color: #000;font-weight: bold;">Details of MoU</td>
               </thead>
               <tr v-for="(row,index) in category">
                 <td>{{index+1}}</td>
-                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div>{{ row.name }}</td>
+                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div><p style="color: #000;font-weight: bold;">{{ row.name }}</p></td>
                 <td><a :href="row.mou">Click Here</a></td>
               </tr> 
             </table>
             <br/>
           </div>
           <div v-for="category,category_name in outreach" v-if="category_name=='Industries/Organizations (India)'">
-            <h2 style="width: 100%;">{{category_name}}</h2>
+            <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">{{category_name}}</div>
             <table class="table table-bordered tbl">
               <thead>
                 <td>Sl. No.</td>
-                <td>Name of {{category_name}}</td>
+                <td style="color: #000;font-weight: bold;">Name of {{category_name}}</td>
                 <td>Details of MoU</td>
               </thead>
               <tr v-for="(row,index) in category">
                 <td>{{index+1}}</td>
-                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div>{{ row.name }}</td>
+                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div><p style="color: #000;font-weight: bold;">{{ row.name }}</p></td>
                 <td><a :href="row.mou">Click Here</a></td>
               </tr> 
             </table>
             <br/>
           </div>
-        </div>
         <div v-for="category,category_name in outreach" v-if="category_name=='Research Institutions (India)'">
-            <h2 style="width: 100%;">{{category_name}}</h2>
+            <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">{{category_name}}</div>
             <table class="table table-bordered tbl">
               <thead>
                 <td>Sl. No.</td>
-                <td>Name of {{category_name}}</td>
+                <td style="color: #000;font-weight: bold;">Name of {{category_name}}</td>
                 <td>Details of MoU</td>
               </thead>
               <tr v-for="(row,index) in category">
                 <td>{{index+1}}</td>
-                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div>{{ row.name }}</td>
+                <td style="text-align: center;"><div class="text-center"><img :src="row.icon" width="100px" height="100px"/></div><p style="color: #000;font-weight: bold;">{{ row.name }}</p></td>
                 <td><a :href="row.mou">Click Here</a></td>
               </tr> 
             </table>
             <br/>
           </div>
         </div>
-
+      </div>
       </div>
     </card>
   </links-page>
@@ -114,7 +103,7 @@ export default {
     }
   },
   created () {
-    axios.get(genBackendURL('activities/collaboration'))
+    /*axios.get(genBackendURL('activities/collaboration'))
          .then(response => {
           let collaborations = response.data.collaborations
           console.log(collaborations)
@@ -124,11 +113,10 @@ export default {
          })
          .catch(e => {
            console.log(e)
-         })
+         })*/
     axios.get(genBackendURL("activities/outreach"))
          .then(response => {
            this.outreach = response.data.outreach
-           console.log(this.outreach)
            this.$emit('hideloader', true)
          })
          .catch(e => {
@@ -152,20 +140,6 @@ export default {
     padding: 0px;
   }
   td{
-    border: 1px solid #cad;
-  }
-  tr:hover{
-    background: #C7ECF5;
-  }
-  h2{
-    height: 40px;
-    background: #01576A;
-    display: block;
-    font-size: 20px;
-    color: #FFF;
-    text-align: center;
-    line-height: 40px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border: 1px solid #001333;
   }
 </style>
