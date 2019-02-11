@@ -104,6 +104,7 @@ export default {
       links: [{name: "Quick Links", href: "#"},
               {name: "Holidays", href: "/holidays"},
               {name: "NIRF", href: "/nirf"},
+              {name: "NAD", href: "/nad"},
               {name: "Notices@NITD", href: "/notices/general"},
               {name: "Careers@NITD", href: "/careers"},
               {name: "Tenders@NITD", href: "/tenders"},

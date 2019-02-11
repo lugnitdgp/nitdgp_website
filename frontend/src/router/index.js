@@ -12,6 +12,7 @@ import Downloads from '@/components/Downloads'
 import PageNotFound from '@/components/PageNotFound'
 import Contacts from '@/components/Contacts'
 import QuickLinks from '@/components/QuickLinks'
+import Nad from '@/components/Nad'
 import Liveconvocation from '@/components/Liveconvocation'
 
 import Admission from '@/components/academics/Admission'
@@ -540,6 +541,11 @@ export default new Router({
       path: '/quicklinks',
       name: 'QuickLinks',
       component: QuickLinks
+    },
+    {
+      path: '/nad',
+      name: 'Nad',
+      component: Nad
     },
 
     // This is meant to be at the last
