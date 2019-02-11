@@ -6,37 +6,30 @@
         <Carousel :slides="slides"></Carousel>
       </div>
       <br>
-    	<div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Introduction</h2>
-          <p style="padding: 10px;">
+    	<div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Introduction</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             It is well-known that environmental pollution is a threat to humankind, especially in terms of human health and to ecological systems. Special mention may be made of many industries in and around Durgapur city, such as Durgapur Steel Plant, Durgapur Chemicals Limited, The Durgapur Projects limited, Philips Carbon Black, Alloy Steels Plant, Eastern Coalfields Limited, etc. and also many small scale industries. Extensive agricultural activity is also prevalent in Barddhaman district. As Durgapur is a rapidly developing city with a burgeoning population, increasing use of fossil fuels and generation of municipal wastes are associated with its development. In this localized scenario as well as in the national scenario, a state of the art centre for studies and research on such environmental issues is extremely relevant. A centre with a multidisciplinary approach towards advanced research on environment and water in an institute of national importance, such as National Institute of Technology Durgapur can play a very effective role in this regard. Such a centre would need precision high value analytical instruments for this activity. The centre would aim to develop the expertise to assist industry and civic administrations in developing and implementing evaluation, remediation or management strategies for contamination issues and develop technologies to convert wastes to value-added products wherever feasible. Hybrid treatment technologies encompassing chemical, biological and physico-chemical treatment schemes would be a viable and practical option to substitute inadequate conventional treatment systems. As the Centre is interdisciplinary in nature and made by multiple departments like Department of Earth and Environmental Studies, Physics, Chemistry, Mathematics, Chemical Engineering, Biotechnology, Civil Engineering, Mechanical Engineering, Management Studies and Computer Science & Engineering to implement for ensuring total environmental compliance by industrial houses and municipal bodies.
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Vision and Mission</h2>
-          <p style="padding: 10px;">
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Vision and Mission</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             <span style="color:green;">Vision: </span>
               To provide tangible solution to convert pollution and other environmental problems to increase the pace of economic development through industrial and agricultural development in a sustainable manner by thorough and cutting edge research involving group of experts of diversified field of environment.<br>
             <span style="color:green;">Mission:</span>
               To solve environmental problems, originated from natural processes and/or anthropogenic activities into environmental systems through developmental activities in the form of industrialization, intensive agricultural practice and rapid urbanization. The methodology shall be through an interdisciplinary approach by forming a cohesive group of researchers of diverse fields having a passion to work for the environment.<br>
               To develop a system of environmental risk assessment and remediation to provide a resource for professionals researching and assessing environmental threats to both humankind and ecological systems.
 
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Aims and Objectives</h2>
-          <p style="padding: 10px;">
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Aims and Objectives</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             To realize its vision and accomplish its mission, the centre will have the following specific objectives:
             <ul>
               <li>Development of low cost technological solutions of industrial effluent treatment, particulates and gaseous emission control system and solid waste management system.</li>
               <li>Precise assessment of contamination and transport mechanism of contaminants in soil and groundwater system and development of control mechanism.</li>
               <li>Development of low cost highly sensitive environmental monitoring equipment, particularly electronic sensors with data logger.</li>
             </ul>
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Focus Area of Research</h2>
-          <p style="padding: 10px;">
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Focus Area of Research</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             <span style="font-weight: bold;color: black;">A)</span> Formation of project groups within the research group having common interest to research on the following problem domains of environment and water with a commitment to time bound tangible output.<br>
             <span style="font-weight: bold;color: black;">To tackle with the pollutants from Chemical Industries (Wastewater Treatment Technology):</span><br>
             <ul>
@@ -84,18 +77,14 @@
             <span style="font-weight: bold;color: black;">Investigation on hot spring water for seismic surveillance and energy harvesting</span><br>
             <span style="font-weight: bold;color: black;">B)</span> Direct interfacing with industries to solve their specific pollution control problems.
 
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Strategy</h2>
-          <p style="padding: 10px;">
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Strategy</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             NIT Durgapur has an inherent locational advantage. Large and medium scale industries, coal mines, urban centres and agricultural activities coexist in the close vicinity of NIT Durgapur. The proposed centre at first will approach the local organizations like Steel Authority India Ltd., Eastern Coal Field Ltd., Durgapur Project Ltd., Damodar Valley Corporation Ltd., Philips carbon Black Ltd., Graphite India Ltd., ESSAR OIL Ltd., MATIX Fertilizer, Balaji Steel and many others medium scale sponge Iron and Ferro-Alloy Companies, Pharmaceutical Industries, Cement Industries and Chemical Industries.  The proposed centre will take initiative to provide solution of Municipal Solid Waste Management (MSWM) and Wastewater Treatment to Durgapur Municipal Corporation and Asansol Municipal Corporation.
 
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Baneficiaries and Stakeholders</h2>
-          <p style="padding: 10px;">
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Baneficiaries and Stakeholders</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             <span style="color:green;">Baneficiaries : </span><br>
             The following are the major beneficiaries and stakeholders of the Centre for Research on Environment and Water (CREW) in its teaching and research activity<br>
             <span style="color:green;">Potential Baneficiaries : </span>
@@ -117,8 +106,7 @@
               <li>MHRD, GOI</li>
               <li>Different Departments of National Institute of Technology Durgapur</li>
             </ul>
-          </p>
-      </div>
+       </div><br>
       <!--<div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
         <h2 style="color: #FFF;width: 100%;">Potential Baneficiaries</h2>
           <p style="padding: 10px;">
@@ -146,9 +134,8 @@
             </ul>
         </p>
       </div>-->
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Participating Department(s)</h2>
-          <p style="padding: 10px;">
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Participating Department(s)</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             <ul>
               <li>Department of Earth and Environmental Studies</li>
               <li>Department of Physics</li>
@@ -162,11 +149,9 @@
               <li>Dept. of Management Studies</li>
 
             </ul>
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">Committee Members</h2>
-          <p style="padding: 10px;">
+       </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">Committee Members</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
             <table class="table table-responsive-md table-bordered">
                 <thead class="mdb-color lighten-4">
                   <th>SL. No.</th>
@@ -221,11 +206,9 @@
                   
                 </tbody>
               </table>
-        </p>
-      </div>
-      <div style="border: 2px solid #01576A;border-radius: 12px;margin-bottom: 5px;text-align: justify;" class="descbox">
-        <h2 style="color: #FFF;width: 100%;">The Team (CREW)</h2>
-          <p style="padding: 10px;">
+      </div><br>
+      <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">The Team (CREW)</div>
+          <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
            <table class="table table-responsive-md table-bordered">
                 <thead class="mdb-color lighten-4">
                   <th>SL. No.</th>
@@ -288,7 +271,6 @@
                   Professor, Department of Chemistry</td></tr>
           </tbody>
               </table>
-        </p>
       </div>
       
     </card>
@@ -347,22 +329,7 @@ export default {
     flex-grow: 1;
     max-width: 100%;
   }
-  h2{
-    height: 40px;
-    background: #01576A;
-    display: block;
-    width: 15%;
-    font-size: 20px;
-    color: #FFF;
-    text-align: center;
-    line-height: 40px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-   .descbox:hover{
-    background: #C7ECF5;
-
-  }
+  
   @media screen and (max-width: 1200px){
     .list-gr .contact-col{
       min-width: 100%;
