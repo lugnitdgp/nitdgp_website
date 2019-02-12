@@ -5,10 +5,8 @@ from department.models import Faculty
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from root import settings
-from time import sleep
 import tempfile
 from shutil import copyfile
-import random
 import os
 import json
 
@@ -27,14 +25,10 @@ class FacultyViewSet(RetrieveAPIView):
 def download_note(request):
     if request.POST.get('input_key', False) and request.POST.get('id', False):
         try:
-            gen_random = random.SystemRandom()
-            sleep(gen_random.uniform(0, 1))
             qset = Notes.objects.get(id=request.POST['id'])
         except Notes.DoesNotExist:
             return HttpResponse(status=404)
         if qset.secret_key == request.POST.get('input_key', ""):
-            sleep(gen_random.uniform(0, 1))
-
             # Get file name from db
             absolute_file = qset.note.path
             file_name = absolute_file.split('/')[-1]
@@ -61,6 +55,5 @@ def download_note(request):
                 content_type="application/json"
             )
         else:
-            sleep(gen_random.uniform(1, 2))
             return HttpResponse(status=403)
     return HttpResponse(status=404)
