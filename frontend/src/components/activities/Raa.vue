@@ -1,6 +1,9 @@
 <template>
   <links-page>
     <card title="Rashtriya Avishkar Abhiyan (RAA)">
+      <div class="col-12 caro">
+        <Carousel :slides="slides"></Carousel>
+      </div><br>
     <div style="background-color: #001333;color: #fff;padding: 10px;text-align: center;">About Rashtriya Avishkar Abhiyan</div>
             <div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
     	         Rashtriya Avishkar Abhiyan (RAA) is an initiative of the Government of India, Ministry of Human Resource and Development (MHRD) to popularize science, mathematics and technology among school students. While emphasising the primacy of the schools and classroom transactions, the RAA aims to leverage the potential for science, mathematics and technology learning in non-classroom settings. Beyond the four walls of a classroom, opportunities for science, mathematics and technology learning abound. Accordingly, the RAA is planned to provide nourishing and nurturing support to and a platform for schools in a dual track approach to make Science, Mathematics and Technology exciting to children and encourage them to have an enduring interest both inside classroom and outside classroom activities. The objectives of this RAA programme is (i) to enable children to become motivated and engaged in Science, Mathematics and Technology (SMT) through observation, experimentation, inference drawing, model building, rational reasoning, testability etc. (ii) to create curiosity, excitement and exploration among school children in Science, Mathematics and Technology. (iii) to create a culture of thinking, inventing, tinkering and doing to promote enquiry based learning in Schools. RAA will target students in the age group of 6-18 years and in turn the execution of RAA will span across MHRD’s schematic interventions of Sarva Shiksha Abhiyan in the Department of School Education & Literacy and programmes and schemes of Department of Higher Education to encourage Science, Mathematics & Technology. NIT Durgapur is a mentoring institute along with IIT Kharagpur and IISER Kolkata for RAA for the state of West Bengal. In collaboration with Govt. of West Bengal, Paschim Banga Samagra Shiksha Mission, NIT Durgapur prepare a plan for promotion of science and mathematics among the school students of the state of West Bengal. 
@@ -130,6 +133,9 @@
   </links-page>
 </template>
 <script>
+import axios from 'axios'
+import { genBackendURL, convertNewsfeed } from '@/common.js'
+import Carousel from '@/components/Carousel'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
 // import CollapseList from '@/components/CollapseList'
@@ -140,15 +146,25 @@ export default {
   name: 'Raa',
   data () {
     return {
-      
+      slides:{},
     }
   },
   created () {
-  	this.$emit('hideloader', true)
+  	axios.get(genBackendURL('activities/coecarousel'))
+         .then(response => {
+          let coecarousels = response.data.coecarousels
+          console.log(coecarousels)
+          this.slides = coecarousels.RAA
+          this.$emit('hideloader', true)
+          })
+         .catch(e => {
+           console.log(e)
+         })
   },
   components: {
     LinksPage,
-    Card
+    Card,
+    Carousel
   }
 }
 </script>

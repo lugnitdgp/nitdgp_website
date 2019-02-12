@@ -56,6 +56,7 @@ import Coeam from '@/components/activities/Coeam'
 import Crew from '@/components/activities/Crew'
 import Iotis from '@/components/activities/Iotis'
 import Raa from '@/components/activities/Raa'
+import Ncc from '@/components/activities/Ncc'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -319,6 +320,11 @@ export default new Router({
       path: '/clubs',
       name: 'Clubs',
       component: Clubs
+    },
+    {
+      path: '/ncc&nss',
+      name: 'Ncc',
+      component: Ncc
     },
 
     // Facilities
