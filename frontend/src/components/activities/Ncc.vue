@@ -30,7 +30,6 @@ export default {
   name: 'Ncc',
   data () {
     return {
-      crewimg: {},
       slides:{},
     }
   },
@@ -38,8 +37,7 @@ export default {
     axios.get(genBackendURL('activities/coecarousel'))
          .then(response => {
           let coecarousels = response.data.coecarousels
-          console.log(coecarousels)
-          this.slides = coecarousels.CREW
+          this.slides = coecarousels.NCC
           this.$emit('hideloader', true)
           })
          .catch(e => {

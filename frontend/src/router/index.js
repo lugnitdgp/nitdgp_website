@@ -183,7 +183,7 @@ export default new Router({
       component: Fees
     },
     {
-      path: '/prospectus',
+      path: '/Academicbrochure',
       name: 'Brochure',
       component: Brochure
     },
