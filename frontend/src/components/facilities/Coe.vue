@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="l1 page-type-links">
     <div class="card">
-      <a class="card-header white-text">Centre of Excellence in Advanced Materials</a>
+      <a class="card-header white-text">Centres for Excellence in Advanced Materials</a>
       <div class="card-body">
         <div class="card-text">
           <ul>
@@ -12,7 +12,7 @@
       </div>      
     </div> -->
     <links-page>
-    <card title="Centre of Excellence">
+    <card title="Centres for Excellence">
       <div class="row">
         <div v-for="(coe, i) in coes" :key="i">
         <a :href="coe.link" target="_blank"><card-testimonial :image="coe.image" :name="coe.name">

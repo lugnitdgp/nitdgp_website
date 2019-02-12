@@ -363,7 +363,7 @@ export default new Router({
       component: Mu
     },
     {
-      path: '/coe',
+      path: '/coes',
       name: 'Coe',
       component: Coe
     },
