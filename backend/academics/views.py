@@ -36,7 +36,7 @@ class ConvocationViewSet(ListAPIView):
 
 class AdmissionViewSet(ListAPIView):
 
-    queryset = AdmissionDegree.objects.filter(programmes__documents__archive=False)
+    queryset = AdmissionDegree.objects.filter(programmes__documents__archive=False).distinct()
     serializer_class = AdmissionMainSerializer
 
 
