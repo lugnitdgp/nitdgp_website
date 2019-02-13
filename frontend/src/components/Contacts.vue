@@ -588,7 +588,7 @@ export default {
   }
 }
 </script>
-<style >
+<style scoped="scoped">
   .list-gr .contact-col{
     min-width: 33%;
     max-width: 33%;
