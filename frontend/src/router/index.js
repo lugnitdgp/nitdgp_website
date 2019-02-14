@@ -91,6 +91,7 @@ import Icc from '@/components/information/Icc'
 import Pgcell from '@/components/information/Pgcell'
 import Pension from '@/components/information/Pension'
 import Mission from '@/components/information/Mission'
+import Dpromotion from '@/components/information/Dpromotion'
 
 import Collaboration from '@/components/activities/Collaboration'
 import Srcc from '@/components/Srcc'
@@ -474,6 +475,11 @@ export default new Router({
       path: '/mission&vision',
       name: 'Mission',
       component: Mission
+    },
+    {
+      path: '/departmentalpromotion',
+      name: 'Dpromotion',
+      component: Dpromotion
     },
     {
       path: '/chanakya',
