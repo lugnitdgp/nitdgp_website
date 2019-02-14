@@ -92,6 +92,7 @@ import Pgcell from '@/components/information/Pgcell'
 import Pension from '@/components/information/Pension'
 import Mission from '@/components/information/Mission'
 import Dpromotion from '@/components/information/Dpromotion'
+import Rroster from '@/components/information/Rroster'
 
 import Collaboration from '@/components/activities/Collaboration'
 import Srcc from '@/components/Srcc'
@@ -480,6 +481,11 @@ export default new Router({
       path: '/departmentalpromotion',
       name: 'Dpromotion',
       component: Dpromotion
+    },
+    {
+      path: '/reservationrosters',
+      name: 'Rroster',
+      component: Rroster
     },
     {
       path: '/chanakya',
