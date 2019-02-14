@@ -99,7 +99,7 @@ export default {
     let count_axios = 0
     axios.get(genBackendURL('dashboard'))
          .then(response => {
-           var struct = [0,1,11,111,1111,1121,2121,2122,2222,2232,3232,3323,3333,3343,3344,4434,4444];
+           var struct = [0,1,11,111,1111,1121,2121,2122,2222,2232,3232,3323,3333,3343,3344,4434,4444,5444];
            this.results = response.data.results
            let x = 0, y = 0
            let section_rows = []
