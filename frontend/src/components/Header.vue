@@ -155,7 +155,8 @@ export default {
   .navbar .hm-btn a{
     color: white
   }
-  .navbar .navbar-content-cen{
+  .navbar-content-cen{
+    z-index: -1000;
     text-align: center;
   }
   .navbar .nav-logo{
