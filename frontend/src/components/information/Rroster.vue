@@ -12,7 +12,6 @@
         <li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/roster/ROSTER_2018.pdf">Reservation Roster of 31.12.2018</a>
         </li>
-        
       </ul>
     </card>
   </links-page>
@@ -26,9 +25,8 @@ export default {
   name: "Rroster",
   data () {
     return {
-      
     }
-  },  
+  },
   created () {
     this.$emit('hideloader', true)
   },

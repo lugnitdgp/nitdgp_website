@@ -33,21 +33,9 @@
 .goog-te-menu-value span{
   display: none
 }
-header {
-  padding-bottom: 3px;
-}
 .container-fluid {
   padding-left: 0px;
   padding-right: 0px;
-}
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  min-height:100%;
-  font-weight: 400;
-  background: #ECEFF1;
 }
 font {
   color: inherit!important;
@@ -126,18 +114,13 @@ font {
 #footer-container{
   padding-bottom:10px;
 }
-.l0{ /*container*/
-  min-height: 300px;
+.l0{
   padding-top: 1em;
   padding-bottom: 0.1em;
   padding-right: 3%;
   padding-left: 3%;
 }
-.mob{
-  min-height: 350px!important;
-}
 .l1{
-  min-height: 750px;
   margin-top: 80px;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -151,9 +134,6 @@ font {
   padding-right: 20%;
   padding-left: 20%;
 }
-.l2-idep{
-  min-height: 750px;
-}
 .l1-dep{ /*container*/
   min-height: 750px;
   margin-top: 80px;
@@ -163,7 +143,11 @@ font {
   padding-left: 5%;
 }
 .l3-fac{
-  min-height: 750px;margin-top: 30px;padding-top: 4em;padding-bottom: 2em;padding-right: 1.5%;padding-left: 1.5%;
+  margin-top: 30px;
+  padding-top: 4em;
+  padding-bottom: 2em;
+  padding-right: 1.5%;
+  padding-left: 1.5%;
 }
 hr.style4 {
   border-top: medium double #ECEFF1;color: #ECEFF1;text-align: center;
@@ -593,7 +577,6 @@ hr.style4:after {
 /* card bg-color*/
 .card-4 {
   background: linear-gradient(#ECEFF1,#B0BEC5);
-  /*min-height: 95%;*/
 }
 /* card-title color*/
 .card-4 a.tile-title{

@@ -28,9 +28,7 @@
                 {{link.name}}
               </a>
             </div>
-            <quick-links v-else-if="link.name == 'Quick Links'">
-              
-            </quick-links>
+            <quick-links v-else-if="link.name == 'Quick Links'" />
             <div v-else>
               <a :href="link.href">{{ link.name }}</a>
             </div>

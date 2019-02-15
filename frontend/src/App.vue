@@ -37,6 +37,10 @@ export default {
 </script>
 
 <style scoped>
+  header + div {
+    min-height: calc(100vh - 307px);
+  }
+
   .loader {
     opacity:0.98;
     background-color:#fff;

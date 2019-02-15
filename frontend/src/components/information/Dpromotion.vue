@@ -17,7 +17,6 @@
         <li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/DPC Application Form.doc">Application Form ( DOC ) </a>
         </li>
-        
       </ul>
     </card>
   </links-page>
@@ -31,9 +30,8 @@ export default {
   name: "Dpromotion",
   data () {
     return {
-      
     }
-  },  
+  },
   created () {
     this.$emit('hideloader', true)
   },
