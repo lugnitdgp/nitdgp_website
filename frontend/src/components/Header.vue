@@ -98,6 +98,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   @import url('https://fonts.googleapis.com/css?family=Kosugi|Open+Sans+Condensed:300|PT+Sans');
+  header {
+    padding-bottom: 1%;
+  }
   @media screen and (max-width: 1200px)  {
     .nm-det{
       display: none

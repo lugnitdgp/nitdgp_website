@@ -111,41 +111,23 @@ font {
 .page-footer{
   background-color: #001333;
 }
-#footer-container{
-  padding-bottom:10px;
-}
 .l0{
-  padding-top: 1em;
-  padding-bottom: 0.1em;
   padding-right: 3%;
   padding-left: 3%;
 }
 .l1{
-  margin-top: 80px;
-  padding-top: 1em;
-  padding-bottom: 1em;
   padding-right: 1.5%;
   padding-left: 1.5%;
 }
 .page-type-person {
-  margin-top: 80px;
-  padding-top: 1em;
-  padding-bottom: 2em;
   padding-right: 20%;
   padding-left: 20%;
 }
-.l1-dep{ /*container*/
-  min-height: 750px;
-  margin-top: 80px;
-  padding-top: 1em;
-  padding-bottom: 1em;
+.l1-dep{
   padding-right: 5%;
   padding-left: 5%;
 }
 .l3-fac{
-  margin-top: 30px;
-  padding-top: 4em;
-  padding-bottom: 2em;
   padding-right: 1.5%;
   padding-left: 1.5%;
 }
@@ -407,7 +389,6 @@ hr.style4:after {
     line-height: 110%;
     padding-top: 12px;
     margin-bottom: -4px;
-    min-height: 80%;
     color: #ffffff;
 }
 .row {
@@ -443,7 +424,10 @@ hr.style4:after {
   padding-top: 6px !important;
 }
 .l0 .tile-content{
-  text-align: center;vertical-align: middle;line-height: 100%;padding-top: 15px;margin-bottom: -5px;min-height: 80%;color: #ffffff;
+  line-height: 100%;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 .l0 .tile-title-text{
   letter-spacing: 2px;font-size:120%;text-align: center;vertical-align: middle;line-height: 1px;color: #ffffff;
@@ -524,10 +508,6 @@ hr.style4:after {
 .card-1 div.tile-small{
   background-color: #4A148C;
 }
-/* small-tile-text color*/
-.card-1 div.tile-content{
-  color: #ffffff;
-}
 /*/.card-1*/
 /*card-2*/
 /* card bg-color*/
@@ -546,11 +526,6 @@ hr.style4:after {
 .card-2 div.tile-small{
   background-color: #B71C1C;
 }
-/* small-tile-text color*/
-.card-2 div.tile-content{
-  color: #ffffff;
-}
-/*/.card-2*/
 /*card-3*/
 /* card bg-color*/
 .card-3 {
@@ -568,11 +543,6 @@ hr.style4:after {
 .card-3 div.tile-small{
   background-color: #212121;
 }
-/* small-tile-text color*/
-.card-3 div.tile-content{
-  color: #ffffff;
-}
-/*/.card-3*/
 /*card-4*/
 /* card bg-color*/
 .card-4 {
@@ -590,11 +560,6 @@ hr.style4:after {
 .card-4 div.tile-small{
   background-color: #006064;
 }
-/* small-tile-text color*/
-.card-4 div.tile-content{
-  color: #ffffff;
-}
-/*/.card-4*/
 /*card-5*/
 /* card bg-color*/
 .card-5 {
@@ -612,11 +577,6 @@ hr.style4:after {
 .card-5 div.tile-small{
   background-color: #880E4F;
 }
-/* small-tile-text color*/
-.card-5 div.tile-content{
-  color: #ffffff;
-}
-/*/.card-6*/
 
 /*card-6*/
 /* card bg-color*/
@@ -635,11 +595,6 @@ hr.style4:after {
 .card-6 div.tile-small{
   background-color: #002f6c;
 }
-/* small-tile-text color*/
-.card-6 div.tile-content{
-  color: #ffffff;
-}
-/*/.card-6*/
 /*card-7*/
 /* car7 bg-color*/
 .card-7 {
@@ -657,11 +612,6 @@ hr.style4:after {
 .card-7 div.tile-small{
   background-color: #035A6E;
 }
-/* small-tile-text color*/
-.card-7 div.tile-content{
-  color: #ffffff;
-}
-/*/.card-7*/
 /*Level 1 dep*/
 /* card bg-color*/
 .l1-dep .l1-card {

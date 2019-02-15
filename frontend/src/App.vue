@@ -39,6 +39,21 @@ export default {
 <style scoped>
   header + div {
     min-height: calc(100vh - 307px);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    header + div {
+      margin-top: 80px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    header + div {
+      margin-top: 60px;
+    }
   }
 
   .loader {

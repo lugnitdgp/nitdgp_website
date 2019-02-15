@@ -131,6 +131,9 @@ export default {
 </script>
 
 <style>
+  #footer-container{
+    padding-bottom:10px;
+  }
   footer {
     width: 100%;
     min-height: 170px;
