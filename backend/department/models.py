@@ -76,6 +76,8 @@ class Staff(BaseModel):
 
     name = models.CharField(max_length=512)
     designation = models.CharField(max_length=512)
+    education = models.CharField(max_length=512)
+    experience = models.IntegerField(default=0)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=rename_staff_image, null=True)
 
@@ -87,6 +89,12 @@ class Staff(BaseModel):
 
     def _designation(self):
         return self.designation
+
+    def _education(self):
+        return self.education
+
+    def _experience(self):
+        return self.experience
 
 
 def rename_student(instance, filename):
