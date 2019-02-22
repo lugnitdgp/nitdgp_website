@@ -73,12 +73,18 @@ class Staff(BaseModel):
     class Meta:
         verbose_name_plural = 'Staff'
         ordering = ('name', )
-
+    YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year+1)]
     name = models.CharField(max_length=512)
     designation = models.CharField(max_length=512)
     education = models.CharField(max_length=512)
     experience = models.IntegerField(default=0)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    email = models.CharField(max_length=255, default="")
+    mobile = models.BigIntegerField(null=True)
+    joining_year = models.IntegerField(
+        choices=YEAR_CHOICES,
+        default=1959
+    )
     image = models.ImageField(upload_to=rename_staff_image, null=True)
 
     def __str__(self):
