@@ -183,8 +183,18 @@
                     class="staffs"
                     :name="person.name"
                     :image="person.image"
-                    :desig="person.designation"
-                  />
+                    :desig="person.designation">
+                  <!--<strong>
+                    <span>Laboratory Experience {{ person.experience }}</span>
+                  </strong><br>-->
+                  <i class="fa fa-envelope" />&nbsp;&nbsp;&nbsp;
+                  <strong>{{ person.email }}</strong><br>
+                  <i class="fa fa-phone" />&nbsp;&nbsp;&nbsp;
+                  <strong>+91-{{ person.mobile }}</strong></br>
+                  <strong>
+                    <span class="blue-text">Joined the Institute in {{ convertYear(person.joining_year) }}</span>
+                  </strong>
+                </card-testimonial>
                 </div>
               </div>
             </div>
