@@ -57,6 +57,7 @@ import Crew from '@/components/activities/Crew'
 import Iotis from '@/components/activities/Iotis'
 import Raa from '@/components/activities/Raa'
 import Ncc from '@/components/activities/Ncc'
+import Beat from '@/components/activities/Beat'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -279,6 +280,11 @@ export default new Router({
       component: Iotis
     },
     {
+      path: '/beat',
+      name: 'Beat',
+      component: Beat
+    },
+    {
       path: '/rashtriyaavishkarabhiyan',
       name: 'Raa',
       component: Raa
@@ -324,7 +330,7 @@ export default new Router({
       component: Clubs
     },
     {
-      path: '/ncc&nss',
+      path: '/ncc',
       name: 'Ncc',
       component: Ncc
     },
