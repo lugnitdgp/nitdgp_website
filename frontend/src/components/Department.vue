@@ -97,6 +97,11 @@
                   </li>
                 </ul>
               </div>
+              <div v-if="dept.poe != ''">
+                <hr>
+                <h5><strong>Programme Educational Objectives</strong></h5>
+                <div v-html="dept.poe" />
+              </div>
             </div>
             <div class="tab-pane fade page-type-links" id="panell2" role="tabpanel">
               <h5><strong>Details of Syllabus/Programmes in PG</strong></h5>

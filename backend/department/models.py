@@ -12,6 +12,7 @@ class Department(BaseModel):
     mission = RichTextField()
     vision = RichTextField()
     contact_us = RichTextField()
+    peo = RichTextField(default="", blank=True)
 
     def __str__(self):
         return self.name
