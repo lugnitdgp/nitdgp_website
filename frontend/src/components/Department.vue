@@ -97,10 +97,10 @@
                   </li>
                 </ul>
               </div>
-              <div v-if="dept.poe != ''">
+              <div v-if="dept.peo != ''">
                 <hr>
                 <h5><strong>Programme Educational Objectives</strong></h5>
-                <div v-html="dept.poe" />
+                <div v-html="dept.peo" />
               </div>
             </div>
             <div class="tab-pane fade page-type-links" id="panell2" role="tabpanel">
