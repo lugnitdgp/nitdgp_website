@@ -58,6 +58,7 @@ import Iotis from '@/components/activities/Iotis'
 import Raa from '@/components/activities/Raa'
 import Ncc from '@/components/activities/Ncc'
 import Beat from '@/components/activities/Beat'
+import Geothermal from '@/components/activities/Geothermal'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -333,6 +334,11 @@ export default new Router({
       path: '/ncc',
       name: 'Ncc',
       component: Ncc
+    },
+    {
+      path: '/heliumgeothemal',
+      name: 'Geothermal',
+      component: Geothermal
     },
 
     // Facilities
