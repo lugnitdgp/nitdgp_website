@@ -14,7 +14,7 @@
 
 <script>
 import axios from 'axios'
-
+import { genBackendURL } from '@/common.js'
 import LinksPage from '@/components/LinksPage'
 import Card from '@/components/Card'
 
