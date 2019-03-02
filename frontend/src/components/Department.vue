@@ -45,6 +45,10 @@
             <div class="col-8 caro">
               <h3 class="pane-title" align="left">About Us</h3>
               <p class="pane-text" align="left" v-html="dept.about_us"></p>
+              <h3 class="pane-title" align="left">Mission</h3>
+              <p class="pane-text" align="left" v-html="dept.mission"></p>
+              <h3 class="pane-title" align="left">Vision</h3>
+              <p class="pane-text" align="left" v-html="dept.vision"></p>
             </div>
             <div class="col-4 news" align="left">
               <Newsfeed :notices="dept.news"></Newsfeed>
@@ -99,11 +103,12 @@
               </div>
               <div v-if="dept.peo != ''">
                 <hr>
-                <h5><strong>Programme Educational Objectives</strong></h5>
+                <h3 class="pane-text text-center"><strong>Programme Educational Objectives</strong></h3>
                 <div v-html="dept.peo" />
               </div>
             </div>
-            <div class="tab-pane fade page-type-links" id="panell2" role="tabpanel">
+            <div class="tab-pane fade page-type-links" id="panell2" role="tabpanel">          
+
               <h5><strong>Details of Syllabus/Programmes in PG</strong></h5>
               <h6 class="red-text" v-if="!dept.syllabus.PG">
                 Not Available at the moment
@@ -111,8 +116,12 @@
               <ul class="list-group list-gr">
                 <li v-for="list,index in dept.syllabus.PG">
                   <a class="list-group-item" :href="list.file">{{ list.title }}</a>
-                </li>
+                </li>                
               </ul>
+              <div v-if="dept.pgpeo != ''">
+                <hr>
+                <h3 class="pane-text text-center"><strong>Programme Educational Objectives</strong></h3>
+                <div v-html="dept.pgpeo" /></div>
             </div>
             <div class="tab-pane fade page-type-links" id="panell3" role="tabpanel">
               <h5><strong>Details of Syllabus/Programmes in PhD</strong></h5>
