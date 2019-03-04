@@ -74,6 +74,7 @@ import Hvl from '@/components/facilities/Hvl'
 import Canteen from '@/components/facilities/Canteen'
 import Centers from '@/components/facilities/Centers'
 import Cec from '@/components/facilities/Cec'
+import Cc from '@/components/facilities/Cc'
 import Brics from '@/components/facilities/Brics'
 
 import Reports from '@/components/information/Reports'
@@ -391,6 +392,11 @@ export default new Router({
       path: '/cif',
       name: 'Cif',
       component: Cif
+    },
+    {
+      path: '/cc',
+      name: 'Cc',
+      component: Cc
     },
     {
       path: '/cec',
