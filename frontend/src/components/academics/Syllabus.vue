@@ -2,9 +2,9 @@
   <links-page>
     <card title="Curriculum and Syllabus">
       <ul class="list-group list-gr">
-        <li>
-          <a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/COMPILED 2017 admission - FOR PROSPECTUS.pdf" target="_blank">
-            Curriculum of 2017-18 Undergraduate Admission Batch
+        <li v-for="curriculmn in curriculmns">
+          <a class="list-group-item" target="new" :href="curriculmn.file">
+            {{ curriculmn.title }}
           </a>
         </li>
       </ul>
@@ -22,11 +22,19 @@ export default {
   name: "Curriculmn",
   data () {
     return {
-      curriculmn: {}
+      curriculmns: {}
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('academics/curriculum'))
+         .then(response => {
+           this.curriculmns = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log(e)
+         })
+         this.$emit('hideloader', true)
   },
   components: {
     LinksPage,
