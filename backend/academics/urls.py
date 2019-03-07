@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^academics/examination/$', ExaminationViewSet.as_view(), name='view-examination'),
     url(r'^academics/registration/$', RegistrationViewSet.as_view(), name='view-registration'),
     url(r'^academics/fee/$', FeeViewSet.as_view(), name='view-fee'),
+    url(r'^academics/curriculum/$', CurriculumViewSet.as_view(), name='view-curriculum'),
     url(r'^academics/convocation/$', ConvocationViewSet.as_view(), name='view-convocation'),
     url(r'^convocation-links/(?P<sets>[\d]+)/$', convocation_links, name="convocation-links"),
 

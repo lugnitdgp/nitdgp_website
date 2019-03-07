@@ -31,6 +31,13 @@ class FeeSerializer(serializers.ModelSerializer):
         fields = ('title', 'file')
 
 
+class CurriculumSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Curriculum
+        fields = ('title', 'file')
+
+
 class RegistrationSerializer(serializers.ModelSerializer):
 
     class Meta:

@@ -73,6 +73,10 @@ class RegistrationViewSet(ListAPIView):
     serializer_class = RegistrationSerializer
 
 
+class CurriculumViewSet(ListAPIView):
+    queryset = Curriculum.objects.all()
+    serializer_class = CurriculumSerializer
+
 def convocation_links(request, sets):
         BASE_DIR = "/var/www/html/nitdgp_website/frontend/dist/convocation-photos/"
         sets = int(sets)

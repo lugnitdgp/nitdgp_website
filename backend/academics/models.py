@@ -178,6 +178,15 @@ class Fee(BaseModel):
     def _file(self):
         return self.file
 
+class Curriculum(BaseModel):
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to='academics/curriculum/%Y')
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
 
 class Convocation(BaseModel):
     title = models.CharField(max_length=255)

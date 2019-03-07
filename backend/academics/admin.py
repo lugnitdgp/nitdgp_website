@@ -63,6 +63,10 @@ class FeeModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
 
+class CurriculumModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_file']
+
+
 class RegistrationModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
@@ -81,4 +85,5 @@ admin.site.register(Examination, ExaminationModelAdmin)
 admin.site.register(Document, DocumentModelAdmin)
 admin.site.register(Regulation, RegulationModelAdmin)
 admin.site.register(Fee, FeeModelAdmin)
+admin.site.register(Curriculum, CurriculumModelAdmin)
 admin.site.register(Registration, RegistrationModelAdmin)
