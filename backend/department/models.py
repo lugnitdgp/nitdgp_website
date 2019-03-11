@@ -308,10 +308,10 @@ class Courses(BaseModel):
     title = models.CharField(max_length=255)
     short_code = models.CharField(max_length=15)
     semester = models.IntegerField()
-    l = models.IntegerField()
-    t = models.IntegerField()
-    s = models.IntegerField()
-    credits = models.IntegerField()
+    l = models.DecimalField(max_digits=5, decimal_places=1)
+    t = models.DecimalField(max_digits=5, decimal_places=1)
+    s = models.DecimalField(max_digits=5, decimal_places=1)
+    credits = models.DecimalField(max_digits=5, decimal_places=1)
 
     def __str__(self):
         return self.short_code
