@@ -8,7 +8,7 @@
       <div class="tabs-wrapper up-content mx-auto">
         <ul class="nav classic-tabs" role="tablist">
           <li class="nav-item">
-            <a class="nav-link waves-light active" :href="'/department/'+this.$route.params.short_code" role="tab">About Us</a>
+            <a class="nav-link waves-light" :href="'/department/'+this.$route.params.short_code" role="tab">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-light" :href="'/department/'+this.$route.params.short_code+'/programmes'" role="tab" >Programmes</a>
@@ -17,7 +17,7 @@
             <a class="nav-link waves-light" :href="'/department/'+this.$route.params.short_code+'/HOD'" role="tab" >HOD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-light" :href="'/department/'+this.$route.params.short_code+'/people'" role="tab" >People</a>
+            <a class="nav-link waves-light  active" :href="'/department/'+this.$route.params.short_code+'/people'" role="tab" >People</a>
           </li>
           <li class="nav-item">
             <a class="nav-link waves-light" :class="{'disabled': !dept.research.length }" :href="'/department/'+this.$route.params.short_code+'/research'" role="tab" >Research</a>
@@ -40,123 +40,7 @@
         </ul>
       </div>
       <div class="tab-content card down-content">
-        <div class="tab-pane fade show active big-list" id="li1" role="tabpanel" aria-labelledby="li1-list">
-          <div class="row newscaro">
-            <div class="col-8 caro">
-              <h3 class="pane-title" align="left">About Us</h3>
-              <p class="pane-text" align="left" v-html="dept.about_us"></p>
-              <h3 class="pane-title" align="left">Mission</h3>
-              <p class="pane-text" align="left" v-html="dept.mission"></p>
-              <h3 class="pane-title" align="left">Vision</h3>
-              <p class="pane-text" align="left" v-html="dept.vision"></p>
-            </div>
-            <div class="col-4 news" align="left">
-              <Newsfeed :notices="dept.news"></Newsfeed>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade big-list" id="li2" role="tabpanel" aria-labelledby="li2-list">
-          <ul class="nav md-pills nav-justified pills-secondary">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#panell1" role="tab">UG</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#panell2" role="tab">PG</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#panell3" role="tab">PhD</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane fade in show active" id="panell1" role="tabpanel">
-              <div class="row">
-                <div class="col" v-for="programme,index in dept.programmes.UG">
-                  <h5><strong>Academic Courses and Syllabus for {{ programme.programme_title }} Students</strong></h5>
-                  <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
-                    <div v-for="syllabus,sem in programme">
-                      <card-collapse v-if="sem!='programme_title'" :title="'Semester '+sem">
-                        <table-renderer :table="syllabus" :theader="['COURSE TITLE', 'CODE','L','T','S','C']"></table-renderer>
-                      </card-collapse>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <br>
-              <collapse-list>
-                <card-collapse v-for="(curriculum,i) in dept.previous_year_curriculum.UG"
-                  :title="curriculum.title" :key="i">
-                  <div v-html="curriculum.details" />
-                </card-collapse>
-              </collapse-list>
-              <br>
-              <div class="page-type-links">
-                <h5><strong>Details of Syllabus in UG</strong></h5>
-                <h6 class="red-text" v-if="!dept.syllabus.UG">
-                  Not Available at the moment
-                </h6>
-                <ul class="list-group list-gr">
-                  <li v-for="list,index in dept.syllabus.UG">
-                    <a class="list-group-item" :href="list.file">{{ list.title }}</a>
-                  </li>
-                </ul>
-              </div>
-              <div v-if="dept.peo != ''">
-                <hr>
-                <h3 class="pane-text text-center"><strong>Programme Educational Objectives</strong></h3>
-                <div v-html="dept.peo" />
-              </div>
-            </div>
-            <div class="tab-pane fade page-type-links" id="panell2" role="tabpanel">
-
-              <h5><strong>Details of Syllabus/Programmes in PG</strong></h5>
-              <h6 class="red-text" v-if="!dept.syllabus.PG">
-                Not Available at the moment
-              </h6>
-              <ul class="list-group list-gr">
-                <li v-for="list,index in dept.syllabus.PG">
-                  <a class="list-group-item" :href="list.file">{{ list.title }}</a>
-                </li>
-              </ul>
-              <div v-if="dept.pgpeo != ''">
-                <hr>
-                <h3 class="pane-text text-center"><strong>Programme Educational Objectives</strong></h3>
-                <div v-html="dept.pgpeo" /></div>
-            </div>
-            <div class="tab-pane fade page-type-links" id="panell3" role="tabpanel">
-              <h5><strong>Details of Syllabus/Programmes in PhD</strong></h5>
-              <h6 class="red-text" v-if="!dept.syllabus.PhD">
-                Not Available at the moment
-              </h6>
-              <ul class="list-group list-gr">
-                <li v-for="list,index in dept.syllabus.PhD">
-                  <a class="list-group-item" :href="list.file">{{ list.title }}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade  big-list" id="li3" role="tabpanel" aria-labelledby="li3-list">
-          <h3 class="pane-title" align="left">Head Of Department</h3>
-          <div class="container">
-            <div class="row">
-              <card-testimonial v-if="Object.keys(dept.hod).length"
-                :name="dept.hod.name"
-                :image="dept.hod.image"
-                desig="Head of Department">
-                <strong>Research Interest</strong><br>
-                <span v-html="dept.hod.research_interest.slice(3,-4)"></span><br>
-                <i class="fa fa-envelope"></i><br>
-                <strong>{{ dept.hod.email }}</strong><br>
-                <strong><span class="blue-text">Joined the Institute in {{ convertYear(dept.hod.joining_year) }}
-                </span></strong>
-              </card-testimonial>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade big-list" id="li4" role="tabpanel" aria-labelledby="li4-list">
+        <div class="tab-pane fade show active big-list" id="li4" role="tabpanel" aria-labelledby="li4-list">
           <ul class="nav md-pills nav-justified pills-secondary">
             <li class="nav-item" :class="{'disabled': !dept.people.faculty.length }">
               <a class="nav-link active" data-toggle="tab" href="#p4l1" role="tab">Faculty</a>
@@ -222,83 +106,6 @@
               </ul>
             </div>
           </div>
-        </div>
-
-        <div class="tab-pane fade big-list" id="li5" role="tabpanel" aria-labelledby="li5-list">
-          <h4><strong>Collaboration with Academic and Research Institutions in recent times</strong></h4>
-          <table-renderer :theader="research_header" :table="dept.research" />
-        </div>
-
-        <div class="tab-pane fade big-list" id="li6" role="tabpanel" aria-labelledby="li5-list">
-          <h4 ><strong>Ongoing Sponsored Projects</strong></h4>
-          <table-renderer :theader="project_header" :table="dept.projects" />
-        </div>
-
-        <div class="tab-pane fade big-list" id="li7" role="tabpanel" aria-labelledby="li7-list">
-          <ul class="nav md-pills nav-justified pills-secondary">
-            <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#p7l1" role="tab">Labratories</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#p7l2" role="tab">Equipments</a>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane fade in show active" id="p7l1" role="tabpanel">
-              <div class="row">
-                <div class="col">
-                  <ul class="list-group">
-                    <li v-for="lab in dept.facilities.Laboratory" class="list-group-item">{{ lab.name }}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="p7l2" role="tabpanel">
-              <div class="row">
-                <div class="col">
-                  <ul class="list-group">
-                    <li v-for="equip in dept.facilities.Equipment" class="list-group-item">{{ equip.name }}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
-          <h4 class="black-text"><strong>Programmes Hosted by the Department</strong></h4>
-          <activity-renderer :theader="activities_header" :table="dept.activities"></activity-renderer>
-        </div>
-
-        <div class="tab-pane fade big-list" id="li9" role="tabpanel" aria-labelledby="li9-list">
-          <div id="carousel-dept" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li v-for="(slide,index) in dept.photos" data-target="#carousel-home" :data-slide-to="index" :class="{ active: (index == 0) }"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div v-for="(slide,index) in dept.photos" class="carousel-item anim1" :class="{ active: (index == 0) }">
-                <div class="view">
-                  <img class="d-block w-100" :src="genBackendURL(slide.image, true)" :alt="['Slide ' + (index+1)]">
-                  <div class="mask rgba-black-light"></div>
-                </div>
-                <div class="carousel-caption">
-                  <h5 class="h5-responsive" style="color:#fff">{{ slide.title }}</h5>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carousel-dept" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-dept" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="tab-pane fade big-list" id="li10" role="tabpanel" aria-labelledby="li10-list">
-          <p align="center" v-html="dept.contact_us" />
         </div>
       </div>
     </sp-card>

@@ -3,6 +3,15 @@ import Router from 'vue-router'
 
 import Home from '@/components/Home'
 import Department from '@/components/Department'
+import DepartmentProgrammes from '@/components/DepartmentProgrammes'
+import DepartmentHOD from '@/components/DepartmentHOD'
+import DepartmentPeople from '@/components/DepartmentPeople'
+import DepartmentResearch from '@/components/DepartmentResearch'
+import DepartmentProjects from '@/components/DepartmentProjects'
+import DepartmentFacilities from '@/components/DepartmentFacilities'
+import DepartmentActivities from '@/components/DepartmentActivities'
+import DepartmentPhotoGallery from '@/components/DepartmentPhotoGallery'
+import DepartmentContactUs from '@/components/DepartmentContactUs'
 import Faculty from '@/components/Faculty'
 import Holidays from '@/components/Holidays'
 import Archives from '@/components/Archives'
@@ -120,7 +129,51 @@ export default new Router({
       name: 'Department',
       component: Department
     },
-
+    {
+      path: '/department/:short_code/programmes',
+      name: 'DepartmentProgrammes',
+      component: DepartmentProgrammes
+    },
+    {
+      path: '/department/:short_code/HOD',
+      name: 'DepartmentHOD',
+      component: DepartmentHOD
+    },
+    {
+      path: '/department/:short_code/people',
+      name: 'DepartmentPeople',
+      component: DepartmentPeople
+    },
+    {
+      path: '/department/:short_code/research',
+      name: 'DepartmentResearch',
+      component: DepartmentResearch
+    },
+    {
+      path: '/department/:short_code/projects',
+      name: 'DepartmentProjects',
+      component: DepartmentProjects
+    },
+    {
+      path: '/department/:short_code/facilities',
+      name: 'DepartmentFacilities',
+      component: DepartmentFacilities
+    },
+    {
+      path: '/department/:short_code/activities',
+      name: 'DepartmentActivities',
+      component: DepartmentActivities
+    },
+    {
+      path: '/department/:short_code/photo-gallery',
+      name: 'DepartmentPhotoGallery',
+      component: DepartmentPhotoGallery
+    },
+    {
+      path: '/department/:short_code/contact-us',
+      name: 'DepartmentContactUs',
+      component: DepartmentContactUs
+    },
     {
       path: '/faculty/:id',
       name: 'Faculty',
@@ -555,7 +608,7 @@ export default new Router({
       name: 'Contacts',
       component: Contacts
     },
-    //Reasearch and Collaboration 
+    //Reasearch and Collaboration
     {
       path: '/collaboration',
       name: 'Collaboration',
