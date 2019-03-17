@@ -16,5 +16,8 @@ django-cleanup = "*"
 django-dbbackup = "*"
 gunicorn = "*"
 pathlib = "*"
+whoosh = "*"
+django-haystack = "*"
 
 [dev-packages]
+autopep8 = "*"

@@ -1,0 +1,3 @@
+{% load synonym_tags %}
+
+{{ object.title|add_general_synonyms }}

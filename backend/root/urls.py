@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^', include('information.urls')),
     url(r'^', include('activities.urls')),
     url(r'^', include('faculty.urls')),
+    url(r'^search/', include('search.urls')),
     url(r'^$', APIRoot.as_view(), name='root-view'),
     url(r'^archives/$', archives, name='archives')
 ]

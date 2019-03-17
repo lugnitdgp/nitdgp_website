@@ -58,3 +58,9 @@ files/
 \#*
 static/
 Pipfile.lock
+
+#VSCode
+.vscode/
+
+# Whoosh Index
+root/whoosh_index/
