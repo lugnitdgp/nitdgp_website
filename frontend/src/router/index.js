@@ -85,6 +85,7 @@ import Centers from '@/components/facilities/Centers'
 import Cec from '@/components/facilities/Cec'
 import Cc from '@/components/facilities/Cc'
 import Brics from '@/components/facilities/Brics'
+import Ipr from '@/components/facilities/Ipr'
 
 import Reports from '@/components/information/Reports'
 import Eprashasan from '@/components/information/Eprashasan'
@@ -480,6 +481,11 @@ export default new Router({
       path: '/brics',
       name: 'Brics',
       component: Brics
+    },
+    {
+      path: '/ipr',
+      name: 'Ipr',
+      component: Ipr
     },
 
     // Information
