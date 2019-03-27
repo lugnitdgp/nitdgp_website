@@ -226,22 +226,22 @@
                   </div>
                   
                   <div align="center">
-                    <img src="https://admin.nitdgp.ac.in/files/faculty/Goutam%20Sanyal/sanyal.jpg" class="avatar mx-auto rounded-circle img-fluid">
+                    <img src="https://admin.nitdgp.ac.in/files/faculty/Anirban%20Sarkar/a_sarkar.jpg" class="avatar mx-auto rounded-circle img-fluid">
                   </div>
                   <div class="card-body-in">
                     <p class="card-title">
                       <strong>
-                        <a class="blue-text notranslate" href="https://nitdgp.ac.in/faculty/3b5e8096-d92d-4e01-bccf-37fb83a07091" target="_blank">
-                          Dr. Goutam Sanyal
+                        <a class="blue-text notranslate" href="https://nitdgp.ac.in/faculty/64d45119-50e8-4928-83e6-10dc90639502" target="_blank">
+                          Dr. Anirban Sarkar
                         </a>
                       </strong>
                     </p>
                     
-                    <h6 class="black-text">Professor<br>Department of Computer Science and Engineering,<br>NIT Durgapur, India</h6>
+                    <h6 class="black-text">Associate Professor<br>Department of Computer Science and Engineering,<br>NIT Durgapur, India</h6>
                     <hr>
                     <p class="min-profile">
-                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp; goutam.sanyal@cse.nitdgp.ac.in, nitgsanyal@gmail.com<br>
-                    <i class="fa fa-phone"></i> &nbsp;&nbsp;&nbsp;91-9434788006
+                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp; anirban.sarkar@cse.nitdgp.ac.in, sarkar.anirban@gmail.com<br>
+                    <i class="fa fa-phone"></i> &nbsp;&nbsp;&nbsp;+91-9434002205
                     </p>
                   </div>
                 </div>
@@ -267,7 +267,9 @@
             <div class="tab-pane fade big-list" id="li9" role="tabpanel">
               <h4 class="pane-title" align="left">CC Booking Form</h4>
               <hr>
-              
+              <ul class="list-group list-gr">
+                <li style="text-decoration: none;"><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/cc_booking.pdf" target="new">Computer Center Booking Form</a></li>
+              </ul>
             </div>
           </div>
           
@@ -366,6 +368,16 @@ export default {
     max-width: 500px !important;
     max-height: 500px !important;
     padding: 10px !important;
+  }
+  .list-group-item {
+    color: #001333;
+    background-color: #e0f7fa;
+    margin: 2px 0;
+    padding: 7px;
+  }
+  .list-group-item:hover{
+    background-color: #001333!important;
+    color: #fff!important;
   }
   .list-group a, .list-group a:hover {
     white-space: pre-wrap;
