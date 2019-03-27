@@ -86,6 +86,7 @@ import Cec from '@/components/facilities/Cec'
 import Cc from '@/components/facilities/Cc'
 import Brics from '@/components/facilities/Brics'
 import Ipr from '@/components/facilities/Ipr'
+import Ibsc from '@/components/facilities/Ibsc'
 
 import Reports from '@/components/information/Reports'
 import Eprashasan from '@/components/information/Eprashasan'
@@ -486,6 +487,11 @@ export default new Router({
       path: '/ipr',
       name: 'Ipr',
       component: Ipr
+    },
+    {
+      path: '/ibsc',
+      name: 'Ibsc',
+      component: Ibsc
     },
 
     // Information
