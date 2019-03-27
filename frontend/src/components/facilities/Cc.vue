@@ -45,7 +45,15 @@
             <div class="tab-pane fade big-list" id="li2" role="tabpanel">
               <h4 class="pane-title" align="left">People</h4>
               <hr>
-              <h6 class="red-text">Not Available at the moment </h6>
+              
+              <div class="people-text">
+                <p class="text-center"><strong>Mr. Sabyasachi Banerjee</strong></p>
+                <p class="text-center">Technical Assistant</p>
+              </div>
+              <div class="people-text">
+                <p class="text-center"><strong>Mr. Dipankar Chakraborty </strong></p>
+                <p class="text-center">Technical Assistant</p>
+              </div>
             </div>
 
             <div class="tab-pane fade big-list" id="li3" role="tabpanel">
@@ -242,7 +250,7 @@
             <div class="tab-pane fade big-list" id="li7" role="tabpanel">
               <h4 class="pane-title" align="left">Contact Us</h4>
               <hr>
-              <p class="text-justify">
+              <p class="text-center">
                 Department of Computer Centre NIT Durgapur,<br>
                 Mahatma Gandhi Avenue,<br>
                 Durgapur - 713209,<br>
@@ -381,11 +389,39 @@ export default {
     margin-left: auto;
     margin-bottom: 0px;
   }
+  .people-text{
+    width: 45%;
+    background-color: #e0f7fa;
+    color:#001333;
+    float: left;
+    padding: 4px 5px;
+    margin:5px;
+    -webkit-box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.75);
+  }
   @media screen and (min-width: 909px) {
     .btn {
       display: none;
       height: 0px;
+    }    
+  }
+  @media screen and (max-width: 909px) {
+    .btn {
+      display: none;
+      height: 0px;
     }
+    .people-text{
+    width: 100%;
+    background-color: #e0f7fa;
+    color:#001333;
+    float: left;
+    padding: 4px 5px;
+    margin:5px;
+    -webkit-box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.75);
+    }   
   }
   .lift {
     position: absolute;
