@@ -3,7 +3,7 @@
     <sp-card  containerclass="l2-card" bodyclass="text-center">
       <p slot="header" class="tile-title-text">
         <a href="#" class="white-text sh-dex">Sponsered Research & Consultancy Cell [SRCC]</a>
-        <a href="#" class="white-text sh-mob notranslate"></a>
+        <a href="#" class="white-text sh-mob notranslate">SRCC</a>
       </p>
       <div class="tabs-wrapper up-content mx-auto srcctab">
         <ul class="nav classic-tabs" role="tablist">
