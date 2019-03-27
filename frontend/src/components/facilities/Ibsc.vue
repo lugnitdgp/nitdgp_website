@@ -4,14 +4,14 @@
           <div class="mtitle">Important Informations of Institutional Biosafety Committee (IBSC)</div>
           <div class="mbody">
             <ul class="list-group list-gr">
-              <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IBSC_form.pdf" target="new">IBSC Form</a></li>
+              <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IBSC_form.pdf" target="new">IBS Form</a></li>
             </ul>
           </div><br>     
           <div class="mtitle">Safety Manual</div>
           <div class="mbody">
             Indian regulations require that every organisation intending to conduct research on genetically modified organisms (GMOs) should constitute an Institutional Biosafety Committee (IBSC) to approve and periodically review the biosafety aspects of the research projects. The IBSC of NIT Durgapur is constituted as per DBT, Govt of India guidelines (<a href="http://www.dbtindia.nic.in"> http://www.dbtindia.nic.in</a>) and the constitution is as follows:
             <ul>
-              <li>Dean (Research & Consultancy) Chairman</li>
+              <li>Dean (Research & Consultancy), Chairman</li>
               <li>Prof. Prasanta Bag, Department of Biochemistry, University of Calcutta DBT Nominee</li>
               <li>Prof. N.C. Mandal, Department of Botany, Visva Bharati Univ. Santiniketan External Expert</li>
               <li>Prof. Sudit S. Mukhopadhyay, Dept. of. Biotechnology, NIT Durgapur Member Secretary</li>
