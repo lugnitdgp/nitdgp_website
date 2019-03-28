@@ -1,7 +1,7 @@
 <template>
   <links-page>
     <card title="ICC Members">
-      <div class="carousel-inner person-list" role="listbox">
+      <!--<div class="carousel-inner person-list" role="listbox">
 	<div class="carousel-item active">
 	  <div class="row">
 	    <card-testimonial v-for="(person, i) in members" :key="i"
@@ -24,7 +24,8 @@
             {{icc.title}}
           </a>
         </li>
-      </ul>
+      </ul>-->
+      <p style="color: red;">Update Soon ...</p>
     </card>
   </links-page>
 </template>
