@@ -1,7 +1,7 @@
 <template>
   <links-page>
     <card title="ICC Members">
-      <!--<div class="carousel-inner person-list" role="listbox">
+      <div class="carousel-inner person-list" role="listbox">
 	<div class="carousel-item active">
 	  <div class="row">
 	    <card-testimonial v-for="(person, i) in members" :key="i"
@@ -24,8 +24,7 @@
             {{icc.title}}
           </a>
         </li>
-      </ul>-->
-      <p style="color: red;">Update Soon ...</p>
+      </ul>
     </card>
   </links-page>
 </template>
@@ -46,10 +45,11 @@ export default {
         {name:"Prof.(Mrs.) Kajla Basu", title:"Prof. of Mathematics", designation:"Presiding Officer", image:"https://admin.nitdgp.ac.in/files/faculty/Kajla%20Basu/kajla_basu.jpg"},
         {name:"Mrs. Soma Sinha", title:"Advocate, Calcutta High Court", designation:"Member(External)" },
         {name:"Prof A. Gangopadhyay", title:"Prof, Dept of EES" ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Aniruddha%20Gangopadhyay/aniruddha_ganguly.jpg"},
-        {name:"Dr (Ms.) Mamata Dalui", title:"Astt. Prof. C.Sc. Deptt" ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Mamata%20Dalui%20(Chakraborty)/m_dalui.jpg"},
-        {name:"Dr. Kazy Sufia Khannam", title:"Astt. Prof Deptt. of BT" ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Sufia%20Khannam%20Kazy/Sufia_Kazy.jpg"},
+        {name:"Dr (Ms.) Mamata Dalui", title:"Astt. Prof. CSE Dept." ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Mamata%20Dalui%20(Chakraborty)/m_dalui.jpg"},
+        {name:"Dr. Kazy Sufia Khannam", title:"Astt. Prof Dept. of BT" ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Sufia%20Khannam%20Kazy/Sufia_Kazy.jpg"},
         {name:"Dr. G. Prabhavathi", title:"Medical Officer, NITD" ,designation:"Member" },
-        {name:"Dr. (Mrs.) Debjani Dutta", title:"Astt. Prof. Deptt. of BT" ,designation:"Member & Convenor", image:"https://admin.nitdgp.ac.in/files/faculty/Debjani%20Dutta/debjani_dutta.jpg"}
+        {name:"Mr. U. C. Mukherjee", title:"Registrar (I/C)" ,designation:"Member" },
+        {name:"Dr. (Mrs.) Debjani Dutta", title:"Astt. Prof. Dept. of BT" ,designation:"Member & Convenor", image:"https://admin.nitdgp.ac.in/files/faculty/Debjani%20Dutta/debjani_dutta.jpg"}
       ]
     }
   },
