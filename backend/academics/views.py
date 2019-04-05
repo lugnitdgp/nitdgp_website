@@ -36,7 +36,17 @@ class ConvocationViewSet(ListAPIView):
 
 class AdmissionViewSet(ListAPIView):
 
-    queryset = AdmissionDegree.objects.filter(programmes__documents__archive=False).distinct()
+    from django.db.models import Prefetch
+    queryset = AdmissionDegree.objects.filter(programmes__documents__archive=False).prefetch_related(
+        Prefetch(
+            'programmes',
+            queryset=AdmissionProgramme.objects.filter(documents__archive=False).prefetch_related(
+                Prefetch(
+                    'documents',
+                    queryset=Admission.objects.filter(archive=False))
+            )
+        )
+    ).distinct()
     serializer_class = AdmissionMainSerializer
 
 
