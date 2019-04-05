@@ -8,6 +8,16 @@
           </a>
         </li>
       </ul>
+      <div class="btn-group">
+        <button v-if="next != ''" class="nit-btn"
+          @click="changePage(next)">
+          Next
+        </button>
+        <button v-if="prev != ''" class="nit-btn"
+          @click="changePage(prev)">
+          Previous
+        </button>
+      </div>
     </card>
   </links-page>
 </template>
@@ -22,18 +32,33 @@ export default {
   name: "Downloads",
   data () {
     return {
-      files: []
+      files: [],
+      next: '',
+      prev: ''
     }
   },
   created () {
-    axios.get(genBackendURL('dashboard/downloads'))
-         .then(response => {
-           this.files = response.data.results
-           this.$emit('hideloader', true)
-         })
-         .catch(e => {
-           console.log("Axios(GET[information]): Error: " + e)
-         })
+    this.changePage(genBackendURL('dashboard/downloads'))
+    this.$emit('hideloader', true)
+  },
+  methods:{
+    changePage: function(url){
+      axios.get(url)
+           .then(response => {
+             this.files = response.data.results
+             if (response.data.next != null)
+               this.next = response.data.next
+             else
+               this.next = ''
+             if (response.data.previous != null)
+               this.prev = response.data.previous
+             else
+               this.prev = ''
+           })
+           .catch(e => {
+             console.log("Axios(GET[information]): Error: " + e)
+           })
+    }
   },
   components: {
     Card,

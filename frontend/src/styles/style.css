@@ -670,3 +670,12 @@ hr.style4:after {
 .bot-margin {
   margin-bottom: 20px;
 }
+.nit-btn{
+  font-size: 18px;
+  border: 0.5px solid #aaf;
+  background-color: #001333;
+  border-radius: 10px;
+  padding: 6px 5px;
+  color: #fff;
+  cursor: pointer;
+}
