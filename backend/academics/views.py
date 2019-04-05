@@ -44,7 +44,7 @@ class AdmissionViewSet(ListAPIView):
                 Prefetch(
                     'documents',
                     queryset=Admission.objects.filter(archive=False))
-            )
+            ).distinct()
         )
     ).distinct()
     serializer_class = AdmissionMainSerializer
