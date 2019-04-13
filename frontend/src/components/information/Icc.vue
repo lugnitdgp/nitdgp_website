@@ -44,9 +44,9 @@ export default {
       members: [
         
         {name:"Dr. Seema Sarkar Mandal", title:"Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Presiding Officer"},
-        {name:"Dr. Jaya Sikdar", title:" Associate Professor, Department of Chemical Engineering National Institute of Technology Durgapur", designation:"Convener"}, 
-        {name:"Dr. Surabhi Chaudhuri", title:"Professor, Department of Biotechnology National Institute of Technology Durgapur", designation:"Member"},
-        {name:"Dr. Lakshmi Kanta Dey", title:"Associate Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Member"},
+        {name:"Dr. Jaya Sikdar", title:" Associate Professor, Department of Chemical Engineering National Institute of Technology Durgapur", designation:"Convener", image:"https://admin.nitdgp.ac.in/files/faculty/Jaya%20Sikder/IMG_20190306_183447.jpg"}, 
+        {name:"Dr. Surabhi Chaudhuri", title:"Professor, Department of Biotechnology National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Surabhi%20Chaudhuri/surabhi_chaudhuri.jpg"},
+        {name:"Dr. Lakshmi Kanta Dey", title:"Associate Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Lakshmi%20Kanta%20Dey/l_K_dey.jpg"},
         {name:"Mr. U. C. Mukherjee", title:"Deputy Registrar (Finance & Accounts), National Institute of Technology Durgapur", designation:"Member"},
         {name:"Dr. G. Prabhavathi", title:"Medical Officer, National Institute of Technology Durgapur", designation:"Member"},
         {name:"Ms. Sarmistha Dutta Gupta", title:"Founder-Secretary Ebong Alaptop", designation:"Member"},
