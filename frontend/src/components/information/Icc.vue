@@ -42,14 +42,19 @@ export default {
     return {
       iccs: [],
       members: [
-        {name:"Prof.(Mrs.) Kajla Basu", title:"Prof. of Mathematics", designation:"Presiding Officer", image:"https://admin.nitdgp.ac.in/files/faculty/Kajla%20Basu/kajla_basu.jpg"},
-        {name:"Mrs. Soma Sinha", title:"Advocate, Calcutta High Court", designation:"Member(External)" },
-        {name:"Prof A. Gangopadhyay", title:"Prof, Dept of EES" ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Aniruddha%20Gangopadhyay/aniruddha_ganguly.jpg"},
-        {name:"Dr (Ms.) Mamata Dalui", title:"Astt. Prof. CSE Dept." ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Mamata%20Dalui%20(Chakraborty)/m_dalui.jpg"},
-        {name:"Dr. Kazy Sufia Khannam", title:"Astt. Prof Dept. of BT" ,designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Sufia%20Khannam%20Kazy/Sufia_Kazy.jpg"},
-        {name:"Dr. G. Prabhavathi", title:"Medical Officer, NITD" ,designation:"Member" },
-        {name:"Mr. U. C. Mukherjee", title:"Registrar (I/C)" ,designation:"Member" },
-        {name:"Dr. (Mrs.) Debjani Dutta", title:"Astt. Prof. Dept. of BT" ,designation:"Member & Convenor", image:"https://admin.nitdgp.ac.in/files/faculty/Debjani%20Dutta/debjani_dutta.jpg"}
+        
+        {name:"Dr. Seema Sarkar Mandal", title:"Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Presiding Officer"},
+        {name:"Dr. Jaya Sikdar", title:" Associate Professor, Department of Chemical Engineering National Institute of Technology Durgapur", designation:"Convener"}, 
+        {name:"Dr. Surabhi Chaudhuri", title:"Professor, Department of Biotechnology National Institute of Technology Durgapur", designation:"Member"},
+        {name:"Dr. Lakshmi Kanta Dey", title:"Associate Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Member"},
+        {name:"Mr. U. C. Mukherjee", title:"Deputy Registrar (Finance & Accounts), National Institute of Technology Durgapur", designation:"Member"},
+        {name:"Dr. G. Prabhavathi", title:"Medical Officer, National Institute of Technology Durgapur", designation:"Member"},
+        {name:"Ms. Sarmistha Dutta Gupta", title:"Founder-Secretary Ebong Alaptop", designation:"Member"},
+        {name:"Mrs. Soma Sinha", title:"Advocate Calcutta High Court", designation:"Member"}       
+        
+        
+        
+        
       ]
     }
   },
