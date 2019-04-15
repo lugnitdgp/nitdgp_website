@@ -213,7 +213,7 @@ export default new Router({
       component: Liveconvocation
     },
     {
-      path: '/documents',
+      path: '/academicverification',
       name: 'Documents',
       component: Documents
     },
