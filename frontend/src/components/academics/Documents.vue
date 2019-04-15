@@ -1,8 +1,16 @@
 <template>
   <links-page>
-    <card title="Academic Documents">
+    <card title=" Varification of Academic Documents">
       <div v-for="(links, doctype) in docs">
-        <h3>{{ doctype }}</h3>
+        <div style="border: 1px solid #000;padding: 5px 6px;">
+          <p class="text-justify" style="color:#000;">
+            Notification for all Academic Varification<br>
+            Deputy Register (Academic and Examination) May be Contacted through Email Id.<br>
+            Phone: <strong>+91-343-2752030</strong><br>
+            Email: <strong>draca@admin.nitdgp.ac.in</strong>
+          </p>
+        </div>
+        <h3>Releated Notices</h3>
         <ul class="list-group list-gr">
           <li v-for="link in links">
             <a class="list-group-item" :href="backURL + link.filename" target="new">
