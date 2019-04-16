@@ -1,12 +1,11 @@
 <template>
   <links-page>
-    <card title=" Varification of Academic Documents">
+    <card title=" Verification of Academic Documents">
       <div v-for="(links, doctype) in docs">
         <div style="border: 1px solid #000;padding: 5px 6px;">
           <p class="text-justify" style="color:#000;">
-            Notification for all Academic Varification<br>
-            Deputy Register (Academic and Examination) May be Contacted through Email Id.<br>
-            Phone: <strong>+91-343-2752030</strong><br>
+            For all academic verification related mails are to be directed to.<br>
+            Deputy Register (Academic and Examination).<br>
             Email: <strong>draca@admin.nitdgp.ac.in</strong>
           </p>
         </div>
