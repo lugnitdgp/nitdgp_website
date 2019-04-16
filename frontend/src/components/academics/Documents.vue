@@ -4,7 +4,7 @@
       <div v-for="(links, doctype) in docs">
         <div style="border: 1px solid #000;padding: 5px 6px;">
           <p class="text-justify" style="color:#000;">
-            For all academic verification related mails are to be directed to :-<br>
+            For all academic verification related mails are to be directed to -<br>
             Deputy Register (Academic and Examination),<br>
             Email: <strong>draca@admin.nitdgp.ac.in.</strong>
           </p>
