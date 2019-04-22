@@ -151,7 +151,7 @@ export default {
     this.day = this.dt.getDay()
     this.c_no = 'NITD/PCBD/'+this.mnt+this.sec+this.day+'/'+this.ranvalue;
     this.inactive = false
-    axios.get('http://172.16.20.55:8005/facilities/pcbd/')
+    axios.get(genBackendURL("facilities/pcbd/"))
                 .then(response => {
                   this.allcomplnt = response.data.results                  
                 })
@@ -185,7 +185,7 @@ export default {
       
       axios({
         method: 'post',
-        url: 'http://172.16.20.55:8005/facilities/pcbdcomplaint/',
+        url: 'https://admin.nitdgp.ac.in/facilities/pcbdcomplaint/',
         data: data,
       }).then(response => {
             let sms = response.data.message
