@@ -1,6 +1,7 @@
 from django.db import models
 from base.models import BaseModel
 from ckeditor.fields import RichTextField
+from django.core.validators import RegexValidator
 
 
 class Center(BaseModel):
@@ -148,7 +149,9 @@ class PCBD(BaseModel):
     c_number = models.CharField(max_length=120)
     name = models.CharField(max_length=512)
     email = models.CharField(max_length=300)
-    mobile = models.CharField(max_length=20)
+    mobile = models.CharField(max_length=20, validators=[RegexValidator(r'^\d{10}$')])
     cat = models.CharField(max_length=10)
     address = RichTextField()
     complaint = RichTextField()
+    replytxt = RichTextField(default='', blank=True)
+    replyurl = models.FileField(upload_to="facilities/pcbdfile/%Y", blank=True)

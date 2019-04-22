@@ -57,4 +57,4 @@ class PCBDSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = PCBD
-		fields = ('c_number','name','email','mobile','cat','address','complaint')
+		fields = ('c_number','name','email','mobile','cat','address','complaint','replytxt','replyurl')

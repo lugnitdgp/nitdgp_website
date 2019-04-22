@@ -1,7 +1,11 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
+from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
+from django.core.mail import send_mail
+from django.http import HttpResponse
 from facilities.serializers import *
 from facilities.models import *
+import json
 
 
 class CentersViewSet(ListAPIView):
@@ -54,3 +58,46 @@ class HostelViewSet(ListAPIView):
 class CIFViewSet(ListAPIView):
 	queryset = CIF.objects.all()
 	serializer_class = CIFSerializer
+
+class PCBDViewSet(ListAPIView):
+	queryset = PCBD.objects.all()
+	serializer_class = PCBDSerializer
+
+@csrf_exempt
+def pcbdcomplaint(request, **kwarg):
+	if request.method == 'POST':
+		QueryDict = request.POST
+		values = QueryDict.dict()
+		qry = PCBD.objects.filter(email=values['email'])
+		if qry:
+			return HttpResponse(
+                json.dumps({"message": 'Already Register'}),
+                content_type="application/json"
+            )
+			pass
+		else:
+			stud_name = values['name']
+			stud_email = values['email']
+			stud_c_number = values['c_number']
+			stud_complaint = values['complaint']
+			stud_cat = values['cat']
+			emailtitle = 'Prevent Caste Base Descrimination complaint Number '+stud_c_number
+			if values:
+				PCBD.objects.create(**values)
+				send_mail(
+				    emailtitle,
+				    stud_complaint,
+				    'webmaster@nitdgp.ac.in',
+				    ['support@mail1.nitdgp.ac.in',stud_email],
+				    fail_silently=False,
+				)
+				return HttpResponse(
+		                json.dumps({"message": 'Complaint Inserted'}),
+		                content_type="application/json"
+		            )
+	else:
+		return HttpResponse(
+				json.dumps({"message": 'Not Success !! Something going wrong!!'}),
+                content_type="application/json"
+			)
+
