@@ -47,10 +47,12 @@ export default {
         {name:"Dr. Jaya Sikdar", title:" Associate Professor, Department of Chemical Engineering National Institute of Technology Durgapur", designation:"Convener", image:"https://admin.nitdgp.ac.in/files/faculty/Jaya%20Sikder/IMG_20190306_183447.jpg"}, 
         {name:"Dr. Surabhi Chaudhuri", title:"Professor, Department of Biotechnology National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Surabhi%20Chaudhuri/surabhi_chaudhuri.jpg"},
         {name:"Dr. Lakshmi Kanta Dey", title:"Associate Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Lakshmi%20Kanta%20Dey/l_K_dey.jpg"},
-        {name:"Mr. U. C. Mukherjee", title:"Deputy Registrar (Finance & Accounts), National Institute of Technology Durgapur", designation:"Member"},
+        {name:"Mr. Santosh Saha", title:"Technical Officer, National Institute of Technology Durgapur", designation:"Member"},        
         {name:"Dr. G. Prabhavathi", title:"Medical Officer, National Institute of Technology Durgapur", designation:"Member"},
         {name:"Ms. Sarmistha Dutta Gupta", title:"Founder-Secretary Ebong Alaptop", designation:"Member"},
-        {name:"Mrs. Soma Sinha", title:"Advocate Calcutta High Court", designation:"Member"}       
+        {name:"Dr. Mallika ghosh Sarbadhikary", title:"Associate Professor, Department of Humanities and Social Science Indian Institute of Engineering Science & Technology", designation:"Member"},
+        {name:"Ms. Nandita Dhawan", title:"Assistant Professor, School of Women's Studies Jadavpur University", designation:"Member"},
+        {name:"Mr. Sirajul Islam", title:"Senior Advocate Durgapur Court", designation:"Member"}       
         
         
         
