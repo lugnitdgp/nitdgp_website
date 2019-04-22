@@ -23,6 +23,9 @@ class CIFModelAdmin(admin.ModelAdmin):
 
 class SemesterquestionModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
+
+class PCBDModelAdmin(admin.ModelAdmin):
+    list_display = ['name','c_number','email','complaint']
     
 admin.site.register(Semesterquestion,SemesterquestionModelAdmin)
 admin.site.register(Center, CenterModelAdmin)
@@ -31,3 +34,4 @@ admin.site.register(Resource, ResourceModelAdmin)
 admin.site.register(SAC,SACModelAdmin)
 admin.site.register(Hostel, HostelModelAdmin)
 admin.site.register(CIF,CIFModelAdmin)
+admin.site.register(PCBD,PCBDModelAdmin)

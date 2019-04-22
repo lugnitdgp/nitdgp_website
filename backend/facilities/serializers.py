@@ -51,3 +51,10 @@ class CIFSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = CIF
 		fields = ('equipment_name','equipment_desc','image')
+
+
+class PCBDSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = PCBD
+		fields = ('c_number','name','email','mobile','cat','address','complaint')

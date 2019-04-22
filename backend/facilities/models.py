@@ -65,7 +65,7 @@ class Semesterquestion(BaseModel):
 
     title = models.CharField(max_length=255, default="")
     file = models.FileField(upload_to='facilities/questions/%Y')
-   
+
     def __str__(self):
         return self.title
 
@@ -143,3 +143,12 @@ class CIF(BaseModel):
 
     def _equipment_desc(self):
         return self.equipment_desc
+
+class PCBD(BaseModel):
+    c_number = models.CharField(max_length=120)
+    name = models.CharField(max_length=512)
+    email = models.CharField(max_length=300)
+    mobile = models.CharField(max_length=20)
+    cat = models.CharField(max_length=10)
+    address = RichTextField()
+    complaint = RichTextField()
