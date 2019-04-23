@@ -12,9 +12,49 @@
           <p class="text-center" style="font-size: 20px;font-weight: bold;">
             “Wherever the art of medicine is loved, there is a love of humanity”-Hippocrates
           </p>
-          One of the most indispensable necessities in the college campus, the <b>Medical Unit</b> of our Institute is served by three resident doctors, three temporary doctors and other medical staff. With Morning and Evening OPDs, there is also a provision of <b>round the clock medical emergency services</b>. Apart from the regular doctors, specialist doctors of <b>various fields visit the medical unit</b> on fixed days of a week. It has observatory beds, isolation ward for students and dressing room. Moreover, the unit has an <b>outsourced pathological blood collection and reporting system from IQ city hospital</b>. The institute is upgrading the old facilities in order to provide the students and the staff with efficient treatment. In case of any serious sickness, patients are referred to State Government Hospital, The Mission Hospital, IQ City Hospital and <b>some other hospitals with tie up</b>. The Medical unit has a help desk for insurance for these kinds of treatments.
+          NIT Durgapur promotes healthy and fit lifestyle of the campus community and focuses on both physical and psychological wellbeing. The Medical Unit-cum-Hospital prioritizes intensive care and all-round treatment by catering to the needs of the indoor and outdoor patients. One of the most indispensable necessities in the college campus, the <b>Medical Unit</b> of our Institute is served by three resident doctors, three temporary doctors and other medical staff. With Morning and Evening OPDs, there is also a provision of <b>round the clock medical emergency services</b>. Apart from the regular doctors, specialist doctors of <b>various fields visit the medical unit</b> on fixed days of a week. It has observatory beds, isolation ward for students and dressing room. Moreover, the unit has an <b>outsourced pathological blood collection and reporting system from IQ city hospital</b>. The institute is upgrading the old facilities in order to provide the students and the staff with efficient treatment. In case of any serious sickness, patients are referred to State Government Hospital, The Mission Hospital, IQ City Hospital and <b>some other hospitals with tie up</b>. The Medical unit has a help desk for insurance for these kinds of treatments.
         </div>        
-          <div class="text-center medi-title">Mdeical Officers</div>
+        <div class="text-center medi-title">Facilities</div>
+        <div class="medi-text">
+          <ul>
+            <li>Morning and Evening OPDs except Saturday and Sunday</li>
+            <li>Round the clock medical emergencies</li>
+            <li>Visiting Physicians of different fields on fixed days</li>
+            <li>Pharmancy</li>
+            <li>24 Hrs. one ambulance service and one  stand-by vehicle</li>
+            <li>Observatory Beds</li>
+            <li>Isolation ward for the students</li>
+            <li>Dressing Room</li>
+            <li>Sample collection center for outsourced pathological laboratory (9.30 AM to 10.30 AM except sundays and holidays</li>
+            <li>Nebulization</li>
+            <li>Insurance help desk for students</li>
+          </ul>
+        </div>
+        <div class="text-center medi-title">List of TIE-UP Hospitals</div>
+        <div class="medi-text-flex">
+          <div class="sub-mdei-div">
+            <h5 class="text-center"><u>Durgapur</u></h5>
+            <ul>
+              <li>The Mission Hospital</li>
+              <li>IQ City Medical Collage Hospital</li>
+              <li>Healthworld Hospital</li>
+              <li>Vivekananda Hospital</li>
+              <li>Gouri Devi Hospital & Research Institute</li>
+              <li>City Hospital</li>
+              <li>Disha Eye Hospital - Durgapur & Barrackpore</li>
+            </ul>
+          </div>
+          <div class="sub-mdei-div">
+            <h5 class="text-center"><u>Kolkata</u></h5>
+            <ul>
+              <li>Ruby General Hospital</li>
+              <li>Peerless Hospital & Research Center</li>
+              <li>AMRI Hospital</li>
+              <li>B.P. poddar Hospital & Medical research Limited</li>
+            </ul>
+          </div>          
+        </div>
+        <div class="text-center medi-title">Mdeical Officers</div>
         <div class="medi-text">
           <table class="table table-responsive-md table-bordered">
             <thead class="mdb-color lighten-4">
@@ -93,17 +133,24 @@
           </table>
         </div>
         <div class="text-center medi-title"><strong>Contact Details</strong></div>
-        <div class="medi-text">          
-          <p>
+        <div class="medi-text-flex">          
+          <div class="sub-mdei-div3">
             <strong>Dr. B. K. Sarkar ( MBBS )</strong><br>
             Phone: +91-343-2757118<br>
             Mobile: +91-9434788075<br>
             Email: b.sarkar@admin.nitdgp.ac.in<br>
+          </div>
+          <div class="sub-mdei-div3">
             <strong>Dr. ( Mrs. )S. Patra ( MBBS )</strong><br>
             Phone: +91-343-2757116<br>
             Mobile: +91-9434788076<br>
             Email: s.patra@admin.nitdgp.ac.in<br>
-          </p>
+          </div>
+          <div class="sub-mdei-div3">
+            <strong>Dr. (Mrs.) G. Pravabhati</strong><br>
+            Mobile: +91-9434789029<br>
+            Email: g.prabhavathi@admin.nitdgp.ac.in<br>
+          </div>
         </div>
         
       </div>
@@ -135,4 +182,24 @@ export default {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }
+  .medi-text-flex{
+    border: 1px solid #33b5e5;
+    padding: 8px 10px;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+  }
+  .sub-mdei-div{
+    border: 1px solid #33b5e5;
+    width: 100%;
+    text-align: justify;
+    margin-right: 3px;
+  }
+  .sub-mdei-div3{
+    border: 1px solid #33b5e5;
+    width: 33%;
+    text-align: justify;
+    margin-right: 3px;
+  }
+  
 </style>
