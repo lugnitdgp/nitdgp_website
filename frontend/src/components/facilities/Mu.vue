@@ -10,7 +10,7 @@
         There is a Medical Unit-cum-Hospital with arrangement for both indoor and outdoor treatment of the patients. The medical unit is served by two resident doctors and other medical staff round the clock. The students and the staff with their family members are
         benefited by the services of the Medical Unit. For any specialised treatment the patients are referred to the State Government
         Hospital situated at the other end of the city, or some Advanced Medical Centre.<br><br>
-        <strong>Mediacl Officer</strong>
+        <strong>Medical Officer</strong>
         <p>
           <strong>Dr. B. K. Sarkar ( MBBS )</strong><br>
           Phone: +91-343-2757118<br>
