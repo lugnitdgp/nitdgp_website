@@ -2,11 +2,12 @@
   <div class="l1 page-type-links">
     <!-- CONTENT -->
     <div class="card">
-      <a class="card-header white-text text-center">HOSPITAL</a>
+      <a class="card-header white-text text-center">Medical Unit</a>
       <div class="card-body">
         <div style="text-align: center;">
           <img style="max-height:300px;max-width: 100%;margin-bottom: 10px;" src="https://nitdgp.ac.in/AllPDF/medical.jpg" width="100%"><br>
         </div>
+        <div class="text-center medi-title">HOSPITAL</div>
         <div class="medi-text">
           <p class="text-center" style="font-size: 20px;font-weight: bold;">
             “Wherever the art of medicine is loved, there is a love of humanity”-Hippocrates
@@ -42,7 +43,7 @@
         <div class="medi-text">
           <p class="text-center">DR.Daisy Bhengra <br>DR. Arnab Saha <br> DR. Anisul Islam </p>
         </div>
-        <div class="text-center medi-title">HOSPITAL TIMINGS</div>
+        <div class="text-center medi-title">Hospital Timings</div>
         <div class="medi-text">          
           <ul>
             <li>Monday to Saturday Morning and Evening OPD, Timings: MOPD:9 AM- 1 PM EOPD:5 PM- 9 PM</li> 
@@ -54,7 +55,7 @@
           <table class="table table-responsive-md table-bordered">
             <thead class="mdb-color lighten-4">
               <tr>
-                <th class="th-lg">Name Of Doctors</th>
+                <th class="th-lg">Name of Doctors</th>
                 <th class="th-lg">Timing</th>
               </tr>
             </thead>
@@ -120,17 +121,18 @@ export default {
 </script>
 <style scoped="scoped">
   .medi-text{
-    border: 1px solid #007;
+    border: 1px solid #33b5e5;
     padding: 8px 10px;
     text-align: justify;
   }
   .medi-title{
-    background: #007;
+    background: #33b5e5;
     color: #fff;
     width: 100%;
     min-height: 30px;
     line-height: 30px;
     margin-top: 10px;
-
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 </style>
