@@ -101,31 +101,31 @@
             </thead>
             <tbody>
               <tr>                
-                <td>Dr. Dipankar Chakraborty(Cardiology and Medicine)</td>
-                <td>MON (5PM),WED (7PM),THU (5PM)</td>
+                <td>Dr. Dipankar Chakraborty (Cardiology and Medicine)</td>
+                <td>MON (5PM), WED (7PM), THU (5PM)</td>
               </tr>
               <tr>                
-                <td>Dr. Sukesh Nath(Medicine)</td>
+                <td>Dr. Sukesh Nath (Medicine)</td>
                 <td>TUE (12 NOON)</td>
               </tr>
               <tr>                
-                <td>Dr. Ishani Dasgupta(Gynaec & Obs.) </td>
+                <td>Dr. Ishani Dasgupta (Gynaec & Obs.) </td>
                 <td>TUE (6:30 PM)</td>
               </tr>
               <tr>                
-                <td>Dr. Anita Chatterjee(Eye Specialist)</td>
+                <td>Dr. Anita Chatterjee (Eye Specialist)</td>
                 <td>FRI (10:00 AM)</td>
               </tr> 
               <tr>                
-                <td>Dr. Subir Mukherjee(Dentist) </td>
-                <td>TUE (5PM),THU (5PM), SAT (5PM)</td>
+                <td>Dr. Subir Mukherjee (Dentist) </td>
+                <td>TUE (5PM), THU (5PM), SAT (5PM)</td>
               </tr>
               <tr>                
-                <td>Dr. Debashish Roy(ENT Specialist) </td>
+                <td>Dr. Debashish Roy (ENT Specialist) </td>
                 <td>WED (11AM)</td>
               </tr>
               <tr>                
-                <td>Dr. Om Prakash Singh(Psychiatrist) </td>
+                <td>Dr. Om Prakash Singh (Psychiatrist) </td>
                 <td>SUN (9 AM) (ALTERNATE)</td>
               </tr>
 
