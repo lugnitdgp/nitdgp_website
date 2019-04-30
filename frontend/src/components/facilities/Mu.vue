@@ -17,16 +17,15 @@
         <div class="text-center medi-title">Facilities</div>
         <div class="medi-text">
           <ul>
-            <li>Counselling Centre : Schedule</li>
-            <li>Morning and Evening OPDs except sundays and holidays</li>
+            <li>Morning and Evening OPDs except Saturday and Sunday</li>
             <li>Round the clock medical emergencies</li>
             <li>Visiting Physicians of different fields on fixed days</li>
-            <li>Pharmacy</li>
+            <li>Pharmancy</li>
             <li>24 Hrs. one ambulance service and one  stand-by vehicle</li>
             <li>Observatory Beds</li>
             <li>Isolation ward for the students</li>
             <li>Dressing Room</li>
-            <li>Sample collection center for outsourced pathological laboratory (9.30 AM to 10.30 AM except sundays and holidays)</li>
+            <li>Sample collection center for outsourced pathological laboratory (9.30 AM to 10.30 AM except sundays and holidays</li>
             <li>Nebulization</li>
             <li>Insurance help desk for students</li>
           </ul>
@@ -82,12 +81,12 @@
         </div>  
           <div class="text-center medi-title">Temporary Doctors</div>
         <div class="medi-text">
-          <p class="text-center">DR. Daisy Bhengra <br>DR. Arnab Saha <br> DR. Anisul Islam </p>
+          <p class="text-center">DR.Daisy Bhengra <br>DR. Arnab Saha <br> DR. Anisul Islam </p>
         </div>
         <div class="text-center medi-title">Hospital Timings</div>
         <div class="medi-text">          
           <ul>
-            <li>Monday to Saturday Morning and Evening OPD, Timings: Morning OPD:9 AM- 1 PM Evening OPD:5 PM- 9 PM</li> 
+            <li>Monday to Saturday Morning and Evening OPD, Timings: MOPD:9 AM- 1 PM EOPD:5 PM- 9 PM</li> 
             <li>Round the clock emergency services on all days 24×7.</li>
             <li>Sunday and Institute Holidays- Outdoor facility is not available only emergency facilities available. </li>
           </ul>
@@ -102,31 +101,31 @@
             </thead>
             <tbody>
               <tr>                
-                <td>Dr. Dipankar Chakraborty(Cardiology and Medicine)</td>
+                <td>Dr.Dipankar Chakraborty(Cardiology and Medicine)</td>
                 <td>MON (5PM),WED (7PM),THU (5PM)</td>
               </tr>
               <tr>                
-                <td>Dr. Sukesh Nath(Medicine)</td>
+                <td>Dr.Sukesh Nath(Medicine)</td>
                 <td>TUE (12 NOON)</td>
               </tr>
               <tr>                
-                <td>Dr. Ishani Dasgupta(Gynaec & Obs.) </td>
+                <td>Dr.Ishani Dasgupta(Gynaec& Obs.) </td>
                 <td>TUE (6:30 PM)</td>
               </tr>
               <tr>                
-                <td>Dr. Anita Chatterjee(Eye Specialist)</td>
+                <td>Dr.Anita Chatterjee(Eye Specialist)</td>
                 <td>FRI (10:00 AM)</td>
               </tr> 
               <tr>                
-                <td>Dr. Subir Mukherjee(Dentist) </td>
+                <td>Dr.Subir Mukherjee(Dentist) </td>
                 <td>TUE (5PM),THU (5PM), SAT (5PM)</td>
               </tr>
               <tr>                
-                <td>Dr. Debashish Roy(ENT Specialist) </td>
-                <td>WED (11AM)</td>
+                <td>Dr.Debashish Roy(ENT Specialist) </td>
+                <td>FRI (11AM)</td>
               </tr>
               <tr>                
-                <td>Dr. Om Prakash Singh(Psychiatrist) </td>
+                <td>Dr.Om Prakash Singh(Psychiatrist) </td>
                 <td>SUN (9 AM) (ALTERNATE)</td>
               </tr>
 
@@ -202,5 +201,5 @@ export default {
     text-align: justify;
     margin-right: 3px;
   }
-
+  
 </style>
