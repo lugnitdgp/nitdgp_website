@@ -4,8 +4,11 @@
     <div class="card">
       <a class="card-header white-text text-center">Medical Unit</a>
       <div class="card-body">
-        <div style="text-align: center;">
+        <!-- <div style="text-align: center;">
           <img style="max-height:300px;max-width: 100%;margin-bottom: 10px;" src="https://nitdgp.ac.in/AllPDF/medical.jpg" width="100%"><br>
+        </div> -->
+        <div style="width: 100%;margin: 0 auto;">
+          <Carousel :slides="slides"></Carousel>
         </div>
         <div class="text-center medi-title">HOSPITAL</div>
         <div class="medi-text">
@@ -15,6 +18,22 @@
           NIT Durgapur promotes healthy and fit lifestyle of the campus community and focuses on both physical
           and psychological well-being. The Medical Unit-cum-Hospital prioritizes intensive care and attentive treatment by catering to the needs of its employees and students. One of the most indispensable
           necessities in the college campus, the <b>Medical Unit</b> of the Institute is served by three resident doctors, three temporary doctors and other medical staff. Apart from morning and evening OPDs, there is also a provision for <b>round the clock medical emergency services</b>. Besides the regular doctors, specialist doctors from <b>various domains of expertise visit</b> the medical unit on certain days in a week. It has observatory beds, isolation ward for students and dressing room. Moreover, the unit has an <b>outsourced pathological blood collection and reporting system from IQ city hospital</b>. The institute is upgrading the old facilities in order to provide the students and the staff with efficient treatment. In case of any serious  illness, patients are referred to State Government Hospital, The Mission Hospital, IQ City Hospital and <b>some other hospitals  with which it has specific tie-ups</b>. The Medical unit has a help desk for insurance for different kinds of treatments.
+        </div>
+        <div class="text-center medi-title">Counselling Centre for Psychosocial Wellness</div>
+        <div class="medi-text">
+          <p>The Counselling Centre strives to improve mental health of the students by providing them psychological counselling to cope with emotional trauma and stress.</p>
+          <p><h4>Objective :</h4></p>
+          <ul>
+            <li>To sensitize students about the symptoms and causes of sudden depression and anxiety and enable them to identify harmful effects of addiction</li>
+            <li>To raise awareness among students about behavioural disorders and the ways to gain control over anger and revengeful attitude</li>
+            <li>To help students learn stress management skills</li>
+            <li>To offer professional help to victims and potential victims to overcome depression, distress, addiction and stressful conditions through individual counselling and medication</li>
+          </ul>
+          <p><h4>Services rendered :</h4></p>
+          <ul>
+            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the schedule</li>    
+            <li>Occasional sensitization programmes are organized.</li>
+          </ul>
         </div>        
         <div class="text-center medi-title">Facilities</div>
         <div class="medi-text">
@@ -93,7 +112,7 @@
             <li>Sunday and Institute Holidays- Outdoor facility is not available only emergency facilities available. </li>
           </ul>
         </div>
-        <div class="text-center medi-title">List of Doctors</div>  <div class="medi-text">
+        <div class="text-center medi-title">List of Doctors & schedule</div>  <div class="medi-text">
           <table class="table table-responsive-md table-bordered">
             <thead class="mdb-color lighten-4">
               <tr>
@@ -161,14 +180,34 @@
 </template>
 
 <script>
+  import Carousel from '../Carousel'
 export default {
   name: 'Mu',
+  data(){
+    return {
+      slides: [
+        {primary_caption:"Entrance & Lobby",secondary_caption:"Entrance & Lobby",image:"http://nitdgp.ac.in/MU/corridoor.jpg"},
+        {primary_caption:"Dental OPD",secondary_caption:"Dental OPD",image:"http://nitdgp.ac.in/MU/dental_opd.jpg"},
+        {primary_caption:"Counselling Centre for Psychosocial Wellness",secondary_caption:"Counselling Centre for Psychosocial Wellness",image:"http://nitdgp.ac.in/MU/councelling_center.jpg"},
+        {primary_caption:"Resting Ward",secondary_caption:"Resting Ward",image:"http://nitdgp.ac.in/MU/watchroom.jpg"},
+        {primary_caption:"Emergency Ward",secondary_caption:"Emergency Ward",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},
+        {primary_caption:"Outside of Medical Unit",secondary_caption:"Outside of Medical Unit",image:"http://nitdgp.ac.in/MU/Outside.jpg"},
+        {primary_caption:"Outdoor of Medical Unit",secondary_caption:"Outdoor of Medical Unit",image:"http://nitdgp.ac.in/MU/outdoor.jpg"},
+      ]
+    }
+  },
+  components: {
+    Carousel
+  },
   created () {
     this.$emit('hideloader', true)
   }
 }
 </script>
 <style scoped="scoped">
+  .card-pic img{
+    margin-top: 0;
+  }
   .medi-text{
     border: 1px solid #33b5e5;
     padding: 8px 10px;
