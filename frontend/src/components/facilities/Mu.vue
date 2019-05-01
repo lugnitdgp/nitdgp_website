@@ -7,9 +7,15 @@
         <!-- <div style="text-align: center;">
           <img style="max-height:300px;max-width: 100%;margin-bottom: 10px;" src="https://nitdgp.ac.in/AllPDF/medical.jpg" width="100%"><br>
         </div> -->
-        <div style="width: 100%;margin: 0 auto;">
+        <div class="row newscaro">
+          <div class="col-8" style="width: 100%;margin: 0 auto;">
           <Carousel :slides="slides"></Carousel>
         </div>
+        <div class="col-4 news">
+          <Bulletin :notices="notices"></Bulletin>
+        </div>
+        </div>
+        
         <div class="text-center medi-title">HOSPITAL</div>
         <div class="medi-text">
           <p class="text-center" style="font-size: 20px;font-weight: bold;">
@@ -17,7 +23,23 @@
           </p>
           NIT Durgapur promotes healthy and fit lifestyle of the campus community and focuses on both physical
           and psychological well-being. The Medical Unit-cum-Hospital prioritizes intensive care and attentive treatment by catering to the needs of its employees and students. One of the most indispensable
-          necessities in the college campus, the <b>Medical Unit</b> of the Institute is served by three resident doctors, three temporary doctors and other medical staff. Apart from morning and evening OPDs, there is also a provision for <b>round the clock medical emergency services</b>. Besides the regular doctors, specialist doctors from <b>various domains of expertise visit</b> the medical unit on certain days in a week. It has observatory beds, isolation ward for students and dressing room. Moreover, the unit has an <b>outsourced pathological blood collection and reporting system from IQ city hospital</b>. The institute is upgrading the old facilities in order to provide the students and the staff with efficient treatment. In case of any serious  illness, patients are referred to State Government Hospital, The Mission Hospital, IQ City Hospital and <b>some other hospitals  with which it has specific tie-ups</b>. The Medical unit has a help desk for insurance for different kinds of treatments.
+          necessities in the college campus, the Medical Unit of the Institute is served by three resident doctors, three temporary doctors and other medical staff. Apart from morning and evening OPDs, there is also a provision for round the clock medical emergency services. Besides the regular doctors, specialist doctors from various domains of expertise visit the medical unit on certain days in a week. It has observatory beds, isolation ward for students and dressing room. Moreover, the unit has an outsourced pathological blood collection and reporting system from IQ city hospital. The institute is upgrading the old facilities in order to provide the students and the staff with efficient treatment. In case of any serious  illness, patients are referred to State Government Hospital, The Mission Hospital, IQ City Hospital and some other hospitals  with which it has specific tie-ups. The Medical unit has a help desk for insurance for different kinds of treatments.
+        </div>                
+        <div class="text-center medi-title">Facilities</div>
+        <div class="medi-text">
+          <ul>
+            <li>Morning and Evening OPDs except sunday and holidays</li>
+            <li>Round the clock medical emergencies</li>
+            <li>Visiting Physicians of different fields on fixed days</li>
+            <li>Pharmacy (24x7 Pharmacy Facility in the institute is under active consideration)</li>
+            <li>24 Hrs. one ambulance service and one  stand-by vehicle</li>
+            <li>Observatory Beds</li>
+            <li>Isolation ward for the students</li>
+            <li>Dressing Room</li>
+            <li>Sample collection center for outsourced pathological laboratory (9.30 AM to 10.30 AM except sunday and holidays)</li>
+            <li>Nebulization</li>
+            <li>Insurance help desk for students</li>
+          </ul>
         </div>
         <div class="text-center medi-title">Counselling Centre for Psychosocial Wellness</div>
         <div class="medi-text">
@@ -31,78 +53,50 @@
           </ul>
           <p><h4>Services rendered :</h4></p>
           <ul>
-            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the schedule</li>    
+            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the <a href="https://admin.nitdgp.ac.in/files/academics/notices/2018/09/07/Timeschedule_R1.pdf" target="_blank"><span style="color: red;">schedule</span></a></li>    
             <li>Occasional sensitization programmes are organized.</li>
           </ul>
         </div>        
-        <div class="text-center medi-title">Facilities</div>
-        <div class="medi-text">
-          <ul>
-            <li>Morning and Evening OPDs except sunday and holidays</li>
-            <li>Round the clock medical emergencies</li>
-            <li>Visiting Physicians of different fields on fixed days</li>
-            <li>Pharmacy</li>
-            <li>24 Hrs. one ambulance service and one  stand-by vehicle</li>
-            <li>Observatory Beds</li>
-            <li>Isolation ward for the students</li>
-            <li>Dressing Room</li>
-            <li>Sample collection center for outsourced pathological laboratory (9.30 AM to 10.30 AM except sunday and holidays)</li>
-            <li>Nebulization</li>
-            <li>Insurance help desk for students</li>
-          </ul>
-        </div>
-        <div class="text-center medi-title">List of TIE-UP Hospitals</div>
+        <div class="text-center medi-title">Mdeical Officers & Temporary Doctors</div>
         <div class="medi-text-flex">
           <div class="sub-mdei-div">
-            <h5 class="text-center"><u>Durgapur</u></h5>
-            <ul>
-              <li>The Mission Hospital</li>
-              <li>IQ City Medical Collage Hospital</li>
-              <li>Healthworld Hospital</li>
-              <li>Vivekananda Hospital</li>
-              <li>Gouri Devi Hospital & Research Institute</li>
-              <li>City Hospital</li>
-              <li>Disha Eye Hospital - Durgapur & Barrackpore</li>
-            </ul>
-          </div>
-          <div class="sub-mdei-div">
-            <h5 class="text-center"><u>Kolkata</u></h5>
-            <ul>
-              <li>Ruby General Hospital</li>
-              <li>Peerless Hospital & Research Center</li>
-              <li>AMRI Hospital</li>
-              <li>B.P. poddar Hospital & Medical research Limited</li>
-            </ul>
-          </div>          
-        </div>
-        <div class="text-center medi-title">Mdeical Officers</div>
-        <div class="medi-text">
+            <h5 class="text-center"><u>Mdeical Officers</u></h5>
+            <div>
           <table class="table table-responsive-md table-bordered">
             <thead class="mdb-color lighten-4">
               <tr>
                 <th class="th-lg">Name</th>
                 <th class="th-lg">Designation</th>
+                <th class="th-lg">Mobile</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>DR. B.K. Sarkar</td>
                 <td>Senior Medical Officer</td>
+                <td>+91-9434788075</td>
               </tr>
               <tr>
                 <td>DR. (Mrs.) S. Patra</td>
                 <td>Medical Officer</td>
+                <td>+91-9434788076</td>
               </tr>
               <tr>
                 <td>DR. (Mrs.) G. Pravabhati</td>
                 <td>Medical Officer</td>
+                <td>+91-9434789029</td>
               </tr>
             </tbody>
           </table>
         </div>  
-          <div class="text-center medi-title">Temporary Doctors</div>
-        <div class="medi-text">
-          <p class="text-center">DR. Daisy Bhengra <br>DR. Arnab Saha <br> DR. Anisul Islam </p>
+        
+          </div>
+          <div class="sub-mdei-div">
+            <h5 class="text-center"><u>Temporary Doctors</u></h5>
+            <div>
+              <p class="text-center">DR. Daisy Bhengra <br>DR. Arnab Saha <br> DR. Anisul Islam </p>
+            </div>
+          </div>          
         </div>
         <div class="text-center medi-title">Hospital Timings</div>
         <div class="medi-text">          
@@ -153,6 +147,30 @@
             </tbody>
           </table>
         </div>
+        <div class="text-center medi-title">List of TIE-UP Hospitals</div>
+        <div class="medi-text-flex">
+          <div class="sub-mdei-div">
+            <h5 class="text-center"><u>Durgapur</u></h5>
+            <ul>
+              <li>The Mission Hospital</li>
+              <li>IQ City Medical Collage Hospital</li>
+              <li>Healthworld Hospital</li>
+              <li>Vivekananda Hospital</li>
+              <li>Gouri Devi Hospital & Research Institute</li>
+              <li>City Hospital</li>
+              <li>Disha Eye Hospital - Durgapur & Barrackpore</li>
+            </ul>
+          </div>
+          <div class="sub-mdei-div">
+            <h5 class="text-center"><u>Kolkata</u></h5>
+            <ul>
+              <li>Ruby General Hospital</li>
+              <li>Peerless Hospital & Research Center</li>
+              <li>AMRI Hospital</li>
+              <li>B.P. poddar Hospital & Medical research Limited</li>
+            </ul>
+          </div>          
+        </div>
         <div class="text-center medi-title"><strong>Contact Details</strong></div>
         <div class="medi-text-flex">          
           <div class="sub-mdei-div3">
@@ -181,25 +199,34 @@
 
 <script>
   import Carousel from '../Carousel'
+  import Bulletin from '../Bulletin'
+  import { convertNewsfeed } from '@/common.js'
 export default {
   name: 'Mu',
   data(){
     return {
+      notices:[],
       slides: [
+        {primary_caption:"Medical Unit",secondary_caption:"Medical Unit",image:"http://nitdgp.ac.in/MU/Outside.jpg"},
+        {primary_caption:"OPD of Medical Unit",secondary_caption:"OPD of Medical Unit",image:"http://nitdgp.ac.in/MU/outdoor.jpg"},
         {primary_caption:"Entrance & Lobby",secondary_caption:"Entrance & Lobby",image:"http://nitdgp.ac.in/MU/corridoor.jpg"},
         {primary_caption:"Dental OPD",secondary_caption:"Dental OPD",image:"http://nitdgp.ac.in/MU/dental_opd.jpg"},
-        {primary_caption:"Counselling Centre for Psychosocial Wellness",secondary_caption:"Counselling Centre for Psychosocial Wellness",image:"http://nitdgp.ac.in/MU/councelling_center.jpg"},
+        {primary_caption:"Counselling Centre for Wellness",secondary_caption:"Counselling Centre for Wellness",image:"http://nitdgp.ac.in/MU/councelling_center.jpg"},
         {primary_caption:"Resting Ward",secondary_caption:"Resting Ward",image:"http://nitdgp.ac.in/MU/watchroom.jpg"},
-        {primary_caption:"Emergency Ward",secondary_caption:"Emergency Ward",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},
-        {primary_caption:"Outside of Medical Unit",secondary_caption:"Outside of Medical Unit",image:"http://nitdgp.ac.in/MU/Outside.jpg"},
-        {primary_caption:"Outdoor of Medical Unit",secondary_caption:"Outdoor of Medical Unit",image:"http://nitdgp.ac.in/MU/outdoor.jpg"},
+        {primary_caption:"Emergency Ward",secondary_caption:"Emergency Ward",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
+      ],
+      buletins:[
+        
       ]
     }
+    
   },
   components: {
-    Carousel
+    Carousel,
+    Bulletin
   },
   created () {
+    this.notices = convertNewsfeed(this.buletins)
     this.$emit('hideloader', true)
   }
 }
@@ -223,6 +250,9 @@ export default {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }
+  .page-type-links .date-col .black-text {
+    margin-left: 6.5em;
+  }
   .medi-text-flex{
     border: 1px solid #33b5e5;
     padding: 8px 10px;
@@ -241,6 +271,10 @@ export default {
     width: 33%;
     text-align: justify;
     margin-right: 3px;
+  }
+  tbody tr td{
+    color: #000;
+    font-weight: bold;
   }
 
 </style>
