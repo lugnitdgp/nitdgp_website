@@ -94,8 +94,9 @@ export default {
     border-radius: 10px;
   }
   .card-pic img{
-    min-width: 100% !important;
+    width: 100% !important;
     margin: 0 auto;
-    margin-top: -150px;
+    margin-top: 0px;
+    height: 400px;
   }
 </style>
