@@ -4,11 +4,8 @@
     <div class="card">
       <a class="card-header white-text text-center">Medical Unit</a>
       <div class="card-body">
-        <!-- <div style="text-align: center;">
-          <img style="max-height:300px;max-width: 100%;margin-bottom: 10px;" src="https://nitdgp.ac.in/AllPDF/medical.jpg" width="100%"><br>
-        </div> -->
         <div class="row newscaro">
-          <div class="col-8" style="width: 100%;margin: 0 auto;">
+          <div class="col-8 caro" style="width: 100%;margin: 0 auto;">
           <Carousel :slides="slides"></Carousel>
         </div>
         <div class="col-4 news">
@@ -60,36 +57,37 @@
         <div class="text-center medi-title">Mdeical Officers & Temporary Doctors</div>
         <div class="medi-text-flex">
           <div class="sub-mdei-div">
-            <h5 class="text-center"><u>Mdeical Officers</u></h5>
+            <h5 class="text-center">
+              <u>Mdeical Officers</u>
+            </h5>
             <div>
-          <table class="table table-responsive-md table-bordered">
-            <thead class="mdb-color lighten-4">
-              <tr>
-                <th class="th-lg">Name</th>
-                <th class="th-lg">Designation</th>
-                <th class="th-lg">Mobile</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>DR. B.K. Sarkar</td>
-                <td>Senior Medical Officer</td>
-                <td>+91-9434788075</td>
-              </tr>
-              <tr>
-                <td>DR. (Mrs.) S. Patra</td>
-                <td>Medical Officer</td>
-                <td>+91-9434788076</td>
-              </tr>
-              <tr>
-                <td>DR. (Mrs.) G. Pravabhati</td>
-                <td>Medical Officer</td>
-                <td>+91-9434789029</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>  
-        
+              <table class="table table-responsive-md table-bordered">
+                <thead class="mdb-color lighten-4">
+                  <tr>
+                    <th class="th-lg">Name</th>
+                    <th class="th-lg">Designation</th>
+                    <th class="th-lg">Mobile</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>DR. B.K. Sarkar</td>
+                    <td>Senior Medical Officer</td>
+                    <td>+91-9434788075</td>
+                  </tr>
+                  <tr>
+                    <td>DR. (Mrs.) S. Patra</td>
+                    <td>Medical Officer</td>
+                    <td>+91-9434788076</td>
+                  </tr>
+                  <tr>
+                    <td>DR.(Mrs.) G.Pravabhati</td>
+                    <td>Medical Officer</td>
+                    <td>+91-9434789029</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="sub-mdei-div">
             <h5 class="text-center"><u>Temporary Doctors</u></h5>
@@ -174,19 +172,19 @@
         <div class="text-center medi-title"><strong>Contact Details</strong></div>
         <div class="medi-text-flex">          
           <div class="sub-mdei-div3">
-            <strong>Dr. B. K. Sarkar ( MBBS )</strong><br>
+            <strong>Dr. B. K. Sarkar (MBBS)</strong><br>
             Phone: +91-343-2757118<br>
             Mobile: +91-9434788075<br>
             Email: b.sarkar@admin.nitdgp.ac.in<br>
           </div>
           <div class="sub-mdei-div3">
-            <strong>Dr. ( Mrs. )S. Patra ( MBBS )</strong><br>
+            <strong>Dr. ( Mrs. )S. Patra (MBBS)</strong><br>
             Phone: +91-343-2757116<br>
             Mobile: +91-9434788076<br>
             Email: s.patra@admin.nitdgp.ac.in<br>
           </div>
           <div class="sub-mdei-div3">
-            <strong>Dr. (Mrs.) G. Pravabhati</strong><br>
+            <strong>Dr. (Mrs.) G. Pravabhati (MBBS)</strong><br>
             Mobile: +91-9434789029<br>
             Email: g.prabhavathi@admin.nitdgp.ac.in<br>
           </div>
@@ -276,5 +274,9 @@ export default {
     color: #000;
     font-weight: bold;
   }
-
+@media screen and (max-width: 760px;){
+  .col-8{
+    width: 100%;
+  }
+}
 </style>
