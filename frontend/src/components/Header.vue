@@ -32,14 +32,14 @@
             <div class="text-cont">
               <div class="row">
                 <p>
-                  <span class="nm-en-sm notranslate">
+                  <span class="nm-en-sm">
                     &nbsp;&nbsp;&nbsp;NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR
                   </span>
                   <span class="nm-hi">
                     राष्ट्रीय प्रौद्योगिकी संस्थान, दुर्गापुर
                     &nbsp;|&nbsp;
                   </span>
-                  <span class="nm-en notranslate">
+                  <span class="nm-en">
                     NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR<br>
                   </span>
                   <span class="nm-det" style="font-size: 13px;">
@@ -49,16 +49,6 @@
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="lang-tr" style="display:none;">
-        <div id="google_translate_element">
-          <div id=":0.targetLanguage" class="goog-te-gadget-simple">
-            <h5>अ|A</h5>
-            <!-- <div class="goog-te-banner">
-            <a id=":2.close" class="goog-close-link" href="javascript:void(0)" title="Close"><img alt="NIT Durgapur Logo" src="https://www.google.com/images/cleardot.gif" width="15" height="15" alt="Close" style="background-image:url(https://translate.googleapis.com/translate_static/img/te_ctrl3.gif);background-position:-28px 0px"></a>
-            </div> -->
           </div>
         </div>
       </div>
@@ -209,15 +199,6 @@ export default {
   }
   .lang-tr{
     position: absolute;top: 0;right: 0
-  }
-  .lang-tr #google_translate_element{
-    margin: auto;
-  }
-  .lang-tr #google_translate_element .goog-te-gadget-simple{
-    background-color: #001333;border: none;white-space:nowrap;
-  }
-  .lang-tr #google_translate_element .goog-te-gadget-simple h5{
-    text-decoration: underline;margin: 0;font-weight: normal;color:white;padding-left: 2px;padding-right: 2px
   }
   .nav-_links{
     position: absolute;bottom: 0;right: 0;font-size: 120%
