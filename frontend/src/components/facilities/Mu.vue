@@ -210,8 +210,8 @@ export default {
         {primary_caption:"Entrance & Lobby",secondary_caption:"Entrance & Lobby",image:"http://nitdgp.ac.in/MU/corridoor.jpg"},
         {primary_caption:"Dental OPD",secondary_caption:"Dental OPD",image:"http://nitdgp.ac.in/MU/dental_opd.jpg"},
         {primary_caption:"Counselling Centre for Wellness",secondary_caption:"Counselling Centre for Wellness",image:"http://nitdgp.ac.in/MU/councelling_center.jpg"},
-        {primary_caption:"Resting Ward",secondary_caption:"Resting Ward",image:"http://nitdgp.ac.in/MU/watchroom.jpg"},
-        {primary_caption:"Emergency Ward",secondary_caption:"Emergency Ward",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
+        {primary_caption:"Emergency Ward",secondary_caption:"Emergency Ward",image:"http://nitdgp.ac.in/MU/watchroom.jpg"},
+        {primary_caption:"Emergency Ward Entrance",secondary_caption:"Emergency Ward Entrance",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
       ],
       buletins:[
         
