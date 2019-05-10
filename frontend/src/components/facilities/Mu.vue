@@ -214,7 +214,7 @@ export default {
         {primary_caption:"Emergency Ward Entrance",secondary_caption:"Emergency Ward Entrance",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
       ],
       buletins:[
-        
+        {title:'Come and get your eyes examine to detect diabetic touch to retina of eyes (Diabetic retinopathy)',file:'https://nitdgp.ac.in/MU/bulletin_file.pdf',date:'2019-05-10',url:''}
       ]
     }
     
