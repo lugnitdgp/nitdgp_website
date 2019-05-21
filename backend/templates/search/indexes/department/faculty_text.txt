@@ -1,0 +1,6 @@
+{% load synonym_tags %}
+
+{{ object.name }}
+{{ object.designation }}
+{{ object.department.name }}
+{{ object.department.short_code|add_dept_synonyms }}
