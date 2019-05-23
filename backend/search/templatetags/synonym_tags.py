@@ -14,6 +14,8 @@ GENERAL_SYNONYMS = [
     ['semester ', 'sem '],
     ['b.tech ', 'b. tech ', 'btech '],
     ['b. tech ', 'b.tech ', 'btech '],
+    ['m.tech ', 'm. tech ', 'mtech '],
+    ['m. tech ', 'm.tech ', 'mtech '],
 ]
 
 
