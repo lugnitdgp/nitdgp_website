@@ -2,7 +2,7 @@
   <links-page>
     <card title="Reservation Rosters">
     	<div style="border: 2px solid #001333;padding: 10px;text-align: justify;">
-    		All concerned are hereby requested to take into consideration the institute level reservation rosters of 31-Dec-2017 and 31-Dec-2018. Errors and omissions if any, may be brought to the notice of the Deputy Registrar (Establishment) by 18-Feb-2019 with proper justification.
+    		All concerned are hereby requested to take into consideration the Institute level reservation roster 31-March-2019.Errors and omissions if any,may be brought to the notice of the Deputy Registrar(Establishment) by 03-JUNE-2019 with proper justification.
 
     		</div><br>
       <ul class="list-group list-gr">
