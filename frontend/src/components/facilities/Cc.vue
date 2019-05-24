@@ -13,6 +13,13 @@
       </div>
       <div class="container-fluid fac-sm">
         <div class="row">
+          <div class="cc-display">
+            <button class="btn-pri" type="button" @click="showNav($event)">
+              <i class="fa fa-bars fa-2x" style="color: #fff;"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row">          
           <div class="list-group" 
             :class="extraNavClasses.concat([getClassNav()])"
             :style="{ top: popUpTop + 'px' }">
@@ -362,6 +369,18 @@ export default {
 </script>
 
 <style scoped>
+  .btn-pri{
+    background: #001333;
+    width: 50px;
+    padding: 10px;
+    float: right;
+    margin-left: auto;
+    margin-bottom: 0px;
+    cursor: pointer;
+  }
+  .cc-display{
+    display: none;
+  }
   .staffs {
     min-width: 200px !important;
     min-height: 300px !important;
@@ -422,6 +441,9 @@ export default {
     .btn {
       display: none;
       height: 0px;
+    }
+    .cc-display{
+      display: block;
     }
     .people-text{
     width: 100%;
