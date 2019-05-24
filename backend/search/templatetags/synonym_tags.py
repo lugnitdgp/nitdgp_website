@@ -36,7 +36,7 @@ def add_general_synonyms(text_data):
             if syn_list[0] in text_data:
                 text_data = text_data.replace(
                     syn_list[0], "".join(syn_list), 1)
-                return text_data
+        return text_data
     except Exception as e:
         print(e)
 
