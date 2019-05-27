@@ -14,6 +14,10 @@
           <a v-if="$route.params.tab === 'student'" class="nav-link active" data-toggle="tab" href="#panel2" role="tab">Student</a>
           <a v-else class="nav-link" data-toggle="tab" href="#panel2" role="tab">Student</a>
         </li>
+        <li class="nav-item">
+          <a v-if="$route.params.tab === 'hostel'" class="nav-link active" data-toggle="tab" href="#panel4" role="tab">Hostel</a>
+          <a v-else class="nav-link" data-toggle="tab" href="#panel4" role="tab">Hostel</a>
+        </li>
       </ul>
       <div class="tab-content card">
         <div v-if="$route.params.tab === 'academic'" class="tab-pane in show active fade" id="panel1" role="tabpanel">
@@ -35,6 +39,12 @@
         </div>
         <div class="tab-pane fade" id="panel3" role="tabpanel">
       	  <notice-list :noticelist="general" />
+        </div>
+        <div v-if="$route.params.tab === 'hostel'" class="tab-pane in show active fade" id="panel4" role="tabpanel">
+          <notice-list :noticelist="hostel" />
+        </div>
+        <div class="tab-pane fade" id="panel4" role="tabpanel">
+          <notice-list :noticelist="hostel" />
         </div>
 
       </div>

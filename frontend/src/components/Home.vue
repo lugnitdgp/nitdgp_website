@@ -206,8 +206,10 @@ export default {
       if (suburl.indexOf("notice") != -1) {
         if(section == "Academics")
           return link + "notices/" + "academic"
-        if(section == "Students & Alumni")
+        if(section == "Students & Alumni" && tile.name == "Notices")
           return link + "notices/" + "student"
+        if(section == "Students & Alumni" && tile.name == "Hostel Notice")
+          return link + "notices/" + "hostel"
         if(section == "Information")
           return link + "notices/" + "general"
       }
