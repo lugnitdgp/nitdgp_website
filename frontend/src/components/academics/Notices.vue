@@ -65,7 +65,8 @@ export default {
     return {
       academic: [],
       student: [],
-      general: []
+      general: [],
+      hostel: []
     }
   },
   created () {
@@ -76,6 +77,7 @@ export default {
            this.student.push(...notices.Student)
            this.academic = notices.Academic
            this.general = notices.General
+           this.hostel = notices.Hostel
            this.$emit('hideloader', true)
          })
          .catch(e => {
