@@ -21,7 +21,7 @@
           <a class="dropdown-item" href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail</a>
         </div>
       </div>
-      <div class="navbar-content-cen container">
+      <div class="navbar-content-cen container pb-4">
         <div class="row nav-logo">
           <div class="col-1">
             <a class="navbar-brand" :class="$route.path == '/'" href="/home">
@@ -53,6 +53,10 @@
         </div>
       </div>
       <div class="nav-_links">
+        <div class="searchbar mr-1 p-1">
+          <input class="search_input" name="" placeholder="Search..."   type="search" v-model="query" v-on:keyup.enter="search()">
+           <span class="search_icon"><i class="fa fa-search" aria-hidden="true" v-on:click="search()"></i></span>
+        </div>
         <a href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail&nbsp;</a>
         <a href="/contacts"><i class="fa fa-1x fa-phone"></i> Contact&nbsp;</a>
         <a href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> Old&nbsp;</a>
@@ -67,7 +71,8 @@ export default {
   data () {
     return {
       menu: false,
-      windowWidth: 1000
+      windowWidth: 1000,
+      query: ''
     }
   },
   created () {
@@ -77,6 +82,9 @@ export default {
   methods: {
     updateWidth () {
       this.windowWidth = document.body.clientWidth
+    },
+    search() {
+      this.$router.push({ path: '/search', query: { q: this.query } })
     }
   },
   beforeDestroy() {
@@ -213,4 +221,48 @@ export default {
     color: white!important;
     background-color: #001388!important;
   }
+  .searchbar{
+    display: inline;
+    border-radius: 30px;
+  }
+  .search_input{
+    color:  #001333;
+    border:none !important;
+    outline: 0 !important;
+    -webkit-box-shadow:none !important;
+    box-shadow:none !important;
+    background: none;
+    width: 0 ;
+    caret-color:transparent;
+    font-size: 0.9rem;
+    font-weight: 300 !important;
+    margin-bottom:0;
+    transition:  width 0.4s linear;
+    -webkit-transition: width 0.4s linear;
+  }
+  .searchbar:hover{
+    background:white;
+  }
+  .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 150px;
+    caret-color: #001333;
+    transition: width 0.4s linear;
+    outline:none !important;
+    border:none !important;
+  }
+  .searchbar:hover > .search_icon{
+    color:  #001333 !important;
+  }
+  .search_icon{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    background: transparent;
+    padding:0 2px;
+    cursor: pointer;
+  }
+
 </style>
