@@ -23,6 +23,7 @@ import Contacts from '@/components/Contacts'
 import QuickLinks from '@/components/QuickLinks'
 import Nad from '@/components/Nad'
 import Liveconvocation from '@/components/Liveconvocation'
+import SearchResults from '@/components/SearchResults'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -653,6 +654,11 @@ export default new Router({
       path: '/nad',
       name: 'Nad',
       component: Nad
+    },
+    {
+      path: '/search',
+      name: 'SearchResults',
+      component: SearchResults
     },
 
     // This is meant to be at the last
