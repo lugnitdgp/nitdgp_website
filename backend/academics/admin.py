@@ -44,8 +44,8 @@ class HostelNoticeModelAdmin(admin.ModelAdmin):
         if request.user.is_superuser:
             return queryset
         groups = request.user.groups.filter(name__startswith="Hall")
-        notice_types = [x.name.split()[1] for x in groups]
-        return queryset.filter(notice_type__in=notice_types)
+        hall_types = [x.name.split()[1] for x in groups]
+        return queryset.filter(hall_type__in=hall_types)
 
     def formfield_for_choice_field(self, db_field, request, **kwargs):
         if db_field.name == "hall_type" and not request.user.is_superuser:
