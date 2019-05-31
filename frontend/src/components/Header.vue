@@ -87,6 +87,13 @@ export default {
       this.$router.push({ path: '/search', query: { q: this.query } })
     }
   },
+  watch: {
+    '$route' (to, from) {
+      if(from.query.q && to.query.q){
+        this.$router.go()
+      }
+    }
+  },
   beforeDestroy() {
     window.removeEventListener('resize', this.updateWidth);
   }
