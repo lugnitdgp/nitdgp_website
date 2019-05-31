@@ -4,7 +4,7 @@ import datetime
 
 
 class Notice(BaseModel):
-    NOTICE_TYPES = (('Academic', 'Academic'), ('Student', 'Student'), ('General', 'General'), ('Hostel', 'Hostel'))
+    NOTICE_TYPES = (('Academic', 'Academic'), ('Student', 'Student'), ('General', 'General'))
     title = models.CharField(max_length=512)
     notice_type = models.CharField(choices=NOTICE_TYPES, max_length=512)
     archive = models.BooleanField(default=False)
@@ -27,6 +27,17 @@ class Notice(BaseModel):
     class Meta:
         ordering = ('-date',)
 
+class HostelNotice(BaseModel):
+    HALL_TYPES = (('Hostel-1','Hostel-1'),('Hostel-2','Hostel-2'),('Hostel-3','Hostel-3'),('Hostel-4','Hostel-4'),('Hostel-5','Hostel-5'),('Hostel-6','Hostel-6'),('Hostel-7','Hostel-7'),('Hostel-8','Hostel-8'),('Hostel-9','Hostel-9'),('Hostel-10','Hostel-10'),('Hostel-11','Hostel-11'),('Hostel-12','Hostel-12'),('Hostel-13','Hostel-13'))
+    title = models.CharField(max_length=512)
+    hall_type = models.CharField(choices=HALL_TYPES, max_length=512)
+    archive = models.BooleanField(default=False)
+    file = models.FileField(upload_to='academics/hostelnotices/%Y/%m/%d', blank=True)
+    url = models.URLField(blank=True)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
 
 def rename_calendar(instance, filename):
     return 'academics/calendar/{1}/'.format(instance.year, filename)

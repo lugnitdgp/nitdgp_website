@@ -9,6 +9,12 @@ class NoticeSerializer(serializers.ModelSerializer):
         model = Notice
         fields = ('title', 'file', 'date')
 
+class HostelNoticeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = HostelNotice
+        fields = ('title', 'file', 'date')
+
 
 class CalendarSerializer(serializers.ModelSerializer):
 

@@ -21,6 +21,9 @@ class NoticeViewSet(ListAPIView):
                 result[ntype] = [NoticeSerializer(notice, context={"request": request}).data]
         return Response({"notices": result})
 
+class HostelNoticeViewSet(ListAPIView):
+    queryset = HostelNotice.objects.filter(archive=False).order_by('-date')
+    serializer_class = HostelNoticeSerializer
 
 class CalendarViewSet(ListAPIView):
 
