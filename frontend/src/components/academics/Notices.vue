@@ -70,6 +70,13 @@ export default {
     }
   },
   created () {
+    axios.get(genBackendURL('academics/hostelnotices'))
+         .then(response => {           
+           this.hostel = response.data.results
+         })
+         .catch(e => {
+           console.log(e)
+         })
     axios.get(genBackendURL('academics/notices'))
          .then(response => {
            console.log(response)
@@ -77,7 +84,6 @@ export default {
            this.student.push(...notices.Student)
            this.academic = notices.Academic
            this.general = notices.General
-           this.hostel = notices.Hostel
            this.$emit('hideloader', true)
          })
          .catch(e => {
