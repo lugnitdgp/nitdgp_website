@@ -528,7 +528,7 @@ export default new Router({
       component: Teqip
     },
     {
-      path: '/nba',
+      path: '/accreditation',
       name: 'Nba',
       component: Nba
     },
