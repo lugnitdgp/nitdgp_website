@@ -101,3 +101,7 @@ def pcbdcomplaint(request, **kwarg):
                 content_type="application/json"
 			)
 
+
+class LogoViewSet(ListAPIView):
+	queryset = Logocomp.objects.all()
+	serializer_class = LogocompSerializer

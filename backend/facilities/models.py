@@ -155,3 +155,10 @@ class PCBD(BaseModel):
     complaint = RichTextField()
     replytxt = RichTextField(default='', blank=True)
     replyurl = models.FileField(upload_to="facilities/pcbdfile/%Y", blank=True)
+
+class Logocomp(BaseModel):
+    name = models.CharField(max_length=1024)
+    guardian = models.CharField(max_length=1024)
+    mobile = models.CharField(max_length=20, validators=[RegexValidator(r'^\d{10}$')])
+    email = models.CharField(max_length=1024)
+    logoimg = models.ImageField(upload_to='logocomp/logos/')

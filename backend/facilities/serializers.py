@@ -58,3 +58,10 @@ class PCBDSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = PCBD
 		fields = ('c_number','name','email','mobile','cat','address','complaint','replytxt','replyurl')
+
+
+class LogocompSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Logocomp
+		fields = ('name','guardian','mobile','email','logoimg')

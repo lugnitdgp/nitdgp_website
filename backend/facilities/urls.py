@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^facilities/hostels/$',HostelViewSet.as_view(), name='view-hostels'),
     url(r'^facilities/pcbd/$',PCBDViewSet.as_view(), name='view-pcbd'),
     url(r'^facilities/pcbdcomplaint/$',pcbdcomplaint, name='view-pcbdcomplaint'),
+    url(r'^facilities/logocompetition/$',LogoViewSet.as_view(), name='view-logocompetition'),
     ]

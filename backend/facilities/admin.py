@@ -26,6 +26,9 @@ class SemesterquestionModelAdmin(admin.ModelAdmin):
 
 class PCBDModelAdmin(admin.ModelAdmin):
     list_display = ['name','c_number','email','complaint']
+
+class LogocompModelAdmin(admin.ModelAdmin):
+    list_display = ['name','email','mobile']
     
 admin.site.register(Semesterquestion,SemesterquestionModelAdmin)
 admin.site.register(Center, CenterModelAdmin)
@@ -35,3 +38,4 @@ admin.site.register(SAC,SACModelAdmin)
 admin.site.register(Hostel, HostelModelAdmin)
 admin.site.register(CIF,CIFModelAdmin)
 admin.site.register(PCBD,PCBDModelAdmin)
+admin.site.register(Logocomp,LogocompModelAdmin)
