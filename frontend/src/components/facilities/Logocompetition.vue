@@ -68,12 +68,10 @@ export default {
       data.append('email',this.email)
       data.append('mobile',this.mob)
       data.append('logoimg',this.file)
-      //this.inactive = true
       
       axios({
         method: 'post',
-        //url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
-        url: 'http://localhost:8000/facilities/logocompetition/',
+        url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
         headers:{
           'Content-Type':'multipart/form-data'
         },
@@ -85,7 +83,6 @@ export default {
             }
             else{
               alert(sms)
-              // location.reload(true)
               window.location.href = '/logocompetition'
             }
           })
@@ -106,10 +103,7 @@ export default {
       }
       else{
         this.typeflag = 1
-      }
-      console.log(this.typeflag)
-      console.log(this.file.type)
-      console.log(this.file.size)
+      }      
       
     }
 }
