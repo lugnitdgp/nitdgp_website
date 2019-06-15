@@ -130,7 +130,7 @@ def logocompetition(request, **kwarg):
 			if logovalues:
 				Logocomp.objects.create(**logovalues)
 			return HttpResponse(
-        		json.dumps({"message":'Ok'}), 
+        		json.dumps({"message":'Your Logo Submit Successful !!!'}), 
         		content_type="application/json"
         	)
 	else:

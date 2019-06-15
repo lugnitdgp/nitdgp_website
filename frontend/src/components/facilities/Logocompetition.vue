@@ -100,10 +100,14 @@ export default {
       {
         this.sizeflag = 1
       }
-      if(this.file.type !='image/jpeg' || this.file.type !='image/png' || this.file.type !='image/gif')
+      if(this.file.type =='image/jpeg' || this.file.type == 'image/png' || this.file.type == 'image/gif')
       {
+        this.typeflag = 0
+      }
+      else{
         this.typeflag = 1
       }
+      console.log(this.typeflag)
       console.log(this.file.type)
       console.log(this.file.size)
       
