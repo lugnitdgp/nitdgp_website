@@ -2,6 +2,7 @@ from django.db import models
 from base.models import BaseModel
 from ckeditor.fields import RichTextField
 from django.core.validators import RegexValidator
+from django.core.validators import FileExtensionValidator
 
 
 class Center(BaseModel):
@@ -161,4 +162,4 @@ class Logocomp(BaseModel):
     guardian = models.CharField(max_length=1024)
     mobile = models.CharField(max_length=20, validators=[RegexValidator(r'^\d{10}$')])
     email = models.CharField(max_length=1024)
-    logoimg = models.ImageField(upload_to='logocomp/logos/')
+    logoimg = models.ImageField(upload_to='logocomp/logos/',validators=[FileExtensionValidator(allowed_extensions=['gif','png','jpg'])])

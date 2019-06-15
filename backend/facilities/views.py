@@ -101,7 +101,40 @@ def pcbdcomplaint(request, **kwarg):
                 content_type="application/json"
 			)
 
+@csrf_exempt
+def logocompetition(request, **kwarg):
+	if request.method == 'POST':		
+		#with open(re)
+		QueryDict = request.POST
+		logovalues = QueryDict.dict()
+		print(logovalues)
+		qry = Logocomp.objects.filter(email=logovalues['email'])
+		if qry:
+			return HttpResponse(
+                json.dumps({"message": 'Already Register'}),
+                content_type="application/json"
+            )
 
-class LogoViewSet(ListAPIView):
-	queryset = Logocomp.objects.all()
-	serializer_class = LogocompSerializer
+		else:
+			import os
+			img_name = logovalues['email'].split('@')[0]+str(logovalues['mobile'])+'.jpg'
+			apsolute_path = 'logocomp/logos/'+img_name
+			with open(os.path.join('files/logocomp/logos/',img_name),'wb') as f:
+				f.write(request.FILES['logoimg'].read())
+			part_name = logovalues['name']
+			part_nog = logovalues['guardian']
+			part_mobile = logovalues['mobile']
+			part_email = logovalues['email']
+			logovalues.update({'logoimg': apsolute_path})
+
+			if logovalues:
+				Logocomp.objects.create(**logovalues)
+			return HttpResponse(
+        		json.dumps({"message":'Ok'}), 
+        		content_type="application/json"
+        	)
+	else:
+		return HttpResponse(
+				json.dumps({"message": 'Not Success !! Something going wrong!!'}),
+                content_type="application/json"
+			)
