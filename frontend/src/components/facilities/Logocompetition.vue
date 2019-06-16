@@ -6,13 +6,13 @@
       <div class="card-body px-lg-5 pt-0">
         <form action="" method="" enctype="multipart/form-data" class="form-group" id="c_form" @submit.prevent="logo_data()">
           <input type="text" id="name" class="form-control" v-model="name" placeholder="Your Full Name" required="required">
-          <input type="text" id="guardian" class="form-control" v-model="guardian" placeholder="Guardians Name" required="required">        
+          <input type="text" id="guardian" class="form-control" v-model="guardian" placeholder="Guardian Name" required="required">        
           <input type="email" id="email" class="form-control" v-model="email" placeholder="Valid Email Id" required="required">
           <input type="number" id="mob" class="form-control" v-model="mob" placeholder="Mobile Number" required="required">
           <span class="text-center" style="margin-left: 50px;">Choose your logo image</span>
-          <input type="file" id="file" name="file" ref="file" class="form-control" v-on:change="processFile()">
+          <input type="file" id="file" name="file" ref="file" class="form-control" v-on:change="processFile()" required="required">
           <div class="text-center">
-            <input type="submit" class="btn btn-primary text-center complain" :class="{ disabled: inactive }" value="Submit">
+            <input type="submit" class="btn btn-primary text-center complain" :class="{ disabled: inactive }" value="Submit" >
           </div>
         </form>
       </div>
@@ -53,13 +53,13 @@ export default {
       if(!re.test(this.email)){
         alert("Incorrect Email Format")
         return false
-      }
+      }     
       if(this.sizeflag == 1){
         alert("File Size More than 2 MB")
         return false
       }
       if(this.typeflag==1){
-        alert("Invalid File Type. Select a Image file")
+        alert("Invalid File Type. Select an Image file")
         return false
       }
       let data = new FormData()
@@ -68,10 +68,12 @@ export default {
       data.append('email',this.email)
       data.append('mobile',this.mob)
       data.append('logoimg',this.file)
+      //this.inactive = true
       
       axios({
         method: 'post',
-        url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
+        //url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
+        url: 'http://localhost:8000/facilities/logocompetition/',
         headers:{
           'Content-Type':'multipart/form-data'
         },
@@ -83,6 +85,7 @@ export default {
             }
             else{
               alert(sms)
+              // location.reload(true)
               window.location.href = '/logocompetition'
             }
           })
@@ -103,7 +106,10 @@ export default {
       }
       else{
         this.typeflag = 1
-      }      
+      }
+      console.log(this.typeflag)
+      console.log(this.file.type)
+      console.log(this.file.size)
       
     }
 }
