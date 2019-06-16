@@ -21,9 +21,9 @@
           <a class="dropdown-item" href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail</a>
         </div>
       </div>
-      <div class="navbar-content-cen container pb-4">
+      <div class="navbar-content-cen container pb-sm-4">
         <div class="row nav-logo">
-          <div class="col-1">
+          <div class="col-1" v-bind:class="{ hide_logo: hideLogo }">
             <a class="navbar-brand" :class="$route.path == '/'" href="/home">
               <img alt="NIT Durgapur Logo" class="navbar-brand" height="80" src="/static/img/nitdgp_logo_white.png"><span class="nm-en-smm" style="color: white;font-weight: bold;visibility: hidden">NIT DURGAPUR</span>
             </a>
@@ -51,11 +51,19 @@
             </div>
           </div>
         </div>
+        <div class="row position-absolute d-inline d-sm-none w-100">
+          <div class="col-12">
+            <div class="searchbar searchbar_mobile mr-1 float-right" @mouseover="hideLogo = true" @mouseleave="hideLogo = false">
+              <input class="search_input" name="" placeholder="Search..." type="search" v-model="query" v-on:keyup.13="search()">
+              <span class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="nav-_links">
         <div class="searchbar mr-1 p-1">
           <input class="search_input" name="" placeholder="Search..."   type="search" v-model="query" v-on:keyup.enter="search()">
-           <span class="search_icon"><i class="fa fa-search" aria-hidden="true" v-on:click="search()"></i></span>
+          <span class="search_icon"><i class="fa fa-search" aria-hidden="true" v-on:click="search()"></i></span>
         </div>
         <a href="https://mail.google.com/a/nitdgp.ac.in"><i class="fa fa-1x fa-envelope"></i> Mail&nbsp;</a>
         <a href="/contacts"><i class="fa fa-1x fa-phone"></i> Contact&nbsp;</a>
@@ -72,7 +80,8 @@ export default {
     return {
       menu: false,
       windowWidth: 1000,
-      query: ''
+      query: '',
+      hideLogo:false,
     }
   },
   created () {
@@ -258,6 +267,17 @@ export default {
     outline:none !important;
     border:none !important;
   }
+  @media screen and (max-width: 540px)
+  {
+    .searchbar:hover > .search_input{
+      padding: 0 10px;
+      width: 200px;
+      caret-color: #001333;
+      transition: width 0.4s linear;
+      outline:none !important;
+      border:none !important;
+    }
+  }
   .searchbar:hover > .search_icon{
     color:  #001333 !important;
   }
@@ -271,5 +291,8 @@ export default {
     padding:0 2px;
     cursor: pointer;
   }
-
+  .hide_logo{
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }
 </style>
