@@ -87,8 +87,7 @@ export default {
       
       axios({
         method: 'post',
-        //url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
-        url: 'http://localhost:8000/facilities/logocompetition/',
+        url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
         headers:{
           'Content-Type':'multipart/form-data'
         },
