@@ -14,7 +14,7 @@
             <option>Alumnus Student</option>
           </select>
           <input type="text" v-if="stdtype=='Present Student'" id="presntstd" v-model="identity" class="form-control" placeholder="Roll Number" required="required">       
-          <input type="text" v-if="stdtype=='Alumnus Student'" id="alumnusstd" v-model="identity" class="form-control" placeholder="Year of Passing (Format: dd/mm/yyyy)" required="required">       
+          <input type="text" v-if="stdtype=='Alumnus Student'" id="alumnusstd" v-model="identity" class="form-control" placeholder="Year of Passing (Format: YYYY)" required="required">       
           <input type="email" id="email" class="form-control" v-model="email" placeholder="Valid Email Id" required="required">
           <input type="number" id="mob" class="form-control" v-model="mob" placeholder="Mobile Number" required="required">
           <span class="text-center" style="margin-left: 50px;">Upload logo image <span style="color: red;">(Valid image type: JPEG, JPG, PNG & Maximum file size: 2MB)</span></span>
