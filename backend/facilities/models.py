@@ -160,6 +160,8 @@ class PCBD(BaseModel):
 class Logocomp(BaseModel):
     name = models.CharField(max_length=1024)
     guardian = models.CharField(max_length=1024)
+    stdtype = models.CharField(max_length=1024, blank=True)
+    identity = models.CharField(max_length=1024, blank=True)
     mobile = models.CharField(max_length=20, validators=[RegexValidator(r'^\d{10}$')])
     email = models.CharField(max_length=1024)
     logoimg = models.ImageField(upload_to='logocomp/logos/',validators=[FileExtensionValidator(allowed_extensions=['gif','png','jpg'])])

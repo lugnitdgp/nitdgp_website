@@ -107,7 +107,6 @@ def logocompetition(request, **kwarg):
 		#with open(re)
 		QueryDict = request.POST
 		logovalues = QueryDict.dict()
-		print(logovalues)
 		qry = Logocomp.objects.filter(email=logovalues['email'])
 		if qry:
 			return HttpResponse(
@@ -123,6 +122,8 @@ def logocompetition(request, **kwarg):
 				f.write(request.FILES['logoimg'].read())
 			part_name = logovalues['name']
 			part_nog = logovalues['guardian']
+			part_stdtype = logovalues['stdtype']
+			part_ident = logovalues['identity']
 			part_mobile = logovalues['mobile']
 			part_email = logovalues['email']
 			logovalues.update({'logoimg': apsolute_path})

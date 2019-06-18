@@ -5,11 +5,19 @@
       <a class="card-header white-text text-center">Logo Competition</a>
       <div class="card-body px-lg-5 pt-0">
         <form action="" method="" enctype="multipart/form-data" class="form-group" id="c_form" @submit.prevent="logo_data()">
-          <input type="text" id="name" class="form-control" v-model="name" placeholder="Your Full Name" required="required">
-          <input type="text" id="guardian" class="form-control" v-model="guardian" placeholder="Guardian Name" required="required">        
+          <input type="text" id="name" class="form-control" v-model="name" placeholder="Full Name of Student" required="required">
+          <input type="text" id="guardian" class="form-control" v-model="guardian" placeholder="Father's/Mother's Name" required="required">
+          <span class="text-center" style="margin-left: 50px;">Student Type</span> 
+          <select v-model="stdtype" class="form-control">
+            <option>Select Student Type</option>
+            <option>Present Student</option>
+            <option>Alumnus Student</option>
+          </select>
+          <input type="text" v-if="stdtype=='Present Student'" id="presntstd" v-model="identity" class="form-control" placeholder="Roll Number" required="required">       
+          <input type="text" v-if="stdtype=='Alumnus Student'" id="alumnusstd" v-model="identity" class="form-control" placeholder="Year of Passing (Format: dd/mm/yyyy)" required="required">       
           <input type="email" id="email" class="form-control" v-model="email" placeholder="Valid Email Id" required="required">
           <input type="number" id="mob" class="form-control" v-model="mob" placeholder="Mobile Number" required="required">
-          <span class="text-center" style="margin-left: 50px;">Choose your logo image</span>
+          <span class="text-center" style="margin-left: 50px;">Upload logo image <span style="color: red;">(Valid image type: JPEG, JPG, PNG & Maximum file size: 2MB)</span></span>
           <input type="file" id="file" name="file" ref="file" class="form-control" v-on:change="processFile()" required="required">
           <div class="text-center">
             <input type="submit" class="btn btn-primary text-center complain" :class="{ disabled: inactive }" value="Submit" >
@@ -29,7 +37,9 @@ export default {
     return {
       name:'',
       guardian:'',
+      stdtype:'Select Student Type',
       email:'',
+      identity:'',
       mob:'',
       file:'',
       sizeflag: 0,
@@ -49,7 +59,10 @@ export default {
         alert("Incorrect Mobile Number")
         return false
       }
-
+      if(this.stdtype=="Select Student Type"){
+        alert("Select Correct Student type")
+        return false;
+      }
       if(!re.test(this.email)){
         alert("Incorrect Email Format")
         return false
@@ -64,6 +77,8 @@ export default {
       }
       let data = new FormData()
       data.append('name',this.name)
+      data.append('stdtype',this.stdtype)
+      data.append('identity',this.identity)
       data.append('guardian',this.guardian)
       data.append('email',this.email)
       data.append('mobile',this.mob)
@@ -72,7 +87,8 @@ export default {
       
       axios({
         method: 'post',
-        url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
+        //url: 'https://admin.nitdgp.ac.in/facilities/logocompetition/',
+        url: 'http://localhost:8000/facilities/logocompetition/',
         headers:{
           'Content-Type':'multipart/form-data'
         },
