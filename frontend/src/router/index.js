@@ -90,6 +90,7 @@ import Ipr from '@/components/facilities/Ipr'
 import Ibsc from '@/components/facilities/Ibsc'
 import Pcbd from '@/components/facilities/Pcbd'
 import Logocompetition from '@/components/facilities/Logocompetition'
+import Semievent from '@/components/facilities/Semievent'
 
 import Reports from '@/components/information/Reports'
 import Eprashasan from '@/components/information/Eprashasan'
@@ -500,10 +501,16 @@ export default new Router({
       path: '/pcbd',
       name: 'Pcbd',
       component: Pcbd
-    },{
+    },
+    {
       path: '/logocompetition',
       name: 'Logocompetition',
       component: Logocompetition
+    },
+    {
+      path: '/childreneducation',
+      name: 'Semievent',
+      component: Semievent
     },
 
     // Information
