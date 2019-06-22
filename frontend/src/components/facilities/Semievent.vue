@@ -15,6 +15,9 @@
               <a href="http://nitdgp.ac.in/MU/Registration Form.pdf" target="_blank" style="color: #000;">Application Form</a>
             </p>
             <p style="margin-top: 25px;background: #fff;width: 90%;margin-left: 4%;color: #000;">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScQHzEuNgty8UX-uaME7tRO4ymoJ1OKGfTdR9X_78Fi3lJgqA/viewform?usp=pp_url" target="_blank" style="color: #000;">Online Registration Link</a>
+            </p>
+            <p style="margin-top: 25px;background: #fff;width: 90%;margin-left: 4%;color: #000;">
               <a href="http://nitdgp.ac.in/MU/Programme schedule_Final.pdf" target="_blank" style="color: #000;">Programme Schedule</a>
             </p>
           </div>
