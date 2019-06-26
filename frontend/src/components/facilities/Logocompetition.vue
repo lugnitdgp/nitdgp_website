@@ -7,7 +7,7 @@
         <form action="" method="" enctype="multipart/form-data" class="form-group" id="c_form" @submit.prevent="logo_data()">
           <input type="text" id="name" class="form-control" v-model="name" placeholder="Full Name of Student/Alumni" required="required">
           <input type="text" id="guardian" class="form-control" v-model="guardian" placeholder="Father's/Mother's Name" required="required">
-          <span class="text-center" style="margin-left: 50px;">Student Student/Alumni</span> 
+          <span class="text-center" style="margin-left: 50px;"> Student/Alumni</span> 
           <select v-model="stdtype" class="form-control">
             <option>Select Student/Alumni </option>
             <option>Present Student</option>
