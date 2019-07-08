@@ -158,7 +158,7 @@
 					{name:"Dr. Susmita Dutta", email:"susmita.dutta@che.nitdgp.ac.in" ,designation:"+91-9434788120", image:"https://nitdgp.ac.in/nitdcec/images/members/susmita_dutta.jpg"},
 					{name:"Dr. Jayati Dey", email:"deybiswasjayati@gmail.com" ,designation:"+91-9434788173", image:"https://nitdgp.ac.in/nitdcec/images/members/jayati_dey.jpg"},
 					{name:"Dr. Bibhash Sen", email:"bibhash.sen@cse.nitdgp.ac.in" ,designation:"+91-9434788161", image:"https://nitdgp.ac.in/nitdcec/images/members/b_sen.jpg"},
-					{name:"Dr. Nilotpal Banerjee", email:"nilotpal.banerjee@me.nitdgp.ac.in" ,designation:"+91-9434788009", image:"https://nitdgp.ac.in/nitdcec/images/members/n_banerjee.jpg"}
+					{name:"Dr. Nirmal Kumar Roy", email:"nirmalkumar.roy@ee.nitdgp.ac.in" ,designation:"+91-9434788042", image:"https://admin.nitdgp.ac.in/files/faculty/Nirmal%20Kumar%20Roy/nirmal_kumar.jpg"}
 				],
 				contacts:[
 				{name:"Dr. Kartik Chandra Ghanta", email:"kartik.ghanta@che.nitdgp.ac.in", designation:"+91-9434788020", image:"https://nitdgp.ac.in/nitdcec/images/members/kartik_chandra_ghanta.jpg"}
