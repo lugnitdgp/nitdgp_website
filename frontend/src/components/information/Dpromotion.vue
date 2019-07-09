@@ -20,9 +20,9 @@
         <li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Application_form_updated.pdf">Application Form ( PDF ) </a>
         </li>
-        <!--<li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/DPC Application Form.doc">Application Form ( DOC ) </a>
-        </li>-->
+        <li>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Application_form.docx">Application Form ( DOCX ) </a>
+        </li>
         
       </ul>
     </card>
