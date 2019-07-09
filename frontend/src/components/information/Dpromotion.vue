@@ -12,7 +12,7 @@
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notification_updated.pdf">Notification Regarding Departmental Promotion</a>
         </li>
         <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Recruitment_Rules_updated.pdf">Recruitment Rules 2017 (Non-Teaching )</a>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Recommendations of Oversight    Committee  and RR 2019.pdf">Recruitment Rules 2019 (Non-Teaching )</a>
         </li>
         <!--<li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Education Qualification DPC.pdf">Education Qualifications Requirment for the Employee Apointed Before 05.02.2014 </a>
