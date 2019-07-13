@@ -1,12 +1,18 @@
 from rest_framework import serializers
-from academics.models import Notice
+from academics.models import Notice, HostelNotice
 from department.models import Faculty
 
 
-class NoticeSearchSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Notice
-        fields = ('title', 'notice_type', 'file', 'date')
+class GeneralNoticeSearchSerializer(serializers.Serializer):
+    title = serializers.CharField(max_length=1024)
+    notice_type = serializers.SerializerMethodField()
+    file = serializers.FileField(required=False)
+    date = serializers.DateField()
+
+    def get_notice_type(self, obj):
+        if isinstance(obj, HostelNotice):
+            return 'Hostel'
+        return getattr(obj, 'notice_type', None)
 
 
 class FacultySearchSerializer(serializers.ModelSerializer):
