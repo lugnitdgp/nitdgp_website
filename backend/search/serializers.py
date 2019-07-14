@@ -3,7 +3,7 @@ from academics.models import Notice, HostelNotice
 from department.models import Faculty
 
 
-class GeneralNoticeSearchSerializer(serializers.Serializer):
+class NoticeSearchSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=1024)
     notice_type = serializers.SerializerMethodField()
     file = serializers.FileField(required=False)

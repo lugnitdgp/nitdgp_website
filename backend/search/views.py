@@ -5,14 +5,14 @@ from rest_framework.permissions import AllowAny
 from haystack.generic_views import SearchView
 from haystack.query import SearchQuerySet, EmptySearchQuerySet
 
-from search.serializers import GeneralNoticeSearchSerializer
+from search.serializers import NoticeSearchSerializer
 from search.serializers import FacultySearchSerializer
 from academics.models import Notice, HostelNotice
 from department.models import Faculty
 
 
 class NoticeSearchViewSet(ListAPIView):
-    serializer_class = GeneralNoticeSearchSerializer
+    serializer_class = NoticeSearchSerializer
     permission_classes = (AllowAny,)
 
     def get_queryset(self):
