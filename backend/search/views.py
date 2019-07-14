@@ -7,7 +7,7 @@ from haystack.query import SearchQuerySet, EmptySearchQuerySet
 
 from search.serializers import NoticeSearchSerializer
 from search.serializers import FacultySearchSerializer
-from academics.models import Notice
+from academics.models import Notice, HostelNotice
 from department.models import Faculty
 
 
@@ -21,7 +21,8 @@ class NoticeSearchViewSet(ListAPIView):
 
         if request.GET.get('q', ''):
             query = request.GET.get('q', '')
-            queryset = SearchQuerySet().models(Notice).filter(content=query).order_by('-date')
+            queryset = SearchQuerySet().models(Notice, HostelNotice).filter(
+                content=query).order_by('-date')
             return [i.object for i in queryset]
 
 
