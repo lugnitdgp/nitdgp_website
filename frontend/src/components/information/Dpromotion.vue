@@ -3,6 +3,8 @@
     <card title="Departmental Promotion">
       <ul class="list-group list-gr">
         <li>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/eligible_candidates_for_interview.pdf">The list of Eligible Candidates for the Interview (Departmental Promotion GP 5400/- or above)</a>
+        </li><li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Circular_cancellation .pdf">Cancellation of Circular No. NITD/Estt./2301/2019 Date - 4th July 2019 </a>
         </li>
         <li>
