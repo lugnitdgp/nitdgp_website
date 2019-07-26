@@ -74,12 +74,32 @@
 					<div class="mod-title">GENERAL GUIDELINES</div>
 					<div class="mod-body" style="text-align: justify;padding: 5px 4px;">
 						<ol>
-							<li>All the programmes under CEC are necessarily to be planned well in advance. Any programme without prior approval would not be funded.</li>
+							<!--<li>All the programmes under CEC are necessarily to be planned well in advance. Any programme without prior approval would not be funded.</li>
 							<li>The programmes (workshop/ short term courses/conferences/training) less than 20-25 external participants are not advisable to conduct and it can be postponed with due approval for better participation.</li>
 							<li>Any faculty members wants to organize a Short Term Programme (STP) is required to apply in prescribed format on an invitation from CEC or as per terms and conditions of any external sponsored programme. Interval of invitation for STP under TEQIP III will be normally six months and any application without invitation under TEQIP III would not be accepted.</li>
 							<li>The applications received for different activities will be screened and approved as applicable.</li>
 							<li> Norms of expenditure for activities under TEQIP III may vary time to time as per requirement.</li>
-							<li>Presently, the fees for programme co-ordinator will be Rs. 15,000/- for 3 days programme and Rs. 20,000/- for 5 days programme (which includes remuneration for delivering lectures also) but not 10% of estimated expenditure of the said programme.</li>
+							<li>Presently, the fees for programme co-ordinator will be Rs. 15,000/- for 3 days programme and Rs. 20,000/- for 5 days programme (which includes remuneration for delivering lectures also) but not 10% of estimated expenditure of the said programme.</li>-->
+							<li>All the programmes under CEC are necessarily to be planned well in advance. Any programme without prior approval would not be funded.</li>
+
+							<li>The programmes (workshop/ short term courses/conferences/training) less than 20-
+							25 external participants are not advisable to conduct and it can be postponed with
+							due approval for better participation.</li>
+							<li>Any faculty members wants to organize a Short Term Programme (STP) is required to
+							apply in prescribed format on an invitation from CEC or as per terms and conditions
+							of any external sponsored programme. Interval of invitation for STP under TEQIP III
+							will be normally six months and any application without invitation under TEQIP III
+							would not be accepted.</li>
+							<li>The applications received for different activities will be screened and approved as
+							applicable.</li>
+							<li>Norms of expenditure for activities under TEQIP III may vary time to time as per
+							requirement.</li>
+							<li>Presently, the fees for programme co-ordinator will be Rs. 15,000/- for 3 days
+							programme and Rs. 20,000/- for 5 days programme (which includes remuneration
+							for delivering lectures also) but not 10% of estimated expenditure of the said
+							programme.</li>
+							<li>The resource persons for delivering lectures in the programme should be atleast 50%
+							from our Institute.</li>
 						</ol>
 					</div>
 				</div>
@@ -90,7 +110,10 @@
 					<div class="mod-title">Forms Section</div>
 					<div class="mod-body">
 						<ul class="listdisplay list-group list-gr">
-							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/CEC_form1.pdf" target="_new">Application Format for Short Term Course</a></li>
+							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/Format for organizing programme.pdf" target="_new">Format for organizing programme</a></li>
+							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/General guidelines_Updated.pdf" target="_new">General guidelines</a></li>
+							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/Norms of Expenditure.pdf" target="_new">Norms of Expenditure</a></li>
+							<!--<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/CEC_form1.pdf" target="_new">Application Format for Short Term Course</a></li>
 							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/CEC_form2.pdf" target="_new">Approval Format of Short Term Course</a></li>
 							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p10.pdf" target="_new">Application Format for the Request for Seed Money Loan</a></li>
 							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p11.pdf" target="_new">Format for Reimbursement for Expenditure</a></li>
@@ -99,7 +122,7 @@
 							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p16.pdf" target="_new">Format for Transfer the Funds to Departmental Development Fund</a></li>
 							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p17.pdf" target="_new">Format for Final Report and Payment of Co-ordinator’s fee</a></li>
 							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p18.pdf" target="_new">Format for Receipt of cheque by Co-ordinator</a></li>
-							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p19.pdf" target="_new">Format for Short Term Course Certificate</a></li>
+							<li class="liststyle"><a class="linkancher list-group-item" href="https://nitdgp.ac.in/nitdcec/files/forms/p19.pdf" target="_new">Format for Short Term Course Certificate</a></li>-->
 						</ul>
 					</div>
 				</div>
