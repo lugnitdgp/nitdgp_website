@@ -3,6 +3,12 @@
     <card title="Departmental Promotion">
       <ul class="list-group list-gr">
         <li>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notice 30.07.2019.pdf">Notice: Reg. Internal Promotion (Trade/Skill/Proficiency test)</a>
+        </li>
+        <li>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/corrigendum Notice 30.07.2019.pdf">Corrigendum Notice : Internal Promotion (Non-Teaching)</a>
+        </li>
+        <li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notice_The list of Eligible Candidates_for_the_tradeskillp_roficiency test.pdf">The list of Eligible Candidates for the trade/skill/proficiency test (Departmental Promotion GP 4800/- or below)</a>
         </li>
         <li>
