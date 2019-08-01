@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title=" Verification of Academic Documents">
+    <card title=" Verification and Issuance of Academic Documents">
       <div v-for="(links, doctype) in docs">
         <div style="border: 1px solid #000;padding: 5px 6px;">
           <p class="text-justify" style="color:#000;">

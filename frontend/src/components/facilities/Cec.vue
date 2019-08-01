@@ -17,7 +17,7 @@
 						<a class="nav-link waves-light" data-toggle="tab" href="#li3" role="tab" >Guidelines</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link waves-light" data-toggle="tab" href="#li4" role="tab" >Different Forms</a>
+						<a class="nav-link waves-light" data-toggle="tab" href="#li4" role="tab" >Different Forms & Norms</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link waves-light" data-toggle="tab" href="#li5" role="tab" >Members</a>
