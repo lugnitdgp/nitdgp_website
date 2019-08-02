@@ -95,8 +95,8 @@ class RegistrationModelAdmin(admin.ModelAdmin):
 
 
 class ConvocationModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_file', '_url']
-
+    list_display = ['__str__', '_file', 'archive', '_url']
+    actions = [archive_selected, unarchive_selected]
 
 admin.site.register(Notice, NoticeModelAdmin)
 admin.site.register(HostelNotice, HostelNoticeModelAdmin)

@@ -33,7 +33,7 @@ class CalendarViewSet(ListAPIView):
 
 class ConvocationViewSet(ListAPIView):
 
-    queryset = Convocation.objects.all()
+    queryset = Convocation.objects.filter(archive=False).all()
     serializer_class = ConvocationSerializer
 
 

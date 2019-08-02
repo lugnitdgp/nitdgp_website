@@ -202,6 +202,7 @@ class Curriculum(BaseModel):
 class Convocation(BaseModel):
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='academics/convocation/%Y', blank=True)
+    archive = models.BooleanField(default=False)
     url = models.URLField(blank=True)
 
     def __str__(self):

@@ -70,6 +70,13 @@ def archives(request):
         'url': x.url
     }, list(SeminarEvent.objects.filter(archive=True).order_by('-date'))))
 
+    serializerConvocation = list(map(lambda x: {
+        'title': x.title,
+        'date': x.date,
+        'file': convert_url(x.file, request),
+        'url': x.url
+    }, list(Convocation.objects.filter(archive=True).order_by('-date'))))
+
     serializerAdmission = {}
     for i in Admission.objects.filter(archive=True):
         i.add_to_dict(request, serializerAdmission)
@@ -81,7 +88,8 @@ def archives(request):
         "general_notice"  : serializerGeneralNotice,
         "career"          : serializerCareer,
         "event"           : serializerEvent,
-        "admission"       : serializerAdmission
+        "admission"       : serializerAdmission,
+        "convocation"     : serializerConvocation
     }
 
     return JsonResponse(json)
