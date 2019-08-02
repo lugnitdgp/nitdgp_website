@@ -56,6 +56,16 @@
             </ul>
           </div>
         </card-collapse>
+        <card-collapse  title="Convocation">
+          <div class="card-text">
+            <ul class="list-group list-gr">
+              <li v-for="list in convocations">
+                <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </card-collapse>
+        
         <card-collapse  title="Admission">
           <collapse-list>
             <card-collapse v-for="(programmes, degree) in admission" :title="degree" :show="i == 0" :key="i">
@@ -100,6 +110,7 @@ export default {
       careers: [],
       tenders: [],
       events: [],
+      convocations: {},
       admission: {}
     }
   },
@@ -113,6 +124,7 @@ export default {
            this.studentnotices = archives.student_notice
            this.tenders = archives.tender
            this.events = archives.event
+           this.convocations = archives.convocation
            this.admission = archives.admission
            this.$emit('hideloader', true)
          })

@@ -7,7 +7,7 @@ from django.http import JsonResponse
 from django.core import serializers
 
 from information.models import Tender,Career
-from academics.models import Notice, Admission
+from academics.models import Notice, Admission,Convocation
 from activities.models import SeminarEvent
 
 
@@ -72,10 +72,9 @@ def archives(request):
 
     serializerConvocation = list(map(lambda x: {
         'title': x.title,
-        'date': x.date,
         'file': convert_url(x.file, request),
         'url': x.url
-    }, list(Convocation.objects.filter(archive=True).order_by('-date'))))
+    }, list(Convocation.objects.filter(archive=True))))
 
     serializerAdmission = {}
     for i in Admission.objects.filter(archive=True):
