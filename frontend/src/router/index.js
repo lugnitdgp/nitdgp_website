@@ -207,7 +207,7 @@ export default new Router({
       component: Departments
     },
     {
-      path: '/curriculum&syllabus',
+      path: '/curriculum',
       name: 'Syllabus',
       component: Syllabus
     },
@@ -217,7 +217,7 @@ export default new Router({
       component: Liveconvocation
     },
     {
-      path: '/academicverification',
+      path: '/academicdocument',
       name: 'Documents',
       component: Documents
     },
