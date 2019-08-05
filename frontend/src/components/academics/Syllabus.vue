@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title="Curriculum and Syllabus">
+    <card title="Curriculum">
       <ul class="list-group list-gr">
         <li v-for="curriculmn in curriculmns">
           <a class="list-group-item" target="new" :href="curriculmn.file">
