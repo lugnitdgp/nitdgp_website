@@ -3,6 +3,9 @@
     <card title="Departmental Promotion">
       <ul class="list-group list-gr">
         <li>
+          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/AUGUST  8 2019 SG LIST PART 2.pdf">Notice: Reg.  Internal Promotion (Part-2)</a>
+        </li>
+        <li>
           <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notification Internal Promotion  PART 1.pdf">Notice: Reg.  Internal Promotion (Part-1)</a>
         </li>
         <li>
