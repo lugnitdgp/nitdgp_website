@@ -2,46 +2,9 @@
   <links-page>
     <card title="Departmental Promotion">
       <ul class="list-group list-gr">
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/AUGUST  8 2019 SG LIST PART 2.pdf">Notice: Reg.  Internal Promotion (Part-2)</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notification Internal Promotion  PART 1.pdf">Notice: Reg.  Internal Promotion (Part-1)</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notice 30.07.2019.pdf">Notice: Reg. Internal Promotion (Trade/Skill/Proficiency test)</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/corrigendum Notice 30.07.2019.pdf">Corrigendum Notice : Internal Promotion (Non-Teaching)</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notice_The list of Eligible Candidates_for_the_tradeskillp_roficiency test.pdf">The list of Eligible Candidates for the trade/skill/proficiency test (Departmental Promotion GP 4800/- or below)</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/eligible_candidates_for_interview.pdf">The list of Eligible Candidates for the Interview (Departmental Promotion GP 5400/- or above)</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Circular_cancellation .pdf">Cancellation of Circular No. NITD/Estt./2301/2019 Date - 4th July 2019 </a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/reservation_roster2019.pdf">Reservation Roster of 31.03.2019 </a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Notification_updated.pdf">Notification Regarding Departmental Promotion</a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Recommendations of Oversight    Committee  and RR 2019.pdf">Recruitment Rules 2019 (Non-Teaching )</a>
-        </li>
-        <!--<li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Education Qualification DPC.pdf">Education Qualifications Requirment for the Employee Apointed Before 05.02.2014 </a>
-        </li>-->
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Application_form_updated.pdf">Application Form ( PDF ) </a>
-        </li>
-        <li>
-          <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/DP/Application_form.docx">Application Form ( DOCX ) </a>
-        </li>
-        
+        <li v-for="promotion in promotions">
+          <a class="list-group-item" target="new" :href="promotion.file">{{ promotion.title}}</a>
+        </li>        
       </ul>
     </card>
   </links-page>
@@ -50,15 +13,24 @@
 <script>
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
-
+import axios from 'axios'
+import { genBackendURL } from '@/common.js'
 export default {
   name: "Dpromotion",
   data () {
     return {
+      promotions: []
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('information/promotion'))
+         .then(response => {
+           this.promotions = response.data.results
+           this.$emit('hideloader', true)
+         })
+         .catch(e => {
+           console.log("Axios(GET[information]): Error: " + e)
+         })
   },
   components: {
     Card,
