@@ -92,3 +92,7 @@ class ICCViewSet(ListAPIView):
 class NADViewSet(ListAPIView):
     queryset = NAD.objects.all().order_by('-date')
     serializer_class = NADSerializer
+
+class PromotionViewSet(ListAPIView):
+    queryset = Promotion.objects.all().order_by('-date')
+    serializer_class = PromotionSerializer

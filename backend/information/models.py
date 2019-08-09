@@ -214,3 +214,10 @@ class NAD(BaseModel):
 
     def __str__(self):
         return self.title
+
+class Promotion(BaseModel):
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='information/Promotion/%Y')
+    
+    def __str__(self):
+        return self.title

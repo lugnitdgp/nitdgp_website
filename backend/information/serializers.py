@@ -90,3 +90,9 @@ class NADSerializer(serializers.ModelSerializer):
     class Meta:
         model = NAD
         fields = ('title', 'file', 'date')
+
+class PromotionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Promotion
+        fields = ('title', 'file')
