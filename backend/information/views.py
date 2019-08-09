@@ -94,5 +94,5 @@ class NADViewSet(ListAPIView):
     serializer_class = NADSerializer
 
 class PromotionViewSet(ListAPIView):
-    queryset = Promotion.objects.all().order_by('-date')
+    queryset = Promotion.objects.all().order_by('-created_at')
     serializer_class = PromotionSerializer
