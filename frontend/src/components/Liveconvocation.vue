@@ -1,6 +1,6 @@
 <template>
   <links-page>
-    <card title="Convocation Images">
+    <card title="15th Convocation Live Streaming">
       <!--<collapse-list>
         <card-collapse v-for="(images,key,i) in image_sets" :title="key.split('-')[0]" :key="i">
           <div class="row" style="margin:0 auto;">
