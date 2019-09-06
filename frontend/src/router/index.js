@@ -212,7 +212,7 @@ export default new Router({
       component: Syllabus
     },
     {
-      path: '/convocation-pictures',
+      path: '/live-convocation',
       name: 'Liveconvocation',
       component: Liveconvocation
     },
