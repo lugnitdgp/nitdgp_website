@@ -1,7 +1,7 @@
 <template>
   <links-page>
-    <card title="15th Convocation Live Streaming">
-      <!--<collapse-list>
+    <card title="15th Convocation Still Pictures">
+      <collapse-list>
         <card-collapse v-for="(images,key,i) in image_sets" :title="key.split('-')[0]" :key="i">
           <div class="row" style="margin:0 auto;">
             <div class="col" v-for="(image,index) in images" :key="index">
@@ -13,15 +13,15 @@
             </div>
           </div>
         </card-collapse>
-      </collapse-list>-->
-      <table width="100%"  border="1">
+      </collapse-list>
+      <!--<table width="100%"  border="1">
         <tr>
           <td>
           <div align="center">
             <iframe width="1280" height="720" src="https://www.youtube.com/embed/vL8dL6DQxVc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div></td>
         </tr>
-      </table>
+      </table>-->
     </card>
   </links-page>
 </template>
@@ -42,11 +42,11 @@ export default {
     }
   },
   created () {
-    /*axios.get(genBackendURL("convocation-links/4"))
+    axios.get(genBackendURL("convocation-links/10"))
          .then(response=>{
            this.image_sets= response.data
            console.log(response.data)
-         })*/
+         })
     this.$emit('hideloader', true)
   },
   components: {
