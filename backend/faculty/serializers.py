@@ -107,7 +107,7 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Students
-        fields = ('name', 'image', 'type', 'degree', 'description')
+        fields = ('name', 'image', 'type', 'degree', 'degree_type', 'description')
 
 
 class NotesSerializer(serializers.ModelSerializer):

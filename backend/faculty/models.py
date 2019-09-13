@@ -138,11 +138,13 @@ class Students(BaseModel):
         ordering = ['-type']
 
     TYPES = (('Ongoing', 'Ongoing'), ('Completed', 'Completed'))
+    DEGREES_TYPE = (('PhD','PhD'),('UG','UG'),('PG','PG'))
 
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     name = models.CharField(max_length=512)
     image = models.ImageField(upload_to=rename_students, blank=True)
     degree = models.CharField(max_length=512, blank=True)
+    degree_type = models.CharField(choices=DEGREES_TYPE, max_length=512, default=DEGREES_TYPE[0][0])
     type = models.CharField(choices=TYPES, max_length=64, default=TYPES[0][0])
     description = models.TextField(blank=True)
 
@@ -154,6 +156,9 @@ class Students(BaseModel):
 
     def _degree(self):
         return self.degree
+
+    def _degree_type(self):
+            return self.degree_type
 
 
 class Misc(BaseModel):
