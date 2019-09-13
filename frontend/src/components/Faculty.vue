@@ -152,13 +152,34 @@
                 <div class="carousel-inner person-list" role="listbox">
                   <div class="carousel-item active">
                     <div class="row">
-                      <card-testimonial v-for="(student, i) in faculty.students" :key="i"
+                      <card-testimonial v-for="(student, i) in faculty.students" :key="i" v-if="student.degree_type=='PhD'"
+                          class="staffs"
+                          :name="student.name"
+                          :image="student.image"
+                          :desig="student.degree + ' (' + student.type + ')'">
+                          {{student.description}}
+                        </card-testimonial>
+                        <card-testimonial v-for="(student, i) in faculty.students" :key="i" v-if="student.degree_type=='PG'"
+                          class="staffs"
+                          :name="student.name"
+                          :image="student.image"
+                          :desig="student.degree + ' (' + student.type + ')'">
+                          {{student.description}}
+                        </card-testimonial>
+                        <card-testimonial v-for="(student, i) in faculty.students" :key="i" v-if="student.degree_type=='UG'"
+                          class="staffs"
+                          :name="student.name"
+                          :image="student.image"
+                          :desig="student.degree + ' (' + student.type + ')'">
+                          {{student.description}}
+                        </card-testimonial>
+                      <!--<card-testimonial v-for="(student, i) in faculty.students" :key="i"
                         class="staffs"
                         :name="student.name"
                         :image="student.image"
                         :desig="student.degree + ' (' + student.type + ')'">
                         {{student.description}}
-                      </card-testimonial>
+                      </card-testimonial>-->
                     </div>
                   </div>
                 </div>
