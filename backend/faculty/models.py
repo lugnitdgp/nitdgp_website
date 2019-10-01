@@ -115,9 +115,16 @@ class Projects(BaseModel):
 
     class Meta:
         verbose_name_plural = 'Projects'
+        ordering = ['status']
 
+    STATUS = (('Ongoing','Ongoing'),('Completed','Completed'))
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     projects = RichTextField()
+    investigator = models.CharField(max_length=512, null=True)
+    co_investigator = models.CharField(max_length=512, blank=True, null=True)
+    sponsored = models.CharField(max_length=512, null=True)
+    duration = models.CharField(max_length=512, null=True)
+    status = models.CharField(choices=STATUS, max_length=512, default='Ongoing')
 
     def __str__(self):
         return self.faculty.name
