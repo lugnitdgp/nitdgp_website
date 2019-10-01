@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from base.models import BaseModel
 from ckeditor.fields import RichTextField
@@ -82,9 +84,14 @@ class Patent(BaseModel):
     class Meta:
         verbose_name_plural = 'Patents'
 
+    YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year+1)]
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     title = RichTextField()
     file = models.FileField(upload_to=rename_patents, blank=True)
+    year = models.IntegerField(
+        choices=YEAR_CHOICES,
+        default=1959
+    )
 
     def __str__(self):
         return self.faculty.name
