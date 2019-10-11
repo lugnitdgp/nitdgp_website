@@ -12,6 +12,7 @@ import DepartmentFacilities from '@/components/DepartmentFacilities'
 import DepartmentActivities from '@/components/DepartmentActivities'
 import DepartmentPhotoGallery from '@/components/DepartmentPhotoGallery'
 import DepartmentContactUs from '@/components/DepartmentContactUs'
+import ResearchAtAGlance from '@/components/ResearchAtAGlance'
 import Faculty from '@/components/Faculty'
 import Holidays from '@/components/Holidays'
 import Archives from '@/components/Archives'
@@ -399,6 +400,11 @@ export default new Router({
       path: '/heliumgeothemal',
       name: 'Geothermal',
       component: Geothermal
+    },
+    {
+      path: '/researchataglance',
+      name: 'ResearchAtAGlance',
+      component: ResearchAtAGlance
     },
 
     // Facilities
