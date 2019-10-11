@@ -90,14 +90,24 @@ class Patent(BaseModel):
     class Meta:
         verbose_name_plural = 'Patents'
 
-    YEAR_CHOICES = [(r, r) for r in range(1959, datetime.date.today().year+1)]
+    YEAR_CHOICES = [(r, r) for r in range((datetime.date.today().year),1959,-1)]
+    PATENT_STATUS = (('Submitted','Submitted'),('Granted','Granted'))
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     title = RichTextField()
-    file = models.FileField(upload_to=rename_patents, blank=True)
-    year = models.IntegerField(
+    patent_inventor = models.CharField(max_length=512, default='')
+    patent_filed_year = models.IntegerField(
         choices=YEAR_CHOICES,
         default=1959
     )
+    patent_Granted_year = models.CharField(
+        max_length=512,
+        choices=YEAR_CHOICES,
+        default=''
+    )
+    patent_status = models.CharField(max_length=100, choices=PATENT_STATUS, default='Submitted')
+    link = models.CharField(max_length=512, blank=True)
+    file = models.FileField(upload_to=rename_patents, blank=True)
+    
 
     def __str__(self):
         return self.faculty.name
