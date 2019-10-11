@@ -26,4 +26,4 @@ class PatentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Patent
-        fields = ('title', 'file')
+        fields = ('title', 'patent_inventor', 'patent_filed_year', 'patent_Granted_year', 'patent_status', 'link', 'file')
