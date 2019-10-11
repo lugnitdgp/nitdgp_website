@@ -30,7 +30,7 @@ class BookModelAdmin(admin.ModelAdmin):
 
 
 class JournalModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', '_citation', '_year', '_journal']
+    list_display = ['__str__', '_title', '_year', '_journal']
 
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:

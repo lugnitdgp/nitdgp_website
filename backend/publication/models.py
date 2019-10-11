@@ -1,5 +1,5 @@
 import datetime
-
+from django.core.validators import validate_integer
 from django.db import models
 from base.models import BaseModel
 from ckeditor.fields import RichTextField
@@ -28,16 +28,22 @@ class Conference(BaseModel):
 
 class Journal(BaseModel):
 
+     CATEGORY_CHOICES = (('SCI','SCI'),('SCIE','SCIE'),('ESCI','ESCI'),('SCOPUS','SCOPUS'),('Web of Science','Web of Science'),('Others','Others'))
      faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
-     citation = RichTextField()
-     journal = models.TextField(blank=True)
-     year = models.CharField(max_length=100, blank=True)
+     authors = models.CharField(max_length=300, default='')
+     title = RichTextField()
+     journal = models.TextField()
+     vol_or_page = models.CharField(max_length=200)
+     publisher = models.CharField(max_length=300, default='')
+     category = models.CharField(max_length=50, choices=CATEGORY_CHOICES, default='SCI/SCOPUS')
+     doi = models.CharField(max_length=200, blank=True)
+     year = models.CharField(max_length=100, validators=[validate_integer])
 
      def __str__(self):
          return self.faculty.name
 
-     def _citation(self):
-        return self.citation
+     def _title(self):
+        return self.title
 
      def _journal(self):
         return self.journal
