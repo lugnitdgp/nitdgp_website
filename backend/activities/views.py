@@ -2,6 +2,10 @@ from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework.response import Response
 from activities.serializers import *
 from activities.models import *
+from publication.models import *
+from publication.serializers import *
+from faculty.models import *
+from faculty.serializers import *
 
 class StudentViewSet(ListAPIView):
 
@@ -108,3 +112,15 @@ class OutreachViewSet(RetrieveAPIView):
 	def list(self, request, *args, **kwargs):
 		return Response({"results": OutreachMainSerializer(self.get_queryset(), context={"request": request}).data
 		})
+
+class AlljournalViewSet(ListAPIView):
+	queryset = Journal.objects.all().order_by('-year', '-created_at')
+	serializer_class = JournalSerializer
+
+class AllprojectViewSet(ListAPIView):
+	queryset = Projects.objects.all().order_by('-status','-created_at')
+	serializer_class = ProjectsSerializer
+
+class AllpatentViewSet(ListAPIView):
+	queryset = Patent.objects.all().order_by('patent_status', '-patent_filed_year', '-created_at')
+	serializer_class = PatentSerializer

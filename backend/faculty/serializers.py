@@ -114,3 +114,8 @@ class NotesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notes
         fields = ('id', 'subject_name', 'subject_code', 'semester', 'degree', 'input_key')
+
+class ProjectsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Projects
+        fields = ('projects', 'investigator', 'co_investigator', 'sponsored', 'duration', 'status')

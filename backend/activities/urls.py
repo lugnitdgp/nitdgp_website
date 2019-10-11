@@ -20,5 +20,9 @@ urlpatterns = [
     url(r'^activities/brics/$', BricsViewSet.as_view(), name='view-brics'),
     url(r'^activities/coe/$', CoeViewSet.as_view(), name='view-coe'),
     url(r'^activities/coecarousel/$', CoecarouselViewSet.as_view(), name='view-coecarousel'),
+    url(r'^activities/alljournal/$', AlljournalViewSet.as_view(), name='view-all-journal'),
+    url(r'^activities/allpatent/$', AllpatentViewSet.as_view(), name='view-all-patent'),
+    url(r'^activities/allproject/$', AllprojectViewSet.as_view(), name='view-all-project'),
+
 
 ]
