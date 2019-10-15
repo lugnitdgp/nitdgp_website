@@ -87,6 +87,7 @@ class SAC(BaseModel):
     other_activities = RichTextField()
     facility = RichTextField()
     contact_us = RichTextField()
+    image = models.FileField(upload_to='sac/images/%Y', blank=True)
     ach_url = models.URLField()
     rec_url = models.URLField()
 

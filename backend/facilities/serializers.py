@@ -36,7 +36,7 @@ class SACSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = SAC
-		fields = ('about','mission','vision','program_offered','other_activities','facility','contact_us','ach_url','rec_url')
+		fields = ('about', 'mission', 'vision', 'program_offered', 'other_activities', 'facility', 'contact_us', 'image', 'ach_url', 'rec_url')
 
 
 class HostelSerializer(serializers.ModelSerializer):
