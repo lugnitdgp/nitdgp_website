@@ -26,9 +26,11 @@
                       <tr>
                         <th scope="col">SL. NO.</th>
                         <th scope="col">Title</th>
+                        <th scope="col">Author(s)</th>
                         <th scope="col">Journal Name</th>
                         <th scope="col">Vol. & Page</th>
                         <th scope="col">Publisher</th>
+                        <th scope="col">Indexing</th>
                         <th scope="col">DOI</th>
                         <th scope="col">Year</th>
                       </tr>
@@ -37,9 +39,11 @@
                       <tr v-for="(journal,key) in alljournal">
                         <td>{{ key+1}}</td>
                         <td v-html="journal.title"></td>
+                        <td>{{ journal.author}}</td>
                         <td>{{ journal.journal}}</td>
                         <td>{{ journal.vol_or_page}}</td>
                         <td>{{ journal.publisher}}</td>
+                        <td>{{ journal.category}}</td>
                         <td>{{ journal.doi}}</td>                        
                         <td>{{ journal.year}}</td>
                       </tr>
