@@ -5,7 +5,7 @@ class JournalSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Journal
-        fields = ('title', 'vol_or_page', 'publisher', 'category', 'doi', 'journal', 'year')
+        fields = ('title', 'authors', 'journal', 'vol_or_page', 'publisher', 'category', 'doi', 'year')
 
 
 class ConferenceSerializer(serializers.ModelSerializer):

@@ -31,7 +31,6 @@ class BookModelAdmin(admin.ModelAdmin):
 
 class JournalModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_title', 'year', '_journal']
-    list_editable = ['year']
     def get_readonly_fields(self, request, obj=None):
         if request.user.is_superuser:
             return []
