@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="card">
-      <a class="card-header white-text">Facilities in the Department</a>
+      <a class="card-header white-text">Facilities in the Centre</a>
       <div class="card-body">
 	<font v-html="sacdata[0].facility"></font>
       </div>
