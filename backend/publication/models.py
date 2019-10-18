@@ -90,7 +90,7 @@ class Patent(BaseModel):
     class Meta:
         verbose_name_plural = 'Patents'
 
-    YEAR_CHOICES = [(r, r) for r in range((datetime.date.today().year),1959,-1)]
+    YEAR_CHOICES = [(r, r) for r in range((datetime.date.today().year),1958,-1)]
     PATENT_STATUS = (('Submitted','Submitted'),('Granted','Granted'))
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     title = RichTextField()
