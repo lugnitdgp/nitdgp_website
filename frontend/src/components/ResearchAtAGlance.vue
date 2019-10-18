@@ -112,10 +112,10 @@
                         <tbody>
                           <tr v-for="patent in allpatents">
                             <td v-html="patent.title"></td>
-                            <td>{{ patent.grantee_or_owner }}</td>
+                            <td>{{ patent.patent_inventor }}</td>
                             <td>
-                              <span v-if="patent.year==1959">NA</span>
-                              <span v-else>{{ patent.year}}</span>
+                              <span v-if="patent.patent_filed_year==1959">NA</span>
+                              <span v-else>{{ patent.patent_filed_year}}</span>
                           </td>
                           <td>{{ patent.link }}</td>
                           <td>{{ patent.patent_status }}</td>
