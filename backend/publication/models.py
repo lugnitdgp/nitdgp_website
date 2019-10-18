@@ -100,10 +100,9 @@ class Patent(BaseModel):
         default=1959
     )
     patent_Granted_year = models.CharField(
-        max_length=512,
-        choices=YEAR_CHOICES,
-        default='',
-        blank=True
+        max_length=512,        
+        blank=True,
+        validators=[validate_integer]
     )
     patent_status = models.CharField(max_length=100, choices=PATENT_STATUS, default='Submitted')
     link = models.CharField(max_length=512, blank=True)
