@@ -55,6 +55,11 @@ class RTIViewSet(ListAPIView):
     queryset = RTI.objects.all().order_by('-created_at')
     serializer_class = RTISerializer
 
+class ReplyRTIViewSet(ListAPIView):
+
+    queryset = ReplyRTI.objects.all().order_by('-created_at')
+    serializer_class = ReplyRTISerializer
+
 
 class NIRFViewSet(ListAPIView):
 

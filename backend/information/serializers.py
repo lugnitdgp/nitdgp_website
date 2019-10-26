@@ -44,6 +44,11 @@ class RTISerializer(serializers.ModelSerializer):
         model = RTI
         fields = ('title', 'file', 'date', 'link')
 
+class ReplyRTISerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ReplyRTI
+        fields = ('request_no', 'request', 'reply', 'request_date')
+
 
 class NBASerializer(serializers.ModelSerializer):
 

@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^information/tenders/$', TenderViewSet.as_view(), name='view-tenders'),
     url(r'^information/teqip/$', TEQIPViewSet.as_view(), name='view-teqip'),
     url(r'^information/rti/$', RTIViewSet.as_view(), name='view-rti'),
+    url(r'^information/replyrti/$', ReplyRTIViewSet.as_view(), name='view-reply-rti'),
     url(r'^information/nirf/$', NIRFViewSet.as_view(), name='view-nirf'),
     url(r'^information/nba/$', NBAViewSet.as_view(), name='view-nba'),
     url(r'^information/officenotice/$', OfficeNoticeViewSet.as_view(), name='view-office-notice'),

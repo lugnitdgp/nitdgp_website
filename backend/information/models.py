@@ -98,7 +98,7 @@ class RTI(BaseModel):
 
     title = models.CharField(max_length=255)
     file = models.FileField(upload_to='information/rti/%Y', blank=True)
-    link = models.URLField()
+    link = models.URLField(blank=True)
     date = models.DateField()
 
     def __str__(self):
@@ -106,6 +106,28 @@ class RTI(BaseModel):
 
     def _file(self):
         return self.file
+
+class ReplyRTI(BaseModel):
+    class meta:
+        verbose_name_plural = 'ReplyRTI'
+        ordering = ('-request_date',)
+
+    request_no = models.CharField(max_length=250)
+    request = models.FileField(upload_to='information/rti_request/%Y')
+    reply = models.FileField(upload_to='information/rti_reply/%Y')
+    request_date = models.DateField()
+
+    def __str__(self):
+        return self.request_no
+
+    def _request(self):
+        return self.request
+    
+    def _reply(self):
+        return self.reply
+
+    def _request_date(self):
+        return self.request_date
 
 
 class NIRF(BaseModel):

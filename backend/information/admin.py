@@ -45,6 +45,8 @@ class TEQIPModelAdmin(admin.ModelAdmin):
 class RTIModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
 
+class ReplyRTIModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', '_request', '_reply','_request_date']
 
 class NIRFModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_file']
@@ -68,6 +70,7 @@ admin.site.register(Career, CareerModelAdmin)
 admin.site.register(Tender, TenderModelAdmin)
 admin.site.register(TEQIP, TEQIPModelAdmin)
 admin.site.register(RTI, RTIModelAdmin)
+admin.site.register(ReplyRTI, ReplyRTIModelAdmin)
 admin.site.register(NIRF, NIRFModelAdmin)
 admin.site.register(NBA, NBAModelAdmin)
 admin.site.register(OfficeNotice, OfficeNoticeModelAdmin)
