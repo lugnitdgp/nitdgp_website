@@ -228,6 +228,28 @@ documents held by the organization or under its control</td>
           </a>
         </li>
       </ul>
+      <br>
+      <h3>9. RTI Application Recieved and Reply</h3>
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th style="font-weight: bold;color: #000;text-align: center;">SL. NO.</th>
+                  <th style="font-weight: bold;color: #000;text-align: center;">Request No.</th>
+                  <th style="font-weight: bold;color: #000;text-align: center;">Request</th>
+                  <th style="font-weight: bold;color: #000;text-align: center;">Request Date</th>
+                  <th style="font-weight: bold;color: #000;text-align: center;">Request Reply</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr v-for="(reply,key) in replyrti">
+                  <td style="color: #000; text-align: center;">{{ key+1 }}</td>
+                  <td style="color: #000; text-align: center;">{{ reply.request_no}}</td>
+                  <td style="color: #000; text-align: center;"><a v-if="reply.request" :href="reply.request" style="color: green;">Request File</a><span v-else>--</span></td>
+                  <td style="color: #000; text-align: center;"><a v-if="reply.reply" :href="reply.reply" style="color: green;">Request Reply File</a><span v-else>--</span></td>
+                  <td style="color: #000; text-align: center;">{{ reply.request_date }}</td>
+              </tr>
+          </tbody>
+      </table>
     </card>
   </links-page>
 </template>
@@ -242,13 +264,21 @@ export default {
   name: "Rti",
   data () {
     return {
-      rtis: []
+      rtis: [],
+      replyrti:[]
     }
   },
   created () {
     axios.get(genBackendURL('information/rti'))
          .then(response => {
            this.rtis = response.data.results
+         })
+         .catch(e => {
+           console.log("Axios(GET[information]): Error: " + e)
+         })
+         axios.get(genBackendURL('information/replyrti'))
+         .then(response => {
+           this.replyrti = response.data.results
            this.$emit('hideloader', true)
          })
          .catch(e => {
