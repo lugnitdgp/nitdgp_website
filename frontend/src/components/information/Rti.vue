@@ -229,7 +229,7 @@ documents held by the organization or under its control</td>
         </li>
       </ul>
       <br>
-      <h3>9. RTI Application Recieved and Reply</h3>
+      <!--<h3>9. RTI Application Recieved and Reply</h3>
       <table class="table table-bordered">
           <thead>
               <tr>
@@ -249,7 +249,7 @@ documents held by the organization or under its control</td>
                   <td style="color: #000; text-align: center;">{{ reply.request_date }}</td>
               </tr>
           </tbody>
-      </table>
+      </table>-->
     </card>
   </links-page>
 </template>
