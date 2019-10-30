@@ -114,8 +114,9 @@ class ReplyRTI(BaseModel):
 
     request_no = models.CharField(max_length=250)
     request = models.FileField(upload_to='information/rti_request/%Y')
-    reply = models.FileField(upload_to='information/rti_reply/%Y')
     request_date = models.DateField()
+    reply = models.FileField(upload_to='information/rti_reply/%Y')
+    reply_date = models.DateField()
 
     def __str__(self):
         return self.request_no
@@ -129,6 +130,8 @@ class ReplyRTI(BaseModel):
     def _request_date(self):
         return self.request_date
 
+    def _reply_date(self):
+        return self.reply_date
 
 class NIRF(BaseModel):
 
