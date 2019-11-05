@@ -39,7 +39,7 @@
                       <tr v-for="(journal,key) in alljournal">
                         <td>{{ key+1}}</td>
                         <td v-html="journal.title"></td>
-                        <td>{{ journal.author}}</td>
+                        <td>{{ journal.authors}}</td>
                         <td>{{ journal.journal}}</td>
                         <td>{{ journal.vol_or_page}}</td>
                         <td>{{ journal.publisher}}</td>
