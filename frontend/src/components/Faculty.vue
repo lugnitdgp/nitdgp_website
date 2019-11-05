@@ -76,7 +76,26 @@
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="p5l1" role="tabpanel">
                   <h4>Journals</h4>
-                  <table-renderer :table="faculty.journals" :theader="['Publication Details','Journal','Year']" />
+                  <table class="table table-responsive-md">
+                    <thead class="mdb-color lighten-4">
+                      <tr>
+                        <th class="th-lg">Sl.No.</th>
+                        <th class="th-lg">Publication Details</th>
+                        <th class="th-lg">Journal</th>
+                        <th class="th-lg">Year</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(journal,key) in faculty.journals">
+                        <td>{{ key+1}}</td>
+                        <td v-html="journal.title"></td>
+                        <td>{{ journal.journal}}</td>
+                        <td>{{ journal.year}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!--<table-renderer :table="faculty.journals" :theader="['Publication Details','Journal','Year']" />-->
+
                 </div>
                 <div class="tab-pane fade page-type-links" id="p5l2" role="tabpanel">
                   <ul class="list-group list-gr">
