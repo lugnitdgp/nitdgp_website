@@ -117,6 +117,15 @@
                   <span v-html="details.contact"/>
                 </li>
             </div>
+            <div v-for="details in list" v-if="details.designation=='Associate Dean (Faulty Welfare)'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+            </div>
             <div v-for="details in list" v-if="details.designation=='Associate Dean (Student Welfare)'" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%;background-color: #e0f7fa;">
                   <h4>{{ details.name }}</h4>
