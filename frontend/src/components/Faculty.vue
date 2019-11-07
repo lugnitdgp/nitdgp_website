@@ -81,7 +81,7 @@
                       <tr>
                         <th class="th-lg">Sl.No.</th>
                         <th class="th-lg">Title</th>
-                        <th class="th-lg">Aythor(s)</th>
+                        <th class="th-lg">Author(s)</th>
                         <th class="th-lg">Journal Name</th>
                         <th class="th-lg">Vol. & Page</th>
                         <th class="th-lg">Publisher</th>
