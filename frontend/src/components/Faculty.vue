@@ -80,8 +80,13 @@
                     <thead class="mdb-color lighten-4">
                       <tr>
                         <th class="th-lg">Sl.No.</th>
-                        <th class="th-lg">Publication Details</th>
-                        <th class="th-lg">Journal</th>
+                        <th class="th-lg">Title</th>
+                        <th class="th-lg">Aythor(s)</th>
+                        <th class="th-lg">Journal Name</th>
+                        <th class="th-lg">Vol. & Page</th>
+                        <th class="th-lg">Publisher</th>
+                        <th class="th-lg">Indexing</th>
+                        <th class="th-lg">DOI</th>
                         <th class="th-lg">Year</th>
                       </tr>
                     </thead>
@@ -89,7 +94,12 @@
                       <tr v-for="(journal,key) in faculty.journals">
                         <td>{{ key+1}}</td>
                         <td v-html="journal.title"></td>
+                        <td>{{ journal.authors}}</td>
                         <td>{{ journal.journal}}</td>
+                        <td>{{ journal.vol_or_page}}</td>
+                        <td>{{ journal.publisher}}</td>
+                        <td><span v-if="journal.category!='SCI/SCOPUS'">{{ journal.category}}</span><span v-else>others</span></td>
+                        <td>{{ journal.doi}}</td>                        
                         <td>{{ journal.year}}</td>
                       </tr>
                     </tbody>
