@@ -272,18 +272,19 @@ export default {
     axios.get(genBackendURL('information/rti'))
          .then(response => {
            this.rtis = response.data.results
+           this.$emit('hideloader', true)
          })
          .catch(e => {
            console.log("Axios(GET[information]): Error: " + e)
          })
-         axios.get(genBackendURL('information/replyrti'))
+         /*axios.get(genBackendURL('information/replyrti'))
          .then(response => {
            this.replyrti = response.data.results
            this.$emit('hideloader', true)
          })
          .catch(e => {
            console.log("Axios(GET[information]): Error: " + e)
-         })
+         })*/
   },
   components: {
     Card,
