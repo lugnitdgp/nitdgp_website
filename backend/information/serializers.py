@@ -48,7 +48,7 @@ class RTISerializer(serializers.ModelSerializer):
 class ReplyRTISerializer(serializers.ModelSerializer):
     reply_url = serializers.SerializerMethodField('get_request_url')
     def get_request_url(self, obj):
-        return '%s%s' % ('http://admin.nitdgp.ac.in/admin',obj.reply.url)
+        return '%s%s' % ('http://admin.nitdgp.ac.in',obj.reply.url)
 
     class Meta:
         model = ReplyRTI
