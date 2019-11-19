@@ -3,6 +3,7 @@ import collections
 from information.models import *
 
 
+
 class ReportSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -45,9 +46,13 @@ class RTISerializer(serializers.ModelSerializer):
         fields = ('title', 'file', 'date', 'link')
 
 class ReplyRTISerializer(serializers.ModelSerializer):
+    reply_url = serializers.SerializerMethodField('get_request_url')
+    def get_request_url(self, obj):
+        return '%s%s' % ('http://admin.nitdgp.ac.in/admin',obj.reply.url)
+
     class Meta:
         model = ReplyRTI
-        fields = ('request_no', 'request', '_request_date', '_reply', '_reply_date')
+        fields = ('request_no', 'request', '_request_date', 'reply_url', '_reply_date')
 
 
 class NBASerializer(serializers.ModelSerializer):
