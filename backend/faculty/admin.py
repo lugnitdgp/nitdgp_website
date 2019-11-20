@@ -142,7 +142,7 @@ class ProjectsModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_projects']
 
     def has_add_permission(self, request):
-        if request.user.is_superuser:
+        if request.user.is_staff:
             return True
         num_objects = self.model.objects.filter(faculty__name=request.user.get_full_name()).count()
         if num_objects >= 1:
