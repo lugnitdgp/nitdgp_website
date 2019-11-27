@@ -61,8 +61,12 @@ class RTIViewSet(ListAPIView):
 
 class ReplyRTIViewSet(ListAPIView):
 
-    queryset = ReplyRTI.objects.all().order_by('-created_at')
+    queryset = ReplyRTI.objects.all().order_by('-request_no')
     serializer_class = ReplyRTISerializer
+
+    def list(self, request, *args, **kwargs):
+        return Response({"replyrtis": ReplyRTISerializer(self.get_queryset(), many=True, context={"request": request}).data })
+
 
 
 class NIRFViewSet(ListAPIView):

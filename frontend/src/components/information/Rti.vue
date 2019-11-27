@@ -294,9 +294,9 @@
             <td style="color: #000; text-align: center;">{{ key+1 }}</td>
             <td style="color: #000; text-align: center;">{{ reply.request_no}}</td>
             <td style="color: #000; text-align: center;"><a :href="reply.request" style="color: green;">{{ reply.request_no }}_REQ_File</a></td>
-            <td style="color: #000; text-align: center;">{{ reply._request_date }}</td>
-            <td style="color: #000; text-align: center;"><a :href="reply.reply_url" style="color: green;">{{ reply.request_no }}_REP_File</a></td>
-            <td style="color: #000; text-align: center;">{{ reply._reply_date }}</td>
+            <td style="color: #000; text-align: center;">{{ reply.request_date }}</td>
+            <td style="color: #000; text-align: center;"><a :href="reply.reply_url" style="color: green;">{{ convertName(reply.request_no) }}_REP_File</a></td>
+            <td style="color: #000; text-align: center;">{{ reply.reply_date }}</td>
         </tr>
     </tbody>
 </table>
@@ -325,19 +325,31 @@ export default {
          .then(response => {
            // this.rtis = response.data.results
            this.rtis = response.data.rtis
-           console.log(this.rtis)
          })
          .catch(e => {
            console.log("Axios(GET[information]): Error: " + e)
          })
          axios.get(genBackendURL('information/replyrti'))
          .then(response => {
-           this.replyrti = response.data.results
+           //this.replyrti = response.data.results
+           this.replyrti = response.data.replyrtis
            this.$emit('hideloader', true)
          })
          .catch(e => {
            console.log("Axios(GET[information]): Error: " + e)
          })
+  },
+  methods:{
+    convertName: function(name){
+        var arr = name.split(' ')
+        if(arr.length>2)
+        {
+           return arr[0]+' R '+arr[2] 
+        }
+        else{
+            return name
+        }
+    }
   },
   components: {
     Card,
