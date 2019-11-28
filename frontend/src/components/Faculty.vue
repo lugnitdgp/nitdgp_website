@@ -52,8 +52,29 @@
             <div class="tab-pane fade big-list" id="li4" role="tabpanel">
               <h4 class="pane-title" align="left">Projects</h4>
               <hr>
-              <span v-if="'projects' in faculty" v-html="faculty.projects"/>
-              <h4 v-else class="red-text">Not Available</h4>
+              <table class="table table-responsive-md table-bordered">
+                  <thead class="mdb-color lighten-4">
+                    <tr>
+                      <th class="col">Title</th>
+                      <th class="col">Investigator</th>
+                      <th class="col">Co-investigator</th>
+                      <th class="col">Sponsered Agency</th>
+                      <th class="col">Duration</th>
+                      <th class="col">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="project in faculty.projects">
+                      <td v-html="project.projects"></td>
+                      <td>{{ project.investigator}}</td>
+                      <td>{{ project.co_investigator}}</td>
+                      <td>{{ project.sponsored}}</td>
+                      <td>{{ project.duration}}</td>
+                      <td>{{ project.status}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              <!--<h4 v-else class="red-text">Not Available</h4>-->
             </div>
 
             <div class="tab-pane fade big-list" id="li5" role="tabpanel">

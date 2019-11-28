@@ -41,11 +41,11 @@ class FacultyDetailSerializer(serializers.ModelSerializer):
             return info.first().education
 
     def get_projects(self, obj):
-        info = Projects.objects.filter(faculty_id=obj.id)
+        info = Projects.objects.filter(faculty_id=obj.id).order_by('-status')
         if info.count() == 0:
             return {}
         else:
-            return info.first().projects
+            return ProjectsSerializer(info, many=True).data
 
     def get_journals(self, obj):
         info = Journal.objects.filter(faculty_id=obj.id).order_by('-year')
