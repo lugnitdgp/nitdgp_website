@@ -41,8 +41,35 @@
       </div>
       <div class="tab-content card down-content">
         <div class="tab-pane fade  active show big-list" id="li8" role="tabpanel" aria-labelledby="li8-list">
-          <h4 class="black-text"><strong>Programmes Hosted by the Department</strong></h4>
-          <activity-renderer :theader="activities_header" :table="dept.activities"></activity-renderer>
+          <h4 class="black-text"><strong>Facilities Given by the Department</strong></h4>        
+          <ul class="nav md-pills nav-justified pills-secondary">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#p7l1" role="tab">Labratories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#p7l2" role="tab">Equipments</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade in show active" id="p7l1" role="tabpanel">
+              <div class="row">
+                <div class="col">
+                  <ul class="list-group">
+                    <li v-for="lab in dept.facilities.Laboratory" class="list-group-item">{{ lab.name }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="p7l2" role="tabpanel">
+              <div class="row">
+                <div class="col">
+                  <ul class="list-group">
+                    <li v-for="equip in dept.facilities.Equipment" class="list-group-item">{{ equip.name }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </sp-card>
