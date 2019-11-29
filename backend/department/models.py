@@ -35,6 +35,7 @@ class Faculty(BaseModel):
         ('Assistant Professor', 'Assistant Professor'),
         ('Associate Professor', 'Associate Professor'),
         ('Professor', 'Professor'),
+        ('Professor (HAG)', 'Professor (HAG)'),
         ('Emeritus Professor', 'Emeritus Professor'),
         ('Trainee Teacher', 'Trainee Teacher'),
         ('DST Inspire Faculty', 'DST Inspire Faculty'),
