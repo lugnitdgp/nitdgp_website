@@ -17,6 +17,19 @@
             </card-testimonial>
           </div>
           <div class="row">
+            <div style="min-width:100%;"><h1>Office of the Dean(P&D)</h1></div>
+            <card-testimonial v-for="(dean, i) in deans.deanpand_d" :key="i"
+              class="black-text"
+              :image="dean.image"
+              :name="dean.name"
+              :desig="dean.role + ' ' + dean.designation">
+              <i class="fa fa-envelope"></i><br>
+              <strong>{{ dean.email }}</strong><br>
+              <i class="fa fa-address-book"></i><br>
+              <strong>+91-{{ dean.mobile }}</strong></br>
+            </card-testimonial>
+          </div>
+          <div class="row">
             <div style="min-width:100%;"><h1>Associate Deans</h1></div>
             <card-testimonial v-for="(dean, i) in deans.associate_deans" :key="i"
               class="black-text"
