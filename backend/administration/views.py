@@ -89,8 +89,10 @@ class DeansViewSet(ListAPIView):
     def list(self, request, *args, **kwargs):
         deans = self.get_queryset().filter(role='Dean')
         associate_deans = self.get_queryset().filter(role='Associate Dean')
+        deanpand_d = self.get_queryset().filter(role='Dean(P&D)')
         return Response({'deans': DeanSerializer(deans, many=True, context={"request": request}).data,
-                         'associate_deans': DeanSerializer(associate_deans, many=True, context={"request": request}).data
+                         'associate_deans': DeanSerializer(associate_deans, many=True, context={"request": request}).data,
+                         'deanpand_d': DeanSerializer(deanpand_d, many=True, context={"request": request}).data
                          })
 
 
