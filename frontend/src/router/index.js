@@ -654,7 +654,7 @@ export default new Router({
 
     // new added
     {
-      path: '/alumni',
+      path: '/alumnipage',
       name: 'Alumni',
       component: Alumni
     },
