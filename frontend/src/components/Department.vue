@@ -45,10 +45,10 @@
             <div class="col-8 caro">
               <h3 class="pane-title" align="left">About Us</h3>
               <p class="pane-text" align="left" v-html="dept.about_us"></p>
-              <h3 class="pane-title" align="left">Mission</h3>
-              <p class="pane-text" align="left" v-html="dept.mission"></p>
               <h3 class="pane-title" align="left">Vision</h3>
               <p class="pane-text" align="left" v-html="dept.vision"></p>
+              <h3 class="pane-title" align="left">Mission</h3>
+              <p class="pane-text" align="left" v-html="dept.mission"></p>
             </div>
             <div class="col-4 news" align="left">
               <Newsfeed :notices="dept.news"></Newsfeed>
