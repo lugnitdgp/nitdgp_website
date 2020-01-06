@@ -219,7 +219,6 @@ class ProgrammeModelAdmin(admin.ModelAdmin):
 
 class CoursesModelAdmin(admin.ModelAdmin):
     list_display = ['_programme', 'title', 'short_code', 'semester', 'l', 't', 's','credits']
-    list_editable = ['title', 'short_code', 'semester', 'l', 't', 's','credits']
 
     def get_queryset(self, request):
         queryset = super(CoursesModelAdmin, self).get_queryset(request)
