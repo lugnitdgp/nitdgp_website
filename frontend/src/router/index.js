@@ -68,6 +68,7 @@ import Crew from '@/components/activities/Crew'
 import Iotis from '@/components/activities/Iotis'
 import Raa from '@/components/activities/Raa'
 import Ncc from '@/components/activities/Ncc'
+import Uba from '@/components/activities/Uba'
 import Beat from '@/components/activities/Beat'
 import Geothermal from '@/components/activities/Geothermal'
 
@@ -395,6 +396,11 @@ export default new Router({
       path: '/ncc',
       name: 'Ncc',
       component: Ncc
+    },
+    {
+      path: '/uba',
+      name: 'Uba',
+      component: Uba
     },
     {
       path: '/heliumgeothemal',

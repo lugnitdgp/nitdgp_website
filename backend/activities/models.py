@@ -275,7 +275,7 @@ class Coecarousel(BaseModel):
 
 	class Meta:
 		verbose_name_plural = 'CoE Carousel Images'
-	COES = (('CARE','CARE'),('CREW','CREW'),('AM','AM'),('IOTIS','IOTIS'),('RAA','RAA'),('NCC','NCC'),('NSS','NSS'))
+	COES = (('CARE','CARE'),('CREW','CREW'),('AM','AM'),('IOTIS','IOTIS'),('RAA','RAA'),('NCC','NCC'),('NSS','NSS'),('UBA','UBA'))
 	primary_caption = models.CharField(max_length=255)
 	secondary_caption = models.CharField(max_length=255)
 	coe_type = models.CharField(choices=COES,default='CREW',max_length=255)
