@@ -239,6 +239,10 @@
             <td>5.5 Annual Reports of the Institute</td>
             <td><a href="/reports">View Details..</a></td>
         </tr>
+        <tr class="tbl-body-style">
+            <td>5.6 Audit Reports of the Institute</td>
+            <td><a href="/reports">View Details..</a></td>
+        </tr>
     </tbody>
 </table>
 <table class="table table-bordered" align="center" style="width: 80%;">
