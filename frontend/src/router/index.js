@@ -113,6 +113,7 @@ import Pension from '@/components/information/Pension'
 import Mission from '@/components/information/Mission'
 import Dpromotion from '@/components/information/Dpromotion'
 import Rroster from '@/components/information/Rroster'
+import Strategicalplan from '@/components/information/Strategicalplan'
 
 import Collaboration from '@/components/activities/Collaboration'
 import Srcc from '@/components/Srcc'
@@ -650,6 +651,11 @@ export default new Router({
       path: '/contacts',
       name: 'Contacts',
       component: Contacts
+    },
+    {
+      path: '/strategicalplan',
+      name: 'Strategicalplan',
+      component: Strategicalplan
     },
     //Reasearch and Collaboration
     {
