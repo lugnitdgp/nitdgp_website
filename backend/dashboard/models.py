@@ -153,7 +153,7 @@ class Contact(BaseModel):
         ('Director Office', 'Director Office'),
         ('Guest House', 'Guest House'),
         ('HOD', 'HOD'),
-        ('HOD CEC Center', 'HOD CEC Center'),
+        ('HOD CEC Cell', 'HOD CEC Cell'),
         ('Library', 'Library'),
         ('Medical Unit', 'Medical Unit'),
         ('Officers', 'Officers'),

@@ -182,7 +182,7 @@
           </ul>
         </div>
       </card-collapse>
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='HOD CEC Center'" :key="groupname.id" :title="groupname">
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='HOD CEC Cell'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
