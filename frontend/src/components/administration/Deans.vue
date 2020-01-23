@@ -35,7 +35,7 @@
               class="black-text"
               :image="dean.image"
               :name="dean.name"
-              :desig="dean.role + ' ' + dean.designation">
+              :desig="dean.designation">
               <i class="fa fa-envelope"></i><br>
               <strong>{{ dean.email }}</strong><br>
               <i class="fa fa-address-book"></i><br>
