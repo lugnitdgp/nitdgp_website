@@ -690,7 +690,6 @@ export default new Router({
       name: 'SearchResults',
       component: SearchResults
     },
-
     // This is meant to be at the last
     {
       path: '*',

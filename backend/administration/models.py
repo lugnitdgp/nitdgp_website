@@ -8,7 +8,7 @@ class Dean(BaseModel):
     class Meta:
         ordering = ('-role', 'seniority')
 
-    ROLE_TYPES = (('Dean', 'Dean'), ('Associate Dean', 'Associate Dean'), ('Dean(P&D)', 'Dean(P&D)'))
+    ROLE_TYPES = (('Dean', 'Dean'), ('Associate Dean', 'Associate Dean'), ('Dean(P&D)', 'Dean(P&D)'), ('CEC Cell', 'CEC Cell'))
     designation = models.CharField(max_length=512)
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
     role = models.CharField(choices=ROLE_TYPES, max_length=100)
