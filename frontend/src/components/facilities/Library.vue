@@ -7,7 +7,7 @@
     <card v-if="resources" title="E-Resources">
       <div class="row">
         <div class="col">
-        <h4>Text Resources</h4>
+        <h4>Full-Text Resources</h4>
           <ul class="list-group list-gr">
             <li v-for="resource in resources['Text Resource']">
               <a class="list-group-item" :href="resource.url">
