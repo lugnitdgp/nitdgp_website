@@ -690,6 +690,10 @@ export default new Router({
       name: 'SearchResults',
       component: SearchResults
     },
+    {
+      path: '/icis2020',
+      name: 'icis2020'
+    },
     // This is meant to be at the last
     {
       path: '*',
