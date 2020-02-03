@@ -25,6 +25,8 @@ import QuickLinks from '@/components/QuickLinks'
 import Nad from '@/components/Nad'
 import Liveconvocation from '@/components/Liveconvocation'
 import SearchResults from '@/components/SearchResults'
+import PowerSystem from '@/components/PowerSystem'
+import Powerem from '@/components/Powerem'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -689,6 +691,16 @@ export default new Router({
       path: '/search',
       name: 'SearchResults',
       component: SearchResults
+    },
+    {
+      path: '/powersystem',
+      name: 'PowerSystem',
+      component: PowerSystem
+    },
+    {
+      path: '/powerelectronics',
+      name: 'Powerem',
+      component: Powerem
     },
     {
       path: '/icis2020',
