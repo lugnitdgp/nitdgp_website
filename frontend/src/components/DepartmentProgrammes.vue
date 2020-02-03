@@ -99,7 +99,8 @@
               </h6>
               <ul class="list-group list-gr">
                 <li v-for="list,index in dept.syllabus.PG">
-                  <a class="list-group-item" :href="list.file">{{ list.title }}</a>
+                  <a class="list-group-item" v-if="list.file!=null" :href="list.file">{{ list.title }}</a>
+                  <a class="list-group-item" v-if="list.link!=''" target="blank" :href="list.link">{{ list.title }}</a>
                 </li>
               </ul>
               <div v-if="dept.pgpeo != ''">
