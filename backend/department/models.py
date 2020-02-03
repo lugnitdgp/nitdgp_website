@@ -460,7 +460,8 @@ class Syllabus(BaseModel):
     title = models.CharField(max_length=255)
     degree = models.ForeignKey(Degree, on_delete=models.CASCADE)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
-    file = models.FileField(upload_to=rename_syllabus)
+    file = models.FileField(upload_to=rename_syllabus, blank=True)
+    link = models.URLField(blank=True)
 
     def _department(self):
         return self.department.name
