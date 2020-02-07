@@ -2,7 +2,7 @@
   <links-page>
     <card title="Careers">
       <ul class="list-group list-gr">
-        <li v-for="career, key in careers">
+        <li v-for="career, key in convertLinkandFile(careers)">
           <a class="list-group-item" :href="career.file"><span style="background-color: #001333;color: white;padding: 5px"> &nbsp;{{ career.date }} </span>&nbsp;{{ career.title }}</a>
         </li>
       </ul>
@@ -32,6 +32,19 @@ export default {
          .catch(e => {
            console.log(e)
          })
+  },
+  methods:{
+    convertLinkandFile(alldata){
+      for(var i=0;i<alldata.length;i++){
+        if(alldata[i].file==null){
+          alldata[i].file = alldata[i].link
+        }
+        if(alldata[i].link==null){
+          alldata[i].file = alldata[i].file
+        }
+      }
+      return alldata
+    } 
   },
   components: {
     LinksPage,
