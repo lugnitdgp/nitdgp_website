@@ -27,6 +27,7 @@ import Liveconvocation from '@/components/Liveconvocation'
 import SearchResults from '@/components/SearchResults'
 import PowerSystem from '@/components/PowerSystem'
 import Powerem from '@/components/Powerem'
+import ResultDriver from '@/components/ResultDriver'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -701,6 +702,11 @@ export default new Router({
       path: '/powerelectronics',
       name: 'Powerem',
       component: Powerem
+    },
+    {
+      path: '/resultdriver',
+      name: 'ResultDriver',
+      component: ResultDriver
     },
     {
       path: '/icis2020/:icis2020',
