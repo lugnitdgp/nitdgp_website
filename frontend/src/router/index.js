@@ -703,9 +703,10 @@ export default new Router({
       component: Powerem
     },
     {
-      path: '/icis2020',
-      name: 'icis2020'
+      path: '/icis2020/:icis2020',
+      // name: 'icis2020'
     },
+    
     // This is meant to be at the last
     {
       path: '*',
