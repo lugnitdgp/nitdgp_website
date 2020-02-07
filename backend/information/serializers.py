@@ -22,7 +22,7 @@ class CareerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Career
-        fields = ('title', 'file', 'date')
+        fields = ('title', 'file', 'link', 'date')
 
 
 class TenderSerializer(serializers.ModelSerializer):

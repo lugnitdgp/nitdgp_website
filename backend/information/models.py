@@ -45,7 +45,8 @@ class Career(BaseModel):
         ordering = ('-created_at', )
 
     title = models.CharField(max_length=255)
-    file = models.FileField(upload_to='information/careers/%Y')
+    file = models.FileField(upload_to='information/careers/%Y', blank=True)
+    link = models.URLField(blank=True)
     archive = models.BooleanField(default=False)
     date = models.DateField()
 
