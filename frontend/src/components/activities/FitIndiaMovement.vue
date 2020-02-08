@@ -36,7 +36,7 @@
         
     	</tbody>
 	</table>
-	<table class="table table-bordered table-responsive" align="center" style="width: 85%">
+	<table class="table table-bordered" align="center" style="width: 85%">
     	<tbody>
 	        <tr class="heading-table">
 	            <td colspan="2">Components of Physical Fitness</td>
@@ -394,7 +394,7 @@
         
     	</tbody>
 	</table>
-	<table class="table table-bordered table-responsive" align="center" style="width: 85%">
+	<table class="table table-bordered" align="center" style="width: 85%">
     	<tbody>
 	        <tr class="heading-table">
 	            <td colspan="2">Features of various activity</td>
