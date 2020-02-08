@@ -74,6 +74,7 @@ import Ncc from '@/components/activities/Ncc'
 import Uba from '@/components/activities/Uba'
 import Beat from '@/components/activities/Beat'
 import Geothermal from '@/components/activities/Geothermal'
+import FitIndiaMovement from '@/components/activities/FitIndiaMovement'
 
 import Library from '@/components/facilities/Library'
 import Question from '@/components/facilities/Question'
@@ -415,6 +416,11 @@ export default new Router({
       path: '/researchataglance',
       name: 'ResearchAtAGlance',
       component: ResearchAtAGlance
+    },
+    {
+      path: '/fitindiamovement',
+      name: 'FitIndiaMovement',
+      component: FitIndiaMovement
     },
 
     // Facilities
