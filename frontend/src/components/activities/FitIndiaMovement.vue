@@ -1,6 +1,10 @@
 <template>
   <links-page>
     <card title="Fit India Movement">
+    	<div class="col-12 caro">
+        <Carousel :slides="slides"></Carousel>
+      </div>
+      <br>
      <p align="center" class="head">Fitness plan incorporating physical activities in daily routine</p>
     <table class="table table-bordered table-responsive" align="center" style="width: 85%">
     	<tbody>
@@ -429,6 +433,7 @@
 <script>
 import Card from "@/components/Card"
 import LinksPage from "@/components/LinksPage"
+import Carousel from '@/components/Carousel'
 import axios from 'axios'
 import { genBackendURL } from '@/common.js'
 
@@ -436,16 +441,25 @@ export default {
   name: "FitIndiaMovement",
   data () {
     return {
-      
+      slides:{},
     }
   },
   created () {
-    this.$emit('hideloader', true)
+    axios.get(genBackendURL('activities/coecarousel'))
+         .then(response => {
+          let coecarousels = response.data.coecarousels
+          this.slides = coecarousels.FIM
+          this.$emit('hideloader', true)
+          })
+         .catch(e => {
+           console.log(e)
+         })
          
   },
   components: {
     Card,
-    LinksPage
+    LinksPage,
+    Carousel
   }
 }
 </script>
