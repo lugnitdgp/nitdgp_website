@@ -10,7 +10,7 @@
         <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Electrical Engineering.pdf"> Electrical Engineering (EE)</a></li>
         <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Humanities and Social Sciences.pdf">Humanities and Social Sciences(HSS)</a></li>
         <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Management Studies.pdf">Management Studies (MS)</a></li>
-        <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Mathematics.pdf"> Mathematics (MA)</a></li>
+        <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Mathematics1.pdf"> Mathematics (MA)</a></li>
         <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Physics.pdf">Physics (PH)</a></li>
       </ul>
     </card>
