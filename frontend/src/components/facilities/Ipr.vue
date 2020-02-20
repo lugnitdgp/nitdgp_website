@@ -14,8 +14,8 @@
       <div class="mbody">
         <ul class="list-group list-gr">
           <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IPR/Committee_IPR.pdf" target="new">Intellectual Property Management Committee (IPMC)</a></li>
-          <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IPR/FORMS_IPR.pdf" target="new">Forms for Patent related Applications</a></li>
-          <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IPR/IP_POLICY_2018_NITD.pdf" target="new">Intellectual Property Policy and Guidelines</a></li>
+          <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IPR/FORMS FOR PATENT RELATED APPLICATINS.pdf" target="new">Forms for Patent related Applications</a></li>
+          <li><a class="list-group-item" href="http://nitdgp.ac.in/AllPDF/IPR/IP_POLICY_NITD.pdf" target="new">Intellectual Property Policy and Guidelines</a></li>
         </ul>
       </div>
       
