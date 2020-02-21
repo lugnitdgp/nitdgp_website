@@ -7,7 +7,11 @@
         <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Mechanical Engineering.pdf">Mechanical Engineering</a></li>
         <li><a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/rsltdriver/Metallurgical and Materials Engineering.pdf">Metallurgical and Materials Engineering</a></li> 
       </ul>
-      
+      <br>
+      <br>
+      <div>
+      <p style="font-size:18px; color:#000;">**Candidates shortlisted after the Seminar will only be called for interview. </p > 
+    </div>
     </card>
   </links-page>
 </template>
