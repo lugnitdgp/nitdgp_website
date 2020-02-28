@@ -76,7 +76,7 @@
                         </thead>
                         <tbody>
                           <tr v-for="project in allprojects">
-                            <td v-html="project.projects"></td>
+                            <td v-html="project.project"></td>
                             <td>{{ project.investigator}}</td>
                             <td>{{ project.co_investigator}}</td>
                             <td>{{ project.sponsored}}</td>
