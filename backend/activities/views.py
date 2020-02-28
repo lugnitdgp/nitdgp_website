@@ -118,7 +118,7 @@ class AlljournalViewSet(ListAPIView):
 	serializer_class = JournalSerializer
 
 class AllprojectViewSet(ListAPIView):
-	queryset = LiveResearch.objects.all().filter(status='ongoing').order_by('-project_id', '-created_at')
+	queryset = LiveResearch.objects.all().filter(status='Ongoing').order_by('-srcc_id', '-created_at')
 	serializer_class = LiveResearchSerializer
 
 class AllpatentViewSet(ListAPIView):
