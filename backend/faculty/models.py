@@ -132,6 +132,27 @@ class Projects(BaseModel):
     def _projects(self):
         return self.projects
 
+class LiveResearch(BaseModel):
+    STATUS = (('Ongoing', 'Ongoing'),('Completed','Completed'))
+    faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    srcc_id = models.CharField(max_length=200, unique=True)
+    project = RichTextField(null=True)
+    investigator = models.CharField(max_length=512, null=True)
+    co_investigator = models.CharField(max_length=512, blank=True, null=True)
+    sponsored = models.CharField(max_length=512, null=True)
+    duration = models.CharField(max_length=512, null=True)
+    status = models.CharField(choices=STATUS, max_length=512, default='Ongoing')
+
+    def __str__(self):
+        return self.faculty.name
+
+    @property
+    def projects(self):
+        return self.project
+
+    def project_id(self):
+        return self.srcc_id
+
 
 def rename_students(instance, filename):
 

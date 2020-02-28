@@ -174,6 +174,9 @@ class ProjectsModelAdmin(admin.ModelAdmin):
         return queryset.filter(faculty_id__name=request.user.get_full_name())
 
 
+class LiveResearchModelAdmin(admin.ModelAdmin):
+    list_display = ['__str__', 'srcc_id', 'project']
+
 class WorkExperienceModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_work_experience']
 
@@ -320,3 +323,4 @@ admin.site.register(Education, EducationModelAdmin)
 admin.site.register(Teachings, TeachingsModelAdmin)
 admin.site.register(Students, StudentsModelAdmin)
 admin.site.register(Misc, MiscModelAdmin)
+admin.site.register(LiveResearch, LiveResearchModelAdmin)
