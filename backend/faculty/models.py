@@ -119,12 +119,14 @@ class Projects(BaseModel):
 
     STATUS = (('Ongoing','Ongoing'),('Completed','Completed'))
     faculty = models.ForeignKey(Faculty, on_delete=models.CASCADE)
+    project_id = models.CharField(max_length=512, default='0')
     projects = RichTextField()
     investigator = models.CharField(max_length=512, null=True)
     co_investigator = models.CharField(max_length=512, blank=True, null=True)
     sponsored = models.CharField(max_length=512, null=True)
     duration = models.CharField(max_length=512, null=True)
     status = models.CharField(choices=STATUS, max_length=512, default='Ongoing')
+    starting_year = models.DateField(null=True)
 
     def __str__(self):
         return self.faculty.name
@@ -142,6 +144,7 @@ class LiveResearch(BaseModel):
     sponsored = models.CharField(max_length=512, null=True)
     duration = models.CharField(max_length=512, null=True)
     status = models.CharField(choices=STATUS, max_length=512, default='Ongoing')
+    starting_year = models.DateField(null=True)
 
     def __str__(self):
         return self.faculty.name

@@ -175,7 +175,8 @@ class ProjectsModelAdmin(admin.ModelAdmin):
 
 
 class LiveResearchModelAdmin(admin.ModelAdmin):
-    list_display = ['__str__', 'srcc_id', 'project']
+    list_display = ['__str__', 'duration', 'srcc_id', 'project']
+    list_editable = ['duration']
 
 class WorkExperienceModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_work_experience']
