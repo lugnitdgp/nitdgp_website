@@ -39,7 +39,7 @@ class QuickLinksViewSet(ListAPIView):
 
 
 class DownloadsViewSet(ListAPIView):
-    queryset = Downloads.objects.all().order_by('created_at')
+    queryset = Downloads.objects.all().order_by('-created_at')
     serializer_class = DownloadsSerializer
 
 
