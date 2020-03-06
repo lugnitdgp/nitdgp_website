@@ -56,7 +56,8 @@
             <div class="tab-pane fade in show active" id="panell1" role="tabpanel">
               <div class="row">
                 <div class="col" v-for="programme,index in dept.programmes.UG">
-                  <h5><strong>Academic Courses and Syllabus for {{ programme.programme_title }} Students</strong></h5>
+                  <h5><strong>Academic Courses and Syllabus for {{ programme.programme_title }} Students</strong></h5>                  
+                  <span v-if="dept.name=='Electronics and Communication Engineering'"><a href="http://nitdgp.ac.in/AllPDF/NITD_ECE_NBA_2020_23.pdf" target="_blank">(Program accreditated by NBA)</a></span>
                   <div class="accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
                     <div v-for="syllabus,sem in programme">
                       <card-collapse v-if="sem!='programme_title'" :title="'Semester '+sem">
