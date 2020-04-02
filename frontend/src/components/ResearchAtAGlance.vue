@@ -316,6 +316,9 @@ export default {
     margin-left: auto;
     margin-bottom: 0px;
   }
+  td{
+    color: #000;
+  }
   @media screen and (min-width: 909px) {
     .btn {
       display: none;
