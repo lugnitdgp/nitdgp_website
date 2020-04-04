@@ -127,10 +127,7 @@ export default {
     .text-cont{
       font-size: 80%
     }
-    .live-news-section{      
-      top: 60px;
-      color: #fff;
-    }
+    
   }
   @media screen and (max-width: 800px){
     .navbar-menu{
@@ -156,9 +153,8 @@ export default {
     .nm-en-sm{
       display: block!important
     }
-    .live-news-section{      
-      top: 60px;
-      color: #fff;
+    .live-news-section{
+      top: 50px;
     }
   }
   @media screen and (max-width: 530px){
@@ -168,6 +164,11 @@ export default {
     .nm-en-smm{
       visibility: visible!important;
     }
+    .live-news-section{      
+      top: 50px;
+      color: #fff;
+    }
+
   }
   .navbar{
     background-color: #001333!important;padding: 0px;padding-right:0px;
@@ -312,13 +313,13 @@ export default {
     position: relative;
     height: 60px;
     background-color: #ca2367;
-    top: 80px;
+    top: 90px;
     color: #fff;
     font-weight: bold;
     font-size: 22px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 9px;
+    padding-top: 14px;
   }
   .live-news-section a{
     color: #fff;
