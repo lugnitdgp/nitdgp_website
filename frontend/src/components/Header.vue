@@ -70,6 +70,11 @@
         <a href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> Old&nbsp;</a>
       </div>
     </nav>
+    <div class="live-news-section">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <a href="https://nitdgp.ac.in/AllPDF/d_msg/To_the_Students.mp4" target="_blank">Director's Message for the students</a> 
+        </marquee>
+    </div>
   </header>
 </template>
 
@@ -122,6 +127,10 @@ export default {
     .text-cont{
       font-size: 80%
     }
+    .live-news-section{      
+      top: 60px;
+      color: #fff;
+    }
   }
   @media screen and (max-width: 800px){
     .navbar-menu{
@@ -146,6 +155,10 @@ export default {
     }
     .nm-en-sm{
       display: block!important
+    }
+    .live-news-section{      
+      top: 60px;
+      color: #fff;
     }
   }
   @media screen and (max-width: 530px){
@@ -294,5 +307,21 @@ export default {
   .hide_logo{
     opacity: 0;
     transition: opacity 0.3s linear;
+  }
+  .live-news-section{
+    position: relative;
+    height: 60px;
+    background-color: #ca2367;
+    top: 80px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 9px;
+  }
+  .live-news-section a{
+    color: #fff;
+    text-decoration: none;
   }
 </style>
