@@ -29,6 +29,7 @@ import PowerSystem from '@/components/PowerSystem'
 import Powerem from '@/components/Powerem'
 import ResultDriver from '@/components/ResultDriver'
 import ResultDriverRest from '@/components/ResultDriverRest'
+import Cshortseminer from '@/components/Cshortseminer'
 
 import Admission from '@/components/academics/Admission'
 import Calendar from '@/components/academics/Calendar'
@@ -719,6 +720,11 @@ export default new Router({
       path: '/resultdriverrest',
       name: 'ResultDriverRest',
       component: ResultDriverRest
+    },
+    {
+      path: '/candidateseminer',
+      name: 'Cshortseminer',
+      component: Cshortseminer
     },
     {
       path: '/icis2020/:icis2020',
