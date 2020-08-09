@@ -115,31 +115,31 @@
             <tbody>
               <tr>                
                 <td>Dr. Dipankar Chakraborty (Cardiology and Medicine)</td>
-                <td>MON (5PM), WED (7PM), THU (5PM)</td>
+                <td>MON (5PM - 7PM), WED (7PM-9PM), THU (5PM - 7PM)</td>
               </tr>
               <tr>                
                 <td>Dr. Sukesh Nath (Medicine)</td>
-                <td>TUE (12 NOON)</td>
+                <td>TUE (12PM - 2PM)</td>
               </tr>
               <tr>                
                 <td>Dr. Ishani Dasgupta (Gynaec & Obs.) </td>
-                <td>TUE (6:30 PM)</td>
+                <td>TUE (7PM - 9PM)</td>
               </tr>
               <tr>                
                 <td>Dr. Anita Chatterjee (Eye Specialist)</td>
-                <td>FRI (10:00 AM)</td>
+                <td>TUE (10:30AM - 12:30PM )</td>
               </tr> 
               <tr>                
                 <td>Dr. Subir Mukherjee (Dentist) </td>
-                <td>TUE (5PM), THU (5PM), SAT (5PM)</td>
+                <td>TUE (5PM - 7PM), THU (5PM - 7PM), SAT (5PM - 7PM)</td>
               </tr>
               <tr>                
                 <td>Dr. Debashish Roy (ENT Specialist) </td>
-                <td>WED (11AM)</td>
+                <td>WED (11AM - 1PM)</td>
               </tr>
               <tr>                
                 <td>Dr. Om Prakash Singh (Psychiatrist) </td>
-                <td>SUN (9 AM) (ALTERNATE)</td>
+                <td>SUN (9 AM - 11AM) (ALTERNATE)</td>
               </tr>
 
             </tbody>
@@ -214,7 +214,8 @@ export default {
         {primary_caption:"Emergency Ward Entrance",secondary_caption:"Emergency Ward Entrance",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
       ],
       buletins:[
-        {title:'Come and get your eyes examine to detect diabetic touch to retina of eyes (Diabetic retinopathy)',file:'https://nitdgp.ac.in/MU/bulletin_file.pdf',date:'2019-05-10',url:''}
+        {title:'Come and get your eyes examine to detect diabetic touch to retina of eyes (Diabetic retinopathy)',file:'https://nitdgp.ac.in/MU/bulletin_file.pdf',date:'2019-05-10',url:''},
+        {title:'Doctors duty roster from 10-16 August',file:'https://nitdgp.ac.in/MU/roster_from_10_Aug_2020.pdf',date:'2020-08-09',url:''}
       ]
     }
     
