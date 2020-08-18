@@ -43,8 +43,7 @@
                     NATIONAL INSTITUTE OF TECHNOLOGY DURGAPUR<br>
                   </span>
                   <span class="nm-det" style="font-size: 13px;">
-                    An Institute of National Importance under Government of India,
-                    Ministry of Human Resource Development
+                    An Institute of National Importance under Ministry of Education, Government of India
                   </span>
                 </p>
               </div>

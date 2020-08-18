@@ -4,7 +4,7 @@
       <div class="container-fluid" align="center">
         <div class="row quick-links-row quick-links-container">
           <div v-for="link in links" class="container-fluid">
-            <div v-if="link.name == 'MHRD'">
+            <div v-if="link.name == 'Ministry of Education'">
               <div class="modal fade" :id="'mhrdModal'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -107,7 +107,7 @@ export default {
               {name: "Careers@NITD", href: "/careers"},
               {name: "Tenders@NITD", href: "/tenders"},
               {name: "Placement@NITD", href: "/placement"},
-              {name: "MHRD", href: "/mhrd"},
+              {name: "Ministry of Education", href: "/mhrd"},
               {name: "Downloads", href: "/downloads"},
               {name: "Archives", href: "/archives"},
               // {name: "Policies", href: "/policies"},
