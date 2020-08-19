@@ -50,7 +50,7 @@
           </ul>
           <p><h4>Services rendered :</h4></p>
           <ul>
-            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the <a href="https://admin.nitdgp.ac.in/files/academics/notices/2018/09/07/Timeschedule_R1.pdf" target="_blank"><span style="color: red;">schedule</span></a></li>    
+            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the <a href="https://nitdgp.ac.in/MU/weekly_duty_roster_of_doctors_from_17_Aug_2020.pdf" target="_blank"><span style="color: red;">schedule</span></a></li>    
             <li>Occasional sensitization programmes are organized.</li>
           </ul>
         </div>        
@@ -214,8 +214,9 @@ export default {
         {primary_caption:"Emergency Ward Entrance",secondary_caption:"Emergency Ward Entrance",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
       ],
       buletins:[
-        {title:'Come and get your eyes examine to detect diabetic touch to retina of eyes (Diabetic retinopathy)',file:'https://nitdgp.ac.in/MU/bulletin_file.pdf',date:'2019-05-10',url:''},
-        {title:'Doctors duty roster from 10-16 August',file:'https://nitdgp.ac.in/MU/roster_from_10_Aug_2020.pdf',date:'2020-08-09',url:''}
+        {title:'COVID Times- Preparation of self to new normal- Life and Teaching specifically for the Faculties, Officers and other Non-teaching employees of the institute.',file:'',date:'2020-08-19',url:'https://teams.microsoft.com/l/meetup-join/19%3af6a410364fde4a40b05e9280aff078cc%40thread.tacv2/1597762261657?context=%7b%22Tid%22%3a%22a58978f7-efcb-4b53-bd81-8361fa13fa5c%22%2c%22Oid%22%3a%22e4e01cf8'},
+        {title:'Doctors duty roster from 17th August 2020',file:'https://nitdgp.ac.in/MU/weekly_duty_roster_of_doctors_from_17_Aug_2020.pdf',date:'2020-08-09',url:''},
+        {title:'Come and get your eyes examine to detect diabetic touch to retina of eyes (Diabetic retinopathy)',file:'https://nitdgp.ac.in/MU/bulletin_file.pdf',date:'2019-05-10',url:''}
       ]
     }
     
