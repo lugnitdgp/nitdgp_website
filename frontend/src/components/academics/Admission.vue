@@ -1,7 +1,7 @@
 <template>
   <links-page>
     <collapse-list>
-      <card-collapse v-for="(degree, i) in degrees" :title="degree.name" :show="i == 0" :key="i">
+      <card-collapse v-for="(degree, i) in degrees" :title="degree.name" :show="degree.name == 'Admission 2020'" :key="i"><!-- modified i==0 to degree.name==admission 2020 -->
         <ul class="pg_contents">
           <li v-for="(programme, j) in degree.programmes" class="bot-margin no-style-list" :key="j">
             <h4>{{ programme.name }}</h4>
