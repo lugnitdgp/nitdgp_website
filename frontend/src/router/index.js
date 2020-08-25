@@ -32,6 +32,7 @@ import ResultDriverRest from '@/components/ResultDriverRest'
 import Cshortseminer from '@/components/Cshortseminer'
 
 import Admission from '@/components/academics/Admission'
+import Newadmission from '@/components/academics/Newadmission'
 import Calendar from '@/components/academics/Calendar'
 import Registrations from '@/components/academics/Registrations'
 import Departments from '@/components/academics/Departments'
@@ -204,6 +205,11 @@ export default new Router({
       path: '/calendar',
       name: 'Calendar',
       component: Calendar
+    },
+    {
+      path: '/newadmission',
+      name: 'Newadmission',
+      component: Newadmission
     },
     {
       path: '/registrations',
