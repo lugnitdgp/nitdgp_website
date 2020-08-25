@@ -9,6 +9,11 @@ class NoticeSerializer(serializers.ModelSerializer):
         model = Notice
         fields = ('title', 'file', 'date')
 
+class NewAdmissionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NewAdmission
+        fields = ('title', 'file', 'date')
+        
 class HostelNoticeSerializer(serializers.ModelSerializer):
 
     class Meta:

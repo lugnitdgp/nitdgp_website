@@ -20,6 +20,10 @@ class NoticeViewSet(ListAPIView):
             else:
                 result[ntype] = [NoticeSerializer(notice, context={"request": request}).data]
         return Response({"notices": result})
+        
+class NewAdmissionViewSet(ListAPIView):
+    queryset = NewAdmission.objects.order_by('-date')
+    serializer_class = NewAdmissionSerializer
 
 class HostelNoticeViewSet(ListAPIView):
     queryset = HostelNotice.objects.filter(archive=False).order_by('-date')

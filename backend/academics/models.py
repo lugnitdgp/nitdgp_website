@@ -26,6 +26,21 @@ class Notice(BaseModel):
 
     class Meta:
         ordering = ('-date',)
+        
+class NewAdmission(BaseModel):
+    title = models.CharField(max_length=512)
+    file = models.FileField(upload_to='newadmission/%Y')
+    url = models.URLField(blank=True)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+    def _file(self):
+        return self.file
+
+    def _date(self):
+        return self.date
 
 class HostelNotice(BaseModel):
     HALL_TYPES = (('Hostel-1','Hostel-1'),('Hostel-2','Hostel-2'),('Hostel-3','Hostel-3'),('Hostel-4','Hostel-4'),('Hostel-5','Hostel-5'),('Hostel-6','Hostel-6'),('Hostel-7','Hostel-7'),('Hostel-8','Hostel-8'),('Hostel-9','Hostel-9'),('Hostel-10','Hostel-10'),('Hostel-11','Hostel-11'),('Hostel-12','Hostel-12'),('Hostel-13','Hostel-13'))

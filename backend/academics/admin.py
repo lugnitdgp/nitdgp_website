@@ -32,6 +32,9 @@ class NoticeModelAdmin(admin.ModelAdmin):
             )
         return super().formfield_for_choice_field(db_field, request, **kwargs)
 
+class NewAdmissionModelAdmin(admin.ModelAdmin):
+    list_display = ['title', 'file', 'date']
+
 class HostelNoticeModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'archive', 'hall_type', 'date']
     list_editable = ['hall_type', 'archive']
@@ -99,6 +102,7 @@ class ConvocationModelAdmin(admin.ModelAdmin):
     actions = [archive_selected, unarchive_selected]
 
 admin.site.register(Notice, NoticeModelAdmin)
+admin.site.register(NewAdmission, NewAdmissionModelAdmin)
 admin.site.register(HostelNotice, HostelNoticeModelAdmin)
 admin.site.register(Calendar)
 admin.site.register(Convocation, ConvocationModelAdmin)
