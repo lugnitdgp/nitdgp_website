@@ -3,7 +3,7 @@
     <h1 class="name-title" align="center">MEET OUR CHAIRPERSON</h1>
     <div class="card testimonial-card">
       <div class="card-up">
-        <img :src="director.image" >
+        <img v-if="director.image" :src="director.image" >
       </div>
       <div class="card-body">
         <h3 class="mt-1 white-text">
@@ -39,11 +39,11 @@ export default {
   data () {
     return {
       director: {
-        name: "Prof. Anupam Basu",
-        image: "/static/img/director_image.jpg",
-        email: "director@admin.nitdgp.ac.in",
-        mobile: "343 2546397",
-        fax: "343 2547375"
+        name: "Dr. S.S. Gokhale",
+        image: "",
+        email: "",
+        mobile: "",
+        fax: ""
       }
     }
   },
