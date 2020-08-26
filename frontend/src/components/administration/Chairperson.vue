@@ -9,7 +9,7 @@
         <h3 class="mt-1 white-text">
           <strong>{{director.name}}</strong>
         </h3>
-        <h4 class="desig cyan-text">Chairperson</h4>
+        <h4 class="desig cyan-text">Chairperson of BoG </h4>
         <hr class="hr-grey">
         <p class="white-text" align="center">
           <i class="fa fa-map-marker fa-1x"></i><br>
@@ -39,7 +39,7 @@ export default {
   data () {
     return {
       director: {
-        name: "Dr. S.S. Gokhale",
+        name: "Prof. (Retd.) Sadanand Sadashiv Gokhale",
         image: "",
         email: "",
         mobile: "",
