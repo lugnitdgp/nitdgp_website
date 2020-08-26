@@ -612,6 +612,23 @@ hr.style4:after {
 .card-7 div.tile-small{
   background-color: #035A6E;
 }
+/*card-8*/
+/* car8 bg-color*/
+.card-8 {
+  background: linear-gradient(#ECEFF1,#B0BEC5);
+}
+/* card-title color*/
+.card-8 a.tile-title{
+  background: linear-gradient(to right, #7e026f ,#e65ad5);
+}
+/* title-text color*/
+.card-8 p.tile-title-text{
+  color: #ffffff;
+}
+/* small-tile bg-color*/
+.card-8 div.tile-small{
+  background-color: #7e026f;
+}
 /*Level 1 dep*/
 /* card bg-color*/
 .l1-dep .l1-card {

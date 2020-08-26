@@ -181,7 +181,7 @@ export default {
                row++
              }
              element.contents = tiles_rows
-             if(index<=2)
+             if(index<=3)
                section_rows[0][group_up++] = element
              else
                section_rows[1][group_dw++] = element
