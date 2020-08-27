@@ -267,7 +267,7 @@
           </ul>
         </div>
       </card-collapse>
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
+      <!-- <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
@@ -283,12 +283,12 @@
             </div>
           </ul>
         </div>
-      </card-collapse>
-      <!-- <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
+      </card-collapse> -->
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
-              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Academic & Examinations)'" class="col contact-col ">
+              <div v-for="details in list" v-if="details.designation=='Joint Registrar (Academic & Examinations)'" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -297,7 +297,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Establishment)'" class="col contact-col ">
+              <div v-for="details in list" v-if="details.designation=='Joint Registrar (Establishment)'" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -306,7 +306,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Deputy Registrar (Finance & Accounts)'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Joint Registrar (Finance & Accounts)'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -315,7 +315,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Deputy Registrar(Procurement)'" class="col contact-col ">
+              <div v-for="details in list" v-if="details.designation=='Joint Registrar (Hostel Section)'" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -324,7 +324,16 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (Establishment)'" class="col contact-col ">
+              <div v-for="details in list" v-if="details.designation=='Joint Registrar (Procurement)- Addl. Charge'" class="col contact-col ">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (Hostels)'" class="col contact-col ">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -352,7 +361,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (Student Welfare)'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Assistant Registrar (SRCC)'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -361,7 +370,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Technical Officer'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Technical Officer & Addl. Charge of SRCC'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -370,7 +379,16 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Executive Engineer'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Security Officer & I/C Estate'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>
+              <div v-for="details in list" v-if="details.designation=='Executive Engineer (Civil)'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -388,7 +406,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Medical Officers'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Senior Medical Officer'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -397,7 +415,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Nodal Officer of DASA - 2015'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Medical Officer'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -406,7 +424,16 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Security Officer'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Nodal Officer of DASA'" class="col contact-col">
+                <li class="list-group-item disabled" style="height: 100%;">
+                  <h4>{{ details.name }}</h4>
+                  <h5 style="font-weight: bold" v-if="details.designation">
+                    {{ details.designation }}
+                  </h5>
+                  <span v-html="details.contact"/>
+                </li>
+              </div>              
+              <div v-for="details in list" v-if="details.designation=='Assistant Librarian'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
@@ -427,7 +454,7 @@
             </div>
           </ul>
         </div>
-      </card-collapse> -->
+      </card-collapse>
       <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Warden'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
@@ -589,7 +616,6 @@ export default {
   	 .then(response => {
   	   this.groups = response.data.groups
        this.hodlist = this.groups['HOD']
-       
   	   this.$emit('hideloader', true)
          })
          .catch(e => {
