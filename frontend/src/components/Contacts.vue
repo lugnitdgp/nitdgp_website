@@ -267,7 +267,7 @@
           </ul>
         </div>
       </card-collapse>
-      <!-- <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
+      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
@@ -283,8 +283,8 @@
             </div>
           </ul>
         </div>
-      </card-collapse> -->
-      <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
+      </card-collapse>
+      <!-- <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Officers'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
             <div class="row">
@@ -427,7 +427,7 @@
             </div>
           </ul>
         </div>
-      </card-collapse>
+      </card-collapse> -->
       <card-collapse v-for="list,groupname,i in groups" v-if="groupname=='Warden'" :key="groupname.id" :title="groupname">
         <div class="card-text">
           <ul class="list-group list-gr">
@@ -589,7 +589,7 @@ export default {
   	 .then(response => {
   	   this.groups = response.data.groups
        this.hodlist = this.groups['HOD']
-
+       
   	   this.$emit('hideloader', true)
          })
          .catch(e => {
