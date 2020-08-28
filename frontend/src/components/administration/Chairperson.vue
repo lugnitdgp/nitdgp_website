@@ -6,9 +6,11 @@
         <img v-if="director.image" :src="director.image" >
       </div>
       <div class="card-body">
-        <h3 class="mt-1 white-text">
-          <strong>{{director.name}}</strong>
-        </h3>
+        <a :href="director.details" target="_blank">
+          <h3 class="mt-1 white-text">
+            <strong>{{director.name}}</strong>
+          </h3>
+        </a>
         <h4 class="desig cyan-text">Chairperson of BoG </h4>
         <hr class="hr-grey">
         <p class="white-text" align="center">
@@ -43,6 +45,7 @@ export default {
         image: "",
         email: "",
         mobile: "",
+        details: "http://nitdgp.ac.in/AllPDF/SSG_Short.pdf",
         fax: ""
       }
     }
