@@ -16,6 +16,10 @@ class LibrarySerializer(serializers.ModelSerializer):
 		model = Library
 		fields = ('home','about','contact_us')
 
+class MedicalBulletinSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = MedicalBulletin
+		fields = ('title', 'file', 'link', 'date')
 
 class ResourceSerializer(serializers.ModelSerializer):
 

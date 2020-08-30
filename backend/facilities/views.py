@@ -22,7 +22,10 @@ class LibraryViewSet(ListAPIView):
 	queryset = Library.objects.all().order_by('-updated_at')[:1]
 	serializer_class = LibrarySerializer
 
-
+class MediclebullViewSet(ListAPIView):
+	queryset = MedicalBulletin.objects.all().order_by('-date')
+	serializer_class = MedicalBulletinSerializer
+	
 class ResourceViewSet(ListAPIView):
 
 	queryset = Resource.objects.all()

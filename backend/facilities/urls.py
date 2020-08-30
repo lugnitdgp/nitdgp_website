@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^facilities/resource/$', ResourceViewSet.as_view(), name='view-resource'),
     url(r'^facilities/sac/$', SACViewSet.as_view(), name='view-sac'),
     url(r'^facilities/cif/$',CIFViewSet.as_view(), name='view-cif'),
+    url(r'^facilities/medicle/$',MediclebullViewSet.as_view(), name='view-medicle'),
     url(r'^facilities/hostels/$',HostelViewSet.as_view(), name='view-hostels'),
     url(r'^facilities/pcbd/$',PCBDViewSet.as_view(), name='view-pcbd'),
     url(r'^facilities/pcbdcomplaint/$',pcbdcomplaint, name='view-pcbdcomplaint'),

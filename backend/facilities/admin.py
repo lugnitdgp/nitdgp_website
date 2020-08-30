@@ -9,6 +9,9 @@ class LibraryModelAdmin(admin.ModelAdmin):
 class ResourceModelAdmin(admin.ModelAdmin):
     list_display = ['__str__', '_url', '_type']
 
+class MedicalBulletinModelAdmin(admin.ModelAdmin):
+	list_display = ['__str__', 'date']
+
 class SACModelAdmin(admin.ModelAdmin):
 	list_display = ['_about','__str__','_other_activities','_facility','_contact_us','_ach_url','_rec_url']
 
@@ -33,6 +36,7 @@ class LogocompModelAdmin(admin.ModelAdmin):
 admin.site.register(Semesterquestion,SemesterquestionModelAdmin)
 admin.site.register(Center, CenterModelAdmin)
 admin.site.register(Library, LibraryModelAdmin)
+admin.site.register(MedicalBulletin, MedicalBulletinModelAdmin)
 admin.site.register(Resource, ResourceModelAdmin)
 admin.site.register(SAC,SACModelAdmin)
 admin.site.register(Hostel, HostelModelAdmin)
