@@ -50,7 +50,7 @@
           </ul>
           <p><h4>Services rendered :</h4></p>
           <ul>
-            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the <a href="https://nitdgp.ac.in/MU/weekly duty roster of doctors from 24 Aug 2020.pdf" target="_blank"><span style="color: red;">schedule</span></a></li>    
+            <li>Clinical and support services are offered by a team of professional psychiatrists and psychologists. Counselling by psychologists is available four days a week while psychiatric treatment by experts is available twice a week. For details, see the schedule    
             <li>Occasional sensitization programmes are organized.</li>
           </ul>
         </div>        
@@ -198,7 +198,8 @@
 <script>
   import Carousel from '../Carousel'
   import Bulletin from '../Bulletin'
-  import { convertNewsfeed } from '@/common.js'
+  import axios from "axios"
+  import { convertNewsfeed, genBackendURL } from '@/common.js'
 export default {
   name: 'Mu',
   data(){
@@ -213,11 +214,7 @@ export default {
         {primary_caption:"Emergency Ward",secondary_caption:"Emergency Ward",image:"http://nitdgp.ac.in/MU/watchroom.jpg"},
         {primary_caption:"Emergency Ward Entrance",secondary_caption:"Emergency Ward Entrance",image:"http://nitdgp.ac.in/MU/emergency_ward.jpg"},        
       ],
-      buletins:[
-        {title:'weekly duty roster of doctors from 24 Aug 2020',file:'https://nitdgp.ac.in/MU/weekly duty roster of doctors from 24 Aug 2020.pdf',date:'2020-08-23',url:''},
-        {title:'COVID Times- Preparation of self to new normal- Life and Teaching specifically for the Faculties, Officers and other Non-teaching employees of the institute.',file:'',date:'2020-08-19',url:'https://teams.microsoft.com/l/meetup-join/19%3af6a410364fde4a40b05e9280aff078cc%40thread.tacv2/1597762261657?context=%7b%22Tid%22%3a%22a58978f7-efcb-4b53-bd81-8361fa13fa5c%22%2c%22Oid%22%3a%22e4e01cf8'},
-        {title:'Come and get your eyes examine to detect diabetic touch to retina of eyes (Diabetic retinopathy)',file:'https://nitdgp.ac.in/MU/bulletin_file.pdf',date:'2019-05-10',url:''}
-      ]
+      notices:[]
     }
     
   },
@@ -226,8 +223,17 @@ export default {
     Bulletin
   },
   created () {
-    this.notices = convertNewsfeed(this.buletins)
-    this.$emit('hideloader', true)
+    axios
+      .get(genBackendURL("facilities/medicle/"))
+      .then(response => {
+        this.notices = convertNewsfeed(response.data.results);
+        console.log(this.bulletins)
+        this.$emit("hideloader", true);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+
   }
 }
 </script>
