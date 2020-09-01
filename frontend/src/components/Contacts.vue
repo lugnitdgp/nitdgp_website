@@ -370,7 +370,7 @@
                   <span v-html="details.contact"/>
                 </li>
               </div>
-              <div v-for="details in list" v-if="details.designation=='Technical Officer & Addl. Charge of SRCC'" class="col contact-col">
+              <div v-for="details in list" v-if="details.designation=='Technical Officer & Joint Registrar SRCC(Addl. Charge)'" class="col contact-col">
                 <li class="list-group-item disabled" style="height: 100%;">
                   <h4>{{ details.name }}</h4>
                   <h5 style="font-weight: bold" v-if="details.designation">
