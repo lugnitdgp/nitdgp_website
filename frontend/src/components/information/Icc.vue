@@ -44,8 +44,8 @@ export default {
       members: [
         
         {name:"Dr. Seema Sarkar Mandal", title:"Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Presiding Officer"},
-        {name:"Dr. Jaya Sikdar", title:" Associate Professor, Department of Chemical Engineering National Institute of Technology Durgapur", designation:"Convener", image:"https://admin.nitdgp.ac.in/files/faculty/Jaya%20Sikder/IMG_20190306_183447.jpg"}, 
-        {name:"Dr. Surabhi Chaudhuri", title:"Professor, Department of Biotechnology National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Surabhi%20Chaudhuri/surabhi_chaudhuri.jpg"},
+        {name:"Dr. Jaya Sikdar", title:" Associate Professor, Department of Chemical Engineering National Institute of Technology Durgapur", designation:"Convener", image:"https://admin.nitdgp.ac.in/files/faculty/Jaya%20Sikder/20200108_193644.jpg"}, {name:"Dr.  Sanghita Bhattacharjee ", title:" Associate Professor, Department of Computer Science & Engineering National Institute of Technology Durgapur", designation:"Nodal Person", image:"https://admin.nitdgp.ac.in/files/faculty/Sanghita%20Bhattacharjee/s_mukh.jpg"}, 
+        {name:"Dr. Surabhi Chaudhuri", title:"Professor, Department of Biotechnology National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Surabhi%20Chaudhuri/828.JPG"},
         {name:"Dr. Lakshmi Kanta Dey", title:"Associate Professor, Department of Mathematics National Institute of Technology Durgapur", designation:"Member", image:"https://admin.nitdgp.ac.in/files/faculty/Lakshmi%20Kanta%20Dey/l_K_dey.jpg"},
         {name:"Mr. Santosh Saha", title:"Technical Officer, National Institute of Technology Durgapur", designation:"Member"},        
         {name:"Dr. G. Prabhavathi", title:"Medical Officer, National Institute of Technology Durgapur", designation:"Member"},
