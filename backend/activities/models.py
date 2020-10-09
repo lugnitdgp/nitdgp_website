@@ -335,9 +335,3 @@ class Newsletter(BaseModel):
 
 	def __str__(self):
 		return self.title
-
-	def file(self):
-		return self.file
-
-	def date(self):
-		return self.date
