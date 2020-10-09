@@ -63,6 +63,8 @@ class VisitorModelAdmin(admin.ModelAdmin):
 class OutreachModelAdmin(admin.ModelAdmin):
         list_display = ['category', 'name']
 
+class NewsletterModelAdmin(admin.ModelAdmin):
+	list_display = ['title', 'date']
 
 
 admin.site.register(Outreach, OutreachModelAdmin)
@@ -79,3 +81,4 @@ admin.site.register(Coe, CoeModelAdmin)
 admin.site.register(Coecarousel, CoecarouselModelAdmin)
 admin.site.register(PlacementLinks, PlacementLinksModelAdmin)
 admin.site.register(Visitor, VisitorModelAdmin)
+admin.site.register(Newsletter, NewsletterModelAdmin)

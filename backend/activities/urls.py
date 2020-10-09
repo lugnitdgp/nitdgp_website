@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^activities/alljournal/$', AlljournalViewSet.as_view(), name='view-all-journal'),
     url(r'^activities/allpatent/$', AllpatentViewSet.as_view(), name='view-all-patent'),
     url(r'^activities/allproject/$', AllprojectViewSet.as_view(), name='view-all-project'),
+    url(r'^activities/newsletters/$', NewslettersViewSet.as_view(), name='view-newsletter'),
 
 
 ]

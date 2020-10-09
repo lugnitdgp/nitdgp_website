@@ -124,3 +124,7 @@ class AllprojectViewSet(ListAPIView):
 class AllpatentViewSet(ListAPIView):
 	queryset = Patent.objects.all().order_by('patent_status', '-patent_filed_year', '-created_at')
 	serializer_class = PatentSerializer
+
+class NewslettersViewSet(ListAPIView):
+	queryset = Newsletter.objects.all().order_by('-created_at')
+	serializer_class = NewsletterSerializer

@@ -322,3 +322,22 @@ class Outreach(BaseModel):
 	name = models.CharField(max_length=512, blank=False)
 	mou = models.FileField(upload_to=outreach_mou_path, blank=False)
 	icon = models.FileField(upload_to=outreach_icon_path, blank=False)
+
+
+class Newsletter(BaseModel):
+	class Meta:
+		verbose_name_plural = 'Newsletters'
+
+	title  = models.CharField(max_length=255)
+	file = models.FileField(upload_to='activities/newsletters/%Y', blank=True)
+	link = models.URLField(blank=True)
+	date = models.DateField()
+
+	def __str__(self):
+		return self.title
+
+	def file(self):
+		return self.file
+
+	def date(self):
+		return self.date

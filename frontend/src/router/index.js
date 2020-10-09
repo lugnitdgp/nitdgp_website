@@ -76,6 +76,7 @@ import Raa from '@/components/activities/Raa'
 import Ncc from '@/components/activities/Ncc'
 import Uba from '@/components/activities/Uba'
 import Beat from '@/components/activities/Beat'
+import Newsletters from '@/components/activities/Newsletters'
 import Geothermal from '@/components/activities/Geothermal'
 import FitIndiaMovement from '@/components/activities/FitIndiaMovement'
 
@@ -359,6 +360,11 @@ export default new Router({
       path: '/beat',
       name: 'Beat',
       component: Beat
+    },
+    {
+      path: '/newsletters',
+      name: 'Newsletters',
+      component: Newsletters
     },
     {
       path: '/rashtriyaavishkarabhiyan',
