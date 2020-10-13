@@ -129,6 +129,12 @@ class NewslettersViewSet(ListAPIView):
 	queryset = Newsletter.objects.all().order_by('-created_at')
 	serializer_class = NewsletterSerializer
 
+	def list(self, request, *args, **kwargs):
+		return Response({"results": NewsletterSerializer(self.get_queryset(), many=True, context={"request":request}).data})
+
 class CovidViewSet(ListAPIView):
 	queryset = Covid.objects.all().order_by('-created_at')
 	serializer_class = CovidSerializer
+
+	def list(self, request, *args, **kwargs):
+		return Response({"results":CovidSerializer(self.get_queryset(), many=True, context={"request":request}).data})
