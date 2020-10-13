@@ -112,6 +112,6 @@ class OutreachMainSerializer(serializers.ModelSerializer):
 
 
 class NewsletterSerializer(serializers.ModelSerializer):
-	class meta:
+	class Meta:
 		model = Newsletter
 		fields = ('title', 'file', 'link', 'date')
