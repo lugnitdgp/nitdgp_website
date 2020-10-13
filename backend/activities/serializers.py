@@ -115,3 +115,8 @@ class NewsletterSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Newsletter
 		fields = ('title', 'file', 'link', 'date')
+
+class CovidSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Covid
+		fields = ('title', 'file', 'link', 'date')

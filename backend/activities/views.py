@@ -128,3 +128,7 @@ class AllpatentViewSet(ListAPIView):
 class NewslettersViewSet(ListAPIView):
 	queryset = Newsletter.objects.all().order_by('-created_at')
 	serializer_class = NewsletterSerializer
+
+class CovidViewSet(ListAPIView):
+	queryset = Covid.objects.all().order_by('-created_at')
+	serializer_class = CovidSerializer

@@ -335,3 +335,15 @@ class Newsletter(BaseModel):
 
 	def __str__(self):
 		return self.title
+
+class Covid(BaseModel):
+	class Meta:
+		verbose_name_plural = "Covid-19 info"
+
+	title = models.CharField(max_length=255)
+	file = models.FileField(upload_to='activities/covid/%Y', blank=True)
+	link = models.URLField(blank=True)
+	date = models.DateField()
+
+	def __str__(self):
+		return self.title

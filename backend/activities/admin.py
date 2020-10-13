@@ -66,6 +66,8 @@ class OutreachModelAdmin(admin.ModelAdmin):
 class NewsletterModelAdmin(admin.ModelAdmin):
 	list_display = ['title', 'date']
 
+class CovidModelAdmin(admin.ModelAdmin):
+	list_display = ['title', 'date']
 
 admin.site.register(Outreach, OutreachModelAdmin)
 admin.site.register(StudentClub, StudentClubModelAdmin)
@@ -82,3 +84,4 @@ admin.site.register(Coecarousel, CoecarouselModelAdmin)
 admin.site.register(PlacementLinks, PlacementLinksModelAdmin)
 admin.site.register(Visitor, VisitorModelAdmin)
 admin.site.register(Newsletter, NewsletterModelAdmin)
+admin.site.register(Covid, CovidModelAdmin)

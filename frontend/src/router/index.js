@@ -77,6 +77,7 @@ import Ncc from '@/components/activities/Ncc'
 import Uba from '@/components/activities/Uba'
 import Beat from '@/components/activities/Beat'
 import Newsletters from '@/components/activities/Newsletters'
+import Covidinfo from '@/components/activities/Covidinfo'
 import Geothermal from '@/components/activities/Geothermal'
 import FitIndiaMovement from '@/components/activities/FitIndiaMovement'
 
@@ -365,6 +366,11 @@ export default new Router({
       path: '/newsletters',
       name: 'Newsletters',
       component: Newsletters
+    },
+    {
+      path: '/covid19informations',
+      name: 'Covidinfo',
+      component: Covidinfo
     },
     {
       path: '/rashtriyaavishkarabhiyan',
