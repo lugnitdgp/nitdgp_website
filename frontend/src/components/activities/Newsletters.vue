@@ -1,5 +1,9 @@
 <template>
   <links-page>
+  	<card title = "About Newsletters" class="text-justify">
+  		The Institute Newsletter, a biannual publication, presents an account of the academic activities of the faculty members and accomplishments of the students along with the extra-curricular achievements of NIT Durgapur fraternity, during the relevant period. It also aims at reflecting the ambience of the institute and its social connectivity. It will serve as the medium of interaction among the faculty members, students and alumni, constituting a novel platform for looking beyond the boundary and networking with the academic institutions for achieving excellence.
+  	</card>
+  	<br>
     <card title="Newsletters">
       <notice-list :noticelist="newslettersList" />
     </card>
