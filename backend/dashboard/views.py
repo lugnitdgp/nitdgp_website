@@ -49,6 +49,9 @@ class CarouselViewSet(ListAPIView):
     queryset = Carousel.objects.all().order_by('-created_at')
     serializer_class = CarouselSerializer
 
+    def list(self, request, *args, **kwargs):
+        return Response({"results": CarouselSerializer(self.get_queryset(), many=True, context={"request":request}).data})
+
 
 class EventViewSet(ListAPIView):
 
