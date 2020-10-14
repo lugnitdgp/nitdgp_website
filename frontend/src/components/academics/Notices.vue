@@ -18,6 +18,10 @@
           <a v-if="$route.params.tab === 'hostel'" class="nav-link active" data-toggle="tab" href="#panel4" role="tab">Hostel</a>
           <a v-else class="nav-link" data-toggle="tab" href="#panel4" role="tab">Hostel</a>
         </li>
+        <li class="nav-item">
+          <a v-if="$route.params.tab === 'covid'" class="nav-link active" data-toggle="tab" href="#panel5" role="tab">COVID-19</a>
+          <a v-else class="nav-link" data-toggle="tab" href="#panel5" role="tab">COVID-19</a>
+        </li>
       </ul>
       <div class="tab-content card">
         <div v-if="$route.params.tab === 'academic'" class="tab-pane in show active fade" id="panel1" role="tabpanel">
@@ -46,6 +50,12 @@
         <div class="tab-pane fade" id="panel4" role="tabpanel">
           <notice-list :noticelist="hostel" />
         </div>
+        <div v-if="$route.params.tab === 'covid'" class="tab-pane in show active fade" id="panel5" role="tabpanel">
+          <notice-list :noticelist="covid" />
+        </div>
+        <div class="tab-pane fade" id="panel5" role="tabpanel">
+          <notice-list :noticelist="covid" />
+        </div>
 
       </div>
     </card>
@@ -66,10 +76,18 @@ export default {
       academic: [],
       student: [],
       general: [],
-      hostel: []
+      hostel: [],
+      covid: []
     }
   },
   created () {
+    axios.get(genBackendURL("activities/covid"))
+         .then(response => {
+           this.covid = response.data.results
+         })
+         .catch(e => {
+           console.log(e)
+         })
     axios.get(genBackendURL('academics/hostelnotices'))
          .then(response => {           
            this.hostel = response.data.results
@@ -79,7 +97,6 @@ export default {
          })
     axios.get(genBackendURL('academics/notices'))
          .then(response => {
-           console.log(response)
            let notices = response.data.notices
            this.student.push(...notices.Student)
            this.academic = notices.Academic
