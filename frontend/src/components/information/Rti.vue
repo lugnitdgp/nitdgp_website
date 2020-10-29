@@ -108,6 +108,10 @@
             <td>3.4 First Statutes of National Institute Pdf Form of Technology (Amendent) Statutes, 2017</td>
             <td><a href="http://nitdgp.ac.in/AllPDF/RTI/3.4 FIRST STATUTES OF NATIONAL INSTITUTE OF TECHNOLOGY (AMENDENT) STATUTES, 2017.pdf">View Details...</a></td>
         </tr>
+        <tr class="tbl-body-style">
+            <td>3.5 Amendments in the Statutes of NITs and IIEST, shibpur</td>
+            <td><a href="http://nitdgp.ac.in/AllPDF/RTI/3.5 Amendments _ Statutes of NITs and IIEST.pdf">View Details...</a></td>
+        </tr>
     </tbody>
 </table>
 <table class="table table-bordered table-responsive" align="center" style="width: 80%;">
