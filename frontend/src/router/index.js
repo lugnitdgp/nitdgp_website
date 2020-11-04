@@ -76,6 +76,7 @@ import Raa from '@/components/activities/Raa'
 import Ncc from '@/components/activities/Ncc'
 import Uba from '@/components/activities/Uba'
 import Beat from '@/components/activities/Beat'
+import Iimstudent from '@/components/activities/Iimstudent'
 import Newsletters from '@/components/activities/Newsletters'
 import Covidinfo from '@/components/activities/Covidinfo'
 import Geothermal from '@/components/activities/Geothermal'
@@ -361,6 +362,11 @@ export default new Router({
       path: '/beat',
       name: 'Beat',
       component: Beat
+    },
+    {
+      path: '/iimstudent',
+      name: 'Iimstudent',
+      component: Iimstudent
     },
     {
       path: '/newsletters',
