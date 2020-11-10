@@ -144,3 +144,11 @@ class OfficerViewSet(ListAPIView):
 class AllmemberViewSet(ListAPIView):
     queryset = Memberall.objects.all()
     serializer_class = AllmemberSerializer
+    def list(self, request, *args, **kwargs):
+        senate = self.get_queryset().filter(role='Senate')
+        ifc = self.get_queryset().filter(role='IFC')
+        bwc = self.get_queryset().filter(role='BWF')
+        return Response({'senatemem': BOGSerializer(senate, many=True, context={"request": request}).data,
+                         'ifcmem': BOGSerializer(ifc, many=True, context={"request": request}).data,
+                         'bwcmem': BOGSerializer(bwc, many=True, context={"request": request}).data
+                         })
