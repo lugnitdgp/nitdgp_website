@@ -18,5 +18,6 @@ urlpatterns = [
     url(r'^administration/hod/$', HodViewSet.as_view(), name='list-hods'),
     url(r'^administration/wardens/$', WardenViewSet.as_view(), name='list-wardens'),
     url(r'^administration/officers/$', OfficerViewSet.as_view(), name='list-officers'),
+    url(r'^administration/allmember/$', AllmemberViewSet.as_view(), name='list-members'),
 
 ]

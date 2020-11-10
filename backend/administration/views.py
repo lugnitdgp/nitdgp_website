@@ -138,3 +138,9 @@ class BOGViewSet(ListAPIView):
 class OfficerViewSet(ListAPIView):
     queryset = Officer.objects.all()
     serializer_class = OfficerSerializer
+
+
+
+class AllmemberViewSet(ListAPIView):
+    queryset = Memberall.objects.all()
+    serializer_class = AllmemberSerializer

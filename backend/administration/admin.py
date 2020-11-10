@@ -30,6 +30,9 @@ class OfficerModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'designation', 'phone', 'mobile', 'email']
 
 
+class MemberallModelAdmin(admin.ModelAdmin):
+    list_display = ['_role', '_name', '_designation', '_address']
+
 admin.site.register(Dean, DeanModelAdmin)
 admin.site.register(BOG, BOGModelAdmin)
 admin.site.register(BwcIfc, BwcIfcModelAdmin)
@@ -37,3 +40,4 @@ admin.site.register(Senate, SenateAdmin)
 admin.site.register(Warden, WardenModelAdmin)
 admin.site.register(BogAgenda, BogAgendaAdmin)
 admin.site.register(Officer, OfficerModelAdmin)
+admin.site.register(Memberall, MemberallModelAdmin)

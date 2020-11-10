@@ -82,3 +82,9 @@ class OfficerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Officer
         fields = ('name', 'designation', 'phone', 'email', 'photo')
+
+
+class AllmemberSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Memberall
+        fields = ('name', 'designation', 'image', 'address', 'role')

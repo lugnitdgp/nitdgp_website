@@ -171,3 +171,30 @@ class Officer(BaseModel):
     )
     email = models.EmailField(blank=True)
     photo = models.ImageField(upload_to='administration/officer/')
+
+
+class Memberall(BaseModel):
+    class Meta:
+        verbose_name_plural = 'Administration Members'
+
+    MEMBER_TYPES = (('Senate', 'Senate'), ('BWF', 'BWF'), ('IFC', 'IFC'))
+    name = models.CharField(max_length=512)
+    role = models.CharField(choices=MEMBER_TYPES, default='Senate', max_length=20)
+    designation = models.CharField(max_length=1024)
+    address = models.CharField(max_length=1024)
+    image = models.ImageField(upload_to='administration/all_members')
+
+    def _role(self):
+        return self.role
+
+    def _name(self):
+        return self.name
+
+    def _role(self):
+        return self.role
+
+    def _designation(self):
+        return self.designation
+
+    def _address(self):
+        return self.address
