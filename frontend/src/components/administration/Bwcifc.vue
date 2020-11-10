@@ -11,7 +11,7 @@
             :image="person.image"
             :name="person.name"
             :desig="person.designation">
-            <strong>{{ person.role }}</strong></br>
+            <strong>IFC</strong></br>
             {{ person.address }}</br>
           </card-testimonial>
         </div>
@@ -26,7 +26,7 @@
             :image="person.image"
             :name="person.name"
             :desig="person.designation">
-            <strong>{{ person.role }}</strong></br>
+            <strong>B&WC</strong></br>
             {{ person.address }}</br>
           </card-testimonial>
         </div>
