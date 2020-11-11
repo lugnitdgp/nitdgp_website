@@ -11,7 +11,7 @@
             :image="person.image"
             :name="person.name"
             :desig="person.designation">
-            <strong>IFC</strong></br>
+            <strong>FC</strong></br>
             {{ person.address }}</br>
           </card-testimonial>
         </div>
