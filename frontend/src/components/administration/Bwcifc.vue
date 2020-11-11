@@ -1,10 +1,10 @@
 <template>
   <links-page>
     <collapse-list>      
-      <card-collapse title="Minutes of IFC Meeting" :show="true">
+      <card-collapse title="Minutes of FC Meeting" :show="true">
         <notice-list :noticelist="ifc_docs" />
       </card-collapse>
-      <card-collapse v-if="ifc_members" title="IFC Members" :show="false">
+      <card-collapse v-if="ifc_members" title="FC Members" :show="false">
         <div class="row bgcustom">
           <card-testimonial v-for="(person, i) in ifc_members" :key="i"
             class="black-text"
