@@ -364,7 +364,7 @@ export default new Router({
       component: Beat
     },
     {
-      path: '/iimstudent',
+      path: '/iimscnitdgp',
       name: 'Iimstudent',
       component: Iimstudent
     },
