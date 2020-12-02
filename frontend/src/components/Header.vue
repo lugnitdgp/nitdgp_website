@@ -71,6 +71,7 @@
     </nav>
     <div class="live-news-section">
         <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <a href="https://nitdgp.ac.in/AllPDF/d_msg/Director_Sir.mp4" target="_blank">Video Message from Director Sir</a>&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://nitdgp.ac.in/AllPDF/d_msg/To_the_Students.mp4" target="_blank">Director's Message for the students</a>&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://admin.nitdgp.ac.in/files/newsfeed/2020/04/15/PRANESH_NITDGP_website2.pdf" target="_blank">NIT Durgapur has developed an indigenous automated AMBU bag system, that can serve as a quick and temporary substitute for ventilators in emergency situations. AMBU stands for Artificial Manual Breathing Unit. The present system is automated and can be tuned for oxygen requirements. The system has been christened "Pranesh</a>
         </marquee>
     </div>
