@@ -213,13 +213,14 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="activ1" role="tabpanel">
                   <ul class="link-list">
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-1.pdf" target="_new">Tough High-Carbon Mattenstite</a></li>
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-2.pdf" target="_new">Accelerated development of high-performance magnetic materials for emerging technologies.</a></li>
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-3.pdf" target="_new">Multiscale and multi-physics simulations of chemo-mechanical crystal plasticity problems for complex engineering materials using DAMASK</a></li>
+                    <li><a href="https://youtu.be/MmPkI5b4OtI" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”</a></li>
                   </ul>
                 </div>
                 <div class="tab-pane fade in show" id="activ2" role="tabpanel">
                   <ul class="link-list">
+                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-1.pdf" target="_new">Tough High-Carbon Mattenstite</a></li>
+                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-2.pdf" target="_new">Accelerated development of high-performance magnetic materials for emerging technologies.</a></li>
+                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-3.pdf" target="_new">Multiscale and multi-physics simulations of chemo-mechanical crystal plasticity problems for complex engineering materials using DAMASK</a></li>
                     <li><a href="http://nitdgp.ac.in/iimchapter/Doc-17.pdf" target="_new">Aluminum Superalloys for high-strength high-temperature applications.</a></li>
                   </ul>
                 </div>
@@ -358,8 +359,8 @@ export default {
       nav: false,
       popUpTop: 0,
       top: -1,
-      notices:[],
-      slides:[{primary_caption: "IIM Student Chapter", image: "http://nitdgp.ac.in/iimchapter/Pic-0.jpeg", secondary_caption: "IIM Student Chapter"}],
+      notices:convertNewsfeed([{title:'The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”',file:"",date:"2020-12-16",url:"https://youtu.be/MmPkI5b4OtI"}]),
+      slides:[{primary_caption: "IIM Student Chapter", image: "http://nitdgp.ac.in/iimchapter/Pic-0.jpeg", secondary_caption: "IIM Student Chapter"},{primary_caption:"Webinar 4",image:"http://nitdgp.ac.in/iimchapter/webniar4.jpeg",secondary_caption:"Webinar 4"}],
       news:[
         {title: "Shubhadip Paul – Awarded the Special Prize for oral presentation on the 10th International Seminar on Metallurgy and Material Science (Behind the Teacher’s Desk), organized by IIM, Jamshedpur Chapter in association with Tata Steel Ltd and CSIR-NML conducted on 28th August, 2020. ", file: "", date: "2020-08-28", url:""},
         ],
