@@ -4,7 +4,7 @@
       <a class="card-header white-text">Holidays</a>
       <div class="card-body content">
         <ul>
-          <li><a href="http://nitdgp.ac.in/AllPDF/Institute Holidays.pdf" target="new">List of holidays in the year 2020</a></li>
+          <li><a href="http://nitdgp.ac.in/AllPDF/Institute Holidays_2021_NITD.pdf" target="new">List of holidays in the year 2021</a></li>
         </ul>
       </div>
     </div>
