@@ -213,11 +213,15 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="activ1" role="tabpanel">
                   <ul class="link-list">
-                    <li><a href="https://youtu.be/MmPkI5b4OtI" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”</a></li>
+                    <li><a href="http://nitdgp.ac.in/iimchapter/Webinar-5.jpeg" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fifth webinar to be delivered by Prof. Asthana., Professor, Robert F. Cervenka School of Engineering, University of Wisconsin-Stout, USA on 9th Jan. 2021 at 5:00 PM (IST). The topic of his lecture is ‘Ceramic Integration using Active Brazing and Diffusion Bonding'</a></li>
+                    <hr>
+                    <li><a href=" https://forms.gle/o5UxT4r2CpzU9S6CA" target="_new">Registration Link</a></li>
+
                   </ul>
                 </div>
                 <div class="tab-pane fade in show" id="activ2" role="tabpanel">
                   <ul class="link-list">
+                    <li><a href="https://youtu.be/MmPkI5b4OtI" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”</a></li>
                     <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-1.pdf" target="_new">Tough High-Carbon Mattenstite</a></li>
                     <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-2.pdf" target="_new">Accelerated development of high-performance magnetic materials for emerging technologies.</a></li>
                     <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-3.pdf" target="_new">Multiscale and multi-physics simulations of chemo-mechanical crystal plasticity problems for complex engineering materials using DAMASK</a></li>
