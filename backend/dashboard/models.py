@@ -119,6 +119,7 @@ class Event(BaseModel):
         return self.file
 
 
+
 class NewsFeed(BaseModel):
 
     class Meta:
@@ -127,6 +128,7 @@ class NewsFeed(BaseModel):
     title = models.CharField(max_length=512)
     file = models.FileField(upload_to='newsfeed/%Y/%m/%d', blank=True)
     url = models.URLField(blank=True)
+    archive = models.BooleanField(default=False)
     date = models.DateField()
 
     def __str__(self):
