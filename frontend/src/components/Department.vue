@@ -37,6 +37,9 @@
           <li class="nav-item">
             <a class="nav-link waves-light" :href="'/department/'+this.$route.params.short_code+'/contact-us'" role="tab">Contact Us</a>
           </li>
+          <li class="nav-item" v-if="dept.name=='Metallurgical & Materials Engineering'">
+            <a class="nav-link waves-light" href="http://nitdgp.ac.in/iimscnitdgp" role="tab">IIM Students Chapter</a>
+          </li>
         </ul>
       </div>
       <div class="tab-content card down-content">
