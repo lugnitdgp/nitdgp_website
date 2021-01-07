@@ -75,6 +75,7 @@ import Crew from '@/components/activities/Crew'
 import Iotis from '@/components/activities/Iotis'
 import Raa from '@/components/activities/Raa'
 import Ncc from '@/components/activities/Ncc'
+import Nss from '@/components/activities/Nss'
 import Uba from '@/components/activities/Uba'
 import Beat from '@/components/activities/Beat'
 import Iimstudent from '@/components/activities/Iimstudent'
@@ -433,6 +434,11 @@ export default new Router({
       path: '/ncc',
       name: 'Ncc',
       component: Ncc
+    },
+    {
+      path: '/nss',
+      name: 'Nss',
+      component: Nss
     },
     {
       path: '/uba',
