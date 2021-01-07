@@ -363,7 +363,7 @@ export default {
       nav: false,
       popUpTop: 0,
       top: -1,
-      notices:convertNewsfeed([{title:'The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”',file:"",date:"2020-12-16",url:"https://youtu.be/MmPkI5b4OtI"}]),
+      notices:convertNewsfeed([{title:'The fifth webinar on the topic Ceramic Integration using Active Brazing and Diffusion Bonding', file:'http://nitdgp.ac.in/iimchapter/Webinar-5.jpeg',date:'2021-01-07',url:''},{title:'The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”',file:"",date:"2020-12-16",url:"https://youtu.be/MmPkI5b4OtI"}]),
       slides:[{primary_caption: "IIM Student Chapter", image: "http://nitdgp.ac.in/iimchapter/Pic-0.jpeg", secondary_caption: "IIM Student Chapter"},{primary_caption:"Webinar 4",image:"http://nitdgp.ac.in/iimchapter/webniar4.jpeg",secondary_caption:"Webinar 4"}],
       news:[
         {title: "Shubhadip Paul – Awarded the Special Prize for oral presentation on the 10th International Seminar on Metallurgy and Material Science (Behind the Teacher’s Desk), organized by IIM, Jamshedpur Chapter in association with Tata Steel Ltd and CSIR-NML conducted on 28th August, 2020. ", file: "", date: "2020-08-28", url:""},
