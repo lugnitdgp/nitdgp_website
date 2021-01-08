@@ -5,6 +5,7 @@
         <a href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>&nbsp;&nbsp;
         <a href="/nirf"></i> NIRF</a>&nbsp;&nbsp;
         <a href="/chanakya"><i class="fa fa-1x fa-tv"></i> Chanakya&nbsp;</a>
+        <a href="/live-convocation-16"> <span style="color: red;font-weight: bold;">Live Convocation 16&nbsp;</span></a>
       </div>
       <div class="navbar-menu">
         <a class="nav-link dropdown-toggle" style="color:white;padding-left: 5px"
@@ -15,6 +16,7 @@
           <a class="dropdown-item" href="/home"><i class="fa fa-2x fa-home" ></i> Home</a>
           <a class="dropdown-item" href="/nirf"><i class="fa fa-1x fa-newspaper-o" ></i> NIRF</a>
           <a class="dropdown-item" href="/chanakya"><i class="fa fa-1x fa-tv" ></i> Chanakya</a>
+          <a href="/live-convocation-16"> <span style="color: red;font-weight: bold;">Live Convocation 16&nbsp;</span></a>
           <a class="dropdown-item" href="/contacts"><i class="fa fa-1x fa-phone"></i> Contacts</a>
           <!-- <a class="dropdown-item" href="/quicklinks"><i class="fa fa-1x fa-plus"></i> Quick Links</a> -->
           <a class="dropdown-item" href="https://old.nitdgp.ac.in"><i class="fa fa-1x fa-globe"></i> OldWeb</a>
