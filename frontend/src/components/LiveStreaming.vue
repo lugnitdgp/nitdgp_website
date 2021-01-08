@@ -3,9 +3,9 @@
     <card title="16th Convocation Live Streaming">
     	
       	<div class="sociallink" v-if="timeDiff<=0">
-      		<span href="#">Youtube Link</span>
-      		<span>Facebook Link</span>
-      		<span>Microsoft Teams Link</span>
+      		<span><a href="https://www.youtube.com/channel/UC1svhZpnCQ1OoqYiMnhh-3g" target="_new">Youtube Link</a></span>
+      		<span><a href="https://www.facebook.com/nitdgpofficial" target="_new">Facebook Link</a></span>
+      		<!-- <span>Microsoft Teams Link</span> -->
       	</div>
 
       	<div class="" v-else>
