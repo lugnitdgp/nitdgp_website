@@ -24,6 +24,7 @@ import Contacts from '@/components/Contacts'
 import QuickLinks from '@/components/QuickLinks'
 import Nad from '@/components/Nad'
 import Liveconvocation from '@/components/Liveconvocation'
+import ConvocationGuest from '@/components/ConvocationGuest'
 import LiveStreaming from '@/components/LiveStreaming'
 import SearchResults from '@/components/SearchResults'
 import PowerSystem from '@/components/PowerSystem'
@@ -240,6 +241,11 @@ export default new Router({
       path: '/live-convocation-16',
       name: 'LiveStreaming',
       component: LiveStreaming
+    },
+    {
+      path: '/convocation-guest',
+      name: 'ConvocationGuest',
+      component: ConvocationGuest
     },
     {
       path: '/academicdocument',
