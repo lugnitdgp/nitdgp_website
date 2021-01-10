@@ -11,6 +11,10 @@
         </h3>
         <h4 class="desig cyan-text">Director</h4>
         <hr class="hr-grey">
+        <p class="white-text" align="justify">
+          Da Vinci Award, Engineering Society of Detroit and Multiple Sclerosis Society of Michigan, for the technology for communication by the speech impaired and people with cerebral palsy, 2004. Fellow of Indian National Academy of Engineering, 2000, Humboldt Fellowship, Jaycee Award for Outstanding Persons,  Young Scientist Award, Dept. of Science & Technology, Govt. of India, 1992, for R&D towards devices for visually handicapped. <a href="http://www.iitkgp.ac.in/cv/cs-anupam">http://www.iitkgp.ac.in/cv/cs-anupam</a>
+        </p>
+        <hr class="hr-grey">
         <p class="white-text" align="center">
           <i class="fa fa-map-marker fa-1x"></i><br>
           National Institute of Technology,<br>
