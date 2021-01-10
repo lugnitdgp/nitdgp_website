@@ -5,6 +5,7 @@
       	<div class="sociallink" v-if="timeDiff<=0">
       		<span><a href="https://www.youtube.com/channel/UC1svhZpnCQ1OoqYiMnhh-3g" target="_new">Youtube Link</a></span>
       		<span><a href="https://www.facebook.com/nitdgpofficial" target="_new">Facebook Link</a></span>
+      		<span><a href="https://www.moodle.nitdgp.ac.in" target="_new">Moodle Link</a></span>
       		<!-- <span>Microsoft Teams Link</span> -->
       	</div>
 
