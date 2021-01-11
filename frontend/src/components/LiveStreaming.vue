@@ -3,9 +3,11 @@
     <card title="16th Convocation Live Streaming">
     	
       	<div class="sociallink" v-if="timeDiff<=0">
-      		<span><a href="https://www.youtube.com/channel/UC1svhZpnCQ1OoqYiMnhh-3g" target="_new">Youtube Link</a></span>
-      		<span><a href="https://www.facebook.com/nitdgpofficial" target="_new">Facebook Link</a></span>
-      		<span><a href="https://www.moodle.nitdgp.ac.in" target="_new">Moodle Link</a></span>
+      		<span>1. &nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/channel/UC1svhZpnCQ1OoqYiMnhh-3g" target="_new">Youtube Live</a></span>
+      		<span>2.&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/nitdgpofficial" target="_new">Facebook Live</a></span>
+      		<span>3.&nbsp;&nbsp;&nbsp;<a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDUyZGE3NjEtYzcyOC00MzJlLTlmY2UtMmEwMWU0ZTNjMTA4%40thread.v2/0?context=%7b%22Tid%22%3a%22a58978f7-efcb-4b53-bd81-8361fa13fa5c%22%2c%22Oid%22%3a%221e3015f6-9eb5-4fef-9780-fa6e86b185f3%22%2c%22IsBroadcastMeeting%22%3atrue%7d" target="_new">Teams Live( Exclusively for our Students, Faculties and stuffs)</a></span>
+      		<span>4.&nbsp;&nbsp;&nbsp;<a href="https://web.microsoftstream.com/video/e42c9928-4f03-468e-a38f-1afe409032d6" target="_new">MS Stream Live( Exclusively for our Students, Faculties and stuffs)</a></span>
+      		<span>5.&nbsp;&nbsp;&nbsp;<a href="https://www.moodle.nitdgp.ac.in" target="_new">Moodle Link</a></span>
       		<!-- <span>Microsoft Teams Link</span> -->
       	</div>
 
@@ -71,7 +73,7 @@ export default {
   methods:{
   	countdown() {
       setTimeout(() => {
-        var countDownDate = new Date('January 12, 2021 10:20:00');
+        var countDownDate = new Date('January 12, 2021 10:25:00');
           var now = new Date();
           this.timeDiff = countDownDate - now;
           this.time.days = Math.floor(this.timeDiff / (1000 * 60 * 60 * 24));
@@ -127,8 +129,8 @@ export default {
   .sociallink{
   	display: flex;
   	flex-direction: column;
-  	align-items: center;
-  	justify-content: center;
+  	align-items: left;
+  	justify-content: left;
   	color: blue;
   	font-size: 25px;
   }
