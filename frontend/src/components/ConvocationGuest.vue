@@ -31,7 +31,7 @@
         </div>
         <div class="single-guest">
           <div class="details">
-            Prof. Anupam Basu, currently the Director and Professor of NIT Durgapur, is also a Professor at Department of Computer Science Engineering in IIT Kharagpur, India. Previously He has taught at University of California, Irvine and University of Guelph, Ontario, Canada as a visiting Professor and have been the Humboldt Fellow at TU Dortmund, Germany. Even before that, He has been a Systems Engineer for Webel Computers Ltd, India. His research Interests are Embedded Systems, Natural Language Processing, Assistive Technology, Natural Interface Design, Human Computer Interaction and ICT4D.Da Vinci Award, Engineering Society of Detroit and Multiple Sclerosis Society of Michigan, for the technology for communication by the speech impaired and people with cerebral palsy, 2004. Fellow of Indian National Academy of Engineering, 2000, Humboldt Fellowship, Jaycee Award for Outstanding Persons,  Young Scientist Award, Dept. of Science & Technology, Govt. of India, 1992, for R&D towards devices for visually handicapped. <a href="http://www.iitkgp.ac.in/cv/cs-anupam">http://www.iitkgp.ac.in/cv/cs-anupam</a>
+            Prof. Anupam Basu, currently the Director and Professor of NIT Durgapur, is also a Professor at Department of Computer Science Engineering in IIT Kharagpur, India. Previously He has taught at University of California, Irvine and University of Guelph, Ontario, Canada as a visiting Professor and have been the Humboldt Fellow at TU Dortmund, Germany. Even before that, He has been a Systems Engineer for Webel Computers Ltd, India. His research Interests are Embedded Systems, Natural Language Processing, Assistive Technology, Natural Interface Design, Human Computer Interaction and ICT4D.He is the recipient of Da Vinci Award, Engineering Society of Detroit and Multiple Sclerosis Society of Michigan, for the technology for communication by the speech impaired and people with cerebral palsy, 2004. Fellow of Indian National Academy of Engineering, 2000, Humboldt Fellowship, Jaycee Award for Outstanding Persons,  Young Scientist Award, Dept. of Science & Technology, Govt. of India, 1992, for R&D towards devices for visually handicapped. <a href="http://www.iitkgp.ac.in/cv/cs-anupam" target="_new">http://www.iitkgp.ac.in/cv/cs-anupam</a>
           </div>
           <div class="imageview">
             <img src="http://nitdgp.ac.in/convocation16guest/Prof. Anupam Basu.jpg" class="img img-responsive img-thumbnail">
@@ -103,10 +103,10 @@ export default {
     background: #005cb9;
   }
   .single-guest:nth-child(3){
-    background: #736AFF;
+    background: #e83e8c;
   }
   .single-guest:nth-child(4){
-    background: #3090C7;
+    background: #736AFF;
   }
   .details{
     margin: 8px;
