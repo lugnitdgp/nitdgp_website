@@ -238,7 +238,7 @@ export default new Router({
       component: Liveconvocation
     },
     {
-      path: '/live-convocation-16',
+      path: '/live-convocation-16-recorded-video',
       name: 'LiveStreaming',
       component: LiveStreaming
     },
