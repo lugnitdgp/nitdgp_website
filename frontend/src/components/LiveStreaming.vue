@@ -7,7 +7,7 @@
       		<span>2.&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/nitdgpofficial" target="_new">Facebook Live</a></span>
       		<span>3.&nbsp;&nbsp;&nbsp;<a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjFjZTBlMGUtNTYzMS00MDcyLTgwN2ItNmQxOTlmMjhiNGYx%40thread.v2/0?context=%7b%22Tid%22%3a%22a58978f7-efcb-4b53-bd81-8361fa13fa5c%22%2c%22Oid%22%3a%2228387cbc-5d0f-460c-887b-86f8054e568f%22%2c%22IsBroadcastMeeting%22%3atrue%7d" target="_new">Teams Live( Exclusively for our Students, Faculties and stuffs)</a></span>
       		<span>4.&nbsp;&nbsp;&nbsp;<a href="https://web.microsoftstream.com/video/b3ea5266-d364-4962-9919-9868b7d08512" target="_new">MS Stream Live( Exclusively for our Students, Faculties and stuffs)</a></span>
-      		<span>5.&nbsp;&nbsp;&nbsp;<a href="https://www.moodle.nitdgp.ac.in" target="_new">Moodle Link</a></span>
+      		<span>5.&nbsp;&nbsp;&nbsp;<a href="https://moodle.nitdgp.ac.in" target="_new">Moodle Link</a></span>
       		<!-- <span>Microsoft Teams Link</span> -->
       	</div>
 
