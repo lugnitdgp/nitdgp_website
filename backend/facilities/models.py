@@ -46,7 +46,7 @@ class Resource(BaseModel):
     class Meta:
         verbose_name_plural = 'Resources'
 
-    TYPES = (('E Resource', 'E Resource'), ('Text Resource', 'Text Resource'))
+    TYPES = (('E Resource', 'E Resource'), ('Text Resource', 'Text Resource'), ('eSoch Sindhu','eSoch Sindhu'),('Sodh Suddhi Access','Sodh Suddhi Access'),('NDLI e-Resources','NDLI e-Resources'))
     title = models.CharField(max_length=255, default="")
     url = models.URLField()
     type = models.CharField(choices=TYPES, max_length=512)

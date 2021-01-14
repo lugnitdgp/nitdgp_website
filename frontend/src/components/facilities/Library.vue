@@ -28,6 +28,40 @@
         </div>
       </div>
     </card>
+    <card v-if="resources" title="E-Resources through E-Sodh Sindhu">
+      <div class="row">
+        <div class="col">
+        <h4>eSoch Sindhu</h4>
+          <ul class="list-group list-gr">
+            <li v-for="resource in resources['eSoch Sindhu']">
+              <a class="list-group-item" :href="resource.url">
+                {{ resource.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+        <h4>Sodh Suddhi Access</h4>
+          <ul class="list-group list-gr">
+            <li v-for="resource in resources['Sodh Suddhi Access']">
+              <a class="list-group-item" :href="resource.url">
+                {{ resource.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+        <h4>NDLI e-Resources</h4>
+          <ul class="list-group list-gr">
+            <li v-for="resource in resources['NDLI e-Resources']">
+              <a class="list-group-item" :href="resource.url">
+                {{ resource.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </card>
   </links-page>
 </template>
 
