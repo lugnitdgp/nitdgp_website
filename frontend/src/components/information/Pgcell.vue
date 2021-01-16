@@ -16,11 +16,11 @@
       <a class="card-header white-text">Staff Grievance Officer </a>
       <div class="card-body">
 	<font>
-	  Prof. Vijay Kumar Dwivedi<br/>
-    Department of Civil Engineering,<br/>
+	  Prof. Gautam Kumar Mahanti<br/>
+    Department of Electronics and Communication Engineering,<br/>
     National Institute of Technology,<br/>
     Durgapur, West Bengal-713209.<br/>
-    Mobile: +91-9434788097<br/>
+    Mobile: +91-9434788107<br/>
     Email: sgo@admin.nitdgp.ac.in 
 	</font>
       </div>
