@@ -66,7 +66,7 @@
                   <li>The high geothermal heat outflow (230 mW/m2), geothermal gradient (90 0C/km) is seen in this area. Also high concentration of helium and radon (radioactive gas) are emanating from the hot springs of this zone. These data indicates the presence of a potential geothermal resource in the area. This area will be ideal for setting up a “geothermal” energy reactor - a vital source of energy (green energy) still completely ignored in India.</li>
                 </ul>
                 Presently the entire programme is operated from NIT Durgapur. A high level scientific community is monitoring and supervising the said activity.
-                <img src="https://nitdgp.ac.in/helium_geothermal/images/clip_image002_0000.jpg">
+                <img src="https://old.nitdgp.ac.in/helium_geothermal/images/clip_image002_0000.jpg">
               </p>
 
             </div>
@@ -137,12 +137,12 @@
                 <strong><li>Helium Exploration and Purification :</li></strong>
                 <p class="text-justify">Recently an unprecedented scarcity of helium is observed around the globe. The largest supplier of Helium, the United States of America already announced to cut off the supply to the other part of the globe. The helium used in scientific research and modern technology in India is 100% imported till the date. So far work has been done to extract helium from hot springs (surface manifestation only) only Bakreswar geothermal area. However the He yield from this existing plant is very less (Fig 1).
                 <div class="geoimage">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra1.jpg" class="img img-responsive single-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra1.jpg" class="img img-responsive single-image">
                     <p class="text-center"><strong>Fig 1 : Helium Plant at Bakreswar</strong></p>
                 </div>
                 Therefore a deep drilling based helium extraction plant along with purification system is proposed to recover helium in large scale.In this scenario very recently NIT Durgapur has taken a programme to explore the hydrothermal source of helium at BakreswarTantloi geothermal area. A research project has been undertaken at Bakreswar-Tantloi geothermal area to extract helium in large scale from a proposed 800 m deep drilling (bore-hole).The raw helium (concentration of 1.8-2.0 vol.%, mixed with other gases like CH4 3.43 vol%, N2  92.20 vol%, Ar 2.10 vol%, O2 0.90 vol%, CO2 1.20 vol%,) which is supposed to be extracted from this 800 m deep bore-hole.
                 <div class="geoimage">
-                  <img src="https://nitdgp.ac.in/helium_geothermal/images/ra2.jpg" class="img img-responsive single-image">
+                  <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra2.jpg" class="img img-responsive single-image">
                   <p class="text-center"><strong>Fig 2 : Deep drilling based Helium Plant at Bakreswar</strong></p>
                 </div>
                 After extraction of helium from that hot spring gas we need to purify it. In this purposes we must need to build a Helium Plant having a well-developed purification Units (Fig 2).<br>
@@ -152,28 +152,28 @@
                 <p class="text-justify">
                   The project is a start off venture for exploring the Geothermal Energy and setting up a proposed Geothermal Power Plant in the Bakreswar-Tantloi Geothermal Area. The high geothermal heat outflow (230 mW/m2), geothermal gradient (90 0C/km) is seen in this area. Also high concentration of helium and radon (radioactive gas) are emanating from the hot springs of this zone. These data indicates the presence of a potential geothermal resource in the area. This area will be ideal for setting up a “geothermal” energy reactor - a vital source of energy (green energy) still completely ignored in India.
                   <div class="geoimage">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra3.jpg" class="img img-responsive single-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra3.jpg" class="img img-responsive single-image">
                   </div>
                   NIT Durgapur has taken up a project of drilling an 800m borehole which will supply the natural steam for the proposed Pilot Geothermal Plant. Different data analysis will be done at different depths in the borehole which will be useful for the installation of the equipments for the above mentioned Pilot Geothermal Power Plant. 
                    <div class="geoimage">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra4.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra4.jpg" class="img img-responsive multi-image">
                   
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra5.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra5.jpg" class="img img-responsive multi-image">
                   
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra6.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra6.jpg" class="img img-responsive multi-image">
                   </div>
                 </p>
                 <strong><li>Monitoring of Earthquake Precursors :</li></strong>
                 <p class="text-justify">
                   The Earthquake Precursor Study will deploy gas geochemical techniques for the prediction of earthquake. It focusses in bringing together changes in spring gas and soil gas anomalies as a predictive tool in earthquake research by accessing instrumental data recorded at four geographically remote monitoring centres using digital data communication through VSAT networking.The principal objective of the research is to create baseline information on the relationship of gas concentration changes to imminent seismic events in the context of the Indian geophysical scenario. It proposes to examine inherent redundancies in the application of the method and the possibility of assimilating geochemically derived information with other predictive approaches.Statistical data correlation is a part of the investigation.Presently four Monitoring Stations are operated by the said group at different corners of the country along with a central data analysis centre at headquarter at NIT Durgapur. The monitoring stations are placed in dissimilar geological environments and in different seismic zones of the country. One of the monitoring stations is located at the thermal spring site at Bakreswar(23o 52’ 30” N; 87o22’ 30” E) which lies in the eastern part of the country in a moderate risk zone - seismic zone III. It is close to the extinct (115Ma) Rajmahalvolcanics of the Chotanagpur gneissic complex in West Bengal. The second one monitoring station is situated at the TattaPani(33o14’16”N, 74o24’43”E)thermal spring site which falls in the north-western part of the country in a high risk zone - seismic zone IV and it is located in a non-volcanic geothermal area that lies within the mountain folds of Jammu & Kashmir, situated in proximity to the Main Boundary Thrust (MBT) of the Lesser Himalayas.The third one is at the mud volcano, Baratang island (12007’ N;92047’E) of Andaman & Nicobar islands. Mud or Sedimentary volcanoes are cone shape mounds formed from fine mud eruption containing gases and acidic liquids with suspended fine sediments. Mud volcanoes do not involve magma eruption. Muddy materials from great depths are squeezed upward. The fourth is located at Tantlio Hot Spring site, Jharkhand. In each site, soil gases as well as hydrothermal gases are collected. Different kind of instruments such as gas chromatograph, radon monitor, seismometer etc. is installed at the said laboratories to collect the geochemical and geophysical data.   The recorded data are sent to the headquarter at NIT Durgapur through VSAT internet connectivity for further analysis.
                   <div class="geoimage">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra7.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra7.jpg" class="img img-responsive multi-image">
                   
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra8.jpg" class="img img-responsive multi-image">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra9.jpg" class="img img-responsive multi-image">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra10.jpg" class="img img-responsive multi-image">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra11.jpg" class="img img-responsive multi-image">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra12.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra8.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra9.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra10.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra11.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra12.jpg" class="img img-responsive multi-image">
                   </div>
 
                   <span><strong>1. NON LINEAR ANALYSIS OF GEOCHEMICAL AND GEOPHYSICAL DATA</strong></span><br>
@@ -189,15 +189,15 @@
                   Nonlinear techniques were adopted on the recorded time series data to extract the information hidden in the helium and radon time series. Continuous wave let transform was applied on the radon time series recorded simultaneously at Bakreswar and TattaPani during the period of December 15-2007-January15, 2008. The localized contours present in the wave let of Bakreswar and TattaPani radon time series are the imprint of the pre-seismic anomalies. The wave let analysis shown in figure1 reveals the anomalies that were recorded in both the site during the period December24-27,2007.<br>
                   The variation of the time series data at hot spring is shown below<br>
                   <div class="geoimage">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra13.jpg" class="img img-responsive single-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra13.jpg" class="img img-responsive single-image">
                   </div><br>
                   In order to understand the underlying dynamics and nonl inearity involved in the physico-chemical processes of excess release of helium and radon prior to an earthquake the Fast Fourier Transform was applied to the recent soil radon time series data recorded at TattaPani hotspring site during July, 2009. Fig.2 shows the presence of long-range correlation in the radon time series data recorded at TattaPani during July, 2009. Multi-fractal statistics was also applied to the recent soil radon time series data recorded at TattaPani hotspring site during November 1-December30, 2012. Comparison of radon data for seismically active phase and seismically quiescent phase were made through the multi-fractal analysis. the fig.3 shows the multifractal spectrum of the time series data <br>
                   <div class="geoimage">
                   
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra14.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra14.jpg" class="img img-responsive multi-image">
                   
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra15.jpg" class="img img-responsive multi-image">
-                    <img src="https://nitdgp.ac.in/helium_geothermal/images/ra16.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra15.jpg" class="img img-responsive multi-image">
+                    <img src="https://old.nitdgp.ac.in/helium_geothermal/images/ra16.jpg" class="img img-responsive multi-image">
                   </div>
                 </p>
                 <strong><li>Theoretical Development :</li></strong>
@@ -234,7 +234,7 @@
                     Date of Visit: August 23-24, 2015
                   <ul style="list-style-type:none;">
                     <li>
-                      <a style="text-decoration: none;" target="new" href="https://nitdgp.ac.in/helium_geothermal/images/field_visit_report.pdf">
+                      <a style="text-decoration: none;" target="new" href="https://old.nitdgp.ac.in/helium_geothermal/images/field_visit_report.pdf">
                         Download
                       </a>
                     </li>
@@ -306,7 +306,7 @@
                   <div class="card-body-in">
                     <p class="card-title">
                       <strong>
-                        <a class="blue-text notranslate" href="https://nitdgp.ac.in/faculty/bed09767-49b2-4ed9-a5d8-aaefbeea9a40">
+                        <a class="blue-text notranslate" href="https://old.nitdgp.ac.in/faculty/bed09767-49b2-4ed9-a5d8-aaefbeea9a40">
                           Dr. Hirok Chaudhuri
                         </a>
                       </strong>
@@ -387,15 +387,15 @@ export default {
         {name:'Mr. Prakul Minj',designation:'Watch Man',location:'Baratang ( Andaman & Nicobar )'}
       ],
       slides:[
-        {primary_caption:'Soil gas monitoring set up (schematic diagram) to monitor gas concentration is sub-soil gas',secondary_caption:'Soil gas monitoring set up (schematic diagram) to monitor gas concentration is sub-soil gas',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image019.jpg'},
-        {primary_caption:'Hot spring gas monitoring set up to monitor gas concentration is hot spring',secondary_caption:'Hot spring gas monitoring set up to monitor gas concentration is hot spring',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image020.jpg'},
-        {primary_caption:'RAIN GAUGE to monitor rain fall',secondary_caption:'RAIN GAUGE to monitor rain fall',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image021.gif'},
-        {primary_caption:'RADON MONITOR (ALPHA GUARD) to monitor radioactive gas Radon-222 in hot spring',secondary_caption:'RADON MONITOR (ALPHA GUARD) to monitor radioactive gas Radon-222 in hot spring',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image022.jpg'},
-        {primary_caption:'Soil Gas Radon Detector (BARASOL)to monitor radioactive gas Radon-222 in sub soil',secondary_caption:'Soil Gas Radon Detector (BARASOL)to monitor radioactive gas Radon-222 in sub soil',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image023.jpg'},
-        {primary_caption:'GAMMA RAY MONITOR (GAMMA TRACER) monitor ambient gamma',secondary_caption:'GAMMA RAY MONITOR (GAMMA TRACER) monitor ambient gamma',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image024.gif'},
-        {primary_caption:'Radon Progeny meter',secondary_caption:'Radon Progeny meter',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image025.gif'},
-        {primary_caption:'Broad Band SEISMOMETER (in collaboration with IISER, Kolkata)',secondary_caption:'Broad Band SEISMOMETER (in collaboration with IISER, Kolkata)',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image026.jpg'},
-        {primary_caption:'Gas Chromatograph to monitor Helium, Argon, Methane in hot spring gas and sub-soil gas',secondary_caption:'Gas Chromatograph to monitor Helium, Argon, Methane in hot spring gas and sub-soil gas',image:'https://nitdgp.ac.in/helium_geothermal/images/clip_image027.jpg'}
+        {primary_caption:'Soil gas monitoring set up (schematic diagram) to monitor gas concentration is sub-soil gas',secondary_caption:'Soil gas monitoring set up (schematic diagram) to monitor gas concentration is sub-soil gas',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image019.jpg'},
+        {primary_caption:'Hot spring gas monitoring set up to monitor gas concentration is hot spring',secondary_caption:'Hot spring gas monitoring set up to monitor gas concentration is hot spring',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image020.jpg'},
+        {primary_caption:'RAIN GAUGE to monitor rain fall',secondary_caption:'RAIN GAUGE to monitor rain fall',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image021.gif'},
+        {primary_caption:'RADON MONITOR (ALPHA GUARD) to monitor radioactive gas Radon-222 in hot spring',secondary_caption:'RADON MONITOR (ALPHA GUARD) to monitor radioactive gas Radon-222 in hot spring',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image022.jpg'},
+        {primary_caption:'Soil Gas Radon Detector (BARASOL)to monitor radioactive gas Radon-222 in sub soil',secondary_caption:'Soil Gas Radon Detector (BARASOL)to monitor radioactive gas Radon-222 in sub soil',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image023.jpg'},
+        {primary_caption:'GAMMA RAY MONITOR (GAMMA TRACER) monitor ambient gamma',secondary_caption:'GAMMA RAY MONITOR (GAMMA TRACER) monitor ambient gamma',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image024.gif'},
+        {primary_caption:'Radon Progeny meter',secondary_caption:'Radon Progeny meter',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image025.gif'},
+        {primary_caption:'Broad Band SEISMOMETER (in collaboration with IISER, Kolkata)',secondary_caption:'Broad Band SEISMOMETER (in collaboration with IISER, Kolkata)',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image026.jpg'},
+        {primary_caption:'Gas Chromatograph to monitor Helium, Argon, Methane in hot spring gas and sub-soil gas',secondary_caption:'Gas Chromatograph to monitor Helium, Argon, Methane in hot spring gas and sub-soil gas',image:'https://old.nitdgp.ac.in/helium_geothermal/images/clip_image027.jpg'}
       ],
       seminers:[
         {sl:'1',duration:'Nov 10th to Dec 16th, 2015',institute:'Sri Mata Vaishno Devi University, Katra, J&K & IISER Kolkata',sponsor:'SERC',course:'Earthquake Hazard: Basic Approaches, Field Investigations and Modeling',participent:'Mr. Ritwik Das(M. Tech. Student)'},
