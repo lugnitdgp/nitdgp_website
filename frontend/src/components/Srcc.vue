@@ -32,7 +32,7 @@
           </div>
           <ul class="list-group list-gr">
               <li style="list-style-type: none;background-color:#001333; ">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Guidelines.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Details Guidelines</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Guidelines.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Details Guidelines</a>
               </li>
             </ul>
           </div>
@@ -40,19 +40,19 @@
         <div class="tab-pane fade big-list" id="li2" role="tabpanel" aria-labelledby="li2-list">
           <ul class="list-group list-gr">
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/project.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Project Initiation</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/project.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Project Initiation</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/staff.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Project Staff Selection</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/staff.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Project Staff Selection</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/submission.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Report Submission</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/submission.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Report Submission</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/purchase.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Purchase</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/purchase.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Purchase</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/consultancy.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Consultancy Project </a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/consultancy.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Flowchart for Consultancy Project </a>
               </li>
             </ul>
         </div>
@@ -60,43 +60,43 @@
         <div class="tab-pane fade  big-list" id="li3" role="tabpanel" aria-labelledby="li3-list">
           <ul class="list-group list-gr">
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/annexure1.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">ANNEXURE - 1</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/annexure1.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">ANNEXURE - 1</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-3-5.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Application for Enrolment in the Ph. D. Programme (For use of JRF, SRF, RA employed in a sponsored scheme/project individual scholarship holder of CSIR / UGC)</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-3-5.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Application for Enrolment in the Ph. D. Programme (For use of JRF, SRF, RA employed in a sponsored scheme/project individual scholarship holder of CSIR / UGC)</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-6-7.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Sponsored Project Registration Form</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-6-7.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Sponsored Project Registration Form</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/REGISTRATION OF CONSULTANCY.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for Registration of Consultancy Project</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/REGISTRATION OF CONSULTANCY.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for Registration of Consultancy Project</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-9-10.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for Request for Service Contract</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-9-10.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for Request for Service Contract</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-11-12.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Purchase Requsition and Fund Availability Form</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-11-12.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Purchase Requsition and Fund Availability Form</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/PROPRIETORY NATURE.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Proprietory Nature Certificate</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/PROPRIETORY NATURE.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Proprietory Nature Certificate</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/BRIEF RESEARCH ACTIVITY.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">SRCC – Form 4A</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/BRIEF RESEARCH ACTIVITY.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">SRCC – Form 4A</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/NMI.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for NMI Certificate</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/NMI.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for NMI Certificate</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/FELLOWSHIP CLAIM.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Fellowship Claim Form</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/FELLOWSHIP CLAIM.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Fellowship Claim Form</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-19-20.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">TA / DA / Advance Application Form</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-19-20.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">TA / DA / Advance Application Form</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-21-22.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for Travelling Allowance Bill</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-21-22.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Form for Travelling Allowance Bill</a>
               </li>
               <li style="list-style-type: none;background-color:#001333; margin-bottom: 3px;">
-                <a class="list-group-item" target="new" href="http://nitdgp.ac.in/AllPDF/srccdoc/Different Forms-23-24.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Report of the Assessment Committee for Extension / Upgradation / Enhancement of Monthly Fellowship</a>
+                <a class="list-group-item" target="new" href="http://old.nitdgp.ac.in/AllPDF/srccdoc/Different Forms-23-24.pdf" style="background-color:#001333;text-decoration: none;color: #fff;">Report of the Assessment Committee for Extension / Upgradation / Enhancement of Monthly Fellowship</a>
               </li>
             </ul>
         </div>
@@ -158,7 +158,7 @@
             <p style="padding: 10px;text-align: justify;">
               Name : Prof. Ajit Kumar Meikap<br>
               Dean (R & C)<br>
-              Email : ajit.meikap@phy.nitdgp.ac.in/ deanresearch@admin.nitdgp.ac.in<br>
+              Email : ajit.meikap@phy.old.nitdgp.ac.in/ deanresearch@admin.old.nitdgp.ac.in<br>
               Phone : +91-9434788060
             </p>
           </div>
