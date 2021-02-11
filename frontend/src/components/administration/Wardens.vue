@@ -10,7 +10,8 @@
               :image="warden.image"
               :name="warden.name"
               :desig="warden.designation">
-                <strong>{{ warden.email }}</strong><br>
+                <strong>chiefwarden@admin.nitdgp.ac.in</strong><br>
+                <!-- <strong>{{ warden.email }}</strong><br> -->
                 <strong>+91-{{ warden.mobile }}</strong></br>
             </card-testimonial>
           </div>
