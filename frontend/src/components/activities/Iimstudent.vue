@@ -213,7 +213,7 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
               <div class="tab-content">
                 <div class="tab-pane fade in show active" id="activ1" role="tabpanel">
                   <ul class="link-list">
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Webinar-5.jpeg" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fifth webinar to be delivered by Prof. Asthana., Professor, Robert F. Cervenka School of Engineering, University of Wisconsin-Stout, USA on 9th Jan. 2021 at 5:00 PM (IST). The topic of his lecture is ‘Ceramic Integration using Active Brazing and Diffusion Bonding'</a></li>
+                    <li><a href="http://old.nitdgp.ac.in/iimchapter/Webinar-5.jpeg" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fifth webinar to be delivered by Prof. Asthana., Professor, Robert F. Cervenka School of Engineering, University of Wisconsin-Stout, USA on 9th Jan. 2021 at 5:00 PM (IST). The topic of his lecture is ‘Ceramic Integration using Active Brazing and Diffusion Bonding'</a></li>
                     <hr>
                     <li><a href=" https://forms.gle/o5UxT4r2CpzU9S6CA" target="_new">Registration Link</a></li>
 
@@ -222,10 +222,10 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
                 <div class="tab-pane fade in show" id="activ2" role="tabpanel">
                   <ul class="link-list">
                     <li><a href="https://youtu.be/MmPkI5b4OtI" target="_new">The Department of Metallurgical & Materials Engineering, National Institute of Technology, Durgapur and Indian Institute of Metals Student Chapter, NIT Durgapur, jointly organizing the webinar series. The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”</a></li>
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-1.pdf" target="_new">Tough High-Carbon Mattenstite</a></li>
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-2.pdf" target="_new">Accelerated development of high-performance magnetic materials for emerging technologies.</a></li>
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-18-3.pdf" target="_new">Multiscale and multi-physics simulations of chemo-mechanical crystal plasticity problems for complex engineering materials using DAMASK</a></li>
-                    <li><a href="http://nitdgp.ac.in/iimchapter/Doc-17.pdf" target="_new">Aluminum Superalloys for high-strength high-temperature applications.</a></li>
+                    <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-18-1.pdf" target="_new">Tough High-Carbon Mattenstite</a></li>
+                    <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-18-2.pdf" target="_new">Accelerated development of high-performance magnetic materials for emerging technologies.</a></li>
+                    <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-18-3.pdf" target="_new">Multiscale and multi-physics simulations of chemo-mechanical crystal plasticity problems for complex engineering materials using DAMASK</a></li>
+                    <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-17.pdf" target="_new">Aluminum Superalloys for high-strength high-temperature applications.</a></li>
                   </ul>
                 </div>
                 <div class="tab-pane fade in show" id="activ3" role="tabpanel">
@@ -244,10 +244,10 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
                   <card title="New Membership">
                     <div class="row">
                       <ul class="link-list">
-                        <li><a href="http://nitdgp.ac.in/iimchapter/Doc-21.pdf" target="_new">How to apply</a></li>
-                        <li><a href="http://nitdgp.ac.in/iimchapter/Doc-22.pdf" target="_new">Membership form</a></li>
-                        <li><a href="http://nitdgp.ac.in/iimchapter/Doc-23.pdf" target="_new">Membership form </a></li>
-                        <li><a href="http://nitdgp.ac.in/iimchapter/Doc-24.pdf" target="_new">Contact for new membership</a></li>
+                        <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-21.pdf" target="_new">How to apply</a></li>
+                        <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-22.pdf" target="_new">Membership form</a></li>
+                        <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-23.pdf" target="_new">Membership form </a></li>
+                        <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-24.pdf" target="_new">Contact for new membership</a></li>
                       </ul>
                     </div>
                   </card>
@@ -267,7 +267,7 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
               <h4 class="pane-title" align="left">Notices</h4>
               <hr>  
               <ul class="link-list">
-                <li><a href="http://nitdgp.ac.in/iimchapter/Doc-25.pdf" target="_new">Notice for IIM Student Chapter</a></li>
+                <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-25.pdf" target="_new">Notice for IIM Student Chapter</a></li>
               </ul>       
             </div>
 
@@ -307,7 +307,7 @@ IIM Webpage: <a href="https://www.iim-india.net">https://www.iim-india.net/</a>
               <hr>
               <ul class="link-list">
                 <li><a href="#">Annual Reports</a></li>
-                <li><a href="http://nitdgp.ac.in/iimchapter/Doc-26.pdf">Rules & Regulations</a></li>
+                <li><a href="http://old.nitdgp.ac.in/iimchapter/Doc-26.pdf">Rules & Regulations</a></li>
               </ul>
             </div>
             <div class="tab-pane fade big-list" id="li10" role="tabpanel">
@@ -363,62 +363,62 @@ export default {
       nav: false,
       popUpTop: 0,
       top: -1,
-      notices:convertNewsfeed([{title:'The fifth webinar on the topic Ceramic Integration using Active Brazing and Diffusion Bonding', file:'http://nitdgp.ac.in/iimchapter/Webinar-5.jpeg',date:'2021-01-07',url:''},{title:'The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”',file:"",date:"2020-12-16",url:"https://youtu.be/MmPkI5b4OtI"}]),
-      slides:[{primary_caption: "IIM Student Chapter", image: "http://nitdgp.ac.in/iimchapter/Pic-0.jpeg", secondary_caption: "IIM Student Chapter"},{primary_caption:"Webinar 4",image:"http://nitdgp.ac.in/iimchapter/webniar4.jpeg",secondary_caption:"Webinar 4"}],
+      notices:convertNewsfeed([{title:'The fifth webinar on the topic Ceramic Integration using Active Brazing and Diffusion Bonding', file:'http://old.nitdgp.ac.in/iimchapter/Webinar-5.jpeg',date:'2021-01-07',url:''},{title:'The fourth webinar to be delivered by Dr. Amit Bhattacharjee, Group Head, Titanium Alloy Group, DMRL on 19th Dec., 2020, Time: 4:00 PM (IST). The topic of his lecture is “Processing, properties and applications of different classes of Titanium alloys”',file:"",date:"2020-12-16",url:"https://youtu.be/MmPkI5b4OtI"}]),
+      slides:[{primary_caption: "IIM Student Chapter", image: "http://old.nitdgp.ac.in/iimchapter/Pic-0.jpeg", secondary_caption: "IIM Student Chapter"},{primary_caption:"Webinar 4",image:"http://old.nitdgp.ac.in/iimchapter/webniar4.jpeg",secondary_caption:"Webinar 4"}],
       news:[
         {title: "Shubhadip Paul – Awarded the Special Prize for oral presentation on the 10th International Seminar on Metallurgy and Material Science (Behind the Teacher’s Desk), organized by IIM, Jamshedpur Chapter in association with Tata Steel Ltd and CSIR-NML conducted on 28th August, 2020. ", file: "", date: "2020-08-28", url:""},
         ],
       imggallery:[
-        {primary_caption:"Pic-11",primary_caption:"Pic-11",image:"http://nitdgp.ac.in/iimchapter/Pic-11 (1).jpeg"},
-        {primary_caption:"Pic-12",primary_caption:"Pic-12",image:"http://nitdgp.ac.in/iimchapter/Pic-12.png"},
-        {primary_caption:"Pic-13",primary_caption:"Pic-13",image:"http://nitdgp.ac.in/iimchapter/Pic-13.png"}
+        {primary_caption:"Pic-11",primary_caption:"Pic-11",image:"http://old.nitdgp.ac.in/iimchapter/Pic-11 (1).jpeg"},
+        {primary_caption:"Pic-12",primary_caption:"Pic-12",image:"http://old.nitdgp.ac.in/iimchapter/Pic-12.png"},
+        {primary_caption:"Pic-13",primary_caption:"Pic-13",image:"http://old.nitdgp.ac.in/iimchapter/Pic-13.png"}
         ],
       videogallery:[
-        {link:"http://nitdgp.ac.in/iimchapter/AGokhale.mp4"},
-        {link:"http://nitdgp.ac.in/iimchapter/KChattopadhyay1.mp4"},
+        {link:"http://old.nitdgp.ac.in/iimchapter/AGokhale.mp4"},
+        {link:"http://old.nitdgp.ac.in/iimchapter/KChattopadhyay1.mp4"},
         ],
       pemember:[
-        {name: "Dr. Arup kumar Mandal", desig: "Faculty-in-Charge", edu: "Assistant Professor", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology Durgapur", mobile: "9434788110", email: "arup.mandal@mme.nitdgp.ac.in", image: "http://nitdgp.ac.in/iimchapter/Pic-1.jpg"},
-        {name: "Dr. Satadal Ghorai", desig: "Associate Faculty-in-Charge", edu: "Assistant Professor", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology Durgapur", mobile: "9470150674", email: "satadal.ghorai@mme.nitdgp.ac.in", image: "http://nitdgp.ac.in/iimchapter/Pic-2.jpg"}
+        {name: "Dr. Arup kumar Mandal", desig: "Faculty-in-Charge", edu: "Assistant Professor", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology Durgapur", mobile: "9434788110", email: "arup.mandal@mme.nitdgp.ac.in", image: "http://old.nitdgp.ac.in/iimchapter/Pic-1.jpg"},
+        {name: "Dr. Satadal Ghorai", desig: "Associate Faculty-in-Charge", edu: "Assistant Professor", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology Durgapur", mobile: "9470150674", email: "satadal.ghorai@mme.nitdgp.ac.in", image: "http://old.nitdgp.ac.in/iimchapter/Pic-2.jpg"}
       ],
       pwcmem:[
-        {name:"Syed Abdur Rahman",desig : "Chairperson",edu: "B. Tech, 3rd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "7044666253",email: "sar18u10311@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-3.jpg"
+        {name:"Syed Abdur Rahman",desig : "Chairperson",edu: "B. Tech, 3rd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "7044666253",email: "sar18u10311@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-3.jpg"
         },
-        {name:"Malobika Biswas",desig : "Vice Chairperson",edu: "B. Tech, 3rd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9732511949",email: "mb18u10495@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-4.jpg"
+        {name:"Malobika Biswas",desig : "Vice Chairperson",edu: "B. Tech, 3rd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9732511949",email: "mb18u10495@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-4.jpg"
         },
-        {name:"Shubhadip Paul",desig : "General Secretary",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "6290575323",email: "sp.19u10117@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-5.jpeg"
+        {name:"Shubhadip Paul",desig : "General Secretary",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "6290575323",email: "sp.19u10117@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-5.jpeg"
         },
-        {name:"Debakshi Gupta",desig : "Treasurer",edu: "B. Tech, 3rd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9064268823",email: "dg18u10499@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-6.jpg"
+        {name:"Debakshi Gupta",desig : "Treasurer",edu: "B. Tech, 3rd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9064268823",email: "dg18u10499@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-6.jpg"
         }
       ],
     mpcmem:[
-        {name:"Sayan Majumder",desig : "Head",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "7001996145",email: "sm.19u10037@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-7.jpg"
+        {name:"Sayan Majumder",desig : "Head",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "7001996145",email: "sm.19u10037@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-7.jpg"
         },
-        {name:"Atul Pooniya",desig : "Member",edu: "B. Tech, 2nd Year ",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "8964867724",email: "ap.19u10270@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"Atul Pooniya",desig : "Member",edu: "B. Tech, 2nd Year ",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "8964867724",email: "ap.19u10270@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         },
-        {name:"Vishal Jaiswal",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9093219642",email: "vj.19u10140@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"Vishal Jaiswal",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9093219642",email: "vj.19u10140@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         },
-        {name:"Amitabha Biswas",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9330626914",email: "ab.19U10733@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"Amitabha Biswas",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9330626914",email: "ab.19U10733@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         },
-        {name:"Shyam Srinivas",desig : "member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9177212755",email: "sss.19u10787@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"Shyam Srinivas",desig : "member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9177212755",email: "sss.19u10787@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         }
         
       ],
       emcmem:[
-        {name:"Rabin Mondal",desig : "Head",edu: "B. Tech, 3rd Year ",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9883011157",email: "rm18u10392@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-8.png"
+        {name:"Rabin Mondal",desig : "Head",edu: "B. Tech, 3rd Year ",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9883011157",email: "rm18u10392@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-8.png"
         },       
-        {name:"Geddam Varnika Sri",desig : "Member ",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9390193866",email: "gvs.19U10743@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"Geddam Varnika Sri",desig : "Member ",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "9390193866",email: "gvs.19U10743@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         },       
-        {name:"G. Sai Supraja",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "7029329049",email: "gss.19U10663@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"G. Sai Supraja",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "7029329049",email: "gss.19U10663@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         },       
-        {name:"Souvik Mukherjee",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "8583050307",email: "sm.19U10141@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"
+        {name:"Souvik Mukherjee",desig : "Member",edu: "B. Tech, 2nd Year",dept: "Department of Metallurgical and Materials Engineering",addrs: "National Institute of Technology, Durgapur",mobile: "8583050307",email: "sm.19U10141@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"
         }   
       ],
       scmem:[
-        {name: "Trishikha Saha", desig: "Head", edu: "B. Tech, 3rd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "7063495918", email: "ts18u10500@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-9.jpg"},
-        {name: "Durgesh Kumar Jha", desig: "Head", edu: "B. Tech, 3rd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "7816030097", email: "dkj18u10304@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/Pic-10.jpg"},
-        {name: "Ankit Rai", desig: "Member", edu: "B. Tech, 2nd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "8777324733", email: "ar.19u10539@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"},
-        {name: "Chelluboina Sravani", desig: "Member", edu: "B. Tech, 2nd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "9701369588", email: "cs.19u10799@btech.nitdgp.ac.in",image:"http://nitdgp.ac.in/iimchapter/img_avatar.png"}
+        {name: "Trishikha Saha", desig: "Head", edu: "B. Tech, 3rd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "7063495918", email: "ts18u10500@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-9.jpg"},
+        {name: "Durgesh Kumar Jha", desig: "Head", edu: "B. Tech, 3rd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "7816030097", email: "dkj18u10304@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/Pic-10.jpg"},
+        {name: "Ankit Rai", desig: "Member", edu: "B. Tech, 2nd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "8777324733", email: "ar.19u10539@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"},
+        {name: "Chelluboina Sravani", desig: "Member", edu: "B. Tech, 2nd Year", dept: "Department of Metallurgical and Materials Engineering", addrs: "National Institute of Technology, Durgapur", mobile: "9701369588", email: "cs.19u10799@btech.nitdgp.ac.in",image:"http://old.nitdgp.ac.in/iimchapter/img_avatar.png"}
         
       ],
       memdir:[
