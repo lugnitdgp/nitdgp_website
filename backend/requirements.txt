@@ -1,4 +1,4 @@
-Django==3.2.16
+Django==3.2.22
 django-ckeditor==5.6.1
 django-cleanup==3.0.1
 django-cors-headers==3.0.0
